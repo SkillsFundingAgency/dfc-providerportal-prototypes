@@ -4,11 +4,10 @@
   Prototype template
 {% endblock %}
 
-{% from 'govuk/components/header/macro.njk' import govukHeader %}
-
 {% block header %}
   <!-- Blank header with no service name for the start page -->
   <!-- {{ govukHeader() }} -->
+  {% from "govuk/components/header/macro.njk" import govukHeader %}
 
   {{ govukHeader({
     homepageUrl: "/",
