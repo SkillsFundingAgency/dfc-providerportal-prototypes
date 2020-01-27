@@ -97,6 +97,12 @@
   },
   html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
 }) }}
+
+{{ govukBackLink({
+  text: "Back to contents",
+  href: "index.html"
+}) }}
+
 {% endblock %}
 
 
@@ -115,7 +121,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds no-padding-left">
-      <div class="govuk-grid-column-one-half">
+      <div class="govuk-grid-column-one-half cd-homepage__item">
 
         <div class="cd-migration-panel">
           <h2 class="cd-migration-panel__title">Manage</h2>
@@ -126,9 +132,15 @@
           <br>
           <br>
         </div>
+        <ul class="govuk-list cd-homepage__list">
+          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Add a new course</a>
+          </li>
+          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Bulk upload course information</a>
+          </li>
+        </ul>
       </div>
 
-      <div class="govuk-grid-column-one-half homepage-item">
+      <div class="govuk-grid-column-one-half cd-homepage__item">
 
         <div class="cd-migration-panel">
           <h2 class="cd-migration-panel__title">Manage</h2>
@@ -139,6 +151,31 @@
           <br>
           <br>
         </div>
+        <ul class="govuk-list cd-homepage__list">
+          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Add a new apprenticeship</a>
+          </li>
+          <li class="cd-homepage__list--item"><a href="/BulkUpload" class="govuk-link">Bulk upload apprenticeship information</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="govuk-grid-column-one-half cd-homepage__item">
+
+        <div class="cd-migration-panel">
+          <h2 class="cd-migration-panel__title">Manage</h2>
+          <h2 class="cd-migration-panel__title">your locations</h2>
+          <span class="cd-migration-panel__number">
+            <a href="/providercourses" class="govuk-link">3 <span>  locations</span></a>
+          </span>
+          <br>
+          <br>
+        </div>
+        <ul class="govuk-list cd-homepage__list">
+          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Add a new location</a>
+          </li>
+          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">View, edit or delete a location</a>
+          </li>
+        </ul>
       </div>
 
     </div>
