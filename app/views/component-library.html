@@ -89,13 +89,89 @@
 <!-- Enter page content inside this block -->
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <!-- column start -->
+
+    <div class="govuk-grid-column-one-quarter sticky">
+<!-- app-related-items -->
+
+      <aside class="" role="complementary">
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li class="govuk-!-margin-bottom-2">
+              <a href="#dashboard-panel">
+                Dashboard panel
+              </a>
+            </li>
+            <li class="govuk-!-margin-bottom-2">
+              <a href="#search">
+                Search
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+
+    </div>
+    <!-- end column -->
+
+    <!-- start column -->
+    <div class="govuk-grid-column-three-quarters app-page">
 
       <h1 class="govuk-heading-xl">
         Components
       </h1>
 
-      <div class="bottom search-container">
+      <!-- dashboard panel -->
+      <h2 id="dashboard-panel" class="govuk-heading-l">Dashboard panel</h2>
+      <p>Duis blandit cursus mollis. Quisque volutpat luctus augue semper blandit. Etiam lacus dolor, semper eget massa sed, porta dignissim erat. Donec eleifend lacus id magna aliquet congue. Vestibulum hendrerit iaculis.</p>
+
+      <div class="govuk-grid-column-one-half cd-homepage__item">
+
+        <div class="cd-migration-panel">
+          <h2 class="cd-migration-panel__title">Manage</h2>
+          <h2 class="cd-migration-panel__title">your courses</h2>
+          <span class="cd-migration-panel__number">
+            <a href="/providercourses" class="govuk-link">1 <span>  course</span></a>
+          </span>
+          <br>
+          <br>
+        </div>
+        <ul class="govuk-list cd-homepage__list">
+          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Add a new course</a>
+          </li>
+          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Bulk upload course information</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="govuk-grid-column-one-half cd-homepage__item">
+
+        <div class="cd-migration-panel">
+          <h2 class="cd-migration-panel__title">Manage</h2>
+          <h2 class="cd-migration-panel__title">your apprenticeship training</h2>
+          <span class="cd-migration-panel__number">
+            <a href="/providercourses" class="govuk-link">1 <span>  apprenticeship</span></a>
+          </span>
+          <br>
+          <br>
+        </div>
+        <ul class="govuk-list cd-homepage__list">
+          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Add a new apprenticeship</a>
+          </li>
+          <li class="cd-homepage__list--item"><a href="/BulkUpload" class="govuk-link">Bulk upload apprenticeship information</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- end dashboad panel -->
+
+      <!-- search -->
+
+      <h2 id="search" class="govuk-heading-l">Search</h2>
+      <p>Duis blandit cursus mollis. Quisque volutpat luctus augue semper blandit. Etiam lacus dolor, semper eget massa sed, porta dignissim erat. Donec eleifend lacus id magna aliquet congue. Vestibulum hendrerit iaculis.</p>
+
+      <div class="bottom search-container govuk-!-margin-bottom-9">
         <form role="search" method="get" id="searchform" class="form-search" action="#">
           <label class="visuallyhidden" for="s">Search for:</label>
           <div class="search-input-wrapper">
@@ -105,36 +181,11 @@
         </form>
       </div>
 
-    </div>
-
-    <div class="govuk-grid-column-one-third">
-
-      <aside class="app-related-items" role="complementary">
-        <h2 class="govuk-heading-m" id="subsection-title">
-          Subsection
-        </h2>
-        <nav role="navigation" aria-labelledby="subsection-title">
-          <ul class="govuk-list govuk-!-font-size-16">
-            <li>
-              <a href="#">
-                Related link
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Related link
-              </a>
-            </li>
-            <li>
-              <a href="#" class="govuk-!-font-weight-bold">
-                More <span class="govuk-visually-hidden">in Subsection</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
+      <!-- end search -->
 
     </div>
+    <!-- end column -->
+
   </div>
   <!-- End of content -->
 {% endblock %}

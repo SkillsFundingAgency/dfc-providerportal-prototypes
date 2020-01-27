@@ -168,3 +168,12 @@ input:focus, textarea:focus, select:focus, input[type="search"]:focus {
   box-shadow: inset 0 0 0 2px;
   border-color: #0b0c0c;
 }
+
+.sticky {
+position: sticky;
+top: 0;
+}
+
+.app-page p {
+  margin-bottom: 40px;
+}
