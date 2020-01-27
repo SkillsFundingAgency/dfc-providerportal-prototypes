@@ -33,7 +33,7 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 .app-related-items {
-  border-top: 10px solid #207E77;
+  border-top: 2px solid #207E77;
 }
 
 // Header sign in back-link
@@ -64,7 +64,7 @@ $govuk-assets-path: '/govuk/assets/';
 
 .cd-migration-panel__title {
     font-family: Arial, sans-serif;
-    font-size: 1.1em;;
+    font-size: 1.1875em;
     line-height: 1.31579;
     margin: 0;
     font-weight: 400;
@@ -73,10 +73,98 @@ $govuk-assets-path: '/govuk/assets/';
 
 .cd-migration-panel__number {
     font-family: Arial, sans-serif;
-    font-size: 19px;
+    font-size: 1.1875em;
+    line-height: 1.31579;
     font-weight: 600;
 }
 
 .no-padding-left {
     padding-left: 0;
+}
+
+.cd-homepage__list {
+  padding-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.cd-homepage__list--item a {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.cd-homepage__item {
+  margin-bottom: 1.5em;
+}
+
+//search
+
+.form-search {
+    width: 100%;
+    position: relative;
+    //max-width: 350px;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.form-search .search-input-wrapper {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.form-search input.search-query {
+    height: 40px;
+    float: left;
+    width: 86%;
+    z-index: 10;
+}
+
+.form-search input[type="submit"] {
+    width: 40px;
+    height: 40px;
+    float: left;
+    padding: 6px;
+    background: #0b0c0c url(../images/search-button.png) no-repeat 2px 50%;
+    text-indent: -5000px;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.cd-search {
+    font-family: Arial, sans-serif;
+    height: auto;
+    border-radius: 0;
+    padding: 5px;
+    border: 2px solid #0b0c0c;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+    color: #0b0c0c;
+    margin-bottom: 0;
+}
+
+input:focus, textarea:focus, select:focus, input[type="search"]:focus {
+  outline: 3px solid #fd0;
+  outline-offset: 0;
+  -webkit-box-shadow: inset 0 0 0 2px;
+  box-shadow: inset 0 0 0 2px;
+  border-color: #0b0c0c;
 }
