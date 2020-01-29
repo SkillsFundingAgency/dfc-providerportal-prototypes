@@ -23,9 +23,9 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 // Remove the crown logo
-.govuk-header__logo {
-  display: none;
-}
+// .govuk-header__logo {
+//   display: none;
+// }
 
 // Change stripe colour
 .govuk-header__container {
@@ -183,4 +183,12 @@ top: 0;
 
 a {
 	word-wrap: break-word;
+}
+
+.header-title {
+  font-size: 24px;
+  line-height: 1.25;
+  margin-top: 8px;
+  float: left;
+  color: #fff;
 }
