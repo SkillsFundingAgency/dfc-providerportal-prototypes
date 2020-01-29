@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Prototype template
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  <!-- {{ govukHeader() }} -->
+  <!-- {% from "govuk/components/header/macro.njk" import govukHeader %}
+
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Publish to the course directory",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      {
+        href: "#1",
+        text: "Home",
+        active: true
+      },
+      {
+        href: "#2",
+        text: "Apprenticeship training"
+      },
+      {
+        href: "#2",
+        text: "Courses"
+      },
+      {
+        href: "#2",
+        text: "Manage locations"
+      }
+    ]
+  }) }} -->
+
+
+
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="#1">
+              Manage QA
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#2">
+              Search providers
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#3">
+              Mangage users
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#4">
+              Reports
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#4">
+              FE migration
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#4">
+              Apprenticeship migration
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div> -->
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-xl">[Helpdesk dashboad]</span>
+      <h1 class="govuk-heading-xl">
+        [Providers in QA]
+      </h1>
+
+      <div class="govuk-grid-column-one-half cd-homepage__item" style="padding-left: 0;">
+
+        <div class="cd-migration-panel">
+          <h2 class="govuk-heading-s">Manage QA</h2>
+          <p>[New or updated providers or just basically everyone not fully live can be found here in the limbo list]</p>
+          <span class="cd-migration-panel__number" style="font-weight: normal;">
+            <a href="providers-qa.html" class="govuk-link">Access new QA submissions</a>
+          </span>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <div class="govuk-grid-column-one-half cd-homepage__item">
+
+        <div class="cd-migration-panel">
+          <h2 class="govuk-heading-s">Add new providers</h2>
+          <p>[To add new providers you will need a very specific spreadsheet from Sonal. When you have this, use the link below.</p>
+          <p>Do we need to give any warnings about contact information being update? Does adding the CSV do anything else re RoATP?]</p>
+          <span class="cd-migration-panel__number" style="font-weight: normal;">
+            <a href="#" class="govuk-link">Add new providers using a csv</a>
+          </span>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
