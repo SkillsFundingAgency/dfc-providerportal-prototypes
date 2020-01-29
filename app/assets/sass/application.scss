@@ -169,6 +169,8 @@ input:focus, textarea:focus, select:focus, input[type="search"]:focus {
   border-color: #0b0c0c;
 }
 
+//make nav on contents page stick when scrolling
+
 .sticky {
 position: sticky;
 top: 0;
@@ -176,4 +178,9 @@ top: 0;
 
 .app-page p {
   margin-bottom: 40px;
+}
+
+
+a {
+	word-wrap: break-word;
 }
