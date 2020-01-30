@@ -96,6 +96,21 @@ $govuk-assets-path: '/govuk/assets/';
   margin-bottom: 1.5em;
 }
 
+//aside panel
+
+.cd-aside-panel {
+    background-color: #f8f8f8;
+    padding: 1rem 1rem .5rem 1rem ;
+}
+
+.aside-list {
+
+}
+
+.app-related-items .govuk-list > li {
+  margin-bottom: 2px;
+}
+
 //search
 
 .form-search {
@@ -169,6 +184,14 @@ input:focus, textarea:focus, select:focus, input[type="search"]:focus {
   border-color: #0b0c0c;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+.results input::placeholder {
+  color: #0b0c0c;
+}
+
 //make nav on contents page stick when scrolling
 
 .sticky {
@@ -193,10 +216,7 @@ a {
   color: #fff;
 }
 
-.pointer {
-  cursor: pointer;
-}
-
-.results input::placeholder {
-  color: #0b0c0c;
+//task List
+.task-list-progress {
+  background-color: #85994b;
 }
