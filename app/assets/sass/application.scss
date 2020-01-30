@@ -192,3 +192,11 @@ a {
   float: left;
   color: #fff;
 }
+
+.pointer {
+  cursor: pointer;
+}
+
+.results input::placeholder {
+  color: #0b0c0c;
+}

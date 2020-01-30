@@ -130,15 +130,28 @@
 
       <!-- search start -->
 
-      <div class="bottom search-container govuk-!-margin-bottom-6" style="width: 70%;">
+      <!-- <div class="bottom search-container govuk-!-margin-bottom-6" style="width: 70%;">
         <form role="search" method="get" id="searchform" class="form-search" action="#">
           <label class="govuk-label" for="event-name">
             Search by PRN, name or address
           </label>
           <label class="visuallyhidden" for="s">Search for:</label>
+          <div class="search-input-wrapper results">
+            <input type="search" value="" name="s" id="s" class="search-query cd-search" placeholder="{{ data['vehicle-registration'] }}">
+            <input type="submit" id="searchsubmit" value="Search" class="btn pointer">
+          </div>
+        </form>
+      </div> -->
+
+      <div class="bottom search-container govuk-!-margin-bottom-6" style="width: 70%;">
+        <form role="search" method="post" id="searchform" class="form form-search" action="search-providers-return">
+          <label class="govuk-label" for="event-name">
+            Search by PRN, name or address
+          </label>
           <div class="search-input-wrapper">
-            <input type="search" value="" name="s" id="s" class="search-query cd-search" placeholder="Search">
-            <input type="submit" id="searchsubmit" value="Search" class="btn">
+            <input type="search" value="{{ data['vehicle-registration'] }}" name="vehicle-registration" id="registration-number" class="search-query cd-search" placeholder="Search" type="text">
+
+            <input type="submit" id="searchsubmit" value="Search" class="btn pointer">
           </div>
         </form>
       </div>
