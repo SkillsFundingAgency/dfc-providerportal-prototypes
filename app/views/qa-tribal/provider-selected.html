@@ -179,38 +179,155 @@
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell govuk-!-font-weight-bold">Locations</td>
-            <td class="govuk-table__cell">number of locations</td>
+            <td class="govuk-table__cell">Number of locations</td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
           </tr>
-
         </tbody>
       </table>
-    </div>
-    <div class="govuk-grid-column-one-third">
 
-      <aside class="app-related-items" role="complementary">
-        <h2 class="govuk-heading-m" id="subsection-title">
-          Subsection
-        </h2>
-        <nav role="navigation" aria-labelledby="subsection-title">
-          <ul class="govuk-list govuk-!-font-size-16">
-            <li>
-              <a href="#">
-                Related link
-              </a>
+      <!-- task list start -->
+
+      <h2 class="govuk-heading-l govuk-!-margin-top-9">
+        Heading for this section
+      </h2>
+
+      <ol class="app-task-list ">
+        <li>
+          <h2 class="app-task-list__section">
+            Provider details
+          </h2>
+          <ul class="app-task-list__items govuk-!-padding-left-0">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="provider-details-compliance" aria-describedby="eligibility-completed">
+                  Compliance
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
             </li>
-            <li>
-              <a href="#">
-                Related link
-              </a>
-            </li>
-            <li>
-              <a href="#" class="govuk-!-font-weight-bold">
-                More <span class="govuk-visually-hidden">in Subsection</span>
-              </a>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="read-declaration-completed">
+                  Style
+                </a>
+              </span>
+
             </li>
           </ul>
-        </nav>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            Apprenticeship training
+          </h2>
+          <ul class="app-task-list__items govuk-!-padding-left-0">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="company-information-completed">
+                  QA apprenticeship
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="contact-details-completed">
+                  Your contact details
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed task-list-progress" id="contact-details-completed">In progress</strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            Overall
+          </h2>
+          <ul class="app-task-list__items govuk-!-padding-left-0">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#">
+                  Pass/fail
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed task-list-progress" id="medical-information-completed">In progress</strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+
+
+      <!-- task list end -->
+
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-2" id="subsection-title">
+        Last QA'd by
+      </h3>
+          <p>sarah@youremail.com</p>
+
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+          Date
+      </h3>
+          <p>17th May 2019</p>
+
+
+      <!-- end of main content -->
+    </div>
+
+
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items cd-aside-panel" role="complementary">
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+          Address
+        </h3>
+          <ul class="govuk-list aside-list govuk-!-font-size-16">
+            <li>3-4 Woodlands Business Villa</li>
+            <li>Coronation Road</li>
+            <li>Basingstoke</li>
+            <li>RG21 4JX</li>
+          </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Web
+        </h3>
+          <ul class="govuk-list aside-list govuk-!-font-size-16">
+            <li><a href="#">www.yourweb.com</a></li>
+          </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Contact name
+        </h3>
+          <ul class="govuk-list aside-list govuk-!-font-size-16">
+            <li>John Smith</li>
+          </ul>
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Email
+          </h3>
+            <ul class="govuk-list aside-list govuk-!-font-size-16">
+              <li><a href="#">email@yourweb.com</a></li>
+            </ul>
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+                Telephone
+            </h3>
+              <ul class="govuk-list aside-list govuk-!-font-size-16">
+                <li>01234567899</li>
+              </ul>
+      </aside>
+
+      <aside class="app-related-items cd-aside-panel govuk-heading-s govuk-!-margin-top-6" style="border-top:none;" role="complementary">
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+          Last signed in
+        </h3>
+          <ul class="govuk-list aside-list govuk-!-font-size-16">
+            <li>sarah@youremail.com</li>
+          </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Date
+        </h3>
+          <ul class="govuk-list aside-list govuk-!-font-size-16">
+            <li>17th May 2019</li>
+          </ul>
       </aside>
 
     </div>
