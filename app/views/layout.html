@@ -75,4 +75,17 @@
     {% block pageScripts %}{% endblock %}
   {% endblock %}
   <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+
+  <script>
+  $(document).ready(function(){
+    $(".hide").click(function(){
+      $(".show-hide-section").hide();
+    });
+    $(".show").click(function(){
+      $(".show-hide-section").show();
+    });
+  });
+  </script>
+
+
 {% endblock %}

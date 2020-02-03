@@ -213,13 +213,13 @@ href: "providers-qa.html"
               <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
                 <div class="govuk-radios govuk-radios--small govuk-radios--inline">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="employers" name="employers" type="radio" value="yes">
+                    <input class="govuk-radios__input hide" id="employers" name="employers" type="radio" value="yes">
                     <label class="govuk-label govuk-radios__label" for="employers">
                       Pass
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="employers-2" name="employers" type="radio" value="no">
+                    <input class="govuk-radios__input show" id="employers-2" name="employers" type="radio" value="no">
                     <label class="govuk-label govuk-radios__label" for="employers-2">
                       Reject
                     </label>
@@ -235,7 +235,7 @@ href: "providers-qa.html"
     <!-- outcome end -->
 
     <!-- reasons for reject start -->
-    <div class="govuk-form-group">
+    <div class="govuk-form-group show-hide-section notshown">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
           <h1 class="govuk-fieldset__heading">

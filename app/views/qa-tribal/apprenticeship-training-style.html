@@ -223,13 +223,13 @@ href: "providers-qa.html"
               <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
                 <div class="govuk-radios govuk-radios--small govuk-radios--inline">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                    <input class="govuk-radios__input hide" id="changed-name" name="changed-name" type="radio" value="yes">
                     <label class="govuk-label govuk-radios__label" for="changed-name">
                       Pass
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                    <input class="govuk-radios__input show" id="changed-name-2" name="changed-name" type="radio" value="no">
                     <label class="govuk-label govuk-radios__label" for="changed-name-2">
                       Reject
                     </label>
@@ -269,7 +269,7 @@ href: "providers-qa.html"
     <!-- outcome end -->
 
     <!-- reasons for reject start -->
-    <div class="govuk-form-group">
+    <div class="govuk-form-group show-hide-section notshown">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
           <h1 class="govuk-fieldset__heading">
@@ -304,7 +304,7 @@ href: "providers-qa.html"
           Use of the term 'standard' or 'framework'
         </label>
           </div>
-          
+
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
