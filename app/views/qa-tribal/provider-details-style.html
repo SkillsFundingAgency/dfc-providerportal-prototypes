@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Prototype template
+Provider style
 {% endblock %}
 
 {% block header %}
@@ -125,16 +125,16 @@ href: "providers-qa.html"
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-xl">Helpdesk dashboad</span>
     <h1 class="govuk-heading-xl">
-        Compliance QA Provider Details
+        Style QA Provider Details
       </h1>
 
     <table class="govuk-table govuk-!-margin-bottom-1">
       <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
+        <!-- <tr class="govuk-table__row">
           <td class="govuk-table__cell govuk-!-font-weight-bold">Course Directory name</td>
           <td class="govuk-table__cell">Provider name</td>
           <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Edit</a></td>
-        </tr>
+        </tr> -->
         <tr class="govuk-table__row">
           <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Provider overview</td>
           <td class="govuk-table__cell border-bottom-none">&nbsp;</td>
@@ -160,7 +160,7 @@ href: "providers-qa.html"
         </tr>
       </thead>
       <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
+        <!-- <tr class="govuk-table__row">
           <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-padding-top-3">Provider name matches</td>
           <td class="govuk-table__cell">
             <div class="govuk-form-group govuk-!-margin-bottom-0">
@@ -205,7 +205,7 @@ href: "providers-qa.html"
               </fieldset>
             </div>
           </td>
-        </tr>
+        </tr> -->
         <tr class="govuk-table__row">
           <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-padding-top-3">Description for employers</td>
           <td class="govuk-table__cell">
@@ -249,31 +249,43 @@ href: "providers-qa.html"
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
             <label class="govuk-label govuk-checkboxes__label" for="organisation">
-          Specific employer named
+          Specific apprenticeship details given
         </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-          Unverifiable claim
+          Job roles included
         </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
-          Incorrect Ofsted grade used
+          Term 'standard' used
         </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-          Insufficient detail
+          Term 'framework' used
         </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-          Not aimed at employer
+          Term 'learner' or 'student' used
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Term 'course' used
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Other
         </label>
           </div>
         </div>
@@ -295,6 +307,7 @@ href: "providers-qa.html"
         Save and continue
       </button>
     </a>
+    <p><a href="#" class="govuk-list">Return to {provider name}</a></p>
   </div>
 <!-- end of main content -->
 
