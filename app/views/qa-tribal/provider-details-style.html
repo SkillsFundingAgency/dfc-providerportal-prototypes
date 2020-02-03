@@ -1,0 +1,362 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Prototype template
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+<!-- {{ govukHeader() }} -->
+<!-- {% from "govuk/components/header/macro.njk" import govukHeader %}
+
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Publish to the course directory",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      {
+        href: "#1",
+        text: "Home",
+        active: true
+      },
+      {
+        href: "#2",
+        text: "Apprenticeship training"
+      },
+      {
+        href: "#2",
+        text: "Courses"
+      },
+      {
+        href: "#2",
+        text: "Manage locations"
+      }
+    ]
+  }) }} -->
+
+
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Manage QA
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              Search providers
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#3">
+              Mangage users
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#4">
+              Reports
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#4">
+              FE migration
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#4">
+              Apprenticeship migration
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+<!-- <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div> -->
+
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+text: "Back",
+href: "providers-qa.html"
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">Helpdesk dashboad</span>
+    <h1 class="govuk-heading-xl">
+        Compliance QA Provider Details
+      </h1>
+
+    <table class="govuk-table govuk-!-margin-bottom-1">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-!-font-weight-bold">Course Directory name</td>
+          <td class="govuk-table__cell">Provider name</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Edit</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Provider overview</td>
+          <td class="govuk-table__cell border-bottom-none">&nbsp;</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric border-bottom-none"><a href="#">Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit. Pretium quam vulputate dignissim suspendisse in. Pretium quam vulputate dignissim
+    suspendisse in est. Elementum pulvinar etiam non quam. Viverra justo nec ultrices dui sapien eget. Augue eget arcu dictum varius duis at consectetur. Sed sed risus pretium quam vulputate dignissim suspendisse in. Mollis nunc sed id semper risus in hendrerit. Laoreet non curabitur gravida arcu ac tortor. Nullam ac tortor vitae purus faucibus. Turpis in eu mi bibendum neque. Vel eros donec ac odio tempor orci dapibus.</p>
+
+    <p>Vel pretium lectus quam id leo in. Felis eget nunc lobortis mattis. Sed risus ultricies tristique nulla aliquet enim tortor at. Massa vitae tortor condimentum lacinia quis vel. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Eget egestas purus viverra accumsan in nisl. Ut eu sem integer vitae justo. Id volutpat lacus laoreet non curabitur gravida arcu ac. Leo vel fringilla est ullamcorper eget. Adipiscing diam donec adipiscing tristique risusnec feugiat. Dictum varius duis at consectetur lorem donec massa. Auctor augue mauris augue neque gravida in fermentum et.</p>
+
+    <p>Est lorem ipsum dolor sit amet consectetur. Netus et malesuada fames ac turpis egestas sed tempus urna. Vel fringilla est ullamcorper eget nulla. Ut tellus elementum sagittis vitae et leo duis. Feugiat pretium nibh ipsum consequat nisl velpretium lectus quam. Erat imperdiet sed euismod nisi porta lorem mollis aliquam. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus.</p>
+
+    <!-- outcome start -->
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Compliance QA</th>
+          <th scope="col" class="govuk-table__header">Outcome</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-padding-top-3">Provider name matches</td>
+          <td class="govuk-table__cell">
+            <div class="govuk-form-group govuk-!-margin-bottom-0">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="changed-name">
+                      Pass
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                      Reject
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-padding-top-3">Provider details/ URL works</td>
+          <td class="govuk-table__cell">
+            <div class="govuk-form-group govuk-!-margin-bottom-0">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="details" name="details" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="details">
+                      Pass
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="details-2" name="details" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="details-2">
+                      Reject
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-padding-top-3">Description for employers</td>
+          <td class="govuk-table__cell">
+            <div class="govuk-form-group govuk-!-margin-bottom-0">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="employers" name="employers" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="employers">
+                      Pass
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="employers-2" name="employers" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="employers-2">
+                      Reject
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- outcome end -->
+
+    <!-- reasons for reject start -->
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+        Reasons for rejection
+      </h1>
+        </legend>
+        <span id="citizenship-conditional-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          Specific employer named
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          Unverifiable claim
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+          Incorrect Ofsted grade used
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Insufficient detail
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Not aimed at employer
+        </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <!-- reasons for reject end -->
+
+    <!-- text area start -->
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="more-detail">
+          Further details
+        </label>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+    <!-- text area end -->
+
+    <a href="provider-selected.html">
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+    </a>
+  </div>
+<!-- end of main content -->
+
+
+
+<!-- aside start -->
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items cd-aside-panel" role="complementary">
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+          Address
+        </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li>3-4 Woodlands Business Villa</li>
+        <li>Coronation Road</li>
+        <li>Basingstoke</li>
+        <li>RG21 4JX</li>
+      </ul>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Web
+        </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li><a href="#">www.yourweb.com</a></li>
+      </ul>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Contact name
+        </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li>John Smith</li>
+      </ul>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Email
+          </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li><a href="#">email@yourweb.com</a></li>
+      </ul>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+                Telephone
+            </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li>01234567899</li>
+      </ul>
+    </aside>
+
+    <aside class="app-related-items cd-aside-panel govuk-heading-s govuk-!-margin-top-6" style="border-top:none;" role="complementary">
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+          Last signed in
+        </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li>sarah@youremail.com</li>
+      </ul>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Date
+        </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li>17th May 2019</li>
+      </ul>
+    </aside>
+  </div>
+  <!-- aside end -->
+
+</div>
+<!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
