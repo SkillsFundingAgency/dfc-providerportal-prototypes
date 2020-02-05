@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-RoATP status
+Reports tabs select
 {% endblock %}
 
 {% block header %}
@@ -110,7 +110,7 @@ html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> 
 
 {{ govukBackLink({
 text: "Back",
-href: "providers-qa.html"
+href: "helpdesk-dashboard.html"
 }) }}
 
 {% endblock %}
@@ -123,63 +123,98 @@ href: "providers-qa.html"
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
     <span class="govuk-caption-xl">Helpdesk dashboad</span>
-    <h1 class="govuk-fieldset__heading">
-      View RoATP status
-    </h1>
-  </legend>
+    <h1 class="govuk-heading-xl">
+        Choose and download a report
+      </h1>
 
-  <div class="govuk-radios">
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-      <label class="govuk-label govuk-radios__label" for="changed-name">
-        Not applicable/not registered for apprenticeship training?
-      </label>
+    <!-- tabs start -->
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#report-a">
+        Report type A
+      </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#report-b">
+        Report type B
+      </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#report-c">
+        Report type C
+      </a>
+        </li>
+      </ul>
+      <section class="govuk-tabs__panel" id="report-a">
+        <h2 class="govuk-heading-l">Report type A</h2>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Select a report
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published" selected>Report A Jun 2019</option>
+            <option value="updated">Report A May 2019</option>
+            <option value="views">Report A Apr 2019</option>
+            <option value="comments">Report A Mar 2019</option>
+          </select>
+        </div>
+        <a href="#">
+          <button class="govuk-button" data-module="govuk-button">
+            Download .csv
+          </button>
+        </a>
+      </section>
+
+      <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="report-b">
+        <h2 class="govuk-heading-l">Report type B</h2>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Select a report
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published" selected>Report B Jun 2019</option>
+            <option value="updated">Report B May 2019</option>
+            <option value="views">Report B Apr 2019</option>
+            <option value="comments">Report B Mar 2019</option>
+          </select>
+        </div>
+        <a href="#">
+          <button class="govuk-button" data-module="govuk-button">
+            Download .csv
+          </button>
+        </a>
+
+      </section>
+
+      <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="report-c">
+        <h2 class="govuk-heading-l">Report type C</h2>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Select a report
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published" selected>Report C Jun 2019</option>
+            <option value="updated">Report C May 2019</option>
+            <option value="views">Report C Apr 2019</option>
+            <option value="comments">Report C Mar 2019</option>
+          </select>
+        </div>
+        <a href="#">
+          <button class="govuk-button" data-module="govuk-button">
+            Download .csv
+          </button>
+        </a>
+
+      </section>
     </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-      <label class="govuk-label govuk-radios__label" for="changed-name-2">
-        Onboarding
-      </label>
-    </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-      <label class="govuk-label govuk-radios__label" for="changed-name">
-        Active
-      </label>
-    </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-      <label class="govuk-label govuk-radios__label" for="changed-name">
-        Removed
-      </label>
-    </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-      <label class="govuk-label govuk-radios__label" for="changed-name">
-        Active, not accepting new starters
-      </label>
-    </div>
+    <!-- tabs end -->
   </div>
-</fieldset>
-</div>
+  <!-- End of content -->
+  {% endblock %}
 
-<a href="provider-selected.html">
-  <button class="govuk-button" data-module="govuk-button">
-    Save and continue
-  </button>
-</a>
-<p><a href="provider-selected.html" class="govuk-list">Cancel</a></p>
-</div>
-  </div>
-<!-- end of main content -->
-
-
-</div>
-<!-- End of content -->
-{% endblock %}
-
-<!-- DO NOT enter page content after the above block -->
+  <!-- DO NOT enter page content after the above block -->

@@ -1,0 +1,232 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Reports tabs table
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+<!-- {{ govukHeader() }} -->
+<!-- {% from "govuk/components/header/macro.njk" import govukHeader %}
+
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Publish to the course directory",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      {
+        href: "#1",
+        text: "Home",
+        active: true
+      },
+      {
+        href: "#2",
+        text: "Apprenticeship training"
+      },
+      {
+        href: "#2",
+        text: "Courses"
+      },
+      {
+        href: "#2",
+        text: "Manage locations"
+      }
+    ]
+  }) }} -->
+
+
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Manage QA
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              Search providers
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#3">
+              Mangage users
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="tribal-qa/reports-tabs-select">
+              Reports
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#4">
+              FE migration
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#4">
+              Apprenticeship migration
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+<!-- <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div> -->
+
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+text: "Back",
+href: "helpdesk-dashboard.html"
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">Helpdesk dashboad</span>
+    <h1 class="govuk-heading-xl">
+        Choose and download a report
+      </h1>
+
+    <!-- tabs start -->
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#report-a">
+        Report type A
+      </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#report-b">
+        Report type B
+      </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#report-c">
+        Report type C
+      </a>
+        </li>
+      </ul>
+      <section class="govuk-tabs__panel" id="report-a">
+        <h2 class="govuk-heading-l">Report type A</h2>
+        <table class="govuk-table govuk-!-margin-bottom-1">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Report-A-Jun-2019.csv</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Download</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Report-A-May-2019.csv</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Download</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Report-A-Apr-2019.csv</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Download</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Report-A-Mar-2019.csv</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Download</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="report-b">
+        <h2 class="govuk-heading-l">Report type B</h2>
+        <table class="govuk-table govuk-!-margin-bottom-1">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Report-B-Jun-2019.csv</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Download</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Report-B-May-2019.csv</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Download</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Report-B-Apr-2019.csv</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Download</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Report-B-Mar-2019.csv</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Download</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+
+      <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="report-c">
+        <h2 class="govuk-heading-l">Report type C</h2>
+        <table class="govuk-table govuk-!-margin-bottom-1">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Report-C-Jun-2019.csv</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Download</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Report-C-May-2019.csv</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Download</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Report-C-Apr-2019.csv</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Download</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Report-C-Mar-2019.csv</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Download</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+    </div>
+    <!-- tabs end -->
+  </div>
+  <!-- End of content -->
+  {% endblock %}
+
+  <!-- DO NOT enter page content after the above block -->
