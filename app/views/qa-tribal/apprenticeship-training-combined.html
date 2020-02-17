@@ -1,0 +1,526 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Apprenticeships Combined
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+<!-- {{ govukHeader() }} -->
+<!-- {% from "govuk/components/header/macro.njk" import govukHeader %}
+
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Publish to the course directory",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      {
+        href: "#1",
+        text: "Home",
+        active: true
+      },
+      {
+        href: "#2",
+        text: "Apprenticeship training"
+      },
+      {
+        href: "#2",
+        text: "Courses"
+      },
+      {
+        href: "#2",
+        text: "Manage locations"
+      }
+    ]
+  }) }} -->
+
+
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Manage QA
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              Search providers
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+<!-- <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div> -->
+
+<!-- {{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+text: "Back",
+href: "providers-qa.html"
+}) }} -->
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">Apprenticeship QA</span>
+    <h1 class="govuk-heading-xl">
+        Retail - Retail Manager - Level 4
+      </h1>
+
+      <h2 class="govuk-heading-l">
+          Apprenticeship information
+        </h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit. Pretium quam vulputate dignissim suspendisse in. Pretium quam vulputate dignissim
+    suspendisse in est. Elementum pulvinar etiam non quam. Viverra justo nec ultrices dui sapien eget. Augue eget arcu dictum varius duis at consectetur. Sed sed risus pretium quam vulputate dignissim suspendisse in. Mollis nunc sed id semper risus in hendrerit. Laoreet non curabitur gravida arcu ac tortor. Nullam ac tortor vitae purus faucibus. Turpis in eu mi bibendum neque. Vel eros donec ac odio tempor orci dapibus.</p>
+
+    <p>Vel pretium lectus quam id leo in. Felis eget nunc lobortis mattis. Sed risus ultricies tristique nulla aliquet enim tortor at. Massa vitae tortor condimentum lacinia quis vel. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Eget egestas purus viverra accumsan in nisl. Ut eu sem integer vitae justo. Id volutpat lacus laoreet non curabitur gravida arcu ac. Leo vel fringilla est ullamcorper eget. Adipiscing diam donec adipiscing tristique risusnec feugiat. Dictum varius duis at consectetur lorem donec massa. Auctor augue mauris augue neque gravida in fermentum et.</p>
+
+    <p class="govuk-!-margin-bottom-9">Est lorem ipsum dolor sit amet consectetur. Netus et malesuada fames ac turpis egestas sed tempus urna. Vel fringilla est ullamcorper eget nulla. Ut tellus elementum sagittis vitae et leo duis. Feugiat pretium nibh ipsum consequat nisl velpretium lectus quam. Erat imperdiet sed euismod nisi porta lorem mollis aliquam. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus.</p>
+
+
+    <!-- description outcome compliance start -->
+
+    <div class="govuk-form-group govuk-!-margin-bottom-9">
+    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+          Description information for compliance
+        </h2>
+      </legend>
+      <span id="changed-name-hint" class="govuk-hint">
+        Veniam cupidatat occaecat reprehenderit cillum nostrud tempor exercitation.
+      </span>
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input hide" id="changed-name" name="changed-name" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="changed-name">
+            Pass
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input show" id="changed-name-2" name="changed-name" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="changed-name-2">
+            Reject
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+    <!-- reasons for reject start -->
+    <div class="govuk-form-group show-hide-section-1 notshown">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+        Reasons for rejection
+      </h1>
+        </legend>
+        <span id="citizenship-conditional-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          Used capitalised A for apprenticeships
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          Links to web pages not working
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+          Specific employer named
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Unverifiable claim
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Incorrect Ofsted grade used
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Insufficient detail
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Not aimed at employer
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Other
+        </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- text area start -->
+      <div class="govuk-form-group govuk-!-margin-top-6">
+        <label class="govuk-label" for="more-detail">
+            Further details
+          </label>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+      <!-- text area end -->
+    </div>
+    <!-- reasons for reject end -->
+    <!-- description outcome compliance end -->
+
+
+    <!-- description outcome style start -->
+
+    <div class="govuk-form-group govuk-!-margin-bottom-9">
+    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+          Description information for style
+        </h2>
+      </legend>
+      <span id="changed-name-hint" class="govuk-hint">
+        Veniam cupidatat occaecat reprehenderit cillum nostrud tempor exercitation.
+      </span>
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input hide2" id="changed-name" name="changed-name" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="changed-name">
+            Pass
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input show2" id="changed-name-2" name="changed-name" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="changed-name-2">
+            Reject
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+    <!-- reasons for reject start -->
+    <div class="govuk-form-group show-hide-section-2 notshown">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+        Reasons for rejection
+      </h1>
+        </legend>
+        <span id="citizenship-conditional-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation">
+              Lists the content of the apprenticeship
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          Lists the content of the apprenticeship
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+          Lists the content of the apprenticeship
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Lists the content of the apprenticeship
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Lists the content of the apprenticeship
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Lists the content of the apprenticeship
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Lists the content of the apprenticeship
+        </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Other
+        </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- text area start -->
+      <div class="govuk-form-group govuk-!-margin-top-6">
+        <label class="govuk-label" for="more-detail">
+            Further details
+          </label>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+      <!-- text area end -->
+    </div>
+    <!-- reasons for reject end -->
+    <!-- description outcome style end -->
+
+  <!-- location start -->
+  <h2 class="govuk-heading-l">
+      Locations
+    </h2>
+
+
+  <table class="govuk-table govuk-!-margin-bottom-9">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Location</th>
+        <th scope="col" class="govuk-table__header">Delivery method</th>
+        <th scope="col" class="govuk-table__header">Radius</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">ABINGDON CAMPUS<br>OX14 1GG</td>
+        <td class="govuk-table__cell">Day release</td>
+        <td class="govuk-table__cell">30 miles</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">ASHMOLEAN MUSEUM<br>OX1 2PH</td>
+        <td class="govuk-table__cell">Block release</td>
+        <td class="govuk-table__cell">30 miles</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">BLACKBIRD LEYS LEISURE CENTRE<br>OX4 6JL</td>
+        <td class="govuk-table__cell">Day release</td>
+        <td class="govuk-table__cell">30 miles</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" style="border-bottom:none;">&nbsp;</td>
+        <td class="govuk-table__cell" style="border-bottom:none;">&nbsp;</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric" style="border-bottom:none;"><a href="apprenticeship-locations" class="govuk-link">View all locations</a></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+  <!-- location end -->
+
+  <!-- location outcome start -->
+
+  <div class="govuk-form-group govuk-!-margin-bottom-9">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+        Location information
+      </h2>
+    </legend>
+    <span id="changed-name-hint" class="govuk-hint">
+      Veniam cupidatat occaecat reprehenderit cillum nostrud tempor exercitation.
+    </span>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Pass
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          Reject
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+  <!-- location outcome end -->
+
+  <!-- web start -->
+
+  <h2 class="govuk-heading-l">
+      Web address
+    </h2>
+
+
+    <table class="govuk-table govuk-!-margin-bottom-9">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-!-font-weight-bold" style="border-bottom:none;">Apprenticeship web page</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" style="border-bottom:none;">www.mywebsite.com</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <div class="govuk-form-group govuk-!-margin-bottom-9">
+    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+          Web information
+        </h2>
+      </legend>
+      <span id="changed-name-hint" class="govuk-hint">
+        Veniam cupidatat occaecat reprehenderit cillum nostrud tempor exercitation.
+      </span>
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="changed-name">
+            Pass
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="changed-name-2">
+            Reject
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+  <!-- web end -->
+
+
+    <a href="apprenticeship-training-style">
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+    </a>
+    <p><a href="#" class="govuk-link">Return to {provider list}</a></p>
+  </div>
+<!-- end of main content -->
+
+
+
+<!-- aside start -->
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items cd-aside-panel" role="complementary">
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-6" id="subsection-title">
+        Basingstoke ITEC
+      </h3>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+          Address
+        </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li>3-4 Woodlands Business Villa</li>
+        <li>Coronation Road</li>
+        <li>Basingstoke</li>
+        <li>RG21 4JX</li>
+      </ul>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Web
+        </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li><a href="#">www.yourweb.com</a></li>
+      </ul>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Contact name
+        </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li>John Smith</li>
+      </ul>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Email
+          </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li><a href="#">email@yourweb.com</a></li>
+      </ul>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+                Telephone
+            </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li>01234567899</li>
+      </ul>
+    </aside>
+
+    <aside class="app-related-items cd-aside-panel govuk-heading-s govuk-!-margin-top-6" style="border-top:none;" role="complementary">
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+          Last signed in
+        </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li>sarah@youremail.com</li>
+      </ul>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Date
+        </h3>
+      <ul class="govuk-list aside-list govuk-!-font-size-16">
+        <li>17th May 2019</li>
+      </ul>
+    </aside>
+  </div>
+  <!-- aside end -->
+
+</div>
+<!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
