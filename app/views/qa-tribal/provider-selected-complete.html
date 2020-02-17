@@ -1,0 +1,325 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Provider selected
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  <!-- {{ govukHeader() }} -->
+  <!-- {% from "govuk/components/header/macro.njk" import govukHeader %}
+
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Publish to the course directory",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      {
+        href: "#1",
+        text: "Home",
+        active: true
+      },
+      {
+        href: "#2",
+        text: "Apprenticeship training"
+      },
+      {
+        href: "#2",
+        text: "Courses"
+      },
+      {
+        href: "#2",
+        text: "Manage locations"
+      }
+    ]
+  }) }} -->
+
+
+
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Manage QA
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              Search providers
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div> -->
+
+<!-- {{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "providers-qa.html"
+}) }} -->
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Provider QA</span>
+      <h1 class="govuk-heading-xl">
+        Provider selected
+      </h1>
+
+      <table class="govuk-table">
+        <!-- <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Provider name</th>
+            <th scope="col" class="govuk-table__header">UKPRN</th>
+            <th scope="col" class="govuk-table__header">Date added</th>
+          </tr>
+        </thead> -->
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-font-weight-bold">Course Directory status</td>
+            <td class="govuk-table__cell">Ready for QA</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-font-weight-bold">Course Directory name</td>
+            <td class="govuk-table__cell">Provider name</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-font-weight-bold">UKPRN</td>
+            <td class="govuk-table__cell">10000651</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-font-weight-bold">Legal name</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-font-weight-bold">Trading name</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
+          </tr>
+          <!-- <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-font-weight-bold">Alias</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Add</a></td>
+          </tr> -->
+          <!-- <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-font-weight-bold">Provider Type</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Edit</a></td>
+          </tr> -->
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-font-weight-bold">RoATP Status</td>
+            <td class="govuk-table__cell">Active</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-font-weight-bold">Locations</td>
+            <td class="govuk-table__cell">12 locations</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="provider-locations">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- task list start -->
+
+      <h2 class="govuk-heading-l govuk-!-margin-top-9">
+        Heading for this section
+      </h2>
+
+      <ol class="app-task-list ">
+        <li>
+          <h2 class="app-task-list__section">
+            Provider details
+          </h2>
+          <ul class="app-task-list__items govuk-!-padding-left-0">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="provider-details-compliance" aria-describedby="eligibility-completed">
+                  Compliance
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="provider-details-style.html" aria-describedby="read-declaration-completed">
+                  Style
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            Apprenticeship training
+          </h2>
+          <ul class="app-task-list__items govuk-!-padding-left-0">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="all-apprenticeships" aria-describedby="company-information-completed">
+                  QA apprenticeship
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            Overall
+          </h2>
+          <ul class="app-task-list__items govuk-!-padding-left-0">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="provider-overall-pass-fail.html">
+                  Pass/fail
+                </a>
+              </span>
+              <!-- <strong class="govuk-tag app-task-list__task-completed task-list-progress" id="medical-information-completed">In progress</strong> -->
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+
+      <a href="apprenticeship-training-style">
+        <button class="govuk-button govuk-!-margin-bottom-9" data-module="govuk-button">
+          Finish and submit QA
+        </button>
+      </a>
+
+
+      <!-- task list end -->
+
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-2" id="subsection-title">
+        Last QA'd by
+      </h3>
+          <p>name@youremail.com</p>
+
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-2">
+          Date
+      </h3>
+          <p>17th May 2019</p>
+
+
+
+
+
+
+      <!-- end of main content -->
+    </div>
+
+
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items cd-aside-panel" role="complementary">
+
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-6" id="subsection-title">
+          Basingstoke ITEC
+        </h3>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+          Address
+        </h3>
+          <ul class="govuk-list aside-list govuk-!-font-size-16">
+            <li>3-4 Woodlands Business Villa</li>
+            <li>Coronation Road</li>
+            <li>Basingstoke</li>
+            <li>RG21 4JX</li>
+          </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Web
+        </h3>
+          <ul class="govuk-list aside-list govuk-!-font-size-16">
+            <li><a href="#">www.yourweb.com</a></li>
+          </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Contact name
+        </h3>
+          <ul class="govuk-list aside-list govuk-!-font-size-16">
+            <li>John Smith</li>
+          </ul>
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Email
+          </h3>
+            <ul class="govuk-list aside-list govuk-!-font-size-16">
+              <li><a href="#">email@yourweb.com</a></li>
+            </ul>
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+                Telephone
+            </h3>
+              <ul class="govuk-list aside-list govuk-!-font-size-16">
+                <li>01234567899</li>
+              </ul>
+      </aside>
+
+      <aside class="app-related-items cd-aside-panel govuk-heading-s govuk-!-margin-top-6" style="border-top:none;" role="complementary">
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+          Last signed in
+        </h3>
+          <ul class="govuk-list aside-list govuk-!-font-size-16">
+            <li>name@youremail.com</li>
+          </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Date
+        </h3>
+          <ul class="govuk-list aside-list govuk-!-font-size-16">
+            <li>17th May 2019</li>
+          </ul>
+      </aside>
+
+    </div>
+
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
