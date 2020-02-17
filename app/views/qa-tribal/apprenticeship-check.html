@@ -1,14 +1,50 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Check apprenticeship
+Check apprenticeship
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Manage QA
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              Search providers
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
 {% endblock %}
 
 {% block beforeContent %}
 
 {% endblock %}
 
+
+
 {% block content %}
+
+<!-- Enter page content inside this block -->
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
@@ -84,7 +120,7 @@
 
       <p>In qui tempor consequat exercitation minim minim ad exercitation.</p>
 
-      <form action="provider-selected" method="post" novalidate>
+      <form action="provider-selected-complete" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
@@ -96,4 +132,7 @@
 
     </div>
   </div>
+<!-- End of content -->
 {% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
