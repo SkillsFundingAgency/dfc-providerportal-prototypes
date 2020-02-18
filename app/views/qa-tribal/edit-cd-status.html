@@ -46,6 +46,11 @@ Edit cd status
       <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
       <nav>
         <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
           <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
             <a class="govuk-header__link" href="helpdesk-dashboard.html">
               Manage QA
@@ -54,6 +59,11 @@ Edit cd status
           <li class="govuk-header__navigation-item">
             <a class="govuk-header__link" href="search-providers.html">
               Search providers
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Manage users
             </a>
           </li>
         </ul>
@@ -103,7 +113,7 @@ href: "providers-qa.html"
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-form-group">
+    <div class="govuk-form-group govuk-!-margin-bottom-9">
 <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
     <span class="govuk-caption-xl">Helpdesk dashboad</span>
@@ -116,31 +126,13 @@ href: "providers-qa.html"
   </span>
   <div class="govuk-radios">
     <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+      <input class="govuk-radios__input hide" id="changed-name" name="changed-name" type="radio" value="yes">
       <label class="govuk-label govuk-radios__label" for="changed-name">
         Ready for QA
       </label>
     </div>
     <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-      <label class="govuk-label govuk-radios__label" for="changed-name-2">
-        In progress
-      </label>
-    </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-      <label class="govuk-label govuk-radios__label" for="changed-name">
-        Fail
-      </label>
-    </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-      <label class="govuk-label govuk-radios__label" for="changed-name">
-        Live
-      </label>
-    </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+      <input class="govuk-radios__input show" id="changed-name" name="changed-name" type="radio" value="yes">
       <label class="govuk-label govuk-radios__label" for="changed-name">
         Unable to complete
       </label>
@@ -149,12 +141,160 @@ href: "providers-qa.html"
 </fieldset>
 </div>
 
-<a href="provider-selected.html">
+
+<!-- unable to compete start -->
+
+<div class="govuk-form-group show-hide-section-1 notshown">
+<fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <h1 class="govuk-fieldset__heading">
+  Unable to complete reasons
+</h1>
+  </legend>
+<span id="changed-name-hint" class="govuk-hint">
+Select all that apply
+</span>
+<div class="govuk-checkboxes govuk-checkboxes--small">
+<div class="govuk-checkboxes__item">
+  <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+  <label class="govuk-label govuk-checkboxes__label" for="waste">
+    Are developing their provision
+  </label>
+</div>
+<div class="govuk-checkboxes__item">
+  <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+  <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+    Do not have a current available approved Standard to deliver
+  </label>
+</div>
+<div class="govuk-checkboxes__item">
+  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+    Have used a deactivated/ incorrect UKPRN
+  </label>
+</div>
+<div class="govuk-checkboxes__item">
+  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+    Have applied to the wrong route i.e employer providers or subcontractors
+  </label>
+</div>
+<div class="govuk-checkboxes__item">
+  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+    Are subcontractors who were forces to apply the Main Route as they deliver >£500k of funded learning p.a
+  </label>
+</div>
+<div class="govuk-checkboxes__item">
+  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+    Decided to withdraw application
+  </label>
+</div>
+<div class="govuk-checkboxes__item">
+  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+    Other
+  </label>
+</div>
+</div>
+</fieldset>
+
+<!-- text area start -->
+<div class="govuk-form-group govuk-!-margin-top-6">
+  <label class="govuk-label" for="more-detail">
+      Further details
+    </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+<!-- text area end -->
+</div>
+
+
+<!-- unable to complete end -->
+
+<a href="providers-qa">
   <button class="govuk-button" data-module="govuk-button">
     Save and continue
   </button>
 </a>
-<p><a href="#" class="govuk-list">Return to {provider name}</a></p>
+
+</div>
+
+<div class="govuk-grid-column-one-third">
+
+  <aside class="app-related-items cd-aside-panel" role="complementary">
+    <h3 class="govuk-heading-m govuk-!-margin-bottom-6" id="subsection-title">
+      Basingstoke ITEC
+    </h3>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+        UKPRN
+      </h3>
+    <ul class="govuk-list aside-list govuk-!-font-size-16">
+      <li>10000651</li>
+    </ul>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+        Address
+      </h3>
+    <ul class="govuk-list aside-list govuk-!-font-size-16">
+      <li>3-4 Woodlands Business Villa</li>
+      <li>Coronation Road</li>
+      <li>Basingstoke</li>
+      <li>RG21 4JX</li>
+    </ul>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+          Web
+      </h3>
+    <ul class="govuk-list aside-list govuk-!-font-size-16">
+      <li><a href="#">www.yourweb.com</a></li>
+    </ul>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+          Contact name
+      </h3>
+    <ul class="govuk-list aside-list govuk-!-font-size-16">
+      <li>John Smith</li>
+    </ul>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Email
+        </h3>
+    <ul class="govuk-list aside-list govuk-!-font-size-16">
+      <li><a href="#">email@yourweb.com</a></li>
+    </ul>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Telephone
+          </h3>
+    <ul class="govuk-list aside-list govuk-!-font-size-16">
+      <li>01234567899</li>
+    </ul>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+        Last signed in
+      </h3>
+    <ul class="govuk-list aside-list govuk-!-font-size-16">
+      <li>sarah@youremail.com</li>
+    </ul>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+          Date
+      </h3>
+    <ul class="govuk-list aside-list govuk-!-font-size-16">
+      <li>17th May 2019</li>
+    </ul>
+  </aside>
+
+  <aside class="app-related-items cd-aside-panel govuk-heading-s govuk-!-margin-top-6" style="border-top:none;" role="complementary">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+        Last QA'd by
+      </h3>
+    <ul class="govuk-list aside-list govuk-!-font-size-16">
+      <li>sarah@youremail.com</li>
+    </ul>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+          Date
+      </h3>
+    <ul class="govuk-list aside-list govuk-!-font-size-16">
+      <li>25th May 2019</li>
+    </ul>
+  </aside>
+
 </div>
   </div>
 <!-- end of main content -->

@@ -46,6 +46,11 @@
       <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
       <nav>
         <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
           <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
             <a class="govuk-header__link" href="helpdesk-dashboard.html">
               Manage QA
@@ -54,6 +59,11 @@
           <li class="govuk-header__navigation-item">
             <a class="govuk-header__link" href="search-providers.html">
               Search providers
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Manage users
             </a>
           </li>
         </ul>
@@ -120,7 +130,7 @@
           <tr class="govuk-table__row">
             <td class="govuk-table__cell govuk-!-font-weight-bold">Course Directory status</td>
             <td class="govuk-table__cell">Ready for QA</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="edit-cd-status">Unable to complete?</a></td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell govuk-!-font-weight-bold">Course Directory name</td>
@@ -224,22 +234,13 @@
               </span>
               <!-- <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong> -->
             </li>
+            <li class="app-task-list__item" style="border-bottom:none; float: right;">
+              <span class="app-task-list__task-name">
+              <a href="apprenticeships-choose" class="govuk-link">Change apprenticeships</a>
+              </span>
+              </li>
           </ul>
         </li>
-        <!-- <li>
-          <h2 class="app-task-list__section">
-            Overall
-          </h2>
-          <ul class="app-task-list__items govuk-!-padding-left-0">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="provider-overall-pass-fail.html">
-                  Pass/fail
-                </a>
-              </span>
-            </li>
-          </ul>
-        </li> -->
       </ol>
 
 
