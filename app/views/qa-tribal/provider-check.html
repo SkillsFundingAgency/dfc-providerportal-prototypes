@@ -1,160 +1,187 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Check your answers
+Check apprenticeship
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Manage QA
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              Search providers
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Manage users
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+
 {% endblock %}
 
+
+
 {% block content %}
+
+<!-- Enter page content inside this block -->
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
+      <h1 class="govuk-heading-xl">Review</h1>
 
-      <h2 class="govuk-heading-m">Personal details</h2>
+      <h2 class="govuk-heading-l">Provider details</h2>
+
+      <!-- <h2 class="govuk-heading-m">Compliance</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Name
+        <div class="govuk-summary-list__row" >
+          <dt class="govuk-summary-list__key" style="border-bottom:none;">
+            Information for employers
           </dt>
-          <dd class="govuk-summary-list__value">
-            Sarah Philips
+          <dd class="govuk-summary-list__value" style="border-bottom:none;">
+            Fail
           </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
+          <dd class="govuk-summary-list__actions" style="border-bottom:none;">
+            <a href="apprenticeship-training-combined">
               Change
-              <span class="govuk-visually-hidden"> name</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Date of birth
+            Locations
           </dt>
           <dd class="govuk-summary-list__value">
-            5 January 1978
+            Pass
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="apprenticeship-training-combined">
               Change
               <span class="govuk-visually-hidden"> date of birth</span>
             </a>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Contact information
-          </dt>
-          <dd class="govuk-summary-list__value">
-            72 Guild Street
-            <br>London
-            <br>SE23 6FH
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> contact information</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Contact details
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <p>07700 900457</p>
-            <p>sarah.phillips@example.com</p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> contact details</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
+      </dl> -->
 
-      <h2 class="govuk-heading-m">Application details</h2>
+      <!-- <h2 class="govuk-heading-m">Style</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Previous application number
+            Information for employer
           </dt>
           <dd class="govuk-summary-list__value">
-            502135326
+            Fail
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="apprenticeship-training-combined">
               Change
-              <span class="govuk-visually-hidden"> previous application number</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Licence type
+            Web address
           </dt>
           <dd class="govuk-summary-list__value">
-            For personal use
+            Pass
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="apprenticeship-training-combined">
               Change
-              <span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+      </dl> -->
+
+
+      <!-- new layout starts -->
+
+      <h2 class="govuk-heading-m">Information for employer</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Compliance
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Fail
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="apprenticeship-training-combined">
+              Change
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Home address
+            Style
           </dt>
           <dd class="govuk-summary-list__value">
-            72 Guild Street
-            <br>London
-            <br>SE23 6FH
+            Pass
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="apprenticeship-training-combined">
               Change
-              <span class="govuk-visually-hidden"> home address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Licence period
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Valid for 6 months
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> licence period</span>
             </a>
           </dd>
         </div>
       </dl>
 
-      <h2 class="govuk-heading-m">Now send your application</h2>
+      <!-- new layout ends -->
 
-      <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <div class="govuk-inset-text govuk-!-margin-bottom-9 cd-inset-info">
+        <p>This apprenticeship training course has <b>FAILED</b> quality assurance.</p>
+      </div>
 
-      <form action="/confirmation" method="post" novalidate>
+      <!-- <h2 class="govuk-heading-m">Mark as complete</h2>
+
+      <p>In qui tempor consequat exercitation minim minim ad exercitation.</p> -->
+
+      <form action="provider-selected-interim" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
         <button type="submit" class="govuk-button" data-module="govuk-button">
-          Accept and send
+          Save and continue
         </button>
 
       </form>
 
     </div>
   </div>
+<!-- End of content -->
 {% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
