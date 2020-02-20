@@ -5,37 +5,6 @@
 {% endblock %}
 
 {% block header %}
-  <!-- Blank header with no service name for the start page -->
-  <!-- {{ govukHeader() }} -->
-  <!-- {% from "govuk/components/header/macro.njk" import govukHeader %}
-
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "Publish to the course directory",
-    serviceUrl: "#",
-    containerClasses: "govuk-width-container",
-    navigation: [
-      {
-        href: "#1",
-        text: "Home",
-        active: true
-      },
-      {
-        href: "#2",
-        text: "Apprenticeship training"
-      },
-      {
-        href: "#2",
-        text: "Courses"
-      },
-      {
-        href: "#2",
-        text: "Manage locations"
-      }
-    ]
-  }) }} -->
-
-
 
   <header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
@@ -53,7 +22,7 @@
           </li>
           <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
             <a class="govuk-header__link" href="helpdesk-dashboard.html">
-              Manage QA
+              Quality assurance
             </a>
           </li>
           <li class="govuk-header__navigation-item">
@@ -77,28 +46,8 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <!-- <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Section</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link">Subsection</a>
-      </li>
-    </ol>
-  </div> -->
 
-<!-- {{ govukPhaseBanner({
-  tag: {
-    text: "beta"
-  },
-  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
-}) }}
-
-{{ govukBackLink({
+<!-- {{ govukBackLink({
   text: "Back",
   href: "providers-qa.html"
 }) }} -->
@@ -119,49 +68,12 @@
       <p>Insert instructions<p>
 
       <table class="govuk-table govuk-!-margin-bottom-9">
-        <!-- <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Provider name</th>
-            <th scope="col" class="govuk-table__header">UKPRN</th>
-            <th scope="col" class="govuk-table__header">Date added</th>
-          </tr>
-        </thead> -->
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <td class="govuk-table__cell govuk-!-font-weight-bold">Course Directory status</td>
             <td class="govuk-table__cell">Ready for QA</td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="edit-cd-status">Change</a></td>
           </tr>
-          <!-- <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold">Course Directory name</td>
-            <td class="govuk-table__cell">Provider name</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold">UKPRN</td>
-            <td class="govuk-table__cell">10000651</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold">Legal name</td>
-            <td class="govuk-table__cell">&nbsp;</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold">Trading name</td>
-            <td class="govuk-table__cell">&nbsp;</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
-          </tr> -->
-          <!-- <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold">Alias</td>
-            <td class="govuk-table__cell">&nbsp;</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Add</a></td>
-          </tr> -->
-          <!-- <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold">Provider Type</td>
-            <td class="govuk-table__cell">&nbsp;</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Edit</a></td>
-          </tr> -->
           <tr class="govuk-table__row">
             <td class="govuk-table__cell govuk-!-font-weight-bold">RoATP Status</td>
             <td class="govuk-table__cell">Active</td>
@@ -177,7 +89,6 @@
 
       <!-- task list start -->
 
-
       <ol class="app-task-list ">
         <li>
           <h2 class="app-task-list__section">
@@ -192,14 +103,6 @@
               </span>
               <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
             </li>
-            <!-- <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="provider-details-style.html" aria-describedby="read-declaration-completed">
-                  Style
-                </a>
-              </span>
-
-            </li> -->
           </ul>
         </li>
         <li>
@@ -215,41 +118,13 @@
               </span>
               <!-- <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong> -->
             </li>
-            <!-- <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="apprenticeship-training-combined" aria-describedby="company-information-completed">
-                  Retail - Retail Manager - Level 4
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="apprenticeship-training-combined" aria-describedby="company-information-completed">
-                  Retail - Retail Manager - Level 4
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
-            </li> -->
-            <!-- <li class="app-task-list__item" style="border-bottom:none; float: right;">
-              <span class="app-task-list__task-name">
-              <a href="apprenticeships-choose" class="govuk-link">Change</a>
-              </span>
-              </li> -->
           </ul>
         </li>
       </ol>
-
-
-
       <!-- task list end -->
 
-
-      <!-- end of main content -->
     </div>
-
-
-
+      <!-- end of main content -->
 
 
     <div class="govuk-grid-column-one-third">

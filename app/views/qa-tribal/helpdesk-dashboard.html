@@ -5,37 +5,6 @@
 {% endblock %}
 
 {% block header %}
-  <!-- Blank header with no service name for the start page -->
-  <!-- {{ govukHeader() }} -->
-  <!-- {% from "govuk/components/header/macro.njk" import govukHeader %}
-
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "Publish to the course directory",
-    serviceUrl: "#",
-    containerClasses: "govuk-width-container",
-    navigation: [
-      {
-        href: "#1",
-        text: "Home",
-        active: true
-      },
-      {
-        href: "#2",
-        text: "Apprenticeship training"
-      },
-      {
-        href: "#2",
-        text: "Courses"
-      },
-      {
-        href: "#2",
-        text: "Manage locations"
-      }
-    ]
-  }) }} -->
-
-
 
   <header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
@@ -52,8 +21,8 @@
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="helpdesk-dashboard.html">
-              Manage QA
+            <a class="govuk-header__link" href="providers-qa">
+              Quality assurance
             </a>
           </li>
           <li class="govuk-header__navigation-item">
@@ -77,29 +46,8 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <!-- <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Section</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link">Subsection</a>
-      </li>
-    </ol>
-  </div> -->
-
-<!-- {{ govukPhaseBanner({
-  tag: {
-    text: "beta"
-  },
-  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
-}) }} -->
 
 {% endblock %}
-
 
 
 {% block content %}
@@ -115,7 +63,7 @@
           <h2 class="govuk-heading-s">Manage QA</h2>
           <p>New provider and apprenticeship training courses. </p>
           <span class="cd-migration-panel__number" style="font-weight: normal;">
-            <a href="providers-qa.html" class="govuk-link">QA submissions</a>
+            <a href="providers-qa" class="govuk-link">QA submissions</a>
           </span>
           <br>
           <br>
