@@ -5,37 +5,6 @@ Provider combined
 {% endblock %}
 
 {% block header %}
-<!-- Blank header with no service name for the start page -->
-<!-- {{ govukHeader() }} -->
-<!-- {% from "govuk/components/header/macro.njk" import govukHeader %}
-
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "Publish to the course directory",
-    serviceUrl: "#",
-    containerClasses: "govuk-width-container",
-    navigation: [
-      {
-        href: "#1",
-        text: "Home",
-        active: true
-      },
-      {
-        href: "#2",
-        text: "Apprenticeship training"
-      },
-      {
-        href: "#2",
-        text: "Courses"
-      },
-      {
-        href: "#2",
-        text: "Manage locations"
-      }
-    ]
-  }) }} -->
-
-
 
 <header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
@@ -80,8 +49,6 @@ Provider combined
 
 {% endblock %}
 
-
-
 {% block content %}
 
 <!-- Enter page content inside this block -->
@@ -91,43 +58,41 @@ Provider combined
     <h1 class="govuk-heading-xl">
         Provider details QA page
       </h1>
-
-      <h2 class="govuk-heading-l">
+  <div id="description" class="govuk-!-margin-bottom-9">
+    <h2 class="govuk-heading-l">
           Information for employers
         </h2>
 
-
     <p class="govuk-!-margin-bottom-6">Vel pretium lectus quam id leo in. Felis eget nunc lobortis mattis. Sed risus ultricies tristique nulla aliquet enim tortor at. Massa vitae tortor condimentum lacinia quis vel. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Eget egestas purus viverra accumsan in nisl. Ut eu sem integer vitae justo. Id volutpat lacus laoreet non curabitur gravida arcu ac. Leo vel fringilla est ullamcorper eget. Adipiscing diam donec adipiscing tristique risusnec feugiat. Dictum varius duis at consectetur lorem donec massa. Auctor augue mauris augue neque gravida in fermentum et.</p>
 
-
-    <!-- description outcome compliance start -->
+    <!-- outcome compliance start -->
 
     <div class="govuk-form-group govuk-!-margin-bottom-6">
-    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
           Compliance
         </h2>
-      </legend>
-      <span id="changed-name-hint" class="govuk-hint">
+        </legend>
+        <span id="changed-name-hint" class="govuk-hint">
         Veniam cupidatat occaecat reprehenderit cillum nostrud tempor exercitation.
       </span>
-      <div class="govuk-radios govuk-radios--inline">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input hide1" id="details" name="details" type="radio" value="yes">
-          <label class="govuk-label govuk-radios__label" for="details">
-            Pass
-          </label>
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input hide1" id="details" name="details" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="details">
+              Pass
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input show1" id="details-2" name="details" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="details-2">
+              Reject
+            </label>
+          </div>
         </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input show1" id="details-2" name="details" type="radio" value="no">
-          <label class="govuk-label govuk-radios__label" for="details-2">
-            Reject
-          </label>
-        </div>
-      </div>
-    </fieldset>
-  </div>
+      </fieldset>
+    </div>
 
     <!-- reasons for reject start -->
     <div class="govuk-form-group show-hide-section-1 notshown">
@@ -144,50 +109,50 @@ Provider combined
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
             <label class="govuk-label govuk-checkboxes__label" for="organisation">
-          Used capitalised A for apprenticeships
-        </label>
+              Used capitalised A for apprenticeships
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-          Links to web pages not working
-        </label>
+              Links to web pages not working
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
-          Specific employer named
-        </label>
+              Specific employer named
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-          Unverifiable claim
-        </label>
+              Unverifiable claim
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-          Incorrect Ofsted grade used
-        </label>
+              Incorrect Ofsted grade used
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-          Insufficient detail
-        </label>
+              Insufficient detail
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-          Not aimed at employer
-        </label>
+              Not aimed at employer
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-          Other
-        </label>
+              Other
+            </label>
           </div>
         </div>
       </fieldset>
@@ -195,44 +160,43 @@ Provider combined
       <!-- text area start -->
       <div class="govuk-form-group govuk-!-margin-top-3 govuk-!-margin-bottom-6">
         <label class="govuk-label" for="more-detail">
-            Comments
-          </label>
+          Comments
+        </label>
         <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
       </div>
       <!-- text area end -->
     </div>
     <!-- reasons for reject end -->
-    <!-- description outcome compliance end -->
 
+    <!-- outcome compliance end -->
 
-    <!-- description outcome style start -->
-
-    <div class="govuk-form-group govuk-!-margin-bottom-0">
-    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+    <!-- outcome style start -->
+    <div class="govuk-form-group govuk-!-margin-bottom-6">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
           Style
         </h2>
-      </legend>
-      <span id="changed-name-hint" class="govuk-hint">
+        </legend>
+        <span id="changed-name-hint" class="govuk-hint">
         Veniam cupidatat occaecat reprehenderit cillum nostrud tempor exercitation.
       </span>
-      <div class="govuk-radios govuk-radios--inline">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input hide2" id="changed-name" name="changed-name" type="radio" value="yes">
-          <label class="govuk-label govuk-radios__label" for="changed-name">
-            Pass
-          </label>
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input hide2" id="changed-name" name="changed-name" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="changed-name">
+              Pass
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input show2" id="changed-name-2" name="changed-name" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+              Reject
+            </label>
+          </div>
         </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input show2" id="changed-name-2" name="changed-name" type="radio" value="no">
-          <label class="govuk-label govuk-radios__label" for="changed-name-2">
-            Reject
-          </label>
-        </div>
-      </div>
-    </fieldset>
-  </div>
+      </fieldset>
+    </div>
 
     <!-- reasons for reject start -->
     <div class="govuk-form-group show-hide-section-2 notshown">
@@ -250,77 +214,78 @@ Provider combined
             <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
             <label class="govuk-label govuk-checkboxes__label" for="organisation">
               Lists the content of the apprenticeship
-        </label>
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-          Lists the content of the apprenticeship
-        </label>
+              Lists the content of the apprenticeship
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
-          Lists the content of the apprenticeship
-        </label>
+              Lists the content of the apprenticeship
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-          Lists the content of the apprenticeship
-        </label>
+              Lists the content of the apprenticeship
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-          Lists the content of the apprenticeship
-        </label>
+              Lists the content of the apprenticeship
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-          Lists the content of the apprenticeship
-        </label>
+              Lists the content of the apprenticeship
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-          Lists the content of the apprenticeship
-        </label>
+              Lists the content of the apprenticeship
+            </label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
             <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-          Other
-        </label>
+              Other
+            </label>
           </div>
         </div>
       </fieldset>
 
       <!-- text area start -->
-      <div class="govuk-form-group govuk-!-margin-top-3 govuk-!-margin-bottom-9">
+      <div class="govuk-form-group govuk-!-margin-top-3 govuk-!-margin-bottom-6">
         <label class="govuk-label" for="more-detail">
-            Comments
-          </label>
+          Comments
+        </label>
         <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
       </div>
       <!-- text area end -->
     </div>
     <!-- reasons for reject end -->
-    <!-- description outcome style end -->
+    <!-- outcome style end -->
+  </div>
 
 
     <a href="provider-check">
-      <button class="govuk-button govuk-!-margin-top-9" data-module="govuk-button">
+      <button class="govuk-button" data-module="govuk-button">
         Save and continue
       </button>
     </a>
   </div>
-<!-- end of main content -->
+  <!-- end of main content -->
 
 
 
-<!-- aside start -->
+  <!-- aside start -->
   <div class="govuk-grid-column-one-third">
     <aside class="app-related-items cd-aside-panel" role="complementary">
       <h3 class="govuk-heading-m govuk-!-margin-bottom-6" id="subsection-title">
