@@ -1,11 +1,10 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Provider selected
+  Provider selected complete
 {% endblock %}
 
 {% block header %}
-
   <header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
     <div class="govuk-header__content" style="width: auto;">
@@ -47,13 +46,7 @@
 
 {% block beforeContent %}
 
-<!-- {{ govukBackLink({
-  text: "Back",
-  href: "providers-qa.html"
-}) }} -->
-
 {% endblock %}
-
 
 
 {% block content %}
@@ -68,25 +61,25 @@
       <p>ESFA-funded apprenticeship providers are required to ensure the quality of their data and appropriateness of the
         content. The data is quality assured for compliance and style against guidance.<p>
 
-      <table class="govuk-table govuk-!-margin-bottom-9">
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold">Course Directory status</td>
-            <td class="govuk-table__cell">In progress</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="edit-cd-status">Change</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold">RoATP Status</td>
-            <td class="govuk-table__cell">Active</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold">Locations</td>
-            <td class="govuk-table__cell">12 locations</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="provider-locations">View</a></td>
-          </tr>
-        </tbody>
-      </table>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Course Directory status</td>
+              <td class="govuk-table__cell">Failed</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="edit-cd-status">Change</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">RoATP Status</td>
+              <td class="govuk-table__cell">Active</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-font-weight-bold">Locations</td>
+              <td class="govuk-table__cell">12 locations</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="provider-locations">View</a></td>
+            </tr>
+          </tbody>
+        </table>
 
       <!-- task list start -->
 
@@ -117,17 +110,24 @@
                   Retail - Retail Manager - Level 4
                 </a>
               </span>
-              <!-- <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong> -->
+              <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
             </li>
           </ul>
         </li>
       </ol>
-      <!-- task list end -->
-      <a href="qa-confirmation">
-        <button class="govuk-button govuk-button--disabled govuk-!-margin-bottom-9" data-module="govuk-button" disabled="disabled" aria-disabled="true">
+
+      <div class="govuk-inset-text govuk-!-margin-bottom-9 cd-inset-info">
+        <p>Overall the provider information and apprenticeship training course has <b>FAILED</b> quality assurance.</p>
+      </div>
+
+
+      <!-- <a href="qa-confirmation">
+        <button class="govuk-button govuk-!-margin-bottom-9" data-module="govuk-button">
           Finish
         </button>
-      </a>
+      </a> -->
+
+      <!-- task list end -->
 
     </div>
       <!-- end of main content -->
@@ -136,7 +136,6 @@
     <div class="govuk-grid-column-one-third">
 
       <aside class="app-related-items cd-aside-panel" role="complementary">
-
         <h3 class="govuk-heading-m govuk-!-margin-bottom-6" id="subsection-title">
           Basingstoke ITEC
         </h3>
@@ -147,49 +146,50 @@
           <li>10000651</li>
         </ul>
         <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
-          Address
-        </h3>
-          <ul class="govuk-list aside-list govuk-!-font-size-16">
-            <li>3-4 Woodlands Business Villa</li>
-            <li>Coronation Road</li>
-            <li>Basingstoke</li>
-            <li>RG21 4JX</li>
-          </ul>
-        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-            Web
-        </h3>
-          <ul class="govuk-list aside-list govuk-!-font-size-16">
-            <li><a href="#">www.yourweb.com</a></li>
-          </ul>
-        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-            Contact name
-        </h3>
-          <ul class="govuk-list aside-list govuk-!-font-size-16">
-            <li>John Smith</li>
-          </ul>
-          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-              Email
+            Address
           </h3>
-            <ul class="govuk-list aside-list govuk-!-font-size-16">
-              <li><a href="#">email@yourweb.com</a></li>
-            </ul>
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-                Telephone
+        <ul class="govuk-list aside-list govuk-!-font-size-16">
+          <li>3-4 Woodlands Business Villa</li>
+          <li>Coronation Road</li>
+          <li>Basingstoke</li>
+          <li>RG21 4JX</li>
+        </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Web
+          </h3>
+        <ul class="govuk-list aside-list govuk-!-font-size-16">
+          <li><a href="#">www.yourweb.com</a></li>
+        </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Contact name
+          </h3>
+        <ul class="govuk-list aside-list govuk-!-font-size-16">
+          <li>John Smith</li>
+        </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+                Email
             </h3>
-              <ul class="govuk-list aside-list govuk-!-font-size-16">
-                <li>01234567899</li>
-              </ul>
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
-                Last signed in
+        <ul class="govuk-list aside-list govuk-!-font-size-16">
+          <li><a href="#">email@yourweb.com</a></li>
+        </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+                  Telephone
               </h3>
-            <ul class="govuk-list aside-list govuk-!-font-size-16">
-              <li>sarah@youremail.com</li>
-            </ul>
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-                  Date
-              </h3>
-            <ul class="govuk-list aside-list govuk-!-font-size-16">
-              <li>17th May 2019</li>
+        <ul class="govuk-list aside-list govuk-!-font-size-16">
+          <li>01234567899</li>
+        </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+            Last signed in
+          </h3>
+        <ul class="govuk-list aside-list govuk-!-font-size-16">
+          <li>sarah@youremail.com</li>
+        </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Date
+          </h3>
+        <ul class="govuk-list aside-list govuk-!-font-size-16">
+          <li>17th May 2019</li>
+        </ul>
       </aside>
 
       <aside class="app-related-items cd-aside-panel govuk-heading-s govuk-!-margin-top-6" style="border-top:none;" role="complementary">
