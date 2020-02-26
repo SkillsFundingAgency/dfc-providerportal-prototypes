@@ -1,0 +1,176 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Dashboard new
+{% endblock %}
+
+{% block header %}
+
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="#1">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#2">
+              Apprenticeship training
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#3">
+              Courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#4">
+              Manage locations
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- start notification -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-error-summary" style="border-color:#005ea5;">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        Welcome to publish to the course directory
+      </h2>
+      <div class="govuk-error-summary__body">
+        <p>Laboris est nostrud fugiat irure amet ad elit pariatur consectetur fugiat. You can add your details, locations and one apprenticship.</p>
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#" style="color:#005ea5;">Start the journey</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  <!-- end notification -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds no-padding-left">
+      <!-- <div class="govuk-grid-column-one-half cd-homepage__item">
+
+        <div class="cd-migration-panel">
+          <h2 class="cd-migration-panel__title">Manage</h2>
+          <h2 class="cd-migration-panel__title">your courses</h2>
+          <span class="cd-migration-panel__number">
+            <a href="/providercourses" class="govuk-link">1 <span>  course</span></a>
+          </span>
+          <br>
+          <br>
+        </div>
+        <ul class="govuk-list cd-homepage__list">
+          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Add a new course</a>
+          </li>
+          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Bulk upload course information</a>
+          </li>
+        </ul>
+      </div> -->
+
+      <div class="govuk-grid-column-one-half cd-homepage__item">
+
+        <div class="cd-migration-panel">
+          <h2 class="cd-migration-panel__title">Manage</h2>
+          <h2 class="cd-migration-panel__title">your apprenticeship training</h2>
+          <span class="cd-migration-panel__number">
+            <a href="/providercourses" class="govuk-link">1 <span>  apprenticeship</span></a>
+          </span>
+          <br>
+          <br>
+        </div>
+        <ul class="govuk-list cd-homepage__list">
+          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Add a new apprenticeship</a>
+          </li>
+          <li class="cd-homepage__list--item"><a href="/BulkUpload" class="govuk-link">Bulk upload apprenticeship information</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="govuk-grid-column-one-half cd-homepage__item">
+
+        <div class="cd-migration-panel">
+          <h2 class="cd-migration-panel__title">Manage</h2>
+          <h2 class="cd-migration-panel__title">your locations</h2>
+          <span class="cd-migration-panel__number">
+            <a href="/providercourses" class="govuk-link">3 <span>  locations</span></a>
+          </span>
+          <br>
+          <br>
+        </div>
+        <ul class="govuk-list cd-homepage__list">
+          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Add a new location</a>
+          </li>
+          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">View, edit or delete a location</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third no-padding-left">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Other actions
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Manage your organisation details
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Manage your DfE Sign-in account
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
