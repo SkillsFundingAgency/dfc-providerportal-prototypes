@@ -33,7 +33,7 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 .app-related-items {
-  border-top: 3px solid #207E77;
+  border-top: 2px solid #207E77;
 }
 
 // Header sign in back-link
@@ -51,7 +51,11 @@ $govuk-assets-path: '/govuk/assets/';
   background-color: #f8f8f8;
   border-left: 3px solid #207E77;
   padding: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.cd-card >ul {
+  margin-bottom: 0;
 }
 
 //dashboard styling
@@ -112,13 +116,14 @@ $govuk-assets-path: '/govuk/assets/';
     padding: 1rem 1rem .5rem 1rem ;
 }
 
-.aside-list {
-
+.app-related-items .govuk-list > li {
+  margin-bottom: 10px;
 }
 
-.app-related-items .govuk-list > li {
+.app-related-items .aside-list > li {
   margin-bottom: 2px;
 }
+
 
 //search
 
