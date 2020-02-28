@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  New apprenticeship homescreen submitted
+  New apprenticeship homescreen passed
 {% endblock %}
 
 {% block header %}
@@ -71,10 +71,15 @@
     <div class="govuk-grid-column-full">
       <div class="govuk-error-summary" style="border-color:#005ea5;">
       <h2 class="govuk-error-summary__title" id="error-summary-title">
-        Heading for when they have submitted
+        Heading for when they have passed
       </h2>
       <div class="govuk-error-summary__body">
-        <p>Message about how their provider details and apprenticeship is being QA'd.</p>
+        <p>Message about how they have passed.</p>
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#" style="color:#005ea5;">Close notification</a>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -113,17 +118,17 @@
           <h2 class="cd-migration-panel__title">Manage</h2>
           <h2 class="cd-migration-panel__title">your apprenticeship training</h2>
           <span class="cd-migration-panel__number">
-            0 <span>  apprenticeships</span>
+          <a href="/providercourses" class="govuk-link">1 <span>  apprenticeships</span></a>
           </span>
           <br>
           <br>
         </div>
-        <!-- <ul class="govuk-list cd-homepage__list">
+        <ul class="govuk-list cd-homepage__list">
           <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Add a new apprenticeship</a>
           </li>
           <li class="cd-homepage__list--item"><a href="/BulkUpload" class="govuk-link">Bulk upload apprenticeship information</a>
           </li>
-        </ul> -->
+        </ul>
       </div>
 
 
@@ -132,17 +137,17 @@
           <h2 class="cd-migration-panel__title">Manage</h2>
           <h2 class="cd-migration-panel__title">your locations</h2>
           <span class="cd-migration-panel__number">
-            0 <span>  locations</span>
+            <a href="/providercourses" class="govuk-link">6 <span>  locations</span></a>
           </span>
           <br>
           <br>
         </div>
-        <!-- <ul class="govuk-list cd-homepage__list">
+        <ul class="govuk-list cd-homepage__list">
           <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Add a new location</a>
           </li>
           <li class="cd-homepage__list--item"><a href="#" class="govuk-link">View, edit or delete a location</a>
           </li>
-        </ul> -->
+        </ul>
       </div>
       </div>
 
@@ -155,11 +160,11 @@
         </h2>
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list govuk-!-font-size-16">
-            <!-- <li>
+            <li>
               <a href="#">
                 Manage your organisation details
               </a>
-            </li> -->
+            </li>
             <li>
               <a href="#">
                 Manage your DfE Sign-in account
