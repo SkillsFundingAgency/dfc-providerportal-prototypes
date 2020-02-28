@@ -247,15 +247,13 @@ a {
   display: none;
 }
 
-
-.govuk-summary-list__key {
+.qa-check .govuk-summary-list__key {
     width: 60%;
 }
 
-.govuk-summary-list__value {
+.qa-check .govuk-summary-list__value {
     width: 20%;
 }
-
 
 .cd-inset-info {
     border-color: #5694ca;
@@ -264,4 +262,9 @@ a {
 
 .govuk-accordion__controls {
   display: none;
+}
+
+.cd-cancel-link {
+    margin: 9px 0 6px 13px;
+    position: absolute;
 }
