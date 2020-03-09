@@ -1,0 +1,259 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Provider selected
+{% endblock %}
+
+{% block header %}
+
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Quality assurance
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              Search providers
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Manage users
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="../migration/migration-report">
+              Migration reports
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+<!-- {{ govukBackLink({
+  text: "Back",
+  href: "providers-qa.html"
+}) }} -->
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Basingstoke ITEC
+      </h1>
+
+      <p class="govuk-!-margin-bottom-9">ESFA-funded apprenticeship providers are required to ensure the quality of their data and appropriateness of the content. The data is quality assured for compliance and style against guidance.</p>
+
+      <h2 class="app-task-list__section">
+        Quality assurance status
+      </h2>
+
+      <table class="govuk-table govuk-!-margin-bottom-9">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-top: 1px solid #b1b4b6;">In progress</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric" style="border-top: 1px solid #b1b4b6;"><a class="govuk-link" href="edit-qa-status">Change</a></td>
+          </tr>
+          <!-- <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-font-weight-bold">RoATP Status</td>
+            <td class="govuk-table__cell">Active</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp;</td>
+          </tr> -->
+          <!-- <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-font-weight-bold">Locations</td>
+            <td class="govuk-table__cell">12 locations</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="provider-locations">View</a></td>
+          </tr> -->
+        </tbody>
+      </table>
+
+      <!-- task list start -->
+
+      <ol class="app-task-list ">
+        <li>
+          <h2 class="app-task-list__section">
+            Provider
+          </h2>
+          <ul class="app-task-list__items govuk-!-padding-left-0">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="provider-details-combined" aria-describedby="eligibility-completed">
+                  Provider information
+                </a>
+              </span>
+              <!-- <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong> -->
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            Apprenticeship training courses
+          </h2>
+          <ul class="app-task-list__items govuk-!-padding-left-0">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="apprenticeship-training-combined" aria-describedby="company-information-completed">
+                  Retail - Retail Manager - Level 4
+                </a>
+              </span>
+              <!-- <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong> -->
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="apprenticeship-training-combined" aria-describedby="company-information-completed">
+                  Retail - Retail Manager - Level 4
+                </a>
+              </span>
+              <!-- <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong> -->
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="apprenticeship-training-combined" aria-describedby="company-information-completed">
+                  Retail - Retail Manager - Level 4
+                </a>
+              </span>
+              <!-- <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong> -->
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="apprenticeship-training-combined" aria-describedby="company-information-completed">
+                  Retail - Retail Manager - Level 4
+                </a>
+              </span>
+              <!-- <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong> -->
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="apprenticeship-training-combined" aria-describedby="company-information-completed">
+                  Retail - Retail Manager - Level 4
+                </a>
+              </span>
+              <!-- <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong> -->
+            </li>
+            <li class="app-task-list__item govuk-table__cell--numeric border-bottom-none">
+              <a href="apprenticeships-choose" class="govuk-link">Change</a>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <!-- task list end -->
+
+      <a href="qa-confirmation">
+        <button class="govuk-button govuk-button--disabled govuk-!-margin-bottom-9" data-module="govuk-button" disabled="disabled" aria-disabled="true">
+          Finish
+        </button>
+      </a>
+
+      <!-- end of main content -->
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items cd-aside-panel" role="complementary">
+
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-6" id="subsection-title">
+          Basingstoke ITEC
+        </h3>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+            UKPRN
+          </h3>
+        <ul class="govuk-list aside-list govuk-!-font-size-16">
+          <li>10000651</li>
+        </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+          Address
+        </h3>
+          <ul class="govuk-list aside-list govuk-!-font-size-16">
+            <li>3-4 Woodlands Business Villa</li>
+            <li>Coronation Road</li>
+            <li>Basingstoke</li>
+            <li>RG21 4JX</li>
+          </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Web
+        </h3>
+          <ul class="govuk-list aside-list govuk-!-font-size-16">
+            <li><a href="#">www.yourweb.com</a></li>
+          </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+            Contact name
+        </h3>
+          <ul class="govuk-list aside-list govuk-!-font-size-16">
+            <li>John Smith</li>
+          </ul>
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Email
+          </h3>
+            <ul class="govuk-list aside-list govuk-!-font-size-16">
+              <li><a href="#">email@yourweb.com</a></li>
+            </ul>
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+                Telephone
+            </h3>
+              <ul class="govuk-list aside-list govuk-!-font-size-16">
+                <li>01234567899</li>
+              </ul>
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+                Last signed in
+              </h3>
+            <ul class="govuk-list aside-list govuk-!-font-size-16">
+              <li>sarah@youremail.com</li>
+            </ul>
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+                  Date
+              </h3>
+            <ul class="govuk-list aside-list govuk-!-font-size-16">
+              <li>17th May 2019</li>
+      </aside>
+
+      <aside class="app-related-items cd-aside-panel govuk-heading-s govuk-!-margin-top-6" style="border-top:none;" role="complementary">
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0" id="subsection-title">
+            Last QA'd by
+          </h3>
+        <ul class="govuk-list aside-list govuk-!-font-size-16">
+          <li>sarah@youremail.com</li>
+        </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Date
+          </h3>
+        <ul class="govuk-list aside-list govuk-!-font-size-16">
+          <li>25th May 2019</li>
+        </ul>
+      </aside>
+
+    </div>
+
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
