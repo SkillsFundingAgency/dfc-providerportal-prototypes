@@ -50,7 +50,7 @@ $govuk-assets-path: '/govuk/assets/';
 .cd-card {
   background-color: #f8f8f8;
   border-left: 3px solid #207E77;
-  padding: 20px;
+  padding: 30px;
   margin-bottom: 30px;
 }
 
@@ -58,8 +58,12 @@ $govuk-assets-path: '/govuk/assets/';
   margin-bottom: 0;
 }
 
-.cd-card-inner {
+.cd-card-number {
+  font-size: 3rem;
+}
 
+.cd-card--provider > p, .cd-card--provider > h2 {
+  margin-bottom: 10px;
 }
 
 //dashboard styling
@@ -216,11 +220,6 @@ input:focus, textarea:focus, select:focus, input[type="search"]:focus {
 position: sticky;
 top: 0;
 }
-
-.app-page p {
-  margin-bottom: 40px;
-}
-
 
 a {
 	word-wrap: break-word;

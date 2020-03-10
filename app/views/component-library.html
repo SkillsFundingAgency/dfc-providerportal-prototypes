@@ -98,13 +98,18 @@
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list govuk-!-font-size-16">
             <li class="govuk-!-margin-bottom-2">
-              <a href="#dashboard-panel">
-                Dashboard panel
+              <a href="#homescreen-card">
+                Home screen card
               </a>
             </li>
             <li class="govuk-!-margin-bottom-2">
               <a href="#inset">
                 Inset
+              </a>
+            </li>
+            <li class="govuk-!-margin-bottom-2">
+              <a href="#notification">
+                Notification
               </a>
             </li>
             <li class="govuk-!-margin-bottom-2">
@@ -127,64 +132,72 @@
         Components
       </h1>
 
-      <!-- dashboard panel -->
-      <h2 id="dashboard-panel" class="govuk-heading-l">Dashboard panel</h2>
-      <p>Duis blandit cursus mollis. Quisque volutpat luctus augue semper blandit. Etiam lacus dolor, semper eget massa sed, porta dignissim erat. Donec eleifend lacus id magna aliquet congue. Vestibulum hendrerit iaculis.</p>
+      <!-- home screen cards-->
+      <h2 id="homescreen-card" class="govuk-heading-l">Home screen card</h2>
 
-      <div class="govuk-grid-column-one-half cd-homepage__item">
-
-        <div class="cd-migration-panel">
-          <h2 class="cd-migration-panel__title">Manage</h2>
-          <h2 class="cd-migration-panel__title">your courses</h2>
-          <span class="cd-migration-panel__number">
-            <a href="/providercourses" class="govuk-link">1 <span>  course</span></a>
-          </span>
-          <br>
-          <br>
+      <div class="govuk-grid-row govuk-!-margin-bottom-7">
+        <div class="govuk-grid-column-one-half">
+          <div class="cd-card cd-card--provider">
+            <h2 class="govuk-heading-m">Further education courses</h2>
+            <p class="cd-card-number">24</p>
+            <ul class="govuk-list">
+              <li>
+                <a class="govuk-link" href="#">View and edit</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#">Add new</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul class="govuk-list cd-homepage__list">
-          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Add a new course</a>
-          </li>
-          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Bulk upload course information</a>
-          </li>
-        </ul>
-      </div>
 
-      <div class="govuk-grid-column-one-half cd-homepage__item">
-
-        <div class="cd-migration-panel">
-          <h2 class="cd-migration-panel__title">Manage</h2>
-          <h2 class="cd-migration-panel__title">your apprenticeship training</h2>
-          <span class="cd-migration-panel__number">
-            <a href="/providercourses" class="govuk-link">1 <span>  apprenticeship</span></a>
-          </span>
-          <br>
-          <br>
+        <div class="govuk-grid-column-one-half">
+          <div class="cd-card cd-card--provider">
+            <h2 class="govuk-heading-m">Apprenticeship training courses</h2>
+            <p class="cd-card-number">2</p>
+            <ul class="govuk-list">
+              <li>
+                <a class="govuk-link" href="#">View and edit</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#">Add new</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul class="govuk-list cd-homepage__list">
-          <li class="cd-homepage__list--item"><a href="#" class="govuk-link">Add a new apprenticeship</a>
-          </li>
-          <li class="cd-homepage__list--item"><a href="/BulkUpload" class="govuk-link">Bulk upload apprenticeship information</a>
-          </li>
-        </ul>
       </div>
-
-      <!-- end dashboad panel -->
+      <!-- end home screen cards -->
 
       <!-- inset start -->
       <h2 id="inset" class="govuk-heading-l">Inset</h2>
-      <p>Duis blandit cursus mollis. Quisque volutpat luctus augue semper blandit. Etiam lacus dolor, semper eget massa sed, porta dignissim erat. Donec eleifend lacus id magna aliquet congue. Vestibulum hendrerit iaculis.</p>
       <div class="govuk-inset-text govuk-!-margin-bottom-9 cd-inset-info">
         <p>Overall the provider details and apprenticeship training courses have <b>PASSED</b> quality assurance.</p>
       </div>
 
       <!-- inset end -->
 
+      <!-- notification -->
+
+      <h2 id="notification" class="govuk-heading-l">Notification</h2>
+      <div class="govuk-error-summary govuk-!-margin-bottom-9" style="border-color:#005ea5;">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+              Welcome to publish to the course directory
+            </h2>
+        <div class="govuk-error-summary__body">
+          <p>Laboris est nostrud fugiat irure amet ad elit pariatur consectetur fugiat. You can add your details, locations and one apprenticship.</p>
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#" style="color:#005ea5;">Start the journey</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- notification end -->
+
       <!-- search -->
 
       <h2 id="search" class="govuk-heading-l">Search</h2>
-      <p>Duis blandit cursus mollis. Quisque volutpat luctus augue semper blandit. Etiam lacus dolor, semper eget massa sed, porta dignissim erat. Donec eleifend lacus id magna aliquet congue. Vestibulum hendrerit iaculis.</p>
-
       <div class="bottom search-container govuk-!-margin-bottom-9">
         <form role="search" method="get" id="searchform" class="form-search" action="#">
           <label class="visuallyhidden" for="s">Search for:</label>
