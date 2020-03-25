@@ -267,3 +267,31 @@ a {
     margin: 9px 0 6px 13px;
     position: absolute;
 }
+
+
+//cookie cookie-banner
+
+.cd-cookie-banner__buttons {
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.cd-cookie-banner__button {
+  margin: 1px 5px;
+  vertical-align: middle;
+}
+
+.app-cookie-banner__message {
+  display: inline-block;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.app-cookie-banner {
+  background-color: #f3f2f1;
+}
+
+.cookie-banner__confirmation {
+  display: none;
+}
