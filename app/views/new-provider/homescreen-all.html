@@ -6,41 +6,41 @@
 
 {% block header %}
 
-<div class="app-cookie-banner">
-  <div class="cookie-banner__wrapper govuk-width-container">
-    <p class="app-cookie-banner__message">
-      GOV.UK uses cookies to make the site simpler.
-    </p>
-    <div class="cd-cookie-banner__buttons">
-      <button class="govuk-button cd-cookie-banner__button" data-module="govuk-button">
-        Accept all cookies
-      </button>
-      <a href="cookie-settings"><button class="govuk-button cd-cookie-banner__button" data-module="govuk-button">
-        Set cookie preferences
-      </button></a>
+<!-- start cookie -->
+
+<div id="global-cookie-message" class="gem-c-cookie-banner govuk-clearfix show-hide-section-5" data-module="cookie-banner" role="region" aria-label="cookie banner" data-nosnippet="" style="display: block;">
+
+  <div class="gem-c-cookie-banner__wrapper govuk-width-container show-hide-section-3">
+    <div class="govuk-grid-row">
+      <div class=" govuk-grid-column-two-thirds">
+        <div class="gem-c-cookie-banner__message">
+          <span class="govuk-heading-m">Tell us whether you accept cookies</span>
+          <p class="govuk-body">We use <a class="govuk-link" href="cookie-details">cookies to collect information</a> about how you use GOV.UK. We use this information to make the website work as well as possible and improve government services.</p>
+        </div>
+        <div class="gem-c-cookie-banner__buttons">
+          <div class="gem-c-cookie-banner__button gem-c-cookie-banner__button-accept govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
+            <button class="gem-c-button govuk-button gem-c-button--inline govuk-!-margin-bottom-2 hide3 show4">Accept all cookies</button>
+          </div>
+          <div class="gem-c-cookie-banner__button gem-c-cookie-banner__button-settings govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
+
+            <a class="gem-c-button govuk-button gem-c-button--inline govuk-!-margin-bottom-2" role="button" data-module="track-click" data-track-category="cookieBanner" data-track-action="Cookie banner settings clicked" href="cookie-settings">Set cookie preferences</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- <div class="cd-cookie-banner__buttons">
-      <a href="cookie-settings"><button class="govuk-button cd-cookie-banner__button" data-module="govuk-button">
-        Set cookie preferences
-      </button></a>
-    </div> -->
   </div>
-  <div class="cookie-banner__confirmation govuk-width-container">
-    <p class="app-cookie-banner__message">
-      GOV.UK uses cookies to make the site simpler.
+
+  <div class="gem-c-cookie-banner__confirmation govuk-width-container show-hide-section-4" tabindex="-1">
+    <p class="gem-c-cookie-banner__confirmation-message">
+      You’ve accepted all cookies. You can <a class="govuk-link" href="cookie-settings" data-module="track-click" data-track-category="cookieBanner" data-track-action="Cookie banner settings clicked from confirmation">change your cookie settings</a> at
+      any time.
     </p>
-    <div class="cd-cookie-banner__buttons">
-      <button class="govuk-button cd-cookie-banner__button" data-module="govuk-button">
-        Accept all cookies
-      </button>
-    </div>
-    <div class="cd-cookie-banner__buttons">
-      <button class="govuk-button cd-cookie-banner__button" data-module="govuk-button">
-        Set cookie preferences
-      </button>
-    </div>
+    <button class="gem-c-cookie-banner__hide-button hide4" data-hide-cookie-banner="true" data-module="track-click" data-track-category="cookieBanner" data-track-action="Hide cookie banner">Hide</button>
   </div>
 </div>
+
+<!-- end cookie -->
+
 
   <header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
