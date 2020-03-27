@@ -135,6 +135,12 @@ $govuk-assets-path: '/govuk/assets/';
 
 //search
 
+.search-result-container {
+  border: 1px solid #bfc1c3;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+
 .form-search {
     width: 100%;
     position: relative;
@@ -494,3 +500,8 @@ a {
 .cookie-table .govuk-table__header:last-child {
   padding: 10px 10px 10px 0;
 }
+
+
+
+
+//
