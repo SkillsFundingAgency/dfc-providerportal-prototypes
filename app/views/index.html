@@ -13,118 +13,178 @@
         Course Directory Prototype
       </h1>
 
-      <h2 class="govuk-heading-m">Help and documentation</h2>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="component-library.html">Protoype component library</a></li>
-        <li><a href="https://design-system.service.gov.uk/">GDS design system</a></li>
-        <li><a href="https://govuk-prototype-kit.herokuapp.com/docs/tutorials-and-examples">Tutorials and examples</a></li>
-        </ul>
+      <!-- accordian start -->
 
-      <h2 class="govuk-heading-m">Templates</h2>
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="template.html">Standard template</a></li>
-        <li><a href="dashboard.html">Dashboard template</a></li>
-        <li><a href="dashboard-new.html">Dashboard new template</a></li>
-      </ul>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Help and documentation
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <ul class="govuk-list">
+              <li><a class="govuk-link" href="component-library.html">Protoype component library</a></li>
+              <li><a class="govuk-link" href="https://design-system.service.gov.uk/">GDS design system</a></li>
+              <li><a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com/docs/tutorials-and-examples">Tutorials and examples</a></li>
+            </ul>
+          </div>
+        </div>
 
-      <h2 class="govuk-heading-m">Journeys and pages</h2>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Homescreen
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+            <ul class="govuk-list">
+              <li><a class="govuk-link" href="homescreen/dashboard.html">Dashboard template</a></li>
+              <li><a class="govuk-link" href="homescreen/dashboard-new.html">Dashboard new template</a></li>
+              <li><a class="govuk-link" href="homescreen/homescreen-all">Homescreen</a></li>
+            </ul>
+          </div>
+        </div>
 
-      <h3 class="govuk-heading-s">Main pages</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="new-provider/homescreen-all">Homescreen with all elements</a></li>
-        <li><a href="new-provider/cookie-settings">Cookie settings</a></li>
-        <li><a href="new-provider/cookie-details">Cookie details</a></li>
-      </ul>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                Tribal
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+            <h3 class="govuk-heading-s">Quality assurance</h3>
+            <ul class="govuk-list">
+              <li><a class="govuk-link" href="qa-tribal/start.html">Start</a></li>
+              <li><a class="govuk-link" href="qa-tribal/signin.html">DfE sign in</a></li>
+              <li><a class="govuk-link" href="qa-tribal/helpdesk-dashboard.html">Helpdesk dashboard</a></li>
+              <li><a class="govuk-link" href="qa-tribal/providers-qa.html">Providers in QA</a></li>
+              <li><a class="govuk-link" href="qa-tribal/providers-qa-empty.html">Providers in QA empty state</a></li>
+              <li><a class="govuk-link" href="qa-tribal/provider-selected.html">Provider selected</a></li>
+              <li><a class="govuk-link" href="qa-tribal/edit-qa-status.html">Edit quality assurance status</a></li>
+              <li><a class="govuk-link" href="qa-tribal/provider-details-combined.html">QA Provider details - combined</a></li>
+              <li><a class="govuk-link" href="qa-tribal/provider-check.html">QA Provider check</a></li>
+              <li><a class="govuk-link" href="qa-tribal/provider-selected-interim.html">Provider selected in progress</a></li>
+              <li><a class="govuk-link" href="qa-tribal/apprenticeship-training-combined.html">QA Apprenticeship training - combined</a></li>
+              <li><a class="govuk-link" href="qa-tribal/apprenticeship-check.html">QA Apprenticeship check</a></li>
+              <li><a class="govuk-link" href="qa-tribal/provider-selected-complete.html">Provider selected all complete</a></li>
+              <li><a class="govuk-link" href="qa-tribal/qa-confirmation.html">QA confirmation</a></li>
+              <li><a class="govuk-link" href="qa-tribal/provider-selected-failed">Provider selected failed</a></li>
+              <li><a class="govuk-link" href="qa-tribal/provider-selected-unable">Provider selected unable to complete</a></li>
+            </ul>
 
-      <h3 class="govuk-heading-s">Provider new apprenticeships and QA</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="new-provider/homescreen-new-apprenticeship-provider-fe">Homescreen FE</a></li>
-        <li><a href="new-provider/homescreen-new-apprenticeship-provider">Homescreen</a></li>
-        <li><a href="new-provider/search">Search with no results</a></li>
-        <li><a href="new-provider/search-framework-notification">Search with framework notification</a></li>
-        <li><a href="new-provider/where-delivered">Where will it be delivered?</a></li>
-        <li><a href="new-provider/add-location-find-address">Add location find address</a></li>
-        <li><a href="new-provider/add-location-add-address">Add location add address</a></li>
-        <li><a href="new-provider/provider-confirmation">Confirmation</a></li>
-        <li><a href="new-provider/homescreen-new-apprenticeship-provider-submitted">Homescreen submitted</a></li>
-        <li><a href="new-provider/homescreen-new-apprenticeship-provider-failed">Homescreen failed</a></li>
-        <li><a href="new-provider/homescreen-new-apprenticeship-provider-passed">Homescreen passed</a></li>
-      </ul>
+            <h3 class="govuk-heading-s">Search</h3>
+            <ul class="govuk-list">
+              <li><a class="govuk-link" href="qa-tribal/search-providers.html">Search providers</a></li>
+              <li><a class="govuk-link" href="qa-tribal/search-providers-return.html">Return a search result</a></li>
+            </ul>
 
-      <h3 class="govuk-heading-s">New and QA - unused</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="new-provider/dashboard-qa-notice">Dashboard with QA notice</a></li>
-      </ul>
+            <h3 class="govuk-heading-s">Reports</h3>
+            <ul class="govuk-list">
+              <li><a class="govuk-link" href="qa-tribal/reports-tabs-select.html">Reports tabs select</a></li>
+              <li><a class="govuk-link" href="qa-tribal/reports-tabs-table.html">Reports tabs table</a></li>
+              <li><a class="govuk-link" href="qa-tribal/reports-accordian-select.html">Reports accordian select</a></li>
+              <li><a class="govuk-link" href="qa-tribal/reports-accordian-table.html">Reports accordian table</a></li>
+              <li><a class="govuk-link" href="qa-tribal/reports-all.html">All reports</a></li>
+            </ul>
 
-      <h3 class="govuk-heading-s">Tribal QA</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="qa-tribal/start.html">Start</a></li>
-        <li><a href="qa-tribal/signin.html">DfE sign in</a></li>
-        <li><a href="qa-tribal/helpdesk-dashboard.html">Helpdesk dashboard</a></li>
-        <li><a href="qa-tribal/providers-qa.html">Providers in QA</a></li>
-        <li><a href="qa-tribal/providers-qa-empty.html">Providers in QA empty state</a></li>
-        <li><a href="qa-tribal/provider-selected.html">Provider selected</a></li>
-        <li><a href="qa-tribal/edit-qa-status.html">Edit quality assurance status</a></li>
-        <li><a href="qa-tribal/provider-details-combined.html">QA Provider details - combined</a></li>
-        <li><a href="qa-tribal/provider-check.html">QA Provider check</a></li>
-        <li><a href="qa-tribal/provider-selected-interim.html">Provider selected in progress</a></li>
-        <li><a href="qa-tribal/apprenticeship-training-combined.html">QA Apprenticeship training - combined</a></li>
-        <li><a href="qa-tribal/apprenticeship-check.html">QA Apprenticeship check</a></li>
-        <li><a href="qa-tribal/provider-selected-complete.html">Provider selected all complete</a></li>
-        <li><a href="qa-tribal/qa-confirmation.html">QA confirmation</a></li>
-        <li><a href="qa-tribal/provider-selected-failed">Provider selected failed</a></li>
-        <li><a href="qa-tribal/provider-selected-unable">Provider selected unable to complete</a></li>
-      </ul>
+            <h3 class="govuk-heading-s">Migration</h3>
+            <ul class="govuk-list">
+              <li><a class="govuk-link" href="migration/migration-report">Migration report</a></li>
+            </ul>
 
-      <h3 class="govuk-heading-s">Tribal search</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="qa-tribal/search-providers.html">Search providers</a></li>
-        <li><a href="qa-tribal/search-providers-return.html">Return a search result</a></li>
-      </ul>
+            <h3 class="govuk-heading-s">Archived quality assurance</h3>
+                <ul class="govuk-list">
+                  <li><a class="govuk-link" href="qa-tribal/provider-details-compliance.html">QA Provider details - Compliance</a></li>
+                  <li><a class="govuk-link" href="qa-tribal/provider-details-style.html">QA Provider details - Style</a></li>
+                  <li><a class="govuk-link" href="qa-tribal/edit-cd-status.html">Edit Course Directory status</a></li>
+                  <li><a class="govuk-link" href="qa-tribal/provider-locations.html">Provider locations</a></li>
+                  <li><a class="govuk-link" href="qa-tribal/apprenticeships-choose.html">Choose apprenticeships to QA</a></li>
+                  <li><a class="govuk-link" href="qa-tribal/provider-selected-many-apprenticeships.html">Choose apprenticeships to QA</a></li>
+                  <li><a class="govuk-link" href="qa-tribal/all-apprenticeships.html">QA View all apprenticeships</a></li>
+                  <li><a class="govuk-link" href="qa-tribal/apprenticeship-training-compliance.html">QA Apprenticeship training - compliance</a></li>
+                  <li><a class="govuk-link" href="qa-tribal/apprenticeship-training-style.html">QA Apprenticeship training - style</a></li>
+                  <li><a class="govuk-link" href="qa-tribal/apprenticeship-locations.html">Apprenticeship locations</a></li>
+                  <li><a class="govuk-link" href="qa-tribal/unable-to-complete.html">Unable to complete reasons</a></li>
+                  <li><a class="govuk-link" href="qa-tribal/roatp-status.html">View RoATP status</a></li>
+                </ul>
 
-      <h3 class="govuk-heading-s">Provider migration</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="migration/provider-homescreen-both">Homescreen for both</a></li>
-        <li><a href="migration/provider-homescreen-fe-only">Homescreen for FE only</a></li>
-        <li><a href="migration/provider-homescreen-apprenticeship-only">Homescreen for apprenticeships only</a></li>
-      </ul>
+          </div>
+        </div>
 
-      <h3 class="govuk-heading-s">Tribal migration</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="migration/migration-report">Migration report</a></li>
-      </ul>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                Apprenticeship providers
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+            <h3 class="govuk-heading-s">New apprenticeship and quality assurance</h3>
+            <ul class="govuk-list">
+              <li><a class="govuk-link" href="new-provider/homescreen-new-apprenticeship-provider-fe">Homescreen FE</a></li>
+              <li><a class="govuk-link" href="new-provider/homescreen-new-apprenticeship-provider">Homescreen</a></li>
+              <li><a class="govuk-link" href="new-provider/search">Search with no results</a></li>
+              <li><a class="govuk-link" href="new-provider/search-framework-notification">Search with framework notification</a></li>
+              <li><a class="govuk-link" href="new-provider/where-delivered">Where will it be delivered?</a></li>
+              <li><a class="govuk-link" href="new-provider/add-location-find-address">Add location find address</a></li>
+              <li><a class="govuk-link" href="new-provider/add-location-add-address">Add location add address</a></li>
+              <li><a class="govuk-link" href="new-provider/provider-confirmation">Confirmation</a></li>
+              <li><a class="govuk-link" href="new-provider/homescreen-new-apprenticeship-provider-submitted">Homescreen submitted</a></li>
+              <li><a class="govuk-link" href="new-provider/homescreen-new-apprenticeship-provider-failed">Homescreen failed</a></li>
+              <li><a class="govuk-link" href="new-provider/homescreen-new-apprenticeship-provider-passed">Homescreen passed</a></li>
+            </ul>
 
-      <h3 class="govuk-heading-s">Tribal reports</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="qa-tribal/reports-tabs-select.html">Reports tabs select</a></li>
-        <li><a href="qa-tribal/reports-tabs-table.html">Reports tabs table</a></li>
-        <li><a href="qa-tribal/reports-accordian-select.html">Reports accordian select</a></li>
-        <li><a href="qa-tribal/reports-accordian-table.html">Reports accordian table</a></li>
-        <li><a href="qa-tribal/reports-all.html">All reports</a></li>
-      </ul>
+            <h3 class="govuk-heading-s">Migration</h3>
+            <ul class="govuk-list">
+              <li><a class="govuk-link" href="migration/provider-homescreen-both">Homescreen for both</a></li>
+              <li><a class="govuk-link" href="migration/provider-homescreen-fe-only">Homescreen for FE only</a></li>
+              <li><a class="govuk-link" href="migration/provider-homescreen-apprenticeship-only">Homescreen for apprenticeships only</a></li>
+            </ul>
 
-      <h3 class="govuk-heading-s">Bulk upload</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="bulk-upload-file-upload">Add a file</a></li>
-      </ul>
+            <h3 class="govuk-heading-s">Bulk upload</h3>
+            <ul class="govuk-list">
+              <li><a class="govuk-link" href="new-provider/bulk-upload-file-upload">Add a file</a></li>
+            </ul>
 
-      <h3 class="govuk-heading-s">Tribal QA - unused</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="qa-tribal/provider-details-compliance.html">QA Provider details - Compliance</a></li>
-        <li><a href="qa-tribal/provider-details-style.html">QA Provider details - Style</a></li>
-        <li><a href="qa-tribal/edit-cd-status.html">Edit Course Directory status</a></li>
-        <li><a href="qa-tribal/provider-locations.html">Provider locations</a></li>
-        <li><a href="qa-tribal/apprenticeships-choose.html">Choose apprenticeships to QA</a></li>
-        <li><a href="qa-tribal/provider-selected-many-apprenticeships.html">Choose apprenticeships to QA</a></li>
-        <li><a href="qa-tribal/all-apprenticeships.html">QA View all apprenticeships</a></li>
-        <li><a href="qa-tribal/apprenticeship-training-compliance.html">QA Apprenticeship training - compliance</a></li>
-        <li><a href="qa-tribal/apprenticeship-training-style.html">QA Apprenticeship training - style</a></li>
-        <li><a href="qa-tribal/apprenticeship-locations.html">Apprenticeship locations</a></li>
-        <li><a href="qa-tribal/unable-to-complete.html">Unable to complete reasons</a></li>
-        <li><a href="qa-tribal/roatp-status.html">View RoATP status</a></li>
-      </ul>
+            <h3 class="govuk-heading-s">Archived</h3>
+            <ul class="govuk-list">
+              <li><a class="govuk-link" href="new-provider/dashboard-qa-notice">Dashboard with QA notice</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-5">
+                Sprint 1
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-5" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-5">
+            <h3 class="govuk-heading-s">Cookies</h3>
+            <ul class="govuk-list">
+              <li><a class="govuk-link" href="sprint-1/homescreen-cookies">Homescreen with cookie banner</a></li>
+              <li><a class="govuk-link" href="sprint-1/cookie-settings">Cookie settings</a></li>
+              <li><a class="govuk-link" href="sprint-1/cookie-details">Cookie details</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- accordian end -->
+
     </div>
-</div>
+  </div>
 
 {% endblock %}
