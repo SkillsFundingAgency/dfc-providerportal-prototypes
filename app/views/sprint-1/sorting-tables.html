@@ -1,0 +1,346 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Providers in QA
+{% endblock %}
+
+{% block header %}
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Quality assurance
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              Search providers
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Manage users
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="../migration/migration-report">
+              Migration reports
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+<!-- {{ govukBackLink({
+  text: "Back",
+  href: "helpdesk-dashboard.html"
+}) }} -->
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        Quality assurance
+      </h1>
+
+      <!-- tabs start -->
+      <div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#not-started">
+        New providers
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#ready-to-qa">
+        Ready to QA
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#in-progress">
+        In progress
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#fail">
+        Fail
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#unable-to-complete">
+        Unable to complete
+      </a>
+    </li>
+  </ul>
+
+  <section class="govuk-tabs__panel" id="not-started">
+    <h2 class="govuk-heading-l">Select a provider</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Provider name</th>
+          <th scope="col" class="govuk-table__header">UKPRN</th>
+          <!-- <th scope="col" class="govuk-table__header">Date added</th> -->
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="provider-selected.html">Basingstoke ITEC</a></td>
+          <td class="govuk-table__cell">10000651</td>
+          <!-- <td class="govuk-table__cell">17 Sep 2019</td> -->
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <!-- <td class="govuk-table__cell">30 May 2019</td> -->
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <!-- <td class="govuk-table__cell">30 May 2019</td> -->
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="govuk-tabs__panel" id="ready-to-qa">
+    <h2 class="govuk-heading-l">Select a provider</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Provider name</th>
+          <th scope="col" class="govuk-table__header">UKPRN</th>
+          <th scope="col" class="govuk-table__header">Date added</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="provider-selected.html">Basingstoke ITEC</a></td>
+          <td class="govuk-table__cell">10000651</td>
+          <td class="govuk-table__cell">17 Sep 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provider name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="in-progress">
+    <h2 class="govuk-heading-l">Select a provider</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Provider name</th>
+          <th scope="col" class="govuk-table__header">UKPRN</th>
+          <th scope="col" class="govuk-table__header">Date added</th>
+          <th scope="col" class="govuk-table__header">QA by</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="provider-selected-interim.html">Basingstoke ITEC</a></td>
+          <td class="govuk-table__cell">10000651</td>
+          <td class="govuk-table__cell">17 Sep 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provider name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="fail">
+    <h2 class="govuk-heading-l">Select a provider</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Provider name</th>
+          <th scope="col" class="govuk-table__header">UKPRN</th>
+          <th scope="col" class="govuk-table__header">Date added</th>
+          <th scope="col" class="govuk-table__header">QA by</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="provider-selected-failed">Basingstoke ITEC</a></td>
+          <td class="govuk-table__cell">10000651</td>
+          <td class="govuk-table__cell">17 Sep 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provider name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="unable-to-complete">
+    <h2 class="govuk-heading-l">Select a provider</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Provider name</th>
+          <th scope="col" class="govuk-table__header">UKPRN</th>
+          <th scope="col" class="govuk-table__header">Reason for not completing</th>
+          <th scope="col" class="govuk-table__header">Date added</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="provider-selected-unable">Basingstoke ITEC</a></td>
+          <td class="govuk-table__cell">10000651</td>
+          <td class="govuk-table__cell">Provision not available</td>
+          <td class="govuk-table__cell">17 Sep 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provider name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">Not ready for delegate</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">Location difficulty</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">Other</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">Other</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
+          <td class="govuk-table__cell">10000311</td>
+          <td class="govuk-table__cell">Other</td>
+          <td class="govuk-table__cell">30 May 2019</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+
+</div>
+      <!-- tabs end -->
+
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
