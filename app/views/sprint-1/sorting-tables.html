@@ -64,6 +64,14 @@
 
 <!-- Enter page content inside this block -->
 
+
+
+<!-- js start -->
+
+<script type="text/javascript" src="../public/javascripts/sortable-table.js"></script>
+
+<!-- js end -->
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl">
@@ -180,50 +188,50 @@
 
   <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="in-progress">
     <h2 class="govuk-heading-l">Select a provider</h2>
-    <table class="govuk-table">
+    <table class="govuk-table" id="table-sort-1">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Provider name</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">Provider name</th>
           <th scope="col" class="govuk-table__header">UKPRN</th>
-          <th scope="col" class="govuk-table__header">Date added</th>
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Date added</th>
           <th scope="col" class="govuk-table__header">QA by</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Abingdon School</a></td>
+          <td class="govuk-table__cell">10000356</td>
+          <td class="govuk-table__cell" data-sort-value="20190103">3 Jan 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Manchester Central College</a></td>
+          <td class="govuk-table__cell">10000963</td>
+          <td class="govuk-table__cell" data-sort-value="20190519">19 May 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">North Devon College</a></td>
+          <td class="govuk-table__cell">10000211</td>
+          <td class="govuk-table__cell" data-sort-value="20190530">30 May 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Warwick Apprenticehips Training</a></td>
+          <td class="govuk-table__cell">10000137</td>
+          <td class="govuk-table__cell" data-sort-value="20190611">11 June 2019</td>
+          <td class="govuk-table__cell">Tribal staff name/email</td>
+        </tr>
+        <tr class="govuk-table__row">
           <td class="govuk-table__cell"><a href="provider-selected-interim.html">Basingstoke ITEC</a></td>
           <td class="govuk-table__cell">10000651</td>
-          <td class="govuk-table__cell">17 Sep 2019</td>
+          <td class="govuk-table__cell" data-sort-value="20190917">17 Sep 2019</td>
           <td class="govuk-table__cell">Tribal staff name/email</td>
         </tr>
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">Provider name</a></td>
-          <td class="govuk-table__cell">10000311</td>
-          <td class="govuk-table__cell">30 May 2019</td>
-          <td class="govuk-table__cell">Tribal staff name/email</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
-          <td class="govuk-table__cell">10000311</td>
-          <td class="govuk-table__cell">30 May 2019</td>
-          <td class="govuk-table__cell">Tribal staff name/email</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
-          <td class="govuk-table__cell">10000311</td>
-          <td class="govuk-table__cell">30 May 2019</td>
-          <td class="govuk-table__cell">Tribal staff name/email</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
-          <td class="govuk-table__cell">10000311</td>
-          <td class="govuk-table__cell">30 May 2019</td>
-          <td class="govuk-table__cell">Tribal staff name/email</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">Provder name</a></td>
-          <td class="govuk-table__cell">10000311</td>
-          <td class="govuk-table__cell">30 May 2019</td>
+          <td class="govuk-table__cell"><a href="#">Camden Learn LTD</a></td>
+          <td class="govuk-table__cell">10000590</td>
+          <td class="govuk-table__cell" data-sort-value="20191130">30 Nov 2019</td>
           <td class="govuk-table__cell">Tribal staff name/email</td>
         </tr>
       </tbody>
@@ -341,6 +349,12 @@
 
   </div>
   <!-- End of content -->
+
+
+  <script>
+        var table = document.getElementById('table-sort-1');
+        new SortableTable(table);
+    </script>
 {% endblock %}
 
 <!-- DO NOT enter page content after the above block -->
