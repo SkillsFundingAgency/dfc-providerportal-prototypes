@@ -1,0 +1,413 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  FE course edit
+{% endblock %}
+
+{% block header %}
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              My locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <span class="govuk-caption-l"> GCE A Level in Art and Design</span>
+          <h1 class="govuk-heading-l"> A Level Art and Design</h1>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Lars/QAN:</td>
+                <td class="govuk-table__cell">
+                  60144567 </td>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Level:</td>
+                <td class="govuk-table__cell">
+                  3 </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Awarding organisation:</td>
+                <td class="govuk-table__cell">
+
+                  AQA </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <h2 class="govuk-heading-m govuk-!-margin-top-0">
+            <a class="govuk-link" style="padding-right:1em"
+              href="/EditCourseRun?learnAimRef=60144567&amp;notionalNVQLevelv2=3&amp;awardOrgCode=AQA&amp;learnAimRefTitle=GCE%20A%20Level%20in%20Art%20and%20Design&amp;learnAimRefTypeDesc=GCE%20A%20level&amp;courseId=601cff43-e0b5-4590-a909-bd112a9414c2&amp;courseRunId=b39f164c-dea8-4f9c-9878-d3df1c962e1a&amp;mode=Summary">Edit
+              course information<span class="govuk-visually-hidden">GCE A Level in Art and Design</span></a>
+          </h2>
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Course Name:</td>
+                <td class="govuk-table__cell">
+                  A Level Art and Design
+                </td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">ID:</td>
+                <td class="govuk-table__cell">
+                  A2ARTS
+
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Delivery:</td>
+                <td class="govuk-table__cell">
+
+                  Classroom based </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Start date:</td>
+                <td class="govuk-table__cell">02/09/2019</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Location:</td>
+                <td class="govuk-table__cell">
+                  The Brooke House Sixth Form College </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Url:</td>
+                <td class="govuk-table__cell">
+                  <a href="https://www.bsix.ac.uk/courses/a-level-art-design/" target="_blank" style="word-break: break-all">https://www.bsix.ac.uk/courses/a-level-art-design/</a>
+
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Cost:</td>
+
+                <td class="govuk-table__cell">
+                  <span class="govuk-visually-hidden">Data Unavailable</span>
+                </td>
+
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Cost description:</td>
+                <td class="govuk-table__cell">
+                  <details class="govuk-details" role="group">
+                    <summary class="govuk-details__summary" role="button" aria-controls="details-content-4386f8be-5919-4bb4-89d7-41219af78831" aria-expanded="false">
+                      <span class="govuk-details__summary-text">
+                        View
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text" id="details-content-4386f8be-5919-4bb4-89d7-41219af78831" aria-hidden="true">
+                      Bursary support available. Details can be found at https://www.bsix.ac.uk/?page_id=526
+                    </div>
+                  </details>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Duration:</td>
+                <td class="govuk-table__cell">
+                  <span> 72 Weeks</span>
+
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Full time or part time:</td>
+                <td class="govuk-table__cell">
+                  Full time
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Attendance:</td>
+                <td class="govuk-table__cell">
+                  Daytime
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+
+          <h3 class="govuk-heading-m govuk-!-margin-top-0">
+            What your learners need to know
+          </h3>
+          <table class="govuk-table">
+            <tbody>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Who is this course for
+                </td>
+                <td class="govuk-table__cell">
+                  <details class="govuk-details" role="group">
+                    <summary class="govuk-details__summary" role="button" aria-controls="details-content-78ad1d3d-97e3-4aab-844f-fc7d331d17be" aria-expanded="false">
+                      <span class="govuk-details__summary-text">
+                        View
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text" id="details-content-78ad1d3d-97e3-4aab-844f-fc7d331d17be" aria-hidden="true">
+                      A-level Art &amp; Design covers a wide range of basic skills such as drawing, painting, printmaking and sculpture but extends them through more rigorous and extended levels of experimentation and research. The course is a
+                      general Art &amp; Design endorsement, so you can choose to take the set projects into any area of Art &amp; Design that you wish. Art &amp; Design is both a practical and academic subject, where you will develop your
+                      personal direction as an artist or designer through observation, experimentation and realisation.
+                    </div>
+                  </details>
+                </td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Entry requirements </td>
+                <td class="govuk-table__cell">
+                  <details class="govuk-details" role="group">
+                    <summary class="govuk-details__summary" role="button" aria-controls="details-content-4aa86daa-5204-432a-9fe6-338b1a7219f9" aria-expanded="false">
+                      <span class="govuk-details__summary-text">
+                        View
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text" id="details-content-4aa86daa-5204-432a-9fe6-338b1a7219f9" aria-hidden="true">
+                      Successful completion of Year 1
+                    </div>
+                  </details>
+                </td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">What you’ll learn </td>
+                <td class="govuk-table__cell">
+                  <details class="govuk-details" role="group">
+                    <summary class="govuk-details__summary" role="button" aria-controls="details-content-88c1b9d8-0154-4e23-bde2-ef56a0e2081c" aria-expanded="false">
+                      <span class="govuk-details__summary-text">
+                        View
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text" id="details-content-88c1b9d8-0154-4e23-bde2-ef56a0e2081c" aria-hidden="true">
+
+                    </div>
+                  </details>
+                </td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">How you’ll learn</td>
+                <td class="govuk-table__cell">
+                  <details class="govuk-details" role="group">
+                    <summary class="govuk-details__summary" role="button" aria-controls="details-content-46d25118-62ca-4030-8b35-d357230fb6ce" aria-expanded="false">
+                      <span class="govuk-details__summary-text">
+                        View
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text" id="details-content-46d25118-62ca-4030-8b35-d357230fb6ce" aria-hidden="true">
+
+                    </div>
+                  </details>
+                </td>
+              </tr>
+
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">What you’ll need to bring </td>
+                <td class="govuk-table__cell">
+                  <details class="govuk-details" role="group">
+                    <summary class="govuk-details__summary" role="button" aria-controls="details-content-d795fa03-609e-466e-86bb-8cbf07563317" aria-expanded="false">
+                      <span class="govuk-details__summary-text">
+                        View
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text" id="details-content-d795fa03-609e-466e-86bb-8cbf07563317" aria-hidden="true">
+
+                    </div>
+                  </details>
+                </td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">How you'll be assessed</td>
+                <td class="govuk-table__cell">
+                  <details class="govuk-details" role="group">
+                    <summary class="govuk-details__summary" role="button" aria-controls="details-content-9ce35a38-e076-49c6-a756-65e3e5a2fc41" aria-expanded="false">
+                      <span class="govuk-details__summary-text">
+                        View
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text" id="details-content-9ce35a38-e076-49c6-a756-65e3e5a2fc41" aria-hidden="true">
+                      Examination
+                    </div>
+                  </details>
+                </td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header">Where next</td>
+                <td class="govuk-table__cell">
+                  <details class="govuk-details" role="group">
+                    <summary class="govuk-details__summary" role="button" aria-controls="details-content-70078d78-3005-4f4d-9e7c-6e6f7814c802" aria-expanded="false">
+                      <span class="govuk-details__summary-text">
+                        View
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text" id="details-content-70078d78-3005-4f4d-9e7c-6e6f7814c802" aria-hidden="true">
+
+                    </div>
+                  </details>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="govuk-grid-column-one-third govuk-related-items">
+          <h3 class="govuk-heading-m">Status</h3>
+          <span class="govuk-tag phase-tag-published govuk-!-margin-bottom-4">Published</span>
+          <hr>
+          <p>Created: <br>15 September 2019</p>
+
+          <hr>
+
+          <h3 class="govuk-heading-m m20">Copy</h3>
+          <p>
+            If you run another course that
+            offers this qualification, you
+            can copy this course,
+            edit the details and save it
+            as a new course.
+          </p>
+          <a class="govuk-link" style="padding-right:1em"
+            href="/CopyCourseRun?learnAimRef=60144567&amp;notionalNVQLevelv2=3&amp;awardOrgCode=AQA&amp;learnAimRefTitle=GCE%20A%20Level%20in%20Art%20and%20Design&amp;learnAimRefTypeDesc=GCE%20A%20level&amp;courseId=601cff43-e0b5-4590-a909-bd112a9414c2&amp;courseRunId=b39f164c-dea8-4f9c-9878-d3df1c962e1a&amp;publishMode=Summary">Copy
+            this course<span class="govuk-visually-hidden">GCE A Level in Art and Design</span></a>
+          <hr>
+
+          <h3 class="govuk-heading-m m20">Delete</h3>
+          <p>
+            If you no longer run this course,
+            remove it from the course
+            directory
+          </p>
+
+          <a id="course-delete" class="govuk-button" style="padding-right:1em"
+            href="/ProviderCourses/DeleteCourse?courseId=601cff43-e0b5-4590-a909-bd112a9414c2&amp;courseRunId=b39f164c-dea8-4f9c-9878-d3df1c962e1a&amp;courseName=A%20Level%20Art%20and%20Design">Delete this course<span
+              class="govuk-visually-hidden">GCE A Level in Art and Design</span></a>
+
+          <hr>
+          <h3 class="govuk-heading-m m20">Edit What your learners need to know</h3>
+          <p>
+            Making any changes will update
+            all of the courses that share this
+            qualification
+          </p>
+          <a class="govuk-link"
+            href="/EditCourse?courseId=601cff43-e0b5-4590-a909-bd112a9414c2&amp;courseRunId=b39f164c-dea8-4f9c-9878-d3df1c962e1a&amp;learnAimRef=60144567&amp;notionalNVQLevelv2=course.NotionalNVQLevelv2&amp;awardOrgCode=AQA&amp;learnAimRefTitle=GCE%20A%20Level%20in%20Art%20and%20Design&amp;learnAimRefTypeDesc=GCE%20A%20level&amp;mode=Summary">Make
+            changes<span class="govuk-visually-hidden">GCE A Level in Art and Design</span></a>
+        </div>
+      </div>
+      <!-- grid row -->
+
+
+
+    <script>
+      (function($) {
+        $(function() {
+          var $archiveButton = $(".archive");
+
+          var $cancelArchiveButton = $(".cancel-archive");
+
+          $cancelArchiveButton.on("click",
+            function(event) {
+              event.preventDefault(); {
+                var courseRunId = $(this).attr("data-course-run-id");
+
+                var archiveOption = $("#archive-" + courseRunId);
+                archiveOption.show();
+
+                var confirmArchive = $("#course-confirm-archive-" + courseRunId);
+                confirmArchive.hide();
+
+                var archiveCancelDelete = $("#course-cancel-archive-" + courseRunId);
+                archiveCancelDelete.hide();
+
+              }
+            });
+
+
+          $archiveButton.on("click",
+            function(event) {
+              event.preventDefault();
+
+              $('.govuk-button').hide();
+
+              $('.cancel-archive').hide();
+
+              $('.archive').show();
+
+              var courseRunId = $(this).attr("data-course-run-id");
+
+              var archiveOption = $("#archive-" + courseRunId);
+              archiveOption.hide();
+
+              var confirmArchive = $("#course-confirm-archive-" + courseRunId);
+              confirmArchive.show();
+
+              var archiveCancelDelete = $("#course-cancel-archive-" + courseRunId);
+              archiveCancelDelete.show().css("display", "block");
+
+            });
+
+        });
+      })(jQuery);
+    </script>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

@@ -1,0 +1,371 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  FE course run details
+{% endblock %}
+
+{% block header %}
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              My locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Course details
+      </h1>
+      <p class="govuk-body-l">Use these sections to provide details about this course.</p>
+
+      <!--  -->
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="event-name">
+          Course name
+        </label>
+        <span id="event-name-hint" class="govuk-hint">
+          Enter the name of the course you want people to see in the course directory (you can use or overwrite the default name we have created).
+        </span>
+        <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint" value="Free-Standing Mathematics Qualification: Additional Mathematics">
+      </div>
+
+      <!--  -->
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="event-name">
+          Your reference
+        </label>
+        <span id="event-name-hint" class="govuk-hint">
+          Enter a reference that will help you identify this course in your internal systems.
+        </span>
+        <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+      </div>
+
+      <!--  -->
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading govuk-heading-m">
+              Delivery mode
+            </h2>
+          </legend>
+          <span id="changed-name-hint" class="govuk-hint">
+            Select one option.
+          </span>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input checked="checked" class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Classroom based
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                Online
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-3" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-3">
+                Work based
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!--  -->
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading govuk-heading-m">
+              Start date
+            </h2>
+          </legend>
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+            <div class="govuk-radios__item">
+              <input checked="checked" class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+                Defined start date
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+              <div class="govuk-form-group">
+                <span id="passport-issued-hint" class="govuk-hint">
+                  For example, 30 9 2019
+                </span>
+                <div class="govuk-date-input" id="passport-issued">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                Flexible start date
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!--  -->
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              Course location
+            </h2>
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input checked="checked" class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                The Brooke House Sixth Form College
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <p class="govuk-body"><a href="#" class="govuk-link">The course location isn’t shown here</a></p>
+      </div>
+
+      <!--  -->
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="event-name">
+          External URL
+        </label>
+        <span id="event-name-hint" class="govuk-hint">
+          Enter the URL for this course on your website. For example, http://www.provider.com/course.
+        </span>
+        <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+      </div>
+
+      <!--  -->
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="event-name">
+          Cost
+        </label>
+        <span id="event-name-hint" class="govuk-hint">
+          Enter the cost of the course to the learner.
+        </span>
+        <div class="govuk-currency-input govuk-body">
+          <div class="govuk-currency-input__inner">
+            <span class="govuk-currency-input__inner__unit">£</span>
+            <input class="govuk-input govuk-input--width-10" aria-label="Enter amount in pounds" type="text" val-required-message="Enter cost or cost description" style="padding-left:25px" val-max-length="8" val-max-length-message="Maximum allowed cost value is 999,999.99" id="Cost" name="Cost" value="">
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="255">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--m" for="with-hint">
+            Cost description
+          </label>
+          <span id="with-hint-hint" class="govuk-hint">
+            Enter details related to the cost of this course.
+          </span>
+          <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+        </div>
+        <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 255 characters
+        </span>
+      </div>
+
+      <!--  -->
+
+      <div class="govuk-form-group">
+        <label id="govuk-label-duration" class="govuk-label--m" for="DurationLength">
+          Duration
+        </label>
+
+        <div id="duration" class="duration-container" style="margin-top:15px" val-range-min="1" val-range-max="999" val-duration-message="Enter duration" val-decimal-message="Invalid duration entered">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <input pattern="^[0-9]*$" class="govuk-input govuk-input--width-2" style="display: inline;" type="number" maxlength="3" aria-labelledby="govuk-label-duration" id="DurationLength" name="DurationLength" value="">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <select class="govuk-select" id="durationDropDown" val-required-message="Duration unit is required" aria-labelledby="govuk-label-duration" data-val="true" data-val-required="The DurationUnit field is required." name="DurationUnit">
+                <option value="">Select</option>
+                <option>Hours</option>
+                <option>Days</option>
+                <option>Weeks</option>
+                <option selected="selected">Months</option>
+                <option>Years</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading govuk-heading-m">
+              Study pattern
+            </h2>
+          </legend>
+          <span id="changed-name-hint" class="govuk-hint">
+            Choose one option.
+          </span>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input checked="checked" class="govuk-radios__input" id="full-time" name="studypattern" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="full-time">
+                Full time
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="part-time" name="studypattern" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="part-time">
+                Part time
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="flexible" name="studypattern" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="flexible">
+                Flexible
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!--  -->
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading govuk-heading-m">
+              Attendance
+            </h2>
+          </legend>
+          <span id="changed-name-hint" class="govuk-hint">
+            Choose one option.
+          </span>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input checked="checked" class="govuk-radios__input" id="daytime" name="attendance" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="daytime">
+                Daytime
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="evening" name="attendance" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="evening">
+                Evening
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="weekend" name="attendance" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="weekend">
+                Weekend
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="dayblock" name="attendance" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="dayblock">
+                Day/Block Release
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!--  -->
+
+      <a href="course-check-details"><button class="govuk-button" data-module="govuk-button">Review your changes</button></a>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
