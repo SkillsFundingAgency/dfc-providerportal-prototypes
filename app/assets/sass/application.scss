@@ -607,3 +607,42 @@ a {
 .phase-tag-published {
     background: #00823b
 }
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap
+}
+
+.flex-item {
+    padding: 5px 1rem 5px 0;
+    margin-top: 10px;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto
+}
+
+.flex-item label {
+    display: block;
+    font-weight: 900
+}
+
+.region-checkboxes {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.region-checkboxes .govuk-checkboxes__item {
+    margin: .5em;
+    flex: 0 0 25%;
+}
