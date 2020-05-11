@@ -105,19 +105,19 @@
           </span>
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input checked="checked" class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <input checked="checked" class="govuk-radios__input show1 hide2" id="changed-name" name="changed-name" type="radio" value="yes">
               <label class="govuk-label govuk-radios__label" for="changed-name">
                 Classroom based
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <input class="govuk-radios__input hide1 hide2" id="changed-name-2" name="changed-name" type="radio" value="no">
               <label class="govuk-label govuk-radios__label" for="changed-name-2">
                 Online
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name-3" name="changed-name" type="radio" value="no">
+              <input class="govuk-radios__input hide1 show2" id="changed-name-3" name="changed-name" type="radio" value="no">
               <label class="govuk-label govuk-radios__label" for="changed-name-3">
                 Work based
               </label>
@@ -189,7 +189,7 @@
 
       <!--  -->
 
-      <div class="govuk-form-group">
+      <div class="govuk-form-group show-hide-section-2 notshown">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <fieldset class="govuk-fieldset">
@@ -202,11 +202,11 @@
               <div class="govuk-radios govuk-radios--inline" id="nationalRadioButtons" val-required-message="Choose if you can deliver this course anywhere in England">
 
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="nationalTrue" name="National" type="radio" value="True">
+                  <input class="govuk-radios__input hide6" id="nationalTrue" name="National" type="radio" value="True">
                   <label class="govuk-label govuk-radios__label" for="nationalTrue">Yes</label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="nationalFalse" name="National" type="radio" value="False">
+                  <input class="govuk-radios__input show6" id="nationalFalse" name="National" type="radio" value="False">
                   <label class="govuk-label govuk-radios__label" for="nationalFalse">No</label>
                 </div>
 
@@ -214,7 +214,7 @@
               </div>
             </fieldset>
 
-            <div id="regions-section" style="margin-top: 30px;">
+            <div id="regions-section" style="margin-top: 30px;" class="show-hide-section-6 notshown">
               <label class="govuk-label--m" id="govuk-label-SelectRegionCheckBoxes" for="select-region">
                 Where in England can you deliver this course?
               </label>
@@ -956,7 +956,7 @@
 
       <!--  -->
 
-      <div class="govuk-form-group">
+      <div class="govuk-form-group show-hide-section-1 shown">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h2 class="govuk-fieldset__heading">
@@ -1051,7 +1051,7 @@
 
       <!--  -->
 
-      <div class="govuk-form-group">
+      <div class="govuk-form-group show-hide-section-1 shown">
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h2 class="govuk-fieldset__heading govuk-heading-m">
@@ -1086,7 +1086,7 @@
 
       <!--  -->
 
-      <div class="govuk-form-group">
+      <div class="govuk-form-group show-hide-section-1 shown">
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h2 class="govuk-fieldset__heading govuk-heading-m">
