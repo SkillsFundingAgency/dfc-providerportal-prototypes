@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Confirmation add
+Delete a course
 {% endblock %}
 
 {% block header %}
@@ -58,24 +58,36 @@ Confirmation add
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <div class="govuk-panel govuk-panel--confirmation">
-      <h1 class="govuk-panel__title">Your course has been added</h1>
-      <div class="govuk-panel__body">
-        Course
-        <br><strong>Art and Design, OCR Technical Level 3 Diploma (2 Yrs) Year 1</strong>
-      </div>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Are you sure you want to delete this course?
+          </h1>
+        </legend>
+        <span class="govuk-hint">
+          Deleting this course will remove it from Publish to the course directory and it will no longer be available for learners searching. Courses that share the same qualification will not be affected.
+        </span>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+              Yes - delete the course
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+              No - I don't want to delete the course
+            </label>
+          </div>
+        </div>
+      </fieldset>
     </div>
-    <p class="govuk-body">Your course is available to learners searching for learning and training opportunities on the National Careers Service.</p>
 
-    <p class="govuk-body">You can <a href="https://nationalcareers.service.gov.uk/find-a-course/course-details?CourseId=e590daa4-4c80-4879-bfa8-11cefc65a6a8&r=737bbb0d-77de-44d1-bfd7-6f8482eb8468&referralPath=%2ffind-a-course%2fcourse-search-result%3fSearchTerm%3dart%26Distance%3d10" target="_blank">view your published course</a> to see how it's viewed by learners.</p>
-
-    <h2 class="govuk-heading-m">What next?</h2>
-
-    <ul class="govuk-list">
-      <li><a class="govuk-link" href="#">Add a new course</a></li>
-      <li><a class="govuk-link" href="#">View, edit, copy or delete a course</a></li>
-      <li><a class="govuk-link" href="#">Back to the home screen</a></li>
-    </ul>
+    <button class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
 
   </div>
 </div>
