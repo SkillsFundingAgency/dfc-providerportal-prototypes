@@ -1,0 +1,172 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Search result apprenticeship
+{% endblock %}
+
+{% block header %}
+
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <!-- <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Quality assurance
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="search-providers.html">
+              Search providers
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Manage users
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="../migration/migration-report">
+              Migration reports
+            </a>
+          </li>
+        </ul>
+      </nav> -->
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <!-- <span class="govuk-caption-xl">Helpdesk dashboad</span> -->
+    <h1 class="govuk-heading-l">
+      Find apprenticeship
+    </h1>
+
+    <!-- search start -->
+
+    <div class="bottom search-container govuk-!-margin-bottom-6">
+      <form role="search" method="post" id="searchform" class="form form-search" action="#">
+        <label class="govuk-label" for="event-name">
+          Search by name or keyword for the apprenticeship this training is for.
+        </label>
+        <span id="account-number-hint" class="govuk-hint">
+          Enter a minimum of 3 characters
+        </span>
+        <div class="search-input-wrapper">
+          <input type="search" value="{{ data['vehicle-registration'] }}" name="vehicle-registration" id="registration-number" class="search-query cd-search" placeholder="Search" type="text" style="width: 95%;">
+
+          <input type="submit" id="searchsubmit" value="Search" class="btn pointer">
+        </div>
+      </form>
+    </div>
+
+    <!-- search end -->
+
+    <!-- no results start -->
+
+    <p>Found <b>2</b> results for <b>hairdressing</b></p>
+
+    <div class="search-result-container">
+
+        <h2 class="govuk-heading-m">
+          Hairdressing
+          <span class="govuk-!-margin-left-3 govuk-tag">Framework</span>
+        </h2>
+
+        <p class="govuk-body">
+          <a class="govuk-link already-added" href="#" style="display:inline-flex">
+            <span class="govuk-visually-hidden">Hairdressing</span>Choose this apprenticeship</a>
+        </p>
+
+        <div class="govuk-warning-text govuk-!-margin-bottom-2">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            This apprenticeship is available to new starters until 1 August 2020.
+          </strong>
+        </div>
+
+    </div>
+
+    <div class="search-result-container">
+
+        <h2 class="govuk-heading-m">
+          Hairdressing
+          <span class="govuk-!-margin-left-3 govuk-tag">Framework</span>
+        </h2>
+
+        <p class="govuk-body">
+          <a class="govuk-link already-added" href="#" style="display:inline-flex">
+            <span class="govuk-visually-hidden">Hairdressing</span>Choose this apprenticeship</a>
+        </p>
+
+        <div class="govuk-warning-text govuk-!-margin-bottom-2">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            This apprenticeship is available to new starters until 1 August 2020.
+          </strong>
+        </div>
+
+    </div>
+
+
+    <details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          I can't find my standard
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">You may be unable to find your standard if it's waiting approval or in development, contact us for further details.</p>
+
+        <h3 class="govuk-heading-s">Telephone</h3>
+        <ul class="govuk-list">
+          <li>Telephone: 0844 811 5073</li>
+          <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+        </ul>
+        <p class="govuk-body">
+          <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
+        </p>
+        <h3 class="govuk-heading-s">Email</h3>
+
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="#">support@coursedirectory.org.uk</a></li>
+          <li>We aim to respond within 2 working days</li>
+        </ul>
+      </div>
+    </details>
+
+
+    <!-- no results end -->
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
