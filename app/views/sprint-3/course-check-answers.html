@@ -1,0 +1,337 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block header %}
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              My locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+    <h1 class="govuk-heading-l">Check and publish your course</h1>
+
+    <h2 class="govuk-heading-m">
+      Z0004434 Level 2 Non regulated Adult skills formula funded provision, Level 2, Maths, 293 to 388 hrs
+    </h2>
+
+    <form id="addCourseSummaryPage" action="/AddCourse/AcceptAndPublish" method="post">
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course name
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Non regulated Adult skills formula funded provision, Level 2, Maths, 293 to 388 hrs
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourseRun#sectionCourseName">change</a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course ID
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            test
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourseRun#sectionCourseProviderReference">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Delivery mode
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Classroom based
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourseRun#sectionDeliveryType">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Start date
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Flexible
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourseRun#sectionStartDate">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course location(s)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">The Brooke House Sixth Form College</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourseRun#VenueItemsCheckboxList">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            URL
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            http://www.provider.com/course
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourseRun#sectionUrl">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Cost
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            £90.00
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourseRun#sectionCost">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Cost description
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            test
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourseRun#sectionCost">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course length
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            1 Years
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourseRun#sectionDuration">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Attendance pattern
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Full time
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourseRun#FullPartTimeRadioButtons">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Attendance time
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Daytime
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourseRun#AttendancePatternRadioButtons">change</a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <h2 class="govuk-heading-m">Course description</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Who is the course for
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            test
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourse#sectionCourseFor">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Entry requirements
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            test
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourse#sectionEntryRequirements">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What you'll learn
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            test
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourse#sectionWhatWillLearn">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How you'll learn
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            test
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourse#sectionHowYouWillLearn">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What you'll need to bring
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            test
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourse#sectionWhatYouNeed">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How you'll be assessed
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            test
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourse#sectionHowAssessed">change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Where next?
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            test
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/AddCourse/SummaryToAddCourse#sectionWhereNext">change</a>
+          </dd>
+        </div>
+
+
+      </dl>
+      <!-- <h2 class="govuk-heading-m">Publish your course</h2> -->
+      <p class="govuk-body">Your course information will be added to Publish to the course directory and available to learners searching for learning and training opportunities on the National Careers Service.</p>
+      <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <div class="govuk-form-group">
+        <button name="submitButton" type="submit" class="govuk-button" id="publish" value="publish">
+          Publish
+        </button>
+      </div>
+
+
+      <input name="__RequestVerificationToken" type="hidden"
+        value="CfDJ8GHf46pqyJlBvHRabiwKgspg-5JYSAAo3ZQERDBHa_A_rTpSWQASmXiyw630QXxfmDICUurP_cxw62dDcTjv_wQtvqiBdIcrPpoAKI2unOIsvsa7KuuHuXFFF_VH4X1l6Sjc2xtvCy3xWgNIjJb0IPVQCHIoaAH-gzN4wUPQcruo-lBgzbR9gwcqpe7u10JUOg"><input type="hidden"
+        name="__ncforminfo" value="wCzY0frpGSpx_Wd1safH5S3KQ6wBO0IseEm5txZRzdf7evWwJ0ZLjYxrVtwaNMhR5E6_l6syS2X50KNmHZNEed8ddX9t9L8Km1W-GOGzejnx6UJq-TSIUK6B5toGzMxjsDgr5zNrYbm_ms3qU-BzoA==">
+    </form>
+
+
+  </div>
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

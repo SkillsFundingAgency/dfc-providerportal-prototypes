@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Edit your course
+  Check your answers
 {% endblock %}
 
 {% block header %}
@@ -53,7 +53,6 @@
   html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
 }) }}
 
-
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
 {{ govukBackLink({
@@ -73,98 +72,15 @@
   <div class="govuk-grid-column-two-thirds">
 
 
-    <h1 class="govuk-heading-xl">Edit your course information</h1>
+    <h1 class="govuk-heading-xl">Check and publish your course</h1>
 
     <h2 class="govuk-heading-l">
-      Art and Design, OCR Technical Level 3 Diploma (2 Yrs) Year 1
+      Cambridge Technical Diploma in Art and Design
     </h2>
 
-  <p class="govuk-body">You can <a href="https://nationalcareers.service.gov.uk/find-a-course/course-details?CourseId=e590daa4-4c80-4879-bfa8-11cefc65a6a8&r=737bbb0d-77de-44d1-bfd7-6f8482eb8468&referralPath=%2ffind-a-course%2fcourse-search-result%3fSearchTerm%3dart%26Distance%3d10" target="_blank">view your published course</a> to see how it's viewed by learners.</p>
-
-
-
-    <form id="addCourseSummaryPage" action="#" method="post">
-      <!--  -->
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            LARS/QAN
-          </dt>
-          <dd class="govuk-summary-list__value" style="word-break: break-word;">
-            	60144567
-          </dd>
-          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">&nbsp;
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Qualification name
-          </dt>
-          <dd class="govuk-summary-list__value" style="word-break: break-word;">
-            	Cambridge Technical Diploma in Art and Design
-          </dd>
-          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">&nbsp;
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Qualification Level
-          </dt>
-          <dd class="govuk-summary-list__value" style="word-break: break-word;">
-            3
-          </dd>
-          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
-            &nbsp;
-          </dd>
-        </div>
-
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Awarding organisation
-          </dt>
-          <dd class="govuk-summary-list__value" style="word-break: break-word;">
-            AQA
-          </dd>
-          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
-            &nbsp;
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Created
-          </dt>
-          <dd class="govuk-summary-list__value" style="word-break: break-word;">
-            	15 September 2019
-          </dd>
-          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">&nbsp;
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Status
-          </dt>
-          <dd class="govuk-summary-list__value" style="word-break: break-word;">
-            	<span class="govuk-tag phase-tag-published">Published</span>
-          </dd>
-          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">&nbsp;
-          </dd>
-        </div>
-
-      </dl>
-      <!--  -->
-
-
+    <form id="addCourseSummaryPage" action="course-add-confirmation" method="post">
       <h2 class="govuk-heading-m">Course details</h2>
-      <p class="govuk-body">Information for the learner about how the course will be delivered.</p>
-
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-6">
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -307,22 +223,9 @@
           </dd>
         </div>
 
-
       </dl>
 
-      <div class="govuk-!-margin-bottom-6">
-
-      <button class="govuk-button govuk-button--secondary govuk-!-margin-right-1" data-module="govuk-button">
-        Copy course details
-      </button>
-
-      <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-        Delete course details
-      </button>
-      </div>
-
       <h2 class="govuk-heading-m">Course description</h2>
-      <p class="govuk-body">Changes made to your course description will update all of your courses for this qualification.</p>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
@@ -418,6 +321,13 @@
 
 
       </dl>
+      <h2 class="govuk-heading-m">Publish your course</h2>
+      <p class="govuk-body">Your course information will be added to Publish to the course directory and available to learners searching for learning and training opportunities on the National Careers Service.</p>
+      <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <a href="course-add-confirmation"><button class="govuk-button" data-module="govuk-button">Publish</button></a>
+      
+    </form>
+
 
   </div>
 </div>
