@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Confirmation edit
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              My locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">Your course changes have been published</h1>
+      <div class="govuk-panel__body">
+        Course
+        <br><strong>Art and Design, OCR Technical Level 3 Diploma (2 Yrs) Year 1</strong>
+      </div>
+    </div>
+    <p class="govuk-body">Your course is available to learners searching for learning and training opportunities on the National Careers Service.</p>
+
+    <p class="govuk-body">You can <a href="https://nationalcareers.service.gov.uk/find-a-course/course-details?CourseId=e590daa4-4c80-4879-bfa8-11cefc65a6a8&r=737bbb0d-77de-44d1-bfd7-6f8482eb8468&referralPath=%2ffind-a-course%2fcourse-search-result%3fSearchTerm%3dart%26Distance%3d10" target="_blank">view your published course</a> to see how it's viewed by learners.</p>
+
+    <h2 class="govuk-heading-m">What next?</h2>
+
+    <ul class="govuk-list">
+      <li><a class="govuk-link" href="#">Add a new course</a></li>
+      <li><a class="govuk-link" href="#">View, edit, copy or delete a course</a></li>
+      <li><a class="govuk-link" href="#">Back to the home screen</a></li>
+    </ul>
+
+  </div>
+</div>
+<!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
