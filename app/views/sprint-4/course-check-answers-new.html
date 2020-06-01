@@ -1,0 +1,337 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block header %}
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              My locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "#"
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-xl">Check and publish your course</h1>
+
+    <h2 class="govuk-heading-l">
+      Cambridge Technical Diploma in Art and Design
+    </h2>
+
+    <form id="addCourseSummaryPage" action="course-add-confirmation" method="post">
+      <h2 class="govuk-heading-m">Course details</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course name
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Art and Design, OCR Technical Level 3 Diploma (2 Yrs) Year 1
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-run-details">Change</a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your reference
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            REF12234
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-run-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course type
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Classroom based
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-run-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Start date
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Flexible
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-run-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course location(s)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">The Brooke House Sixth Form College</p>
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-run-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course webpage
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            http://www.provider.com/course
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-run-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Cost
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            £90.00
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-run-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Cost description
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Ipsum adipisicing Lorem reprehenderit reprehenderit pariatur ex.
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-run-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Duration
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            1 Year
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-run-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course hours
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Full time
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-run-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Attendance pattern
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Daytime
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-run-details">Change</a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <h2 class="govuk-heading-m">Course description</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Who is the course for
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Nostrud sit nulla sit commodo consectetur proident consectetur esse deserunt enim reprehenderit amet velit qui id. Ut elit culpa magna non non adipisicing minim quis id magna.
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Entry requirements
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Exercitation nostrud incididunt ipsum aliquip consectetur do commodo et aute commodo Lorem enim ad deserunt. Dolore enim ullamco reprehenderit consequat pariatur qui sunt ut velit dolor mollit quis tempor commodo laborum nisi aliqua.
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What you'll learn
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Mollit reprehenderit eu occaecat aute dolor deserunt excepteur amet fugiat proident enim minim. Amet cupidatat consequat ut ea in qui velit est qui mollit veniam mollit ullamco sint veniam cillum.
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How you'll learn
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            In in nulla laboris irure nulla est laboris non velit laboris sint.
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What you'll need to bring
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Occaecat minim est incididunt qui ut dolore deserunt eiusmod sunt incididunt excepteur sunt magna adipisicing. Aute ullamco veniam veniam consectetur laborum consequat adipisicing proident sint mollit magna incididunt minim.
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How you'll be assessed
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Proident occaecat sunt culpa sint enim cupidatat pariatur pariatur sunt amet veniam. Qui occaecat voluptate nostrud id laborum anim cupidatat in sit reprehenderit ullamco aliqua.
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-details">Change</a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What you can do next
+          </dt>
+          <dd class="govuk-summary-list__value" style="word-break: break-word;">
+            Laborum Lorem aliqua ex ex aliquip quis labore.
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+            <a class="govuk-link" href="course-details">Change</a>
+          </dd>
+        </div>
+
+
+      </dl>
+      <h2 class="govuk-heading-m">Publish your course</h2>
+      <p class="govuk-body">Your course information will be added to Publish to the course directory and available to learners searching for learning and training opportunities on the National Careers Service.</p>
+      <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <a href="course-add-confirmation"><button class="govuk-button" data-module="govuk-button">Publish</button></a>
+
+    </form>
+
+
+  </div>
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
