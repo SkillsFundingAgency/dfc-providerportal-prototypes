@@ -1,8 +1,9 @@
 # Show the user's answers on your 'Check your answers' page
 
-If you do research with real user data, you must [open a new incognito window](https://support.google.com/chrome/answer/95464) for each research session, and close all windows before the next session.
+If you do research with real user data, you must clear a user's data before each session by either:
 
-After the session is over, select the **Clear data** link at the bottom of the prototype to clear the user’s data.
+- closing all browser windows and [opening a new incognito window](https://support.google.com/chrome/answer/95464)
+- selecting the **Clear data** link at the bottom of the prototype
 
 Check you’ve cleared the data by returning to a previously-loaded page and making sure the data is gone.
 
@@ -17,7 +18,7 @@ To display user data on a different page, use this [Nunjucks](https://mozilla.gi
 Change `INPUT-ATTRIBUTE-NAME` to the value you used in the [`name` attribute on the question page](/docs/make-first-prototype/add-questions#add-a-text-input-to-question-2). For example:
 
 ```
-{{ data['number-of-balls'] }}
+{{ data['how-many-balls'] }}
 ```
 
 ### Show the answer to question 1
@@ -40,5 +41,15 @@ Screen readers will read the text in the `<span>` tags, but the text will not ap
 You must also change `<span class="govuk-visually-hidden"> date of birth</span>` to `<span class="govuk-visually-hidden"> your most impressive juggling trick</span>`.
 
 Go to http://localhost:3000/start and answer the questions to check the answer to question 2 works.
+
+### Delete the remaining example answers
+
+There are example answers on the ‘Check your answers’ template page that you do not need. You can delete these example answers from the `check-your-answers.html` file.
+
+1. Find and delete the section that starts with `<div class="govuk-summary-list__row">` and contains `Contact information`.
+
+2. Find and delete the section that starts with `<div class="govuk-summary-list__row">` and contains `Contact details`.
+
+3. Delete everything from the line that contains `Application details` down to the line that contains `Now send your application`.
 
 [Next (Let the user change their answers)](let-user-change-answers)
