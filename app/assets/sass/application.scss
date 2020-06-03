@@ -639,14 +639,17 @@ a {
     font-weight: 900
 }
 
-.region-checkboxes {
-    display: flex;
-    flex-wrap: wrap
-}
+
 
 .region-checkboxes .govuk-checkboxes__item {
     margin: .5em;
     flex: 0 0 25%;
+    margin-left: 0;
+}
+
+.region-checkboxes {
+    display: flex;
+    flex-wrap: wrap
 }
 
 .govuk-summary-list__checkedit {
