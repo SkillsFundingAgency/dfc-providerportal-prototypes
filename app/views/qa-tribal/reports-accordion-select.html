@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Reports accordian table
+Reports accordion select
 {% endblock %}
 
 {% block header %}
@@ -123,7 +123,7 @@ href: "helpdesk-dashboard.html"
         Choose and Download a report
       </h1>
 
-      <!-- accordian start -->
+      <!-- accordion start -->
       <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
   <div class="govuk-accordion__section ">
     <div class="govuk-accordion__section-header">
@@ -135,26 +135,22 @@ href: "helpdesk-dashboard.html"
     </div>
     <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
 
-      <table class="govuk-table govuk-!-margin-bottom-1">
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Report-A-Jun-2019.csv</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric border-bottom-none"><a href="#">Download</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Report-A-May-2019.csv</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric border-bottom-none"><a href="#">Download</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Report-A-Apr-2019.csv</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric border-bottom-none"><a href="#">Download</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Report-A-Mar-2019.csv</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric border-bottom-none"><a href="#">Download</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Select a report
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published" selected>Report A Jun 2019</option>
+          <option value="updated">Report A May 2019</option>
+          <option value="views">Report A Apr 2019</option>
+          <option value="comments">Report A Mar 2019</option>
+        </select>
+      </div>
+      <a href="#">
+        <button class="govuk-button" data-module="govuk-button">
+          Download .csv
+        </button>
+      </a>
 
     </div>
   </div>
@@ -168,26 +164,22 @@ href: "helpdesk-dashboard.html"
     </div>
     <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
 
-      <table class="govuk-table govuk-!-margin-bottom-1">
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Report-B-Jun-2019.csv</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric border-bottom-none"><a href="#">Download</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Report-B-May-2019.csv</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric border-bottom-none"><a href="#">Download</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Report-B-Apr-2019.csv</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric border-bottom-none"><a href="#">Download</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Report-B-Mar-2019.csv</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric border-bottom-none"><a href="#">Download</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Select a report
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published" selected>Report B Jun 2019</option>
+          <option value="updated">Report B May 2019</option>
+          <option value="views">Report B Apr 2019</option>
+          <option value="comments">Report B Mar 2019</option>
+        </select>
+      </div>
+      <a href="#">
+        <button class="govuk-button" data-module="govuk-button">
+          Download .csv
+        </button>
+      </a>
 
     </div>
   </div>
@@ -201,32 +193,28 @@ href: "helpdesk-dashboard.html"
     </div>
     <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
 
-      <table class="govuk-table govuk-!-margin-bottom-1">
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Report-A-Jun-2019.csv</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric border-bottom-none"><a href="#">Download</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Report-A-May-2019.csv</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric border-bottom-none"><a href="#">Download</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Report-A-Apr-2019.csv</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric border-bottom-none"><a href="#">Download</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold border-bottom-none">Report-A-Mar-2019.csv</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric border-bottom-none"><a href="#">Download</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Select a report
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published" selected>Report C Jun 2019</option>
+          <option value="updated">Report C May 2019</option>
+          <option value="views">Report C Apr 2019</option>
+          <option value="comments">Report C Mar 2019</option>
+        </select>
+      </div>
+      <a href="#">
+        <button class="govuk-button" data-module="govuk-button">
+          Download .csv
+        </button>
+      </a>
 
     </div>
   </div>
 </div>
 
-      <!-- accordian end -->
+      <!-- accordion end -->
 
 
   </div>
