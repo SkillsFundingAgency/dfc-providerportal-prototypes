@@ -54,6 +54,13 @@
   html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
 }) }}
 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "#"
+}) }}
+
 {% endblock %}
 
 
@@ -94,7 +101,7 @@
 
           <a href="provider-details-fe">
             <button class="govuk-button govuk-!-margin-bottom-9" data-module="govuk-button">
-              Save
+              Save and continue
             </button>
           </a>
 
