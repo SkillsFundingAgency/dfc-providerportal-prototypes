@@ -5,65 +5,34 @@
 {% endblock %}
 
 {% block header %}
-  <!-- Blank header with no service name for the start page -->
-  <!-- {{ govukHeader() }} -->
-  <!-- {% from "govuk/components/header/macro.njk" import govukHeader %}
 
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "Publish to the course directory",
-    serviceUrl: "#",
-    containerClasses: "govuk-width-container",
-    navigation: [
-      {
-        href: "#1",
-        text: "Home",
-        active: true
-      },
-      {
-        href: "#2",
-        text: "Apprenticeship training"
-      },
-      {
-        href: "#2",
-        text: "Courses"
-      },
-      {
-        href: "#2",
-        text: "Manage locations"
-      }
-    ]
-  }) }} -->
-
-
-
-  <header class="govuk-header " role="banner" data-module="govuk-header">
+<header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
-    <div class="govuk-header__content">
+    <div class="govuk-header__content" style="width: auto;">
       <a href="#" class="govuk-header__link govuk-header__link--service-name">
         Publish to the course directory
       </a>
       <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
       <nav>
         <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
-          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
-            <a class="govuk-header__link" href="#1">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
               Home
             </a>
           </li>
-          <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="#2">
-              Apprenticeship training
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              My courses
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="#3">
-              Courses
+            <a class="govuk-header__link" href="search-providers.html">
+              My locations
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="#4">
-              Manage locations
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Bulk upload
             </a>
           </li>
         </ul>
