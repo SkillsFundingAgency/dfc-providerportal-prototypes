@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Add location find address
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: 80%;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="#">
+              My locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- content start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Add location</h1>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="name-on-the-account">
+        Location name
+      </label>
+      <input class="govuk-input" id="name-on-the-account" name="name-on-the-account" type="text" spellcheck="false">
+      <span id="sort-code-hint" class="govuk-hint">
+        You have 255 characters remaining
+      </span>
+    </div>
+
+    <div class="show-hide-section-2">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort-code">
+          Postcode
+        </label>
+        <input class="govuk-input govuk-input--width-5" id="sort-code" name="sort-code" type="text" aria-describedby="sort-code-hint" pattern="[0-9]*" inputmode="numeric" spellcheck="false">
+      </div>
+
+      <a class="show1 hide2">
+        <button class="govuk-button govuk-!-margin-bottom-9" data-module="govuk-button">
+          Find address
+        </button>
+      </a>
+    </div>
+
+    <!-- show/hide content starts -->
+    <div class="notshown show-hide-section-1">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort-code">
+          Postcode
+        </label>
+        <label class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold">
+          CV1 2WT
+          </label>
+        <p style="display:inline;"><a href="#" class="govuk-link show2 hide1" id="Change">Change</a></p>
+      </div>
+
+
+      <div class="govuk-form-group">
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published" selected>2 Addresses found</option>
+          <option value="updated">NHS England Sustainable Improvement Team</option>
+          <option value="views">Skills Funding Agency</option>
+        </select>
+      </div>
+
+      <p class="govuk-!-margin-bottom-6"><a href="add-location-add-address-manual" class="govuk-link">I can’t find the address in the list</a></p>
+      <a href="add-location-add-address">
+        <button class="govuk-button govuk-!-margin-bottom-9" data-module="govuk-button">
+          Continue
+        </button>
+      </a>
+
+    </div>
+
+    <!-- show/hide content ends -->
+
+  </div>
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
