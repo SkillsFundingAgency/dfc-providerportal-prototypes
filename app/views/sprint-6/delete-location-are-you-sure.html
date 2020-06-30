@@ -121,7 +121,7 @@ Delete a location
         </legend>
         <div class="govuk-checkboxes govuk-checkboxes--small">
           <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <input class="govuk-checkboxes__input enable" id="organisation" name="organisation" type="checkbox" value="hmrc">
             <label class="govuk-label govuk-checkboxes__label" for="organisation">
               Yes - I want to delete the course
             </label>
@@ -133,9 +133,9 @@ Delete a location
 
     <!--  -->
 
-    <button class="govuk-button govuk-button--warning" data-module="govuk-button" disabled="disabled">
+    <a href="delete-location-confirmation"><button class="govuk-button govuk-button--warning enable-disable" data-module="govuk-button" disabled="disabled">
       Delete
-    </button>
+    </button></a>
 
     <button class="govuk-button govuk-button--secondary govuk-!-margin-right-1" data-module="govuk-button">
       Cancel
