@@ -165,8 +165,8 @@
   <script>
   $(document).ready(function(){
 
-    $(".enable").click(function(){
-        $(".enable-disable").prop('disabled', false);
+    $(".enable").change(function(){
+        $('.enable-disable').attr('disabled', function() { return $('.enable').prop('checked') ? null : 'disabled'; });
     });
 
   });
