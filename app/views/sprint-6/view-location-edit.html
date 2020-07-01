@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  View location edit
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: 80%;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="#">
+              My locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- content start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Check location details before saving</h1>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Location name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Cheylesmore House
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="add-location-edit-name">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              	Cheylsemore House<br>5 Quinton Road<br>Coventry<br>West Midlands<br>CV1 2WT
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="add-location-edit-address">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Phone
+            </dt>
+            <dd class="govuk-summary-list__value">
+              	01897 995643
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="add-location-edit-address">
+                Change<span class="govuk-visually-hidden"> phone</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Webiste
+            </dt>
+            <dd class="govuk-summary-list__value">
+              	www.cheylsemorehouse.com
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="add-location-edit-address">
+                Change<span class="govuk-visually-hidden"> webiste</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+    <a href="select-delivery-options">
+      <button class="govuk-button govuk-!-margin-bottom-9" data-module="govuk-button">
+        Update location
+      </button>
+    </a>
+    <a href="#" class="govuk-link cd-cancel-link" style="font-size:19px;">Cancel</a>
+
+
+  </div>
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
