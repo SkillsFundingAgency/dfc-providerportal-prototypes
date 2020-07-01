@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Add location add address
+  Add location edit name
 {% endblock %}
 
 {% block header %}
@@ -63,42 +63,23 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Add location</h1>
+    <h1 class="govuk-heading-xl">Edit location name</h1>
 
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Location name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Cheylsmore House
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="add-location-edit-name">
-                Change<span class="govuk-visually-hidden"> name</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              	Cheylsmore House<br>5 Quinton Road<br>Coventry<br>West Midlands<br>CV1 2WT
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="add-location-edit-address">
-                Change<span class="govuk-visually-hidden"> address</span>
-              </a>
-            </dd>
-          </div>
-        </dl>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="name-on-the-account">
+        Location name
+      </label>
+      <input class="govuk-input" id="name-on-the-account" name="name-on-the-account" type="text" spellcheck="false">
+      <span class="govuk-hint">
+        You have 250 characters remaining
+      </span>
+    </div>
 
-    <a href="select-delivery-options">
-      <button class="govuk-button govuk-!-margin-bottom-9" data-module="govuk-button">
-        Add location
-      </button>
-    </a>
+
+    <a href="add-location-add-address"><button class="govuk-button" data-module="govuk-button">
+      Continue
+    </button></a>
+
     <a href="#" class="govuk-link cd-cancel-link" style="font-size:19px;">Cancel</a>
 
 

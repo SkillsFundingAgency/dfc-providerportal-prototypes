@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Add location add address
+  Add location edit address
 {% endblock %}
 
 {% block header %}
@@ -63,44 +63,57 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Add location</h1>
+    <h1 class="govuk-heading-xl">Edit location address</h1>
 
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Location name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Cheylsmore House
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="add-location-edit-name">
-                Change<span class="govuk-visually-hidden"> name</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              	Cheylsmore House<br>5 Quinton Road<br>Coventry<br>West Midlands<br>CV1 2WT
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="add-location-edit-address">
-                Change<span class="govuk-visually-hidden"> address</span>
-              </a>
-            </dd>
-          </div>
-        </dl>
+    <div class="show-hide-section-2">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort-code">
+          Location postcode
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="sort-code" name="sort-code" type="text" aria-describedby="sort-code-hint" pattern="[0-9]*" inputmode="numeric" spellcheck="false">
+      </div>
 
-    <a href="select-delivery-options">
-      <button class="govuk-button govuk-!-margin-bottom-9" data-module="govuk-button">
-        Add location
-      </button>
-    </a>
-    <a href="#" class="govuk-link cd-cancel-link" style="font-size:19px;">Cancel</a>
+      <a class="show1 hide2">
+        <button class="govuk-button govuk-!-margin-bottom-9" data-module="govuk-button">
+          Find address
+        </button>
+      </a>
+      <a href="#" class="govuk-link cd-cancel-link" style="font-size:19px;">Cancel</a>
+    </div>
 
+    <!-- show/hide content starts -->
+    <div class="notshown show-hide-section-1">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort-code">
+          Postcode
+        </label>
+        <label class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold">
+          CV1 2WT
+          </label>
+        <p style="display:inline;"><a href="#" class="govuk-link show2 hide1" id="Change">Change</a></p>
+      </div>
+
+
+      <div class="govuk-form-group">
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published" selected>2 Addresses found</option>
+          <option value="updated">NHS England Sustainable Improvement Team</option>
+          <option value="views">Skills Funding Agency</option>
+        </select>
+      </div>
+
+      <p class="govuk-!-margin-bottom-6"><a href="add-location-add-address-manual" class="govuk-link">I can’t find the address in the list</a></p>
+      <a href="add-location-add-address">
+        <button class="govuk-button govuk-!-margin-bottom-9" data-module="govuk-button">
+          Continue
+        </button>
+      </a>
+      <a href="#" class="govuk-link cd-cancel-link" style="font-size:19px;">Cancel</a>
+
+    </div>
+
+    <!-- show/hide content ends -->
 
   </div>
 </div>
