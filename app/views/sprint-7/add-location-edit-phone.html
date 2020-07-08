@@ -63,25 +63,23 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Edit location name</h1>
+    <h1 class="govuk-heading-xl">Edit phone number</h1>
 
     <div class="govuk-form-group">
-      <label class="govuk-label" for="name-on-the-account">
-        Location name
+      <label class="govuk-label" for="telephone-number">
+        Telephone number
       </label>
-      <input class="govuk-input" id="name-on-the-account" name="name-on-the-account" type="text" spellcheck="false">
-      <span class="govuk-hint">
-        You have 250 characters remaining
+      <span id="telephone-number-hint" class="govuk-hint">
+        Hint text if needed to explain which phone number?
       </span>
+      <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" aria-describedby="telephone-number-hint" autocomplete="tel">
     </div>
 
-
     <a href="view-location-edit"><button class="govuk-button" data-module="govuk-button">
-      Continue
-    </button></a>
+        Continue
+      </button></a>
 
     <a href="view-location-edit" class="govuk-link cd-cancel-link" style="font-size:19px;">Cancel</a>
-
 
   </div>
 </div>
