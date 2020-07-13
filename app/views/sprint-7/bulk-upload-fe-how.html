@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Bulk upload FE
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              My locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        How to prepare a bulk upload file
+      </h1>
+
+      <p class="govuk-body">You can upload a CSV file to update your courses, or you can <a href="#">add, edit or delete</a> each course individually.</p>
+
+      <h3 class="govuk-heading-m">Creating your bulk upload file</h3>
+
+      <p class="govuk-body">Uploading and publishing a bulk upload file will replace all of your published courses. To create the file you can:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>download a <a href="#" class="govuk-link">blank template</a> and add your course information</li>
+        <li>download and edit a file containing your <a href="#" class="govuk-link">published course information</a></li>
+        <li><a href="bulk-upload-fe-help" class="govuk-link">get help to fill out your bulk upload file</a></li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Dos and don'ts</h2>
+
+      <p class="govuk-body">Reprehenderit ullamco commodo qui incididunt eu irure aliquip nisi sunt in incididunt labore nisi:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>anim incididunt commodo officia amet anim et</li>
+        <li>minim magna et anim cillum sit ipsum nostrud cupidatat laborum ex</li>
+        <li>do cupidatat cupidatat esse quis</li>
+        <li>cillum magna irure et id amet et aliquip qui culpa ullamco</li>
+      </ul>
+
+      <h3 class="govuk-heading-m">If you have 801 rows or more in your bulk upload file</h3>
+
+      <p class="govuk-body">To update your course information email  <a href="mailto:support@coursedirectory.org.uk?subject=Bulk upload">support@coursedirectory.org.uk</a> attaching your bulk upload file.  The support desk will upload your file to Publish to the course directory.</p>
+
+      <a href="bulk-upload-fe-2">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </a>
+
+    </div>
+  </div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

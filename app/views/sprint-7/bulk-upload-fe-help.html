@@ -20,7 +20,7 @@
               Home
             </a>
           </li>
-          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+          <li class="govuk-header__navigation-item">
             <a class="govuk-header__link" href="helpdesk-dashboard.html">
               My courses
             </a>
@@ -30,7 +30,7 @@
               My locations
             </a>
           </li>
-          <li class="govuk-header__navigation-item">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
             <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
               Bulk upload
             </a>
@@ -85,41 +85,51 @@
 
       <h3 class="govuk-heading-m">LARS_QAN</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">Regulated and non regulated qualifications are listed by LARS (Learning Aims Reference) or QAN (Qualification Accreditation Number) code.</p>
+
+        <p class="govuk-body">Codes can be found at the <a class="govuk-link" href="https://hub.fasst.org.uk/Learning Aims/Pages/default.aspx">Learning Aims Reference Service</a>.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Mandatory</th>
             <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
-            <td class="govuk-table__cell">Text</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
+            <td class="govuk-table__cell">8</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
+            <td class="govuk-table__cell">Number, text</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example</th>
+            <td class="govuk-table__cell">50079281 or Z9483628</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Notes</th>
+            <td class="govuk-table__cell">Reference codes are 8 digits. Regulated qualifications may be 7 digits with an X. Non regulated qualifications codes must start with Z followed by 7 digits.</td>
           </tr>
         </tbody>
       </table>
 
       <h3 class="govuk-heading-m">WHO_IS_THIS_COURSE_FOR</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">Information that will help the learner decide whether this course is suitable for them.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Mandatory</th>
             <td class="govuk-table__cell">Yes</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
             <td class="govuk-table__cell">2000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
           </tr>
         </tbody>
@@ -127,20 +137,20 @@
 
       <h3 class="govuk-heading-m">ENTRY_REQUIREMENTS</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">Specific skills, licences, vocational or academic requirements.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
+            <td class="govuk-table__cell">500</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
           </tr>
         </tbody>
@@ -148,20 +158,20 @@
 
       <h3 class="govuk-heading-m">WHAT_YOU_WILL_LEARN</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">The main topics, units or modules of the course.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
             <td class="govuk-table__cell">500</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
           </tr>
         </tbody>
@@ -169,20 +179,20 @@
 
       <h3 class="govuk-heading-m">HOW_YOU_WILL_LEARN</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">For example, classroom based exercises, a work environment or online study materials.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
             <td class="govuk-table__cell">500</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
           </tr>
         </tbody>
@@ -190,20 +200,20 @@
 
       <h3 class="govuk-heading-m">WHAT_YOU_WILL_NEED_TO_BRING</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">For example, personal protective clothing, tools, devices or internet access.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
             <td class="govuk-table__cell">500</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
           </tr>
         </tbody>
@@ -211,20 +221,20 @@
 
       <h3 class="govuk-heading-m">HOW_YOU_WILL_BE_ASSESSED</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">For example, workplace assessment, written assignments, exams, group or individual project work or portfolio of evidence.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
             <td class="govuk-table__cell">500</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
           </tr>
         </tbody>
@@ -232,26 +242,26 @@
 
       <h3 class="govuk-heading-m">WHERE_NEXT</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">For example, a higher level course, apprenticeship or entry to employment.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
             <td class="govuk-table__cell">500</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
           </tr>
         </tbody>
       </table>
 
-      <h3 class="govuk-heading-m">ADVANCED_LEARNER_OPTION</h3>
+      <!-- <h3 class="govuk-heading-m">ADVANCED_LEARNER_OPTION</h3>
 
       <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
 
@@ -291,24 +301,24 @@
             <td class="govuk-table__cell">Text</td>
           </tr>
         </tbody>
-      </table>
+      </table> -->
 
       <h3 class="govuk-heading-m">COURSE_NAME</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">The course name displayed on the National Career Service, <a href="https://nationalcareers.service.gov.uk/find-a-course/search" target="_blank">Find a course</a>.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Mandatory</th>
             <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
+            <td class="govuk-table__cell">255</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
           </tr>
         </tbody>
@@ -316,20 +326,20 @@
 
       <h3 class="govuk-heading-m">ID</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">The reference that will help you identify this course in your internal systems.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
+            <td class="govuk-table__cell">255</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
           </tr>
         </tbody>
@@ -337,42 +347,46 @@
 
       <h3 class="govuk-heading-m">DELIVERY_MODE</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">How will the course be delivered.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Mandatory</th>
             <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example</th>
+            <td class="govuk-table__cell">Classroom based<br>Online<br>Work based</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Notes</th>
+            <td class="govuk-table__cell">Only one course type can be entered per row.</td>
           </tr>
         </tbody>
       </table>
 
       <h3 class="govuk-heading-m">START_DATE</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">Enter the date your course starts, if you have multiple start dates for the same course, you will need to enter each course on a new row.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
-            <td class="govuk-table__cell">Text</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
+            <td class="govuk-table__cell">Date</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example</th>
+            <td class="govuk-table__cell">24/09/2022</td>
           </tr>
         </tbody>
       </table>
@@ -382,143 +396,143 @@
       <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example</th>
+            <td class="govuk-table__cell">Yes</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Notes</th>
+            <td class="govuk-table__cell">If your course does not have a flexible start date leave blank.</td>
           </tr>
         </tbody>
       </table>
 
       <h3 class="govuk-heading-m">VENUE</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">You can only enter a venue that you already have in Publish to the course directory.</p>
+      <p class="govuk-body">If you have new venue you must enter this in the service before you can complete a bulk upload.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
-            <td class="govuk-table__cell">Text</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
+            <td class="govuk-table__cell">Text, number</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example</th>
+            <td class="govuk-table__cell">Something College, Education Road, London, NW5 4RF</td>
           </tr>
         </tbody>
       </table>
 
       <h3 class="govuk-heading-m">NATIONAL_DELIVERY</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">If you can deliver the course anywhere in England you will be shown as a national provider.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example</th>
+            <td class="govuk-table__cell">Yes</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Notes</th>
+            <td class="govuk-table__cell">If your course is not delivered nationally leave blank.</td>
           </tr>
         </tbody>
       </table>
 
       <h3 class="govuk-heading-m">REGION</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
-
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
-            <td class="govuk-table__cell">Text</td>
-          </tr>
-        </tbody>
-      </table>
+      <p class="govuk-body">This field must be kept blank.</p>
 
       <h3 class="govuk-heading-m">URL</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">The webpage for this course.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
+            <td class="govuk-table__cell">255</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example</th>
+            <td class="govuk-table__cell">https://www.coursename.com</td>
           </tr>
         </tbody>
       </table>
 
       <h3 class="govuk-heading-m">COST</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">The cost of the course to the learner.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
-            <td class="govuk-table__cell">Text</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
+            <td class="govuk-table__cell">8</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
+            <td class="govuk-table__cell">GBP</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example</th>
+            <td class="govuk-table__cell">500.00</td>
           </tr>
         </tbody>
       </table>
 
       <h3 class="govuk-heading-m">COST_DESCRIPTION</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">A description of what the cost includes and additional costs to the learner. For example, assessment, exam fees or study materials.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
+            <th scope="row" class="govuk-table__header">Mandatory</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
+            <td class="govuk-table__cell">255</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
           </tr>
         </tbody>
@@ -526,42 +540,46 @@
 
       <h3 class="govuk-heading-m">DURATION</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">The number of days, weeks, months or years the course runs for.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Mandatory</th>
             <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
-            <td class="govuk-table__cell">Text</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
+            <td class="govuk-table__cell">2</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
+            <td class="govuk-table__cell">Number</td>
           </tr>
         </tbody>
       </table>
 
       <h3 class="govuk-heading-m">DURATION_UNIT</h3>
 
-      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+      <p class="govuk-body">Enter days, weeks, months or years.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Mandatory</th>
             <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
+            <td class="govuk-table__cell">6</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example</th>
+            <td class="govuk-table__cell">Days<br>Weeks<br>Months<br>Years</td>
           </tr>
         </tbody>
       </table>
@@ -571,18 +589,22 @@
       <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Mandatory</th>
             <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
+            <td class="govuk-table__cell">9</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example</th>
+            <td class="govuk-table__cell">Full time<br>Part time<br>Flexible</td>
           </tr>
         </tbody>
       </table>
@@ -592,18 +614,22 @@
       <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
 
       <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Mandatory</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Character limit</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Format</th>
-          </tr>
-        </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Mandatory</th>
             <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">2000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Character limit</th>
+            <td class="govuk-table__cell">17</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Format</th>
             <td class="govuk-table__cell">Text</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example</th>
+            <td class="govuk-table__cell">Daytime<br>Evening<br>Weekend<br>Day/Block Release</td>
           </tr>
         </tbody>
       </table>
