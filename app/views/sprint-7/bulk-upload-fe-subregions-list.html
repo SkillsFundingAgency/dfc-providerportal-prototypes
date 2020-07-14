@@ -1,0 +1,260 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Bulk upload sub regions list
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              My locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Complete list of sub regions
+      </h1>
+
+      <p class="govuk-body">Ut laborum sit veniam quis amet eiusmod adipisicing ipsum.</p>
+
+
+      <h2 class="govuk-heading-m">East Midlands</h2>
+
+      <ul class="govuk-list">
+        <li>Derby</li>
+        <li>Derbyshire</li>
+        <li>Leicester</li>
+        <li>Leicestershire</li>
+        <li>Lincolnshire</li>
+        <li>Northamptonshire</li>
+        <li>Nottingham</li>
+        <li>Nottinghamshire</li>
+        <li>Rutland</li>
+      </ul>
+
+    <h2 class="govuk-heading-m">East of England</h2>
+      <ul class="govuk-list">
+        <li>Bedford</li>
+        <li>Cambridgeshire</li>
+        <li>Central Bedfordshire</li>
+        <li>Essex</li>
+        <li>Hertfordshire</li>
+        <li>Luton</li>
+        <li>Norfolk</li>
+        <li>Peterborough</li>
+        <li>Southend-on-Sea</li>
+        <li>Suffolk</li>
+        <li>Thurrock</li>
+      </ul>
+
+<h2 class="govuk-heading-m">London</h2>
+<ul class="govuk-list">
+	<li>Barking and Dagenham</li>
+	<li>Barnet</li>
+	<li>Bexley</li>
+	<li>Brent</li>
+	<li>Bromley</li>
+	<li>Camden</li>
+	<li>City of London</li>
+	<li>Croydon</li>
+	<li>Ealing</li>
+	<li>Enfield</li>
+	<li>Greenwich</li>
+	<li>Hackney</li>
+	<li>Hammersmith and Fulham</li>
+	<li>Haringey</li>
+  <li>Harrow</li>
+	<li>Havering</li>
+	<li>Hillingdon</li>
+	<li>Hounslow</li>
+	<li>Islington</li>
+	<li>Kensington and Chelsea</li>
+	<li>Kingston upon Thames</li>
+	<li>Lambeth</li>
+	<li>Lewisham</li>
+	<li>Merton</li>
+	<li>Newham</li>
+	<li>Redbridge</li>
+	<li>Richmond upon Thames</li>
+	<li>Southwark</li>
+	<li>Sutton</li>
+	<li>Tower Hamlets</li>
+	<li>Waltham Forest</li>
+	<li>Wandsworth</li>
+	<li>Westminster</li>
+</ul>
+<h2 class="govuk-heading-m">North East</h2>
+<ul class="govuk-list">
+	<li>County Durham</li>
+	<li>Darlington</li>
+	<li>Gateshead</li>
+	<li>Hartlepool</li>
+	<li>Middlesbrough</li>
+	<li>Newcastle upon Tyne</li>
+	<li>North Tyneside</li>
+	<li>Northumberland</li>
+	<li>Redcar and Cleveland</li>
+	<li>South Tyneside</li>
+	<li>Stockton-on-Tees</li>
+	<li>Sunderland</li>
+  </ul>
+  <h2 class="govuk-heading-m">North West</h2>
+  <ul class="govuk-list">
+
+
+	<li>Blackburn with Darwen</li>
+	<li>Blackpool</li>
+	<li>Bolton</li>
+	<li>Bury</li>
+	<li>Cheshire East</li>
+	<li>Cheshire West and Chester</li>
+	<li>Cumbria</li>
+	<li>Halton</li>
+	<li>Knowsley</li>
+	<li>Lancashire</li>
+	<li>Liverpool</li>
+	<li>Manchester</li>
+	<li>Oldham</li>
+	<li>Rochdale</li>
+	<li>Salford</li>
+	<li>Sefton</li>
+	<li>St Helens</li>
+	<li>Stockport</li>
+	<li>Tameside</li>
+	<li>Trafford</li>
+	<li>Warrington</li>
+	<li>Wigan</li>
+	<li>Wirral</li>
+        </ul>
+South East
+	Bracknell Forest
+	Brighton and Hove
+	Buckinghamshire
+	East Sussex
+	Hampshire
+	Isle of Wight
+	Kent
+	Medway
+	Milton Keynes
+	Oxfordshire
+	Portsmouth
+	Reading
+	Slough
+	Southampton
+	Surrey
+	West Berkshire
+	West Sussex
+	Windsor and Maidenhead
+	Wokingham
+South West
+	Bath and North East Somerset
+	Bournemouth
+	Bristol
+	Cornwall
+	Devon
+	Dorset
+	Gloucestershire
+	Isles of Scilly
+	North Somerset
+	Plymouth
+	Poole
+	Somerset
+	South Gloucestershire
+	Swindon
+	Torbay
+	Wiltshire
+West Midlands
+	Birmingham
+	Coventry
+	Dudley
+	Herefordshire
+	Sandwell
+	Shropshire
+	Solihull
+	Staffordshire
+	Stoke-on-Trent
+	Telford and Wrekin
+	Walsall
+	Warwickshire
+	Wolverhampton
+	Worcestershire
+Yorkshire and The Humber
+	Barnsley
+	Bradford
+	Calderdale
+	Doncaster
+	East Riding of Yorkshire
+	Kingston upon Hull
+	Kirklees
+	Leeds
+	North East Lincolnshire
+	North Lincolnshire
+	North Yorkshire
+	Rotherham
+	Sheffield
+	Wakefield
+	York
+
+
+
+    </div>
+  </div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
