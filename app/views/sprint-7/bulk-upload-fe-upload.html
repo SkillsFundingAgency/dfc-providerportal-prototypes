@@ -53,6 +53,7 @@
   },
   html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
 }) }}
+
 {% endblock %}
 
 
@@ -62,49 +63,33 @@
 <!-- Enter page content inside this block -->
 
   <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">
-      Bulk upload
-    </h1>
+      <h1 class="govuk-heading-l">
+        Upload your file
+      </h1>
 
-    <p class="govuk-body">You can upload a CSV file to update your courses in Publish to the course directory, or you can:</p>
+      <div class="govuk-form-group">
 
-    <ul class="govuk-list govuk-list--bullet">
-      <li><a href="#">add a new</a> course</li>
-      <li><a href="#">edit or delete</a> each course individually</li>
-    </ul>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
 
-    <h3 class="govuk-heading-m">Creating your bulk upload file</h3>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
 
-    <p class="govuk-body">To create the file you can:</p>
+      <!-- <p class="govuk-body">When your bulk upload is complete you will need to fix any issues or publish your courses to Publish to the course directory.</p> -->
 
-    <ul class="govuk-list govuk-list--bullet">
-      <li>download a <a href="#" class="govuk-link">blank template</a> and add your course information</li>
-      <li>download and edit a file containing your <a href="#" class="govuk-link">published course information</a></li>
-    </ul>
+      <!-- <h3 class="govuk-heading-m">If you have 801 rows or more in your bulk upload file</h3> -->
+      <!-- <h2 class="govuk-heading-s">If your bulk upload file has more than 800 rows</h2> -->
 
-    <h3 class="govuk-heading-m">Preparing your bulk upload file</h3>
+      <p class="govuk-body">If your bulk upload file has more than 800 rows the support desk will upload your file for you. Email your file to <a href="mailto:support@coursedirectory.org.uk?subject=Bulk upload">support@coursedirectory.org.uk</a>.</p>
 
-    <p class="govuk-body">To ensure your bulk upload is successful you must:</p>
+      <!-- The support desk will upload your file to Publish to the course directory. -->
 
-    <ul class="govuk-list govuk-list--bullet">
-      <li><a href="#">add new venues</a> to the service prior to your bulk upload</li>
-      <li>complete all mandatory fields</li>
-      <li>check and remove duplicate venue entries</li>
-      <li>follow the <a href="bulk-upload-fe-formatting" class="govuk-link">format requirements</a></li>
-    </ul>
 
-    <div class="govuk-inset-text cd-inset-info">
-      Uploading and publishing a bulk upload file will replace all of your published courses.
     </div>
-
-    <a href="bulk-upload-fe-upload">
-      <button class="govuk-button" data-module="govuk-button">Continue</button>
-    </a>
-
   </div>
-</div>
 
 
   <!-- End of content -->
