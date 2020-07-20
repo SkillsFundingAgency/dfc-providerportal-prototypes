@@ -856,3 +856,9 @@ a {
 .cd-panel--progress {
   background-color:  #28A197;
 }
+
+.progress {
+  width: 500px;
+  height: 500px;
+  background-image: url("/public/images/loading.png");
+}
