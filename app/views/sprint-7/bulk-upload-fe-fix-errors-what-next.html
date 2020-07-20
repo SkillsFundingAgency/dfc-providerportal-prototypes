@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Bulk upload FE fix your errors
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              My locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Fix errors
+      </h1>
+
+      <p class="govuk-body govuk-!-font-weight-bold">Your course contained 3 errors. You must resolve all errors before your courses information can be published.</p>
+
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        What do you want to do next
+      </h2>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="resolve" name="fix-errors" type="radio">
+        <label class="govuk-label govuk-radios__label" for="resolve">
+          Resolve the errors on-screen in Publish to the course directory
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="download" name="fix-errors" type="radio">
+        <label class="govuk-label govuk-radios__label" for="download">
+          Download an error file to reslove errors at source and start again with a new bulk upload
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="delete" name="fix-errors" type="radio">
+        <label class="govuk-label govuk-radios__label" for="delete">
+          Delete the files you uploaded and make no change to your published course information
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+    <a href="#"><button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button></a>
+
+    </div>
+  </div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
