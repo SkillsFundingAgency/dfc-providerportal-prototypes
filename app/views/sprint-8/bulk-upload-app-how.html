@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Bulk upload FE
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              My locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Bulk upload
+    </h1>
+
+    <p class="govuk-body">You can upload a CSV file to update your courses in Publish to the course directory, or you can:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="#">add a new course</a></li>
+      <li><a href="#">edit or delete each course individually</a></li>
+    </ul>
+
+    <h3 class="govuk-heading-m">Creating your bulk upload file</h3>
+
+    <p class="govuk-body">To create the file you can:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="#" class="govuk-link">download a blank template</a> and add your course information</li>
+      <li>download and edit a file containing <a href="#" class="govuk-link">your published course information</a></li>
+    </ul>
+
+    <h3 class="govuk-heading-m">Preparing your bulk upload file</h3>
+
+    <p class="govuk-body">To ensure your bulk upload is successful you must:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="#">add new venues</a> to the service prior to your bulk upload</li>
+      <li>complete all mandatory fields</li>
+      <li>check and remove duplicate venue entries</li>
+      <li>follow the <a href="bulk-upload-fe-formatting" class="govuk-link">format requirements</a></li>
+    </ul>
+
+    <div class="govuk-inset-text cd-inset-info">
+      Uploading and publishing a bulk upload file will replace all of your published courses.
+    </div>
+
+    <a href="bulk-upload-fe-upload">
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </a>
+
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
