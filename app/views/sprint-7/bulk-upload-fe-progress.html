@@ -49,18 +49,18 @@ Bulk upload FE in progress
 
 {% endblock %}
 
-
-
 {% block content %}
 
 <!-- Enter page content inside this block -->
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+    <div class="center-content">
+      <a class="cd-link__no_underline" href="bulk-upload-fe-confirmation"><h1 class="govuk-heading-l">Publishing in progress</h1></a>
+      <div class="ccms-loader"></div>
+      <p class="govuk-body govuk-!-margin-top-6">Do not navigate away from this page</p>
+      <p class="govuk-body govuk-!-margin-top-6">This could take up to 2 minutes</p>
 
-    <div style="width:auto; padding:200px; padding-top:100px; text-align:center;">
-      <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-36 govuk-!-margin-bottom-6">Publishing in progress</p>
-      <a href="bulk-upload-fe-confirmation"><img src="/public/images/loading.png" alt="load"></a>
     </div>
   </div>
 </div>
