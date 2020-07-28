@@ -1,0 +1,164 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  View locations summary example
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: 80%;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="#">
+              My locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- content start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Your locations</h1>
+
+
+    <a href="#">
+      <button class="govuk-button govuk-!-margin-bottom-9" data-module="govuk-button">
+        Add new location
+      </button>
+    </a>
+    <a href="#" class="govuk-link cd-cancel-link" style="font-size:19px;">Cancel</a>
+
+    <!--  -->
+
+
+
+    <!-- <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Cheylesmore House
+          <p><br>Cheylesmore House<br>
+            5 QUINTON ROAD<br>
+            COVENTRY<br>
+            WEST MIDLANDS</p>
+          <p>CV1 2WT</p>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <br><br><p>01957 473 957</p>
+          <p>www.cheylesmorehouse.com/venue/venue</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+    </dl> -->
+
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Cheylesmore House
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>Cheylesmore House<br>
+            5 QUINTON ROAD<br>
+            COVENTRY<br>
+            WEST MIDLANDS</p>
+          <p>CV1 2WT</p>
+          <p>01957 473 957</p>
+          <p>www.cheylesmorehouse.com/venue/venue</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">View<span class="govuk-visually-hidden"> Cheylesmore House</span>
+          </a>
+          <a class="govuk-link govuk-!-padding-left-4" href="#">
+            Delete<span class="govuk-visually-hidden"> Cheylesmore House</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Blackfield
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>Blackfield School<br>
+            SOUTHAMPTON<br>
+            HAMPSHIRE AND ISLE OF WIGHT<br>
+          <p>SO45 1DZ</p>
+          <p>01957 473 957</p>
+          <p>www.cheylesmorehouse.com/venue/venue</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">View<span class="govuk-visually-hidden"> Cheylesmore House</span>
+          </a>
+          <a class="govuk-link govuk-!-padding-left-4" href="#">
+            Delete<span class="govuk-visually-hidden"> Cheylesmore House</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+    <!--  -->
+
+    <a href="#">
+      <button class="govuk-button govuk-!-margin-bottom-9" data-module="govuk-button">
+        Add new location
+      </button>
+    </a>
+    <a href="#" class="govuk-link cd-cancel-link" style="font-size:19px;">Cancel</a>
+
+
+  </div>
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
