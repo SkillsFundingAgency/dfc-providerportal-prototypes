@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Bulk upload apprenticeship
+  Bulk upload App
 {% endblock %}
 
 {% block header %}
@@ -70,23 +70,23 @@
       </h1>
 
       <div class="govuk-form-group">
-
         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
       </div>
 
-      <a href="#"><button class="govuk-button" data-module="govuk-button">
-        Continue
-      </button></a>
+      <a href="bulk-upload-app-publish"><button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button></a>
 
-      <!-- <p class="govuk-body">When your bulk upload is complete you will need to fix any issues or publish your courses to Publish to the course directory.</p> -->
-
-      <!-- <h3 class="govuk-heading-m">If you have 801 rows or more in your bulk upload file</h3> -->
-      <!-- <h2 class="govuk-heading-s">If your bulk upload file has more than 800 rows</h2> -->
-
-      <p class="govuk-body">If your bulk upload file has more than 800 rows the support desk will upload your file for you. Email your file to <a href="mailto:support@coursedirectory.org.uk?subject=Bulk upload">support@coursedirectory.org.uk</a>.</p>
-
-      <!-- The support desk will upload your file to Publish to the course directory. -->
-
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with bulk upload files
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          If your bulk upload file has more than 800 rows email your file to <a href="mailto:support@coursedirectory.org.uk">support@coursedirectory.org.uk</a>, for guidance to publish your file to Publish to the course directory.
+        </div>
+      </details>
 
     </div>
   </div>
