@@ -895,8 +895,34 @@ a {
     text-decoration: none;
   }
 
+  // related navigation
+
+  .related-navigation {
+    color: #0b0c0c;
+    border-top: 2px solid #207E77
+}
+
+
   .related-naivagtion__link {
     margin-top: 15px;
     font-size: 16px;
     line-height: 1.28
   }
+
+  .related-navigation__heading {
+    color: #0b0c0c;
+    font-family: "GDS Transport", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-top: 15px;
+    margin-bottom: 10px
+}
+
+@media (min-width: 40.0625em) {
+    .related-navigation__heading {
+        font-size:19px;
+        line-height: 1.3157894737
+    }
+}
