@@ -658,33 +658,37 @@
 
   <div class="govuk-grid-column-one-third">
 
-    <aside class="app-related-items" role="complementary">
-      <h2 class="govuk-heading-s" id="subsection-title">
+    <aside class="related-content" role="complementary">
+      <h2 class="related-content__heading">
         Related content
       </h2>
-      <nav role="navigation" aria-labelledby="subsection-title">
-        <ul class="govuk-list">
-          <li>
-            <a href="bulk-upload-app-how" class="govuk-link related-naivagtion__link">Peparing your bulk upload file</a>
+      <nav role="navigation" class="related-content__content-section" aria-labelledby="related-content">
+        <ul class="related-content__link-list">
+          <li class="govuk-link related-content__link">
+            <a href="bulk-upload-app-how">Peparing your bulk upload file</a>
           </li>
-          <li>
-            <a href="bulk-upload-app-upload" class="govuk-link related-naivagtion__link">Upload your file</a>
-          </li>
-        </ul>
-
-        <h2 class="govuk-heading-s" id="subsection-title">
-          Download bulk upload files
-        </h2>
-
-        <ul class="govuk-list">
-          <li>
-            <a href="#" class="govuk-link related-naivagtion__link">Your published course information (CSV)</a>
-          </li>
-          <li>
-            <a href="#" class="govuk-link related-naivagtion__link">A course information template (CSV)</a>
+          <li class="govuk-link related-content__link">
+            <a href="bulk-upload-app-upload">Upload your file</a>
           </li>
         </ul>
       </nav>
+
+      <h2 class="related-content__heading">
+        Download bulk upload files
+      </h2>
+      <div class="related-content__content-section" aria-labelledby="related-download-links">
+        <ul class="related-content__link-list">
+          <li class="govuk-link related-content__link">
+            <span class="govuk-visually-hidden">Download </span>
+            <a href="#">Your published course information (CSV)</a>
+          </li>
+          <li class="govuk-link related-content__link">
+            <span class="govuk-visually-hidden">Download </span>
+            <a href="#">A course information template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+
     </aside>
 
   </div>
