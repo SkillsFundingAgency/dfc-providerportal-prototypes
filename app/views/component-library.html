@@ -88,132 +88,168 @@
 
 <!-- Enter page content inside this block -->
 
-  <div class="govuk-grid-row">
-    <!-- column start -->
+<div class="govuk-grid-row">
+  <!-- column start -->
 
-    <div class="govuk-grid-column-one-quarter sticky">
-<!-- app-related-items -->
+  <div class="govuk-grid-column-one-quarter sticky">
+    <!-- app-related-items -->
+    <aside class="" role="complementary">
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li class="govuk-!-margin-bottom-2">
+            <a href="#aside">
+              Aside
+            </a>
+          </li>
+          <li class="govuk-!-margin-bottom-2">
+            <a href="#homescreen-card">
+              Home screen card
+            </a>
+          </li>
+          <li class="govuk-!-margin-bottom-2">
+            <a href="#inset-blue">
+              Inset blue
+            </a>
+          </li>
+          <li class="govuk-!-margin-bottom-2">
+            <a href="#notification">
+              Notification
+            </a>
+          </li>
+          <li class="govuk-!-margin-bottom-2">
+            <a href="#search">
+              Search
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+  <!-- column end -->
 
-      <aside class="" role="complementary">
-        <nav role="navigation" aria-labelledby="subsection-title">
-          <ul class="govuk-list govuk-!-font-size-16">
-            <li class="govuk-!-margin-bottom-2">
-              <a href="#homescreen-card">
-                Home screen card
-              </a>
-            </li>
-            <li class="govuk-!-margin-bottom-2">
-              <a href="#inset-blue">
-                Inset blue
-              </a>
-            </li>
-            <li class="govuk-!-margin-bottom-2">
-              <a href="#notification">
-                Notification
-              </a>
-            </li>
-            <li class="govuk-!-margin-bottom-2">
-              <a href="#search">
-                Search
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
+  <!-- start column -->
+  <div class="govuk-grid-column-three-quarters app-page">
 
+    <h1 class="govuk-heading-xl">
+      Components
+    </h1>
 
+    <!-- aside-->
+    <h2 id="aside" class="govuk-heading-l">Aside</h2>
+    <div class="govuk-grid-row govuk-!-margin-bottom-7">
+      <div class="govuk-grid-column-one-half">
+
+        <aside class="related-content" role="complementary">
+          <h2 class="related-content__heading">
+            Related content
+          </h2>
+          <nav role="navigation" class="related-content__content-section" aria-labelledby="related-content">
+            <ul class="related-content__link-list">
+              <li class="govuk-link related-content__link">
+                <a href="bulk-upload-fe-how">Peparing your bulk upload file</a>
+              </li>
+              <li class="govuk-link related-content__link">
+                <a href="bulk-upload-fe-upload">Upload your file</a>
+              </li>
+            </ul>
+          </nav>
+
+          <h2 class="related-content__heading">
+            Download bulk upload files
+          </h2>
+          <div class="related-content__content-section" aria-labelledby="related-download-links">
+            <ul class="related-content__link-list">
+              <li class="govuk-link related-content__link">
+                <span class="govuk-visually-hidden">Download </span>
+                <a href="#">Your published course information (CSV)</a>
+              </li>
+              <li class="govuk-link related-content__link">
+                <span class="govuk-visually-hidden">Download </span>
+                <a href="#">A course information template (CSV)</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
     </div>
-    <!-- end column -->
+    <!-- aside end -->
 
-    <!-- start column -->
-    <div class="govuk-grid-column-three-quarters app-page">
+    <!-- home screen cards -->
+    <h2 id="homescreen-card" class="govuk-heading-l">Home screen card</h2>
 
-      <h1 class="govuk-heading-xl">
-        Components
-      </h1>
-
-      <!-- home screen cards-->
-      <h2 id="homescreen-card" class="govuk-heading-l">Home screen card</h2>
-
-      <div class="govuk-grid-row govuk-!-margin-bottom-7">
-        <div class="govuk-grid-column-one-half">
-          <div class="cd-card cd-card--provider">
-            <h2 class="govuk-heading-m">Further education courses</h2>
-            <p class="cd-card-number">24</p>
-            <ul class="govuk-list">
-              <li>
-                <a class="govuk-link" href="#">View and edit</a>
-              </li>
-              <li>
-                <a class="govuk-link" href="#">Add new</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="govuk-grid-column-one-half">
-          <div class="cd-card cd-card--provider">
-            <h2 class="govuk-heading-m">Apprenticeship training courses</h2>
-            <p class="cd-card-number">2</p>
-            <ul class="govuk-list">
-              <li>
-                <a class="govuk-link" href="#">View and edit</a>
-              </li>
-              <li>
-                <a class="govuk-link" href="#">Add new</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- end home screen cards -->
-
-      <!-- inset start -->
-      <h2 id="inset-blue" class="govuk-heading-l">Inset blue</h2>
-      <div class="govuk-inset-text govuk-!-margin-bottom-9 cd-inset-info">
-        <p>Overall the provider details and apprenticeship training courses have <b>PASSED</b> quality assurance.</p>
-      </div>
-
-      <!-- inset end -->
-
-      <!-- notification -->
-
-      <h2 id="notification" class="govuk-heading-l">Notification</h2>
-      <div class="govuk-error-summary govuk-!-margin-bottom-9" style="border-color:#005ea5;">
-        <h2 class="govuk-error-summary__title" id="error-summary-title">
-              Welcome to publish to the course directory
-            </h2>
-        <div class="govuk-error-summary__body">
-          <p>Laboris est nostrud fugiat irure amet ad elit pariatur consectetur fugiat. You can add your details, locations and one apprenticship.</p>
-          <ul class="govuk-list govuk-error-summary__list">
+    <div class="govuk-grid-row govuk-!-margin-bottom-7">
+      <div class="govuk-grid-column-one-half">
+        <div class="cd-card cd-card--provider">
+          <h2 class="govuk-heading-m">Further education courses</h2>
+          <p class="cd-card-number">24</p>
+          <ul class="govuk-list">
             <li>
-              <a href="#" style="color:#005ea5;">Start the journey</a>
+              <a class="govuk-link" href="#">View and edit</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Add new</a>
             </li>
           </ul>
         </div>
       </div>
 
-      <!-- notification end -->
-
-      <!-- search -->
-
-      <h2 id="search" class="govuk-heading-l">Search</h2>
-      <div class="bottom search-container govuk-!-margin-bottom-9">
-        <form role="search" method="get" id="searchform" class="form-search" action="#">
-          <label class="visuallyhidden" for="s">Search for:</label>
-          <div class="search-input-wrapper">
-            <input type="search" value="" name="s" id="s" class="search-query cd-search" placeholder="Search">
-            <input type="submit" id="searchsubmit" value="Search" class="btn">
-          </div>
-        </form>
+      <div class="govuk-grid-column-one-half">
+        <div class="cd-card cd-card--provider">
+          <h2 class="govuk-heading-m">Apprenticeship training courses</h2>
+          <p class="cd-card-number">2</p>
+          <ul class="govuk-list">
+            <li>
+              <a class="govuk-link" href="#">View and edit</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Add new</a>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <!-- end search -->
-
     </div>
-    <!-- end column -->
+    <!-- home screen cards end -->
+
+    <!-- inset  -->
+    <h2 id="inset-blue" class="govuk-heading-l">Inset blue</h2>
+    <div class="govuk-inset-text govuk-!-margin-bottom-9 cd-inset-info">
+      <p>Overall the provider details and apprenticeship training courses have <b>PASSED</b> quality assurance.</p>
+    </div>
+    <!-- inset end -->
+
+    <!-- notification -->
+    <h2 id="notification" class="govuk-heading-l">Notification</h2>
+    <div class="govuk-error-summary govuk-!-margin-bottom-9" style="border-color:#005ea5;">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        Welcome to publish to the course directory
+      </h2>
+      <div class="govuk-error-summary__body">
+        <p>Laboris est nostrud fugiat irure amet ad elit pariatur consectetur fugiat. You can add your details, locations and one apprenticship.</p>
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#" style="color:#005ea5;">Start the journey</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- notification end -->
+
+    <!-- search -->
+    <h2 id="search" class="govuk-heading-l">Search</h2>
+    <div class="bottom search-container govuk-!-margin-bottom-9">
+      <form role="search" method="get" id="searchform" class="form-search" action="#">
+        <label class="visuallyhidden" for="s">Search for:</label>
+        <div class="search-input-wrapper">
+          <input type="search" value="" name="s" id="s" class="search-query cd-search" placeholder="Search">
+          <input type="submit" id="searchsubmit" value="Search" class="btn">
+        </div>
+      </form>
+    </div>
+    <!-- search end-->
 
   </div>
+  <!-- column end-->
+</div>
   <!-- End of content -->
 {% endblock %}
 
