@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Bulk upload FE error CSV
+  Bulk upload FE error invalid LARS
 {% endblock %}
 
 {% block header %}
@@ -70,9 +70,14 @@
         There is a problem
       </h2>
       <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list govuk-!-margin-bottom-4">
+          <li>
+            This is a message that tells the user about the error type and the action they need to take
+          </li>
+        </ul>
         <ul class="govuk-list govuk-error-summary__list">
           <li>
-            <a href="#file-upload-1">The selected file must be a CSV</a>
+            Row 59
           </li>
         </ul>
       </div>
@@ -95,13 +100,13 @@
         </legend>
 
         <span id="file-upload-1-error" class="govuk-error-message">
-          <span class="govuk-visually-hidden">Error:</span> The selected file must be a CSV
+          <span class="govuk-visually-hidden">Error:</span> This is the error message
         </span>
         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
       </fieldset>
     </div>
 
-    <a href="bulk-upload-fe-upload-error-missing-lars"><button class="govuk-button" data-module="govuk-button">
+    <a href="bulk-upload-fe-publish"><button class="govuk-button" data-module="govuk-button">
         Continue
       </button></a>
 
@@ -112,10 +117,7 @@
         </span>
       </summary>
       <div class="govuk-details__text">
-        <h2 class="govuk-heading-s">Formatting a bulk upload file</h2>
-        <p class="govuk-body">Some copy about helping users format the file correctly with a <a href="#">link the page with the formatting</a>.</p>
-        <h2 class="govuk-heading-s">Large files heading</h2>
-        <p class="govuk-body">If your bulk upload file has more than 800 rows email your file to <a href="mailto:support@coursedirectory.org.uk">support@coursedirectory.org.uk</a>, for guidance to publish your file to Publish to the course directory.</p>
+        If your bulk upload file has more than 800 rows email your file to <a href="mailto:support@coursedirectory.org.uk">support@coursedirectory.org.uk</a>, for guidance to publish your file to Publish to the course directory.
       </div>
     </details>
 

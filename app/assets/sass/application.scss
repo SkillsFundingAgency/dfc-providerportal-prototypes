@@ -946,3 +946,10 @@ a {
       line-height: 1.28
   }
 }
+
+// error summary
+
+.govuk-error-summary__list {
+  font-weight: 700;
+  color: #d4351c;
+}
