@@ -1,0 +1,237 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Provider homescreen all elements
+{% endblock %}
+
+{% block header %}
+
+<!-- start cookie -->
+
+<!-- <div id="global-cookie-message" class="gem-c-cookie-banner govuk-clearfix show-hide-section-5" data-module="cookie-banner" role="region" aria-label="cookie banner" data-nosnippet="" style="display: block;">
+
+  <div class="gem-c-cookie-banner__wrapper govuk-width-container show-hide-section-3">
+    <div class="govuk-grid-row">
+      <div class=" govuk-grid-column-two-thirds">
+        <div class="gem-c-cookie-banner__message">
+          <span class="govuk-heading-m">Tell us whether you accept cookies</span>
+          <p class="govuk-body">We use <a class="govuk-link" href="cookie-details">cookies to collect information</a> about how you use GOV.UK. We use this information to make the website work as well as possible and improve government services.</p>
+        </div>
+        <div class="gem-c-cookie-banner__buttons">
+          <div class="gem-c-cookie-banner__button gem-c-cookie-banner__button-accept govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
+            <button class="gem-c-button govuk-button gem-c-button--inline govuk-!-margin-bottom-2 hide3 show4">Accept all cookies</button>
+          </div>
+          <div class="gem-c-cookie-banner__button gem-c-cookie-banner__button-settings govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
+
+            <a class="gem-c-button govuk-button gem-c-button--inline govuk-!-margin-bottom-2" role="button" data-module="track-click" data-track-category="cookieBanner" data-track-action="Cookie banner settings clicked" href="cookie-settings">Set cookie preferences</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gem-c-cookie-banner__confirmation govuk-width-container show-hide-section-4" tabindex="-1">
+    <p class="gem-c-cookie-banner__confirmation-message">
+      You’ve accepted all cookies. You can <a class="govuk-link" href="cookie-settings" data-module="track-click" data-track-category="cookieBanner" data-track-action="Cookie banner settings clicked from confirmation">change your cookie settings</a> at
+      any time.
+    </p>
+    <button class="gem-c-cookie-banner__hide-button hide4" data-hide-cookie-banner="true" data-module="track-click" data-track-category="cookieBanner" data-track-action="Hide cookie banner">Hide</button>
+  </div>
+</div> -->
+
+<!-- end cookie -->
+
+
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: 80%;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Your locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Your apprenticeships training
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Your courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Your T-levels
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-error-summary" style="border-color:#005ea5;">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      Notification heading
+    </h2>
+    <div class="govuk-error-summary__body">
+      <p>Notification summary content. Helping the user to understand what action they need to take and why.</p>
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#" style="color:#005ea5;">Link to take action</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<!-- end notification -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <div class="cd-card cd-card--provider">
+          <h2 class="govuk-heading-m">Further education courses</h2>
+          <p class="cd-card-number">224</p>
+          <ul class="govuk-list">
+            <li>
+              <a class="govuk-link" href="#">View and edit<span class="govuk-visually-hidden"> further education courses</span></a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Add new<span class="govuk-visually-hidden"> further education courses</span></a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Bulk upload<span class="govuk-visually-hidden"> further education courses</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="govuk-grid-column-one-half">
+        <div class="cd-card cd-card--provider">
+          <h2 class="govuk-heading-m">Apprenticeship training courses</h2>
+          <p class="cd-card-number">2</p>
+          <ul class="govuk-list">
+            <li>
+              <a class="govuk-link" href="#">View and edit<span class="govuk-visually-hidden"> apprenticeship training courses</span></a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Add new<span class="govuk-visually-hidden"> apprenticeship training courses</span></a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Bulk upload<span class="govuk-visually-hidden"> apprenticeship training courses</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-one-half">
+        <div class="cd-card cd-card--provider">
+          <h2 class="govuk-heading-m">T-levels</h2>
+          <p class="cd-card-number">9</p>
+          <ul class="govuk-list">
+            <li>
+              <a class="govuk-link" href="#">View and edit<span class="govuk-visually-hidden"> T-levels</span></a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Add new<span class="govuk-visually-hidden"> T-levels</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--  -->
+
+      <div class="govuk-grid-column-one-half">
+        <div class="cd-card cd-card--provider">
+          <h2 class="govuk-heading-m">Locations</h2>
+          <p class="cd-card-number">68</p>
+          <ul class="govuk-list">
+            <li>
+              <a class="govuk-link" href="#">View and edit<span class="govuk-visually-hidden"> locations</span></a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Add new<span class="govuk-visually-hidden"> locations</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <aside class="related-content" role="complementary">
+      <h2 class="related-content__heading">
+        Related actions
+      </h2>
+
+      <div class="related-content__content-section" aria-labelledby="related-download-links">
+        <ul class="related-content__link-list">
+          <li class="govuk-link related-content__link">
+            <a href="#">Manage your organisation details</a>
+          </li>
+          <li class="govuk-link related-content__link">
+            <a href="#">Create a new DfE Sign-in account</a>
+          </li>
+          <li class="govuk-link related-content__link">
+            <a href="#">Manage your DfE Sign-in account</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
