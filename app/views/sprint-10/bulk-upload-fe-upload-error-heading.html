@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Bulk upload FE error invalid LARS
+  Bulk upload FE error expired LARS
 {% endblock %}
 
 {% block header %}
@@ -72,15 +72,15 @@
       <div class="govuk-error-summary__body">
         <ul class="govuk-list govuk-error-summary__list govuk-!-margin-bottom-4">
           <li>
-            Enter a valid LARS code in the LARS_QAN column
+            Enter headings in the correct format
           </li>
         </ul>
         <ul class="govuk-list govuk-error-summary__list">
           <li>
-            Row 59
+            NATIONAL_DELIVERY
           </li>
           <li>
-            Row 98
+            DURATION
           </li>
         </ul>
       </div>
@@ -103,7 +103,7 @@
         </legend>
 
         <span id="file-upload-1-error" class="govuk-error-message">
-          <span class="govuk-visually-hidden">Error:</span> Enter a valid LARS code in the LARS_QAN column
+          <span class="govuk-visually-hidden">Error:</span> Enter headings in the correct format
         </span>
         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
       </fieldset>
