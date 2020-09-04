@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Contact page
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              My locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Get in touch
+    </h1>
+    <p class="govuk-body">Culpa duis sint cillum duis commodo est in in enim incididunt est enim aliqua.</p>
+
+    <h2 class="govuk-heading-m">Email</h2>
+    <p class="govuk-body">Sit cupidatat voluptate tempor ipsum veniam magna proident velit nulla quis irure.</p>
+
+    <h2 class="govuk-heading-m">Telephone</h2>
+    <p class="govuk-body">Ex eiusmod in dolor ea sunt irure nostrud reprehenderit laboris.</p>
+
+    <h2 class="govuk-heading-m">Useful links</h2>
+    <p class="govuk-body">Nostrud reprehenderit laboris:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="#" class="govuk-link">velit elit officia culpa</a></li>
+      <li><a href="#" class="govuk-link">volor anim occaecat ad</a></li>
+      <li><a href="#" class="govuk-link">dolor consectetur veniam officia</a></li>
+      <li><a href="#" class="govuk-link">est excepteur ad velit</a></li>
+    </ul>
+
+  </div>
+
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
