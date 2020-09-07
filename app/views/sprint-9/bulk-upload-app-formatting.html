@@ -88,7 +88,7 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">All delivery methods.</td>
+          <td class="govuk-table__cell">All apprenticeship training courses.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
@@ -117,7 +117,7 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">All delivery methods.</td>
+          <td class="govuk-table__cell">All apprenticeship training courses.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
@@ -161,7 +161,7 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">All delivery methods.</td>
+          <td class="govuk-table__cell">All apprenticeship training courses.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
@@ -187,7 +187,7 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">All delivery methods.</td>
+          <td class="govuk-table__cell">All apprenticeship training courses.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
@@ -208,7 +208,7 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">All delivery methods.</td>
+          <td class="govuk-table__cell">All apprenticeship training courses.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
@@ -229,7 +229,7 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">All delivery methods.</td>
+          <td class="govuk-table__cell">All apprenticeship training courses.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
@@ -250,7 +250,7 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">All delivery methods.</td>
+          <td class="govuk-table__cell">All apprenticeship training courses.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
@@ -265,13 +265,13 @@
 
     <h2 class="govuk-heading-m">DELIVERY_METHOD</h2>
 
-    <p class="govuk-body">Where the apprenticeship training will be delivered.</p>
+    <p class="govuk-body">Where the apprenticeship training will be delivered.*Add in definition of what to enter*</p>
 
     <table class="govuk-table table-header-width__40">
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">All delivery methods.</td>
+          <td class="govuk-table__cell">All apprenticeship training courses.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
@@ -281,17 +281,13 @@
           <th scope="row" class="govuk-table__header">What to enter<br></th>
           <td class="govuk-table__cell">Classroom<br>Employer<br>Both</td>
         </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Notes<br></th>
-          <td class="govuk-table__cell">
-            For apprenticeship training courses with more than one VENUE, each apprenticeship must be entered on a separate row.</td>
-        </tr>
       </tbody>
     </table>
 
     <h2 class="govuk-heading-m">VENUE</h2>
 
-    <p class="govuk-body"></p>
+    <p class="govuk-body">You can only enter a venue that is already added to Publish to the course directory.</p>
+    <p class="govuk-body">If you have a new venue you must <a href="#">add this to your locations</a> before you can complete a bulk upload.</p>
 
     <table class="govuk-table table-header-width__40">
       <tbody class="govuk-table__body">
@@ -308,39 +304,48 @@
           <td class="govuk-table__cell">255</td>
         </tr>
         <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Example</th>
+          <td class="govuk-table__cell">My Location Name</td>
+        </tr>
+        <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Notes<br></th>
           <td class="govuk-table__cell">
-            Apprenticeships with the same standard code and the same delivery method must be entered on a separate row with a different venue.</td>
+            For apprenticeship training courses with more than one venue, each apprenticeship must be entered on a separate row.</td>
         </tr>
       </tbody>
     </table>
 
     <h2 class="govuk-heading-m">RADIUS</h2>
 
+    <p class="govuk-body">How far you are willing to travel from the venue to deliver the apprenticeship training course.</p>
+
     <table class="govuk-table table-header-width__40">
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">Where DELIVERY_METHOD is both.</td>
+          <td class="govuk-table__cell">Where DELIVERY_METHOD is both and not delivered across the whole of England.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
           <td class="govuk-table__cell">Yes</td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">What to enter<br></th>
-          <td class="govuk-table__cell">xx for example xx</td>
+          <th scope="row" class="govuk-table__header">Unit<br></th>
+          <td class="govuk-table__cell">Miles</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Notes<br></th>
           <td class="govuk-table__cell">
-            A radius must not be more than 874 miles
+            The radius must be between 1 and 874.
           </td>
         </tr>
       </tbody>
     </table>
 
     <h2 class="govuk-heading-m">DELIVERY_MODE</h2>
+
+    <p class="govuk-body">*Add in definitions*</p>
+
 
     <table class="govuk-table table-header-width__40">
       <tbody class="govuk-table__body">
@@ -354,18 +359,19 @@
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">What to enter</th>
-          <td class="govuk-table__cell">Day;block;both</td>
+          <td class="govuk-table__cell">Day<br>Block<br>Both</td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Notes<br></th>
-          <td class="govuk-table__cell">
-            Each unique value can only be listed once (Test what this means)<br><br>
-          </td>
+          <th scope="row" class="govuk-table__header">Example</th>
+          <td class="govuk-table__cell">Day;Block;Both</td>
         </tr>
       </tbody>
     </table>
 
     <h2 class="govuk-heading-m">ACROSS_ENGLAND</h2>
+
+    <p class="govuk-body">If the apprenticeship training course can be delivered across the whole of England.</p>
+
 
     <table class="govuk-table table-header-width__40">
       <tbody class="govuk-table__body">
@@ -381,24 +387,18 @@
           <th scope="row" class="govuk-table__header">What to enter</th>
           <td class="govuk-table__cell">Yes<br>No</td>
         </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Notes<br></th>
-          <td class="govuk-table__cell">
-
-          </td>
-        </tr>
       </tbody>
     </table>
 
     <h2 class="govuk-heading-m">NATIONAL_DELIVERY</h2>
 
-    <p class="govuk-body"></p>
+    <p class="govuk-body">If you can deliver the apprenticeship training course anywhere in England you will be shown as a national provider.</p>
 
     <table class="govuk-table table-header-width__40">
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">Where DELIVERY_METHOD is employer based.</td>
+          <td class="govuk-table__cell">Where DELIVERY_METHOD is employer.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
