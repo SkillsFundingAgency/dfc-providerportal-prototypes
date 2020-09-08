@@ -137,7 +137,7 @@
 
     <h2 class="govuk-heading-m">Frameworks</h2>
 
-    <p class="govuk-body">Frameworks have now been replaced by standards, while we continue to update the service leave the following columns blank:</p>
+    <p class="govuk-body">Frameworks have now been replaced by standards, while we continue to update the service leave the following blank:</p>
 
     <ul class="govuk-list govuk-list--bullet">
       <li>FRAMEWORKS_CODE</li>
@@ -277,7 +277,13 @@
 
     <h2 class="govuk-heading-m">DELIVERY_METHOD</h2>
 
-    <p class="govuk-body">Where the apprenticeship training will be delivered.*Add in definition of what to enter*</p>
+    <p class="govuk-body">Apprenticeship training can be delivered by the following methods:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>classroom - at your location on day or block release</li>
+        <li>employer - at the employer's location</li>
+        <li>both - at your location and the employer's location</li>
+      </ul>
 
     <table class="govuk-table table-header-width__40">
       <tbody class="govuk-table__body">
@@ -293,6 +299,10 @@
           <th scope="row" class="govuk-table__header">What to enter<br></th>
           <td class="govuk-table__cell">Classroom<br>Employer<br>Both</td>
         </tr>
+        <!-- <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Notes<br></th>
+          <td class="govuk-table__cell">Classroom - training is delivered at your location on day or block release.<br><br>Employer - training is delivered at the employer's location.<br><br>Both - training can be delivered at your location and the employer's location.</td>
+        </tr> -->
       </tbody>
     </table>
 
@@ -305,7 +315,7 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">Where <span class="govuk-!-font-weight-bold">DELIVERY_METHOD</span> is <i>Classroom</i> or <i>Both</i>.</td>
+          <td class="govuk-table__cell">When <span class="govuk-!-font-weight-bold">DELIVERY_METHOD</span> is Classroom or Both.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
@@ -335,7 +345,7 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">Where <span class="govuk-!-font-weight-bold">DELIVERY_METHOD</span> is Both and not delivered across the whole of England.</td>
+          <td class="govuk-table__cell">When <span class="govuk-!-font-weight-bold">DELIVERY_METHOD</span> is Both and not delivered across the whole of England.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
@@ -363,7 +373,7 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">Where <span class="govuk-!-font-weight-bold">DELIVERY_METHOD</span> is Classroom or Both.</td>
+          <td class="govuk-table__cell">When <span class="govuk-!-font-weight-bold">DELIVERY_METHOD</span> is Classroom or Both.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
@@ -382,14 +392,14 @@
 
     <h2 class="govuk-heading-m">ACROSS_ENGLAND</h2>
 
-    <p class="govuk-body">If the apprenticeship training course can be delivered across the whole of England.</p>
+    <p class="govuk-body">You can deliver the apprenticeship training course anywhere in England and you will be shown as a national provider for this course.</p>
 
 
     <table class="govuk-table table-header-width__40">
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">Where <span class="govuk-!-font-weight-bold">DELIVERY_METHOD</span> is Both.</td>
+          <td class="govuk-table__cell">When <span class="govuk-!-font-weight-bold">DELIVERY_METHOD</span> is Both.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
@@ -399,18 +409,22 @@
           <th scope="row" class="govuk-table__header">What to enter</th>
           <td class="govuk-table__cell">Yes<br>No</td>
         </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Notes</th>
+          <td class="govuk-table__cell">For an apprenticeship training course not delivered across England you must enter a <span class="govuk-!-font-weight-bold">RADIUS</span>.</td>
+        </tr>
       </tbody>
     </table>
 
     <h2 class="govuk-heading-m">NATIONAL_DELIVERY</h2>
 
-    <p class="govuk-body">If you can deliver the apprenticeship training course anywhere in England you will be shown as a national provider.</p>
+    <p class="govuk-body">You can deliver the apprenticeship training course anywhere in England and you will be shown as a national provider for this course.</p>
 
     <table class="govuk-table table-header-width__40">
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">Where <span class="govuk-!-font-weight-bold">DELIVERY_METHOD</span> is Employer.</td>
+          <td class="govuk-table__cell">When <span class="govuk-!-font-weight-bold">DELIVERY_METHOD</span> is Employer.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
@@ -434,7 +448,7 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">When to complete</th>
-          <td class="govuk-table__cell">Where <span class="govuk-!-font-weight-bold">DELIVERY_METHOD</span> is Employer.</td>
+          <td class="govuk-table__cell">When <span class="govuk-!-font-weight-bold">DELIVERY_METHOD</span> is Employer.</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Mandatory</th>
