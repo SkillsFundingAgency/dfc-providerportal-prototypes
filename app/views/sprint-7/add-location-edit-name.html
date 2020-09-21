@@ -62,23 +62,21 @@
 <!-- content start -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-    <h1 class="govuk-heading-l">Edit location name</h1>
-
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="name-on-the-account">
-        Location name
-      </label>
-      <input class="govuk-input" value="Cheylesmore House">
-      <span class="govuk-hint">
-        You have 250 characters remaining
-      </span>
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l">
+            Location name
+          </label>
+        </h1>
+        <input class="govuk-input govuk-js-character-count" value="Cheylesmore House">
+      </div>
+      <div id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 250 characters remaining</div>
     </div>
 
-
     <a href="view-location-edit"><button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
-      Continue
-    </button></a>
+        Continue
+      </button></a>
     <a href="view-location-edit"><button class="govuk-button govuk-button--secondary govuk-!-margin-right-1" data-module="govuk-button">Cancel</button></a>
 
   </div>
