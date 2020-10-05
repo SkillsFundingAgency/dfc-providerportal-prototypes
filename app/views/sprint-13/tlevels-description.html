@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Add T Level description
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint13.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Add description of {{ data['tlevels'] }} T Level
+      </h1>
+      <p class="govuk-body">The course information you provide will be available on the National Careers Service, <a href="https://nationalcareers.service.gov.uk/find-a-course/search" target="_blank">Find a course</a>, available to learners searching for learning and training opportunities.
+      <p class="govuk-body govuk-!-margin-bottom-8">This is your opportunity to tell learners about your course, the content and style of the course information you provide should be aimed at the learner.</p>
+
+      <!--  -->
+
+      <form action="tlevels-details" method="post" class="form">
+
+        {{ govukCharacterCount({
+          name: "whothiscourseisfor",
+          id: "whothiscourseisfor",
+          maxlength: 500,
+          label: {
+            classes: "govuk-label--m",
+            text: "Who this course is for?"
+          },
+          hint: {
+            text: "Information that will help the learner decide whether this course is suitable for them, the learning experience and opportunities they can expect from the course."
+          }
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "entryrequirements",
+          id: "entryrequirements",
+          maxlength: 500,
+          label: {
+            classes: "govuk-label--m",
+            text: "Entry requirements"
+          },
+          hint: {
+            text: "Specific skills, licences, vocational or academic requirements. For example, DBS, driving licence, computer knowledge, literacy or numeracy requirements."
+          }
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "whatyoulllearn",
+          id: "whatyoulllearn",
+          maxlength: 500,
+          label: {
+            classes: "govuk-label--m",
+            text: "What you'll learn"
+          },
+          hint: {
+            text: "The main topics, units or modules of the course a learner can expect, include key features. For example, communication, team leadership and time management."
+          }
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "howyoulllearn",
+          id: "howyoulllearn",
+          maxlength: 500,
+          label: {
+            classes: "govuk-label--m",
+            text: "How you'll learn"
+          },
+          hint: {
+            text: "The methods used to deliver the course. For example, classroom based exercises, a work environment or online study materials."
+          }
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "needtobring",
+          id: "needtobring",
+          maxlength: 500,
+          label: {
+            classes: "govuk-label--m",
+            text: "What you'll need to bring"
+          },
+          hint: {
+            text: "What the learner will need to access or bring to the course. For example, personal protective clothing, tools, devices or internet access."
+          }
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "howassessed",
+          id: "howassessed",
+          maxlength: 500,
+          label: {
+            classes: "govuk-label--m",
+            text: "How you'll be assessed"
+          },
+          hint: {
+            text: "The ways a learner will be assessed.  For example, workplace assessment, written assignments, exams, group or individual project work or portfolio of evidence."
+          }
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "whatyoucandonext",
+          id: "whatyoucandonext",
+          maxlength: 500,
+          label: {
+            classes: "govuk-label--m",
+            text: "What you can do next"
+          },
+          hint: {
+            text: "The further opportunities a learner can expect after successfully completing the course. For example, a higher level course, apprenticeship or entry to employment."
+          }
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+        
+      </form>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
