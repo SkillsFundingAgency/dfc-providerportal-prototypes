@@ -29,10 +29,15 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Add description of {{ data['tlevels'] }} T Level
+        T Level description
       </h1>
-      <p class="govuk-body">The course information you provide will be available on the National Careers Service, <a href="https://nationalcareers.service.gov.uk/find-a-course/search" target="_blank">Find a course</a>, available to learners searching for learning and training opportunities.
-      <p class="govuk-body govuk-!-margin-bottom-8">This is your opportunity to tell learners about your course, the content and style of the course information you provide should be aimed at the learner.</p>
+      <p></p>
+
+      <div class="govuk-inset-text">{{ data['tlevels'] }} T Level
+      </div>
+
+      <p class="govuk-body">The T Level information you provide will be available on the National Careers Service, <a href="https://nationalcareers.service.gov.uk/find-a-course/search" target="_blank">Find a course</a>, available to learners searching for learning and training opportunities.
+      <p class="govuk-body govuk-!-margin-bottom-8">This is your opportunity to tell learners about your T Level, the content and style of the information you provide should be aimed at the learner.</p>
 
       <!--  -->
 
@@ -44,10 +49,10 @@
           maxlength: 500,
           label: {
             classes: "govuk-label--m",
-            text: "Who this course is for?"
+            text: "Who this T Level is for?"
           },
           hint: {
-            text: "Information that will help the learner decide whether this course is suitable for them, the learning experience and opportunities they can expect from the course."
+            text: "Information that will help the learner decide whether this T Level is suitable for them, the learning experience and opportunities they can expect."
           }
         }) }}
 
@@ -60,7 +65,7 @@
             text: "Entry requirements"
           },
           hint: {
-            text: "Specific skills, licences, vocational or academic requirements. For example, DBS, driving licence, computer knowledge, literacy or numeracy requirements."
+            text: "Specific skills, licences, vocational or academic requirements. For example, computer knowledge or literacy and numeracy requirements."
           }
         }) }}
 
@@ -73,7 +78,7 @@
             text: "What you'll learn"
           },
           hint: {
-            text: "The main topics, units or modules of the course a learner can expect, include key features. For example, communication, team leadership and time management."
+            text: "The main topics, units or modules of the T Level a learner can expect, include key features. For example, communication, team leadership and time management."
           }
         }) }}
 
@@ -86,10 +91,10 @@
             text: "How you'll learn"
           },
           hint: {
-            text: "The methods used to deliver the course. For example, classroom based exercises, a work environment or online study materials."
+            text: "The methods used to deliver the T Level. For example, classroom based exercises, a work environment or online study materials."
           }
         }) }}
-
+<!--
         {{ govukCharacterCount({
           name: "needtobring",
           id: "needtobring",
@@ -101,7 +106,7 @@
           hint: {
             text: "What the learner will need to access or bring to the course. For example, personal protective clothing, tools, devices or internet access."
           }
-        }) }}
+        }) }} -->
 
         {{ govukCharacterCount({
           name: "howassessed",
@@ -125,14 +130,14 @@
             text: "What you can do next"
           },
           hint: {
-            text: "The further opportunities a learner can expect after successfully completing the course. For example, a higher level course, apprenticeship or entry to employment."
+            text: "The further opportunities a learner can expect after successfully completing the T Level. For example, a higher level course, apprenticeship or entry to employment."
           }
         }) }}
 
         {{ govukButton({
           text: "Continue"
         }) }}
-        
+
       </form>
 
     </div>
