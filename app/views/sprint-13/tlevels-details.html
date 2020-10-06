@@ -29,15 +29,22 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Add course details for {{ data['tlevels'] }} T Level
+        T Level details
       </h1>
+
+      <p></p>
+
+      <div
+      class="govuk-inset-text">{{ data['tlevels'] }} T Level
+      </div>
+
       <p class="govuk-body-m">Add information on how the course will be delivered.</p>
 
       <form action="" method="post" class="form">
 
       <!--  -->
 
-        {{ govukInput({
+        <!-- {{ govukInput({
           label: {
             text: "Course name",
             classes: "govuk-label--m"
@@ -48,7 +55,7 @@
           id: "details-coursename",
           name: "details-coursename",
           value: data['tlevels']
-        }) }}
+        }) }} -->
 
       <!--  -->
 
@@ -1105,7 +1112,7 @@
           text: "Continue",
           disabled: true
         }) }}
-        
+
       </form>
 
     </div>
