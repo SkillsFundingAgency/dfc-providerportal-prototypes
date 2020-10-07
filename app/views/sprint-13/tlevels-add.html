@@ -28,26 +28,38 @@
   <!--  -->
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Select a T Level</h1>
-    <p class="govuk-body">These T Levels are available to you to published on the course directory.</p>
+    <h1 class="govuk-heading-l">T Levels</h1>
+
+    <p class="govuk-body">Select a T Level qualification to add to Publish to the course directory.</p>
 
     <form action="" method="post" class="form">
-    
+   
       {{ govukRadios({
         idPrefix: "tlevels",
         name: "tlevels",
         items: [
           {
-            value: "Design and development for engineering and manufacturing",
-            text: "Design and development for engineering and manufacturing"
+            value: "Design, surveying and planning for construction",
+            text: "T Level Technical Qualification in Design, Surveying and Planning for Construction",
+            hint: {
+              text: "LARS: 60358300"
+            }
           },
           {
-            value: "Design, surveying and planning for construction",
-            text: "Design, surveying and planning for construction"
+            value: "Digital production, design and development",
+            text: "T Level Technical Qualification in Digital Production, Design and Development",
+            hint: {
+              text: "LARS: 60358324"
+            }
           },
           {
             value: "Education and childcare",
-            text: "Education and childcare"
+            text: "T Level Technical Qualification in Education and Childcare",
+            hint: {
+              text: "LARS: 60358294"
+            }
+          },
+          {
           }
         ]
       }) }}
