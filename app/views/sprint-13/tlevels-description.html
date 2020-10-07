@@ -53,7 +53,8 @@
           },
           hint: {
             text: "Information that will help the learner decide whether this T Level is suitable for them, the learning experience and opportunities they can expect."
-          }
+          },
+          value: data['tlevels-desc-whothiscourseisfor']
         }) }}
 
         {{ govukCharacterCount({
@@ -66,7 +67,8 @@
           },
           hint: {
             text: "Specific skills, licences, vocational or academic requirements. For example, computer knowledge or literacy and numeracy requirements."
-          }
+          },
+          value: data['tlevels-desc-entryrequirements']
         }) }}
 
         {{ govukCharacterCount({
@@ -79,7 +81,8 @@
           },
           hint: {
             text: "The main topics, units or modules of the T Level a learner can expect, include key features. For example, communication, team leadership and time management."
-          }
+          },
+          value: data['tlevels-desc-whatyoulllearn']
         }) }}
 
         {{ govukCharacterCount({
@@ -92,21 +95,9 @@
           },
           hint: {
             text: "The methods used to deliver the T Level. For example, classroom based exercises, a work environment or online study materials."
-          }
-        }) }}
-<!--
-        {{ govukCharacterCount({
-          name: "needtobring",
-          id: "needtobring",
-          maxlength: 500,
-          label: {
-            classes: "govuk-label--m",
-            text: "What you'll need to bring"
           },
-          hint: {
-            text: "What the learner will need to access or bring to the course. For example, personal protective clothing, tools, devices or internet access."
-          }
-        }) }} -->
+          value: data['tlevels-desc-howyoulllearn']
+        }) }}
 
         {{ govukCharacterCount({
           name: "tlevels-desc-howassessed",
@@ -118,7 +109,8 @@
           },
           hint: {
             text: "The ways a learner will be assessed.  For example, workplace assessment, written assignments, exams, group or individual project work or portfolio of evidence."
-          }
+          },
+          value: data['tlevels-desc-howassessed']
         }) }}
 
         {{ govukCharacterCount({
@@ -131,7 +123,8 @@
           },
           hint: {
             text: "The further opportunities a learner can expect after successfully completing the T Level. For example, a higher level course, apprenticeship or entry to employment."
-          }
+          },
+          value: data['tlevels-desc-whatyoucandonext']
         }) }}
 
         {{ govukButton({

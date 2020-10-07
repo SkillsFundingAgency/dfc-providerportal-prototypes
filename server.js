@@ -212,13 +212,18 @@ if (useLogging !== 'false') {
   app.use((req, res, next) => {
     const all = (useLogging === 'true')
     const post = (useLogging === 'post' && req.method === 'POST')
-    const get = (useLogging === 'get' && req.method === 'GET')
-    if (all || post || get) {
+    //const get = (useLogging === 'get' && req.method === 'GET')
+    //if (all || post || get) {
+    if (all || post) {
       const log = {
         method: req.method,
         url: req.originalUrl,
         data: req.session.data
       }
+      var date = new Date();
+      console.log("*****************************")
+      console.log(date.toGMTString())
+      console.log("*****************************")
       console.log(JSON.stringify(log, null, 2))
     }
     next()
