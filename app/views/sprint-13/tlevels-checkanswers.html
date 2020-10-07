@@ -52,7 +52,9 @@
                 Start date
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['tlevels-details-startdate'] }}
+                {{ data['tlevels-details-startdate-day'] }} 
+                {{ data['tlevels-details-startdate-monthname'] }} 
+                {{ data['tlevels-details-startdate-year'] }} 
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -177,7 +179,7 @@
 
           <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
-          <form action="tlevels-confirmation" method="post" novalidate>
+          <form action="" method="post" novalidate>
 
             <input type="hidden" name="answers-checked" value="true">
 
