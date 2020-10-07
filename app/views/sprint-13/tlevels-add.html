@@ -39,23 +39,37 @@
         name: "tlevels",
         items: [
           {
-
-
             value: "Design, surveying and planning for construction",
-            text: "T Level Technical Qualification in Design, Surveying and Planning for Construction"
+            text: "T Level Technical Qualification in Design, Surveying and Planning for Construction",
+            hint: {
+              text: "LARS: 60358300"
+            }
           },
           {
             value: "Digital production, design and development",
-            text: "Digital production, design and development"
+            text: "T Level Technical Qualification in Digital Production, Design and Development",
+            hint: {
+              text: "LARS: 60358324"
+            }
           },
           {
             value: "Education and childcare",
-            text: "Education and childcare"
+            text: "T Level Technical Qualification in Education and Childcare",
+            hint: {
+              text: "LARS: 60358294"
+            }
           },
           {
           }
         ]
-      }) }}
+      })
+
+      {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{{ govukDetails({
+  summaryText: "Help with nationality",
+  text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+}) }}
 
       {{ govukButton({
         text: "Continue"
