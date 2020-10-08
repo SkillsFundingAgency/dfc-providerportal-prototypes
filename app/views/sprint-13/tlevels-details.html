@@ -28,32 +28,27 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">
-        T Level details
-      </h1>
+      <h1 class="govuk-heading-xl">T Level details</h1>
 
-      <p></p>
+      <div class="govuk-inset-text">{{ data['tlevels'] }}</div>
 
-      <div
-      class="govuk-inset-text">{{ data['tlevels'] }}
-      </div>
-
-      <p class="govuk-body-l">Add information on how the T Level will be delivered.</p>
+      <p class="govuk-body govuk-!-margin-bottom-5">Add information on how the T Level will be delivered.</p>
 
       <form action="" method="post" class="form">
 
         <!--  -->
 
         {{ govukInput({
+          id: "tlevels-details-reference",
+          name: "tlevels-details-reference",
+          classes: "govuk-!-margin-bottom-3",
           label: {
             text: "Your reference",
             classes: "govuk-label--m"
           },
           hint: {
             text: "A reference that will help you identify this T Level in your internal systems. This will not be visible to learners."
-          },
-          id: "tlevels-details-reference",
-          name: "tlevels-details-reference"
+          }
         }) }}
 
         <!--  -->
@@ -61,6 +56,7 @@
         {{ govukDateInput({
           id: "tlevels-details-startdate",
           namePrefix: "tlevels-details-startdate",
+          classes: "govuk-!-margin-bottom-3",
           fieldset: {
             legend: {
               text: "Start date",
@@ -92,7 +88,13 @@
 
           </fieldset>
         </div>
-        <p class="govuk-body"><a href="#" class="govuk-link">Add another location</a></p>
+        <p class="govuk-body govuk-!-margin-bottom-3">
+          {{ govukButton({
+            text: "Add another location",
+            classes: "govuk-button--secondary"
+          }) }}
+          <!--a href="#" class="govuk-link">Add another location</a-->
+        </p>
 
         <!--  -->
 
