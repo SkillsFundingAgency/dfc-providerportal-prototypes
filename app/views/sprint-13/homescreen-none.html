@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Provider homescreen apprenticeships only
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint13.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <!-- <h1 class="govuk-heading-m">PRESIDENCY LONDON COLLEGE LIMITED</h1> -->
+    <div class="govuk-inset-text govuk-!-margin-top-0">
+      <h1 class="govuk-heading-m">PRESIDENCY LONDON COLLEGE LIMITED</h1>
+      <p>Your UK Provider Reference Number (UKPRN) is <span class="govuk-!-font-weight-bold">10035735</span></p>
+      <p><a href="javascript:preventDefault();#" class="govuk-link">Your provider details</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- end user panel -->
+
+<!--  -->
+
+<div class="govuk-grid-row govuk-!-margin-bottom-5">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m section-heading">No provider type assigned</h2>
+    <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+
+<!--  -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m section-heading">Locations</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-4 homescreen-row">
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card cd-card-2 cd-card--provider">
+      <h2 class="govuk-heading-s">Locations</h2>
+      <p class="cd-card-number-1">5</p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Your locations</h2>
+        <p class="govuk-body-s">This is some copy about something that explains the card.</p>
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="javascript:preventDefault();">Add a location<span class="govuk-visually-hidden"> further education courses</span></a>
+          </li>
+          <li>
+            <a class="govuk-link" href="javascript:preventDefault();">View and edit locations<span class="govuk-visually-hidden"> further education courses</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!--  -->
+
+<!-- contact panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="cd-contact-panel">
+      <h2 class="govuk-heading-m">Need help?</h2>
+      <p class="govuk-body">
+        If you’ve got a question about Publish to the course directory, <a class="govuk-link" href="contact">contact the support team</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
+  <!-- End of contact panel -->
+
+<!-- <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <aside class="related-content" role="complementary">
+      <h2 class="related-content__heading">
+        Related actions
+      </h2>
+      <div class="related-content__content-section" aria-labelledby="related-actions-links">
+        <ul class="related-content__link-list">
+          <li class="govuk-link related-content__link">
+            <a class="related-content__section-link" href="javascript:preventDefault();">Manage your organisation details</a>
+          </li>
+          <li class="govuk-link related-content__link">
+            <a class="related-content__section-link" href="javascript:preventDefault();">Create a new DfE Sign-in account</a>
+          </li>
+          <li class="govuk-link related-content__link">
+            <a class="related-content__section-link" href="javascript:preventDefault();">Manage your DfE Sign-in account</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div> -->
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
