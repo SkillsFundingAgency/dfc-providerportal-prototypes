@@ -102,6 +102,26 @@ $govuk-assets-path: '/govuk/assets/';
   margin-bottom: 10px;
 }
 
+.cd-card--provider > p, .cd-card--provider > p {
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+@media(max-width: 768px) {
+  .cd-card {
+    padding: 20px;
+  }
+
+  .cd-card-content {
+    padding: 20px 20px 10px 20px;
+  }
+
+  .cd-card-action {
+    padding: 20px;
+  }
+}
+
+
 .govuk-list__small {
   font-size: 16px;
 }
@@ -1029,5 +1049,24 @@ a {
 @media (min-width: 40.0625em) {
 .cd-contact-panel {
     margin-top: 30px;
+  }
+}
+
+// Flexbox alignment for Homescreen from Sprint 13
+
+
+@media (min-width: 768px) {
+  .homescreen-row {
+    display: flex;
+
+    .govuk-grid-column-one-third {
+      align-items: stretch;
+      display: flex;
+    }
+    .cd-card,
+    .cd-card-1 {
+      align-items: stretch;
+      width: 100%;
+    }
   }
 }
