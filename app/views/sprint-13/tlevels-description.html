@@ -31,13 +31,10 @@
       <h1 class="govuk-heading-xl">
         T Level description
       </h1>
-      <p></p>
-
       <!--div class="govuk-inset-text">{{ data['tlevels'] }}</div-->
-      <p class="govuk-body-l">Add your description of {{ data['tlevels'] }}.</p>
+      <!--p class="govuk-body-l">Add your description of {{ data['tlevels'] }}.</p-->
 
-      <p class="govuk-body">The description of this T Level has been provided for you to edit, the content and style of the information should be aimed at the learner.</p>
-
+      <p class="govuk-body">The description of {{ data['tlevels'] }} has been provided for you to edit, the content and style of the information should be aimed at the learner.</p>
       <p class="govuk-body govuk-!-margin-bottom-5">The T Level information will be available on the National Careers Service, <a href="https://nationalcareers.service.gov.uk/find-a-course/search" target="_blank">Find a course</a>, available to learners searching for learning and training opportunities.
 
       <!--  -->
@@ -48,6 +45,7 @@
           name: "tlevels-desc-whothiscourseisfor",
           id: "tlevels-desc-whothiscourseisfor",
           maxlength: 500,
+          rows: 7,
           label: {
             classes: "govuk-label--m",
             text: "Who this T Level is for"
@@ -62,6 +60,7 @@
           name: "tlevels-desc-entryrequirements",
           id: "tlevels-desc-entryrequirements",
           maxlength: 500,
+          rows: 7,
           label: {
             classes: "govuk-label--m",
             text: "Entry requirements"
@@ -76,6 +75,7 @@
           name: "tlevels-desc-whatyoulllearn",
           id: "tlevels-desc-whatyoulllearn",
           maxlength: 500,
+          rows: 7,
           label: {
             classes: "govuk-label--m",
             text: "What you'll learn"
@@ -90,6 +90,7 @@
           name: "tlevels-desc-howyoulllearn",
           id: "tlevels-desc-howyoulllearn",
           maxlength: 500,
+          rows: 7,
           label: {
             classes: "govuk-label--m",
             text: "How you'll learn"
@@ -104,6 +105,7 @@
           name: "tlevels-desc-howassessed",
           id: "tlevels-desc-howassessed",
           maxlength: 500,
+          rows: 7,
           label: {
             classes: "govuk-label--m",
             text: "How you'll be assessed"
@@ -118,6 +120,7 @@
           name: "tlevels-desc-whatyoucandonext",
           id: "tlevels-desc-whatyoucandonext",
           maxlength: 500,
+          rows: 7,
           label: {
             classes: "govuk-label--m",
             text: "What you can do next"
