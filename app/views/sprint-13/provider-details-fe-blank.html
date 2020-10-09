@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Provider details FE only
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint13.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+  {{ govukBackLink({
+    text: "Back to home screen",
+    href: "#"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- content start -->
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">TOTTON COLLEGE (PART OF NACRO)</h1>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__header">Course directory status</td>
+          <td class="govuk-table__cell">Active</td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__header">UKPRN</td>
+          <td class="govuk-table__cell">10006958 </td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__header">Trading name</td>
+          <td class="govuk-table__cell">Basingstoke LTD</td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__header">Display name</td>
+          <td class="govuk-table__cell">TOTTON COLLEGE (PART OF NACRO)</td>
+          <td class="govuk-table__cell"><a class="govuk-link" style="padding-right: 1em" href="provider-details-choose-name">Change</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__header">Provider type</td>
+          <td class="govuk-table__cell">F.E.</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" style="padding-right: 1em" href="#">Change</a>
+          </td>
+        </tr>
+        <!-- <tr class="govuk-table__row">
+          <td class="govuk-table__header">Brief overview of your organisation for employers</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" style="padding-right: 1em" href="#">Change</a>
+          </td>
+        </tr> -->
+        <!-- <tr class="govuk-table__row">
+          <td colspan="6" class="govuk-table__cell">
+            <span class="govuk-visually-hidden">Data Unavailable</span>
+          </td>
+        </tr> -->
+        <!-- <tr class="govuk-table__row">
+          <td colspan="6" class="govuk-table__cell">
+            Laborum quis occaecat sunt nisi ullamco qui occaecat voluptate esse elit veniam. Lorem ad reprehenderit pariatur aliqua voluptate amet cillum enim ad duis laborum labore aute qui sint. Ut sit non veniam excepteur ipsum fugiat ex irure non
+            consequat aute amet ex velit consectetur. Consequat elit ipsum incididunt ullamco fugiat eu occaecat laborum pariatur sunt ex. Sit labore nulla minim incididunt cupidatat dolor ex. Sit ullamco in deserunt dolor esse non quis elit. </td>
+        </tr> -->
+
+      </tbody>
+    </table>
+
+    <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with your provider details
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+        <h3 class="govuk-heading-s">UKPRN</h3>
+        <p class="govuk-body">A unique number allocated to providers by the UKRLP verification team, after successful UKRLP registration.</p>
+        <h3 class="govuk-heading-s">Trading name</h3>
+        <p class="govuk-body">The name your organisation trades under if it is different to the organisation name.<p>
+        Trading names can be added when registering with UKRLP or after registration. Sign in to the <a href="https://www.ukrlp.co.uk/ukrlp/ukrlp.login" target="_blank">UK Register of Learning Providers</a> to add or edit your trading name.</p>
+        <h3 class="govuk-heading-s">Display name</h3>
+        <p class="govuk-body">The name displayed to learners who can view and search for learning opportunities on the National Careers Service, Find a course.</p>
+        </div>
+    </details>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Contact details</h2>
+    <div class="govuk-related-items">
+    
+    <p class="govuk-body-s govuk-!-margin-bottom-3">
+      No contact details available.
+    <p class="govuk-body-s govuk-!-margin-bottom-3">
+      <a href="javascript:preventDefault();">Add your contact details on UKRLP</a>
+    </p>
+  </div>
+
+
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
