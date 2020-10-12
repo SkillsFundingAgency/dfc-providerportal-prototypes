@@ -30,7 +30,7 @@
 
       <h1 class="govuk-heading-xl">T Level details</h1>
 
-      <p class="govuk-body-l govuk-!-margin-bottom-5">Add the details on how the {{ data['tlevels'] }} will be delivered.</p>
+      <p class="govuk-body-l govuk-!-margin-bottom-5">Add the details on how the {% if (data['tlevels']) %}{{ data['tlevels'] }}{% else %}[T Level name]{% endif %} will be delivered.</p>
 
       <form action="" method="post" class="form">
 

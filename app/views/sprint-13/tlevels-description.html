@@ -34,7 +34,7 @@
       <!--div class="govuk-inset-text">{{ data['tlevels'] }}</div-->
       <!--p class="govuk-body-l">Add your description of {{ data['tlevels'] }}.</p-->
 
-      <p class="govuk-body">The description of {{ data['tlevels'] }} has been provided for you to edit, the content and style of the information should be aimed at the learner.</p>
+      <p class="govuk-body">The description of {% if (data['tlevels']) %}{{ data['tlevels'] }}{% else %}[T Level name]{% endif %} has been provided for you to edit, the content and style of the information should be aimed at the learner.</p>
       <p class="govuk-body govuk-!-margin-bottom-5">The T Level information will be available on the National Careers Service, <a href="https://nationalcareers.service.gov.uk/find-a-course/search" target="_blank">Find a course</a>, available to learners searching for learning and training opportunities.
 
       <!--  -->
