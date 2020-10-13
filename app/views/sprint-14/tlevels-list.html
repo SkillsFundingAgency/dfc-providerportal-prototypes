@@ -1,0 +1,654 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  List of T Levels
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint14.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">Your T Levels</h1>
+    <!--p class="govuk-body-l">These courses are published on the course directory.</p-->
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+
+    <div class="cd-filter">
+      <div class="cd-filter-header">
+        <h2 class="govuk-heading-m">Filter</h2>
+      </div>
+      <div class="cd-filter-content">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">
+                Venue
+              </h3>
+            </legend>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="venue" name="venue" type="checkbox" value="Maidstone Campus">
+                <label class="govuk-label govuk-checkboxes__label" for="venue">
+                  Maidstone Campus
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="venue" name="venue" type="checkbox" value="Medway Campus">
+                <label class="govuk-label govuk-checkboxes__label" for="venue">
+                  Medway Campus
+                </label>
+              </div>
+            </div>
+            <!--div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  HM Revenue and Customs (HMRC)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                  Employment Tribunal
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                  Ministry of Defence
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                  Department for Transport
+                </label>
+              </div>
+            </div-->
+
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+          <div class="govuk-form-group govuk-!-font-size-14">
+            <div class="accordion govuk-heading-s" role="button" tabindex="0">Qualification level</div>
+            <div class="panel">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-visually-hidden" style="font-weight: 100">
+                  <h2 class="govuk-fieldset__heading">
+                    Select Level
+                  </h2>
+
+                </legend>
+
+                <div class="govuk-checkboxes govuk-checkboxes--small" id="LevelFilters">
+
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="level-3" name="level" type="checkbox" value="E">
+                    <label id="levellabel_level-3" class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="level-3">
+                      Entry level
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="level-0" name="level" type="checkbox" value="1">
+                    <label id="levellabel_level-0" class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="level-0">
+                      Level 1
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="level-1" name="level" type="checkbox" value="2">
+                    <label id="levellabel_level-1" class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="level-1">
+                      Level 2
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="level-2" name="level" type="checkbox" value="3">
+                    <label id="levellabel_level-2" class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="level-2">
+                      Level 3
+                    </label>
+                  </div>
+
+
+                </div>
+              </fieldset>
+            </div>
+
+          </div>
+
+  </div>
+  <div class="govuk-grid-column-three-quarters">
+
+  </div>
+</div>
+
+<!--
+<div class="govuk-grid-row">
+            <div class="courserun__row1" id="d637116b-cdf6-45de-a8ec-cf6a53a9b015">
+              <h2 class="coursename">
+                Applied Science, BTEC Level 3 Extended Diploma (2yrs)
+
+              </h2>
+              <h3 class="coursename smaller ">
+
+                <small>
+                  BTEC Extended Diploma in Applied Science (QCF)
+                </small>
+                <small>
+                  <span>LARS/QAN:50067205</span>
+                </small>
+
+              </h3>
+            </div>
+
+            <div class="courserun__row2">
+              <span class="">
+                Totton College
+              </span>
+            </div>
+
+
+            <div class="courserun__row3">
+              <span>
+                15.SS.ASC3.6044924
+              </span>
+
+              <span>Daytime</span>
+              <span>Level 3</span>
+
+
+              <span>Classroom based</span>
+              <span>Full time</span>
+              <span>
+
+                07 Sep 2015
+
+
+              </span>
+            </div>
+
+            <div class="courserun__row4">
+              <a class="govuk-link" href="/CourseSummary?CourseId=ac0b36db-aa71-47ba-bb69-ea47be2db242&amp;CourseRunId=d637116b-cdf6-45de-a8ec-cf6a53a9b015">View or edit<span class="govuk-visually-hidden">Applied Science, BTEC Level 3
+                  Extended Diploma (2yrs)</span></a>
+              <a class="govuk-link" href="course-run-details-copy">Copy</a>
+
+
+              <a id="course-delete" class="govuk-link"
+                href="#">Delete</a>
+
+
+            </div>
+  </div>
+
+  <div class="govuk-grid-column-full">
+    <div class="govuk-grid-row">
+
+      <div id="results">
+        <div class="cd-grid-column-20 govuk-body">
+
+          <div class="govuk-form-group govuk-!-font-size-14">
+            <div class="accordion govuk-heading-s" role="button" tabindex="0">Qualification level</div>
+            <div class="panel">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-visually-hidden" style="font-weight: 100">
+                  <h2 class="govuk-fieldset__heading">
+                    Select Level
+                  </h2>
+
+                </legend>
+
+                <div class="govuk-checkboxes govuk-checkboxes--small" id="LevelFilters">
+
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="level-3" name="level" type="checkbox" value="E">
+                    <label id="levellabel_level-3" class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="level-3">
+                      Entry level
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="level-0" name="level" type="checkbox" value="1">
+                    <label id="levellabel_level-0" class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="level-0">
+                      Level 1
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="level-1" name="level" type="checkbox" value="2">
+                    <label id="levellabel_level-1" class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="level-1">
+                      Level 2
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="level-2" name="level" type="checkbox" value="3">
+                    <label id="levellabel_level-2" class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="level-2">
+                      Level 3
+                    </label>
+                  </div>
+
+
+                </div>
+              </fieldset>
+            </div>
+
+          </div>
+
+          <div class="govuk-form-group govuk-!-font-size-14">
+            <div class="accordion govuk-heading-s" role="button" tabindex="0">Course type</div>
+            <div class="panel" style="display: block;">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-visually-hidden">
+                  Select Course type
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="deliverymode-0" name="deliverymode" type="checkbox" value="Classroom based">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="deliverymode-0">
+                      Classroom based
+                    </label>
+                  </div>
+
+
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="govuk-form-group govuk-!-font-size-14">
+            <div class="accordion govuk-heading-s" role="button" tabindex="0">Course location</div>
+            <div class="panel" style="display: block;">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-visually-hidden">
+                  Select Location
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="venue-0" name="venue" type="checkbox" value="Totton College">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="venue-0">
+                      Totton College
+                    </label>
+                  </div>
+
+
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="govuk-form-group govuk-!-font-size-14">
+            <div class="accordion govuk-heading-s" role="button" tabindex="0">Attendance pattern</div>
+            <div class="panel" style="display: block;">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-visually-hidden">
+                  Select Attendance Mode
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="attendancepattern-1" name="attendancepattern" type="checkbox" value="Daytime">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="attendancepattern-1">
+                      Daytime
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="attendancepattern-2" name="attendancepattern" type="checkbox" value="Evening">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="attendancepattern-2">
+                      Evening
+                    </label>
+                  </div>
+
+
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="govuk-form-group govuk-!-font-size-14">
+            <a class="govuk-button" id="ApplyFilter">Apply</a>
+          </div>
+
+        </div>
+        <div class="cd-grid-column-80 govuk-body">
+
+          <div class="courserun border">
+            <div class="courserun__row1" id="d637116b-cdf6-45de-a8ec-cf6a53a9b015">
+              <h2 class="coursename">
+                Applied Science, BTEC Level 3 Extended Diploma (2yrs)
+
+              </h2>
+              <h3 class="coursename smaller ">
+
+                <small>
+                  BTEC Extended Diploma in Applied Science (QCF)
+                </small>
+                <small>
+                  <span>LARS/QAN:50067205</span>
+                </small>
+
+              </h3>
+            </div>
+
+            <div class="courserun__row2">
+              <span class="">
+                Totton College
+              </span>
+            </div>
+
+
+            <div class="courserun__row3">
+              <span>
+                15.SS.ASC3.6044924
+              </span>
+
+              <span>Daytime</span>
+              <span>Level 3</span>
+
+
+              <span>Classroom based</span>
+              <span>Full time</span>
+              <span>
+
+                07 Sep 2015
+
+
+              </span>
+            </div>
+
+            <div class="courserun__row4">
+              <a class="govuk-link" href="/CourseSummary?CourseId=ac0b36db-aa71-47ba-bb69-ea47be2db242&amp;CourseRunId=d637116b-cdf6-45de-a8ec-cf6a53a9b015">View or edit<span class="govuk-visually-hidden">Applied Science, BTEC Level 3
+                  Extended Diploma (2yrs)</span></a>
+              <a class="govuk-link" href="course-run-details-copy">Copy</a>
+
+
+              <a id="course-delete" class="govuk-link"
+                href="#">Delete</a>
+
+
+            </div>
+          </div>
+          <div class="courserun border">
+            <div class="courserun__row1" id="c2cc774e-d9ae-43fd-991f-e94498f359e3">
+              <h2 class="coursename">
+                Art and Design Foundation Diploma - BTEC Level 3 (Mon, Tue, Wed)
+
+              </h2>
+              <h3 class="coursename smaller ">
+
+                <small>
+                  Foundation Diploma in Art and Design
+                </small>
+                <small>
+                  <span>LARS/QAN:50079281</span>
+                </small>
+
+              </h3>
+            </div>
+
+            <div class="courserun__row2">
+              <span class="">
+                Totton College
+              </span>
+            </div>
+
+
+            <div class="courserun__row3">
+              <span>
+                15.CA.ADE3.60743
+              </span>
+
+              <span>Daytime</span>
+              <span>Level 3</span>
+
+
+              <span>Classroom based</span>
+              <span>Part time</span>
+              <span>
+
+                07 Sep 2015
+
+
+              </span>
+            </div>
+
+            <div class="courserun__row4">
+              <a class="govuk-link" href="/CourseSummary?CourseId=b566cb66-1e40-4633-86a1-c36f567cf391&amp;CourseRunId=c2cc774e-d9ae-43fd-991f-e94498f359e3">View or edit <span class="govuk-visually-hidden">Art and Design Foundation Diploma -
+                  BTEC Level 3 (Mon, Tue, Wed)</span></a>
+              <a class="govuk-link"
+                href="course-run-details-copy">Copy</a>
+
+
+              <a id="course-delete" class="govuk-link"
+                href="#">Delete</a>
+
+
+            </div>
+          </div>
+          <div class="courserun border">
+            <div class="courserun__row1" id="805381c1-ac86-4e8e-9b88-bcc395bc758d">
+              <h2 class="coursename">
+                Art and Design, OCR Technical Level 2 Diploma
+
+              </h2>
+              <h3 class="coursename smaller ">
+
+                <small>
+                  Cambridge Technical Diploma in Art and Design
+                </small>
+                <small>
+                  <span>LARS/QAN:60060931</span>
+                </small>
+
+              </h3>
+            </div>
+
+            <div class="courserun__row2">
+              <span class="">
+                Totton College
+              </span>
+            </div>
+
+
+            <div class="courserun__row3">
+              <span>
+                15.CA.ADE2.60522
+              </span>
+
+              <span>Daytime</span>
+              <span>Level 2</span>
+
+
+              <span>Classroom based</span>
+              <span>Full time</span>
+              <span>
+
+                07 Sep 2015
+
+
+              </span>
+            </div>
+
+            <div class="courserun__row4">
+              <a class="govuk-link" href="/CourseSummary?CourseId=bcd8fd1f-dbb2-4cb5-8781-a775a1e09691&amp;CourseRunId=805381c1-ac86-4e8e-9b88-bcc395bc758d">View or edit <span class="govuk-visually-hidden">Art and Design, OCR Technical Level 2
+                  Diploma</span></a>
+              <a class="govuk-link"
+                href="course-run-details-copy">Copy</a>
+
+
+              <a id="course-delete" class="govuk-link"
+                href="#">Delete</a>
+
+
+            </div>
+          </div>
+          <div class="courserun border">
+            <div class="courserun__row1" id="1a962b8c-1997-4f75-bb15-498e5ad41735">
+              <h2 class="coursename">
+                Art and Design, OCR Technical Level 3 Diploma (2 Yrs) Year 1
+
+              </h2>
+              <h3 class="coursename smaller ">
+
+                <small>
+                  Cambridge Technical Diploma in Art and Design
+                </small>
+                <small>
+                  <span>LARS/QAN:60061510</span>
+                </small>
+
+              </h3>
+            </div>
+
+            <div class="courserun__row2">
+              <span class="">
+                Totton College
+              </span>
+            </div>
+
+
+            <div class="courserun__row3">
+              <span>
+                15.CA.ADE3.60455
+              </span>
+
+              <span>Daytime</span>
+              <span>Level 3</span>
+
+
+              <span>Classroom based</span>
+              <span>Full time</span>
+              <span>
+
+                07 Sep 2015
+
+
+              </span>
+            </div>
+
+            <div class="courserun__row4">
+              <a class="govuk-link" href="/CourseSummary?CourseId=38ff18c7-f549-4b11-9ebf-d255fe2c9964&amp;CourseRunId=1a962b8c-1997-4f75-bb15-498e5ad41735">View or edit<span class="govuk-visually-hidden">Art and Design, OCR Technical Level 3
+                  Diploma (2 Yrs) Year 1</span></a>
+              <a class="govuk-link"
+                href="#">Copy</a>
+
+
+              <a id="course-delete" class="govuk-link"
+                href="#">Delete</a>
+
+
+            </div>
+          </div>
+
+          <div class="courserun border">
+            <div class="courserun__row1" id="29c6daaf-942c-43a2-8913-ce2f41f2db3c">
+              <h2 class="coursename">
+                Barbering - Level 2
+
+              </h2>
+              <h3 class="coursename smaller ">
+
+                <small>
+                  Certificate in Barbering
+                </small>
+                <small>
+                  <span>LARS/QAN:50087046</span>
+                </small>
+
+              </h3>
+            </div>
+
+            <div class="courserun__row2">
+              <span class="">
+                Totton College
+              </span>
+            </div>
+
+
+            <div class="courserun__row3">
+              <span>
+                15.BH.BAR2.61356
+              </span>
+
+              <span>Evening</span>
+              <span>Level 2</span>
+
+
+              <span>Classroom based</span>
+              <span>Part time</span>
+              <span>
+
+                22 Sep 2015
+
+
+              </span>
+            </div>
+
+            <div class="courserun__row4">
+              <a class="govuk-link" href="/CourseSummary?CourseId=09046e85-65ad-4de6-8e15-c3cacf230403&amp;CourseRunId=29c6daaf-942c-43a2-8913-ce2f41f2db3c">View or edit<span class="govuk-visually-hidden">Barbering - Level 2</span></a>
+              <a class="govuk-link"
+                href="#">Copy</a>
+
+
+              <a id="course-delete" class="govuk-link" href="#">Delete</a>
+
+
+            </div>
+          </div>
+        </div>
+
+        <script>
+          (function($) {
+            $(function() {
+
+              var acc = document.getElementsByClassName("accordion");
+              var i;
+
+              for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                  this.classList.toggle("active");
+                  var panel = this.nextElementSibling;
+                  if (panel.style.display === "none") {
+                    panel.style.display = "block";
+                  } else {
+                    panel.style.display = "none";
+                  }
+                });
+              }
+            });
+          })(jQuery);
+        </script>
+
+      </div>
+    </div>
+  </div>
+-->
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
