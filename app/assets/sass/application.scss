@@ -1072,3 +1072,10 @@ a {
     }
   }
 }
+
+
+// No wrap for table cells
+
+.nowrap {
+  white-space: nowrap;
+}
