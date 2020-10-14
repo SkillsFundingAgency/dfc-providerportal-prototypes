@@ -1,0 +1,30 @@
+.pttcd-filter {
+    border: 1px solid $govuk-border-colour;
+}
+
+.pttcd-filter-header {
+    background-color: govuk-colour("light-grey");
+    border-bottom: 1px solid $govuk-border-colour;
+    padding: 0.75em;
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+}
+
+.pttcd-filter-content {
+    padding: 0.75em;
+
+    .govuk-fieldset__legend--s {
+        margin-bottom: 0.25em;
+    }
+
+    .govuk-form-group {
+        margin-bottom: 0;
+    }
+    .govuk-checkboxes__label {
+        font-size: 14px;
+        padding-top: 12px;
+    }
+}
