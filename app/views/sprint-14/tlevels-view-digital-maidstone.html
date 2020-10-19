@@ -1,0 +1,307 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  List of T Levels
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint14.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+  <a href="tlevels-view-list" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Edit T Level for Digital Production, Design and Development</h1>
+
+    <p class="govuk-body">You can <a href="javascript:preventdefault();">view your published T Level (opens in new window)</a> to see how it's viewed by learners.</p>
+
+    <!--  -->
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          LARS/QAN
+        </dt>
+        <dd class="govuk-summary-list__value">
+          60358324
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Awarding organisation
+        </dt>
+        <dd class="govuk-summary-list__value">
+          City &amp; Guilds
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          T Level added on
+        </dt>
+        <dd class="govuk-summary-list__value">
+          22 September 2020
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Last updated
+        </dt>
+        <dd class="govuk-summary-list__value">
+          28 September 2020
+        </dd>
+      </div>
+
+    </dl>
+    <!--  -->
+
+    <h3 class="govuk-heading-m">T Level details</h3>
+    <p class="govuk-body">Information for the learner about how the T Level will be delivered.</p>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-6">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Your reference
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          REF12234
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> your reference</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course type
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Classroom based
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> course type</span></a>
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Start date
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          21 Sep 2020
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> start date</span></a>
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course location (venue?)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">Maidstone Campus</p>
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> course locations</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course webpage
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          http://www.provider.com/course
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> course webpage</span></a>
+        </dd>
+      </div>
+
+      <!--div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Cost
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Free
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> cost</span></a>
+        </dd>
+      </div-->
+
+      <!--div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Cost description
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Ipsum adipisicing Lorem reprehenderit reprehenderit pariatur ex.
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> course description</span></a>
+        </dd>
+      </div-->
+
+      <!--div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Duration
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          2 Years
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> duration</span></a>
+        </dd>
+      </div-->
+
+      <!--div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course hours
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Full time
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> course hours</span></a>
+        </dd>
+      </div-->
+
+      <!--div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Attendance pattern
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Daytime
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> attendance pattern</span></a>
+        </dd>
+      </div-->
+    </dl>
+
+    <div class="govuk-!-margin-bottom-6">
+
+      <a href="javascript:preventDefault();"><button class="govuk-button govuk-button--secondary govuk-!-margin-right-5" data-module="govuk-button">
+          Copy course details
+        </button></a>
+
+      <a href="javascript:preventDefault();"><button class="govuk-button govuk-button--warning" data-module="govuk-button">
+          Delete course details
+        </button></a>
+    </div>
+
+    <!-- -->
+
+    <h3 class="govuk-heading-m">T Level description</h3>
+    <p class="govuk-body">Changes made to your T Level description will update all of your courses for this qualification.</p>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Who is the course for
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          This course is suitable for anyone wanting a career in software production and design. During the two-year programme, you will learn the core knowledge and skills that underpin many jobs in the digital industry. Your learning will combine 34 weeks of classroom theory and practical learning and a minimum of 9 weeks with an employer.
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> who is this course for</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Entry requirements
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          You will need either 5 GCSEs (at grade 4 or above), including English, maths and science, or a pass in a relevant level 2 qualification, for example a BTEC Tech Award in Digital Information Technology.. If you do not have the recommended entry qualifications you may still be considered if you have relevant experience or show a natural ability for the subject.
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> entry requirements</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What you'll learn
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          You will develop the skills to: Analyse a problem, understand user needs, define requirements and set acceptance criteria, Design, implement and test software, Change, maintain and support software, Work collaboratively in a digital team, Discover, evaluate and apply reliable sources of knowledge, Work within legal and regulatory frameworks when developing software. You will develop an understanding of:. How digital technologies impact business, The ethical and moral implications of digital technology, Using data in software design, Using digital technologies to analyse and solve problems, Digital environments, Emerging technical trends, Legal and regulatory obligations relating to digital technologies, The privacy and confidentiality of personal data, The technical, physical and human aspects of internet security, Planning digital projects, Testing software, hardware and data, Digital tools for project management and collaboration
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> what you'll learn</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How you'll learn
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Your learning will combine 34 weeks of classroom theory and practical learning and a minimum of 9 weeks with an employer. The industry placement will provide you with a real experience of the workplace. You will take part in investigative and practical work and during the T Level you will be expected to do private study and e-learning.
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> how you'll learn</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How you'll be assessed
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          You will be assessed by written examinations and task based projects that will take place throughout the T Level.
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> how you'll be assessed</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What you can do next
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          This T Level has been developed in collaboration with employers and businesses so the content will meet the needs of the industry and prepare you for work, providing you the knowledge and experience needed to open the door to highly skilled employment, an Apprenticeship or higher-level study. You can progress into roles such as: Web developer, Web designer, IT business analyst, App developer, Digital marketer.
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="javascript:preventDefault();">Change<span class="govuk-visually-hidden"> what you can do next</span></a>
+        </dd>
+      </div>
+
+    </dl>
+
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
