@@ -88,6 +88,18 @@ router.post('/sprint-13/tlevels-checkanswers', function (req, res) {
     res.redirect('/sprint-13/tlevels-confirmation');
 })
 
+
+// Set variable to show notification if edited details were published
+    router.get('/sprint-14/tlevels-editdetails-design-avenue', function (req, res) {
+        req.session.data['published-tlevel-edit-details'] = "false";
+        res.render('sprint-14/tlevels-editdetails-design-avenue');
+    })
+    router.get('/sprint-14/tlevels-editdescription-design-avenue', function (req, res) {
+        req.session.data['published-tlevel-edit-details'] = "false";
+        res.render('sprint-14/tlevels-editdescription-design-avenue');
+    })
+
+
 module.exports = router
 
 //module.exports = function (router) {
