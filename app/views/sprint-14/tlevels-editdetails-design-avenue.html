@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Edit T Level details
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint13.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Edit T Level details</h1>
+
+      <p class="govuk-body-l govuk-!-margin-bottom-5">Edit the details on how the T Level Technical Qualification in Design, Surveying and Planning for Construction will be delivered.</p>
+
+      <form action="" method="post" class="form">
+
+        <!--  -->
+
+        {{ govukInput({
+          id: "tlevels-details-reference",
+          name: "tlevels-details-reference",
+          classes: "govuk-!-margin-bottom-3",
+          label: {
+            text: "Your reference",
+            classes: "govuk-label--m"
+          },
+          hint: {
+            text: "A reference that will help you identify this T Level in your internal systems. This will not be visible to learners."
+          },
+          value: "REF12234"
+        }) }}
+
+        <!--  -->
+
+        {{ govukDateInput({
+          id: "tlevels-details-startdate",
+          namePrefix: "tlevels-details-startdate",
+          classes: "govuk-!-margin-bottom-3",
+          fieldset: {
+            legend: {
+              text: "Start date",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          hint: {
+            text: "For example, 30 9 2020"
+          },
+          items: [
+            {
+              name: "day",
+              classes: "govuk-input--width-2",
+              autocomplete: "tlevels-details-startdate-day",
+              value: "21"
+            },
+            {
+              name: "month",
+              classes: "govuk-input--width-2",
+              autocomplete: "tlevels-details-startdate-month",
+              value: "9"
+            },
+            {
+              name: "year",
+              classes: "govuk-input--width-4",
+              autocomplete: "tlevels-details-startdate-year",
+              value: "2020"
+            }
+          ]
+        }) }}
+
+        <!--  -->
+
+        {{ govukSelect({
+          id: "tlevels-details-location",
+          name: "tlevels-details-location",
+          label: {
+            classes: "govuk-label--m",
+            text: "T Level location"
+          },
+          items: [
+            {
+              value: "Avenue Campus",
+              text: "Avenue Campus",
+              selected: true
+            },
+            {
+              value: "The Brooke House Sixth Form College",
+              text: "The Brooke House Sixth Form College"
+            }
+          ]
+        }) }}
+        
+        <p class="govuk-body govuk-!-margin-bottom-3">
+          {{ govukButton({
+            text: "Add another location",
+            classes: "govuk-button--secondary"
+          }) }}
+          <!--a href="#" class="govuk-link">Add another location</a-->
+        </p>
+
+        <!--  -->
+
+        <div class="govuk-form-group govuk-!-margin-bottom-7">
+          <label class="govuk-label govuk-label--m" for="tlevels-details-webpage">
+            T Level webpage
+          </label>
+          <span id="tlevels-details-webpage-hint" class="govuk-hint">
+            The webpage for this T Level. For example, https://www.provider.com/tlevelname.
+          </span>
+          <input class="govuk-input" id="tlevels-details-webpage" name="tlevels-details-webpage" type="text" aria-describedby="tlevels-details-webpage-hint" value="http://www.provider.com/course">
+        </div>
+
+        <!--  -->
+
+        {{ govukButton({
+          href: "tlevels-view-design-avenue",
+          text: "Save and continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
