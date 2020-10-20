@@ -130,10 +130,19 @@
         </div>
 
         <!--  -->
+        <h3 class="govuk-heading-m">Publish your T Level changes</h3>
+        <p class="govuk-body">Your T Level details will be updated on Publish to the course directory and available to learners searching for learning and training opportunities on the National Careers Service.</p>
 
         {{ govukButton({
+          classes: "govuk-!-margin-right-3",
           href: "tlevels-view-design-avenue",
-          text: "Save and continue"
+          text: "Publish changes"
+        }) }}
+
+        {{ govukButton({
+          classes: "govuk-button--secondary",
+          href: "tlevels-view-design-avenue",
+          text: "Cancel"
         }) }}
 
       </form>
