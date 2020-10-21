@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Delete T Level
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint14.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+  <a href="tlevels-view-list" class="govuk-back-link">Back to T Level list</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      classes: "govuk-!-margin-bottom-9",
+      titleText: "Your T Level has been deleted",
+      text: "T Level Technical Qualification in Design, Surveying and Planning for Construction"
+    }) }}
+
+    <h2 class="govuk-heading-m">What next?</h2>
+    <ul class="govuk-list">
+      <li><a class="govuk-link" href="javascript:preventDefault();">Add a new T Level</a></li>
+      <li><a class="govuk-link" href="javascript:preventDefault();">View and edit T Levels</a></li>
+      <li><a class="govuk-link" href="homescreen">Back to the home screen</a></li>
+    </ul>
+
+    <!-- -->
+
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
