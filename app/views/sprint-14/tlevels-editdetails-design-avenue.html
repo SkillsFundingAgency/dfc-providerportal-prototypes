@@ -32,8 +32,6 @@
 
       <p class="govuk-body govuk-!-margin-bottom-5">Add information on how the T Level Technical Qualification in Design, Surveying and Planning for Construction will be delivered.</p>
 
-      <form action="" method="post" class="form">
-
         <!--  -->
 
         {{ govukInput({
@@ -133,19 +131,22 @@
         <h3 class="govuk-heading-m">Publish your T Level changes</h3>
         <p class="govuk-body">Your T Level details will be updated on Publish to the course directory and available to learners searching for learning and training opportunities on the National Careers Service.</p>
 
-        {{ govukButton({
-          classes: "govuk-!-margin-right-3",
-          href: "tlevels-view-design-avenue",
-          text: "Publish changes"
-        }) }}
+        <form action="tlevels-view-design-avenue" method="post" class="form">
+          <input type="hidden" name="published-tlevel-edit-details" value="true">
 
-        {{ govukButton({
-          classes: "govuk-button--secondary",
-          href: "tlevels-view-design-avenue",
-          text: "Cancel"
-        }) }}
+          {{ govukButton({
+            classes: "govuk-!-margin-right-3",
+            text: "Publish changes"
+          }) }}
 
-      </form>
+
+          {{ govukButton({
+            classes: "govuk-button--secondary",
+            href: "tlevels-view-design-avenue",
+            text: "Cancel"
+          }) }}
+
+        </form>
 
     </div>
   </div>
