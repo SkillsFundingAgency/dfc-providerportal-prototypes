@@ -30,11 +30,15 @@
   <div class="govuk-grid-column-two-thirds">
 
 {% if (data["published-tlevel-edit-details"] == "true") or (data["published-tlevel-edit-description"] == "true") %}
-  <div class="govuk-error-summary" style="border-color:#28a197;">
+  {{ govukPanel({
+    classes: "govuk-!-margin-bottom-9",
+    titleText: "Your changes have been published"
+  }) }}
+  <!--div class="govuk-error-summary" style="border-color:#28a197;">
       <h2 class="govuk-error-summary__title govuk-!-margin-bottom-0" id="error-summary-title">
         Your changes have been published
       </h2>
-    </div>
+    </div-->
 {% endif %}
 
     <h1 class="govuk-heading-xl">Edit your T Level information</h1>
