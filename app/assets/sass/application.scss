@@ -122,6 +122,29 @@ $govuk-assets-path: '/govuk/assets/';
   }
 }
 
+.cd-card-mininav {
+  padding: 1em;
+
+  .govuk-header__navigation {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .govuk-header__navigation-item--active a:link,
+  .govuk-header__navigation-item--active a:hover,
+  .govuk-header__navigation-item--active a:visited {
+    color: #000;
+    text-decoration: none;
+  }
+  .govuk-header__link:link, .govuk-header__link:visited {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
 
 .govuk-list__small {
   font-size: 16px;
