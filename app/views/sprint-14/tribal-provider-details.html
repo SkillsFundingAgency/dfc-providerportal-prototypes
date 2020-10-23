@@ -1,0 +1,156 @@
+{% extends "layout-sprint14.html" %}
+
+{% block pageTitle %}
+  Provider details FE only
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint14.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+  <!-- Provider navigation -->
+    {% include "includes/tribal-mininav-sprint14.html" %}
+  <!--  -->
+
+  {{ govukBackLink({
+    text: "Back to home screen",
+    href: "#"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<!-- content start -->
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">PRESIDENCY LONDON COLLEGE LIMITED</h1>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course directory status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Active
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          UKPRN
+        </dt>
+        <dd class="govuk-summary-list__value">
+          10035735
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Trading name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Presidency London College
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Provider type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Apprenticeships and F.E.
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="tribal-provider-type">
+            Change<span class="govuk-visually-hidden"> provider type</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Provider information
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Presidency London College is an independent training provider that delivers various apprenticeship training programmes. We are on the borders of London Borough of Westminster, Brent, and Kensington and Chelsea. As an organisation, our main focus is to provide education, training and learning opportunities to all our employers and apprentices who are seeking to better their career and recruitment needs. We have a number of levy and non-levy employers who are currently availing the services of our apprenticeship programmes across England. Please get in touch whether you are an employer or apprentice to discuss your apprenticeship needs with our Information Advice and Guidance (IAG) officer.
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="tribal-provider-information">
+            Change<span class="govuk-visually-hidden"> provider information</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with your provider details
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+        <h3 class="govuk-heading-s">UKPRN</h3>
+        <p class="govuk-body">A unique number allocated to providers by the UKRLP verification team, after successful UKRLP registration.</p>
+        <h3 class="govuk-heading-s">Trading name</h3>
+        <p class="govuk-body">The name your organisation trades under if it is different to the organisation name.<p>
+        Trading names can be added when registering with UKRLP or after registration. Sign in to the <a href="https://www.ukrlp.co.uk/ukrlp/ukrlp.login" target="_blank">UK Register of Learning Providers</a> to add or edit your trading name.</p>
+        <!--h3 class="govuk-heading-s">Display name</h3>
+        <p class="govuk-body">The name displayed to learners who can view and search for learning opportunities on the National Careers Service, Find a course.</p-->
+        </div>
+    </details>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Contact details</h2>
+    <div class="govuk-related-items">
+
+    <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Address</h3>
+    <p class="govuk-body-s govuk-!-margin-bottom-3">
+      593 Harrow Road,<br>
+      London,<br>
+      W10 4RA
+    </p>
+
+    <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Website</h3>
+    <p class="govuk-body-s govuk-!-margin-bottom-3"><a href="http://www.presidencylondon.co.uk" target="_blank">http://www.presidencylondon.co.uk</a></p>
+
+    <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Contact name</h3>
+    <p class="govuk-body-s govuk-!-margin-bottom-3">A Razaq Mohammed</p>
+
+    <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Email</h3>
+    <p class="govuk-body-s govuk-!-margin-bottom-3"><a href="mailto:info@presidencylondon.co.uk">info@presidencylondon.co.uk</a></p>
+
+    <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Telephone</h3>
+    <p class="govuk-body-s govuk-!-margin-bottom-3">0203 7846005</p>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <p class="govuk-body-s govuk-!-margin-bottom-3">
+      <a href="https://www.ukrlp.co.uk/ukrlp/ukrlp.login">Update your primary contact details on UKRLP</a>
+    </p>
+    <p class="govuk-body-s govuk-!-margin-bottom-3">Your contact details are displayed to learners on the National Careers Service and employers on Find an apprenticeship training.</p>
+  </div>
+
+
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
