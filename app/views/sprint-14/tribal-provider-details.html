@@ -93,6 +93,8 @@
           </a>
         </dd>
       </div>
+
+      {% if 'Apprenticeships' in data["provider-type"] %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Provider information
@@ -106,6 +108,8 @@
           </a>
         </dd>
       </div>
+      {% endif %}
+
     </dl>
 
     <details class="govuk-details" data-module="govuk-details">
