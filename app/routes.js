@@ -100,6 +100,16 @@ router.post('/sprint-13/tlevels-checkanswers', function (req, res) {
     })
 
 
+
+
+router.post('/sprint-14/tribal-provider-type', function (req, res) {
+    res.redirect('/sprint-14/tribal-provider-details');
+})
+
+    
+
+
+
 module.exports = router
 
 //module.exports = function (router) {
