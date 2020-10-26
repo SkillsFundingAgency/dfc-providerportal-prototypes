@@ -47,8 +47,8 @@ module.exports = {
   "tlevels-parent-education-whatyoucandonext": "This T Level has been developed in collaboration with employers and businesses so the content will meet the needs of the industry and prepare you for work, providing you the knowledge and experience needed to open the door to highly skilled employment, an Apprenticeship or higher-level study.\n\nYou can progress into roles such as:\n\nNursery worker\nSpecial educational needs (SEN) teaching assistant\nTeaching assistant\nLearning mentor", 
 
   "provider-type": [
-    "Apprenticeships",
-    "F.E."
+    "F.E.",
+    "Apprenticeships"
   ]
 
 }
