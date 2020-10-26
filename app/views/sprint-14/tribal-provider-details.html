@@ -75,7 +75,17 @@
           Provider type
         </dt>
         <dd class="govuk-summary-list__value">
-          Apprenticeships and F.E.
+
+          {% set typecount = data['provider-type'] | length %}
+          {% set loopcount = 0 %}
+          {% for item in data['provider-type'] %}
+          {% set loopcount = loopcount + 1 %}
+            {{ item }}{% if typecount == 2 and loopcount == 1 %} and {% endif %}{% if typecount == 3 and loopcount == 1 %}, {% endif %}
+            {% if typecount == 3 and loopcount == 2 %}and{% endif %}
+          {% else %}
+            Apprenticeships and F.E.
+          {% endfor %}
+          
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="tribal-provider-type">
@@ -120,13 +130,6 @@
   <div class="govuk-grid-column-one-third">
   <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Contact details</h2>
     <div class="govuk-related-items">
-
-    <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Address</h3>
-    <p class="govuk-body-s govuk-!-margin-bottom-3">
-      593 Harrow Road,<br>
-      London,<br>
-      W10 4RA
-    </p>
 
     <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Website</h3>
     <p class="govuk-body-s govuk-!-margin-bottom-3"><a href="http://www.presidencylondon.co.uk" target="_blank">http://www.presidencylondon.co.uk</a></p>
