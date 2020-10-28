@@ -1,7 +1,7 @@
 {% extends "layout-sprint14.html" %}
 
 {% block pageTitle %}
-  Provider details FE only
+  Display name settings
 {% endblock %}
 
 {% block header %}
@@ -38,25 +38,41 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Provider information</h1>
-
     <form action="" method="post" class="form">
 
-      {{ govukCharacterCount({
-        name: "provider-info",
-        id: "provider-info",
-        maxlength: 750,
-        rows: 12,
-        hint: {
-          text: "Brief overview of your organisation for employers."
+      {{ govukRadios({
+        idPrefix: "provider-displayname",
+        name: "provider-displayname",
+        fieldset: {
+          legend: {
+            text: "Display name",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
         },
-        value: data["provider-info"]
+        hint: {
+          text: "Select the name you would like displayed to learners."
+        },
+        items: [
+          {
+            checked: true,
+            value: "PRESIDENCY LONDON COLLEGE LIMITED",
+            text: "PRESIDENCY LONDON COLLEGE LIMITED",
+            checked: checked("provider-displayname", "PRESIDENCY LONDON COLLEGE LIMITED")
+          },
+          {
+            checked: true,
+            value: "Presidency London College",
+            text: "Presidency London College",
+            checked: checked("provider-displayname", "Presidency London College")
+          }
+        ]
       }) }}
 
       {{ govukButton({
         text: "Save and continue"
       }) }}
-
+    
     </form>
 
   </div>

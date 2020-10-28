@@ -25,7 +25,7 @@
 
   {{ govukBackLink({
     text: "Back to home screen",
-    href: "#"
+    href: "tribal-homescreen"
   }) }}
 
 {% endblock %}
@@ -72,6 +72,19 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
+          Display name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data["provider-displayname"] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="tribal-provider-displayname">
+            Change<span class="govuk-visually-hidden"> display name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
           Provider type
         </dt>
         <dd class="govuk-summary-list__value">
@@ -100,7 +113,7 @@
           Provider information
         </dt>
         <dd class="govuk-summary-list__value">
-          Presidency London College is an independent training provider that delivers various apprenticeship training programmes. We are on the borders of London Borough of Westminster, Brent, and Kensington and Chelsea. As an organisation, our main focus is to provide education, training and learning opportunities to all our employers and apprentices who are seeking to better their career and recruitment needs. We have a number of levy and non-levy employers who are currently availing the services of our apprenticeship programmes across England. Please get in touch whether you are an employer or apprentice to discuss your apprenticeship needs with our Information Advice and Guidance (IAG) officer.
+          {{ data["provider-info"] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="tribal-provider-information">
@@ -150,7 +163,7 @@
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     <p class="govuk-body-s govuk-!-margin-bottom-3">
-      <a href="https://www.ukrlp.co.uk/ukrlp/ukrlp.login">Update your primary contact details on UKRLP (opens in a new window or tab)</a>
+      <a href="https://www.ukrlp.co.uk/ukrlp/ukrlp.login" target="_blank">Update your primary contact details on UKRLP (opens in a new window or tab)</a>
     </p>
     <p class="govuk-body-s govuk-!-margin-bottom-3">Your contact details are displayed to learners on the National Careers Service and employers on Find an apprenticeship training.</p>
   </div>

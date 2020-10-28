@@ -102,9 +102,15 @@ router.post('/sprint-13/tlevels-checkanswers', function (req, res) {
 
 
 
-router.post('/sprint-14/tribal-provider-type', function (req, res) {
-    res.redirect('/sprint-14/tribal-provider-details');
-})
+    router.post('/sprint-14/tribal-provider-type', function (req, res) {
+        res.redirect('/sprint-14/tribal-provider-details');
+    })
+    router.post('/sprint-14/tribal-provider-displayname', function (req, res) {
+        res.redirect('/sprint-14/tribal-provider-details');
+    })
+    router.post('/sprint-14/tribal-provider-information', function (req, res) {
+        res.redirect('/sprint-14/tribal-provider-details');
+    })
 
     
 
