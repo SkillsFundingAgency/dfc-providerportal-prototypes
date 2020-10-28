@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Course list
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint13.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <!--  -->
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: [
+        {
+          text: "Select the T Level qualification to publish to the course directory",
+          href: "#tlevels"
+        }
+      ]
+    }) }}
+
+    <h1 class="govuk-heading-l">T Levels</h1>
+
+    <p class="govuk-body">Select a T Level qualification to add to Publish to the course directory.</p>
+
+    <form action="" method="post" class="form">
+   
+      {{ govukRadios({
+        idPrefix: "tlevels",
+        name: "tlevels",
+        errorMessage: {
+          text: "Select the T Level qualification to publish to the course directory"
+        },
+        items: [
+          {
+            value: "T Level Technical Qualification in Design, Surveying and Planning for Construction",
+            text: "T Level Technical Qualification in Design, Surveying and Planning for Construction",
+            hint: {
+              text: "LARS: 60358300"
+            }
+          },
+          {
+            value: "T Level Technical Qualification in Digital Production, Design and Development",
+            text: "T Level Technical Qualification in Digital Production, Design and Development",
+            hint: {
+              text: "LARS: 60358324"
+            }
+          },
+          {
+            value: "T Level Technical Qualification in Education and Childcare",
+            text: "T Level Technical Qualification in Education and Childcare",
+            hint: {
+              text: "LARS: 60358294"
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+
+  </div>
+
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
