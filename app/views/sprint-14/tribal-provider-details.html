@@ -89,15 +89,22 @@
         </dt>
         <dd class="govuk-summary-list__value">
 
-          {% set typecount = data['provider-type'] | length %}
-          {% set loopcount = 0 %}
-          {% for item in data['provider-type'] %}
-          {% set loopcount = loopcount + 1 %}
-            {{ item }}{% if typecount == 2 and loopcount == 1 %} and {% endif %}{% if typecount == 3 and loopcount == 1 %}, {% endif %}
-            {% if typecount == 3 and loopcount == 2 %}and{% endif %}
+          {% if data['provider-type'] %}
+
+            {% set typecount = data['provider-type'] | length %}
+
+            {% set loopcount = 0 %}
+            {% for item in data['provider-type'] %}
+              {% set loopcount = loopcount + 1 %}
+              {{ item }}{% if typecount == 2 and loopcount == 1 %} and {% endif %}{% if typecount == 3 and loopcount == 1 %}, {% endif %}
+              {% if typecount == 3 and loopcount == 2 %}and{% endif %}
+            {% endfor %}
+          
           {% else %}
-            F.E. and Apprenticeships
-          {% endfor %}
+
+            None
+            
+          {% endif %}
           
         </dd>
         <dd class="govuk-summary-list__actions">
