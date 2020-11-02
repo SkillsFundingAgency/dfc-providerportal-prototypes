@@ -23,3 +23,12 @@
         border-left: 10px solid govuk-colour("green");
     }
 }
+
+.pttcd-notice {
+    border: 5px solid #1d70b8;
+    padding: 20px;
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+}
