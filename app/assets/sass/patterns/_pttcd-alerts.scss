@@ -1,0 +1,34 @@
+@mixin rgba-background($hexcolor, $opacity) {
+    background-color: $hexcolor;
+    background-color: rgba($hexcolor, $opacity); 
+  }
+
+.pttcd-alert {
+    @extend .govuk-inset-text;
+    margin-bottom: 60px;
+    margin-top: 0;
+
+    &-warning{
+        @include rgba-background($govuk-error-colour, 0.15);
+        border-left: 10px solid $govuk-error-colour;
+    }
+
+    &-info{
+        @include rgba-background(govuk-colour("blue"), 0.15);
+        border-left: 10px solid govuk-colour("blue");
+    }
+
+    &-success{
+        @include rgba-background(govuk-colour("green"), 0.15);
+        border-left: 10px solid govuk-colour("green");
+    }
+}
+
+.pttcd-notice {
+    border: 5px solid #1d70b8;
+    padding: 20px;
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+}
