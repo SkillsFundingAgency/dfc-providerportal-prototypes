@@ -41,6 +41,22 @@
 
       <form action="" method="post" class="form">
 
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="tlevels-desc-whothiscourseisfor">
+              Who this T Level is for
+            </label>
+            <div id="tlevels-desc-whothiscourseisfor-hint" class="govuk-hint">
+              Information that will help the learner decide whether this T Level is suitable for them, the learning experience and opportunities they can expect.
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="tlevels-desc-whothiscourseisfor" name="tlevels-desc-whothiscourseisfor" rows="7" aria-describedby="tlevels-desc-whothiscourseisfor-info tlevels-desc-whothiscourseisfor-hint">{{data['tlevels-desc-whothiscourseisfor']}}</textarea>
+          </div>
+
+          <div id="tlevels-desc-whothiscourseisfor-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+            You can enter up to 500 characters
+          </div>
+        </div>
+<!--
         {{ govukCharacterCount({
           name: "tlevels-desc-whothiscourseisfor",
           id: "tlevels-desc-whothiscourseisfor",
@@ -55,7 +71,7 @@
           },
           value: data['tlevels-desc-whothiscourseisfor']
         }) }}
-
+-->
         {{ govukCharacterCount({
           name: "tlevels-desc-entryrequirements",
           id: "tlevels-desc-entryrequirements",
