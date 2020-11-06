@@ -34,13 +34,13 @@ router.post('/sprint-13/tlevels-add', function (req, res) {
     req.session.data['tlevels-desc-whatyoucandonext'] = "";
 
     // Which course was selected?
-    if (req.session.data['tlevels'] == "T Level Technical Qualification in Design, Surveying and Planning for Construction") {
+    if (req.session.data['tlevels'] == "T Level in Design, Surveying and Planning for Construction") {
         req.session.data['selectedcourse'] = "design";
     }
-    if (req.session.data['tlevels'] == "T Level Technical Qualification in Digital Production, Design and Development") {
+    if (req.session.data['tlevels'] == "T Level in Digital Production, Design and Development") {
         req.session.data['selectedcourse'] = "digital";
     }
-    if (req.session.data['tlevels'] == "T Level Technical Qualification in Education and Childcare") {
+    if (req.session.data['tlevels'] == "T Level in Education and Childcare") {
         req.session.data['selectedcourse'] = "education";
     }
 
