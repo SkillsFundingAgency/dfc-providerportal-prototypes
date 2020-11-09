@@ -30,22 +30,22 @@
 
 <div class="pttcd-notice govuk-!-margin-bottom-8">
   <h2 class="govuk-heading-m">Quality assurance failed</h2>
-  <p class="govuk-body">Your information has passed quality assurance against the style and compliance of standards.</p>
-  <p class="govuk-body">You can publish all of your apprenticeship training courses.</p>
-  {{ govukButton({
-    text: "Close notification",
-    classes: "govuk-button--secondary"
-  }) }}
+  <p class="govuk-body">Your information has failed quality assurance against the style and compliance of standards.</p>
+  <p class="govuk-body">An email has been sent providing the reasons why your information has not met the standards. You will need to fix the errors and submit to quality assurance again.</p>
+  <p class="govuk-body"><a href="javascript:preventDefault();">Fix errors and submit</a></p>
 </div>
 
 <div class="pttcd-notice govuk-!-margin-bottom-8">
   <h2 class="govuk-heading-m">Quality assurance passed</h2>
   <p class="govuk-body">Your information has passed quality assurance against the style and compliance of standards.</p>
-  <p class="govuk-body">You can publish all of your apprenticeship training courses.</p>
+  <!--p class="govuk-body">You can publish all of your apprenticeship training courses.</p-->
+  <p class="govuk-body"><a href="javascript:preventDefault();">Publish apprenticeships</a></p>
+  <!--
   {{ govukButton({
     text: "Close notification",
     classes: "govuk-button--secondary"
   }) }}
+  -->
 </div>
 
 <!-- start user panel -->
