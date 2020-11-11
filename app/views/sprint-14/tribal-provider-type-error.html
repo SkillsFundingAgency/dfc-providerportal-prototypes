@@ -39,12 +39,25 @@
   <div class="govuk-grid-column-two-thirds">
 
     <form action="" method="post" class="form">
+    
+    {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: [
+        {
+          text: "Select the T Levels this provider can offer",
+          href: "#provider-type-tlevels"
+        }
+      ]
+    }) }}
 
       {% set tlevelHtml %}
 
         {{ govukCheckboxes({
           idPrefix: "provider-type-tlevels",
           name: "provider-type-tlevels",
+          errorMessage: {
+            text: "Select the T Levels this provider can offer"
+          },
           fieldset: {
             legend: {
               text: "What T Levels can this provider offer?",
