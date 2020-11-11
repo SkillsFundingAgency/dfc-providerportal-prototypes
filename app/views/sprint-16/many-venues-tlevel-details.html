@@ -1,0 +1,198 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Add T Level details
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint13.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">T Level details</h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-5">Add information on how the {% if (data['tlevels']) %}{{ data['tlevels'] }}{% else %}[T Level name]{% endif %} will be delivered.</p>
+
+        <!--  -->
+
+        {{ govukInput({
+          id: "tlevels-details-reference",
+          name: "tlevels-details-reference",
+          classes: "govuk-!-margin-bottom-3",
+          label: {
+            text: "Your reference (optional)",
+            classes: "govuk-label--m"
+          },
+          hint: {
+            text: "A reference that will help you identify this T Level in your internal systems. This will not be visible to learners."
+          }
+        }) }}
+
+        <!--  -->
+
+        {{ govukDateInput({
+          id: "tlevels-details-startdate",
+          namePrefix: "tlevels-details-startdate",
+          classes: "govuk-!-margin-bottom-3",
+          fieldset: {
+            legend: {
+              text: "Start date",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          hint: {
+            text: "For example, 30 9 2020"
+          }
+        }) }}
+
+        <!--  -->
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-3">
+          T Level location
+        </h2>
+
+        <!--p class="govuk-body govuk-!-margin-bottom-3">
+          <a href="#" class="govuk-link" id="selectallvenues">Select all</a>
+        </p-->
+
+        {{ govukCheckboxes({
+          idPrefix: "venues",
+          name: "venues",
+          classes: "govuk-checkboxes--small checkbox-venue",
+          formGroup: {
+            classes: "govuk-!-margin-bottom-1"
+          },
+          items: [
+            {
+              value: "Select all",
+              text: "Select all",
+              id: "selectallvenues",
+              name: "selectallvenues"
+            },
+            {
+              value: "Blackfriars Primary School",
+              text: "Blackfriars Primary School"
+            },
+            {
+              value: "Chesterton Holy Trinity Church",
+              text: "Chesterton Holy Trinity Church"
+            },
+            {
+              value: "Chesterton Youth and Community Centre",
+              text: "Chesterton Youth and Community Centre"
+            },
+            {
+              value: "Clayton Hall Business And Language College",
+              text: "Clayton Hall Business And Language College"
+            },
+            {
+              value: "NSCG - Axia Solutions",
+              text: "NSCG - Axia Solutions"
+            },
+            {
+              value: "NSCG - Newcastle-under-Lyme College",
+              text: "NSCG - Newcastle-under-Lyme College"
+            },
+            {
+              value: "NSCG - Stafford College",
+              text: "NSCG - Stafford College"
+            },
+            {
+              value: "NSCG Newcastle and Stafford Colleges Group - Newcastle-under-Lyme Campus",
+              text: "NSCG Newcastle and Stafford Colleges Group - Newcastle-under-Lyme Campus"
+            },
+            {
+              value: "NSCG Newcastle and Stafford Colleges Group - Stafford Campus",
+              text: "NSCG Newcastle and Stafford Colleges Group - Stafford Campus"
+            },
+            {
+              value: "NSCG Newcastle and Stafford Colleges Group / Axia Solutions Limited",
+              text: "NSCG Newcastle and Stafford Colleges Group / Axia Solutions Limited"
+            },
+            {
+              value: "Salvation Army",
+              text: "Salvation Army"
+            },
+            {
+              value: "Silverdale Youth Club",
+              text: "Silverdale Youth Club"
+            },
+            {
+              value: "St Marys Primary School",
+              text: "St Marys Primary School"
+            },
+            {
+              value: "Summer Bank Primary School",
+              text: "Summer Bank Primary School"
+            },
+            {
+              value: "Town Centre Library",
+              text: "Town Centre Library"
+            },
+            {
+              value: "Wolstanton High School",
+              text: "Wolstanton High School"
+            }
+          ]
+        }) }}
+
+        <p class="govuk-body govuk-!-margin-bottom-7">
+          <a href="#" class="govuk-link">Add another location</a>
+        </p>
+
+        <!--  -->
+
+        <div class="govuk-form-group govuk-!-margin-bottom-7">
+          <label class="govuk-label govuk-label--m" for="tlevels-details-webpage">
+            T Level webpage
+          </label>
+          <span id="tlevels-details-webpage-hint" class="govuk-hint">
+            The webpage for this T Level. For example, https://www.provider.com/tlevelname.
+          </span>
+          <input class="govuk-input" id="tlevels-details-webpage" name="tlevels-details-webpage" type="text" aria-describedby="tlevels-details-webpage-hint">
+        </div>
+
+        <!--  -->
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+    </div>
+  </div>
+  <!-- End of content -->
+
+  <script>
+
+/*
+    document.getElementById('selectallvenues').onclick = function() {
+
+      var checkboxes = document.getElementsByName('venues');
+      for (var checkbox of checkboxes) {
+        checkbox.checked = this.checked;
+      }
+    }
+*/
+  </script>
+
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
