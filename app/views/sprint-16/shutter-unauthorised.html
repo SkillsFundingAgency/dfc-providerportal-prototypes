@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Unauthorised access – Publish to the course directory – GOV.UK
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint13.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Sorry, you are not authorised to access this page.</h1>
+
+      <p class="govuk-body">You do not have permission to view the page you are trying to access.</p>
+
+      <p class="govuk-body"><a href="javascript:preventDefault();">Return to the home screen</a></p>
+      
+    </div>
+  </div>
+  <!-- End of content -->
+
+  <script>
+
+/*
+    document.getElementById('selectallvenues').onclick = function() {
+
+      var checkboxes = document.getElementsByName('venues');
+      for (var checkbox of checkboxes) {
+        checkbox.checked = this.checked;
+      }
+    }
+*/
+  </script>
+
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
