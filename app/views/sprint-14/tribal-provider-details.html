@@ -89,8 +89,9 @@
         </dt>
         <dd class="govuk-summary-list__value">
 
+          <ul class="govuk-list">
           {% if data['provider-type'] %}
-
+<!--
             {% set typecount = data['provider-type'] | length %}
 
             {% set loopcount = 0 %}
@@ -99,12 +100,18 @@
               {{ item }}{% if typecount == 2 and loopcount == 1 %} and {% endif %}{% if typecount == 3 and loopcount == 1 %}, {% endif %}
               {% if typecount == 3 and loopcount == 2 %}and{% endif %}
             {% endfor %}
+-->
+            {% for item in data['provider-type'] %}
+              <li>{{ item }}</li>
+            {% endfor %}
+            </ul>
           
           {% else %}
 
-            None
+            <li>None</li>
             
           {% endif %}
+          </ul>
           
         </dd>
         <dd class="govuk-summary-list__actions">
