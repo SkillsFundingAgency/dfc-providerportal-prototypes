@@ -1,0 +1,102 @@
+{% extends "layout-sprint16.html" %}
+
+{% block pageTitle %}
+  Provider type settings
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-tribal-sprint16.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+  <!-- Provider navigation -->
+    {% include "includes/tribal-mininav-sprint16.html" %}
+  <!--  -->
+
+  {{ govukBackLink({
+    text: "Back to home screen",
+    href: "#"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<!-- content start -->
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="" method="post" class="form">
+    
+    {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: [
+        {
+          text: "Select the T Levels this provider can offer",
+          href: "#provider-type-tlevels"
+        }
+      ]
+    }) }}
+
+
+      {{ govukCheckboxes({
+        idPrefix: "provider-type-tlevels",
+        name: "provider-type-tlevels",
+        errorMessage: {
+          text: "Select the T Levels this provider can offer"
+        },
+        fieldset: {
+          legend: {
+            text: "T Levels provided",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Design, Surveying and Planning for Construction",
+            text: "Design, Surveying and Planning for Construction",
+            checked: checked("provider-type-tlevels", "Design, Surveying and Planning for Construction")
+          },
+          {
+            value: "Digital Production, Design and Development",
+            text: "Digital Production, Design and Development",
+            checked: checked("provider-type-tlevels", "Digital Production, Design and Development")
+          },
+          {
+            value: "Education and Childcare",
+            text: "Education and Childcare",
+            checked: checked("provider-type-tlevels", "Education and Childcare")
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Save and continue"
+      }) }}
+    
+    </form>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  </div>
+
+
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

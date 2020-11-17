@@ -1,0 +1,93 @@
+{% extends "layout-sprint16.html" %}
+
+{% block pageTitle %}
+  Provider type settings
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-tribal-sprint16.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+  <!-- Provider navigation -->
+    {% include "includes/tribal-mininav-sprint16.html" %}
+  <!--  -->
+
+  {{ govukBackLink({
+    text: "Back to home screen",
+    href: "#"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<!-- content start -->
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="" method="post" class="form">
+
+      {{ govukCheckboxes({
+        idPrefix: "provider-type",
+        name: "provider-type",
+        fieldset: {
+          legend: {
+            text: "Provider type",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            checked: true,
+            value: "F.E.",
+            text: "F.E.",
+            checked: checked("provider-type", "F.E.")
+          },
+          {
+            checked: true,
+            value: "Apprenticeships",
+            text: "Apprenticeships",
+            checked: checked("provider-type", "Apprenticeships")
+          },
+          {
+            value: "T Levels",
+            text: "T Levels",
+            checked: checked("provider-type", "T Levels"),
+            conditional: {
+              html: tlevelHtml
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Save and continue"
+      }) }}
+    
+    </form>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  </div>
+
+
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

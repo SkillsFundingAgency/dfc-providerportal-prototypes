@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Provider home screen - All provider types
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint16.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Add location
+      </h1>
+
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Postcode</h2>
+      <p class="govuk-body">SW1A 1AA <a href="javascript:preventDefault();" class="govuk-!-margin-left-5">Change<span class="govuk-visually-hidden"> postcode</span></a></p>
+
+      {{ govukSelect({
+        id: "location-add-postcode-select",
+        name: "location-add-postcode-select",
+        label: {
+          classes: "govuk-label--m",
+          text: "Select an address"
+        },
+        items: [
+          {
+            value: "",
+            text: "1 address found"
+          },
+          {
+            value: "",
+            text: "Buckingham Palace, LONDON SW1A 1AA"
+          }
+        ]
+      }) }}
+
+      <p class="govuk-body"><a href="javascript:preventDefault();">I can't find my  address in the list</a></p>
+
+      {{ govukButton({
+        href: "location-add-details",
+        text: "Continue"
+      }) }}
+      
+
+<!--
+      {{ govukCharacterCount({
+        name: "location-name",
+        id: "location-name",
+        maxlength: 255,
+        rows: 1,
+        label: {
+          text: "Location name"
+        }
+      }) }}
+-->
+      
+    </div>
+    <div class="govuk-grid-column-one-third">
+      
+    </div>
+  </div>
+  
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
