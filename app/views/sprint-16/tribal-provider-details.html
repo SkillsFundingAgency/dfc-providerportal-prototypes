@@ -90,36 +90,23 @@
         <dd class="govuk-summary-list__value">
 
           <ul class="govuk-list">
-          {% if data['provider-type'] %}
+            {% if data['provider-type'] and data['provider-type'] != "None" %}
 
-            {% if data['provider-type-backup'] != data['provider-type'] %}
-              {% for item in data['provider-type-backup'] %}
-                <li>{{ item }}</li>
-              {% endfor %}
-            {% else %}
-              {% for item in data['provider-type'] %}
-                <li>{{ item }}</li>
-              {% endfor %}
-            {% endif %}
-
-<!--
-            {% set typecount = data['provider-type'] | length %}
-
-            {% set loopcount = 0 %}
-            {% for item in data['provider-type'] %}
-              {% set loopcount = loopcount + 1 %}
-              {{ item }}{% if typecount == 2 and loopcount == 1 %} and {% endif %}{% if typecount == 3 and loopcount == 1 %}, {% endif %}
-              {% if typecount == 3 and loopcount == 2 %}and{% endif %}
-            {% endfor %}
-      
--->
-            </ul>
+              {% if data['provider-type-backup'] != data['provider-type'] %}
+                {% for item in data['provider-type-backup'] %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              {% else %}
+                {% for item in data['provider-type'] %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              {% endif %}
           
-          {% else %}
+            {% else %}
 
-            <li>None</li>
-            
-          {% endif %}
+              <li>None</li>
+              
+            {% endif %}
           </ul>
           
         </dd>
