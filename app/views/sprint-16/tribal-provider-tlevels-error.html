@@ -37,8 +37,6 @@
 <div class="govuk-grid-row">
 
   <div class="govuk-grid-column-two-thirds">
-
-    <form action="" method="post" class="form">
     
     {{ govukErrorSummary({
       titleText: "There is a problem",
@@ -50,18 +48,23 @@
       ]
     }) }}
 
+    <h1 class="govuk-heading-l">
+      Provider type
+    </h1>
+
+    <form action="" method="post" class="form">
+
 
       {{ govukCheckboxes({
         idPrefix: "provider-type-tlevels",
         name: "provider-type-tlevels",
         errorMessage: {
-          text: "Select the T Levels this provider can offer"
+          text: "You must select at least one T Level"
         },
         fieldset: {
           legend: {
-            text: "T Levels provided",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--l"
+            text: "Select the T Levels this provider can offer",
+            classes: "govuk-fieldset__legend--m"
           }
         },
         items: [
