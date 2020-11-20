@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
+// Copy and paste the below code into the relevant routes file if convetring date to text is needed
+/*
 var months = [
 	'January', 'February', 'March', 'April', 'May',
 	'June', 'July', 'August', 'September',
@@ -10,6 +12,7 @@ var months = [
 function monthNumToName(monthnum) {
 	return months[monthnum - 1] || '';
 }
+*/
 
 // Add your routes here - above the module.exports line
 

@@ -1,11 +1,11 @@
-{% extends "layout-sprint14.html" %}
+{% extends "layout-sprint16.html" %}
 
 {% block pageTitle %}
   Provider type settings
 {% endblock %}
 
 {% block header %}
-  {% include "includes/header-tribal-sprint14.html" %}
+  {% include "includes/header-tribal-sprint16-deprecated.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -20,15 +20,13 @@
   {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
   <!-- Provider navigation -->
-    {% include "includes/tribal-mininav-sprint14.html" %}
-  <!--  
+    {% include "includes/tribal-mininav-sprint16.html" %}
+  <!--  -->
 
   {{ govukBackLink({
     text: "Back to home screen",
     href: "#"
   }) }}
-
-  -->
 
 {% endblock %}
 
@@ -39,40 +37,9 @@
 <div class="govuk-grid-row">
 
   <div class="govuk-grid-column-two-thirds">
+  
 
     <form action="" method="post" class="form">
-
-      {% set tlevelHtml %}
-
-        {{ govukCheckboxes({
-          idPrefix: "provider-type-tlevels",
-          name: "provider-type-tlevels",
-          fieldset: {
-            legend: {
-              text: "What T Levels can this provider offer?",
-              classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-            {
-              value: "Design, Surveying and Planning for Construction",
-              text: "Design, Surveying and Planning for Construction",
-            checked: checked("provider-type-tlevels", "Design, Surveying and Planning for Construction")
-            },
-            {
-              value: "Digital Production, Design and Development",
-              text: "Digital Production, Design and Development",
-            checked: checked("provider-type-tlevels", "Digital Production, Design and Development")
-            },
-            {
-              value: "Education and Childcare",
-              text: "Education and Childcare",
-            checked: checked("provider-type-tlevels", "Education and Childcare")
-            }
-          ]
-        }) }}
-
-      {% endset -%}
 
       {{ govukCheckboxes({
         idPrefix: "provider-type",
@@ -109,14 +76,7 @@
       }) }}
 
       {{ govukButton({
-        classes: "govuk-!-margin-right-5",
-        text: "Save"
-      }) }}
-
-      {{ govukButton({
-        classes: "govuk-button--secondary",
-        href: "tlevels-provider-details",
-        text: "Cancel"
+        text: "Save and continue"
       }) }}
     
     </form>

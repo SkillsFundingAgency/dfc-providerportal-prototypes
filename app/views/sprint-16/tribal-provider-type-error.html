@@ -21,14 +21,12 @@
 
   <!-- Provider navigation -->
     {% include "includes/tribal-mininav-sprint14.html" %}
-  <!--  
+  <!--  -->
 
   {{ govukBackLink({
     text: "Back to home screen",
     href: "#"
   }) }}
-
-  -->
 
 {% endblock %}
 
@@ -41,12 +39,25 @@
   <div class="govuk-grid-column-two-thirds">
 
     <form action="" method="post" class="form">
+    
+    {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: [
+        {
+          text: "Select the T Levels this provider can offer",
+          href: "#provider-type-tlevels"
+        }
+      ]
+    }) }}
 
       {% set tlevelHtml %}
 
         {{ govukCheckboxes({
           idPrefix: "provider-type-tlevels",
           name: "provider-type-tlevels",
+          errorMessage: {
+            text: "Select the T Levels this provider can offer"
+          },
           fieldset: {
             legend: {
               text: "What T Levels can this provider offer?",
@@ -109,14 +120,7 @@
       }) }}
 
       {{ govukButton({
-        classes: "govuk-!-margin-right-5",
-        text: "Save"
-      }) }}
-
-      {{ govukButton({
-        classes: "govuk-button--secondary",
-        href: "tlevels-provider-details",
-        text: "Cancel"
+        text: "Save and continue"
       }) }}
     
     </form>
