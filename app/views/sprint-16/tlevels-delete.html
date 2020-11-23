@@ -49,7 +49,11 @@
           Your reference
         </dt>
         <dd class="govuk-summary-list__value">
-          REF12234
+          {% if data["s16-tlevels-details-reference"] %}
+            {{ data["s16-tlevels-details-reference"] }}
+          {% else %}
+            REF12234
+          {% endif %}
         </dd>
       </div>
 
@@ -58,7 +62,13 @@
           Start date
         </dt>
         <dd class="govuk-summary-list__value">
-          21 Sep 2020
+          {% if data["s16-tlevels-details-startdate-day"] %}
+            {{ data["s16-tlevels-details-startdate-day"] }}
+            {{ data["s16-tlevels-details-startdate-monthname"] }}
+            {{ data["s16-tlevels-details-startdate-year"] }}
+          {% else %}
+            21 Sep 2020
+          {% endif %}
         </dd>
       </div>
 
@@ -67,7 +77,17 @@
           T Level location
         </dt>
         <dd class="govuk-summary-list__value">
-          Avenue Campus
+          <ul class="govuk-list">
+            {% if data["s16-tlevels-details-location"] %}
+              {% for item in data['s16-tlevels-details-location'] %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            {% else %}
+              <li>Avenue Campus</li>
+              <li>Medway Campus</li>
+              <li>Park Campus</li>
+            {% endif %}
+          </ul>
         </dd>
       </div>
 
@@ -96,14 +116,14 @@
     </div>
 
     {{ govukButton({
-      href: "tlevels-delete-design-avenue-success",
+      href: "tlevels-delete-success",
       text: "Delete T Level",
       disabled: true,
       classes: "govuk-button--warning govuk-!-margin-right-5"
     }) }}
 
     {{ govukButton({
-      href: "tlevels-view-design-avenue",
+      href: "tlevels-view",
       text: "Cancel",
       classes: "govuk-button--secondary"
     }) }}
