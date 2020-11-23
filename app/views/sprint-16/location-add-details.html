@@ -33,62 +33,66 @@
       <form action="" method="post">
 
         {{ govukInput({
-          id: "location-add-name",
-          name: "location-add-name",
+          id: "s16-location-add-name",
+          name: "s16-location-add-name",
           label: {
             classes: "govuk-label--s",
             text: "Location name"
-          }
+          },
+          value: data["s16-location-add-name"]
         }) }}
 
         <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Location address</h2>
         <p class="govuk-body">
-          {% if data['location-add-postcode-select'] %}
+          {% if data['s16-location-add-line-1'] %}
+            {% if data['s16-location-add-line-1'] %}{{ data['s16-location-add-line-1'] }}{% endif %}
+            {% if data['s16-location-add-line-2'] %}<br>{{ data['s16-location-add-line-2'] }}{% endif %}
+            {% if data['s16-location-add-town'] %}<br>{{ data['s16-location-add-town'] }}{% endif %}
+            {% if data['s16-location-add-county'] %}<br>{{ data['s16-location-add-county'] }}{% endif %}
+            {% if data['s16-location-add-postcode'] %}<br>{{ data['s16-location-add-postcode'] }}{% endif %}
+          {% else %}
             Buckingham Palace,<br>
             LONDON<br>
             SW1A 1AA
-          {% else %}
-            {% if data['location-add-line-1'] %}{{ data['location-add-line-1'] }}{% endif %}
-            {% if data['location-add-line-2'] %}<br>{{ data['location-add-line-2'] }}{% endif %}
-            {% if data['location-add-town'] %}<br>{{ data['location-add-town'] }}{% endif %}
-            {% if data['location-add-county'] %}<br>{{ data['location-add-county'] }}{% endif %}
-            {% if data['location-add-postcode'] %}<br>{{ data['location-add-postcode'] }}{% endif %}
           {% endif %}
         </p>
 
         {{ govukInput({
-          id: "location-add-email",
-          name: "location-add-email",
+          id: "s16-location-add-email",
+          name: "s16-location-add-email",
           type: "email",
           classes: "govuk-!-width-two-thirds",
           label: {
             classes: "govuk-label--s",
             text: "Email address"
-          }
+          },
+          value: data["s16-location-add-email"]
         }) }}
 
         {{ govukInput({
-          id: "location-add-telephone",
-          name: "location-add-telephone",
+          id: "s16-location-add-telephone",
+          name: "s16-location-add-telephone",
           classes: "govuk-!-width-one-third",
           label: {
             classes: "govuk-label--s",
             text: "Telephone number"
-          }
+          },
+          value: data["s16-location-add-telephone"]
         }) }}
 
         {{ govukInput({
-          id: "location-add-website",
-          name: "location-add-website",
+          id: "s16-location-add-website",
+          name: "s16-location-add-website",
           classes: "govuk-!-width-two-thirds",
           label: {
             classes: "govuk-label--s",
             text: "Website address"
-          }
+          },
+          value: data["s16-location-add-website"]
         }) }}
 
         {{ govukButton({
-          text: "Save and continue"
+          text: "Continue"
         }) }}
       
       </form>

@@ -31,39 +31,39 @@
       <form action="" method="post">
       
         {{ govukInput({
-          id: "location-add-line-1",
-          name: "location-add-line-1",
+          id: "s16-location-add-line-1",
+          name: "s16-location-add-line-1",
           label: {
             html: 'Building and street <span class="govuk-visually-hidden">line 1 of 2</span>'
           },
           value: "",
-          autocomplete: "location-add-line1"
+          autocomplete: "s16-location-add-line1"
         }) }}
       
         {{ govukInput({
-          id: "location-add-line-2",
-          name: "location-add-line-2",
+          id: "s16-location-add-line-2",
+          name: "s16-location-add-line-2",
           label: {
             html: '<span class="govuk-visually-hidden">Building and street line 2 of 2</span>'
           },
           value: "",
-          autocomplete: "location-add-line2"
+          autocomplete: "s16-location-add-line2"
         }) }}
       
         {{ govukInput({
-          id: "location-add-town",
-          name: "location-add-town",
+          id: "s16-location-add-town",
+          name: "s16-location-add-town",
           label: {
             text: "Town or city"
           },
           value: "",
-          autocomplete: "location-add-level2",
+          autocomplete: "s16-location-add-level2",
           classes: "govuk-!-width-two-thirds"
         }) }}
       
         {{ govukInput({
-          id: "location-add-county",
-          name: "location-add-county",
+          id: "s16-location-add-county",
+          name: "s16-location-add-county",
           label: {
             text: "County"
           },
@@ -72,12 +72,12 @@
         }) }}
       
         {{ govukInput({
-          id: "location-add-postcode",
-          name: "location-add-postcode",
+          id: "s16-location-add-postcode",
+          name: "s16-location-add-postcode",
           label: {
             text: "Postcode"
           },
-          value: data['location-add-postcode'],
+          value: data['s16-location-add-postcode'],
           autocomplete: "postal-code",
           classes: "govuk-!-width-one-quarter"
         }) }}
@@ -90,7 +90,7 @@
 
         {{ govukButton({
           classes: "govuk-button--secondary",
-          href: "location-add-select",
+          href: "s16-location-add-select",
           text: "Cancel"
         }) }}
 
