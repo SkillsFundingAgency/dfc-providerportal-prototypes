@@ -92,7 +92,14 @@
         }) }}
 
         {{ govukButton({
+          classes: "govuk-!-margin-right-3",
           text: "Continue"
+        }) }}
+
+        {{ govukButton({
+          href: "javascript:preventDefault();",
+          text: "Cancel",
+          classes: "govuk-button--secondary"
         }) }}
       
       </form>

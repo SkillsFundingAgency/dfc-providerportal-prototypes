@@ -108,8 +108,15 @@
       </dl>
 
       {{ govukButton({
+        classes: "govuk-!-margin-right-3",
         href: "location-add-success",
         text: "Save location"
+      }) }}
+
+      {{ govukButton({
+        href: "javascript:preventDefault();",
+        text: "Cancel",
+        classes: "govuk-button--secondary"
       }) }}
       
     </div>
