@@ -1,0 +1,284 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  List of T Levels
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint14.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+  <a href="tlevels-list" class="govuk-back-link">Back to T Level list</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  
+    {{ govukPanel({
+      classes: "govuk-!-margin-bottom-9",
+      titleText: "Your changes have been published"
+    }) }}
+
+    <h1 class="govuk-heading-xl">Your T Level information</h1>
+
+    <h2 class="govuk-heading-l">T Level in Design, Surveying and Planning for Construction</h2>
+
+    <p class="govuk-body">You can <a href="javascript:preventdefault();">view your published T Level (opens in new window or tab)</a> to see how it's viewed by learners.</p>
+
+    <!--  -->
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          T Level added on
+        </dt>
+        <dd class="govuk-summary-list__value">
+          15 September 2020
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Last updated
+        </dt>
+        <dd class="govuk-summary-list__value">
+          29 September 2020
+        </dd>
+      </div>
+
+    </dl>
+    <!--  -->
+
+    <h3 class="govuk-heading-m">T Level details</h3>
+    <p class="govuk-body">Information for the learner about how the T Level will be delivered.</p>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Your reference
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          {% if data["s16-tlevels-details-reference"] %}
+            {{ data["s16-tlevels-details-reference"] }}
+          {% else %}
+            REF12234
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-reference">Change<span class="govuk-visually-hidden"> your reference</span></a>
+        </dd>
+      </div>
+
+      <!-- <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course type
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Classroom based
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit">Change<span class="govuk-visually-hidden"> course type</span></a>
+        </dd>
+      </div> -->
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Start date
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          {% if data["s16-tlevels-details-startdate-day"] %}
+            {{ data["s16-tlevels-details-startdate-day"] }}
+            {{ data["s16-tlevels-details-startdate-monthname"] }}
+            {{ data["s16-tlevels-details-startdate-year"] }}
+          {% else %}
+            21 Sep 2020
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-startdate">Change<span class="govuk-visually-hidden"> start date</span></a>
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          T Level location
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list">
+          {% if data["s16-tlevels-details-location"] %}
+            {% for item in data['s16-tlevels-details-location'] %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          {% else %}
+            <li>Avenue Campus</li>
+            <li>Medway Campus</li>
+            <li>Park Campus</li>
+          {% endif %}
+          </ul>
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-location">Change<span class="govuk-visually-hidden"> T Level locations</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          T Level webpage
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          {% if data["s16-tlevels-details-webpage"] %}
+            {{ data["s16-tlevels-details-webpage"] }}
+          {% else %}
+            http://www.provider.com/tlevel
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-webpage">Change<span class="govuk-visually-hidden"> T Level webpage</span></a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <!-- -->
+
+    <div class="govuk-!-margin-bottom-6">
+      <a href="tlevels-delete">
+        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+          Delete T Level
+        </button>
+      </a>
+    </div>
+
+    <!-- -->
+
+    <h3 class="govuk-heading-m">T Level description</h3>
+    <p class="govuk-body">Changes made to your T Level description will update all of your T Levels for this qualification.</p>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Who this T Level is for
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          {% if data["s16-tlevels-desc-whothiscourseisfor"] %}
+            {{ data["s16-tlevels-desc-whothiscourseisfor"] }}
+          {% else %}
+            This T Level is suitable for anyone wanting a career in construction, specifically in surveying and design, civil engineering, building services design, or hazardous materials surveying. During the two-year programme, you will learn the core knowledge and skills that underpin many jobs in the construction industry. Your learning will combine 40 weeks of classroom theory and practical learning and a minimum of 9 weeks with an employer.
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-description#s16-tlevels-desc-whothiscourseisfor">Change<span class="govuk-visually-hidden"> who is this T Level for</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Entry requirements
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          {% if data["s16-tlevels-desc-entryrequirements"] %}
+            {{ data["s16-tlevels-desc-entryrequirements"] }}
+          {% else %}
+            You will need either, 5 GCSE passes (grade 4 or above), including English, maths and science or a pass in a relevant level 2 qualification.
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-description#s16-tlevels-desc-entryrequirements">Change<span class="govuk-visually-hidden"> entry requirements</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What you'll learn
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          {% if data["s16-tlevels-desc-whatyoulllearn"] %}
+            {{ data["s16-tlevels-desc-whatyoulllearn"] }}
+          {% else %}
+            You'll learn specific topics in design, surveying and planning: Project management, Budgeting and resource allocation, Procurement, Risk management. In addition to the core content, you will have the option to study one of the following specialisms: Surveying and design for construction and the built environment, Civil engineering, Building services design, Hazardous materials analysis and surveying.
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-description#s16-tlevels-desc-whatyoulllearn">Change<span class="govuk-visually-hidden"> what you'll learn</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How you'll learn
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          {% if data["s16-tlevels-desc-howyoulllearn"] %}
+            {{ data["s16-tlevels-desc-howyoulllearn"] }}
+          {% else %}
+            Your learning will combine 40 weeks of classroom theory and practical learning and include a minimum of 9 weeks with an employer. The industry placement will provide you with a real experience of the workplace. You will take part in investigative and practical work and during the T Level you will be expected to do private study and e-learning.
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-description#s16-tlevels-desc-howyoulllearn">Change<span class="govuk-visually-hidden"> how you'll learn</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How you'll be assessed
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          {% if data["s16-tlevels-desc-howassessed"] %}
+            {{ data["s16-tlevels-desc-howassessed"] }}
+          {% else %}
+            A written examination will take place at the end of the T Level and task based assessments will take place throughout the T Level.
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-description#s16-tlevels-desc-howassessed">Change<span class="govuk-visually-hidden"> how you'll be assessed</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What you can do next
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          {% if data["s16-tlevels-desc-whatyoucandonext"] %}
+            {{ data["s16-tlevels-desc-whatyoucandonext"] }}
+          {% else %}
+            This T Level has been developed in collaboration with employers and businesses so the content will meet the needs of the industry and prepare you for work, providing you the knowledge and experience needed to open the door to highly skilled employment, an Apprenticeship or higher-level study. You can progress into roles such as: Civil engineering technician, Technical surveyor, Building technician, Engineering construction technician, Architectural technician.
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-description#s16-tlevels-desc-whatyoucandonext">Change<span class="govuk-visually-hidden"> what you can do next</span></a>
+        </dd>
+      </div>
+
+    </dl>
+
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

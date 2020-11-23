@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block header %}
-  {% include "includes/header-tribal-sprint16.html" %}
+  {% include "includes/header-tribal-sprint16-deprecated.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,13 +21,12 @@
 
   <!-- Provider navigation -->
     {% include "includes/tribal-mininav-sprint16.html" %}
-  <!--  
+  <!--  -->
 
   {{ govukBackLink({
     text: "Back to home screen",
     href: "#"
   }) }}
-  -->
 
 {% endblock %}
 
@@ -91,30 +90,18 @@
         <dd class="govuk-summary-list__value">
 
           <ul class="govuk-list">
-            {% if data['provider-type'] %}
-            
-              {% for item in data['provider-type'] %}
-                <li>
-                  {% if item == "T Levels" %}
-                    <details class="govuk-details govuk-!-margin-bottom-0" data-module="govuk-details">
-                      <summary class="govuk-details__summary">
-                        <span class="govuk-details__summary-text">
-                          T Levels
-                        </span>
-                      </summary>
-                      <div class="govuk-details__text govuk-!-padding-bottom-1 govuk-!-padding-top-1">
-                        <ul class="govuk-list">
-                          {% for tlevel in data['provider-type-tlevels'] %}
-                            <li>{{ tlevel }}</li>
-                          {% endfor %}
-                        </ul>
-                    </details>
-                  {% else %}
-                    {{ item }}
-                  {% endif %}
-                </li>
-              {% endfor %}
-            
+            {% if data['provider-type'] and data['provider-type'] != "None" %}
+
+              {% if data['provider-type-backup'] != data['provider-type'] %}
+                {% for item in data['provider-type-backup'] %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              {% else %}
+                {% for item in data['provider-type'] %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              {% endif %}
+          
             {% else %}
 
               <li>None</li>
@@ -130,20 +117,58 @@
         </dd>
       </div>
 
-      {% if data["provider-type"] and ('Apprenticeships' in data["provider-type"]) %}
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Provider information
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data["provider-info"] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="tribal-provider-information">
-            Change<span class="govuk-visually-hidden"> provider information</span>
-          </a>
-        </dd>
-      </div>
+
+      {% if (data["provider-type-tlevels"]) and (data[usewhichdata].includes("T Levels")) %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Provider T Levels
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+            <ul class="govuk-list">
+              {% for item in data['provider-type-tlevels'] %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+
+            <!--
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  {{ data['provider-type-tlevels'] | length }} T Level{% if data['provider-type-tlevels'] | length > 1 %}s{% endif %} provided
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                {% for item in data['provider-type-tlevels'] %}
+                <p class="govuk-body">{{ item }}</p>
+                {% endfor %}
+              </div>
+            </details>
+            -->
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="tribal-provider-tlevels">
+              Change<span class="govuk-visually-hidden"> provider T Levels</span>
+            </a>
+          </dd>
+        </div>
+      {% endif %}
+      
+      {% if data[usewhichdata] and ('Apprenticeships' in data[usewhichdata]) %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Provider information
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data["provider-info"] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="tribal-provider-information">
+              Change<span class="govuk-visually-hidden"> provider information</span>
+            </a>
+          </dd>
+        </div>
       {% endif %}
 
     </dl>

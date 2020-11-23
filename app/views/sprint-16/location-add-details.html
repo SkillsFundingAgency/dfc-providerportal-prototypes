@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Add location details
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint14.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Add location
+      </h1>
+
+      <p class="govuk-body">This information will be displayed on Find a course as part of the course details.</p>
+
+      <form action="" method="post">
+
+        {{ govukInput({
+          id: "location-add-name",
+          name: "location-add-name",
+          label: {
+            classes: "govuk-label--s",
+            text: "Location name"
+          }
+        }) }}
+
+        <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Location address</h2>
+        <p class="govuk-body">
+          {% if data['location-add-postcode-select'] %}
+            Buckingham Palace,<br>
+            LONDON<br>
+            SW1A 1AA
+          {% else %}
+            {% if data['location-add-line-1'] %}{{ data['location-add-line-1'] }}{% endif %}
+            {% if data['location-add-line-2'] %}<br>{{ data['location-add-line-2'] }}{% endif %}
+            {% if data['location-add-town'] %}<br>{{ data['location-add-town'] }}{% endif %}
+            {% if data['location-add-county'] %}<br>{{ data['location-add-county'] }}{% endif %}
+            {% if data['location-add-postcode'] %}<br>{{ data['location-add-postcode'] }}{% endif %}
+          {% endif %}
+        </p>
+
+        {{ govukInput({
+          id: "location-add-email",
+          name: "location-add-email",
+          type: "email",
+          classes: "govuk-!-width-two-thirds",
+          label: {
+            classes: "govuk-label--s",
+            text: "Email address"
+          }
+        }) }}
+
+        {{ govukInput({
+          id: "location-add-telephone",
+          name: "location-add-telephone",
+          classes: "govuk-!-width-one-third",
+          label: {
+            classes: "govuk-label--s",
+            text: "Telephone number"
+          }
+        }) }}
+
+        {{ govukInput({
+          id: "location-add-website",
+          name: "location-add-website",
+          classes: "govuk-!-width-two-thirds",
+          label: {
+            classes: "govuk-label--s",
+            text: "Website address"
+          }
+        }) }}
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+      
+      </form>
+      
+    </div>
+    <div class="govuk-grid-column-one-third">
+      
+    </div>
+  </div>
+  
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

@@ -1,7 +1,8 @@
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Add location
+  Add location details
 {% endblock %}
 
 {% block header %}
@@ -30,19 +31,8 @@
 
       <form action="" method="post">
 
-        {{ govukInput({
-          id: "location-add-postcode",
-          name: "location-add-postcode",
-          classes: "govuk-!-width-one-quarter",
-          label: {
-            classes: "govuk-label--m",
-            text: "Postcode"
-          },
-          value: "SW1A 1AA"
-        }) }}
-
         {{ govukButton({
-          text: "Find address"
+          text: "Save and continue"
         }) }}
       
       </form>

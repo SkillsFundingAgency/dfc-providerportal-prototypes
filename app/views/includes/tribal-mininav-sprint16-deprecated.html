@@ -7,42 +7,42 @@
       <nav>
         <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
           <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
-            <a class="pttcd-providernav-link" href="tribal-homescreen">
+            <a class="govuk-header__link" href="tribal-homescreen">
               Home
             </a>
           </li>
 
-          {% if data["provider-type"] %}
+          {% if data[usewhichdata] %}
 
-          {% if data["provider-type"].includes("F.E.") %}
+          {% if data[usewhichdata].includes("F.E.") %}
           <li class="govuk-header__navigation-item">
-            <a class="pttcd-providernav-link" href="#">
+            <a class="govuk-header__link" href="#">
               Courses
             </a>
           </li>
           {% endif %}
-          {% if data["provider-type"].includes("Apprenticeships") %}
+          {% if data[usewhichdata].includes("Apprenticeships") %}
           <li class="govuk-header__navigation-item">
-            <a class="pttcd-providernav-link" href="#">
+            <a class="govuk-header__link" href="#">
               Apprenticeships
             </a>
           </li>
           {% endif %}
-          {% if data["provider-type"].includes("T Levels") %}
+          {% if data[usewhichdata].includes("T Levels") %}
           <li class="govuk-header__navigation-item">
-            <a class="pttcd-providernav-link" href="#">
+            <a class="govuk-header__link" href="#">
               T Levels
             </a>
           </li>
           {% endif %}
           {% endif %}
           <li class="govuk-header__navigation-item">
-            <a class="pttcd-providernav-link" href="#">
+            <a class="govuk-header__link" href="#">
               Locations
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="pttcd-providernav-link" href="#">
+            <a class="govuk-header__link" href="#">
               Bulk upload
             </a>
           </li>

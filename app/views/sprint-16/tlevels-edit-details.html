@@ -1,0 +1,164 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Edit T Level details
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint13.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">T Level details</h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-5">Add information on how the T Level in Design, Surveying and Planning for Construction will be delivered.</p>
+
+        <form action="" method="post" class="form">
+          <!--  -->
+
+          {{ govukInput({
+            id: "s16-tlevels-details-reference",
+            name: "s16-tlevels-details-reference",
+            classes: "govuk-!-margin-bottom-3",
+            label: {
+              text: "Your reference (optional)",
+              classes: "govuk-label--m"
+            },
+            hint: {
+              text: "A reference that will help you identify this T Level in your internal systems. This will not be visible to learners."
+            },
+            value: "REF12234"
+          }) }}
+
+          <!--  -->
+
+          {{ govukDateInput({
+            id: "s16-tlevels-details-startdate",
+            namePrefix: "s16-tlevels-details-startdate",
+            classes: "govuk-!-margin-bottom-3",
+            fieldset: {
+              legend: {
+                text: "Start date",
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            hint: {
+              text: "For example, 30 9 2020"
+            },
+            items: [
+              {
+                name: "day",
+                classes: "govuk-input--width-2",
+                autocomplete: "s16-tlevels-details-startdate-day",
+                value: "21"
+              },
+              {
+                name: "month",
+                classes: "govuk-input--width-2",
+                autocomplete: "s16-tlevels-details-startdate-month",
+                value: "9"
+              },
+              {
+                name: "year",
+                classes: "govuk-input--width-4",
+                autocomplete: "s16-tlevels-details-startdate-year",
+                value: "2020"
+              }
+            ]
+          }) }}
+
+          <!--  -->
+
+          {{ govukCheckboxes({
+            idPrefix: "s16-tlevels-details-location",
+            name: "s16-tlevels-details-location",
+            classes: "govuk-checkboxes--small",
+            formGroup: {
+              classes: " govuk-!-margin-bottom-1"
+            },
+            fieldset: {
+              legend: {
+                text: "T Level location",
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            items: [
+              {
+                value: "Avenue Campus",
+                text: "Avenue Campus",
+                checked: checked("s16-tlevels-details-location", "Avenue Campus")
+              },
+              {
+                value: "Medway Campus",
+                text: "Medway Campus",
+                checked: checked("s16-tlevels-details-location", "Medway Campus")
+              },
+              {
+                value: "Park Campus",
+                text: "Park Campus",
+                checked: checked("s16-tlevels-details-location", "Park Campus")
+              }
+            ]
+          }) }}
+
+          <p class="govuk-body govuk-!-margin-bottom-7">
+            <a href="#" class="govuk-link">Add another location</a>
+          </p>
+
+          <!--  -->
+
+          <div class="govuk-form-group govuk-!-margin-bottom-7">
+            <label class="govuk-label govuk-label--m" for="s16-tlevels-details-webpage">
+              T Level webpage
+            </label>
+            <span id="s16-tlevels-details-webpage-hint" class="govuk-hint">
+              The webpage for this T Level. For example, https://www.provider.com/tlevelname.
+            </span>
+            <input class="govuk-input" id="s16-tlevels-details-webpage" name="s16-tlevels-details-webpage" type="text" aria-describedby="s16-tlevels-details-webpage-hint" value="http://www.provider.com/course">
+          </div>
+
+          <!--  -->
+          <h3 class="govuk-heading-m">Publish your T Level changes</h3>
+          <p class="govuk-body">Your T Level details will be updated on Publish to the course directory and available to learners searching for learning and training opportunities on the National Careers Service.</p>
+
+          <input type="hidden" name="published-tlevel-edit-details" value="true">
+
+          {{ govukButton({
+            classes: "govuk-!-margin-right-3",
+            text: "Publish changes"
+          }) }}
+
+
+          {{ govukButton({
+            classes: "govuk-button--secondary",
+            href: "tlevels-view-design-avenue",
+            text: "Cancel"
+          }) }}
+
+        </form>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Provider home screen - All provider types
+  Add location - select address
 {% endblock %}
 
 {% block header %}
@@ -29,33 +29,36 @@
       </h1>
 
       <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Postcode</h2>
-      <p class="govuk-body">SW1A 1AA <a href="javascript:preventDefault();" class="govuk-!-margin-left-5">Change<span class="govuk-visually-hidden"> postcode</span></a></p>
+      <p class="govuk-body">SW1A 1AA <a href="location-add" class="govuk-!-margin-left-5">Change<span class="govuk-visually-hidden"> postcode</span></a></p>
 
-      {{ govukSelect({
-        id: "location-add-postcode-select",
-        name: "location-add-postcode-select",
-        label: {
-          classes: "govuk-label--m",
-          text: "Select an address"
-        },
-        items: [
-          {
-            value: "",
-            text: "1 address found"
+      <form action="" method="post">
+
+        {{ govukSelect({
+          id: "location-add-postcode-select",
+          name: "location-add-postcode-select",
+          label: {
+            classes: "govuk-label--m",
+            text: "Select an address"
           },
-          {
-            value: "",
-            text: "Buckingham Palace, LONDON SW1A 1AA"
-          }
-        ]
-      }) }}
+          items: [
+            {
+              value: "",
+              text: "1 address found"
+            },
+            {
+              value: "Buckingham Palace, LONDON SW1A 1AA",
+              text: "Buckingham Palace, LONDON SW1A 1AA"
+            }
+          ]
+        }) }}
 
-      <p class="govuk-body"><a href="javascript:preventDefault();">I can't find my  address in the list</a></p>
+        <p class="govuk-body"><a href="location-add-manual">I can't find my  address in the list</a></p>
 
-      {{ govukButton({
-        href: "location-add-details",
-        text: "Continue"
-      }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
       
 
 <!--

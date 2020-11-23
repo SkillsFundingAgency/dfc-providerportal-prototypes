@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Edit T Level description
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint13.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        T Level description
+      </h1>
+      <!--div class="govuk-inset-text">{{ data['tlevels'] }}</div-->
+      <!--p class="govuk-body-l">Add your description of {{ data['tlevels'] }}.</p-->
+
+      <p class="govuk-body">The description of T Level in Design, Surveying and Planning for Construction has been provided for you to edit.</p>
+      <p class="govuk-body govuk-!-margin-bottom-5">The T Level information will be available on the National Careers Service, <a href="https://nationalcareers.service.gov.uk/find-a-course/search" target="_blank">Find a course (opens in a new window or tab)</a>, available to learners searching for learning and training opportunities.
+
+      <form action="tlevels-view-success" method="post" class="form">
+      <!--  -->
+
+        {{ govukCharacterCount({
+          name: "s16-tlevels-desc-whothiscourseisfor",
+          id: "s16-tlevels-desc-whothiscourseisfor",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "Who this T Level is for"
+          },
+          hint: {
+            text: "Information that will help the learner decide whether this T Level is suitable for them, the learning experience and opportunities they can expect."
+          },
+          value: data["s16-tlevels-desc-whothiscourseisfor"]
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "s16-tlevels-desc-entryrequirements",
+          id: "s16-tlevels-desc-entryrequirements",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "Entry requirements"
+          },
+          hint: {
+            text: "Specific skills, licences, vocational or academic requirements."
+          },
+          value: data["s16-tlevels-desc-entryrequirements"]
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "s16-tlevels-desc-whatyoulllearn",
+          id: "s16-tlevels-desc-whatyoulllearn",
+          maxlength: 1500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "What you'll learn"
+          },
+          hint: {
+            text: "The main topics, units or modules of the T Level a learner can expect."
+          },
+          value: data["s16-tlevels-desc-whatyoulllearn"]
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "s16-tlevels-desc-howyoulllearn",
+          id: "s16-tlevels-desc-howyoulllearn",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "How you'll learn"
+          },
+          hint: {
+            text: "The methods used to deliver the T Level."
+          },
+          value: data["s16-tlevels-desc-howyoulllearn"]
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "s16-tlevels-desc-howassessed",
+          id: "s16-tlevels-desc-howassessed",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "How you'll be assessed"
+          },
+          hint: {
+            text: "The ways a learner will be assessed."
+          },
+          value: data["s16-tlevels-desc-howassessed"]
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "s16-tlevels-desc-whatyoucandonext",
+          id: "s16-tlevels-desc-whatyoucandonext",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "What you can do next"
+          },
+          hint: {
+            text: "The further opportunities a learner can expect after successfully completing the T Level."
+          },
+          value: data["s16-tlevels-desc-whatyoucandonext"]
+        }) }}
+
+        <!--  -->
+
+        <h2 class="govuk-heading-m">Publish your T Level changes</h2>
+        <p class="govuk-body">Your T Level will be updated on Publish to the course directory and available to learners searching for learning and training opportunities on the National Careers Service.</p>
+        <p class="govuk-body">Changes made to your T Level description will update all of your T Levels for this qualification.</p>
+
+        <!--  -->
+
+        <input type="hidden" name="published-tlevel-edit-description" value="true">
+
+        {{ govukButton({
+          classes: "govuk-!-margin-right-3",
+          text: "Publish changes"
+        }) }}
+
+        {{ govukButton({
+          classes: "govuk-button--secondary",
+          href: "tlevels-view-design-avenue",
+          text: "Cancel"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
