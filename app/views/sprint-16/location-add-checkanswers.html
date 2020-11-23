@@ -29,13 +29,88 @@
         Add location
       </h1>
 
-      <form action="" method="post">
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data["s16-location-add-name"] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="javascript:preventDefault();">
+              Change<span class="govuk-visually-hidden"> location name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['s16-location-add-line-1'] %}
+              {% if data['s16-location-add-line-1'] %}{{ data['s16-location-add-line-1'] }}{% endif %}
+              {% if data['s16-location-add-line-2'] %}<br>{{ data['s16-location-add-line-2'] }}{% endif %}
+              {% if data['s16-location-add-town'] %}<br>{{ data['s16-location-add-town'] }}{% endif %}
+              {% if data['s16-location-add-county'] %}<br>{{ data['s16-location-add-county'] }}{% endif %}
+              {% if data['s16-location-add-postcode'] %}<br>{{ data['s16-location-add-postcode'] }}{% endif %}
+            {% else %}
+              Buckingham Palace,<br>
+              LONDON<br>
+              SW1A 1AA
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="javascript:preventDefault();">
+              Change<span class="govuk-visually-hidden"> location address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data["s16-location-add-email"] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="javascript:preventDefault();">
+              Change<span class="govuk-visually-hidden"> email address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Telephone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data["s16-location-add-telephone"] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="javascript:preventDefault();">
+              Change<span class="govuk-visually-hidden"> telephne number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Website address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data["s16-location-add-website"] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="javascript:preventDefault();">
+              Change<span class="govuk-visually-hidden"> website address</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
 
-        {{ govukButton({
-          text: "Save and continue"
-        }) }}
-      
-      </form>
+      {{ govukButton({
+        href: "location-add-success",
+        text: "Save location"
+      }) }}
       
     </div>
     <div class="govuk-grid-column-one-third">
