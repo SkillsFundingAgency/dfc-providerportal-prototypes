@@ -31,6 +31,7 @@ module.exports = function (router) {
                 if (req.session.data['s18-provider-type-removed'] == true){
                     res.redirect('/sprint-18/tribal-provider-removetypecheck');
                 } else {
+                    req.session.data['s18-prev-provider-type'] = req.session.data['s18-provider-type'];
                     res.redirect('/sprint-18/tribal-provider');
                 }
 
