@@ -48,6 +48,24 @@ module.exports = {
 
   // Provider info for helpdesk screens
   "provider-displayname": "PRESIDENCY LONDON COLLEGE LIMITED",
-  "provider-info": "Presidency London College is an independent training provider that delivers various apprenticeship training programmes. We are on the borders of London Borough of Westminster, Brent, and Kensington and Chelsea. As an organisation, our main focus is to provide education, training and learning opportunities to all our employers and apprentices who are seeking to better their career and recruitment needs. We have a number of levy and non-levy employers who are currently availing the services of our apprenticeship programmes across England. Please get in touch whether you are an employer or apprentice to discuss your apprenticeship needs with our Information Advice and Guidance (IAG) officer."
+  "provider-info": "Presidency London College is an independent training provider that delivers various apprenticeship training programmes. We are on the borders of London Borough of Westminster, Brent, and Kensington and Chelsea. As an organisation, our main focus is to provide education, training and learning opportunities to all our employers and apprentices who are seeking to better their career and recruitment needs. We have a number of levy and non-levy employers who are currently availing the services of our apprenticeship programmes across England. Please get in touch whether you are an employer or apprentice to discuss your apprenticeship needs with our Information Advice and Guidance (IAG) officer.",
 
+
+  // Default provider type and selected T Levels
+  "s18-provider-type": [
+    "FE Courses",
+    "T Levels"
+  ],
+  "s18-provider-type-tlevels": [
+    "Design, Surveying and Planning for Construction",
+    "Education and Childcare"
+  ],
+  "s18-prev-provider-type": [
+    "FE Courses",
+    "T Levels"
+  ],
+  "s18-prev-provider-type-tlevels": [
+    "Design, Surveying and Planning for Construction",
+    "Education and Childcare"
+  ]
 }
