@@ -1,0 +1,134 @@
+{% extends "layout-sprint14.html" %}
+
+{% block pageTitle %}
+  Provider type settings
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-tribal-sprint14.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+  <!-- Provider navigation -->
+    {% include "includes/tribal-mininav-sprint14.html" %}
+  <!--  
+
+  {{ govukBackLink({
+    text: "Back to home screen",
+    href: "#"
+  }) }}
+
+  -->
+
+{% endblock %}
+
+{% block content %}
+
+
+<!-- content start -->
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="" method="post" class="form">
+
+      {% set tlevelHtml %}
+
+        {{ govukCheckboxes({
+          idPrefix: "s18-provider-type-tlevels",
+          name: "s18-provider-type-tlevels",
+          fieldset: {
+            legend: {
+              text: "What T Levels can this provider offer?",
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "Design, Surveying and Planning for Construction",
+              text: "Design, Surveying and Planning for Construction",
+            checked: checked("s18-provider-type-tlevels", "Design, Surveying and Planning for Construction")
+            },
+            {
+              value: "Digital Production, Design and Development",
+              text: "Digital Production, Design and Development",
+            checked: checked("s18-provider-type-tlevels", "Digital Production, Design and Development")
+            },
+            {
+              value: "Education and Childcare",
+              text: "Education and Childcare",
+            checked: checked("s18-provider-type-tlevels", "Education and Childcare")
+            }
+          ]
+        }) }}
+
+      {% endset -%}
+
+      {{ govukCheckboxes({
+        idPrefix: "s18-provider-type",
+        name: "s18-provider-type",
+        fieldset: {
+          legend: {
+            text: "Provider type",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            checked: true,
+            value: "FE Courses",
+            text: "FE Courses",
+            checked: checked("s18-provider-type", "FE Courses")
+          },
+          {
+            checked: true,
+            value: "Apprenticeships",
+            text: "Apprenticeships",
+            checked: checked("s18-provider-type", "Apprenticeships")
+          },
+          {
+            value: "T Levels",
+            text: "T Levels",
+            checked: checked("s18-provider-type", "T Levels"),
+            conditional: {
+              html: tlevelHtml
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        classes: "govuk-!-margin-right-5",
+        text: "Save"
+      }) }}
+
+      {{ govukButton({
+        classes: "govuk-button--secondary",
+        href: "tlevels-provider",
+        text: "Cancel"
+      }) }}
+    
+    </form>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  </div>
+
+
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
