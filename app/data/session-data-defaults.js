@@ -54,6 +54,7 @@ module.exports = {
   // Default provider type and selected T Levels
   "s18-provider-type": [
     "FE Courses",
+    "Apprenticeships",
     "T Levels"
   ],
   "s18-provider-type-tlevels": [
@@ -62,6 +63,7 @@ module.exports = {
   ],
   "s18-prev-provider-type": [
     "FE Courses",
+    "Apprenticeships",
     "T Levels"
   ],
   "s18-prev-provider-type-tlevels": [

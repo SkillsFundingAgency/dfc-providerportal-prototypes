@@ -1,0 +1,110 @@
+{% extends "layout-sprint14.html" %}
+
+{% block pageTitle %}
+  Provider type settings
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-tribal-sprint14.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+  <!-- Provider navigation -->
+    {% include "includes/tribal-mininav-sprint14.html" %}
+  <!--  
+
+  {{ govukBackLink({
+    text: "Back to home screen",
+    href: "#"
+  }) }}
+
+  -->
+
+{% endblock %}
+
+{% block content %}
+
+
+<!-- content start -->
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Remove provider type</h1>
+
+    <p class="govuk-body">By removing provider types, the following will no longer appear on Publish to the course directory and Find a Course.</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+    
+    {% if data['s18-provider-type-removed-fecourses'] == true %}
+    <li>
+      48 FE Courses
+    </li>
+    {% endif %}
+    
+    {% if data['s18-provider-type-removed-apprenticeships'] == true %}
+    <li>
+      15 Apprenticeships
+    </li>
+    {% endif %}
+    
+    {% if data['s18-provider-type-removed-tlevels'] == true %}
+    <li>
+      3 T Levels
+    </li>
+    {% endif %}
+    </ul>
+
+    <h2 class="govuk-heading-m">Are you sure?</h2>
+
+    <form action="" method="post" class="form">
+          
+      {{ govukRadios({
+        idPrefix: "s18-provider-type-remove-areyousure",
+        name: "s18-provider-type-remove-areyousure",
+        items: [
+          {
+            value: "Yes",
+            text: "Yes"
+          },
+          {
+            value: "No",
+            text: "No"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        classes: "govuk-!-margin-right-5",
+        text: "Continue"
+      }) }}
+<!--
+      {{ govukButton({
+        classes: "govuk-button--secondary",
+        href: "tlevels-provider-type",
+        text: "Cancel"
+      }) }}
+-->
+    </form>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  </div>
+
+
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
