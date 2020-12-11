@@ -20,7 +20,7 @@
   {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
   <!-- Provider navigation -->
-    {% include "includes/tribal-mininav-sprint14.html" %}
+    {% include "includes/tribal-mininav-sprint18.html" %}
   <!--  
 
   {{ govukBackLink({
@@ -43,7 +43,7 @@
     <h1 class="govuk-heading-l">Remove provider type</h1>
 
     <p class="govuk-body">By removing provider types, the following will no longer appear on Publish to the course directory and Find a Course.</p>
-
+<!--
     <ul class="govuk-list govuk-list--bullet">
     
     {% if data['s18-provider-type-removed-fecourses'] == true %}
@@ -64,6 +64,12 @@
     </li>
     {% endif %}
     </ul>
+-->
+
+    {{ govukWarningText({
+      text: "6 T Levels will be deleted",
+      iconFallbackText: "Warning"
+    }) }}
 
     <h2 class="govuk-heading-m">Are you sure?</h2>
 

@@ -1,0 +1,53 @@
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="cd-card cd-card-mininav govuk-!-margin-top-5 govuk-!-margin-bottom-0">
+      <p class="govuk-body">PRESIDENCY LONDON COLLEGE LIMITED</p>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="pttcd-providernav-link" href="tribal-homescreen">
+              Home
+            </a>
+          </li>
+
+          {% if data["s18-provider-type"] %}
+
+          {% if data["s18-provider-type"].includes("F.E.") %}
+          <li class="govuk-header__navigation-item">
+            <a class="pttcd-providernav-link" href="#">
+              Courses
+            </a>
+          </li>
+          {% endif %}
+          {% if data["s18-provider-type"].includes("Apprenticeships") %}
+          <li class="govuk-header__navigation-item">
+            <a class="pttcd-providernav-link" href="#">
+              Apprenticeships
+            </a>
+          </li>
+          {% endif %}
+          {% if data["s18-provider-type"].includes("T Levels") %}
+          <li class="govuk-header__navigation-item">
+            <a class="pttcd-providernav-link" href="#">
+              T Levels
+            </a>
+          </li>
+          {% endif %}
+          {% endif %}
+          <li class="govuk-header__navigation-item">
+            <a class="pttcd-providernav-link" href="#">
+              Locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="pttcd-providernav-link" href="#">
+              Bulk upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

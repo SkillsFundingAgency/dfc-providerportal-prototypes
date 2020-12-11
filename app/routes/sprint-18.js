@@ -4,69 +4,73 @@ module.exports = function (router) {
 
         router.post('/sprint-18/tribal-provider-type', function (req, res) {
 
+            // Check that  at least on provider type has been selected
             if (req.session.data['s18-provider-type']){
 
+                // if provider type of T Levels is checked but no specific T Levels have been selected
                 if (req.session.data['s18-provider-type'].includes("T Levels") && !req.session.data['s18-provider-type-tlevels']){
+
                     res.redirect('/sprint-18/tribal-provider-type-error');
+
                 } else {
 
-                    // check if current array of provider types has at least what the prev array has
-                    // or just chekc if it has something missing
-/*
-                    if ( req.session.data['s18-prev-provider-type'].includes("FE Courses") && !req.session.data['s18-provider-type'].includes("FE Courses") ){
-                        // FE Courses has been removed
-                        req.session.data['s18-provider-type-removed'] = true;
-                        req.session.data['s18-provider-type-removed-fecourses'] = true;
-                    }
+                    // is a T Level provider and has at least 1 specific T Level selected
 
-                    if ( req.session.data['s18-prev-provider-type'].includes("Apprenticeships") && !req.session.data['s18-provider-type'].includes("Apprenticeships") ){
-                        // Apprenticeships has been removed
-                        req.session.data['s18-provider-type-removed'] = true;
-                        req.session.data['s18-provider-type-removed-apprenticeships'] = true;
-                    }
-*/
                     if ( req.session.data['s18-prev-provider-type'].includes("T Levels") && !req.session.data['s18-provider-type'].includes("T Levels") ){
-                        // T Levels has been removed
-                        //req.session.data['s18-provider-type-removed'] = true;
+
+                        // provider type of T Levels has been removed
                         req.session.data['s18-provider-type-removed-tlevels'] = true;
                         res.redirect('/sprint-18/tribal-provider-removetypecheck');
+
                     } else {
-                        req.session.data['s18-prev-provider-type'] = req.session.data['s18-provider-type'];
-                        res.redirect('/sprint-18/tribal-provider');
+
+                        if (req.session.data['s18-prev-provider-type-tlevels'].includes("Design, Surveying and Planning for Construction") && !req.session.data['s18-provider-type-tlevels'].includes("Design, Surveying and Planning for Construction") ) {
+                            req.session.data['s18-provider-removedtlevel-design'] = true;
+                        }
+
+                        if (req.session.data['s18-prev-provider-type-tlevels'].includes("Digital Production, Design and Development") && !req.session.data['s18-provider-type-tlevels'].includes("Digital Production, Design and Development") ){
+                            req.session.data['s18-provider-removedtlevel-digital'] = true;
+                        }
+                        
+                        if (req.session.data['s18-prev-provider-type-tlevels'].includes("Education and Childcare") && !req.session.data['s18-provider-type-tlevels'].includes("Education and Childcare")) {
+                            req.session.data['s18-provider-removedtlevel-education'] = true;
+                        }
+
+                        if ( 
+                            // if a specific T Level checkbox is unselected
+                            (req.session.data['s18-provider-removedtlevel-design'] == true)
+                            || 
+                            (req.session.data['s18-provider-removedtlevel-digital'] == true)
+                            ||
+                            (req.session.data['s18-provider-removedtlevel-education'] == true)
+                        ){
+
+                            res.redirect('/sprint-18/tribal-provider-removetlevel');
+
+                        } else {
+
+                            req.session.data['s18-prev-provider-type'] = req.session.data['s18-provider-type'];
+                            req.session.data['s18-prev-provider-type-tlevels'] = req.session.data['s18-provider-type-tlevels'];
+                            res.redirect('/sprint-18/tribal-provider');
+                        
+                        }
+
                     }
-/*
-                    if (req.session.data['s18-provider-type-removed'] == true){
-                        res.redirect('/sprint-18/tribal-provider-removetypecheck');
-                    } else {
-                        req.session.data['s18-prev-provider-type'] = req.session.data['s18-provider-type'];
-                        res.redirect('/sprint-18/tribal-provider');
-                    }
-*/
+
                 }
 
             } else {
-                //delete(req.session.data['s18-provider-type']);
+                
                 req.session.data['s18-provider-type-removed'] = true;
-                /*
-                if ( req.session.data['s18-prev-provider-type'].includes("FE Courses") ){
-                    req.session.data['s18-provider-type-removed-fecourses'] = true;
-                }
-                if ( req.session.data['s18-prev-provider-type'].includes("Apprenticeships") ){
-                    req.session.data['s18-provider-type-removed-apprenticeships'] = true;
-                }
-                */
+
                 if ( req.session.data['s18-prev-provider-type'].includes("T Levels") ){
                     req.session.data['s18-provider-type-removed-tlevels'] = true;
                 }
+
                 res.redirect('/sprint-18/tribal-provider-removetypecheck');
 
             }
 
-            /*if (!req.session.data['s18-provider-type']){
-                req.session.data['s18-provider-type'] == "None";
-            } else if (req.session.data['s18-provider-type'].includes("T Levels") && !req.session.data['s18-provider-type-tlevels']){
-                res.redirect('/sprint-18/tribal-provider-type-error');
-            }*/
         })
 
         router.post('/sprint-18/tribal-provider-type-error', function (req, res) {
@@ -93,6 +97,35 @@ module.exports = function (router) {
             } else {
 
                 req.session.data['s18-provider-type'] = req.session.data['s18-prev-provider-type'];
+                res.redirect('/sprint-18/tribal-provider-type');
+
+            }
+        })
+
+        router.post('/sprint-18/tribal-provider-removetlevel', function (req, res) {
+            if (req.session.data['s18-provider-tlevel-remove-areyousure'] == "Yes"){
+                
+                //req.session.data['s18-provider-tlevel'] = null;
+                req.session.data['s18-prev-provider-tlevel'] = req.session.data['s18-provider-tlevel'];
+                req.session.data['s18-prev-provider-type-tlevels'] = req.session.data['s18-provider-type-tlevels'];
+                
+                req.session.data['s18-provider-tlevel-removed'] = false;
+                /*
+                req.session.data['s18-provider-tlevel-removed-fecourses'] = false;
+                req.session.data['s18-provider-tlevel-removed-apprenticeships'] = false;
+                */
+                req.session.data['s18-provider-tlevel-removed-tlevels'] = false;
+                res.redirect('/sprint-18/tribal-provider');
+            
+            } else {
+
+
+                req.session.data['s18-provider-removedtlevel-design'] = false
+                req.session.data['s18-provider-removedtlevel-digital'] = false
+                req.session.data['s18-provider-removedtlevel-education'] = false
+
+                req.session.data['s18-provider-tlevel'] = req.session.data['s18-prev-provider-tlevel'];
+                req.session.data['s18-provider-type-tlevels'] = req.session.data['s18-prev-provider-type-tlevels'];
                 res.redirect('/sprint-18/tribal-provider-type');
 
             }
