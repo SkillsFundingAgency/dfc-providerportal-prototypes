@@ -21,7 +21,7 @@
 
   <!-- Provider navigation -->
     {% include "includes/tribal-mininav-sprint18.html" %}
-  <!--  
+  <!--
 
   {{ govukBackLink({
     text: "Back to home screen",
@@ -42,22 +42,22 @@
 
     <h1 class="govuk-heading-l">Remove provider type</h1>
 
-    <p class="govuk-body">By removing provider types, the following will no longer appear on Publish to the course directory and Find a Course.</p>
+    <p class="govuk-body">By removing provider types, the following will be deleted and no longer available on Publish to the course directory and Find a Course.</p>
 <!--
     <ul class="govuk-list govuk-list--bullet">
-    
+
     {% if data['s18-provider-type-removed-fecourses'] == true %}
     <li>
       48 FE Courses
     </li>
     {% endif %}
-    
+
     {% if data['s18-provider-type-removed-apprenticeships'] == true %}
     <li>
       15 Apprenticeships
     </li>
     {% endif %}
-    
+
     {% if data['s18-provider-type-removed-tlevels'] == true %}
     <li>
       3 T Levels
@@ -74,7 +74,7 @@
     <h2 class="govuk-heading-m">Are you sure?</h2>
 
     <form action="" method="post" class="form">
-          
+
       {{ govukRadios({
         idPrefix: "s18-provider-type-remove-areyousure",
         name: "s18-provider-type-remove-areyousure",
