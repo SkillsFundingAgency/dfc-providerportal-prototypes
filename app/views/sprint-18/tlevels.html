@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  T Levels
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint16.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-9">Your T Levels</h1>
+
+    <!--div>
+      <h2 class="govuk-heading-m">T Level in Education and Childcare</h2>
+      <p class="govuk-body">LARS: 60358294 <a href="javascript:preventDefault();">Manage course details</a></p>
+    </div-->
+
+    <table class="govuk-table">
+      <!--caption class="govuk-table__caption">Month you apply</caption-->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">T Level</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Start date</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Venues</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-!-padding-bottom-5 govuk-!-padding-top-5">
+            You have no T Levels
+          </td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    {{ govukButton({
+      text: "Add a T Level"
+    }) }}
+
+  </div>
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
