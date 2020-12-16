@@ -28,11 +28,14 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Edit T Level information</h1>
+      <h1 class="govuk-heading-xl">Edit your T Level information</h1>
 
       <h2 class="govuk-heading-l">T Level in Design, Surveying and Planning for Construction</h2>
 
-      <p class="govuk-body govuk-!-margin-bottom-5">Edit information on how this T Level will be delivered.</p>
+
+    <h3 class="govuk-heading-m">T Level details</h3>
+    <p class="govuk-body">Edit information for the learner about how the T Level will be delivered.</p>
+      <!--p class="govuk-body govuk-!-margin-bottom-5">Edit information on how this T Level will be delivered.</p-->
 
         <form action="" method="post" class="form">
           <!--  -->
@@ -43,7 +46,7 @@
             classes: "govuk-!-margin-bottom-3",
             label: {
               text: "Your reference (optional)",
-              classes: "govuk-label--m"
+              classes: "govuk-label--s"
             },
             hint: {
               text: "A reference that will help you identify this T Level in your internal systems. This will not be visible to learners."
@@ -60,7 +63,7 @@
             fieldset: {
               legend: {
                 text: "Start date",
-                classes: "govuk-fieldset__legend--m"
+                classes: "govuk-fieldset__legend--s"
               }
             },
             hint: {
@@ -100,7 +103,7 @@
             fieldset: {
               legend: {
                 text: "T Level location",
-                classes: "govuk-fieldset__legend--m"
+                classes: "govuk-fieldset__legend--s"
               }
             },
             items: [
@@ -129,7 +132,7 @@
           <!--  -->
 
           <div class="govuk-form-group govuk-!-margin-bottom-7">
-            <label class="govuk-label govuk-label--m" for="s18-tlevels-details-webpage">
+            <label class="govuk-label govuk-label--s" for="s18-tlevels-details-webpage">
               T Level webpage
             </label>
             <span id="s18-tlevels-details-webpage-hint" class="govuk-hint">
@@ -143,14 +146,15 @@
           <p class="govuk-body">Your T Level details will be updated on Publish to the course directory and available to learners searching for learning and training opportunities on the National Careers Service.</p-->
 
           <!--input type="hidden" name="published-tlevel-edit-details" value="true"-->
-
+        <h3 class="govuk-heading-m govuk-!-margin-top-9">T Level description</h3>
+        <!--p class="govuk-body">Information for the learner about the T Level</p-->
           {{ govukCharacterCount({
             name: "s18-tlevels-desc-whothiscourseisfor",
             id: "s18-tlevels-desc-whothiscourseisfor",
             maxlength: 500,
             rows: 7,
             label: {
-              classes: "govuk-label--m",
+              classes: "govuk-label--s",
               text: "Who this T Level is for"
             },
             hint: {
@@ -165,7 +169,7 @@
             maxlength: 500,
             rows: 7,
             label: {
-              classes: "govuk-label--m",
+              classes: "govuk-label--s",
               text: "Entry requirements"
             },
             hint: {
@@ -180,7 +184,7 @@
             maxlength: 1500,
             rows: 7,
             label: {
-              classes: "govuk-label--m",
+              classes: "govuk-label--s",
               text: "What you'll learn"
             },
             hint: {
@@ -195,7 +199,7 @@
             maxlength: 500,
             rows: 7,
             label: {
-              classes: "govuk-label--m",
+              classes: "govuk-label--s",
               text: "How you'll learn"
             },
             hint: {
@@ -210,7 +214,7 @@
             maxlength: 500,
             rows: 7,
             label: {
-              classes: "govuk-label--m",
+              classes: "govuk-label--s",
               text: "How you'll be assessed"
             },
             hint: {
@@ -225,7 +229,7 @@
             maxlength: 500,
             rows: 7,
             label: {
-              classes: "govuk-label--m",
+              classes: "govuk-label--s",
               text: "What you can do next"
             },
             hint: {
