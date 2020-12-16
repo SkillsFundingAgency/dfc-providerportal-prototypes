@@ -177,8 +177,6 @@ module.exports = function (router) {
 
             }
         })
-            
-
 
     // Set variables for editing a T Level
         router.get('/sprint-18/tlevels-setvars', function (req, res) {
@@ -189,6 +187,7 @@ module.exports = function (router) {
                 req.session.data["s18-tlevels-details-startdate-monthname"] = "Sep"
                 req.session.data["s18-tlevels-details-startdate-year"] = "2020"
                 req.session.data["s18-tlevels-details-location"] = ["Park Campus"]
+                req.session.data["s18-tlevels-details-webpage"] = "http://www.provider.com/tlevel"
                 req.session.data["s18-tlevels-desc-whothiscourseisfor"] = "This T Level is suitable for anyone wanting a career in construction, specifically in surveying and design, civil engineering, building services design, or hazardous materials surveying. During the two-year programme, you will learn the core knowledge and skills that underpin many jobs in the construction industry. Your learning will combine 40 weeks of classroom theory and practical learning and a minimum of 9 weeks with an employer."
                 req.session.data["s18-tlevels-desc-entryrequirements"] = "You will need either, 5 GCSE passes (grade 4 or above), including English, maths and science or a pass in a relevant level 2 qualification."
                 req.session.data["s18-tlevels-desc-whatyoulllearn"] = "You'll learn specific topics in design, surveying and planning: Project management, Budgeting and resource allocation, Procurement, Risk management. In addition to the core content, you will have the option to study one of the following specialisms: Surveying and design for construction and the built environment, Civil engineering, Building services design, Hazardous materials analysis and surveying."
