@@ -17,7 +17,11 @@ Example usage:
 
 */
 
+let tlevels = require('./tlevels')
+
 module.exports = {
+
+  tlevels,
 
   // Insert values here
   "sprint13-tlevels-count": 0,
