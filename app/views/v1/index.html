@@ -1,3 +1,4 @@
+{% set navActive = 'home' %}
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -5,7 +6,7 @@
 {% endblock %}
 
 {% block header %}
-  {% include "includes/header-sprint14.html" %}
+  {% include "includes/v1/header.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -18,8 +19,6 @@
 }) }}
 
 {% endblock %}
-
-
 
 {% block content %}
 
@@ -187,7 +186,7 @@
             <a class="govuk-link" href="javascript:preventDefault();">Add a T Level</a>
           </li>
           <li>
-            <a class="govuk-link" href="tlevels-view-list">View and edit T Levels</a>
+            <a class="govuk-link" href="t-levels/">View and edit T Levels</a>
           </li>
         </ul>
       </div>
@@ -216,16 +215,16 @@
   <div class="govuk-grid-column-one-third">
     <div class="cd-card-1 cd-card--provider">
       <div class="cd-card-content">
-        <h2 class="govuk-heading-s">Your locations</h2>
-        <p class="govuk-body-s">View and manage the venues for your learning and training locations.</p>
+        <h2 class="govuk-heading-s">Your venues</h2>
+        <p class="govuk-body-s">View and manage your learning and training venues.</p>
       </div>
       <div class="cd-card-action">
         <ul class="govuk-list govuk-list__small">
           <li>
-            <a class="govuk-link" href="javascript:preventDefault();">Add a location<span class="govuk-visually-hidden"> further education courses</span></a>
+            <a class="govuk-link" href="javascript:preventDefault();">Add a venue<span class="govuk-visually-hidden"> further education courses</span></a>
           </li>
           <li>
-            <a class="govuk-link" href="javascript:preventDefault();">View and edit locations<span class="govuk-visually-hidden"> further education courses</span></a>
+            <a class="govuk-link" href="javascript:preventDefault();">View and edit venues<span class="govuk-visually-hidden"> further education courses</span></a>
           </li>
         </ul>
       </div>

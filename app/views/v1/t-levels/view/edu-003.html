@@ -1,0 +1,213 @@
+{% set navActive = 'tlevels' %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  View T Level
+{% endblock %}
+
+{% block header %}
+  {% include "includes/v1/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+  <a href="../" class="govuk-back-link">Back to T Level list</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Your T Level information</h1>
+
+    <h2 class="govuk-heading-l">T Level in Education and Childcare</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          T Level added on
+        </dt>
+        <dd class="govuk-summary-list__value">
+          16 September 2020
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Last updated
+        </dt>
+        <dd class="govuk-summary-list__value">
+          23 September 2020
+        </dd>
+      </div>
+
+    </dl>
+    <!--  -->
+
+    <h3 class="govuk-heading-m">T Level details</h3>
+    <p class="govuk-body">Information for the learner about how the T Level will be delivered.</p>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Your reference
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">REF38790</dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit#s18-tlevels-details-reference">Change<span class="govuk-visually-hidden"> your reference</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Start date
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          21 Sep 2020
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit#s18-tlevels-details-startdate">Change<span class="govuk-visually-hidden"> start date</span></a>
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          T Level location
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list">
+            <li>Medway Campus</li>
+          </ul>
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit#s18-tlevels-details-location">Change<span class="govuk-visually-hidden"> T Level locations</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          T Level webpage
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          http://www.provider.com/tlevel
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit#s18-tlevels-details-webpage">Change<span class="govuk-visually-hidden"> T Level webpage</span></a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <!-- -->
+
+    <h3 class="govuk-heading-m">T Level description</h3>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Who this T Level is for
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          The T Level is suitable for anyone wanting a career in early years education, childcare or assisting teaching. During the two-year programme, you will learn the core knowledge and skills that underpin many jobs in early years education. Your learning will combine 26 weeks classroom study and a minimum of 9 weeks with an employer.
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit#s18-tlevels-desc-whothiscourseisfor">Change<span class="govuk-visually-hidden"> who is this T Level for</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Entry requirements
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          You will need either 5 GCSEs (at grade 4 or above), including English, maths and science, or a pass in a relevant level 2 qualification. If you do not have the recommended entry qualifications you may still be considered if you have relevant experience or show a natural ability for the subject.
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit#s18-tlevels-desc-entryrequirements">Change<span class="govuk-visually-hidden"> entry requirements</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What you'll learn
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          You will develop an understanding of: The education and childcare sector from ages 0 to 19, Child development, How to support children and young people’s education, Safeguarding, health and safety and wellbeing, Understanding and managing behaviour, Observing and assessing children and young people, Equality and diversity, Special educational needs and disability, English as an additional language, Working with parents, carers and wider families, Working with agencies and services that support children, families and carers, Reflective practice and other forms of professional development In addition to the core content, you will have the option to study one of the following as a specialist subject: Early years education and childcare, Assisting teaching, Supporting and mentoring students in further and higher education (available from September 2021) The specialist subject can provide you with the knowledge and skills required to enter employment or further study in the specific area.
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit#s18-tlevels-desc-whatyoulllearn">Change<span class="govuk-visually-hidden"> what you'll learn</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How you'll learn
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Your learning will combine 26 weeks classroom study and a minimum of 9 weeks with an employer. If you choose to specialise in, early years education and childcare your industry placement will be for 21 weeks with an employer. Your learning will include investigative and practical work, group and peer work, private study and e-learning. The industry placement will provide you with a real experience of the workplace.
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit#s18-tlevels-desc-howyoulllearn">Change<span class="govuk-visually-hidden"> how you'll learn</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How you'll be assessed
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          You will be assessed by written examination and task based assessments that will take place throughout the T Level.
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit#s18-tlevels-desc-howassessed">Change<span class="govuk-visually-hidden"> how you'll be assessed</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What you can do next
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          This T Level has been developed in collaboration with employers and businesses so the content will meet the needs of the industry and prepare you for work, providing you the knowledge and experience needed to open the door to highly skilled employment, an Apprenticeship or higher-level study. You can progress into roles such as: Nursery worker, Special educational needs (SEN) teaching assistant, Teaching assistant, Learning mentor.
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit#s18-tlevels-desc-whatyoucandonext">Change<span class="govuk-visually-hidden"> what you can do next</span></a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <!-- -->
+
+    <div class="govuk-!-margin-bottom-6">
+      <a href="javascript:preventDefault();">
+        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+          Delete T Level
+        </button>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
