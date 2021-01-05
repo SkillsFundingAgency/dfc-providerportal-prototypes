@@ -30,5 +30,7 @@ require('./routes/sprint-14.js')(router);
 require('./routes/sprint-16.js')(router);
 require('./routes/sprint-18.js')(router);
 
+require('./routes/v1.js')(router);
+
 
 module.exports = router
