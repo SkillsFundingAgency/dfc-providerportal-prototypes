@@ -1,0 +1,219 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check and publish T Level changes
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint13.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="tlevels-edit#s18-tlevels-details-reference" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+
+          <h1 class="govuk-heading-xl">Check and publish your T Level</h1>
+      <h2 class="govuk-heading-l">T Level in Design, Surveying and Planning for Construction</h2>
+
+          <h2 class="govuk-heading-m">T Level details</h2>
+
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Your reference
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['s18-tlevels-details-reference'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="tlevels-edit#s18-tlevels-details-reference">
+                  Change<span class="govuk-visually-hidden"> your reference</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Start date
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['s18-tlevels-details-startdate-day'] }}
+                {{ data['s18-tlevels-details-startdate-monthname'] }}
+                {{ data['s18-tlevels-details-startdate-year'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="tlevels-edit#s18-tlevels-details-startdate">
+                  Change<span class="govuk-visually-hidden"> start date</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                T Level location
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {% if data["s18-tlevels-details-location"] | length > 1 %}
+                  <ul class="govuk-list">
+                    {% for item in data['s18-tlevels-details-location'] %}
+                      <li>{{ item }}</li>
+                    {% endfor %}
+                  </ul>
+                {% else %}
+                  {{ data['s18-tlevels-details-location'] }}
+                {% endif %}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="tlevels-edit#s18-tlevels-details-location">
+                  Change<span class="govuk-visually-hidden"> t level location</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                T Level webpage
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['s18-tlevels-details-webpage'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="tlevels-edit#s18-tlevels-details-webpage">
+                  Change<span class="govuk-visually-hidden"> t level webpage</span>
+                </a>
+              </dd>
+            </div>
+          </dl>
+
+          <h2 class="govuk-heading-m">T Level description</h2>
+
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Who this T Level is for
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['s18-tlevels-desc-whothiscourseisfor'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="tlevels-edit#s18-tlevels-desc-whothiscourseisfor">
+                  Change<span class="govuk-visually-hidden"> who is the course for</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Entry requirements
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['s18-tlevels-desc-entryrequirements'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="tlevels-edit#s18-tlevels-desc-entryrequirements">
+                  Change<span class="govuk-visually-hidden"> entry requirements</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                What you'll learn
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['s18-tlevels-desc-whatyoulllearn'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="tlevels-edit#s18-tlevels-desc-whatyoulllearn">
+                  Change<span class="govuk-visually-hidden"> what you'll learn</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                How you'll learn
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['s18-tlevels-desc-howyoulllearn'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="tlevels-edit#s18-tlevels-desc-howyoulllearn">
+                  Change<span class="govuk-visually-hidden"> how you'll learn</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                How you'll be assessed
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['s18-tlevels-desc-howassessed'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="tlevels-edit#s18-tlevels-desc-howassessed">
+                  Change<span class="govuk-visually-hidden"> how you'll be assessed</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                What you can do next
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['s18-tlevels-desc-whatyoucandonext'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="tlevels-edit#s18-tlevels-desc-whatyoucandonext">
+                  Change<span class="govuk-visually-hidden"> what you can do next</span>
+                </a>
+              </dd>
+            </div>
+          </dl>
+
+          <h2 class="govuk-heading-m">Publish your T Level</h2>
+
+          <p class="govuk-body">Your T Level will be updated on Publish to the course directory and available to learners searching for learning and training opportunities on the National Careers Service.</p>
+
+          <!--p class="govuk-body">By publishing this T Level you are confirming that, to the best of your knowledge, the details you are providing are correct.</p-->
+
+          <form action="" method="post" novalidate>
+
+            <!--input type="hidden" name="answers-checked" value="true"-->
+
+            <!--button class="govuk-button" data-module="govuk-button">
+              Publish changes
+            </button-->
+
+            {{ govukButton({
+              classes: "govuk-!-margin-right-3",
+              text: "Publish changes"
+            }) }}
+
+            {{ govukButton({
+              classes: "govuk-button--secondary",
+              href: "tlevels-view",
+              text: "Cancel"
+            }) }}
+
+          </form>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
