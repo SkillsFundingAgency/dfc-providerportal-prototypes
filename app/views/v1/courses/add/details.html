@@ -208,6 +208,83 @@
         }) }}
 
         <!--  -->
+        
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="course-details-duration-value">
+              Duration
+            </label>
+          </h1>
+          <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-3" id="course-details-duration-value" name="course-details-duration-value" type="text">
+          <select class="govuk-select" id="course-details-duration-unit" name="course-details-duration-unit">
+            <option value="" selected>Select</option>
+            <option value="hours">Hours</option>
+            <option value="days">Days</option>
+            <option value="weeks">Weeks</option>
+            <option value="months">Months</option>
+            <option value="years">Years</option>
+          </select>
+        </div>
+
+        <!--  -->
+
+        {{ govukRadios({
+          idPrefix: "course-details-hours",
+          name: "course-details-hours",
+          fieldset: {
+            legend: {
+              text: "Course hours",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "Full time",
+              text: "Full time"
+            },
+            {
+              value: "Part time",
+              text: "Part time"
+            },
+            {
+              value: "Flexible",
+              text: "Flexible"
+            }
+          ]
+        }) }}
+
+        <!--  -->
+
+        {{ govukRadios({
+          idPrefix: "course-details-attendance",
+          name: "course-details-attendance",
+          fieldset: {
+            legend: {
+              text: "Attendance pattern",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "Daytime",
+              text: "Daytime"
+            },
+            {
+              value: "Evening",
+              text: "Evening"
+            },
+            {
+              value: "Weekend",
+              text: "Weekend"
+            },
+            {
+              value: "Day/Block Release",
+              text: "Day/Block Release"
+            }
+          ]
+        }) }}
+
+        <!--  -->
+
 
         {{ govukButton({
           text: "Continue"
