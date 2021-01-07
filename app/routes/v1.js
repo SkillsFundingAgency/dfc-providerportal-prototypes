@@ -43,4 +43,8 @@ module.exports = function (router) {
 
     })
 
+    router.post('/v1/courses/add/description', function (req, res) {
+        res.redirect('/v1/courses/add/details');
+    })
+
 }
