@@ -1,0 +1,300 @@
+{% set navActive = 'courses' %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Courses - Add course details
+{% endblock %}
+
+{% block header %}
+  {% include "includes/v1/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Course details</h1>
+
+      <p class="govuk-body-l govuk-!-margin-bottom-5">Add information on how the course will be delivered.</p>
+
+      <form action="" method="post" class="form">
+
+        <!--  -->
+
+        {{ govukInput({
+          id: "course-details-coursename",
+          name: "course-details-coursename",
+          classes: "govuk-!-margin-bottom-3",
+          label: {
+            text: "Course name",
+            classes: "govuk-label--m"
+          },
+          hint: {
+            html: 'The course name displayed on the National Career Service, <a href="javascript:preventDefault();">Find a course</a>.'
+          },
+          value: "Foundation Degree in Game Art - South Gloucestershire and Stroud College"
+        }) }}
+
+        <!--  -->
+
+        {{ govukInput({
+          id: "course-details-reference",
+          name: "course-details-reference",
+          classes: "govuk-!-margin-bottom-3",
+          label: {
+            text: "Your reference",
+            classes: "govuk-label--m"
+          },
+          hint: {
+            text: "A reference that will help you identify this course in your internal systems. This will not be visible to learners."
+          }
+        }) }}
+
+        <!--  -->
+
+        {{ govukRadios({
+          idPrefix: "course-details-type",
+          name: "course-details-type",
+          fieldset: {
+            legend: {
+              text: "Course type",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "Classroom based",
+              text: "Classroom based"
+            },
+            {
+              value: "Online",
+              text: "Online"
+            },
+            {
+              value: "Work based",
+              text: "Work based"
+            }
+          ]
+        }) }}
+
+        <!--  -->
+
+        {% set dateHtml %}
+        {{ govukDateInput({
+          id: "course-details-startdate-date",
+          namePrefix: "course-details-startdate-date",
+          classes: "govuk-!-margin-bottom-3",
+          hint: {
+            text: "For example, 30 9 2019"
+          }
+        }) }}
+        {% endset -%}
+
+        {{ govukRadios({
+          idPrefix: "course-details-startdate",
+          name: "course-details-startdate",
+          fieldset: {
+            legend: {
+              text: "Start date",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "Defined start date",
+              text: "Defined start date",
+              conditional: {
+                html: dateHtml
+              }
+            },
+            {
+              value: "Flexible start date",
+              text: "Flexible start date"
+            }
+          ]
+        }) }}
+
+        <!--  -->
+
+        <div class="govuk-form-group govuk-!-margin-bottom-1">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Course location
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="course-details-location" name="course-details-location" type="checkbox" value="The Brooke House Sixth Form College">
+                <label class="govuk-label govuk-checkboxes__label" for="course-details-location">
+                  The Brooke House Sixth Form College
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+        <p class="govuk-body govuk-!-margin-bottom-7">
+          <!--
+          {{ govukButton({
+            text: "Add another location",
+            classes: "govuk-button--secondary"
+          }) }}
+          -->
+          <a href="#" class="govuk-link">Add another location</a>
+        </p>
+
+        <!--  -->
+
+        <div class="govuk-form-group govuk-!-margin-bottom-7">
+          <label class="govuk-label govuk-label--m" for="course-details-webpage">
+            Course webpage
+          </label>
+          <span id="course-details-webpage-hint" class="govuk-hint">
+            The webpage for this course. For example, http://www.provider.com/coursename.
+          </span>
+          <input class="govuk-input" id="course-details-webpage" name="course-details-webpage" type="text" aria-describedby="course-details-webpage-hint">
+        </div>
+
+        <!--  -->
+
+        {{ govukInput({
+          id: "course-details-cost",
+          name: "course-details-cost",
+          label: {
+            text: "Cost",
+            classes: "govuk-label--m"
+          },
+          prefix: {
+            text: "£"
+          },
+          classes: "govuk-input--width-5",
+          hint: {
+            text: "Cost of the course to the learner."
+          }
+        }) }}
+
+        <!--  -->
+
+        {{ govukCharacterCount({
+          name: "course-details-description",
+          id: "course-details-description",
+          maxlength: 255,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "Cost description"
+          },
+          hint: {
+            text: "A description of what the cost includes and additional costs to the learner. For example, assessment, exam fees or study materials."
+          },
+          value: data['course-details-description']
+        }) }}
+
+        <!--  -->
+        
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="course-details-duration-value">
+              Duration
+            </label>
+          </h1>
+          <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-3" id="course-details-duration-value" name="course-details-duration-value" type="text">
+          <select class="govuk-select" id="course-details-duration-unit" name="course-details-duration-unit">
+            <option value="" selected>Select</option>
+            <option value="hours">Hours</option>
+            <option value="days">Days</option>
+            <option value="weeks">Weeks</option>
+            <option value="months">Months</option>
+            <option value="years">Years</option>
+          </select>
+        </div>
+
+        <!--  -->
+
+        {{ govukRadios({
+          idPrefix: "course-details-hours",
+          name: "course-details-hours",
+          fieldset: {
+            legend: {
+              text: "Course hours",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "Full time",
+              text: "Full time"
+            },
+            {
+              value: "Part time",
+              text: "Part time"
+            },
+            {
+              value: "Flexible",
+              text: "Flexible"
+            }
+          ]
+        }) }}
+
+        <!--  -->
+
+        {{ govukRadios({
+          idPrefix: "course-details-attendance",
+          name: "course-details-attendance",
+          fieldset: {
+            legend: {
+              text: "Attendance pattern",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "Daytime",
+              text: "Daytime"
+            },
+            {
+              value: "Evening",
+              text: "Evening"
+            },
+            {
+              value: "Weekend",
+              text: "Weekend"
+            },
+            {
+              value: "Day/Block Release",
+              text: "Day/Block Release"
+            }
+          ]
+        }) }}
+
+        <!--  -->
+
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

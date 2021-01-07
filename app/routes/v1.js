@@ -43,4 +43,16 @@ module.exports = function (router) {
 
     })
 
+    router.post('/v1/courses/add/description', function (req, res) {
+        res.redirect('/v1/courses/add/details');
+    })
+
+    router.post('/v1/courses/add/details', function (req, res) {
+        res.redirect('/v1/courses/add/check-publish');
+    })
+
+    router.post('/v1/courses/add/check-publish', function (req, res) {
+        res.redirect('/v1/courses/add/success');
+    })
+
 }
