@@ -1,0 +1,359 @@
+{% set navActive = 'courses' %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  List of courses
+{% endblock %}
+
+{% block header %}
+  {% include "includes/v1/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+  <a href="list" class="govuk-back-link">Back to course list</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Edit your course information</h1>
+
+    <h2 class="govuk-heading-l">All other education/leisure type courses, Science and Mathematics (SSA 2)</h2>
+
+    <p class="govuk-body">You can <a href="javascript:preventdefault();">view your published course (opens in new window or tab)</a> to see how it's viewed by learners.</p>
+
+    <!--  -->
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          LARS/QAN
+        </dt>
+        <dd class="govuk-summary-list__value">
+          ZOEDL002
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Qualification name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          All other education/leisure type courses, Science and Mathematics (SSA 2)
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Qualification Level
+        </dt>
+        <dd class="govuk-summary-list__value">
+          X
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Awarding organisation
+        </dt>
+        <dd class="govuk-summary-list__value">
+          NONE
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Created
+        </dt>
+        <dd class="govuk-summary-list__value">
+          08 January 2021
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ govukTag({
+            text: "Published",
+            classes: "govuk-tag--green"
+          }) }}
+        </dd>
+      </div>
+
+    </dl>
+    <!--  -->
+
+    <h3 class="govuk-heading-m">Course details</h3>
+    <p class="govuk-body">Information for the learner about how the T Level will be delivered.</p>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course name
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          All other education/leisure type courses, Science and Mathematics (SSA 2)
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-reference">Change<span class="govuk-visually-hidden"> course name</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Your reference
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+        
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-reference">Change<span class="govuk-visually-hidden"> your reference</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course type
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Classroom based
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-reference">Change<span class="govuk-visually-hidden"> course type</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Start date
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          21 Sep 2020
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-startdate">Change<span class="govuk-visually-hidden"> start date</span></a>
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course location
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Presidency London College
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-location">Change<span class="govuk-visually-hidden"> T Level locations</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course webpage
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-webpage">Change<span class="govuk-visually-hidden"> course webpage</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Cost
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          £
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-webpage">Change<span class="govuk-visually-hidden"> cost</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Cost description
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-webpage">Change<span class="govuk-visually-hidden"> cost description</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Duration
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-webpage">Change<span class="govuk-visually-hidden"> duration</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course hours
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Full time
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-webpage">Change<span class="govuk-visually-hidden"> course hours</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Attendance pattern
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Daytime
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-details#s16-tlevels-details-webpage">Change<span class="govuk-visually-hidden"> attendance pattern</span></a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <!-- -->
+
+    <div class="govuk-!-margin-bottom-6">
+      {{ govukButton({
+        href: "copy/",
+        text: "Copy course details",
+        classes: "govuk-button--secondary govuk-!-margin-right-3"
+      }) }}
+      {{ govukButton({
+        href: "delete/",
+        text: "Delete course details",
+        classes: "govuk-button--warning"
+      }) }}
+    </div>
+
+    <!-- -->
+
+    <h3 class="govuk-heading-m">Course description</h3>
+    <p class="govuk-body">Changes made to your course description will update all of your courses for this qualification.</p>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Who is the course for
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+        
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-description#s16-tlevels-desc-whothiscourseisfor">Change<span class="govuk-visually-hidden"> who is the course for</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Entry requirements
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+        
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-description#s16-tlevels-desc-entryrequirements">Change<span class="govuk-visually-hidden"> entry requirements</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What you'll learn
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+        
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-description#s16-tlevels-desc-whatyoulllearn">Change<span class="govuk-visually-hidden"> what you'll learn</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How you'll learn
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+        
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-description#s16-tlevels-desc-howyoulllearn">Change<span class="govuk-visually-hidden"> how you'll learn</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Waht you'll need to bring
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+        
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-description#s16-tlevels-desc-howyoulllearn">Change<span class="govuk-visually-hidden"> what you'll need to bring</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How you'll be assessed
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+        
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-description#s16-tlevels-desc-howassessed">Change<span class="govuk-visually-hidden"> how you'll be assessed</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What you can do next
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+        
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="tlevels-edit-description#s16-tlevels-desc-whatyoucandonext">Change<span class="govuk-visually-hidden"> what you can do next</span></a>
+        </dd>
+      </div>
+
+    </dl>
+
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

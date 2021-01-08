@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Courses - Add course details
+  Courses - Copy course details
 {% endblock %}
 
 {% block header %}
@@ -20,18 +20,26 @@
 
 {% endblock %}
 
-
-
 {% block content %}
 
 <!-- Enter page content inside this block -->
 
+<div class="pttcd-notice govuk-!-margin-bottom-8">
+  <h2 class="govuk-heading-m">Qualification details</h2>
+  <p class="govuk-body govuk-!-margin-bottom-1"><strong>LARS/QAN:</strong> ZOEDL002</p>
+  <p class="govuk-body govuk-!-margin-bottom-1"><strong>Qualification name:</strong> All other education/leisure type courses, Science and Mathematics (SSA 2)</p>
+  <p class="govuk-body govuk-!-margin-bottom-1"><strong>Qualification level:</strong> X</p>
+  <p class="govuk-body"><strong>Awarding organisation:</strong> NONE</p>
+</div>
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Course details</h1>
+      <h1 class="govuk-heading-xl">Copy course details</h1>
 
-      <p class="govuk-body-l govuk-!-margin-bottom-5">Add information on how the course will be delivered.</p>
+      <p class="govuk-body govuk-!-margin-bottom-5">Copy and make changes to your course details and create a new course.
+
+</p>
 
       <form action="" method="post" class="form">
 
@@ -132,24 +140,28 @@
 
         <!--  -->
 
-        <div class="govuk-form-group govuk-!-margin-bottom-1">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h1 class="govuk-fieldset__heading">
-                Course location
-              </h1>
-            </legend>
-            <div class="govuk-checkboxes govuk-checkboxes--small">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="course-details-location" name="course-details-location" type="checkbox" value="The Brooke House Sixth Form College">
-                <label class="govuk-label govuk-checkboxes__label" for="course-details-location">
-                  The Brooke House Sixth Form College
-                </label>
-              </div>
-            </div>
-
-          </fieldset>
-        </div>
+        {{ govukSelect({
+          id: "course-details-location",
+          name: "course-details-location",
+          formGroup: {
+            classes: "govuk-!-margin-bottom-3"
+          },
+          label: {
+            classes: "govuk-label--m",
+            text: "Course location"
+          },
+          items: [
+            {
+              value: "",
+              text: "Select"
+            },
+            {
+              value: "The Brooke House Sixth Form College",
+              text: "The Brooke House Sixth Form College",
+              selected: true
+            }
+          ]
+        }) }}
         <p class="govuk-body govuk-!-margin-bottom-7">
           <!--
           {{ govukButton({
@@ -167,7 +179,7 @@
             Course webpage
           </label>
           <span id="course-details-webpage-hint" class="govuk-hint">
-            The webpage for this course. For example, http://www.provider.com/coursename.
+            The webpage for this course. For example, http://www.provider.com/coursename
           </span>
           <input class="govuk-input" id="course-details-webpage" name="course-details-webpage" type="text" aria-describedby="course-details-webpage-hint">
         </div>
@@ -287,7 +299,13 @@
 
 
         {{ govukButton({
+          classes: "govuk-!-margin-right-3",
+          href: "check-publish",
           text: "Continue"
+        }) }}
+        {{ govukButton({
+          classes: "govuk-button--secondary",
+          text: "Cancel"
         }) }}
 
       </form>
