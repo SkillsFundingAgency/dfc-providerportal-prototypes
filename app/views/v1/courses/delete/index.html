@@ -1,0 +1,138 @@
+{% set navActive = 'courses' %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Courses - Delete course
+{% endblock %}
+
+{% block header %}
+  {% include "includes/v1/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Delete course</h1>
+    <p class="govuk-body">Deleting this course will remove it from Publish to the course directory and National Careers Service, Find a course.</p>
+
+    <!--  -->
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          	All other education/leisure type courses, Science and Mathematics (SSA 2)
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Classroom based
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Start date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          21 Sep 2020
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course location
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Presidency London College
+        </dd>
+      </div>
+
+    </dl>
+
+    <!--  -->
+
+    <h2 class="govuk-heading-m"></h2>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Are you sure?
+          </h2>
+        </legend>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="areyousure" name="areyousure" type="checkbox" value="delete">
+            <label class="govuk-label govuk-checkboxes__label" for="areyousure">
+              Yes, I want to delete this course
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    {{ govukButton({
+      href: "success",
+      text: "Delete",
+      disabled: true,
+      classes: "govuk-button--warning govuk-!-margin-right-3"
+    }) }}
+
+    {{ govukButton({
+      href: "/v1/courses/view",
+      text: "Cancel",
+      classes: "govuk-button--secondary"
+    }) }}
+
+    <!-- -->
+
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+{% block pageScripts %}
+
+	<script>
+    $( "#areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--warning");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
