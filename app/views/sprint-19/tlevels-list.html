@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  List of T Levels
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint14.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">Your T Levels</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">T Level</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Start date</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Venues</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell"><a href="tlevels-view">T Level in Design, Surveying and Planning for Construction</a></td>
+          <td class="govuk-table__cell nowrap">21 Sep 2020</td>
+          <td class="govuk-table__cell">Multiple venues</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell"><a href="tlevels-view-digital-maidstone">T Level in Digital Production, Design and Development</a></td>
+          <td class="govuk-table__cell nowrap">21 Sep 2020</td>
+          <td class="govuk-table__cell">Avenue Campus</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell"><a href="tlevels-view-education-medway">T Level in Education and Childcare</a></td>
+          <td class="govuk-table__cell nowrap">21 Sep 2020</td>
+          <td class="govuk-table__cell">Medway Campus</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell"><a href="tlevels-view">T Level in Design, Surveying and Planning for Construction</a></td>
+          <td class="govuk-table__cell nowrap">19 Sep 2021</td>
+          <td class="govuk-table__cell">Multiple venues</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell"><a href="tlevels-view-digital-maidstone">T Level in Digital Production, Design and Development</a></td>
+          <td class="govuk-table__cell nowrap">19 Sep 2021</td>
+          <td class="govuk-table__cell">Avenue Campus</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell"><a href="tlevels-view-education-medway">T Level in Education and Childcare</a></td>
+          <td class="govuk-table__cell nowrap">19 Sep 2021</td>
+          <td class="govuk-table__cell">Medway Campus</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell"><a href="tlevels-view">T Level in Design, Surveying and Planning for Construction</a></td>
+          <td class="govuk-table__cell nowrap">22 Sep 2022</td>
+          <td class="govuk-table__cell">Multiple venues</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell"><a href="tlevels-view-digital-maidstone">T Level in Digital Production, Design and Development</a></td>
+          <td class="govuk-table__cell nowrap">22 Sep 2022</td>
+          <td class="govuk-table__cell">Avenue Campus</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell"><a href="tlevels-view-education-medway">T Level in Education and Childcare</a></td>
+          <td class="govuk-table__cell nowrap">22 Sep 2022</td>
+          <td class="govuk-table__cell">Medway Campus</td>
+        </tr>
+      </tbody>
+    </table>
+
+    {{ govukButton({
+      text: "Add a T Level"
+    }) }}
+
+  </div>
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
