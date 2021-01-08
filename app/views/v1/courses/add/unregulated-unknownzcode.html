@@ -1,0 +1,354 @@
+{% set navActive = 'courses' %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Courses - Add unregulated course
+{% endblock %}
+
+{% block header %}
+  {% include "includes/v1/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <!--  -->
+  <div class="govuk-grid-column-full">
+    <!--h1 class="govuk-heading-xl">Courses</h1-->
+    <h2 class="govuk-heading-l">Choose a sector subject area (SSA)</h2>
+
+    <form action="" method="post" class="form">
+
+      <div class="cd-card cd-card-2 cd-card--provider">
+
+        <div class="govuk-form-group govuk-!-margin-bottom-0">
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-half">
+          {{ govukSelect({
+            id: "",
+            name: "",
+            label: {
+              text: "SSA level 1"
+            },
+            items: [
+              {
+                value: "",
+                text: "Choose SSA Level 1"
+              },
+              {
+                value: "Health, public services, care",
+                text: "Health, public services, care"
+              },
+              {
+                value: "Science, mathematics",
+                text: "Science, mathematics",
+                selected: true
+              },
+              {
+                value: "Agriculture, horticulture, animals",
+                text: "Agriculture, horticulture, animals"
+              },
+              {
+                value: "Engineering and manufacturing",
+                text: "Engineering and manufacturing"
+              },
+              {
+                value: "Construction, planning, built environment",
+                text: "Construction, planning, built environment"
+              },
+              {
+                value: "ICT",
+                text: "ICT"
+              },
+              {
+                value: "Retail and commercial enterprise",
+                text: "Retail and commercial enterprise"
+              },
+              {
+                value: "Leisure, travel and tourism",
+                text: "Leisure, travel and tourism"
+              },
+              {
+                value: "Arts, media and publishing",
+                text: "Arts, media and publishing"
+              },
+              {
+                value: "History, philosophy, theology",
+                text: "History, philosophy, theology"
+              },
+              {
+                value: "Social sciences",
+                text: "Social sciences"
+              },
+              {
+                value: "Languages, literature culture",
+                text: "Languages, literature culture"
+              },
+              {
+                value: "Education and training",
+                text: "Education and training"
+              },
+              {
+                value: "Preparation for life and work",
+                text: "Preparation for life and work"
+              },
+              {
+                value: "Business, administration, law",
+                text: "Business, administration, law"
+              }
+            ]
+          }) }}
+        </div>
+  <div class="govuk-grid-column-one-half">
+          {{ govukSelect({
+            id: "",
+            name: "",
+            label: {
+              text: "SSA level 2"
+            },
+            items: [
+              {
+                value: "",
+                text: "Choose SSA level 2"
+              },
+              {
+                value: "Science",
+                text: "Science"
+              },
+              {
+                value: "Mathematics, statistics",
+                text: "Mathematics, statistics",
+                selected: true
+              }
+            ]
+          }) }}
+          </div>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+                    <div class="govuk-form-group govuk-!-font-size-14">
+                        <div class="accordion govuk-heading-s">Level</div>
+                        <div class="panel">
+
+                            <fieldset class="govuk-fieldset">
+                                <legend class="govuk-visually-hidden">
+                                    Select Level
+                                </legend>
+
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-3" name="NotionalNVQLevelv2Filter" type="checkbox" value="E">
+                                            <label class="govuk-label govuk-checkboxes__label" for="NotionalNVQLevelv2Filter-3">
+                                                Entry level (33)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-0" name="NotionalNVQLevelv2Filter" type="checkbox" value="1">
+                                            <label class="govuk-label govuk-checkboxes__label" for="NotionalNVQLevelv2Filter-0">
+                                                Level 1 (33)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-1" name="NotionalNVQLevelv2Filter" type="checkbox" value="2">
+                                            <label class="govuk-label govuk-checkboxes__label" for="NotionalNVQLevelv2Filter-1">
+                                                Level 2 (33)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-2" name="NotionalNVQLevelv2Filter" type="checkbox" value="3">
+                                            <label class="govuk-label govuk-checkboxes__label" for="NotionalNVQLevelv2Filter-2">
+                                                Level 3 (33)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-4" name="NotionalNVQLevelv2Filter" type="checkbox" value="4">
+                                            <label class="govuk-label govuk-checkboxes__label" for="NotionalNVQLevelv2Filter-4">
+                                                Level 4 (30)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-5" name="NotionalNVQLevelv2Filter" type="checkbox" value="5">
+                                            <label class="govuk-label govuk-checkboxes__label" for="NotionalNVQLevelv2Filter-5">
+                                                Level 5 (2)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-6" name="NotionalNVQLevelv2Filter" type="checkbox" value="6">
+                                            <label class="govuk-label govuk-checkboxes__label" for="NotionalNVQLevelv2Filter-6">
+                                                Level 6 (2)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-8" name="NotionalNVQLevelv2Filter" type="checkbox" value="7">
+                                            <label class="govuk-label govuk-checkboxes__label" for="NotionalNVQLevelv2Filter-8">
+                                                Level 7 (1)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-7" name="NotionalNVQLevelv2Filter" type="checkbox" value="X">
+                                            <label class="govuk-label govuk-checkboxes__label" for="NotionalNVQLevelv2Filter-7">
+                                                Unknown or not applicable (2)
+                                            </label>
+                                        </div>
+
+                                </div>
+                            </fieldset>
+
+                        </div>
+                    </div>
+                    <div class="govuk-form-group govuk-!-font-size-14">
+                        <div class="accordion govuk-heading-s">Category</div>
+                        <div class="panel">
+
+                            <fieldset class="govuk-fieldset">
+                                <legend class="govuk-visually-hidden">
+                                    Select Category
+                                </legend>
+
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgAimRefFilter-0" name="AwardOrgAimRefFilter" type="checkbox" value="APP H CAT A">
+                                            <label class="govuk-label govuk-checkboxes__label" for="AwardOrgAimRefFilter-0">
+                                                A: Non-regulated (ESFA funded) (88)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgAimRefFilter-1" name="AwardOrgAimRefFilter" type="checkbox" value="APP H CAT E">
+                                            <label class="govuk-label govuk-checkboxes__label" for="AwardOrgAimRefFilter-1">
+                                                E: Not Community Learning and not ESFA funded (8)
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgAimRefFilter-2" name="AwardOrgAimRefFilter" type="checkbox" value="APP H CAT F">
+                                            <label class="govuk-label govuk-checkboxes__label" for="AwardOrgAimRefFilter-2">
+                                                F: Community Learning (1)
+                                            </label>
+                                        </div>
+
+                                </div>
+                            </fieldset>
+
+                        </div>
+                    </div>
+                <div class="govuk-form-group govuk-!-font-size-14">
+                    <a class="govuk-button" id="ApplyFilter">Apply</a>
+                </div>
+        </div>
+  <div class="govuk-grid-column-three-quarters">
+
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Innovation code, Level 3, Mathematics and Statistics, 1 credit, PW A</h2>
+          <p class="govuk-body">LARS/QAN: <strong>Z0004930</strong></p>
+          <p class="govuk-body">Level: <strong>3</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0"><a href="description">Choose this provision</a><p>
+      </div>
+
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Innovation code, Level 3, Mathematics and Statistics, 3-5 credits, PW A</h2>
+          <p class="govuk-body">LARS/QAN: <strong>Z0004932</strong></p>
+          <p class="govuk-body">Level: <strong>3</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0"><a href="">Choose this provision</a><p>
+      </div>
+
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Innovation code, Level 3, Mathematics and Statistics, 25-36 credits, PW A</h2>
+          <p class="govuk-body">LARS/QAN: <strong>Z0004937</strong></p>
+          <p class="govuk-body">Level: <strong>3</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0"><a href="">Choose this provision</a><p>
+      </div>
+
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Non regulated SFA formula funded provision, Level 3, Mathematics and Statistics, 581 to 1060 hrs, PW A</h2>
+          <p class="govuk-body">LARS/QAN: <strong>Z0000251</strong></p>
+          <p class="govuk-body">Level: <strong>3</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0"><a href="">Choose this provision</a><p>
+      </div>
+
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Innovation code, Level 2, Mathematics and Statistics, 25-36 credits, PW A</h2>
+          <p class="govuk-body">LARS/QAN: <strong>Z0004925</strong></p>
+          <p class="govuk-body">Level: <strong>2</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0"><a href="">Choose this provision</a><p>
+      </div>
+
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Non regulated SFA formula funded provision, Level 3, Mathematics and Statistics, 21 to 44 hrs, PW A</h2>
+          <p class="govuk-body">LARS/QAN: <strong>Z0002538</strong></p>
+          <p class="govuk-body">Level: <strong>3</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0"><a href="">Choose this provision</a><p>
+      </div>
+
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Innovation code, Level 1, Mathematics and Statistics, 49-72 credits, PW A</h2>
+          <p class="govuk-body">LARS/QAN: <strong>Z0004915</strong></p>
+          <p class="govuk-body">Level: <strong>1</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0"><a href="">Choose this provision</a><p>
+      </div>
+
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Non regulated SFA formula funded provision, Level 2, Mathematics and Statistics, 197 to 292 hrs, PW A</h2>
+          <p class="govuk-body">LARS/QAN: <strong>Z0000247</strong></p>
+          <p class="govuk-body">Level: <strong>2</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0"><a href="">Choose this provision</a><p>
+      </div>
+
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Non regulated SFA formula funded provision, Level 1, Mathematics and Statistics, 13 to 20 hrs, PW A</h2>
+          <p class="govuk-body">LARS/QAN: <strong>Z0002525</strong></p>
+          <p class="govuk-body">Level: <strong>1</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0"><a href="">Choose this provision</a><p>
+      </div>
+
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Non regulated SFA formula funded provision, Level 1, Mathematics and Statistics, 93 to 100 hrs, PW A</h2>
+          <p class="govuk-body">LARS/QAN: <strong>Z0002529</strong></p>
+          <p class="govuk-body">Level: <strong>1</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0"><a href="">Choose this provision</a><p>
+      </div>
+
+    <nav class="pttcd-c-pager govuk-body">
+
+      <ul class="pttcd-c-pager__page-list">
+        <li class="pttcd-c-pager__page-list__current-page">1</li>
+        <li><a href="javascript:preventDefault();" class="govuk-link">2</a></li>
+        <li class="pttcd-c-pager__post-ellipsis">…</li>
+        <li><a href="javascript:preventDefault();" class="govuk-link">16</a></li>
+      </ul>
+
+      <a href="javascript:preventDefault();" class="govuk-link pttcd-c-pager__next-page" rel="next">Next page</a>
+    
+    </nav>
+
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
