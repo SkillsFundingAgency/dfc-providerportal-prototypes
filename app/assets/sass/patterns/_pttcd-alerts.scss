@@ -28,6 +28,10 @@
     border: 5px solid #1d70b8;
     padding: 20px;
 
+    &--warning{
+        border-color: $govuk-error-colour;
+    }
+
     *:last-child {
         margin-bottom: 0;
     }

@@ -42,7 +42,7 @@
                 Course name
               </dt>
               <dd class="govuk-summary-list__value">
-                Foundation Degree in Game Art - South Gloucestershire and Stroud College
+                {{ data['course-details-coursename'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -55,6 +55,7 @@
                 Your reference
               </dt>
               <dd class="govuk-summary-list__value">
+                {{ data['course-details-reference'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -67,7 +68,7 @@
                 Course type
               </dt>
               <dd class="govuk-summary-list__value">
-                Classroom based
+                {{ data['course-details-type'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -80,7 +81,13 @@
                 Start date	
               </dt>
               <dd class="govuk-summary-list__value">
-                20/09/2022
+              {% if data['course-details-startdate'] == "Defined start date" %}
+                {{ data['course-details-startdate-date-day'] }}
+                {{ data['course-details-startdate-date-month'] }}
+                {{ data['course-details-startdate-date-year'] }}
+              {% else %}
+                {{ data['course-details-startdate'] }}
+              {% endif %}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -93,7 +100,7 @@
                 Course location(s)
               </dt>
               <dd class="govuk-summary-list__value">
-                Presidency London College
+                {{ data['course-details-location'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -106,7 +113,7 @@
                 Course webpage
               </dt>
               <dd class="govuk-summary-list__value">
-                
+                {{ data['course-details-webpage'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -119,7 +126,7 @@
                 Cost
               </dt>
               <dd class="govuk-summary-list__value">
-                
+                £{{ data['course-details-cost'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -132,7 +139,7 @@
                 Cost description
               </dt>
               <dd class="govuk-summary-list__value">
-                
+                {{ data['course-details-description'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -145,7 +152,8 @@
                 Duration
               </dt>
               <dd class="govuk-summary-list__value">
-                9 months
+                {{ data['course-details-duration-value'] }}
+                {{ data['course-details-duration-unit'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -158,7 +166,7 @@
                 Course hours
               </dt>
               <dd class="govuk-summary-list__value">
-                Full time
+                {{ data['course-details-hours'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -171,7 +179,7 @@
                 Attendance pattern
               </dt>
               <dd class="govuk-summary-list__value">
-                Daytime
+                {{ data['course-details-attendance'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -202,7 +210,7 @@
                 Entry requirements
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['tlevels-desc-entryrequirements'] }}
+                {{ data['course-desc-entryrequirements'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -215,7 +223,7 @@
                 What you'll learn
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['tlevels-desc-whatyoulllearn'] }}
+                {{ data['course-desc-whatyoulllearn'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -228,7 +236,7 @@
                 How you'll learn
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['tlevels-desc-howyoulllearn'] }}
+                {{ data['course-desc-howyoulllearn'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -241,7 +249,7 @@
                 What you'll need to bring
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['tlevels-desc-whatyoullbring'] }}
+                {{ data['course-desc-whatyoullbring'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -254,7 +262,7 @@
                 How you'll be assessed
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['tlevels-desc-howassessed'] }}
+                {{ data['course-desc-howassessed'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -267,7 +275,7 @@
                 What you can do next
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['tlevels-desc-whatyoucandonext'] }}
+                {{ data['course-desc-whatyoucandonext'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">

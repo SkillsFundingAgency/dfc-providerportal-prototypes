@@ -20,6 +20,7 @@ module.exports = function (router) {
         return shortmonths[monthnum - 1] || '';
     }
     
+// Courses
 
     router.post('/v1/courses', function (req, res) {
 
@@ -32,6 +33,8 @@ module.exports = function (router) {
         }
 
     })
+
+// Courses - Add
 
     router.post('/v1/courses/add', function (req, res) {
 
@@ -54,5 +57,22 @@ module.exports = function (router) {
     router.post('/v1/courses/add/check-publish', function (req, res) {
         res.redirect('/v1/courses/add/success');
     })
+
+
+// Locations
+
+
+
+// Locations - Delete
+
+    router.post('/v1/locations/delete', function (req, res) {
+        if (req.session.data['location-delete-sure'] == "No, go back"){
+            res.redirect('/v1/locations/index');
+        } else {
+            res.redirect('/v1/locations/delete/success');
+        }
+    })
+
+
 
 }
