@@ -1,0 +1,100 @@
+{% set navActive = 'locations' %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Locations
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint14.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Delete location</h1>
+    
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Location name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Presidency London College
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          591-593 Harrow Road<br>
+          London
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Postcode
+        </dt>
+        <dd class="govuk-summary-list__value">
+          W10 4RA
+        </dd>
+      </div>
+    </dl>
+
+    {{ govukWarningText({
+      text: "Are you sure?",
+      iconFallbackText: "Warning"
+    }) }}
+
+    <form action="" method="post">
+
+      {{ govukRadios({
+        idPrefix: "s19-delete-sure",
+        name: "s19-delete-sure",
+        fieldset: {
+          legend: {
+            text: "Please select",
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "Yes, Delete",
+            text: "Yes, Delete"
+          },
+          {
+            value: "No, go back",
+            text: "No, go back"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Confirm"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
