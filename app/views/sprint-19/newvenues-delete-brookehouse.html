@@ -1,0 +1,117 @@
+{% set navActive = 'locations' %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Locations
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint14.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Delete location</h1>
+
+    <p class="govuk-body">Deleting this location will...<p>
+    
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Location name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          The Brooke House Sixth Form College
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Kenninghall Road<br>
+          London
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Postcode
+        </dt>
+        <dd class="govuk-summary-list__value">
+          E5 8BP
+        </dd>
+      </div>
+    </dl>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Are you sure?
+          </h2>
+        </legend>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="s19-location-brookehouse-areyousure" name="s19-location-brookehouse-areyousure" type="checkbox" value="delete">
+            <label class="govuk-label govuk-checkboxes__label" for="s19-location-brookehouse-areyousure">
+              Yes, I want to delete this location
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    {{ govukButton({
+      href: "newvenues-delete-brookehouse-success",
+      text: "Delete location",
+      disabled: true,
+      classes: "govuk-button--warning"
+    }) }}
+
+    {{ govukButton({
+      href: "newvenues-view-brookehouse",
+      text: "Cancel",
+      classes: "govuk-button--secondary govuk-!-margin-left-3"
+    }) }}
+
+    <!-- -->
+
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+{% block pageScripts %}
+
+	<script>
+    $( "#s19-location-brookehouse-areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--warning");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}

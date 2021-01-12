@@ -1,0 +1,136 @@
+{% set navActive = 'locations' %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Locations
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint14.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="javascript:preventDefault();" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back to locations",
+  href: "newvenues"
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Location details</h1>
+    
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Location name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Presidency London College
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="javascript:preventDefault();">
+            Change<span class="govuk-visually-hidden"> location name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          591-593 Harrow Road<br>
+          London
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="javascript:preventDefault();">
+            Change<span class="govuk-visually-hidden"> address</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Postcode
+        </dt>
+        <dd class="govuk-summary-list__value">
+          W10 4RA
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="javascript:preventDefault();">
+            Change<span class="govuk-visually-hidden"> postcode</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="javascript:preventDefault();">
+            Change<span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="javascript:preventDefault();">
+            Change<span class="govuk-visually-hidden"> phone</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Website
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="javascript:preventDefault();">
+            Change<span class="govuk-visually-hidden"> website</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+<!--
+    {{ govukWarningText({
+      text: "This location is not associated with any courses, apprenticeship, or T Levels",
+      iconFallbackText: "Warning"
+    }) }}
+-->
+    {{ govukButton({
+      classes: "govuk-button--warning",
+      href: "newvenues-delete-presidency",
+      text: "Delete location"
+    }) }}
+
+  </div>
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
