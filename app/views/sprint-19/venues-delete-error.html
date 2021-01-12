@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block header %}
-  {% include "includes/v1/header.html" %}
+  {% include "includes/header-sprint14.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,6 +24,14 @@
 {% block content %}
 
 <!-- Enter page content inside this block -->
+
+<div class="pttcd-notice  pttcd-notice--warning govuk-!-margin-bottom-8">
+  <h2 class="govuk-heading-m">The location cannot be deleted</h2>
+  <p class="govuk-body">
+    There are courses associated with this location.<br>
+    You need to assign a different location to the courses before deleting the location.
+  </p>
+</div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -57,8 +65,8 @@
             London
           </td>
           <td class="govuk-table__cell nowrap">W10 4RA</td>
-          <td class="govuk-table__cell nowrap"><a href="/v1/locations/view">View</a></td>
-          <td class="govuk-table__cell nowrap"><a href="/v1/locations/delete">Delete</a></td>
+          <td class="govuk-table__cell nowrap"><a href="javascript:preventDefault();">View</a></td>
+          <td class="govuk-table__cell nowrap"><a href="venues-delete">Delete</a></td>
         </tr>
         <tr class="govuk-table__row">
           <td scope="row" class="govuk-table__cell">The Brooke House Sixth Form College</td>
@@ -67,8 +75,8 @@
             London
           </td>
           <td class="govuk-table__cell nowrap">E5 8BP</td>
-          <td class="govuk-table__cell nowrap"><a href="/v1/locations/view">View</a></td>
-          <td class="govuk-table__cell nowrap"><a href="/v1/locations/delete/error">Delete</a></td>
+          <td class="govuk-table__cell nowrap"><a href="javascript:preventDefault();">View</a></td>
+          <td class="govuk-table__cell nowrap"><a href="venues-delete-error">Delete</a></td>
         </tr>
 
         
