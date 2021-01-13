@@ -61,6 +61,25 @@ module.exports = function (router) {
     })
 
 
+// T Levels - Add
+
+    router.post('/'+v+'/t-levels/add', function (req, res) {
+        res.redirect('/'+v+'/t-levels/add/description');
+    })
+
+    router.post('/'+v+'/t-levels/add/description', function (req, res) {
+        res.redirect('/'+v+'/t-levels/add/details');
+    })
+
+    router.post('/'+v+'/t-levels/add/details', function (req, res) {
+        res.redirect('/'+v+'/t-levels/add/check-publish');
+    })
+
+    router.post('/'+v+'/t-levels/add/check-publish', function (req, res) {
+        res.redirect('/'+v+'/t-levels/add/success');
+    })
+
+
 
 // Locations - Add
 
