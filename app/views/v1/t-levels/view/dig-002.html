@@ -1,12 +1,12 @@
 {% set navActive = 'tlevels' %}
-{% extends "layout.html" %}
+{% extends "layouts/layout-v1.html" %}
 
 {% block pageTitle %}
   View T Level
 {% endblock %}
 
 {% block header %}
-  {% include "includes/v1/header.html" %}
+  {% include "includes/" + version + "/header.html" %}
 {% endblock %}
 
 {% block beforeContent %}
