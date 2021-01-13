@@ -1,0 +1,125 @@
+{% set navActive = 'tlevels' %}
+{% extends "layouts/layout-v1.html" %}
+
+{% block pageTitle %}
+  T Levels
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">T Level details</h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-5">Add information on how the {% if (data['tlevels']) %}{{ data['tlevels'] }}{% else %}[T Level name]{% endif %} will be delivered.</p>
+
+      <form action="" method="post" class="form">
+
+        <!--  -->
+
+        {{ govukInput({
+          id: "tlevels-details-reference",
+          name: "tlevels-details-reference",
+          classes: "govuk-!-margin-bottom-3",
+          label: {
+            text: "Your reference (optional)",
+            classes: "govuk-label--m"
+          },
+          hint: {
+            text: "A reference that will help you identify this T Level in your internal systems. This will not be visible to learners."
+          }
+        }) }}
+
+        <!--  -->
+
+        {{ govukDateInput({
+          id: "tlevels-details-startdate",
+          namePrefix: "tlevels-details-startdate",
+          classes: "govuk-!-margin-bottom-3",
+          fieldset: {
+            legend: {
+              text: "Start date",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          hint: {
+            text: "For example, 30 9 2020"
+          }
+        }) }}
+
+        <!--  -->
+
+        <div class="govuk-form-group govuk-!-margin-bottom-1">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                T Level location
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="tlevels-details-location" name="tlevels-details-location" type="checkbox" value="The Brooke House Sixth Form College">
+                <label class="govuk-label govuk-checkboxes__label" for="tlevels-details-location">
+                  The Brooke House Sixth Form College
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+        <p class="govuk-body govuk-!-margin-bottom-7">
+          <!--
+          {{ govukButton({
+            text: "Add another location",
+            classes: "govuk-button--secondary"
+          }) }}
+          -->
+          <a href="#" class="govuk-link">Add another location</a>
+        </p>
+
+        <!--  -->
+
+        <div class="govuk-form-group govuk-!-margin-bottom-7">
+          <label class="govuk-label govuk-label--m" for="tlevels-details-webpage">
+            T Level webpage
+          </label>
+          <span id="tlevels-details-webpage-hint" class="govuk-hint">
+            The webpage for this T Level. For example, https://www.provider.com/tlevelname.
+          </span>
+          <input class="govuk-input" id="tlevels-details-webpage" name="tlevels-details-webpage" type="text" aria-describedby="tlevels-details-webpage-hint">
+        </div>
+
+        <!--  -->
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
