@@ -1,12 +1,12 @@
 {% set navActive = 'courses' %}
-{% extends "layout.html" %}
+{% extends "layouts/layout-v1.html" %}
 
 {% block pageTitle %}
   Courses - course published
 {% endblock %}
 
 {% block header %}
-  {% include "includes/v1/header.html" %}
+  {% include "includes/" + version + "/header.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -36,7 +36,7 @@
 
       <h2 class="govuk-heading-m">Next steps</h2>
       <ul class="govuk-list">
-        <li><a class="govuk-link" href="/v1/locations/">Delete another location</a></li>
+        <li><a class="govuk-link" href="/" + version + "/venues/">Delete another location</a></li>
         <li><a class="govuk-link" href="/v1">Return to dashboard</a></li>
       </ul>
 
