@@ -1,0 +1,118 @@
+{% set navActive = 'locations' %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Locations
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-sprint14.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Delete location</h1>
+    
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Location name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          The Brooke House Sixth Form College
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Kenninghall Road<br>
+          London
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Postcode
+        </dt>
+        <dd class="govuk-summary-list__value">
+          E5 8BP
+        </dd>
+      </div>
+    </dl>
+
+    {{ govukWarningText({
+      text: "You cannot delete this location",
+      iconFallbackText: "Warning"
+    }) }}
+
+    <p class="govuk-body">
+      You will need to remove this location from the courses listed before you can delete this location.
+    <p>
+
+    {{ govukDetails({
+      summaryText: "3 FE courses",
+      html: '
+        <p class="govuk-body">
+          The following links open in new tab or window.
+        <p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="javasctip:preventDefault();">All other education/leisure type courses, Science and Mathematics (SSA 2)</a>
+          </li>
+          <li>
+            <a href="javasctip:preventDefault();">Foundation Degree in Game Art - South Gloucestershire and Stroud College</a>
+          </li>
+          <li>
+            <a href="javasctip:preventDefault();">Innovation code, Level 3, Mathematics and Statistics, 1 credit, PW A</a>
+          </li>
+        </ul>
+      '
+    }) }}
+
+    {{ govukButton({
+      href: "venues",
+      text: "Cancel",
+      classes: "govuk-button--secondary"
+    }) }}
+
+  </div>
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
+
+{% block pageScripts %}
+
+	<script>
+    $( "#areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--warning");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}

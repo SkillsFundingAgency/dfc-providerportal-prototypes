@@ -1,0 +1,48 @@
+{% set navActive = 'courses' %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Courses - course published
+{% endblock %}
+
+{% block header %}
+  {% include "includes/v1/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Location deleted
+        </h1>
+        <div class="govuk-panel__body">Presidency London College has been deleted from the Course directory</div>
+      </div>
+
+      <h2 class="govuk-heading-m">Next steps</h2>
+      <ul class="govuk-list">
+        <li><a class="govuk-link" href="venues">Delete another location</a></li>
+        <li><a class="govuk-link" href="javascript:preventDefault();">Return to dashboard</a></li>
+      </ul>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
