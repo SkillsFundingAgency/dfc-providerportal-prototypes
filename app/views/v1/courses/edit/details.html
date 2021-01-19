@@ -2,7 +2,7 @@
 {% extends "layouts/layout-v1.html" %}
 
 {% block pageTitle %}
-  Courses - Copy course details
+  Courses - Edit course details
 {% endblock %}
 
 {% block header %}
@@ -20,34 +20,26 @@
 
 {% endblock %}
 
+
+
 {% block content %}
 
 <!-- Enter page content inside this block -->
 
-<div class="pttcd-notice govuk-!-margin-bottom-8">
-  <h2 class="govuk-heading-m">Qualification details</h2>
-  <p class="govuk-body govuk-!-margin-bottom-1"><strong>LARS/QAN:</strong> 60150312</p>
-  <p class="govuk-body govuk-!-margin-bottom-1"><strong>Qualification name:</strong> A Level in Computer Science 12</p>
-  <p class="govuk-body govuk-!-margin-bottom-1"><strong>Qualification level:</strong> 3</p>
-  <p class="govuk-body"><strong>Awarding organisation:</strong> NONE</p>
-</div>
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Copy course details</h1>
+      <h1 class="govuk-heading-xl">Course details</h1>
 
-      <p class="govuk-body govuk-!-margin-bottom-5">Copy and make changes to your course details and create a new course.
-
-</p>
+      <p class="govuk-body-l govuk-!-margin-bottom-5">Add information on how the course will be delivered.</p>
 
       <form action="" method="post" class="form">
 
         <!--  -->
 
         {{ govukInput({
-          id: "course-details-coursename",
-          name: "course-details-coursename",
+          id: "{{version}}-course-details-coursename",
+          name: "{{version}}-course-details-coursename",
           classes: "govuk-!-margin-bottom-3",
           label: {
             text: "Course name",
@@ -62,8 +54,8 @@
         <!--  -->
 
         {{ govukInput({
-          id: "course-details-reference",
-          name: "course-details-reference",
+          id: "{{version}}-course-details-reference",
+          name: "{{version}}-course-details-reference",
           classes: "govuk-!-margin-bottom-3",
           label: {
             text: "Your reference",
@@ -77,8 +69,8 @@
         <!--  -->
 
         {{ govukRadios({
-          idPrefix: "course-details-type",
-          name: "course-details-type",
+          idPrefix: "{{version}}-course-details-type",
+          name: "{{version}}-course-details-type",
           fieldset: {
             legend: {
               text: "Course type",
@@ -106,8 +98,8 @@
 
         {% set dateHtml %}
         {{ govukDateInput({
-          id: "course-details-startdate-date",
-          namePrefix: "course-details-startdate-date",
+          id: "{{version}}-course-details-startdate-date",
+          namePrefix: "{{version}}-course-details-startdate-date",
           classes: "govuk-!-margin-bottom-3",
           hint: {
             text: "For example, 30 9 2019"
@@ -116,8 +108,8 @@
         {% endset -%}
 
         {{ govukRadios({
-          idPrefix: "course-details-startdate",
-          name: "course-details-startdate",
+          idPrefix: "{{version}}-course-details-startdate",
+          name: "{{version}}-course-details-startdate",
           fieldset: {
             legend: {
               text: "Start date",
@@ -142,28 +134,24 @@
 
         <!--  -->
 
-        {{ govukSelect({
-          id: "course-details-location",
-          name: "course-details-location",
-          formGroup: {
-            classes: "govuk-!-margin-bottom-3"
-          },
-          label: {
-            classes: "govuk-label--m",
-            text: "Course location"
-          },
-          items: [
-            {
-              value: "",
-              text: "Select"
-            },
-            {
-              value: "Presidency London College",
-              text: "Presidency London College",
-              selected: true
-            }
-          ]
-        }) }}
+        <div class="govuk-form-group govuk-!-margin-bottom-1">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Course location
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="{{version}}-course-details-location" name="{{version}}-course-details-location" type="checkbox" value="Presidency London College" checked="checked">
+                <label class="govuk-label govuk-checkboxes__label" for="{{version}}-course-details-location">
+                  Presidency London College
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
         <p class="govuk-body govuk-!-margin-bottom-7">
           <!--
           {{ govukButton({
@@ -177,20 +165,20 @@
         <!--  -->
 
         <div class="govuk-form-group govuk-!-margin-bottom-7">
-          <label class="govuk-label govuk-label--m" for="course-details-webpage">
+          <label class="govuk-label govuk-label--m" for="{{version}}-course-details-webpage">
             Course webpage
           </label>
-          <span id="course-details-webpage-hint" class="govuk-hint">
-            The webpage for this course. For example, http://www.provider.com/coursename
+          <span id="{{version}}-course-details-webpage-hint" class="govuk-hint">
+            The webpage for this course. For example, http://www.provider.com/coursename.
           </span>
-          <input class="govuk-input" id="course-details-webpage" name="course-details-webpage" type="text" aria-describedby="course-details-webpage-hint" value="https://presidencylondoncollege.ac.uk/alevel-computer-science">
+          <input class="govuk-input" id="{{version}}-course-details-webpage" name="{{version}}-course-details-webpage" type="text" aria-describedby="{{version}}-course-details-webpage-hint" value="https://presidencylondoncollege.ac.uk/alevel-computer-science">
         </div>
 
         <!--  -->
 
         {{ govukInput({
-          id: "course-details-cost",
-          name: "course-details-cost",
+          id: "{{version}}-course-details-cost",
+          name: "{{version}}-course-details-cost",
           label: {
             text: "Cost",
             classes: "govuk-label--m"
@@ -208,8 +196,8 @@
         <!--  -->
 
         {{ govukCharacterCount({
-          name: "course-details-description",
-          id: "course-details-description",
+          name: "{{version}}-course-details-description",
+          id: "{{version}}-course-details-description",
           maxlength: 255,
           rows: 7,
           label: {
@@ -218,19 +206,18 @@
           },
           hint: {
             text: "A description of what the cost includes and additional costs to the learner. For example, assessment, exam fees or study materials."
-          },
-          value: data['course-details-description']
+          }
         }) }}
 
         <!--  -->
         
         <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="course-details-duration-value">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="{{version}}-course-details-duration-value">
               Duration
             </label>
           </h1>
-          <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-3" id="course-details-duration-value" name="course-details-duration-value" type="text" value="10">
-          <select class="govuk-select" id="course-details-duration-unit" name="course-details-duration-unit">
+          <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-3" id="{{version}}-course-details-duration-value" name="{{version}}-course-details-duration-value" type="text" value="10">
+          <select class="govuk-select" id="{{version}}-course-details-duration-unit" name="{{version}}-course-details-duration-unit">
             <option value="" selected>Select</option>
             <option value="hours">Hours</option>
             <option value="days">Days</option>
@@ -243,8 +230,8 @@
         <!--  -->
 
         {{ govukRadios({
-          idPrefix: "course-details-hours",
-          name: "course-details-hours",
+          idPrefix: "{{version}}-course-details-hours",
+          name: "{{version}}-course-details-hours",
           fieldset: {
             legend: {
               text: "Course hours",
@@ -271,8 +258,8 @@
         <!--  -->
 
         {{ govukRadios({
-          idPrefix: "course-details-attendance",
-          name: "course-details-attendance",
+          idPrefix: "{{version}}-course-details-attendance",
+          name: "{{version}}-course-details-attendance",
           fieldset: {
             legend: {
               text: "Attendance pattern",
@@ -301,16 +288,21 @@
         }) }}
 
         <!--  -->
-
+        <h2 class="govuk-heading-m">
+          Publish your course changes
+        </h2>
+        <p class="govuk-body">
+          Your course details will be updated on Publish to the course directory and available to learners searching for learning and training opportunities on the National Careers Service.
+        <p>
 
         {{ govukButton({
-          classes: "govuk-!-margin-right-3",
-          href: "/" + version + "/courses/copy/check-publish",
-          text: "Continue"
+          href: "/" + version + "/courses/view",
+          text: "Publish changes"
         }) }}
 
         {{ govukButton({
-          classes: "govuk-button--secondary",
+          classes: "govuk-button--secondary govuk-!-margin-left-3",
+          href: "/" + version + "/courses/view",
           text: "Cancel"
         }) }}
 
