@@ -1,0 +1,158 @@
+{% set navActive = 'apprenticeships' %}
+{% extends "layouts/layout-v1.html" %}
+
+{% block pageTitle %}
+  Apprenticeships - Chack and publish
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">Check and publish to the course directory</h1>
+      <h2 class="govuk-heading-m">
+        Building Services Design Engineer (degree)
+      </h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Apprenticeship information for employers
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam ligula sed erat blandit molestie. Sed hendrerit felis ac mi vestibulum molestie. Proin laoreet, quam id elementum sollicitudin, nulla lectus lobortis eros, quis egestas felis risus vulputate erat. Curabitur a dui fringilla, imperdiet justo at, gravida diam. Morbi rhoncus dignissim eros, ac suscipit sapien blandit sed. Cras facilisis fringilla enim ut finibus. Sed convallis finibus dignissim. Nunc semper tristique nulla condimentum malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce at finibus diam. Sed congue mauris mauris, at imperdiet tellus pretium sit amet. Sed laoreet ultrices leo, quis condimentum erat congue posuere. In sit amet dolor sed ligula laoreet imperdiet sed semper leo. In eu justo lorem. Ut laoreet enim in diam vehicula, non faucibus nulla pellentesque.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> apprenticeship information for employers</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Apprenticeship webpage
+          </dt>
+          <dd class="govuk-summary-list__value">
+            	http://website.com
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> apprenticeship webpage</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            email@website.com
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> email</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Telephone
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">01234 567890</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> telephone</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contact URL
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">http://website.com/contactus</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> contact URL</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Classroom based locations
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+            <p class="govuk-body">
+              <a class="govuk-link" href="#">
+                Add a different delivery type
+              </a>
+            <p>
+            <p class="govuk-body">
+              <a class="govuk-link" href="#">
+                Change classroom based locations
+              </a>
+            </p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+      </dl>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Location</th>
+            <th scope="col" class="govuk-table__header">Delivery method</th>
+            <th scope="col" class="govuk-table__header">Radius</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">
+              <strong>Presidency London College</strong><br>
+              W10 4RA
+            </td>
+            <td class="govuk-table__cell">Day Release</td>
+            <td class="govuk-table__cell">30 Miles</td>
+          </tr>
+        </tbody>
+      </table>
+
+      {{ govukButton({
+        text: "Publish"
+      }) }}
+
+      {{ govukButton({
+        classes: "govuk-button--secondary govuk-!-margin-left-3",
+        text: "Cancel"
+      }) }}
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

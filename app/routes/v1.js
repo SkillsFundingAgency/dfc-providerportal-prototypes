@@ -61,6 +61,46 @@ module.exports = function (router) {
     })
 
 
+// Apprenticeships
+
+    router.post('/'+v+'/apprenticeships', function (req, res) {
+
+        if (req.session.data['apprenticeships-option'] == "add"){
+            res.redirect('/'+v+'/apprenticeships/add');
+        } else if (req.session.data['apprenticeships-option'] == "upload"){
+            //res.redirect('/'+v+'/apprenticeships/');
+        } else {
+            res.redirect('/'+v+'/apprenticeships/list');
+        }
+
+    })
+
+
+// Apprenticeships - Add
+
+    router.post('/'+v+'/apprenticeships/add', function (req, res) {
+        res.redirect('/'+v+'/apprenticeships/add/details');
+    })
+
+    router.post('/'+v+'/apprenticeships/add/details', function (req, res) {
+        res.redirect('/'+v+'/apprenticeships/add/delivery');
+    })
+
+    router.post('/'+v+'/apprenticeships/add/delivery', function (req, res) {
+        if (req.session.data['apprenticeship-delivery'] == "At one of your locations"){
+            res.redirect('/'+v+'/apprenticeships/add/delivery-venue');
+        } else if (req.session.data['apprenticeship-delivery'] == "At an employer's address"){
+            res.redirect('/'+v+'/apprenticeships/add/delivery-employer-location');
+        } else if (req.session.data['apprenticeship-delivery'] == "Both"){
+            res.redirect('/'+v+'/apprenticeships/add/delivery-combined');
+        }
+    })
+    
+    router.post('/'+v+'/apprenticeships/add/delivery-venue', function (req, res) {
+        res.redirect('/'+v+'/apprenticeships/add/check-publish');
+    })
+
+
 // T Levels - Add
 
     router.post('/'+v+'/t-levels/add', function (req, res) {
