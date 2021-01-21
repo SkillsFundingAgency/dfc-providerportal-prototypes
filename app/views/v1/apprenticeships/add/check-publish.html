@@ -99,29 +99,31 @@
             </a>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Classroom based locations
-          </dt>
-          <dd class="govuk-summary-list__value">
-
-            <p class="govuk-body">
-              <a class="govuk-link" href="#">
-                Add a different delivery type
-              </a>
-            <p>
-            <p class="govuk-body">
-              <a class="govuk-link" href="#">
-                Change classroom based locations
-              </a>
-            </p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          </dd>
-        </div>
       </dl>
 
       <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell" style="border-bottom: none;">
+              Classroom based locations
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--numeric" style="border-bottom: none;">
+              <p class="govuk-body">
+                <a class="govuk-link" href="#">
+                  Add a different delivery type
+                </a>
+              <p>
+              <p class="govuk-body">
+                <a class="govuk-link" href="#">
+                  Change classroom based locations
+                </a>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table govuk-!-margin-bottom-9">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header">Location</th>
@@ -142,11 +144,13 @@
       </table>
 
       {{ govukButton({
+        href: "/" + version + "/apprenticeships/add/success",
         text: "Publish"
       }) }}
 
       {{ govukButton({
         classes: "govuk-button--secondary govuk-!-margin-left-3",
+        href: "/" + version,
         text: "Cancel"
       }) }}
 

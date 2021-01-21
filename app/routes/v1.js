@@ -99,6 +99,18 @@ module.exports = function (router) {
     router.post('/'+v+'/apprenticeships/add/delivery-venue', function (req, res) {
         res.redirect('/'+v+'/apprenticeships/add/check-publish');
     })
+    
+    router.post('/'+v+'/apprenticeships/add/delivery-employer-location', function (req, res) {
+        if (req.session.data['apprenticeships-add-employerslocation'] == "Yes"){
+            res.redirect('/'+v+'/apprenticeships/add/check-publish');
+        } else if (req.session.data['apprenticeships-add-employerslocation'] == "No"){
+            res.redirect('/'+v+'/apprenticeships/add/delivery-employer-region');
+        }
+    })
+    
+    router.post('/'+v+'/apprenticeships/add/delivery-employer-regions', function (req, res) {
+        res.redirect('/'+v+'/apprenticeships/add/check-publish');
+    })
 
 
 // T Levels - Add
