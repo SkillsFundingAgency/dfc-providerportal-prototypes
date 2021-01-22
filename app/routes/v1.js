@@ -111,6 +111,10 @@ module.exports = function (router) {
     router.post('/'+v+'/apprenticeships/add/delivery-employer-regions', function (req, res) {
         res.redirect('/'+v+'/apprenticeships/add/check-publish');
     })
+    
+    router.post('/'+v+'/apprenticeships/add/delivery-combined', function (req, res) {
+        res.redirect('/'+v+'/apprenticeships/add/check-publish');
+    })
 
 
 // T Levels - Add
