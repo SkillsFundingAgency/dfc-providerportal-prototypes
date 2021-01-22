@@ -1,0 +1,113 @@
+{% set navActive = 'apprenticeships' %}
+{% extends "layouts/layout-v1.html" %}
+
+{% block pageTitle %}
+  Apprenticeships - Add apprenticeship details
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <span class="govuk-caption-l">
+        Building Services Design Engineer (degree)
+      </span>
+      <h1 class="govuk-heading-l">Add apprenticeship training details</h1>
+
+      <form action="" method="post" class="form">
+
+        {{ govukCharacterCount({
+          name: "apprenticeship-details-information",
+          id: "apprenticeship-details-information",
+          maxlength: 750,
+          rows: 10,
+          label: {
+            text: "Apprenticeship information for employers"
+          },
+          hint: {
+            html: 'Give information for employers about how you deliver this specific apprenticeship training. For useful advice on how to fill out this section go to the <a href="https://www.gov.uk/government/publications/find-apprenticeship-training-how-to-submit-data">guidance</a>'
+          }
+        }) }}
+
+        {{ govukInput({
+          id: "apprenticeship-details-website",
+          name: "apprenticeship-details-website",
+          label: {
+            text: "Website"
+          },
+          hint: {
+            text: 'Your web page for this apprenticeship. Include http://'
+          }
+        }) }}
+
+        <h2 class="govuk-heading-l">
+          Contact details
+        </h2>
+        <p class="govuk-body">
+          Who can employers contact about this apprenticeship training?
+        <p>
+
+        <!--  -->
+
+        {{ govukInput({
+          id: "apprenticeship-details-email",
+          name: "apprenticeship-details-email",
+          label: {
+            text: "Email"
+          }
+        }) }}
+
+        {{ govukInput({
+          id: "apprenticeship-details-telephone",
+          name: "apprenticeship-details-telephone",
+          classes: "govuk-!-width-one-half",
+          label: {
+            text: "Telephone"
+          }
+        }) }}
+
+        {{ govukInput({
+          id: "apprenticeship-details-contactus",
+          name: "apprenticeship-details-contactus",
+          label: {
+            text: "Contact us page"
+          },
+          hint: {
+            text: "You can also add the url of any 'Contact us' page you have on your website"
+          }
+        }) }}
+
+        <!--  -->
+
+        {{ govukButton({
+          text: "Save"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

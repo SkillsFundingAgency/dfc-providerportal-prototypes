@@ -1,0 +1,179 @@
+{% set navActive = 'apprenticeships' %}
+{% extends "layouts/layout-v1.html" %}
+
+{% block pageTitle %}
+  Apprenticeships - Chack and publish
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">Check and publish to the course directory</h1>
+      <h2 class="govuk-heading-m">
+        Adult Care Worker
+      </h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Apprenticeship information for employers
+          </dt>
+          <dd class="govuk-summary-list__value">
+            This apprenticeship will cover the wide-ranging skills and knowledge needed to care for others in a broad range of health or social care settings. Apprentices will also complete a Diploma in Adult Care where they will be given the option to choose a pathway that suits their role or progression requirements - for example, working with people who have dementia. Apprentices will also complete The Care Certificate standards. Our industry qualified and experienced Skills Tutors will provide a learning activity for the apprentice every month. This will involve the use of our e-learning portal (Learning Assistant) and visits to the workplace for the Skills Tutor to perform support and observations to build a portfolio of evidence.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> apprenticeship information for employers</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Apprenticeship webpage
+          </dt>
+          <dd class="govuk-summary-list__value">
+            	http://website.com
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> apprenticeship webpage</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            email@website.com
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> email</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Telephone
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">01234 567890</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> telephone</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contact URL
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">http://website.com/contactus</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> contact URL</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell" style="border-bottom: none;">
+              Employer based locations
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--numeric" style="border-bottom: none;">
+              <p class="govuk-body">
+                <a class="govuk-link" href="#">
+                  Add a different delivery type
+                </a>
+              <p>
+              <p class="govuk-body">
+                <a class="govuk-link" href="#">
+                  Change classroom based locations
+                </a>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table govuk-!-margin-bottom-9">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Location</th>
+            <th scope="col" class="govuk-table__header">Sub region</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">South East</td>
+            <td class="govuk-table__cell">Oxfordshire, Kent, Surrey, West Sussex, Southampton</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">East of England</td>
+            <td class="govuk-table__cell">Suffolk, Norfolk, Essex, Bedford, Hertfordshire, Peterborough</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">London</td>
+            <td class="govuk-table__cell">Westminster</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">South West</td>
+            <td class="govuk-table__cell">Devon, Swindon</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">West Midlands</td>
+            <td class="govuk-table__cell">Worcestershire, Walsall, Stoke-on-Trent, Birmingham</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">East Midlands</td>
+            <td class="govuk-table__cell">Northamptonshire, Nottingham, Derby</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">North West</td>
+            <td class="govuk-table__cell">Lancashire, Warrington</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">Yorkshire and The Humber</td>
+            <td class="govuk-table__cell">Leeds, North Lincolnshire</td>
+          </tr>
+        </tbody>
+      </table>
+
+      {{ govukButton({
+        href: "/" + version + "/apprenticeships/list",
+        text: "Close"
+      }) }}
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
