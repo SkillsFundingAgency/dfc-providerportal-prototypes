@@ -17,7 +17,7 @@
     html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
   }) }}
 
-  <a href="/" + version + "/" class="govuk-back-link">Back to home screen</a>
+  <a href="/{{version}}" class="govuk-back-link">Back to home screen</a>
 
 {% endblock %}
 
@@ -110,13 +110,13 @@
       </p>
 
       <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Web</h3>
-      <p class="govuk-body-s govuk-!-margin-bottom-3"><a href="javascript:preventDefault();" target="_blank">http://www.presidencylondon.co.uk</a></p>
+      <p class="govuk-body-s govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();" target="_blank">http://www.presidencylondon.co.uk</a></p>
 
       <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Contact name</h3>
       <p class="govuk-body-s govuk-!-margin-bottom-3">A Razaq Mohammed</p>
 
       <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Email</h3>
-      <p class="govuk-body-s govuk-!-margin-bottom-3"><a href="javascript:preventDefault();">info@presidencylondon.co.uk</a></p>
+      <p class="govuk-body-s govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">info@presidencylondon.co.uk</a></p>
 
       <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Telephone</h3>
       <p class="govuk-body-s govuk-!-margin-bottom-3">0203 7846005</p>
