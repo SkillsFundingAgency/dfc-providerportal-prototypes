@@ -1192,3 +1192,8 @@ a {
 a.pttcd-link-deactivated {
   color: #0b0c0c !important;
 }
+
+.govuk-link--blocked,
+.govuk-link--blocked:link {
+  color: #0b0c0c;
+}
