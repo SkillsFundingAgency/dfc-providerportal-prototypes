@@ -1,0 +1,49 @@
+{% set navActive = 'locations' %}
+{% extends "layouts/layout-sprint20.html" %}
+
+{% block pageTitle %}
+  Locations
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        classes: "govuk-!-margin-bottom-9",
+        titleText: "Location added",
+        text: data["venue-add-name"]
+      }) }}
+
+      <h2 class="govuk-heading-m">What next?</h2>
+      <ul class="govuk-list">
+        <li><a class="govuk-link" href="/{{version}}/venues/add">Add a new location</a></li>
+        <li><a class="govuk-link" href="/{{version}}/venues">View and edit locations</a></li>
+        <li><a class="govuk-link" href="javascript:preventDefault();">Back to the home screen</a></li>
+      </ul>
+
+      <!-- -->
+
+    </div>
+  </div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

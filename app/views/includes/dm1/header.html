@@ -1,0 +1,47 @@
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: 80%;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item{% if navActive == 'home' %} govuk-header__navigation-item--active{% endif %}">
+            <a class="govuk-header__link" href="/{{version}}/">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item{% if navActive == 'courses' %} govuk-header__navigation-item--active{% endif %}">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              Courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item{% if navActive == 'apprenticeships' %} govuk-header__navigation-item--active{% endif %}">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              Apprenticeships
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item{% if navActive == 'tlevels' %} govuk-header__navigation-item--active{% endif %}">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              T Levels
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item{% if navActive == 'locations' %} govuk-header__navigation-item--active{% endif %}">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              Locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item{% if navActive == 'bulkupload' %} govuk-header__navigation-item--active{% endif %}">
+            <a class="govuk-header__link" href="/{{version}}/data-management/">
+              Data Management
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>

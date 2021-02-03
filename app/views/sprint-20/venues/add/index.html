@@ -1,0 +1,63 @@
+{% set navActive = 'locations' %}
+{% extends "layouts/layout-sprint20.html" %}
+
+{% block pageTitle %}
+  Locations
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Add location
+      </h1>
+
+      <form action="" method="post">
+
+        {{ govukInput({
+          id: "venue-add-postcode",
+          name: "venue-add-postcode",
+          classes: "govuk-!-width-one-quarter",
+          label: {
+            classes: "govuk-label--m",
+            text: "Postcode"
+          },
+          value: "SW1A 1AA"
+        }) }}
+
+        {{ govukButton({
+          href: "/" + version + "/venues/add/select",
+          text: "Find address"
+        }) }}
+      
+      </form>
+      
+    </div>
+    <div class="govuk-grid-column-one-third">
+      
+    </div>
+  </div>
+  
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
