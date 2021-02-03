@@ -1,6 +1,6 @@
 {#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
 {%- set assetPath = '/govuk/assets' -%}
-{%- set version = 'sprint-20' -%}
+{%- set version = 'sprint-21' -%}
 
 {% extends "govuk/template.njk" %}
 
@@ -85,94 +85,5 @@
     {% block pageScripts %}{% endblock %}
   {% endblock %}
   <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
-
-  <script>
-  $(document).ready(function(){
-    $(".hide1").click(function(){
-      $(".show-hide-section-1").hide();
-    });
-    $(".show1").click(function(){
-      $(".show-hide-section-1").show();
-    });
-  });
-  </script>
-
-
-  <script>
-  $(document).ready(function(){
-    $(".hide2").click(function(){
-      $(".show-hide-section-2").hide();
-    });
-    $(".show2").click(function(){
-      $(".show-hide-section-2").show();
-    });
-  });
-  </script>
-
-
-<!-- cookie -->
-  <script>
-  $(document).ready(function(){
-    $(".hide3").click(function(){
-      $(".show-hide-section-3").hide();
-    });
-    $(".hide4").click(function(){
-      $(".show-hide-section-5").hide();
-    });
-    $(".show4").click(function(){
-      $(".show-hide-section-4").show();
-    });
-  });
-  </script>
-
-  <script>
-  $(document).ready(function(){
-    $(".show5").click(function(){
-      $(".show-hide-section-5").show();
-    });
-  });
-  </script>
-
-  <!-- FE courses -->
-
-  <script>
-  $(document).ready(function(){
-    $(".hide6").click(function(){
-      $(".show-hide-section-6").hide();
-    });
-    $(".show6").click(function(){
-      $(".show-hide-section-6").show();
-    });
-  });
-  </script>
-
-  <!-- Enable and disable button -->
-
-  <!-- <script>
-  $(document).ready(function(){
-
-    $(".enable").click(function(){
-      $(".enable-disable").prop('disabled', false);
-    });
-
-    $(".disable").click(function(){
-      $(".enable-disable").prop('disabled', true);
-    });
-
-  });
-  </script> -->
-
-
-  <script>
-  $(document).ready(function(){
-
-    $(".enable").change(function(){
-        $('.enable-disable').attr('disabled', function() { return $('.enable').prop('checked') ? null : 'disabled'; });
-    });
-
-  });
-  </script>
-
-
 
 {% endblock %}
