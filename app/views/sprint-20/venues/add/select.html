@@ -1,0 +1,82 @@
+{% set navActive = 'locations' %}
+{% extends "layouts/layout-sprint20.html" %}
+
+{% block pageTitle %}
+  Locations
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Add location
+      </h1>
+
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Postcode</h2>
+      <p class="govuk-body">SW1A 1AA <a href="index" class="govuk-!-margin-left-5">Change<span class="govuk-visually-hidden"> postcode</span></a></p>
+
+      <form action="" method="post">
+
+        {{ govukSelect({
+          id: "venue-add-postcode-select",
+          name: "venue-add-postcode-select",
+          label: {
+            classes: "govuk-label--m",
+            text: "Select an address"
+          },
+          items: [
+            {
+              value: "",
+              text: "1 address found"
+            },
+            {
+              value: "Buckingham Palace, LONDON SW1A 1AA",
+              text: "Buckingham Palace, LONDON SW1A 1AA"
+            }
+          ]
+        }) }}
+
+        <p class="govuk-body"><a class="govuk-link" href="manual">I can't find my address in the list</a></p>
+
+        {{ govukButton({
+          classes: "govuk-!-margin-right-3",
+          text: "Continue"
+        }) }}
+
+        {{ govukButton({
+          href: "/" + version + "/venues",
+          text: "Cancel",
+          classes: "govuk-button--secondary"
+        }) }}
+
+      </form>
+      
+    </div>
+    <div class="govuk-grid-column-one-third">
+      
+    </div>
+  </div>
+  
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
