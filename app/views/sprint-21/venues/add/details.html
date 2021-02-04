@@ -29,13 +29,15 @@
         Add location
       </h1>
 
-      <p class="govuk-body">This information will be displayed on Find a course as part of the course details.</p>
+      <!--p class="govuk-body">This information will be displayed on Find a course as part of the course details.</p-->
+      <p class="govuk-body-l">This information will be visible when linked with the courses you provide.</p>
 
       <form action="" method="post">
 
         {{ govukInput({
           id: "venue-add-name",
           name: "venue-add-name",
+          classes: "govuk-!-width-two-thirds",
           label: {
             classes: "govuk-label--s",
             text: "Location name"
@@ -43,7 +45,7 @@
           value: data["venue-add-name"]
         }) }}
 
-        <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Location address</h2>
+        <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Address</h2>
         <p class="govuk-body">
           {% if data['venue-add-line-1'] %}
             {% if data['venue-add-line-1'] %}{{ data['venue-add-line-1'] }}{% endif %}
@@ -65,7 +67,7 @@
           classes: "govuk-!-width-two-thirds",
           label: {
             classes: "govuk-label--s",
-            text: "Email address"
+            text: "Email"
           },
           value: data["venue-add-email"]
         }) }}
@@ -76,7 +78,7 @@
           classes: "govuk-!-width-one-third",
           label: {
             classes: "govuk-label--s",
-            text: "Telephone number"
+            text: "Telephone"
           },
           value: data["venue-add-telephone"]
         }) }}
@@ -87,7 +89,7 @@
           classes: "govuk-!-width-two-thirds",
           label: {
             classes: "govuk-label--s",
-            text: "Website address"
+            text: "Website"
           },
           value: data["venue-add-website"]
         }) }}
