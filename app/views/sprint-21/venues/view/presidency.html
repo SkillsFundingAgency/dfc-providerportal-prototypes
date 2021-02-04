@@ -38,7 +38,7 @@
           Presidency London College
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">
+          <a class="govuk-link" href="/{{version}}/venues/edit/location">
             Change<span class="govuk-visually-hidden"> location name</span>
           </a>
         </dd>
@@ -49,23 +49,11 @@
         </dt>
         <dd class="govuk-summary-list__value">
           591-593 Harrow Road<br>
-          London
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">
-            Change<span class="govuk-visually-hidden"> address</span>
-          </a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Postcode
-        </dt>
-        <dd class="govuk-summary-list__value">
+          London<br>
           W10 4RA
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">
+          <a class="govuk-link" href="/{{version}}/venues/edit/address">
             Change<span class="govuk-visually-hidden"> postcode</span>
           </a>
         </dd>
@@ -78,21 +66,21 @@
           
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">
+          <a class="govuk-link" href="/{{version}}/venues/edit/email">
             Change<span class="govuk-visually-hidden"> email</span>
           </a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Phone
+          Telephone
         </dt>
         <dd class="govuk-summary-list__value">
           
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">
-            Change<span class="govuk-visually-hidden"> phone</span>
+          <a class="govuk-link" href="/{{version}}/venues/edit/telephone">
+            Change<span class="govuk-visually-hidden"> telephone</span>
           </a>
         </dd>
       </div>
@@ -104,7 +92,7 @@
           
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">
+          <a class="govuk-link" href="/{{version}}/venues/edit/website">
             Change<span class="govuk-visually-hidden"> website</span>
           </a>
         </dd>
@@ -112,7 +100,7 @@
     </dl>
 
     {{ govukButton({
-      href: "/" + version + "/venues",
+      href: "/" + version + "/venues/edit/success",
       text: "Save and continue"
     }) }}
 

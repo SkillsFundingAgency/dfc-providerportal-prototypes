@@ -1,0 +1,66 @@
+{% set navActive = 'locations' %}
+{% extends "layouts/layout-sprint21.html" %}
+
+{% block pageTitle %}
+  Locations
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="" method="post">
+        
+        {{ govukInput({
+          label: {
+            text: "Location name",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          classes: "govuk-!-width-two-thirds",
+          id: "venue-edit-name",
+          name: "venue-edit-name",
+          value: "Presidency London College"
+        }) }}
+
+        {{ govukButton({
+          classes: "govuk-!-margin-right-3",
+          text: "Continue"
+        }) }}
+
+        {{ govukButton({
+          href: "/" + version + "/venues/view/presidency",
+          text: "Cancel",
+          classes: "govuk-button--secondary"
+        }) }}
+      
+      </form>
+      
+    </div>
+    <div class="govuk-grid-column-one-third">
+      
+    </div>
+  </div>
+  
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
