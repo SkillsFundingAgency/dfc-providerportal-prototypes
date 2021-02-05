@@ -67,11 +67,8 @@
     <p>
 
     {{ govukDetails({
-      summaryText: "3 FE courses",
+      summaryText: "3 courses",
       html: '
-        <p class="govuk-body">
-          The following links open in new tab or window.
-        <p>
         <ul class="govuk-list govuk-list--bullet">
           <li>
             <a href="javasctip:preventDefault();">All other education/leisure type courses, Science and Mathematics (SSA 2)</a>
@@ -81,6 +78,31 @@
           </li>
           <li>
             <a href="javasctip:preventDefault();">Innovation code, Level 3, Mathematics and Statistics, 1 credit, PW A</a>
+          </li>
+        </ul>
+      '
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "2 apprenticeships",
+      html: '
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="javasctip:preventDefault();">Construction Design and Build Technician</a>
+          </li>
+          <li>
+            <a href="javasctip:preventDefault();">Tool Process Design Engineer</a>
+          </li>
+        </ul>
+      '
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "1 T Level",
+      html: '
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="javasctip:preventDefault();">T Level Digital - Digital Production, Design and Development</a>
           </li>
         </ul>
       '
