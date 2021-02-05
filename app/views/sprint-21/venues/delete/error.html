@@ -63,12 +63,13 @@
     }) }}
 
     <p class="govuk-body">
-      The following courses are linked to this location. You will need to change the location or delete each course before you can delete this location.
+      You will need to change the location or delete the following before this location can be deleted.
     <p>
 
     {{ govukDetails({
       summaryText: "3 courses",
       html: '
+        <p class="govuk-body">The following courses are linked to this location</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>
             <a href="javasctip:preventDefault();">All other education/leisure type courses, Science and Mathematics (SSA 2)</a>
@@ -86,6 +87,7 @@
     {{ govukDetails({
       summaryText: "2 apprenticeships",
       html: '
+        <p class="govuk-body">The following apprenticeships are linked to this location</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>
             <a href="javasctip:preventDefault();">Construction Design and Build Technician</a>
@@ -100,6 +102,7 @@
     {{ govukDetails({
       summaryText: "1 T Level",
       html: '
+        <p class="govuk-body">The following T Levels are linked to this location</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>
             <a href="javasctip:preventDefault();">T Level Digital - Digital Production, Design and Development</a>
