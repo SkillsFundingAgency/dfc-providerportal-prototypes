@@ -2,7 +2,7 @@
 {% extends "layouts/layout-dm1.html" %}
 
 {% block pageTitle %}
-  Data Management - Upload course data
+  Data Management - Upload apprenticeship data
 {% endblock %}
 
 {% block header %}
@@ -20,7 +20,7 @@
 
   {{ govukBackLink({
     text: "Back",
-    href: "courses"
+    href: "apprenticeships"
   }) }}
 
 {% endblock %}
@@ -32,21 +32,26 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Upload your course data file</h1>
+    <h1 class="govuk-heading-xl">Upload your apprenticeship data file</h1>
+
+    {{ govukInsetText({
+      html: '<p class="govuk-body">Frameworks included in your CSV file will not be published on Find an apprenticeship training.</p>
+      <p class="govuk-body">Read more about the <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">withdrawal of apprenticeship frameworks (opens in a new window or tab)</a>.</p>'
+    }) }}
     
     {{ govukFileUpload({
-      id: "course-data-upload",
-      name: "course-data-upload"
+      id: "apprenticeship-data-upload",
+      name: "apprenticeship-data-upload"
     }) }}
 
     {{ govukButton({
-      href: "courses-publish",
+      href: "apprenticeships-publish",
       text: "Continue"
     }) }}
 
     {{ govukDetails({
       summaryText: "Help with uploading files",
-      html: 'If your upload file has more than 800 rows, email your file to <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">support@coursedirectory.org.uk</a> for guidance to publish your file to Publish to the course directory.'
+      html: 'If your upload file has more than 600 rows, email your file to <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">support@apprenticeshipdirectory.org.uk</a> for guidance to publish your file to Publish to the course directory.'
     }) }}
 
   </div>
