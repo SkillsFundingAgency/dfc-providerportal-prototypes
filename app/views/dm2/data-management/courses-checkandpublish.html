@@ -1,0 +1,193 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm2.html" %}
+
+{% block pageTitle %}
+  Data Management - Publish course data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Check and publish your course data file</h1>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">LARS/QAN</th>
+      <th scope="col" class="govuk-table__header">Course</th>
+      <th scope="col" class="govuk-table__header">Delivery</th>
+      <th scope="col" class="govuk-table__header">Start date</th>
+      <th scope="col" class="govuk-table__header">Venue</th>
+      <th scope="col" class="govuk-table__header">Status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell govuk-body-s">50065919</td>
+      <td class="govuk-table__cell govuk-body-s">CSCS Labourer's Card/Construction Course</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">Work based</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">01 Sep 2021</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">National</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">{{ govukTag({
+        text: "New"
+      }) }}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell govuk-body-s">50065919</td>
+      <td class="govuk-table__cell govuk-body-s">CSCS Labourer's Card/Construction Course</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">Work based</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">01 Oct 2021</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">National</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">{{ govukTag({
+        text: "New"
+      }) }}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell govuk-body-s">50065919</td>
+      <td class="govuk-table__cell govuk-body-s">CSCS Labourer's Card/Construction Course</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">Work based</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">01 Nov 2021</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">National</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">{{ govukTag({
+        text: "New"
+      }) }}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell govuk-body-s">50065919</td>
+      <td class="govuk-table__cell govuk-body-s">CSCS Labourer's Card/Construction Course</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">Work based</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">01 Dec 2021</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">National</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">{{ govukTag({
+        text: "New"
+      }) }}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell govuk-body-s">50118377</td>
+      <td class="govuk-table__cell govuk-body-s">Customer Service</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">Work based</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">01 Sep 2021</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">National</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">{{ govukTag({
+        text: "New"
+      }) }}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell govuk-body-s">50118377</td>
+      <td class="govuk-table__cell govuk-body-s">Customer Service</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">Work based</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">01 Oct 2021</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">National</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">{{ govukTag({
+        text: "New"
+      }) }}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell govuk-body-s">50118377</td>
+      <td class="govuk-table__cell govuk-body-s">Customer Service</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">Work based</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">01 Nov 2021</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">National</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">{{ govukTag({
+        text: "New"
+      }) }}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell govuk-body-s">50118377</td>
+      <td class="govuk-table__cell govuk-body-s">Customer Service</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">Work based</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">01 Dec 2021</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">National</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">{{ govukTag({
+        text: "New"
+      }) }}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell govuk-body-s">50077077</td>
+      <td class="govuk-table__cell govuk-body-s">Warehousing and Storage</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">Work based</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">01 Sep 2021</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">National</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">{{ govukTag({
+        text: "New"
+      }) }}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell govuk-body-s">50077077</td>
+      <td class="govuk-table__cell govuk-body-s">Warehousing and Storage</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">Work based</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">01 Oct 2021</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">National</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">{{ govukTag({
+        text: "New"
+      }) }}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell govuk-body-s">50077077</td>
+      <td class="govuk-table__cell govuk-body-s">Warehousing and Storage</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">Work based</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">01 Nov 2021</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">National</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">{{ govukTag({
+        text: "New"
+      }) }}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell govuk-body-s">50077077</td>
+      <td class="govuk-table__cell govuk-body-s">Warehousing and Storage</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">Work based</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">01 Dec 2021</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">National</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">{{ govukTag({
+        text: "New"
+      }) }}</td>
+    </tr>
+  </tbody>
+</table>
+
+    <p class="govuk-body">Your file of X courses has no errors and is ready to be published to the Course directory.</p>
+    <p class="govuk-body">This will replace all of the courses you currently have listed.</p>
+
+    <!--div class="govuk-button-group govuk-!-margin-top-7">
+      {{ govukButton({
+        href: "/" + version + "/data-management/courses-success",
+        text: "Publish"
+      }) }}
+
+      {{ govukButton({
+        classes: "govuk-button--secondary govuk-!-margin-left-3",
+        href: "/" + version + "/data-management",
+        text: "Cancel"
+      }) }}
+    </div-->
+
+  </div>
+
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
