@@ -1,0 +1,90 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm2.html" %}
+
+{% block pageTitle %}
+  Data Management - Upload apprenticeship data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+    text: "Back to data management",
+    href: "/" + version + "/data-management"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Preparing your apprenticeship data upload</h1>
+
+    <p class="govuk-body">
+      You can upload a CSV file to update your apprenticeship training courses in Publish to the course directory.
+    <p>
+
+    <h2 class="govuk-heading-l">Creating your upload file</h2>
+    <p class="govuk-body">To create your file you can download:<p>
+    <ul class="govuk-list govuk-list--bullet">
+      <!--li>
+        <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">your published apprenticeship data (CSV)</a>
+      </li-->
+      <li>
+        <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">an apprenticeship data template (CSV)</a>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-l">Completing your upload file<h2>
+    <p class="govuk-body">To ensure an upload is successful you must:<p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">add new venues</a> to the service prior to an upload
+      </li>
+      <li>
+        include existing apprenticeships and new apprenticeships in the file
+      </li>
+      <li>
+        complete all mandatory fields
+      </li>
+      <li>
+        follow the <a href="apprenticeships-formatting" class="govuk-link">format requirements</a>
+      </li>
+      <li>
+        save the file as a CSV
+      </li>
+    </ul>
+
+    {{ govukButton({
+      classes: "govuk-!-margin-top-5",
+      href: "/" + version + "/data-management/apprenticeships-upload",
+      text: "Continue"
+    }) }}
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  </div>
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
