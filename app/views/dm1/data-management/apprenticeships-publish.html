@@ -1,4 +1,4 @@
-{% set navActive = 'home' %}
+{% set navActive = 'datamanagement' %}
 {% extends "layouts/layout-dm1.html" %}
 
 {% block pageTitle %}
@@ -34,7 +34,7 @@
 
     <div class="govuk-button-group govuk-!-margin-top-7">
       {{ govukButton({
-        href: "apprenticeships-success",
+        href: "/" + version + "/data-management/apprenticeships-success",
         text: "Publish"
       }) }}
 

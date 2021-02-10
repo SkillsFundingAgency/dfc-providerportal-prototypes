@@ -1,4 +1,4 @@
-{% set navActive = 'home' %}
+{% set navActive = 'datamanagement' %}
 {% extends "layouts/layout-dm1.html" %}
 
 {% block pageTitle %}
@@ -20,7 +20,7 @@
 
   {{ govukBackLink({
     text: "Back to data management",
-    href: "index"
+    href: "/" + version + "/data-management"
   }) }}
 
 {% endblock %}
@@ -71,7 +71,7 @@
 
     {{ govukButton({
       classes: "govuk-!-margin-top-5",
-      href: "apprenticeships-upload",
+      href: "/" + version + "/data-management/apprenticeships-upload",
       text: "Continue"
     }) }}
 
