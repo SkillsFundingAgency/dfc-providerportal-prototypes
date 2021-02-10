@@ -2,7 +2,7 @@
 {% extends "layouts/layout-dm1.html" %}
 
 {% block pageTitle %}
-  Data Management - Upload course data
+  Data Management - Upload apprenticeship data
 {% endblock %}
 
 {% block header %}
@@ -32,16 +32,20 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Preparing your course data upload</h1>
+    <h1 class="govuk-heading-xl">Preparing your apprenticeship data upload</h1>
+
+    <p class="govuk-body">
+      You can upload a CSV file to update your apprenticeship training courses in Publish to the course directory.
+    <p>
 
     <h2 class="govuk-heading-l">Creating your upload file</h2>
     <p class="govuk-body">To create your file you can download:<p>
     <ul class="govuk-list govuk-list--bullet">
       <!--li>
-        <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">your published course data (CSV)</a>
+        <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">your published apprenticeship data (CSV)</a>
       </li-->
       <li>
-        <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">a course data template (CSV)</a>
+        <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">an apprenticeship data template (CSV)</a>
       </li>
     </ul>
 
@@ -52,13 +56,13 @@
         <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">add new venues</a> to the service prior to an upload
       </li>
       <li>
-        include existing courses and new courses in the file
+        include existing apprenticeships and new apprenticeships in the file
       </li>
       <li>
         complete all mandatory fields
       </li>
       <li>
-        follow the <a href="courses-formatting" class="govuk-link">format requirements</a>
+        follow the <a href="apprenticeships-formatting" class="govuk-link">format requirements</a>
       </li>
       <li>
         save the file as a CSV
@@ -67,7 +71,7 @@
 
     {{ govukButton({
       classes: "govuk-!-margin-top-5",
-      href: "courses-upload",
+      href: "apprenticeships-upload",
       text: "Continue"
     }) }}
 
