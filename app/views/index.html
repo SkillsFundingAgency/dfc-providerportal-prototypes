@@ -35,7 +35,7 @@
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-dm2">
-              Data Management v2
+              Data Management v2 
             </span>
           </h2>
           <!--div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-dm2">
@@ -43,6 +43,12 @@
           </div-->
         </div>
         <div id="accordion-default-content-dm2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-dm2">
+          <p class="govuk-body">
+              {{ govukTag({
+                classes: "govuk-tag--red",
+                text: "Work in progress"
+              }) }}
+          <p>
           <ul class="govuk-list">
             <li><a class="govuk-link" href="dm2/">Subsequent course and apprenticeship upload happy path</a></li>
           </ul>
@@ -61,6 +67,12 @@
           </div-->
         </div>
         <div id="accordion-default-content-dm1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-dm1">
+          <p class="govuk-body">
+            {{ govukTag({
+              classes: "govuk-tag--green",
+              text: "Ready for user research"
+            }) }}
+          <p>
           <ul class="govuk-list">
             <li><a class="govuk-link" href="dm1/">Initial course and apprenticeship upload happy path</a></li>
           </ul>
