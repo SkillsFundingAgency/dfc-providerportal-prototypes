@@ -2,7 +2,7 @@
 {% extends "layouts/layout-dm2.html" %}
 
 {% block pageTitle %}
-  Data Management - Course data published
+  Data Management - Publish apprenticeship data
 {% endblock %}
 
 {% block header %}
@@ -27,17 +27,23 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    {{ govukPanel({
-      classes: "govuk-!-margin-bottom-9",
-      titleText: "X courses published"
-    }) }}
+    <h1 class="govuk-heading-xl">Publish your apprenticeship data file</h1>
 
-    <h2 class="govuk-heading-m">What next?</h2>
-    <ul class="govuk-list">
-      <li><a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit courses</a></li>
-      <li><a class="govuk-link" href="/{{version}}/data-management">Back to data management</a></li>
-      <li><a class="govuk-link" href="/{{version}}">Back to the home screen</a></li>
-    </ul>
+    <p class="govuk-body">Your file of X apprenticeships has no errors and is ready to be published to the Course directory.</p>
+    <p class="govuk-body">This will replace all of the apprenticeships you currently have listed.</p>
+
+    <div class="govuk-button-group govuk-!-margin-top-7">
+      {{ govukButton({
+        href: "/" + version + "/data-upload/apprenticeships-success",
+        text: "Publish"
+      }) }}
+
+      {{ govukButton({
+        classes: "govuk-button--secondary govuk-!-margin-left-3",
+        href: "/" + version + "/data-upload",
+        text: "Cancel"
+      }) }}
+    </div>
 
   </div>
 

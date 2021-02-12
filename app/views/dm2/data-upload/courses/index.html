@@ -20,7 +20,7 @@
 
   {{ govukBackLink({
     text: "Back",
-    href: "/" + version + "/data-management/courses"
+    href: "/" + version + "/data-upload/courses"
   }) }}
 
 {% endblock %}
@@ -54,7 +54,7 @@
     }) }}
 
     {{ govukButton({
-      href: "/" + version + "/data-management/courses/inprogress",
+      href: "/" + version + "/data-upload/courses/inprogress",
       text: "Continue"
     }) }}
 
@@ -76,7 +76,7 @@
       <nav role="navigation" aria-labelledby="subsection-title">
         <ul class="govuk-list govuk-list--bullet govuk-!-font-size-16">
           <li>
-            <a href="/{{version}}/data-management/courses/formatting" class="govuk-link">Course data CSV formatting requirements</a>
+            <a href="/{{version}}/data-upload/courses/formatting" class="govuk-link">Course data CSV formatting requirements</a>
           </li>
         </ul>
       </nav>

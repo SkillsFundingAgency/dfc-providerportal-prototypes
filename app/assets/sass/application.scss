@@ -1198,3 +1198,16 @@ a.pttcd-link-deactivated {
 .govuk-link--blocked:link {
   color: #0b0c0c;
 }
+
+
+.govuk-summary-list--dataupload {
+  .govuk-summary-list__key {
+    width: 76%;
+  }
+  .govuk-summary-list__value {
+    width: 12%;
+  }
+  .govuk-summary-list__actions {
+    width: 12%;
+  }
+}

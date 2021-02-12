@@ -14,9 +14,9 @@ $(document).ready(function () {
     $('input:checkbox').not(this).prop('checked', this.checked);
   });
 
-  if (document.getElementById('govuk-box-message')) {
+  if (document.getElementById('dm2-govuk-box-message')) {
     setTimeout(function() {$('#loading-message').html("Processing data");}, 2500);
-    setTimeout(function() {window.location.href = "/dm2/data-management/courses/checkandpublish";}, 6000);
+    setTimeout(function() {window.location.href = "/dm2/data-upload/courses/checkandpublish";}, 6000);
   }
 
 })
