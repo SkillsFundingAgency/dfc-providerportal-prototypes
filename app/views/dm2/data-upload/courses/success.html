@@ -2,7 +2,7 @@
 {% extends "layouts/layout-dm2.html" %}
 
 {% block pageTitle %}
-  Data Management - Publish apprenticeship data
+  Data Management - Course data published
 {% endblock %}
 
 {% block header %}
@@ -29,14 +29,13 @@
 
     {{ govukPanel({
       classes: "govuk-!-margin-bottom-9",
-      titleText: "Apprenticeships published",
-      html: "You have X apprenticeships listed on the Course directory"
+      titleText: "X courses published"
     }) }}
 
     <h2 class="govuk-heading-m">What next?</h2>
     <ul class="govuk-list">
-      <li><a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit apprenticeships</a></li>
-      <li><a class="govuk-link" href="/{{version}}/data-management">Back to data management</a></li>
+      <li><a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit courses</a></li>
+      <li><a class="govuk-link" href="/{{version}}/data-upload">Back to data management</a></li>
       <li><a class="govuk-link" href="/{{version}}">Back to the home screen</a></li>
     </ul>
 

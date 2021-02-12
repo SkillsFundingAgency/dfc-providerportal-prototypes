@@ -1,0 +1,123 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm2.html" %}
+
+{% block pageTitle %}
+  Data Management - Publish course data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Check and publish your course data file</h1>
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body">Your file of 293 courses has no errors and is ready to be published to the Course directory.</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        212 of your uploaded courses are already live on Course Directory
+      </li>
+      <li>
+        81 of your uploaded courses will be added to Course Directory
+      </li>
+      <li>
+        35 publish courses will be removed from the Course Directory
+      </li>
+    </ul>
+
+    <h1 class="govuk-heading-m">
+      ~ OR ~
+    </h1>
+
+    <dl class="govuk-summary-list govuk-summary-list--dataupload">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course already published on Course directory
+        </dt>
+        <dd class="govuk-summary-list__value">
+          212
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            View<span class="govuk-visually-hidden"> published courses</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Courses to be added to Course directory
+        </dt>
+        <dd class="govuk-summary-list__value">
+          81
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            View<span class="govuk-visually-hidden"> courses to be added</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Published courses to be deleted from Course directory
+        </dt>
+        <dd class="govuk-summary-list__value">
+          35
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            View<span class="govuk-visually-hidden"> courses to be deleted</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+    <div class="govuk-button-group govuk-!-margin-top-7">
+      {{ govukButton({
+        href: "/" + version + "/data-upload/courses/success",
+        text: "Publish"
+      }) }}
+<!--
+      {{ govukButton({
+        classes: "govuk-button--secondary govuk-!-margin-left-3",
+        href: "/" + version + "/data-upload",
+        text: "Cancel"
+      }) }}
+-->
+    </div>
+
+  </div>
+
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

@@ -27,23 +27,18 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Publish your apprenticeship data file</h1>
+    {{ govukPanel({
+      classes: "govuk-!-margin-bottom-9",
+      titleText: "Apprenticeships published",
+      html: "You have X apprenticeships listed on the Course directory"
+    }) }}
 
-    <p class="govuk-body">Your file of X apprenticeships has no errors and is ready to be published to the Course directory.</p>
-    <p class="govuk-body">This will replace all of the apprenticeships you currently have listed.</p>
-
-    <div class="govuk-button-group govuk-!-margin-top-7">
-      {{ govukButton({
-        href: "/" + version + "/data-management/apprenticeships-success",
-        text: "Publish"
-      }) }}
-
-      {{ govukButton({
-        classes: "govuk-button--secondary govuk-!-margin-left-3",
-        href: "/" + version + "/data-management",
-        text: "Cancel"
-      }) }}
-    </div>
+    <h2 class="govuk-heading-m">What next?</h2>
+    <ul class="govuk-list">
+      <li><a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit apprenticeships</a></li>
+      <li><a class="govuk-link" href="/{{version}}/data-upload">Back to data management</a></li>
+      <li><a class="govuk-link" href="/{{version}}">Back to the home screen</a></li>
+    </ul>
 
   </div>
 
