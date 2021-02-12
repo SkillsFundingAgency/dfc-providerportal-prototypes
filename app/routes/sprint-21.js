@@ -20,6 +20,10 @@ module.exports = function (router) {
             res.redirect('/'+v+'/venues/add/success');
         })
 
+        router.post('/'+v+'/venues/add/manual-edit', function (req, res) {
+            res.redirect('/'+v+'/venues/add/check-publish');
+        })
+
         
     // Locations - Delete
     
