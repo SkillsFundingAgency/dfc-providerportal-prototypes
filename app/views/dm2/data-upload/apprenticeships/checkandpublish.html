@@ -28,16 +28,20 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <h1 class="govuk-heading-xl">Check and publish your apprenticeship data file</h1>
+    <h1 class="govuk-heading-xl">Check and publish your apprenticeship data</h1>
 
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <p class="govuk-body">Your file of 18 apprenticeships has no errors and is ready to be published to the apprenticeship directory.</p>
+    <p class="govuk-body">Your file of 18 apprenticeships has no errors and is ready to be published to the course directory.</p>
+    {{ govukDetails({
+      summaryText: "View list of apprenticeships",
+      text: ""
+    }) }}
     {{ govukWarningText({
-      text: "Publishing these apprenticeships will replace all of your apprenticeships listed on Course directory",
+      text: "Publishing these apprenticeships will replace all of your apprenticeships on Publish to the course directory",
       iconFallbackText: "warning"
     }) }}
 <!--
