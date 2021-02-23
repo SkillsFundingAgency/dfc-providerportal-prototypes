@@ -1,0 +1,113 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm3.html" %}
+
+{% block pageTitle %}
+  Data  Management
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Data Upload</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-2 homescreen-row">
+
+  <div class="govuk-grid-column-one-third">
+
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-m">Courses</h2>
+        <p class="govuk-body-s">You have <strong>10</strong> courses</p>
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="/{{version}}/data-upload/courses">Upload your course data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published course data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download course data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-m">Apprenticeships</h2>
+        <p class="govuk-body-s">You have <strong>5</strong> apprenticeships</p>
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="/{{version}}/data-upload/apprenticeships">Upload your apprenticeship data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published apprenticeship data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download apprenticeship data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    <!--div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-m">T Levels</h2>
+        <p class="govuk-body-s">You have <strong>0</strong> T Levels</p>
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Upload your T Level data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published T Level data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download T Level data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div-->
+
+  </div>
+
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
