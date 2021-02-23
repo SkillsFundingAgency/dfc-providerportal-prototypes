@@ -14,6 +14,9 @@ $(document).ready(function () {
     $('input:checkbox').not(this).prop('checked', this.checked);
   });
 
+
+// DM v2 loaders
+
   if (document.getElementById('dm2-govuk-box-message--courses')) {
     setTimeout(function() {$('#loading-message').html("Processing data");}, 2500);
     setTimeout(function() {window.location.href = "/dm2/data-upload/courses/checkandpublish";}, 6000);
@@ -22,5 +25,18 @@ $(document).ready(function () {
     setTimeout(function() {$('#loading-message').html("Processing data");}, 2500);
     setTimeout(function() {window.location.href = "/dm2/data-upload/apprenticeships/checkandpublish";}, 6000);
   }
+
+  
+// DM v3 loaders
+
+  if (document.getElementById('dm3-loader--courses')) {
+    setTimeout(function() {$('#loading-message').html("Processing data");}, 2500);
+    setTimeout(function() {window.location.href = "/dm3/data-upload/courses/validation";}, 6000);
+  }
+  if (document.getElementById('dm3-loader--apprenticeships')) {
+    setTimeout(function() {$('#loading-message').html("Processing data");}, 2500);
+    setTimeout(function() {window.location.href = "/dm3/data-upload/apprenticeships/validation";}, 6000);
+  }
+  
 
 })
