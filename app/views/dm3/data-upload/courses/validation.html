@@ -759,10 +759,23 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    <!--
       {{ govukWarningText({
         text: "Your course data upload has 6 errors",
         iconFallbackText: "Warning"
       }) }}
+    -->
+
+    {% set html %}
+      <p class="govuk-notification-banner__heading">
+        You have 7 days left to send your application.
+        <a class="govuk-notification-banner__link" href="#">View application</a>.
+      </p>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html
+    }) }}
 
     <!--p class="govuk-body">Your file of 40 courses has <strong>6 errors</strong>.</p-->
 
