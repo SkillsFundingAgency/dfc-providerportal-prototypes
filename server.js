@@ -9,7 +9,6 @@ const express = require('express')
 const nunjucks = require('nunjucks')
 const sessionInCookie = require('client-sessions')
 const sessionInMemory = require('express-session')
-const cookieParser = require('cookie-parser')
 
 // Run before other code to make sure variables from .env are available
 dotenv.config()
@@ -45,15 +44,10 @@ if (useV6) {
   v6App = express()
 }
 
-// Set cookies for use in cookie banner.
-app.use(cookieParser())
-documentationApp.use(cookieParser())
-app.use(utils.handleCookies(app))
-documentationApp.use(utils.handleCookies(documentationApp))
-
 // Set up configuration variables
 var releaseVersion = packageJson.version
-var env = (process.env.NODE_ENV || 'development').toLowerCase()
+var glitchEnv = (process.env.PROJECT_REMIX_CHAIN) ? 'production' : false // glitch.com
+var env = (process.env.NODE_ENV || glitchEnv || 'development').toLowerCase()
 var useAutoStoreData = process.env.USE_AUTO_STORE_DATA || config.useAutoStoreData
 var useCookieSessionStore = process.env.USE_COOKIE_SESSION_STORE || config.useCookieSessionStore
 var useHttps = process.env.USE_HTTPS || config.useHttps
@@ -61,8 +55,6 @@ var useHttps = process.env.USE_HTTPS || config.useHttps
 useHttps = useHttps.toLowerCase()
 
 var useDocumentation = (config.useDocumentation === 'true')
-// logging
-var useLogging = config.useLogging
 
 // Promo mode redirects the root to /docs - so our landing page is docs when published on heroku
 var promoMode = process.env.PROMO_MODE || 'false'
@@ -163,7 +155,6 @@ if (useV6) {
 app.locals.asset_path = '/public/'
 app.locals.useAutoStoreData = (useAutoStoreData === 'true')
 app.locals.useCookieSessionStore = (useCookieSessionStore === 'true')
-app.locals.cookieText = config.cookieText
 app.locals.promoMode = promoMode
 app.locals.releaseVersion = 'v' + releaseVersion
 app.locals.serviceName = config.serviceName
@@ -207,29 +198,6 @@ if (useAutoStoreData === 'true') {
   }
 }
 
-// Logging session data
-if (useLogging !== 'false') {
-  app.use((req, res, next) => {
-    const all = (useLogging === 'true')
-    const post = (useLogging === 'post' && req.method === 'POST')
-    //const get = (useLogging === 'get' && req.method === 'GET')
-    //if (all || post || get) {
-    if (all || post) {
-      const log = {
-        method: req.method,
-        url: req.originalUrl,
-        data: req.session.data
-      }
-      var date = new Date();
-      console.log("*****************************")
-      console.log(date.toGMTString())
-      console.log("*****************************")
-      console.log(JSON.stringify(log, null, 2))
-    }
-    next()
-  })
-}
-
 // Clear all data in session if you open /prototype-admin/clear-data
 app.post('/prototype-admin/clear-data', function (req, res) {
   req.session.data = {}
@@ -239,8 +207,6 @@ app.post('/prototype-admin/clear-data', function (req, res) {
 // Redirect root to /docs when in promo mode.
 if (promoMode === 'true') {
   console.log('Prototype Kit running in promo mode')
-
-  app.locals.cookieText = 'GOV.UK uses cookies to make the site simpler. <a href="/docs/cookies">Find out more about cookies</a>'
 
   app.get('/', function (req, res) {
     res.redirect('/docs')

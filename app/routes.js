@@ -34,5 +34,7 @@ require('./routes/sprint-21.js')(router);
 
 require('./routes/v1.js')(router);
 
+require('./routes/dm3.js')(router);
+
 
 module.exports = router
