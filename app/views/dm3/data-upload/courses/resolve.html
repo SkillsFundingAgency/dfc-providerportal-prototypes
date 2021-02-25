@@ -2,7 +2,7 @@
 {% extends "layouts/layout-dm3.html" %}
 
 {% block pageTitle %}
-  Data Management - Publish course data
+  Data Management - Resolve errors in course data
 {% endblock %}
 
 {% block header %}
@@ -752,88 +752,48 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <h1 class="govuk-heading-xl">Validate your course data</h1>
+    <h1 class="govuk-heading-xl">Resolve errors in your course data</h1>
 
   </div>
 </div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
 
-      {{ govukWarningText({
-        text: "Your course data upload has 6 errors",
-        iconFallbackText: "Warning"
-      }) }}
-
-    <!--
-    {% set html %}
-      <p class="govuk-notification-banner__heading">
-        You have 7 days left to send your application.
-        <a class="govuk-notification-banner__link" href="#">View application</a>.
-      </p>
-    {% endset %}
-
-    {{ govukNotificationBanner({
-      html: html
-    }) }}
-    -->
-
-    <!--p class="govuk-body">Your file of 40 courses has <strong>6 errors</strong>.</p-->
-
-  </div>
-</div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <!--h2 class="govuk-heading-m">
-      Rows with errors
-    </h2-->
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Row</th>
+          <th scope="col" class="govuk-table__header">LARS/QAN</th>
+          <th scope="col" class="govuk-table__header">Course</th>
+          <th scope="col" class="govuk-table__header">Error description</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
 
+        {% set i = 0 %}
+        {% for item in items %}
 
-    
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          View errors in your upload
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        <table class="govuk-table">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Row</th>
-              <th scope="col" class="govuk-table__header">LARS/QAN</th>
-              <th scope="col" class="govuk-table__header">Course</th>
-              <th scope="col" class="govuk-table__header">Error description</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
+          {% set i = i + 1 %}
+          {% if item.STUDY_MODE == "Undefined" %}
 
-            {% set i = 0 %}
-            {% for item in items %}
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell govuk-body-s">{{ i }}</td>
+            <td scope="row" class="govuk-table__cell govuk-body-s">{{ item.LARS_QAN }}</td>
+            <td class="govuk-table__cell govuk-body-s">{{item.COURSE_NAME}}</td>
+            <td scope="row" class="govuk-table__cell govuk-body-s">
+              Missing venue or sub region
+            </td>
+          </tr>
+          {% endif %}
 
-              {% set i = i + 1 %}
-              {% if item.STUDY_MODE == "Undefined" %}
-
-              <tr class="govuk-table__row">
-                <td scope="row" class="govuk-table__cell govuk-body-s">{{ i }}</td>
-                <td scope="row" class="govuk-table__cell govuk-body-s">{{ item.LARS_QAN }}</td>
-                <td class="govuk-table__cell govuk-body-s">{{item.COURSE_NAME}}</td>
-                <td scope="row" class="govuk-table__cell govuk-body-s">
-                  Missing venue or sub region
-                </td>
-              </tr>
-              {% endif %}
-
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    </details>
-    
+        {% endfor %}
+      </tbody>
+    </table>    
 
   </div>
 </div>
-<div class="govuk-grid-row">
+<!--div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
         
     <h2 class="govuk-heading-l govuk-!-margin-top-5">
