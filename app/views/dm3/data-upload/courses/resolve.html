@@ -766,7 +766,9 @@
           <th scope="col" class="govuk-table__header">Row</th>
           <th scope="col" class="govuk-table__header">LARS/QAN</th>
           <th scope="col" class="govuk-table__header">Course</th>
+          <th scope="col" class="govuk-table__header">Start date</th>
           <th scope="col" class="govuk-table__header">Error description</th>
+          <th scope="col" colspan="2" class="govuk-table__header"></th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
@@ -781,8 +783,21 @@
             <td scope="row" class="govuk-table__cell govuk-body-s">{{ i }}</td>
             <td scope="row" class="govuk-table__cell govuk-body-s">{{ item.LARS_QAN }}</td>
             <td class="govuk-table__cell govuk-body-s">{{item.COURSE_NAME}}</td>
+            <td class="govuk-table__cell govuk-body-s">
+            {% if item.START_DATE == "" %}
+              Flexible
+            {% else %}
+              {{item.START_DATE}}
+            {% endif %}
+            </td>
             <td scope="row" class="govuk-table__cell govuk-body-s">
               Missing venue or sub region
+            </td>
+            <td scope="row" class="govuk-table__cell govuk-body-s">
+              <a href="javascript:preventDefault();" class="govuk-link">Resolve</a>
+            </td>
+            <td scope="row" class="govuk-table__cell govuk-body-s">
+              <a href="javascript:preventDefault();" class="govuk-link">Delete</a>
             </td>
           </tr>
           {% endif %}

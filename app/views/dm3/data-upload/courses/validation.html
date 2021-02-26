@@ -752,44 +752,67 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <h1 class="govuk-heading-xl">Validate your course data</h1>
+    <h1 class="govuk-heading-xl">Course data uploaded</h1>
 
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    <p class="govuk-body">Your file of 40 courses has been uploaded.</p>
+    
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          View list of courses
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">LARS/QAN</th>
+              <th scope="col" class="govuk-table__header">Course</th>
+              <th scope="col" class="govuk-table__header">Delivery</th>
+              <th scope="col" class="govuk-table__header">Start date</th>
+              <th scope="col" class="govuk-table__header">Venue</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            {% for item in items %}
+
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__cell govuk-body-s">{{ item.LARS_QAN }}</td>
+                <td class="govuk-table__cell govuk-body-s">{{item.COURSE_NAME}}</td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">{{item.DELIVERY_MODE}}</td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">
+                  {% if item.FLEXIBLE_START_DATE == "Yes" %}
+                    Flexible
+                  {% else %}
+                    {{item.START_DATE}}
+                  {% endif %}
+                </td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">{{item.VENUE}}</td>
+              </tr>
+
+            {% endfor %}
+          </tbody>
+        </table>
+
+      </div>
+    </details>
+
       {{ govukWarningText({
         text: "Your course data upload has 6 errors",
         iconFallbackText: "Warning"
       }) }}
-
-    <!--
-    {% set html %}
-      <p class="govuk-notification-banner__heading">
-        You have 7 days left to send your application.
-        <a class="govuk-notification-banner__link" href="#">View application</a>.
-      </p>
-    {% endset %}
-
-    {{ govukNotificationBanner({
-      html: html
-    }) }}
-    -->
-
-    <!--p class="govuk-body">Your file of 40 courses has <strong>6 errors</strong>.</p-->
 
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <!--h2 class="govuk-heading-m">
-      Rows with errors
-    </h2-->
-
-
-    
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
@@ -851,7 +874,7 @@
           },
           {
             value: "download",
-            text: "Download a file including errors and delete uploaded data"
+            text: "Download your file including errors"
           },
           {
             value: "cancel",
