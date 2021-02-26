@@ -39,7 +39,7 @@
   <div class="govuk-grid-column-two-thirds">
 
     <p class="govuk-body">
-      Your data will be uploaded to a staging area where you can check and amend your data before publishing to the course directory.
+      Your data will be uploaded where you can check and amend your data before publishing to the course directory.
     <p>
 
     <p class="govuk-body">To ensure an upload is successful you must:<p>
@@ -50,7 +50,7 @@
       <li>follow the <a href="/{{version}}/data-upload/courses/formatting" class="govuk-link">data file format requirements</a></li>
       <li>save the data file as a CSV</li>
     </ul>
-    
+
     {{ govukFileUpload({
       classes: "govuk-!-margin-top-5",
       id: "course-data-upload",
@@ -61,7 +61,7 @@
       href: "/" + version + "/data-upload/courses/inprogress",
       text: "Continue"
     }) }}
-    
+
 <!--
     {{ govukDetails({
       classes: "govuk-!-margin-top-5",
