@@ -752,14 +752,14 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <h1 class="govuk-heading-xl">Course data errors</h1>
+    <h1 class="govuk-heading-xl">Your course data</h1>
 
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <p class="govuk-body">Your data upload of 40 courses has 6 errors.  You must resolve these errors before all your course data can be published.</p>
+    <p class="govuk-body">Your data upload has errors, you must resolve these errors before all your course data can be published.</p>
 
     <!-- <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
@@ -802,11 +802,11 @@
 
       </div>
     </details> -->
-<!--
+
       {{ govukWarningText({
-        text: "Your data upload has 6 errors",
+        text: "Your data upload of 40 courses has 6 errors.",
         iconFallbackText: "Warning"
-      }) }} -->
+      }) }}
 
   </div>
 </div>
@@ -848,20 +848,15 @@
               {% endif %}
 
             {% endfor %}
-          </tbody>
         </table>
       </div>
     </details>
-
-
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <p class="govuk-body">You can <a href="xx">download all of your courses including the errors  (opens in a CSV file) </a>to edit and upload.</p>
-
-    <h2 class="govuk-heading-l govuk-!-margin-top-5">
+    <h2 class="govuk-heading-m govuk-!-margin-top-5">
       What do you want to do?
     </h2>
 
@@ -876,7 +871,7 @@
           },
           {
             value: "download",
-            text: "Upload your course data file"
+            text: "Download your file including errors"
           },
           {
             value: "cancel",
