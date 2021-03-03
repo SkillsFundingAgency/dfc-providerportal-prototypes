@@ -98,7 +98,8 @@ module.exports = {
       "DURATION": 13,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60313067",
@@ -124,7 +125,8 @@ module.exports = {
       "DURATION": 11,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "Z0001803",
@@ -150,7 +152,8 @@ module.exports = {
       "DURATION": 8,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "Z0001803",
@@ -176,7 +179,8 @@ module.exports = {
       "DURATION": 8,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60313080",
@@ -202,7 +206,8 @@ module.exports = {
       "DURATION": 11,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60146813",
@@ -228,7 +233,8 @@ module.exports = {
       "DURATION": 4,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60146813",
@@ -254,7 +260,8 @@ module.exports = {
       "DURATION": 2,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60185740",
@@ -280,7 +287,8 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60109919",
@@ -306,7 +314,8 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "50068398",
@@ -332,7 +341,8 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60010988",
@@ -358,7 +368,8 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "50075408",
@@ -384,7 +395,8 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "50049896",
@@ -410,7 +422,8 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60080528",
@@ -436,7 +449,8 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60080462",
@@ -462,7 +476,8 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60097905",
@@ -488,7 +503,8 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "6007937X",
@@ -514,7 +530,8 @@ module.exports = {
       "DURATION": null,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60100874",
@@ -540,7 +557,8 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60187542",
@@ -566,7 +584,8 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60309374",
@@ -592,7 +611,8 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": ""
+      "ATTENDANCE_PATTERN": "",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "60109890",
@@ -618,7 +638,8 @@ module.exports = {
       "DURATION": 10,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "50118912",
@@ -644,7 +665,8 @@ module.exports = {
       "DURATION": 4,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "50087563",
@@ -670,7 +692,8 @@ module.exports = {
       "DURATION": 12,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "Z0001855",
@@ -696,7 +719,8 @@ module.exports = {
       "DURATION": 10,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     },
     {
       "LARS_QAN": "50088142",
@@ -722,7 +746,8 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime"
+      "ATTENDANCE_PATTERN": "Daytime",
+      "PTYPE_STATUS": "uploaded"
     }
    ]
 
