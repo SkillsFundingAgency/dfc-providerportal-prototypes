@@ -1,0 +1,439 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm3.html" %}
+
+{% block pageTitle %}
+  Data Management - Resolve errors in course details
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Resolve errors in course details</h1>
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            {% if (data['dm3courses'][data['row']-1].COURSE_NAME == "") %}
+              <li><a href="#course-details-coursename-error">Course name is missing</a></li>
+            {% endif %}
+            {% if (data['dm3courses'][data['row']-1].DELIVERY_MODE == "") %}
+              <li><a href="#course-details-type-error">Course type is missing</a></li>
+            {% endif %}
+            {% if (data['dm3courses'][data['row']-1].START_DATE == "") %}
+              <li><a href="#course-details-startdate-error">Start date is missing</a></li>
+            {% endif %}
+            {% if (data['dm3courses'][data['row']-1].VENUE == "") %}
+              <li><a href="#course-details-venue-error">Venue is missing</a></li>
+            {% endif %}
+            {% if (data['dm3courses'][data['row']-1].COST == "") %}
+              <li><a href="#course-details-cost-error">Cost is missing</a></li>
+            {% endif %}
+            {% if (data['dm3courses'][data['row']-1].DURATION == "") or (data['dm3courses'][data['row']-1].DURATION_UNIT == "") %}
+              <li><a href="#course-details-duration-error">Duration is missing</a></li>
+            {% endif %}
+            {% if (data['dm3courses'][data['row']-1].STUDY_MODE == "") %}
+              <li><a href="#course-details-hours-error">Course hours is missing</a></li>
+            {% endif %}
+            {% if (data['dm3courses'][data['row']-1].ATTENDANCE_PATTERN == "") %}
+              <li><a href="#course-details-attendance-error">Attendance pattern is missing</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+
+      <form action="" method="post" class="form">
+
+        <!--  -->
+
+        {{ govukInput({
+          id: "course-details-coursename",
+          name: "course-details-coursename",
+          classes: "govuk-!-margin-bottom-3",
+          label: {
+            text: "Course name",
+            classes: "govuk-label--m"
+          },
+          hint: {
+            html: 'The course name displayed on the National Career Service, <a href="javascript:preventDefault();">Find a course</a>.'
+          },
+          value: data['dm3courses'][data['row']-1].COURSE_NAME
+        }) }}
+
+        <!--  -->
+
+        {{ govukInput({
+          id: "course-details-reference",
+          name: "course-details-reference",
+          classes: "govuk-!-margin-bottom-3",
+          label: {
+            text: "Your reference",
+            classes: "govuk-label--m"
+          },
+          hint: {
+            text: "A reference that will help you identify this course in your internal systems. This will not be visible to learners."
+          },
+          value: data['dm3courses'][data['row']-1].ID
+        }) }}
+
+        <!--  -->
+
+        {{ govukRadios({
+          idPrefix: "course-details-type",
+          name: "course-details-type",
+          fieldset: {
+            legend: {
+              text: "Course type",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "Classroom based",
+              text: "Classroom based",
+              checked: true
+            },
+            {
+              value: "Online",
+              text: "Online"
+            },
+            {
+              value: "Work based",
+              text: "Work based"
+            }
+          ]
+        }) }}
+
+        <!--  -->
+
+        {% set dateHtml %}
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="course-details-startdate-date-hint">
+            <div id="course-details-startdate-date-hint" class="govuk-hint">
+              For example, 30 9 2021
+            </div>
+            <div class="govuk-date-input" id="course-details-startdate-date">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-details-startdate-date-day" name="course-details-startdate-date-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][0]}}"></div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-details-startdate-date-month" name="course-details-startdate-date-month" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][1]}}"></div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="course-details-startdate-date-year" name="course-details-startdate-date-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][2]}}"></div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        {% endset -%}
+
+        {{ govukRadios({
+          idPrefix: "course-details-startdate",
+          name: "course-details-startdate",
+          fieldset: {
+            legend: {
+              text: "Start date",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "Defined start date",
+              text: "Defined start date",
+              conditional: {
+                html: dateHtml
+              },
+              checked: true
+            },
+            {
+              value: "Flexible start date",
+              text: "Flexible start date"
+            }
+          ]
+        }) }}
+
+        <!--  -->
+
+        <div class="govuk-form-group govuk-!-margin-bottom-1">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Course location
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="course-details-location" name="course-details-location" type="checkbox" value="Presidency London College" checked="checked">
+                <label class="govuk-label govuk-checkboxes__label" for="course-details-location">
+                  Presidency London College
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+        <p class="govuk-body govuk-!-margin-bottom-7">
+          <!--
+          {{ govukButton({
+            text: "Add another location",
+            classes: "govuk-button--secondary"
+          }) }}
+          -->
+          <a href="#" class="govuk-link">Add another location</a>
+        </p>
+
+        <!--  -->
+
+        <div class="govuk-form-group govuk-!-margin-bottom-7">
+          <label class="govuk-label govuk-label--m" for="course-details-webpage">
+            Course webpage
+          </label>
+          <span id="course-details-webpage-hint" class="govuk-hint">
+            The webpage for this course. For example, http://www.provider.com/coursename.
+          </span>
+          <input class="govuk-input" id="course-details-webpage" name="course-details-webpage" type="text" aria-describedby="course-details-webpage-hint" value="http://www.provider.com/coursename">
+        </div>
+
+        <!--  -->
+
+        {{ govukInput({
+          id: "course-details-cost",
+          name: "course-details-cost",
+          label: {
+            text: "Cost",
+            classes: "govuk-label--m"
+          },
+          prefix: {
+            text: "£"
+          },
+          classes: "govuk-input--width-5",
+          hint: {
+            text: "Cost of the course to the learner."
+          },
+          value: data['dm3courses'][data['row']-1].COST
+        }) }}
+
+        <!--  -->
+
+        {{ govukCharacterCount({
+          name: "course-details-description",
+          id: "course-details-description",
+          maxlength: 255,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "Cost description"
+          },
+          hint: {
+            text: "A description of what the cost includes and additional costs to the learner. For example, assessment, exam fees or study materials."
+          },
+          value: data['dm3courses'][data['row']-1].COST_DESCRIPTION
+        }) }}
+
+        <!--  -->
+        
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="course-details-duration-value">
+              Duration
+            </label>
+          </h1>
+          <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-3" id="course-details-duration-value" name="course-details-duration-value" type="text" value="10">
+          <select class="govuk-select" id="course-details-duration-unit" name="course-details-duration-unit">
+            <option value="" selected>Select</option>
+            <option value="hours">Hours</option>
+            <option value="days">Days</option>
+            <option value="weeks">Weeks</option>
+            <option value="months" selected="selected">Months</option>
+            <option value="years">Years</option>
+          </select>
+        </div>
+
+        <!--  -->
+
+        {% if (data['dm3courses'][data['row']-1].STUDY_MODE == "") %}
+          {{ govukRadios({
+            idPrefix: "course-details-hours",
+            name: "course-details-hours",
+            fieldset: {
+              legend: {
+                text: "Course hours",
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            errorMessage: {
+              text: "Select course hours"
+            },
+            items: [
+              {
+                value: "Full time",
+                text: "Full time"
+              },
+              {
+                value: "Part time",
+                text: "Part time"
+              },
+              {
+                value: "Flexible",
+                text: "Flexible"
+              }
+            ]
+          }) }}
+        {% else %}
+          {{ govukRadios({
+            idPrefix: "course-details-hours",
+            name: "course-details-hours",
+            fieldset: {
+              legend: {
+                text: "Course hours",
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            items: [
+              {
+                value: "Full time",
+                text: "Full time",
+                checked: true
+              },
+              {
+                value: "Part time",
+                text: "Part time"
+              },
+              {
+                value: "Flexible",
+                text: "Flexible"
+              }
+            ]
+          }) }}
+        {% endif %}
+
+        <!--  -->
+        {% if (data['dm3courses'][data['row']-1].ATTENDANCE_PATTERN == "") %}
+        
+          {{ govukRadios({
+            idPrefix: "course-details-attendance",
+            name: "course-details-attendance",
+            fieldset: {
+              legend: {
+                text: "Attendance pattern",
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            errorMessage: {
+              text: "Select an attendance pattern"
+            },
+            items: [
+              {
+                value: "Daytime",
+                text: "Daytime"
+              },
+              {
+                value: "Evening",
+                text: "Evening"
+              },
+              {
+                value: "Weekend",
+                text: "Weekend"
+              },
+              {
+                value: "Day/Block Release",
+                text: "Day/Block Release"
+              }
+            ]
+          }) }}
+
+        {% else %}
+
+          {{ govukRadios({
+            idPrefix: "course-details-attendance",
+            name: "course-details-attendance",
+            fieldset: {
+              legend: {
+                text: "Attendance pattern",
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            items: [
+              {
+                value: "Daytime",
+                text: "Daytime",
+                checked: true
+              },
+              {
+                value: "Evening",
+                text: "Evening"
+              },
+              {
+                value: "Weekend",
+                text: "Weekend"
+              },
+              {
+                value: "Day/Block Release",
+                text: "Day/Block Release"
+              }
+            ]
+          }) }}
+
+        {% endif %}
+
+        <!--  -->
+        <h2 class="govuk-heading-m">
+          Publish your course changes
+        </h2>
+        <p class="govuk-body">
+          Your course details will be updated on Publish to the course directory and available to learners searching for learning and training opportunities on the National Careers Service.
+        <p>
+
+        {{ govukButton({
+          href: "/" + version + "/courses/view",
+          text: "Publish changes"
+        }) }}
+
+        {{ govukButton({
+          classes: "govuk-button--secondary govuk-!-margin-left-3",
+          href: "/" + version + "/courses/view",
+          text: "Cancel"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

@@ -87,11 +87,11 @@
                   {% if (courses.VENUE == "") %} Venue  {% endif %}
                   {% if (courses.COST == "") %} Cost  {% endif %}
                   {% if (courses.DURATION == "") or (courses.DURATION_UNIT == "") %} Duration  {% endif %}
-                  {% if (courses.STUDY_MODE == "") %} Study mode  {% endif %}
+                  {% if (courses.STUDY_MODE == "") %} Course hours  {% endif %}
                   {% if (courses.ATTENDANCE_PATTERN == "") %} Attendance pattern  {% endif %}
                 </td>
                 <td scope="row" class="govuk-table__cell govuk-body-s">
-                  <a href="javascript:preventDefault();" class="govuk-link">Resolve</a>
+                  <a href="/{{version}}/data-upload/courses/resolve/showcourse?row={{ i }}" class="govuk-link">Resolve</a>
                 </td>
                 <td scope="row" class="govuk-table__cell govuk-body-s">
                   <a href="/{{version}}/data-upload/courses/resolve/delete?row={{ i }}" class="govuk-link">Delete</a>

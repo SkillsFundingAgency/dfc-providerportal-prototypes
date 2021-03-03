@@ -36,4 +36,11 @@ module.exports = function (router) {
         res.redirect('/'+v+'/data-upload/courses/resolve');
     })
 
+
+	router.get('/'+v+'/data-upload/courses/resolve/showcourse', function (req, res) {
+        var coursestartdate = req.session.data['dm3courses'][req.session.data['row']-1].START_DATE;
+        req.session.data["coursestartdate"] = coursestartdate.split('/');
+        res.redirect('/'+v+'/data-upload/courses/resolve/course');
+    })
+
 }
