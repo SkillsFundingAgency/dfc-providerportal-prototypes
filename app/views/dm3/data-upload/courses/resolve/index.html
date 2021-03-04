@@ -53,7 +53,6 @@
           {% set i = i + 1 %}
           
           {% if 
-              (courses.WHO_IS_THIS_COURSE_FOR == "") or
               (courses.COURSE_NAME == "") or
               (courses.DELIVERY_MODE == "") or
               (courses.START_DATE == "") or
@@ -79,16 +78,15 @@
                   {{courses.START_DATE}}
                 {% endif %}
                 </td>
-                <td scope="row" class="govuk-table__cell govuk-body-s" style="color: 	#d4351c;">
-                  {% if (courses.WHO_IS_THIS_COURSE_FOR == "") %} Course information  {% endif %}
-                  {% if (courses.COURSE_NAME == "") %} Course name  {% endif %}
-                  {% if (courses.DELIVERY_MODE == "") %} Delivery mode  {% endif %}
-                  {% if (courses.START_DATE == "") %} Start date  {% endif %}
-                  {% if (courses.VENUE == "") %} Venue  {% endif %}
-                  {% if (courses.COST == "") %} Cost  {% endif %}
-                  {% if (courses.DURATION == "") or (courses.DURATION_UNIT == "") %} Duration  {% endif %}
-                  {% if (courses.STUDY_MODE == "") %} Course hours  {% endif %}
-                  {% if (courses.ATTENDANCE_PATTERN == "") %} Attendance pattern  {% endif %}
+                <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">
+                  {% if (courses.COURSE_NAME == "") %} Course name {% endif %}
+                  {% if (courses.DELIVERY_MODE == "") %} Delivery mode {% endif %}
+                  {% if (courses.START_DATE == "") %} Start date {% endif %}
+                  {% if (courses.VENUE == "") %} Course location {% endif %}
+                  {% if (courses.COST == "") %} Cost {% endif %}
+                  {% if (courses.DURATION == "") or (courses.DURATION_UNIT == "") %} Duration {% endif %}
+                  {% if (courses.STUDY_MODE == "") %} Course hours {% endif %}
+                  {% if (courses.ATTENDANCE_PATTERN == "") %} Attendance pattern {% endif %}
                 </td>
                 <td scope="row" class="govuk-table__cell govuk-body-s">
                   <a href="/{{version}}/data-upload/courses/resolve/showcourse?row={{ i }}" class="govuk-link">Resolve</a>

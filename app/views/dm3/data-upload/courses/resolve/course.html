@@ -47,7 +47,7 @@
               <li><a href="#course-details-startdate-error">Start date is missing</a></li>
             {% endif %}
             {% if (data['dm3courses'][data['row']-1].VENUE == "") %}
-              <li><a href="#course-details-venue-error">Venue is missing</a></li>
+              <li><a href="#course-details-location-error">Course location is missing</a></li>
             {% endif %}
             {% if (data['dm3courses'][data['row']-1].COST == "") %}
               <li><a href="#course-details-cost-error">Cost is missing</a></li>
@@ -130,36 +130,73 @@
         <!--  -->
 
         {% set dateHtml %}
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="course-details-startdate-date-hint">
-            <div id="course-details-startdate-date-hint" class="govuk-hint">
-              For example, 30 9 2021
-            </div>
-            <div class="govuk-date-input" id="course-details-startdate-date">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-details-startdate-date-day" name="course-details-startdate-date-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][0]}}"></div>
+        {% if (data['dm3courses'][data['row']-1].START_DATE == "") %}
+
+          <div class="govuk-form-group govuk-form-group--error">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="course-details-startdate-date-hint">
+              <div id="course-details-startdate-date-hint" class="govuk-hint">
+                For example, 30 9 2021
               </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-month">
-                    Month
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-details-startdate-date-month" name="course-details-startdate-date-month" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][1]}}"></div>
+              <span id="course-details-startdate-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Enter a start date
+              </span>
+              <div class="govuk-date-input" id="course-details-startdate-date">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-details-startdate-date-day" name="course-details-startdate-date-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][0]}}"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-details-startdate-date-month" name="course-details-startdate-date-month" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][1]}}"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="course-details-startdate-date-year" name="course-details-startdate-date-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][2]}}"></div>
+                </div>
               </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-year">
-                    Year
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="course-details-startdate-date-year" name="course-details-startdate-date-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][2]}}"></div>
+            </fieldset>
+          </div>
+        {% else %}
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="course-details-startdate-date-hint">
+              <div id="course-details-startdate-date-hint" class="govuk-hint">
+                For example, 30 9 2021
               </div>
-            </div>
-          </fieldset>
-        </div>
+              <div class="govuk-date-input" id="course-details-startdate-date">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-details-startdate-date-day" name="course-details-startdate-date-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][0]}}"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-details-startdate-date-month" name="course-details-startdate-date-month" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][1]}}"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="course-details-startdate-date-year" name="course-details-startdate-date-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][2]}}"></div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        {% endif %}
         {% endset -%}
 
         {{ govukRadios({
@@ -189,33 +226,49 @@
 
         <!--  -->
 
-        <div class="govuk-form-group govuk-!-margin-bottom-1">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h1 class="govuk-fieldset__heading">
-                Course location
-              </h1>
-            </legend>
-            <div class="govuk-checkboxes govuk-checkboxes--small">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="course-details-location" name="course-details-location" type="checkbox" value="Presidency London College" checked="checked">
-                <label class="govuk-label govuk-checkboxes__label" for="course-details-location">
-                  Presidency London College
-                </label>
+        {% if (data['dm3courses'][data['row']-1].VENUE == "") %}
+          <div class="govuk-form-group govuk-form-group--error">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Course location
+                </h1>
+              </legend>
+              <span id="course-details-location-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Select the course locations that apply
+              </span>
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="course-details-location" name="course-details-location" type="checkbox" value="Presidency London College">
+                  <label class="govuk-label govuk-checkboxes__label" for="course-details-location">
+                    Presidency London College
+                  </label>
+                </div>
               </div>
-            </div>
-
-          </fieldset>
-        </div>
-        <p class="govuk-body govuk-!-margin-bottom-7">
-          <!--
-          {{ govukButton({
-            text: "Add another location",
-            classes: "govuk-button--secondary"
-          }) }}
-          -->
-          <a href="#" class="govuk-link">Add another location</a>
-        </p>
+            </fieldset>
+          </div>
+        {% else %}
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Course location
+                </h1>
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="course-details-location" name="course-details-location" type="checkbox" value="Presidency London College" checked="checked">
+                  <label class="govuk-label govuk-checkboxes__label" for="course-details-location">
+                    Presidency London College
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        {% endif %}
+        <!--p class="govuk-body govuk-!-margin-bottom-7">
+          <a href="javascript" class="govuk-link">Add another location</a>
+        </p-->
 
         <!--  -->
 
@@ -231,25 +284,46 @@
 
         <!--  -->
 
-        {{ govukInput({
-          id: "course-details-cost",
-          name: "course-details-cost",
-          label: {
-            text: "Cost",
-            classes: "govuk-label--m"
-          },
-          prefix: {
-            text: "£"
-          },
-          classes: "govuk-input--width-5",
-          hint: {
-            text: "Cost of the course to the learner."
-          },
-          value: data['dm3courses'][data['row']-1].COST
-        }) }}
+        {% if (data['dm3courses'][data['row']-1].COST == "") %}
+          {{ govukInput({
+            id: "course-details-cost",
+            name: "course-details-cost",
+            label: {
+              text: "Cost",
+              classes: "govuk-label--m"
+            },
+            errorMessage: {
+              text: "Enter a cost"
+            },
+            prefix: {
+              text: "£"
+            },
+            classes: "govuk-input--width-5",
+            hint: {
+              text: "Cost of the course to the learner."
+            },
+            value: data['dm3courses'][data['row']-1].COST
+          }) }}
+        {% else %}
+          {{ govukInput({
+            id: "course-details-cost",
+            name: "course-details-cost",
+            label: {
+              text: "Cost",
+              classes: "govuk-label--m"
+            },
+            prefix: {
+              text: "£"
+            },
+            classes: "govuk-input--width-5",
+            hint: {
+              text: "Cost of the course to the learner."
+            },
+            value: data['dm3courses'][data['row']-1].COST
+          }) }}
+        {% endif %}
 
         <!--  -->
-
         {{ govukCharacterCount({
           name: "course-details-description",
           id: "course-details-description",
@@ -266,22 +340,50 @@
         }) }}
 
         <!--  -->
+        {% if (data['dm3courses'][data['row']-1].DURATION == "") or (data['dm3courses'][data['row']-1].DURATION_UNIT == "") %}
         
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="course-details-duration-value">
-              Duration
-            </label>
-          </h1>
-          <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-3" id="course-details-duration-value" name="course-details-duration-value" type="text" value="10">
-          <select class="govuk-select" id="course-details-duration-unit" name="course-details-duration-unit">
-            <option value="" selected>Select</option>
-            <option value="hours">Hours</option>
-            <option value="days">Days</option>
-            <option value="weeks">Weeks</option>
-            <option value="months" selected="selected">Months</option>
-            <option value="years">Years</option>
-          </select>
-        </div>
+          <div class="govuk-form-group govuk-form-group--error">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="course-details-duration-value">
+                Duration
+              </label>
+            </h1>
+            <span id="course-details-duration-error" class="govuk-error-message">
+              {% if data['dm3courses'][data['row']-1].DURATION == "" %}
+                <span class="govuk-visually-hidden">Error:</span> Enter a duration
+              {% elseif data['dm3courses'][data['row']-1].DURATION_UNIT == "" %}
+                <span class="govuk-visually-hidden">Error:</span> Select a duration
+              {% endif %}
+            </span>
+            <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-3" id="course-details-duration-value" name="course-details-duration-value" type="text" value="{{data['dm3courses'][data['row']-1].DURATION}}">
+            <select class="govuk-select" id="course-details-duration-unit" name="course-details-duration-unit">
+              <option value="" {% if data['dm3courses'][data['row']-1].DURATION_UNIT == "" %}selected="selected"{% endif %}>Select</option>
+              <option value="hours" {% if data['dm3courses'][data['row']-1].DURATION_UNIT == "hours" %}selected="selected"{% endif %}>Hours</option>
+              <option value="days" {% if data['dm3courses'][data['row']-1].DURATION_UNIT == "days" %}selected="selected"{% endif %}>Days</option>
+              <option value="weeks" {% if data['dm3courses'][data['row']-1].DURATION_UNIT == "weeks" %}selected="selected"{% endif %}>Weeks</option>
+              <option value="months" {% if data['dm3courses'][data['row']-1].DURATION_UNIT == "months" %}selected="selected"{% endif %}>Months</option>
+              <option value="years" {% if data['dm3courses'][data['row']-1].DURATION_UNIT == "years" %}selected="selected"{% endif %}>Years</option>
+            </select>
+          </div>
+
+        {% else %}
+        
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="course-details-duration-value">
+                Duration
+              </label>
+            </h1>
+            <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-3" id="course-details-duration-value" name="course-details-duration-value" type="text" value="{{data['dm3courses'][data['row']-1].DURATION}}">
+            <select class="govuk-select" id="course-details-duration-unit" name="course-details-duration-unit">
+              <option value="" {% if data['dm3courses'][data['row']-1].DURATION_UNIT == "" %}selected="selected"{% endif %}>Select</option>
+              <option value="hours" {% if data['dm3courses'][data['row']-1].DURATION_UNIT == "hours" %}selected="selected"{% endif %}>Hours</option>
+              <option value="days" {% if data['dm3courses'][data['row']-1].DURATION_UNIT == "days" %}selected="selected"{% endif %}>Days</option>
+              <option value="weeks" {% if data['dm3courses'][data['row']-1].DURATION_UNIT == "weeks" %}selected="selected"{% endif %}>Weeks</option>
+              <option value="months" {% if data['dm3courses'][data['row']-1].DURATION_UNIT == "months" %}selected="selected"{% endif %}>Months</option>
+              <option value="years" {% if data['dm3courses'][data['row']-1].DURATION_UNIT == "years" %}selected="selected"{% endif %}>Years</option>
+            </select>
+          </div>
+
+        {% endif %}
 
         <!--  -->
 
