@@ -35,6 +35,7 @@
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Row</th>
+          <th scope="col" class="govuk-table__header">Ref</th>
           <th scope="col" class="govuk-table__header">LARS/QAN</th>
           <th scope="col" class="govuk-table__header">Course</th>
           <th scope="col" class="govuk-table__header">Start date</th>
@@ -49,6 +50,7 @@
           {% if i == data["row"] %}
           <tr class="govuk-table__row">
             <td scope="row" class="govuk-table__cell govuk-body-s">{{ i }}</td>
+            <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.ID }}</td>
             <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.LARS_QAN }}</td>
             <td class="govuk-table__cell govuk-body-s">{{courses.COURSE_NAME}}</td>
             <td class="govuk-table__cell govuk-body-s">
@@ -117,20 +119,3 @@
 {% endblock %}
 
 <!-- DO NOT enter page content after the above block -->
-
-{% block pageScripts %}
-
-	<script>
-    $( "#areyousure" ).on( "change", function() {
-      var $this = $(".govuk-button--warning");
-      if ($this.hasClass('govuk-button--disabled')) {
-        $this.removeAttr('disabled');
-        $this.removeClass('govuk-button--disabled');
-      } else {
-        $this.attr('disabled', 'disabled');
-        $this.addClass('govuk-button--disabled');
-      }
-    });
-  </script>
-
-{% endblock %}

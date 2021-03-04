@@ -39,10 +39,11 @@
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Row</th>
+          <th scope="col" class="govuk-table__header">Ref</th>
           <th scope="col" class="govuk-table__header">LARS/QAN</th>
           <th scope="col" class="govuk-table__header">Course</th>
           <th scope="col" class="govuk-table__header">Start date</th>
-          <th scope="col" class="govuk-table__header">Error</th>
+          <th scope="col" class="govuk-table__header">Error(s)</th>
           <th scope="col" colspan="2" class="govuk-table__header"></th>
         </tr>
       </thead>
@@ -71,6 +72,7 @@
                 {% endif %}
               >
                 <td scope="row" class="govuk-table__cell govuk-body-s">{{ i }}</td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.ID }}</td>
                 <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.LARS_QAN }}</td>
                 <td class="govuk-table__cell govuk-body-s">{{courses.COURSE_NAME}}</td>
                 <td class="govuk-table__cell govuk-body-s">
@@ -80,7 +82,7 @@
                 </td>
                 <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">
                   {% if (courses.COURSE_NAME == "") %} Course name {% endif %}
-                  {% if (courses.DELIVERY_MODE == "") %} Delivery mode {% endif %}
+                  {% if (courses.DELIVERY_MODE == "") %} Course type {% endif %}
                   {% if (courses.START_DATE == "") %} Start date {% endif %}
                   {% if (courses.VENUE == "") %} Course location {% endif %}
                   {% if (courses.COST == "") %} Cost {% endif %}
@@ -103,6 +105,7 @@
 
     {{ govukButton({
       classes: "govuk-button govuk-button--secondary",
+        href: "/" + version + "/data-upload/courses/validation",
       text: "Cancel"
     }) }}
 
@@ -113,20 +116,3 @@
 {% endblock %}
 
 <!-- DO NOT enter page content after the above block -->
-
-{% block pageScripts %}
-
-	<script>
-    $( "#areyousure" ).on( "change", function() {
-      var $this = $(".govuk-button--publish");
-      if ($this.hasClass('govuk-button--disabled')) {
-        $this.removeAttr('disabled');
-        $this.removeClass('govuk-button--disabled');
-      } else {
-        $this.attr('disabled', 'disabled');
-        $this.addClass('govuk-button--disabled');
-      }
-    });
-  </script>
-
-{% endblock %}
