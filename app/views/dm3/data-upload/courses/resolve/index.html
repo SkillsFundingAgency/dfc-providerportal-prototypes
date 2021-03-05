@@ -70,6 +70,11 @@
                    style="display: none"
                   {% endif %}
                 {% endif %}
+                {% if data['dm3courses-resolved'] %}
+                  {% if i in data['dm3courses-resolved'] %}
+                   style="display: none"
+                  {% endif %}
+                {% endif %}
               >
                 <td scope="row" class="govuk-table__cell govuk-body-s">{{ i }}</td>
                 <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.ID }}</td>

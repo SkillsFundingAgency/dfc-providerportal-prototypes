@@ -86,7 +86,7 @@ module.exports = {
       "COURSE_NAME": "Step Up to Business - Level 1 Award",
       "ID": "BUSL111131",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "02/03/2020",
+      "START_DATE": "02/03/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -98,8 +98,7 @@ module.exports = {
       "DURATION": 13,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "60313067",
@@ -113,7 +112,7 @@ module.exports = {
       "COURSE_NAME": "AAT L1 Access Award in Accounting Software",
       "ID": "BUSL111124",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "21/04/2020",
+      "START_DATE": "21/04/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -125,8 +124,7 @@ module.exports = {
       "DURATION": 11,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "Z0001803",
@@ -140,7 +138,7 @@ module.exports = {
       "COURSE_NAME": "Airline Computer Reservation (Evening)",
       "ID": "TRAL111018",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "05/05/2020",
+      "START_DATE": "05/05/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -152,8 +150,7 @@ module.exports = {
       "DURATION": 8,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "Z0001803",
@@ -167,7 +164,7 @@ module.exports = {
       "COURSE_NAME": "Air Fares and Ticketing (Evening)",
       "ID": "TRAL211019",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "01/06/2020",
+      "START_DATE": "01/06/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -179,8 +176,7 @@ module.exports = {
       "DURATION": 8,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "60313080",
@@ -194,7 +190,7 @@ module.exports = {
       "COURSE_NAME": "AAT L1 Award in Bookkeeping",
       "ID": "BUSL111164",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "21/04/2020",
+      "START_DATE": "21/04/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -206,8 +202,7 @@ module.exports = {
       "DURATION": 11,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "60146813",
@@ -221,7 +216,7 @@ module.exports = {
       "COURSE_NAME": "FIS Buildback - Construction (including CSCS)",
       "ID": "PRPL111057",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "20/04/2020",
+      "START_DATE": "20/04/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -233,8 +228,7 @@ module.exports = {
       "DURATION": 4,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "60146813",
@@ -248,7 +242,7 @@ module.exports = {
       "COURSE_NAME": "CAREer Clinic",
       "ID": "PRPL111086",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "11/05/2020",
+      "START_DATE": "11/05/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -260,8 +254,7 @@ module.exports = {
       "DURATION": 2,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "60185740",
@@ -287,8 +280,7 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "60109919",
@@ -302,7 +294,7 @@ module.exports = {
       "COURSE_NAME": "Introduction to Culinary Arts - Level 1 Certificate",
       "ID": "CATL111006",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "08/09/2020",
+      "START_DATE": "08/09/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -314,8 +306,7 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "50068398",
@@ -329,7 +320,7 @@ module.exports = {
       "COURSE_NAME": "Introduction to Hair & Beauty - Level 1 Certificate",
       "ID": "HARL111001",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "08/09/2020",
+      "START_DATE": "08/09/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "",
       "NATIONAL_DELIVERY": "",
@@ -341,8 +332,7 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "60010988",
@@ -356,7 +346,7 @@ module.exports = {
       "COURSE_NAME": "Travel, Tourism and Aviation - Level 1 Diploma",
       "ID": "TRAL111008",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "08/09/2020",
+      "START_DATE": "08/09/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -368,8 +358,7 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "50075408",
@@ -383,7 +372,7 @@ module.exports = {
       "COURSE_NAME": "Public Services - Level 1 Certificate",
       "ID": "PUBL111006",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "08/09/2020",
+      "START_DATE": "08/09/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -395,8 +384,7 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "50049896",
@@ -410,7 +398,7 @@ module.exports = {
       "COURSE_NAME": "Sport - Level 1 Certificate",
       "ID": "SPOL111026",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "08/09/2020",
+      "START_DATE": "08/09/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -422,8 +410,7 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "60080528",
@@ -437,7 +424,7 @@ module.exports = {
       "COURSE_NAME": "Brickwork - Level 1 Diploma",
       "ID": "BRIL111003",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "08/09/2020",
+      "START_DATE": "08/09/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -449,8 +436,7 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "60080462",
@@ -464,7 +450,7 @@ module.exports = {
       "COURSE_NAME": "Carpentry & Joinery - Level 1 Diploma",
       "ID": "CRPL111003",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "15/09/2020",
+      "START_DATE": "15/09/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -476,8 +462,7 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "60097905",
@@ -491,7 +476,7 @@ module.exports = {
       "COURSE_NAME": "Electrical Installation - Level 1 Diploma",
       "ID": "ELEL111007",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "15/09/2020",
+      "START_DATE": "15/09/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -503,8 +488,7 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "6007937X",
@@ -518,7 +502,7 @@ module.exports = {
       "COURSE_NAME": "Plastering - Level 1 Diploma",
       "ID": "PLAL111002",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "08/09/2020",
+      "START_DATE": "08/09/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -530,8 +514,7 @@ module.exports = {
       "DURATION": null,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "60100874",
@@ -545,7 +528,7 @@ module.exports = {
       "COURSE_NAME": "Plumbing - Level 1 Diploma",
       "ID": "PLUL111002",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "08/09/2020",
+      "START_DATE": "08/09/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -557,8 +540,7 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "60187542",
@@ -572,7 +554,7 @@ module.exports = {
       "COURSE_NAME": "Automotive Engineering (Vehicle Maintenance) - Level 1 Diploma",
       "ID": "VEHL111002",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "08/09/2020",
+      "START_DATE": "08/09/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -584,8 +566,7 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "60309374",
@@ -599,7 +580,7 @@ module.exports = {
       "COURSE_NAME": "BTEC Level 1 introductory Diploma in Applied Science",
       "ID": "SCIL111012",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "08/09/2020",
+      "START_DATE": "08/09/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -611,8 +592,7 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": ""
     },
     {
       "LARS_QAN": "60109890",
@@ -638,8 +618,7 @@ module.exports = {
       "DURATION": 10,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "50118912",
@@ -653,7 +632,7 @@ module.exports = {
       "COURSE_NAME": "Cambridge Certificate in English Language Teaching To Adults (CELTA) - Full-time",
       "ID": "EDUL511004",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "04/05/2020",
+      "START_DATE": "04/05/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -665,8 +644,7 @@ module.exports = {
       "DURATION": 4,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "50087563",
@@ -680,7 +658,7 @@ module.exports = {
       "COURSE_NAME": "Fitness Instruction - Level 2 Certificate",
       "ID": "SPOL211014",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "31/03/2020",
+      "START_DATE": "31/03/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -692,8 +670,7 @@ module.exports = {
       "DURATION": 12,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "Z0001855",
@@ -707,7 +684,7 @@ module.exports = {
       "COURSE_NAME": "Kitchen Interiors (Fitting)",
       "ID": "GRAL211002",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "05/03/2020",
+      "START_DATE": "05/03/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -719,8 +696,7 @@ module.exports = {
       "DURATION": 10,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Part time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     },
     {
       "LARS_QAN": "50088142",
@@ -734,7 +710,7 @@ module.exports = {
       "COURSE_NAME": "Beauty Make-up - Level 2 Diploma",
       "ID": "BEAL211010",
       "DELIVERY_MODE": "Classroom based",
-      "START_DATE": "08/09/2020",
+      "START_DATE": "08/09/2021",
       "FLEXIBLE_START_DATE": "",
       "VENUE": "Presidency London College",
       "NATIONAL_DELIVERY": "",
@@ -746,8 +722,7 @@ module.exports = {
       "DURATION": 36,
       "DURATION_UNIT": "Weeks",
       "STUDY_MODE": "Full time",
-      "ATTENDANCE_PATTERN": "Daytime",
-      "PTYPE_STATUS": "uploaded"
+      "ATTENDANCE_PATTERN": "Daytime"
     }
    ]
 

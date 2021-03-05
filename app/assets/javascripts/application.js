@@ -31,11 +31,11 @@ $(document).ready(function () {
 
   if (document.getElementById('dm3-loader--courses')) {
     setTimeout(function() {$('#loading-message').html("Processing data");}, 2500);
-    setTimeout(function() {window.location.href = "/dm3/data-upload/courses/validation";}, 6000);
+    setTimeout(function() {window.location.href = "/dm3/data-upload/courses/goto-validation";}, 6000);
   }
   if (document.getElementById('dm3-loader--apprenticeships')) {
     setTimeout(function() {$('#loading-message').html("Processing data");}, 2500);
-    setTimeout(function() {window.location.href = "/dm3/data-upload/apprenticeships/validation";}, 6000);
+    setTimeout(function() {window.location.href = "/dm3/data-upload/apprenticeships/goto-validation";}, 6000);
   }
   
 
