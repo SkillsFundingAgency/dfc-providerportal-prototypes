@@ -43,14 +43,27 @@
   <div class="govuk-grid-column-one-third">
     <div class="cd-card cd-card-2 cd-card--provider">
       <h2 class="govuk-heading-s">Published courses</h2>
-      <p class="cd-card-number-1">10</p>
+      <p class="cd-card-number-1">
+        {% if data['dm3courses-published'] %}
+          {{ data['dm3courses-published'] }}
+        {% else %}
+          10
+        {% endif %}
+
+        {% if data['dm3courses-resolved'] %}
+        <h2 class="govuk-heading-s govuk-!-margin-top-5">Unpublished courses</h2>
+        <p class="cd-card-number-1">
+          {{ (data['dm3courses'] | length) - (data['dm3courses-deleted'] | length)}}
+        </p>
+        {% endif %}
+      </p>
     </div>
   </div>
 
   <div class="govuk-grid-column-one-third">
     <div class="cd-card-1 cd-card--provider">
       <div class="cd-card-content">
-        <h2 class="govuk-heading-s">Your courses</h2>
+        <h2 class="govuk-heading-s">Your published courses</h2>
         <p class="govuk-body-s">View and manage the courses you offer to learners.</p>
       </div>
       <div class="cd-card-action">
@@ -75,8 +88,19 @@
       </div>
       <div class="cd-card-action">
         <ul class="govuk-list govuk-list__small">
+          {% if data['dm3courses-resolved'] %}
+            <li>
+              <a class="govuk-link" href="/{{version}}/data-upload/courses/validation">Manage unpublished courses</a>
+              <!--
+              {% if ((data['dm3courses-resolved'] | length) > 0) or ((data['dm3courses-deleted'] | length) > 0) %}
+                <a class="govuk-link" href="/{{version}}/data-upload/courses/resolve">Resolve errors in unpublished courses</a>
+              {% else %}
+                <a class="govuk-link" href="/{{version}}/data-upload/courses/validation">Continue course data upload</a>
+              {% endif %}-->
+            </li>
+          {% endif %}
           <li>
-            <a class="govuk-link" href="/{{version}}/data-upload/courses">Upload your course data</a>
+            <a class="govuk-link" href="/{{version}}/data-upload/courses">Upload new course data</a>
           </li>
           <li>
             <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published course data (CSV)</a>

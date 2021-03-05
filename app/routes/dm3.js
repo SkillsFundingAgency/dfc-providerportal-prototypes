@@ -6,18 +6,22 @@ module.exports = function (router) {
 	router.get('/'+v+'/data-upload/courses/goto-validation', function (req, res) {
         req.session.data['dm3courses-deleted'] = [];
         req.session.data['dm3courses-resolved'] = [];
+        req.session.data['dm3courses-errorcount'] = 6; // this needs to become dynamic
         res.redirect('/'+v+'/data-upload/courses/validation');
     })
 
     // User choice on how to handle errors in upload
     router.post('/'+v+'/data-upload/courses/validation', function (req, res) {
         if (req.session.data['course-validation'] == "resolve"){
-            req.session.data['dm3courses-errorcount'] = 6; // this needs to become dynamic
             res.redirect('/'+v+'/data-upload/courses/resolve');
-        } else if (req.session.data['course-validation'] == "download"){
-            res.redirect('/'+v+'/data-upload/courses/download');
-        } else if (req.session.data['course-validation'] == "cancel"){
-            res.redirect('/'+v+'/data-upload/courses/cancel');
+        } else if (req.session.data['course-validation'] == "upload"){
+            delete req.session.data['dm3courses-deleted'];
+            delete req.session.data['dm3courses-resolved'];
+            res.redirect('/'+v+'/data-upload/courses');
+        } else if (req.session.data['course-validation'] == "delete"){
+            delete req.session.data['dm3courses-deleted'];
+            delete req.session.data['dm3courses-resolved'];
+            res.redirect('/'+v+'/data-upload/courses/delete');
         }
     })
 
@@ -62,9 +66,17 @@ module.exports = function (router) {
 
 
     router.post('/'+v+'/data-upload/courses/checkandpublish', function (req, res) {
+        req.session.data['dm3courses-published'] = parseInt(req.session.data['dm3courses'].length) - parseInt(req.session.data['dm3courses-deleted'].length);
         delete req.session.data['dm3courses-deleted'];
         delete req.session.data['dm3courses-resolved'];
         res.redirect('/'+v+'/data-upload/courses/success');
+    })
+
+    router.post('/'+v+'/data-upload/courses/cancel', function (req, res) {
+        delete req.session.data['dm3courses-errorcount'];
+        delete req.session.data['dm3courses-deleted'];
+        delete req.session.data['dm3courses-resolved'];
+        res.redirect('/'+v+'/data-upload/courses/cancel/success');
     })
 
 }

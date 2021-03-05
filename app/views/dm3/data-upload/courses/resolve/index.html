@@ -18,6 +18,11 @@
   html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
 }) }}
 
+  {{ govukBackLink({
+    text: "Back to Data Upload",
+    href: "/" + version + "/data-upload/"
+  }) }}
+
 {% endblock %}
 
 {% block content %}
@@ -28,6 +33,10 @@
   <div class="govuk-grid-column-full">
 
     <h1 class="govuk-heading-xl">Resolve errors in your course data</h1>
+
+    <p class="govuk-body">
+        
+    <p>
 
   </div>
 </div>
@@ -107,13 +116,13 @@
 
       </tbody>
     </table>
-
+<!--
     {{ govukButton({
       classes: "govuk-button govuk-button--secondary",
-        href: "/" + version + "/data-upload/courses/validation",
+        href: "/" + version + "/data-upload/",
       text: "Cancel"
     }) }}
-
+-->
   </div>
 </div>
 

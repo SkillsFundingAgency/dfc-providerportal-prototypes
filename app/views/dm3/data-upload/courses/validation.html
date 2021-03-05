@@ -27,89 +27,18 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <h1 class="govuk-heading-xl">Your course data</h1>
+    <h1 class="govuk-heading-xl">Course data errors</h1>
 
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <p class="govuk-body">Your file of {{ data['dm3courses'].length }} courses has been uploaded.</p>
+    <p class="govuk-body">Your data upload has {{ data['dm3courses-errorcount'] }} courses with errors. You must resolve these errors before all your course data can be published.</p>
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          View list of courses
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-
-        <table class="govuk-table">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Ref</th>
-              <th scope="col" class="govuk-table__header">LARS/QAN</th>
-              <th scope="col" class="govuk-table__header">Course</th>
-              <th scope="col" class="govuk-table__header">Start date</th>
-              <th scope="col" class="govuk-table__header">Venue</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-
-            {% set i = 0 %}
-            {% for courses in data['dm3courses'] %}
-              {% set i = i + 1 %}
-              <tr class="govuk-table__row">
-                <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.ID }}</td>
-                <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.LARS_QAN }}</td>
-                <td class="govuk-table__cell govuk-body-s">{{courses.COURSE_NAME}}</td>
-                <td class="govuk-table__cell govuk-body-s">
-                  {% if courses.START_DATE == "" %}
-                    08/09/2021
-                  {% else %}
-                    {{courses.START_DATE}}
-                  {% endif %}
-                </td>
-                <td class="govuk-table__cell govuk-body-s">
-                  {% if courses.VENUE == "" %}
-                    Presidency London College
-                  {% else %}
-                    {{courses.VENUE}}
-                  {% endif %}
-                </td>
-              </tr>
-            {% endfor %}
-
-          </tbody>
-        </table>
-
-      </div>
-    </details>
-        {% set totalerror = 0 %}
-        {% for courses in data['dm3courses'] %}
-          {% if 
-              (courses.COURSE_NAME == "") or
-              (courses.DELIVERY_MODE == "") or
-              (courses.START_DATE == "") or
-              (courses.VENUE == "") or
-              (courses.COST == "") or
-              (courses.DURATION == "") or
-              (courses.DURATION_UNIT == "") or
-              (courses.STUDY_MODE == "") or
-              (courses.ATTENDANCE_PATTERN == "")
-          %}
-            {% set totalerror = totalerror + 1 %}
-          {% endif %}
-        {% endfor %}
-
-      {{ govukWarningText({
-        text: "Your data upload has " + totalerror + " errors",
-        iconFallbackText: "Warning"
-      }) }}
 
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
@@ -196,6 +125,10 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    <p class="govuk-body">
+      You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your courses including the errors (opens in a CSV file)</a> to edit and upload.
+    <p>
+
     <h2 class="govuk-heading-l govuk-!-margin-top-5">
       What do you want to do?
     </h2>
@@ -210,12 +143,12 @@
             text: "Resolve the errors in Publish to the course directory"
           },
           {
-            value: "download",
-            text: "Download your file including errors"
+            value: "upload",
+            text: "Upload a new course data file"
           },
           {
-            value: "cancel",
-            text: "Cancel upload and delete the data"
+            value: "delete",
+            text: "Delete this upload"
           }
         ]
       }) }}
