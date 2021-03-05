@@ -43,7 +43,7 @@
     <p>
 
     <p class="govuk-body">To ensure an upload is successful you must:<p>
-    <ul class="govuk-list govuk-list--bullet">
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
       <li><a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">add new venues</a> to the service prior to an upload</li>
       <li>include existing courses and new courses in the data file</li>
       <li>complete all mandatory fields</li>
@@ -51,8 +51,16 @@
       <li>save the data file as a CSV</li>
     </ul>
 
+
+    {% if data['dm3courses-errorcount'] %}
+      {{ govukWarningText({
+        classes: "govuk-!-margin-bottom-7",
+        text: "Uploading a new course data file will delete your unpublished courses",
+        iconFallbackText: "Warning"
+      }) }}
+    {% endif %}
+
     {{ govukFileUpload({
-      classes: "govuk-!-margin-top-5",
       id: "course-data-upload",
       name: "course-data-upload"
     }) }}

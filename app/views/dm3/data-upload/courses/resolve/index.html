@@ -1,0 +1,132 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm3.html" %}
+
+{% block pageTitle %}
+  Data Management - Resolve errors in course data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+    text: "Back to Data Upload",
+    href: "/" + version + "/data-upload/"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Resolve errors in your course data</h1>
+
+    <p class="govuk-body">
+        
+    <p>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Row</th>
+          <th scope="col" class="govuk-table__header">Ref</th>
+          <th scope="col" class="govuk-table__header">LARS/QAN</th>
+          <th scope="col" class="govuk-table__header">Course</th>
+          <th scope="col" class="govuk-table__header">Start date</th>
+          <th scope="col" class="govuk-table__header">Error(s)</th>
+          <th scope="col" colspan="2" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+        {% set i = 0 %}
+        {% for courses in data['dm3courses'] %}
+          {% set i = i + 1 %}
+          
+          {% if 
+              (courses.COURSE_NAME == "") or
+              (courses.DELIVERY_MODE == "") or
+              (courses.START_DATE == "") or
+              (courses.VENUE == "") or
+              (courses.COST == "") or
+              (courses.DURATION == "") or
+              (courses.DURATION_UNIT == "") or
+              (courses.STUDY_MODE == "") or
+              (courses.ATTENDANCE_PATTERN == "")
+          %}
+              <tr class="govuk-table__row"
+                {% if data['dm3courses-deleted'] %}
+                  {% if i in data['dm3courses-deleted'] %}
+                   style="display: none"
+                  {% endif %}
+                {% endif %}
+                {% if data['dm3courses-resolved'] %}
+                  {% if i in data['dm3courses-resolved'] %}
+                   style="display: none"
+                  {% endif %}
+                {% endif %}
+              >
+                <td scope="row" class="govuk-table__cell govuk-body-s">{{ i }}</td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.ID }}</td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.LARS_QAN }}</td>
+                <td class="govuk-table__cell govuk-body-s">{{courses.COURSE_NAME}}</td>
+                <td class="govuk-table__cell govuk-body-s">
+                {% if not courses.START_DATE == "" %}
+                  {{courses.START_DATE}}
+                {% endif %}
+                </td>
+                <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">
+                  {% if (courses.COURSE_NAME == "") %} Course name {% endif %}
+                  {% if (courses.DELIVERY_MODE == "") %} Course type {% endif %}
+                  {% if (courses.START_DATE == "") %} Start date {% endif %}
+                  {% if (courses.VENUE == "") %} Course location {% endif %}
+                  {% if (courses.COST == "") %} Cost {% endif %}
+                  {% if (courses.DURATION == "") or (courses.DURATION_UNIT == "") %} Duration {% endif %}
+                  {% if (courses.STUDY_MODE == "") %} Course hours {% endif %}
+                  {% if (courses.ATTENDANCE_PATTERN == "") %} Attendance pattern {% endif %}
+                </td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">
+                  <a href="/{{version}}/data-upload/courses/resolve/showcourse?row={{ i }}" class="govuk-link">Resolve</a>
+                </td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">
+                  <a href="/{{version}}/data-upload/courses/resolve/delete?row={{ i }}" class="govuk-link">Delete</a>
+                </td>
+              </tr>
+          {% endif %}
+        {% endfor %}
+
+      </tbody>
+    </table>
+<!--
+    {{ govukButton({
+      classes: "govuk-button govuk-button--secondary",
+        href: "/" + version + "/data-upload/",
+      text: "Cancel"
+    }) }}
+-->
+  </div>
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

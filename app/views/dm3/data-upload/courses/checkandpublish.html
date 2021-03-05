@@ -1,0 +1,173 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm3.html" %}
+
+{% block pageTitle %}
+  Data Management - Publish course data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Check and publish your course data</h1>
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body">Your file of {{ (data['dm3courses'].length - data['dm3courses-deleted'].length) }} courses has no errors and is ready to be published to the course directory.</p>
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          View list of courses
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Ref</th>
+              <th scope="col" class="govuk-table__header">LARS/QAN</th>
+              <th scope="col" class="govuk-table__header">Course</th>
+              <th scope="col" class="govuk-table__header">Start date</th>
+              <th scope="col" class="govuk-table__header">Venue</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+            {% set i = 0 %}
+            {% for courses in data['dm3courses'] %}
+              {% set i = i + 1 %}
+
+              {% if i in data['dm3courses-deleted'] %}
+              {% else %}
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.ID }}</td>
+                  <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.LARS_QAN }}</td>
+                  <td class="govuk-table__cell govuk-body-s">{{courses.COURSE_NAME}}</td>
+                  <td class="govuk-table__cell govuk-body-s">
+                    {% if courses.START_DATE == "" %}
+                      08/09/2021
+                    {% else %}
+                      {{courses.START_DATE}}
+                    {% endif %}
+                  </td>
+                  <td class="govuk-table__cell govuk-body-s">
+                    {% if courses.VENUE == "" %}
+                      Presidency London College
+                    {% else %}
+                      {{courses.VENUE}}
+                    {% endif %}
+                  </td>
+                </tr>
+              {% endif %}
+
+            {% endfor %}
+
+          </tbody>
+        </table>
+
+      </div>
+    </details>
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukWarningText({
+      text: "Publishing these courses will replace all of your courses on Publish to the course directory",
+      iconFallbackText: "warning"
+    }) }}
+
+
+    <form action="" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              Are you sure?
+            </h2>
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="areyousure" name="areyousure" type="checkbox" value="delete">
+              <label class="govuk-label govuk-checkboxes__label" for="areyousure">
+                Yes, I want to publish these courses
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          classes: "govuk-button--publish govuk-button--disabled",
+          text: "Publish"
+        }) }}
+
+        {{ govukButton({
+          classes: "govuk-button--secondary govuk-!-margin-left-3",
+          href: "/" + version + "/data-upload",
+          text: "Cancel"
+        }) }}
+
+      </div>
+
+    </form?
+
+  </div>
+
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
+
+{% block pageScripts %}
+
+	<script>
+    $( "#areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--publish");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}
