@@ -29,8 +29,12 @@
 
     <h1 class="govuk-heading-xl">Course data errors</h1>
 
-    <p class="govuk-body">Your course data has been uploaded.</p>
-    <p class="govuk-body">The unpublished course data has {{ data['dm3courses-errorcount'] }} errors. 
+    {% if data['dm3courses-deleted'] or data['dm3courses-resolved'] %}
+    {% else %}
+      <!-- only show if file has just been uploaded -->
+      <p class="govuk-body">Your course data has been uploaded.</p>
+    {% endif %}
+    <p class="govuk-body">The unpublished course data has {{ data['dm3courses-errorcount'] - ((data['dm3courses-deleted'] | length) + (data['dm3courses-resolved'] | length)) }} errors. 
       You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your courses including the errors in a CSV file</a>.</p>
 
   </div>
