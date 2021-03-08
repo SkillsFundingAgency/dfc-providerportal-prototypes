@@ -15,8 +15,6 @@ module.exports = function (router) {
         if (req.session.data['course-validation'] == "resolve"){
             res.redirect('/'+v+'/data-upload/courses/resolve');
         } else if (req.session.data['course-validation'] == "upload"){
-            delete req.session.data['dm3courses-deleted'];
-            delete req.session.data['dm3courses-resolved'];
             res.redirect('/'+v+'/data-upload/courses');
         } else if (req.session.data['course-validation'] == "delete"){
             delete req.session.data['dm3courses-deleted'];
