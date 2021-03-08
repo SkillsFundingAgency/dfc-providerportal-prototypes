@@ -378,7 +378,9 @@
             hint: {
               text: "Cost of the course to the learner."
             },
-            disabled: true,
+            attributes: {
+              disabled: true
+            },
             value: data['dm3courses'][data['row']-1].COST
           }) }}
         {% endif %}
