@@ -44,11 +44,16 @@
         </div>
         <div id="accordion-default-content-dm3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-dm3">
           <p class="govuk-body">
-        
+        <!--
               {{ govukTag({
                 classes: "govuk-tag--red",
                 text: "Work in progress"
               }) }}
+            -->
+            {{ govukTag({
+              classes: "govuk-tag--green",
+              text: "Ready for UR"
+            }) }}
           
           <p>
           <ul class="govuk-list">
@@ -77,8 +82,8 @@
               }) }}
           -->
             {{ govukTag({
-              classes: "govuk-tag--green",
-              text: "Ready for user research"
+              classes: "govuk-tag--purple",
+              text: "UR done"
             }) }}
           <p>
           <ul class="govuk-list">
@@ -102,7 +107,7 @@
           <p class="govuk-body">
             {{ govukTag({
               classes: "govuk-tag--purple",
-              text: "User research done"
+              text: "UR done"
             }) }}
           <p>
           <ul class="govuk-list">
