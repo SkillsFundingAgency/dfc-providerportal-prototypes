@@ -25,17 +25,16 @@
 <!-- start user panel -->
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">Course data errors</h1>
 
-  </div>
-</div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">Your course data has been uploaded.</p>
+    <p class="govuk-body">The unpublished course data has {{ data['dm3courses-errorcount'] }} errors. 
+      You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your courses including the errors in a CSV file</a>.</p>
 
-    <p class="govuk-body">Your data upload has {{ data['dm3courses-errorcount'] }} courses with errors. You must resolve these errors before all your course data can be published.</p>
   </div>
+
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -118,16 +117,11 @@
         
       </div>
     </details>
-    
 
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-    <p class="govuk-body">
-      You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your courses including the errors (opens in a CSV file)</a> to edit and upload.
-    <p>
 
     <h2 class="govuk-heading-l govuk-!-margin-top-5">
       What do you want to do?
@@ -148,7 +142,7 @@
           },
           {
             value: "delete",
-            text: "Delete this upload"
+            text: "Delete unpublished course data"
           }
         ]
       }) }}
