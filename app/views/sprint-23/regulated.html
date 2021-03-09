@@ -1,0 +1,496 @@
+{% set navActive = 'courses' %}
+{% extends "layouts/layout-sprint23.html" %}
+
+{% block pageTitle %}
+  Courses - Add regulated course
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <!--  -->
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Courses</h1>
+    <h2 class="govuk-heading-l">Which qualification are you awarding with this course?</h2>
+
+    <form action="" method="post" class="form">
+
+      <div class="cd-card cd-card-2 cd-card--provider">
+
+        <div class="govuk-form-group govuk-!-margin-bottom-0">
+          <label class="govuk-label" for="course-add-lars">
+            Search by Learning Aims Reference Service (LARS) code or a keyword
+          </label>
+          <div id="event-name-hint" class="govuk-hint">
+            Enter a minimum of 3 characters
+          </div>
+          <input class="govuk-input govuk-!-width-one-half" id="course-add-lars" name="course-add-lars" type="text" value="des"><button class="govuk-button pttcd-button-search" data-module="govuk-button">Search</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p class="center-content">Found <strong>12843</strong> results for <strong>des</strong></p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+
+  <!-- Filters -->
+  <div class="govuk-grid-column-one-quarter">
+
+                    <div class="govuk-form-group govuk-!-font-size-14">
+                        <div class="accordion govuk-heading-s" role="button" tabindex="0">Qualification level</div>
+                        <div class="panel">
+                            <fieldset class="govuk-fieldset" id="FilterCheckBoxes_0">
+                                <legend class="govuk-visually-hidden">
+                                    Select Qualification level Level
+                                </legend>
+                                <div class="govuk-checkboxes govuk-checkboxes--small" id="Filter_0">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-4" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="E">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-4">
+                                                Entry level
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-3" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="1">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-3">
+                                                Level 1
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-2" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="2">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-2">
+                                                Level 2
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-1" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="3">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-1">
+                                                Level 3
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-6" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="4">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-6">
+                                                Level 4
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-0" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="5">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-0">
+                                                Level 5
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-5" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="6">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-5">
+                                                Level 6
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-7" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="7">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-7">
+                                                Level 7
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-8" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="X">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-8">
+                                                Unknown or not applicable
+                                            </label>
+                                        </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="govuk-form-group govuk-!-font-size-14">
+                        <div class="accordion govuk-heading-s" role="button" tabindex="0">Awarding organisation</div>
+                        <div class="panel">
+                            <fieldset class="govuk-fieldset" id="FilterCheckBoxes_1">
+                                <legend class="govuk-visually-hidden">
+                                    Select Awarding organisation Level
+                                </legend>
+                                <div class="govuk-checkboxes govuk-checkboxes--small" id="Filter_1">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-5" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="EDEXCEL">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-5">
+                                                EDEXCEL
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-8" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="HULLU">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-8">
+                                                HULLU
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-7" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="LANU">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-7">
+                                                LANU
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-3" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="LMU">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-3">
+                                                LMU
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-0" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="MULTI">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-0">
+                                                MULTI
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-9" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="NCG">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-9">
+                                                NCG
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-1" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="NONE">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-1">
+                                                NONE
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-6" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="OU">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-6">
+                                                OU
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-4" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="UCLAN">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-4">
+                                                UCLAN
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-2" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="UOPLY">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-2">
+                                                UOPLY
+                                            </label>
+                                        </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <div class="govuk-table govuk-!-font-size-14">
+
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Foundation Degree in Game Art - South Gloucestershire and Stroud College</h2>
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-0",
+              rows: [
+                  [
+                      {
+                          html: 'LARS/QAN:<span class="govuk-!-font-weight-bold"> 00304202</span>'
+                      },
+                      {
+                          html: 'Level: <span class="govuk-!-font-weight-bold"> 5</span>'
+                      },
+                      {
+                          html: 'Awarding body:<span class="govuk-!-font-weight-bold"> UOGLOS</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-3",
+              rows: [
+                  [
+                      {
+                        html: 'Effective to: <span class="govuk-!-font-weight-bold"> 31 Sep 2021</span>'
+                      },
+                      {
+                        html: 'Operational end date:<span class="govuk-!-font-weight-bold"> 31 Aug 2022</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          <!--p class="govuk-body">LARS/QAN:<span class="govuk-!-font-weight-bold"> 00304202</span></p>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 5</span></p>
+          <p class="govuk-body">Awarding body:<span class="govuk-!-font-weight-bold"> UOGLOS</span></p-->
+          <p class="govuk-body"><a class="link--button" id="" href="javascript:preventDefault();">Choose this qualification<span class="govuk-visually-hidden">Foundation Degree in Game Art - South Gloucestershire and Stroud College</span></a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Foundation Degree in Animal Management and Applied Science - Sparsholt College</h2>
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-0",
+              rows: [
+                  [
+                      {
+                          html: 'LARS/QAN:<span class="govuk-!-font-weight-bold"> 00243632</span>'
+                      },
+                      {
+                          html: 'Level: <span class="govuk-!-font-weight-bold"> 5</span>'
+                      },
+                      {
+                          html: 'Awarding body:<span class="govuk-!-font-weight-bold"> PU</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-3",
+              rows: [
+                  [
+                      {
+                        html: 'Operational end date:<span class="govuk-!-font-weight-bold"> 31 Aug 2022</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          <!--p class="govuk-body">LARS/QAN:<span class="govuk-!-font-weight-bold"> 00243632</span></p>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 5</span></p>
+          <p class="govuk-body">Awarding body:<span class="govuk-!-font-weight-bold"> PU</span></p-->
+          <p class="govuk-body"><a class="govuk-link" id="" href="javascript:preventDefault();">Choose this qualification<span class="govuk-visually-hidden">Foundation Degree in Animal Management and Applied Science - Sparsholt College</span></a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">FdA in Fashion and clothing Design - Bishop Burton College</h2>
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-0",
+              rows: [
+                  [
+                      {
+                          html: 'LARS/QAN:<span class="govuk-!-font-weight-bold"> 00304286</span>'
+                      },
+                      {
+                          html: 'Level: <span class="govuk-!-font-weight-bold"> 5</span>'
+                      },
+                      {
+                          html: 'Awarding body:<span class="govuk-!-font-weight-bold"> HULLU</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-3",
+              rows: [
+                  [
+                      {
+                        html: 'Effective to: <span class="govuk-!-font-weight-bold"> 31 Sep 2021</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          <!--p class="govuk-body">LARS/QAN:<span class="govuk-!-font-weight-bold"> 00304286</span></p>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 5</span></p>
+          <p class="govuk-body">Awarding body:<span class="govuk-!-font-weight-bold"> HULLU</span></p-->
+          <p class="govuk-body"><a class="govuk-link" id="" href="javascript:preventDefault();">Choose this qualification<span class="govuk-visually-hidden">FdA in Fashion and clothing Design - Bishop Burton College</span></a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Foundation Degree in Working With Children and Families - Lakes College West Cumbria</h2>
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-3",
+              rows: [
+                  [
+                      {
+                          html: 'LARS/QAN:<span class="govuk-!-font-weight-bold"> 00304298</span>'
+                      },
+                      {
+                          html: 'Level: <span class="govuk-!-font-weight-bold"> 5</span>'
+                      },
+                      {
+                          html: 'Awarding body:<span class="govuk-!-font-weight-bold"> UOCUMBRI</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          <!--p class="govuk-body">LARS/QAN:<span class="govuk-!-font-weight-bold"> 00304298</span></p>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 5</span></p>
+          <p class="govuk-body">Awarding body:<span class="govuk-!-font-weight-bold"> UOCUMBRI</span></p-->
+          <p class="govuk-body"><a class="govuk-link" id="" href="javascript:preventDefault();">Choose this qualification<span class="govuk-visually-hidden">Foundation Degree in Working With Children and Families - Lakes College West Cumbria</span></a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">FdA in Illustration Arts - South Devon College</h2>
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-3",
+              rows: [
+                  [
+                      {
+                          html: 'LARS/QAN:<span class="govuk-!-font-weight-bold"> 00304483</span>'
+                      },
+                      {
+                          html: 'Level: <span class="govuk-!-font-weight-bold"> 5</span>'
+                      },
+                      {
+                          html: 'Awarding body:<span class="govuk-!-font-weight-bold"> SDC</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          <!--p class="govuk-body">LARS/QAN:<span class="govuk-!-font-weight-bold"> 00304483</span></p>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 5</span></p>
+          <p class="govuk-body">Awarding body:<span class="govuk-!-font-weight-bold"> SDC</span></p-->
+          <p class="govuk-body"><a class="govuk-link" id="" href="javascript:preventDefault();">Choose this qualification<span class="govuk-visually-hidden">FdA in Illustration Arts - South Devon College</span></a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Foundation Degree in Photography</h2>
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-3",
+              rows: [
+                  [
+                      {
+                          html: 'LARS/QAN:<span class="govuk-!-font-weight-bold"> 00244500</span>'
+                      },
+                      {
+                          html: 'Level: <span class="govuk-!-font-weight-bold"> 5</span>'
+                      },
+                      {
+                          html: 'Awarding body:<span class="govuk-!-font-weight-bold"> OU</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          <!--p class="govuk-body">LARS/QAN:<span class="govuk-!-font-weight-bold"> 00244500</span></p>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 5</span></p>
+          <p class="govuk-body">Awarding body:<span class="govuk-!-font-weight-bold"> OU</span></p-->
+          <p class="govuk-body"><a class="govuk-link" id="" href="javascript:preventDefault();">Choose this qualification<span class="govuk-visually-hidden">Foundation Degree in Photography</span></a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Foundation Degree in Classroom Support</h2>
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-3",
+              rows: [
+                  [
+                      {
+                          html: 'LARS/QAN:<span class="govuk-!-font-weight-bold"> 00243887</span>'
+                      },
+                      {
+                          html: 'Level: <span class="govuk-!-font-weight-bold"> 5</span>'
+                      },
+                      {
+                          html: 'Awarding body:<span class="govuk-!-font-weight-bold"> OBU</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          <!--p class="govuk-body">LARS/QAN:<span class="govuk-!-font-weight-bold"> 00243887</span></p>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 5</span></p>
+          <p class="govuk-body">Awarding body:<span class="govuk-!-font-weight-bold"> OBU</span></p-->
+          <p class="govuk-body"><a class="govuk-link" id="" href="javascript:preventDefault();">Choose this qualification<span class="govuk-visually-hidden">Foundation Degree in Classroom Support</span></a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Foundation Degree in Garden Design</h2>
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-3",
+              rows: [
+                  [
+                      {
+                          html: 'LARS/QAN:<span class="govuk-!-font-weight-bold"> 00300881</span>'
+                      },
+                      {
+                          html: 'Level: <span class="govuk-!-font-weight-bold"> 5</span>'
+                      },
+                      {
+                          html: 'Awarding body:<span class="govuk-!-font-weight-bold"> OU</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          <!--p class="govuk-body">LARS/QAN:<span class="govuk-!-font-weight-bold"> 00300881</span></p>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 5</span></p>
+          <p class="govuk-body">Awarding body:<span class="govuk-!-font-weight-bold"> OU</span></p-->
+          <p class="govuk-body"><a class="govuk-link" id="" href="javascript:preventDefault();">Choose this qualification<span class="govuk-visually-hidden">Foundation Degree in Garden Design</span></a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Foundation Degree in Animal Conservation</h2>
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-3",
+              rows: [
+                  [
+                      {
+                          html: 'LARS/QAN:<span class="govuk-!-font-weight-bold"> 00300412</span>'
+                      },
+                      {
+                          html: 'Level: <span class="govuk-!-font-weight-bold"> 5</span>'
+                      },
+                      {
+                          html: 'Awarding body:<span class="govuk-!-font-weight-bold"> OBU</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          <!--p class="govuk-body">LARS/QAN:<span class="govuk-!-font-weight-bold"> 00300412</span></p>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 5</span></p>
+          <p class="govuk-body">Awarding body:<span class="govuk-!-font-weight-bold"> OBU</span></p-->
+          <p class="govuk-body"><a class="govuk-link" id="" href="javascript:preventDefault();">Choose this qualification<span class="govuk-visually-hidden">Foundation Degree in Animal Conservation</span></a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Foundation Degree in Tournament Golf</h2>
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-3",
+              rows: [
+                  [
+                      {
+                          html: 'LARS/QAN:<span class="govuk-!-font-weight-bold"> 00300696</span>'
+                      },
+                      {
+                          html: 'Level: <span class="govuk-!-font-weight-bold"> 5</span>'
+                      },
+                      {
+                          html: 'Awarding body:<span class="govuk-!-font-weight-bold"> UCPMARJN</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          <!--p class="govuk-body">LARS/QAN:<span class="govuk-!-font-weight-bold"> 00300696</span></p>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 5</span></p>
+          <p class="govuk-body">Awarding body:<span class="govuk-!-font-weight-bold"> UCPMARJN</span></p-->
+          <p class="govuk-body"><a class="govuk-link" id="" href="javascript:preventDefault();">Choose this qualification<span class="govuk-visually-hidden">Foundation Degree in Tournament Golf</span></a></p>
+      </div>
+      
+    </div>
+
+    <nav class="pttcd-c-pager govuk-body">
+
+      <ul class="pttcd-c-pager__page-list">
+        <li class="pttcd-c-pager__page-list__current-page">1</li>
+        <li><a href="javascript:preventDefault();" class="govuk-link">2</a></li>
+        <li class="pttcd-c-pager__post-ellipsis">…</li>
+        <li><a href="javascript:preventDefault();" class="govuk-link">1284</a></li>
+      </ul>
+
+      <a href="javascript:preventDefault();" class="govuk-link pttcd-c-pager__next-page" rel="next">Next page</a>
+    
+    </nav>
+
+  </div>
+  <!--  -->
+  
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

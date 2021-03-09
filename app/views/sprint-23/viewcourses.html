@@ -1,0 +1,359 @@
+{% set navActive = 'courses' %}
+{% extends "layouts/layout-sprint23.html" %}
+
+{% block pageTitle %}
+  Courses
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <!--  -->
+  <div class="govuk-grid-column-full">
+    <div>
+      <h1 class="govuk-heading-xl">Your courses</h1>
+      <p class="govuk-body-l">These courses are published on the course directory.</p>
+    </div>
+    <div id="LarsSearch" class="cd-status-panel teal--border">
+        <div class="header-search-content">
+          <div class="search-input-wrapper">
+            <label class="govuk-body govuk-!-margin-bottom-0" id="courseSearch">Search by Learning Aims Reference Service (LARS) code or keyword</label>
+            <div class="search--container">
+              <input class="govuk-input search-input js-search-focus" type="text" aria-labelledby="courseSearch" data-val="true" id="Search" name="Search" value="">
+              <div class="cd-c-search__item cd-search__submit-wrapper">
+                <button type="button" class=" submit" id="searchButton">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+
+      <div id="results">
+        <div class="cd-grid-column-20 govuk-body">
+
+          <div class="govuk-form-group govuk-!-font-size-14">
+            <div class="accordion govuk-heading-s" role="button" tabindex="0">Level</div>
+            <div class="panel">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-visually-hidden" style="font-weight: 100">
+                  <h2 class="govuk-fieldset__heading">
+                    Select Level
+                  </h2>
+
+                </legend>
+
+                <div class="govuk-checkboxes govuk-checkboxes--small" id="LevelFilters">
+
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="level-3" name="level" type="checkbox" value="E">
+                    <label id="levellabel_level-3" class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="level-3">
+                      Entry level
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="level-0" name="level" type="checkbox" value="1">
+                    <label id="levellabel_level-0" class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="level-0">
+                      Level 1
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="level-1" name="level" type="checkbox" value="2">
+                    <label id="levellabel_level-1" class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="level-1">
+                      Level 2
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="level-2" name="level" type="checkbox" value="3">
+                    <label id="levellabel_level-2" class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="level-2">
+                      Level 3
+                    </label>
+                  </div>
+
+
+                </div>
+              </fieldset>
+            </div>
+
+          </div>
+
+          <div class="govuk-form-group govuk-!-font-size-14">
+            <div class="accordion govuk-heading-s" role="button" tabindex="0">Delivery mode</div>
+            <div class="panel">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-visually-hidden">
+                  Select Course type
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="deliverymode-0" name="deliverymode" type="checkbox" value="Classroom based">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="deliverymode-0">
+                      Classroom based
+                    </label>
+                  </div>
+
+
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="govuk-form-group govuk-!-font-size-14">
+            <div class="accordion govuk-heading-s" role="button" tabindex="0">Course location</div>
+            <div class="panel" style="display: block;">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-visually-hidden">
+                  Select Location
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="venue-0" name="venue" type="checkbox" value="Presidency London College">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="venue-0">
+                      Presidency London College
+                    </label>
+                  </div>
+
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="govuk-form-group govuk-!-font-size-14">
+            <div class="accordion govuk-heading-s" role="button" tabindex="0">Attendance pattern</div>
+            <div class="panel" style="display: block;">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-visually-hidden">
+                  Select Attendance Mode
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="attendancepattern-1" name="attendancepattern" type="checkbox" value="Daytime">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="attendancepattern-1">
+                      Daytime
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="attendancepattern-2" name="attendancepattern" type="checkbox" value="Evening">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="attendancepattern-2">
+                      Evening
+                    </label>
+                  </div>
+
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="govuk-form-group govuk-!-font-size-14">
+            <div class="accordion govuk-heading-s" role="button" tabindex="0">Region</div>
+            <div class="panel" style="display: block;">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-visually-hidden">
+                  Select Region
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="region-1" name="region" type="checkbox" value="East Midlands">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="region-1">
+                      East Midlands
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="region-2" name="region" type="checkbox" value="East of England">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="region-2">
+                      East of England
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="region-3" name="region" type="checkbox" value="London">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="region-3">
+                      London
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="region-4" name="region" type="checkbox" value="North East">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="region-4">
+                      North East
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="region-5" name="region" type="checkbox" value="North West">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="region-5">
+                      North West
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="region-6" name="region" type="checkbox" value="South East">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="region-6">
+                      South East
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="region-7" name="region" type="checkbox" value="South West">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="region-7">
+                      South West
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="region-8" name="region" type="checkbox" value="West Midlands">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="region-8">
+                      West Midlands
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="region-9" name="region" type="checkbox" value="Yorkshire and The Humber">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="region-9">
+                      Yorkshire and The Humber
+                    </label>
+                  </div>
+
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="govuk-form-group govuk-!-font-size-14">
+            <a class="govuk-button" id="ApplyFilter">Apply</a>
+          </div>
+
+        </div>
+        <div class="cd-grid-column-80 govuk-body">
+
+          <div class="pttcd-lars-search-result__container">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-1">A Level in Computer Science 12</h2>
+            <p class="govuk-hint"><small>GCE A Level in Computer Science &nbsp; LARS/QAN:60150312</small></p>
+            <p class="govuk-body">Presidency London College</p>
+            <p class="govuk-body govuk-hint">
+              15.CA.ADE3.60743 &nbsp;
+              Daytime &nbsp;
+              Level 3 &nbsp;
+              Classroom based &nbsp;
+              Full time &nbsp;
+              Flexible start date
+            </p>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-2">
+            <p class="govuk-body">
+              <a class="govuk-link govuk-!-margin-right-3" href="/{{version}}/courses/view">View or edit course</a>
+              <a class="govuk-link govuk-!-margin-right-3" href="/{{version}}/courses/copy">Copy course</a>
+              <a class="govuk-link" href="/{{version}}/courses/delete">Delete course</a>
+            </p>
+          </div>
+
+          <div class="pttcd-lars-search-result__container">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Art and Design, OCR Technical Level 2 Diploma</h2>
+            <p class="govuk-hint"><small>Cambridge Technical Diploma in Art and Design &nbsp; LARS/QAN:60060931</small></p>
+            <p class="govuk-body">Presidency London College</p>
+            <p class="govuk-body govuk-hint">
+              15.CA.ADE2.60522 &nbsp;
+              Daytime &nbsp;
+              Level 2 &nbsp;
+              Classroom based &nbsp;
+              Full time &nbsp;
+              07 Sep 2021
+            </p>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-2">
+            <p class="govuk-body">
+              <a class="govuk-link govuk-link--blocked govuk-!-margin-right-3" href="javascript:preventDefault();">View or edit course</a>
+              <a class="govuk-link govuk-link--blocked govuk-!-margin-right-3" href="javascript:preventDefault();">Copy course</a>
+              <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Delete course</a>
+            </p>
+          </div>
+
+          <div class="pttcd-lars-search-result__container">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Art and Design, OCR Technical Level 3 Diploma (2 Yrs) Year 1</h2>
+            <p class="govuk-hint"><small>Cambridge Technical Diploma in Art and Design &nbsp; LARS/QAN:51060931</small></p>
+            <p class="govuk-body">Presidency London College</p>
+            <p class="govuk-body govuk-hint">
+              15.CA.ADE3.60455 &nbsp;
+              Daytime &nbsp;
+              Level 3 &nbsp;
+              Classroom based &nbsp;
+              Full time &nbsp;
+              07 Sep 2021
+            </p>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-2">
+            <p class="govuk-body">
+              <a class="govuk-link govuk-link--blocked govuk-!-margin-right-3" href="javascript:preventDefault();">View or edit course</a>
+              <a class="govuk-link govuk-link--blocked govuk-!-margin-right-3" href="javascript:preventDefault();">Copy course</a>
+              <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Delete course</a>
+            </p>
+          </div>
+
+          <div class="pttcd-lars-search-result__container">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Barbering - Level 2</h2>
+            <p class="govuk-hint"><small>Certificate in Barbering &nbsp; LARS/QAN:50087046</small></p>
+            <p class="govuk-body">Presidency London College</p>
+            <p class="govuk-body govuk-hint">
+              15.BH.BAR2.61356 &nbsp;
+              Evening &nbsp;
+              Level 2 &nbsp;
+              Classroom based &nbsp;
+              Part time &nbsp;
+              22 Sep 2021
+            </p>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-2">
+            <p class="govuk-body">
+              <a class="govuk-link govuk-link--blocked govuk-!-margin-right-3" href="javascript:preventDefault();">View or edit course</a>
+              <a class="govuk-link govuk-link--blocked govuk-!-margin-right-3" href="javascript:preventDefault();">Copy course</a>
+              <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Delete course</a>
+            </p>
+          </div>
+
+
+          <script>
+            (function($) {
+              $(function() {
+
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "none") {
+                      panel.style.display = "block";
+                    } else {
+                      panel.style.display = "none";
+                    }
+                  });
+                }
+              });
+            })(jQuery);
+          </script>
+
+        </div>
+      </div>
+    </div>
+    <!--  -->
+  </div>
+
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
