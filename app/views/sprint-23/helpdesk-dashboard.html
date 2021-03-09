@@ -1,0 +1,173 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Helpdesk dashboard
+{% endblock %}
+
+{% block header %}
+
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              Quality assurance
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              Search providers
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              Manage users
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              Migration reports
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <div class="govuk-grid-row govuk-!-margin-bottom-2 homescreen-row">
+
+      <div class="govuk-grid-column-one-third">
+        <div class="cd-card-1 cd-card--provider">
+          <div class="cd-card-content cd-card-content--helpdesk">
+            <h2 class="govuk-heading-s">Provider type report</h2>
+            <p class="cd-card-number--helpdesk">2,659</p>
+            <p class="govuk-body-s">onboarded providers</p>
+          </div>
+          <div class="cd-card-action cd-card-action--helpdesk">
+            <ul class="govuk-list govuk-list__small">
+              <li><a href="javascript:preventDefault();" class="govuk-link">Provider type report</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <div class="cd-card-1 cd-card--provider">
+          <div class="cd-card-content cd-card-content--helpdesk">
+            <h2 class="govuk-heading-s">Find a course</h2>
+            <p class="cd-card-number--helpdesk">96,682</p>
+            <p class="govuk-body-s">courses on Find a course</p>
+            <p class="cd-card-number--helpdesk">1,937</p>
+            <p class="govuk-body-s">out of date courses</p>
+          </div>
+          <div class="cd-card-action cd-card-action--helpdesk">
+            <ul class="govuk-list govuk-list__small">
+              <li><a href="javascript:preventDefault();" class="govuk-link">Out of date courses</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <div class="cd-card-1 cd-card--provider">
+          <div class="cd-card-content cd-card-content--helpdesk">
+            <h2 class="govuk-heading-s">Provider course information</h2>
+            <p class="cd-card-number--helpdesk">1,874</p>
+            <p class="govuk-body-s">providers with &gt;1 course</p>
+            <p class="cd-card-number--helpdesk">2,093</p>
+            <p class="govuk-body-s">in receipt of funding as of Nov 2020</p>
+          </div>
+          <div class="cd-card-action cd-card-action--helpdesk">
+            <ul class="govuk-list govuk-list__small">
+              <li><a href="javascript:preventDefault();" class="govuk-link">Comparison report</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-bottom-2 homescreen-row">
+
+      <div class="govuk-grid-column-one-third">
+        <div class="cd-card-1 cd-card--provider">
+          <div class="cd-card-content cd-card-content--helpdesk">
+            <h2 class="govuk-heading-s">Apprenticeship information</h2>
+            <p class="cd-card-number--helpdesk">1,401</p>
+            <p class="govuk-body-s">providers with &gt;1 apprenticeship</p>
+          </div>
+          <div class="cd-card-action cd-card-action--helpdesk">
+            <!--ul class="govuk-list govuk-list__small">
+              <li><a href="javascript:preventDefault();" class="govuk-link">Download provider type report</a></li>
+            </ul-->
+          </div>
+        </div>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <div class="cd-card-1 cd-card--provider">
+          <div class="cd-card-content cd-card-content--helpdesk">
+            <h2 class="govuk-heading-s">T Levels</h2>
+            <p class="cd-card-number--helpdesk">400</p>
+            <p class="govuk-body-s">providers with &gt;1 T Level</p>
+          </div>
+          <div class="cd-card-action cd-card-action--helpdesk">
+            <ul class="govuk-list govuk-list__small">
+              <li><a href="javascript:preventDefault();" class="govuk-link">Live T Levels</a></li>
+              <li><a href="javascript:preventDefault();" class="govuk-link">Deactivated T Levels providers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <div class="cd-card-1 cd-card--provider">
+          <div class="cd-card-content cd-card-content--helpdesk">
+            <h2 class="govuk-heading-s">Quality assurance</h2>
+            <p class="govuk-body-s">New provider and apprenticeship training courses</p>
+          </div>
+          <div class="cd-card-action cd-card-action--helpdesk">
+            <ul class="govuk-list govuk-list__small">
+              <li><a href="javascript:preventDefault();" class="govuk-link">QA submissions</a></li>
+              <li><a href="javascript:preventDefault();" class="govuk-link">QA report</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
