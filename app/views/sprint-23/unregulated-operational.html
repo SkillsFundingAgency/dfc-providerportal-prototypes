@@ -58,11 +58,48 @@
   <div class="govuk-grid-column-full">
       <div class="pttcd-lars-search-result__container">
           <h2 class="govuk-heading-l">All other education/leisure type courses, Science and Mathematics (SSA 2)</h2>
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-0",
+              rows: [
+                  [
+                      {
+                        classes: "govuk-!-width-one-half",
+                        html: 'LARS/QAN:<span class="govuk-!-font-weight-bold"> 00304286</span>'
+                      },
+                      {
+                        classes: "govuk-!-width-one-half",
+                        html: 'Level: <span class="govuk-!-font-weight-bold"> X</span>'
+                      }
+                  ]
+              ]
+          }) }}
+          {{ govukTable({
+              classes: "govuk-!-margin-bottom-0",
+              rows: [
+                  [
+                      {
+                        classes: "govuk-!-width-one-half border-bottom-none",
+                        html: 'Operational end date:<span class="govuk-!-font-weight-bold"> 31 Aug 2022</span>'
+                      },
+                      {
+                        classes: "govuk-!-width-one-half border-bottom-none",
+                        html: ''
+                      }
+                  ]
+              ]
+          }) }}
+          <!--p class="govuk-body">LARS/QAN:<span class="govuk-!-font-weight-bold"> 00304286</span></p>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 5</span></p>
+          <p class="govuk-body">Awarding body:<span class="govuk-!-font-weight-bold"> HULLU</span></p>
+          <p class="govuk-body"><a class="govuk-link" id="" href="javascript:preventDefault();">Choose this qualification<span class="govuk-visually-hidden">FdA in Fashion and clothing Design - Bishop Burton College</span></a></p-->
+      </div>
+      <!--div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-l">All other education/leisure type courses, Science and Mathematics (SSA 2)</h2>
           <p class="govuk-body">
             LARS/QAN: ZOEDL002<br>
             Level: X
         	</p>
-      </div>
+      </div-->
       <p class="govuk-body">    
         {{ govukButton({
             href: "description",
