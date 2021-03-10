@@ -1,0 +1,51 @@
+{% set navActive = 'tlevels' %}
+{% extends "layouts/layout-v2.html" %}
+
+{% block pageTitle %}
+  Delete T Level
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      classes: "govuk-!-margin-bottom-9",
+      titleText: "Your T Level has been deleted",
+      html: "T Level name<br><strong>REFXXXXX</strong>"
+    }) }}
+
+    <h2 class="govuk-heading-m">What next?</h2>
+    <ul class="govuk-list">
+      <li><a class="govuk-link" href="/{{version}}/t-levels/add">Add a new T Level</a></li>
+      <li><a class="govuk-link" href="/{{version}}/t-levels">View and edit T Levels</a></li>
+      <li><a class="govuk-link" href="/{{version}}">Back to the home screen</a></li>
+    </ul>
+
+    <!-- -->
+
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}

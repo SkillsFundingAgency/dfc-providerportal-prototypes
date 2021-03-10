@@ -1,0 +1,137 @@
+{% set navActive = 'locations' %}
+{% extends "layouts/layout-v2.html" %}
+
+{% block pageTitle %}
+  Locations
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Add location
+      </h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data["venue-add-name"] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">
+              Change<span class="govuk-visually-hidden"> location name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['venue-add-line-1'] %}
+              {% if data['venue-add-line-1'] %}{{ data['venue-add-line-1'] }}{% endif %}
+              {% if data['venue-add-line-2'] %}<br>{{ data['venue-add-line-2'] }}{% endif %}
+              {% if data['venue-add-town'] %}<br>{{ data['venue-add-town'] }}{% endif %}
+              {% if data['venue-add-county'] %}<br>{{ data['venue-add-county'] }}{% endif %}
+              {% if data['venue-add-postcode'] %}<br>{{ data['venue-add-postcode'] }}{% endif %}
+            {% else %}
+              Buckingham Palace,<br>
+              LONDON<br>
+              SW1A 1AA
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">
+              Change<span class="govuk-visually-hidden"> location address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data["venue-add-email"] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">
+              Change<span class="govuk-visually-hidden"> email address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Telephone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data["venue-add-telephone"] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">
+              Change<span class="govuk-visually-hidden"> telephne number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Website address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data["venue-add-website"] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">
+              Change<span class="govuk-visually-hidden"> website address</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <form action="" method="post">
+
+        {{ govukButton({
+          classes: "govuk-!-margin-right-3",
+          text: "Save location"
+        }) }}
+
+        {{ govukButton({
+          href: "javascript:preventDefault();",
+          text: "Cancel",
+          classes: "govuk-button--secondary"
+        }) }}
+
+      </form>
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      
+    </div>
+  </div>
+  
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

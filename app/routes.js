@@ -33,6 +33,7 @@ require('./routes/sprint-19.js')(router);
 require('./routes/sprint-21.js')(router);
 
 require('./routes/v1.js')(router);
+require('./routes/v2.js')(router);
 
 require('./routes/dm3.js')(router);
 

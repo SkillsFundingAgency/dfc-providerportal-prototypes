@@ -1,0 +1,111 @@
+{% set navActive = 'locations' %}
+{% extends "layouts/layout-v2.html" %}
+
+{% block pageTitle %}
+  Locations
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Add location
+      </h1>
+
+      <form action="" method="post">
+      
+        {{ govukInput({
+          id: "venue-add-line-1",
+          name: "venue-add-line-1",
+          label: {
+            html: 'Building and street <span class="govuk-visually-hidden">line 1 of 2</span>'
+          },
+          value: "",
+          autocomplete: "venue-add-line1"
+        }) }}
+      
+        {{ govukInput({
+          id: "venue-add-line-2",
+          name: "venue-add-line-2",
+          label: {
+            html: '<span class="govuk-visually-hidden">Building and street line 2 of 2</span>'
+          },
+          value: "",
+          autocomplete: "venue-add-line2"
+        }) }}
+      
+        {{ govukInput({
+          id: "venue-add-town",
+          name: "venue-add-town",
+          label: {
+            text: "Town or city"
+          },
+          value: "",
+          autocomplete: "venue-add-level2",
+          classes: "govuk-!-width-two-thirds"
+        }) }}
+      
+        {{ govukInput({
+          id: "venue-add-county",
+          name: "venue-add-county",
+          label: {
+            text: "County"
+          },
+          value: "",
+          classes: "govuk-!-width-two-thirds"
+        }) }}
+      
+        {{ govukInput({
+          id: "venue-add-postcode",
+          name: "venue-add-postcode",
+          label: {
+            text: "Postcode"
+          },
+          value: data['venue-add-postcode'],
+          autocomplete: "postal-code",
+          classes: "govuk-!-width-one-quarter"
+        }) }}
+      
+
+        {{ govukButton({
+          classes: "govuk-!-margin-right-3",
+          text: "Continue"
+        }) }}
+
+        {{ govukButton({
+          classes: "govuk-button--secondary",
+          href: "select",
+          text: "Cancel"
+        }) }}
+
+      </form>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      
+    </div>
+  </div>
+  
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

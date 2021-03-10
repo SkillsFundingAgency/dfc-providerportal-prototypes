@@ -1,0 +1,133 @@
+{% set navActive = 'apprenticeships' %}
+{% extends "layouts/layout-v2.html" %}
+
+{% block pageTitle %}
+  Apprenticeships - Add apprenticeship
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+
+    <h2 class="govuk-heading-l">Find apprenticeship</h2>
+
+    <form action="" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="apprenticeships-add-lars">
+          Search by name or keyword for the apprenticeship this training is for.
+        </label>
+        <div id="event-name-hint" class="govuk-hint">
+          Enter a minimum of 3 characters
+        </div>
+        <input class="govuk-input govuk-!-width-three-quarters" id="apprenticeships-add-lars" name="apprenticeships-add-lars" type="text" value="design"><button class="govuk-button pttcd-button-search" data-module="govuk-button">Search</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p class="govuk-body">Found <strong>12</strong> results for <strong>design</strong></p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+
+    <div class="govuk-table govuk-!-font-size-14">
+
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Building Services Design Engineer (degree)</h2>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 6</span></p>
+          <p class="govuk-body"><a class="govuk-link" id="" href="/{{version}}/apprenticeships/add/details">Choose this apprenticeship</a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Building Services Design Technician</h2>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 3</span></p>
+          <p class="govuk-body"><a class="govuk-link govuk-link--blocked" id="" href="javascript:preventDefault();">Choose this apprenticeship</a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Construction Design and Build Technician</h2>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 4</span></p>
+          <p class="govuk-body"><a class="govuk-link govuk-link--blocked" id="" href="javascript:preventDefault();">Choose this apprenticeship</a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Creative Digital Design Professional (integrated degree)</h2>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 6</span></p>
+          <p class="govuk-body"><a class="govuk-link govuk-link--blocked" id="" href="javascript:preventDefault();">Choose this apprenticeship</a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Design and Construction Management (degree)</h2>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 6</span></p>
+          <p class="govuk-body"><a class="govuk-link govuk-link--blocked" id="" href="javascript:preventDefault();">Choose this apprenticeship</a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Embedded Electronic Systems Design and Development Engineer (degree)</h2>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 6</span></p>
+          <p class="govuk-body"><a class="govuk-link govuk-link--blocked" id="" href="javascript:preventDefault();">Choose this apprenticeship</a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Engineering Design and Draughtsperson</h2>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 3</span></p>
+          <p class="govuk-body"><a class="govuk-link govuk-link--blocked" id="" href="javascript:preventDefault();">Choose this apprenticeship</a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Fitted Furniture Design Technician</h2>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 3</span></p>
+          <p class="govuk-body"><a class="govuk-link govuk-link--blocked" id="" href="javascript:preventDefault();">Choose this apprenticeship</a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Product Design and Development Engineer (degree)</h2>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 6</span></p>
+          <p class="govuk-body"><a class="govuk-link govuk-link--blocked" id="" href="javascript:preventDefault();">Choose this apprenticeship</a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Product Design and Development Technician</h2>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 3</span></p>
+          <p class="govuk-body"><a class="govuk-link govuk-link--blocked" id="" href="javascript:preventDefault();">Choose this apprenticeship</a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Railway Engineering Design Technician</h2>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 3</span></p>
+          <p class="govuk-body"><a class="govuk-link govuk-link--blocked" id="" href="javascript:preventDefault();">Choose this apprenticeship</a></p>
+      </div>
+      <div class="pttcd-lars-search-result__container">
+          <h2 class="govuk-heading-m">Tool Process Design Engineer</h2>
+          <p class="govuk-body">Level: <span class="govuk-!-font-weight-bold"> 6</span></p>
+          <p class="govuk-body"><a class="govuk-link govuk-link--blocked" id="" href="javascript:preventDefault();">Choose this apprenticeship</a></p>
+      </div>
+      
+    </div>
+
+  </div>
+  <!--  -->
+  
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
