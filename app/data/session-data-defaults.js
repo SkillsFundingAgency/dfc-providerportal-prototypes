@@ -724,6 +724,65 @@ module.exports = {
       "STUDY_MODE": "Full time",
       "ATTENDANCE_PATTERN": "Daytime"
     }
-   ]
+   ],
+   
+   dm4venues: [
+    {
+      "NAME": "Abington Community Centre",
+      "ADDRESS1": "Wheatfield Road South",
+      "ADDRESS2": "",
+      "TOWNCITY": "Northampton",
+      "COUNTY": "",
+      "POSTCODE": "NN3 2ND",
+      "EMAIL": "",
+      "TELEPHONE": "",
+      "WEBSITE": ""
+    },
+    {
+      "NAME": "Corn Market Hall",
+      "ADDRESS1": "London Road",
+      "ADDRESS2": "Kettering",
+      "TOWNCITY": "Northampton",
+      "COUNTY": "",
+      "POSTCODE": "NN15 7QA",
+      "EMAIL": "",
+      "TELEPHONE": "",
+      "WEBSITE": ""
+    },
+    {
+      "NAME": "",
+      "ADDRESS1": "Fletton Way",
+      "ADDRESS2": "Oundle",
+      "TOWNCITY": "Peterborough",
+      "COUNTY": "",
+      "POSTCODE": "PE8 4JN",
+      "EMAIL": "",
+      "TELEPHONE": "",
+      "WEBSITE": ""
+    },
+    {
+      "NAME": "Knuston Hall",
+      "ADDRESS1": "Irchester",
+      "ADDRESS2": "",
+      "TOWNCITY": "Wellingborough",
+      "COUNTY": "Northamptonshire",
+      "POSTCODE": "NN29 7EU",
+      "EMAIL": "",
+      "TELEPHONE": "",
+      "WEBSITE": ""
+    },
+    {
+      "NAME": "Wrenn Academy",
+      "ADDRESS": "Doddington Road, Wellingborough",
+      "ADDRESS1": "London Road",
+      "ADDRESS2": "Kettering",
+      "TOWNCITY": "Northampton",
+      "COUNTY": "",
+      "POSTCODE": "NN8 2JJ",
+      "EMAIL": "",
+      "TELEPHONE": "",
+      "WEBSITE": ""
+    }
+  ]
 
 }

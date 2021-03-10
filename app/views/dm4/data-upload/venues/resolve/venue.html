@@ -1,0 +1,224 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm4.html" %}
+
+{% block pageTitle %}
+  Data Management - Resolve errors in venue details
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Resolve errors in venue details</h1>
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            {% if (data['dm4venues'][data['row']-1].NAME == "") %}
+              <li><a href="#venue-details-venuename-error">Venue name is missing</a></li>
+            {% endif %}
+            {% if (data['dm4venues'][data['row']-1].ADDRESS == "") %}
+              <li><a href="#venue-details-type-error">Address is missing</a></li>
+            {% endif %}
+            {% if (data['dm4venues'][data['row']-1].POSTCODE == "") %}
+              <li><a href="#venue-details-startdate-error">Postcode is missing</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+
+      <form action="" method="post" class="form">
+
+        <!--  -->
+
+        {% if (data['dm4venues'][data['row']-1].NAME == "") %}
+          {{ govukInput({
+            id: "dm4venue-resolve-name",
+            name: "dm4venue-resolve-name",
+            label: {
+              classes: "govuk-label--s",
+              text: "Venue name"
+            },
+            errorMessage: {
+              text: "Enter a venue name"
+            },
+            value: data['dm4venues'][data['row']-1].NAME
+          }) }}
+        {% else %}
+          {{ govukInput({
+            id: "dm4venue-resolve-name",
+            name: "dm4venue-resolve-name",
+            label: {
+              classes: "govuk-label--s",
+              text: "Venue name"
+            },
+            attributes: {
+              disabled: "disabled"
+            },
+            value: data['dm4venues'][data['row']-1].NAME
+          }) }}
+        {% endif %}
+      
+        {{ govukInput({
+          id: "dm4venue-resolve-line-1",
+          name: "dm4venue-resolve-line-1",
+          label: {
+            classes: "govuk-label--s",
+            html: 'Address line 1'
+          },
+            attributes: {
+              disabled: "disabled"
+            },
+          value: data['dm4venues'][data['row']-1].ADDRESS1
+        }) }}
+      
+        {{ govukInput({
+          id: "dm4venue-resolve-line-2",
+          name: "dm4venue-resolve-line-2",
+          label: {
+            classes: "govuk-label--s",
+            html: 'Address line 2'
+          },
+            attributes: {
+              disabled: "disabled"
+            },
+          value: data['dm4venues'][data['row']-1].ADDRESS2
+        }) }}
+      
+        {{ govukInput({
+          id: "dm4venue-resolve-town",
+          name: "dm4venue-resolve-town",
+          label: {
+            classes: "govuk-label--s",
+            text: "Town or city"
+          },
+            attributes: {
+              disabled: "disabled"
+            },
+          classes: "govuk-!-width-two-thirds",
+          value: data['dm4venues'][data['row']-1].TOWNCITY
+        }) }}
+      
+        {{ govukInput({
+          id: "dm4venue-resolve-county",
+          name: "dm4venue-resolve-county",
+          label: {
+            classes: "govuk-label--s",
+            text: "County"
+          },
+            attributes: {
+              disabled: "disabled"
+            },
+          classes: "govuk-!-width-two-thirds",
+          value: data['dm4venues'][data['row']-1].COUNTY
+        }) }}
+      
+        {{ govukInput({
+          id: "dm4venue-resolve-postcode",
+          name: "dm4venue-resolve-postcode",
+          label: {
+            classes: "govuk-label--s",
+            text: "Postcode"
+          },
+            attributes: {
+              disabled: "disabled"
+            },
+          classes: "govuk-!-width-one-quarter",
+          value: data['dm4venues'][data['row']-1].POSTCODE
+        }) }}
+
+        {{ govukInput({
+          id: "dm4venue-resolve-email",
+          name: "dm4venue-resolve-email",
+          type: "email",
+          classes: "govuk-!-width-two-thirds",
+          label: {
+            classes: "govuk-label--s",
+            text: "Email address"
+          },
+            attributes: {
+              disabled: "disabled"
+            },
+          value: data['dm4venues'][data['row']-1].EMAIL
+        }) }}
+
+        {{ govukInput({
+          id: "dm4venue-resolve-telephone",
+          name: "dm4venue-resolve-telephone",
+          classes: "govuk-!-width-one-third",
+          label: {
+            classes: "govuk-label--s",
+            text: "Telephone number"
+          },
+            attributes: {
+              disabled: "disabled"
+            },
+          value: data['dm4venues'][data['row']-1].TELEPHONE
+        }) }}
+
+        {{ govukInput({
+          id: "dm4venue-resolve-website",
+          name: "dm4venue-resolve-website",
+          classes: "govuk-!-width-two-thirds",
+          label: {
+            classes: "govuk-label--s",
+            text: "Website address"
+          },
+            attributes: {
+              disabled: "disabled"
+            },
+          value: data['dm4venues'][data['row']-1].WEBSITE
+        }) }}
+
+        <!--  -->
+        <!--h2 class="govuk-heading-m">
+          Publish your venue changes
+        </h2>
+        <p class="govuk-body">
+          Your venue details will be updated on Publish to the venue directory and available to learners searching for learning and training opportunities on the National Careers Service.
+        <p-->
+
+        <input type="hidden" name="resolverow" id ="resolverow" value="{{ data['row'] }}">
+
+        {{ govukButton({
+          classes: "govuk-!-margin-top-5",
+          text: "Resolve errors"
+        }) }}
+
+        {{ govukButton({
+          classes: "govuk-button--secondary govuk-!-margin-left-3 govuk-!-margin-top-5",
+          href: "/" + version + "/data-upload/venues/resolve",
+          text: "Cancel"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
