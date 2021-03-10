@@ -1,0 +1,2320 @@
+{% set navActive = 'apprenticeships' %}
+{% extends "layouts/layout-v2.html" %}
+
+{% block pageTitle %}
+  Apprenticeships - Add apprenticeship regions
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">
+        Select the regions where you provide this training
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        Where in England can you deliver this course?
+      </h2>
+
+      <p class="govuk-body">
+        Select all regions and areas that apply
+      <p>
+
+      <form action="" method="post" class="form">
+
+ 
+
+        {{ govukAccordion({
+          id: "",
+          items: [
+            {
+              heading: {
+                text: "East Midlands"
+              },
+              content: {
+                html: '
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Select all
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Derby">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Derby
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Derbyshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Derbyshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Leicester">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Leicester
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Leicestershire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Leicestershire
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Lincolnshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Lincolnshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Northamptonshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Northamptonshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Nottingham">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Nottingham
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Nottinghamshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Nottinghamshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Rutland">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Rutland
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+        </tbody>
+      </table>
+                '
+              }
+            },
+            {
+              heading: {
+                text: "East of England"
+              },
+              content: {
+                html: '
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Select all
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Bedford">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Bedford
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Cambridgeshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Cambridgeshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Central Bedfordshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Central Bedfordshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Essex">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Essex
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Hertfordshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Luton">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Luton
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Norfolk">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Norfolk
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Peterborough">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Peterborough
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Southend-on-Sea">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Southend-on-Sea
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Suffolk">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Suffolk
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Thurrock">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Thurrock
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+        </tbody>
+      </table>
+                '
+              }
+            },
+            {
+              heading: {
+                text: "London"
+              },
+              content: {
+                html: '
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Select all
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Barking and Dagenham">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Barking and Dagenham
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Barnet">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Barnet
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Bexley">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Bexley
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Brent">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Brent
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Bromley">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Bromley
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Camden">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Camden
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="City of London">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    City of London
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Croydon">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Croydon
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Ealing">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Ealing
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Enfield">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Enfield
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Greenwich">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Greenwich
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Hackney">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Hackney
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Hammersmith and Fulham">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Hammersmith and Fulham
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Haringey">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Haringey
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Harrow">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Harrow
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Havering">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Havering
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Hillingdon">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Hillingdon
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Hounslow">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Hounslow
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Islington">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Islington
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Kensington and Chelsea">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Kensington and Chelsea
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Kingston upon Thames">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Kingston upon Thames
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Lambeth">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Lambeth
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Lewisham">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Lewisham
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Merton">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Merton
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Newham">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Newham
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Redbridge">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Redbridge
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Richmond upon Thames">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Richmond upon Thames
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Southwark">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Southwark
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Sutton">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Sutton
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Tower Hamlets">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Tower Hamlets
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Waltham Forest">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Waltham Forest
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Wandsworth">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Wandsworth
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Westminster">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Westminster
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+        </tbody>
+      </table>
+                '
+              }
+            },
+            {
+              heading: {
+                text: "North East"
+              },
+              content: {
+                html: '
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Select all
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="County Durham">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    County Durham
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Darlington">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Darlington
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Gateshead">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Gateshead
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Hartlepool">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Hartlepool
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Middlesbrough">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Middlesbrough
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Newcastle upon Tyne">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Newcastle upon Tyne
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="North Tyneside">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    North Tyneside
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Northumberland">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Northumberland
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Redcar and Cleveland">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Redcar and Cleveland
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="South Tyneside">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    South Tyneside
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Stockton-on-Tees">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Stockton-on-Tees
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Sunderland">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Sunderland
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+        </tbody>
+      </table>
+                '
+              }
+            },
+            {
+              heading: {
+                text: "North West"
+              },
+              content: {
+                html: '
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Select all
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Blackburn and Darwen">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Blackburn and Darwen
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Blackpool">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Blackpool
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Bolton">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Bolton
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Bury">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Bury
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Cheshire East">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Cheshire East
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Cheshire West and Chester">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Cheshire West and Chester
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Cumbria">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Cumbria
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Halton">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Halton
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Knowsley">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Knowsley
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Lancashire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Lancashire
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Liverpool">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Liverpool
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Manchester">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Manchester
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Oldham">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Oldham
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Rochdale">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Rochdale
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Salford">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Salford
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Sefton">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Sefton
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="St Helens">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    St Helens
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Stockport">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Stockport
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Tameside">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Tameside
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Trafford">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Trafford
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Warrington">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Warrington
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Wigan">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Wigan
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Wirral">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Wirral
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+        </tbody>
+      </table>
+                '
+              }
+            },
+            {
+              heading: {
+                text: "South East"
+              },
+              content: {
+                html: '
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Select all
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Bracknell Forest">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Bracknell Forest
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Brighton and Hove">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Brighton and Hove
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Buckinghamshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Buckinghamshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="East Sussex">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    East Sussex
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Hampshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Hampshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Isle of Wight">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Isle of Wight
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Kent">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Kent
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Medway">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Medway
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Milton Keynes">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Milton Keynes
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Oxfordshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Oxfordshire
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Portsmouth">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Portsmouth
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Reading">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Reading
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Slough">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Slough
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Southampton">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Southampton
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Surrey">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Surrey
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="West Berkshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    West Berkshire
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="West Sussex">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    West Sussex
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Windsor and Maidenhead">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Windsor and Maidenhead
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Wokingham">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Wokingham
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+        </tbody>
+      </table>
+                '
+              }
+            },
+            {
+              heading: {
+                text: "South West"
+              },
+              content: {
+                html: '
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Select all
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Bath and North East Somerset">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Bath and North East Somerset
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Bournemouth">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Bournemouth
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Bristol">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Bristol
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Cornwall">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Cornwall
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Devon">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Devon
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Dorset">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Dorset
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Gloucestershire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Gloucestershire
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Isles of Scilly">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Isles of Scilly
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="North Somerset">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    North Somerset
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Plymouth">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Plymouth
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Poole">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Poole
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Somerset">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Somerset
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="South Gloucestershire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    South Gloucestershire
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Swindon">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Swindon
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Torbay">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Torbay
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Wiltshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Wiltshire
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+        </tbody>
+      </table>
+                '
+              }
+            },
+            {
+              heading: {
+                text: "West Midlands"
+              },
+              content: {
+                html: '
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Select all
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Birmingham">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Birmingham
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Coventry">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Coventry
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Dudley">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Dudley
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Herefordshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Herefordshire
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Sandwell">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Sandwell
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Shropshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Shropshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Solihull">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Solihull
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Staffordshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Staffordshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Stoke-on-Trent">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Stoke-on-Trent
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Telford and Wrekin">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Telford and Wrekin
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Walsall">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Walsall
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Warwickshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Warwickshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Wolverhampton">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Wolverhampton
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Worcestershire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Worcestershire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+        </tbody>
+      </table>
+                '
+              }
+            },
+            {
+              heading: {
+                text: "Yorkshire and the Humber"
+              },
+              content: {
+                html: '
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Select all
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Barnsley">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Barnsley
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Bradford">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Bradford
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Calderdale">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Calderdale
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Doncaster">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doncaster
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="East Riding of Yorkshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    East Riding of Yorkshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Kingston upon Hull">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Kingston upon Hull
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Kirklees">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Kirklees
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Leeds">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Leeds
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="North East Lincolnshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    North East Lincolnshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="North Lincolnshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    North Lincolnshire
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="North Yorkshire">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    North Yorkshire
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Rotherham">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Rotherham
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Sheffield">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Sheffield
+                  </label>
+                </div>
+              </div>
+              
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Wakefield">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Wakefield
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+            <td class="govuk-table__cell" style="border-bottom: none;">
+            
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="York">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    York
+                  </label>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+        </tbody>
+      </table>
+                '
+              }
+            }
+          ]
+        }) }}
+
+        <!--  -->
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+        {{ govukButton({
+          classes: "govuk-button--secondary govuk-!-margin-left-3",
+          href: "/" + version,
+          text: "Cancel"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
