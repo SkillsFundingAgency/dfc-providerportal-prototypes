@@ -27,11 +27,11 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-xl">Your locations</h1>
-  
+    <h1 class="govuk-heading-xl">Your venues</h1>
+
     {{ govukButton({
       href: "/" + version + "/venues/add",
-      text: "Add new location"
+      text: "Add new venue"
     }) }}
 
   </div>
@@ -43,7 +43,7 @@
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Location</th>
+          <th scope="col" class="govuk-table__header">Venue</th>
           <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Address</th>
           <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Postcode</th>
           <th scope="col" class="govuk-table__header govuk-!-width-one-fifth"></th>
@@ -72,7 +72,7 @@
           <td class="govuk-table__cell nowrap"><a href="/{{version}}/venues/delete/error">Delete</a></td>
         </tr>
 
-        
+
       </tbody>
     </table>
 

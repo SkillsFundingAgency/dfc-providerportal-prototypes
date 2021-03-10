@@ -36,13 +36,13 @@
           id: "apprenticeship-delivery-venue",
           name: "apprenticeship-delivery-venue",
           label: {
-            text: "Location"
+            text: "Venue"
           },
           formGroup: {
             classes: "govuk-!-margin-bottom-3"
           },
           hint: {
-            text: "Select a location you can travel from to deliver training"
+            text: "Select a venue you can travel from to deliver training"
           },
           items: [
             {
@@ -57,7 +57,7 @@
           ]
         }) }}
         <p class="govuk-body govuk-!-margin-bottom-7">
-          <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked"> I need to add a location to this list</a>
+          <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">Add another venue</a>
         <p>
 
         {{ govukCheckboxes({
@@ -66,7 +66,7 @@
           classes: "govuk-checkboxes--small",
           fieldset: {
             legend: {
-              text: "How is the training delivered at this location?",
+              text: "How is the training delivered at this venue?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--m"
             }

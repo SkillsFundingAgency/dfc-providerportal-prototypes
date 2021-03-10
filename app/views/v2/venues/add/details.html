@@ -26,10 +26,10 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Add location
+        Add a venue
       </h1>
 
-      <p class="govuk-body">This information will be displayed on Find a course as part of the course details.</p>
+      <p class="govuk-body">This information will be linked with the courses you provide.</p>
 
       <form action="" method="post">
 
@@ -38,12 +38,12 @@
           name: "venue-add-name",
           label: {
             classes: "govuk-label--s",
-            text: "Location name"
+            text: "Venue name"
           },
           value: data["venue-add-name"]
         }) }}
 
-        <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Location address</h2>
+        <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Address</h2>
         <p class="govuk-body">
           {% if data['venue-add-line-1'] %}
             {% if data['venue-add-line-1'] %}{{ data['venue-add-line-1'] }}{% endif %}
@@ -102,15 +102,15 @@
           text: "Cancel",
           classes: "govuk-button--secondary"
         }) }}
-      
+
       </form>
-      
+
     </div>
     <div class="govuk-grid-column-one-third">
-      
+
     </div>
   </div>
-  
+
 
 
   <!-- End of content -->

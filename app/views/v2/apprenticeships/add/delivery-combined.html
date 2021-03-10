@@ -38,7 +38,7 @@
           classes: "govuk-checkboxes--small",
           fieldset: {
             legend: {
-              text: "How is the training delivered at this location?",
+              text: "How is the training delivered at this venue?",
               classes: "govuk-fieldset__legend--m"
             }
           },
@@ -56,7 +56,7 @@
             }
           ]
         }) }}
-        
+
 
         <h2 class="govuk-heading-m">Employer's address</h2>
 
@@ -66,13 +66,13 @@
             id: "apprenticeship-delivery-venue",
             name: "apprenticeship-delivery-venue",
             label: {
-              text: "Location"
+              text: "Venue"
             },
             formGroup: {
               classes: "govuk-!-margin-bottom-3"
             },
             hint: {
-              text: "Select a location you can travel from to deliver training"
+              text: "Select a venue you can travel from to deliver training"
             },
             items: [
               {
@@ -87,12 +87,12 @@
             ]
           }) }}
           <p class="govuk-body govuk-!-margin-bottom-5">
-            <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked"> I need to add a location to this list</a>
+            <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked"> Add another venue</a>
           <p>
 
           {{ govukInput({
             label: {
-              text: "How far are you willing to travel from the selected location?"
+              text: "How far are you willing to travel from the selected venue?"
             },
             classes: "govuk-input--width-4",
             formGroup: {
