@@ -1,0 +1,916 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm4.html" %}
+
+{% block pageTitle %}
+  Data Management - Publish course data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% set items =
+  [
+    {
+      "LARS_QAN": "Z0002081",
+      "COURSE_NAME": "COPING WITH CHANGE AND GRIEF",
+      "ID": "M2CCN003",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "norris green",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "",
+      "DURATION": 6,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Full time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002083",
+      "COURSE_NAME": "INFORMATION / TASTER FOR CHILDCARE &amp; TEACHING ASSISTANT",
+      "ID": "P3KNG001",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "knotty ash",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE COURSE",
+      "DURATION": 2,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Evening"
+    },
+    {
+      "LARS_QAN": "Z0002083",
+      "COURSE_NAME": "INFORMATION / TASTER FOR CHILDCARE &amp; TEACHING ASSISTANT",
+      "ID": "P3KNG001",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "knotty ash",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE COURSE",
+      "DURATION": 2,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Evening"
+    },
+    {
+      "LARS_QAN": "Z0002118",
+      "COURSE_NAME": "FURTHER DEVELOPING CREATIVE WRITING SKILLS",
+      "ID": "H2PNG103",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road night school",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "",
+      "DURATION": 9,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Full time",
+      "ATTENDANCE_PATTERN": "Evening"
+    },
+    {
+      "LARS_QAN": "Z0002100",
+      "COURSE_NAME": "Taster Session Beauty Therapy course",
+      "ID": "I3KNG501",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "knotty ash",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "THIS IS A FREE COURSE",
+      "DURATION": 2,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Evening"
+    },
+    {
+      "LARS_QAN": "Z0002087",
+      "COURSE_NAME": "Information &amp; Taster session   all Floristry courses",
+      "ID": "C3KNG303",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "kensington & fairfield",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": null,
+      "COST_DESCRIPTION": "this is a free course ",
+      "DURATION": 2,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Evening"
+    },
+    {
+      "LARS_QAN": "Z0002101",
+      "COURSE_NAME": "COOKERY ON A BUDGET",
+      "ID": "A3ANF271",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "anfield",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "",
+      "DURATION": 6,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002105",
+      "COURSE_NAME": "ADVANCED SEWING WORKSHOP - TASTER",
+      "ID": "C3PNG006",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road night school",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 1,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Evening"
+    },
+    {
+      "LARS_QAN": "Z0002123",
+      "COURSE_NAME": "LEVEL 1 AWARD IN VOLUNTERRING - TASTER",
+      "ID": "K3GRA001",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Granby Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 1,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002108",
+      "COURSE_NAME": "TSATER: Local History Walks for Health &amp; Interest",
+      "ID": "H3PAR001",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "",
+      "DURATION": 1,
+      "DURATION_UNIT": "Days",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002102",
+      "COURSE_NAME": "GET FIT GET HEALTHY GET ACTIVE",
+      "ID": "G3CTH001",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Calderstones Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "",
+      "DURATION": 4,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0007847",
+      "COURSE_NAME": "ICT WITH LANGUAGE SUPPORT FUNTIONAL SKILLS ENTRY LEVEL",
+      "ID": "I2PAR003",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 30,
+      "COST_DESCRIPTION": "",
+      "DURATION": 10,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002117",
+      "COURSE_NAME": "A1 SPANISH BEGINNERS",
+      "ID": "L3KWB001",
+      "DELIVERY_MODE": "Work based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "",
+      "NATIONAL_DELIVERY": "No",
+      "SUB_REGION": "Liverpool",
+      "URL": "",
+      "COST": 10,
+      "COST_DESCRIPTION": "",
+      "DURATION": 6,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Undefined",
+      "ATTENDANCE_PATTERN": "Undefined"
+    },
+    {
+      "LARS_QAN": "Z0002117",
+      "COURSE_NAME": "A1 SPANISH BEGINNERS",
+      "ID": "L3KWB001",
+      "DELIVERY_MODE": "Work based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "",
+      "NATIONAL_DELIVERY": "No",
+      "SUB_REGION": "Liverpool",
+      "URL": "",
+      "COST": 10,
+      "COST_DESCRIPTION": "",
+      "DURATION": 6,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Undefined",
+      "ATTENDANCE_PATTERN": "Undefined"
+    },
+    {
+      "LARS_QAN": "Z0002117",
+      "COURSE_NAME": "A1 SPANISH BEGINNERS",
+      "ID": "L3KWB001",
+      "DELIVERY_MODE": "Work based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "",
+      "NATIONAL_DELIVERY": "No",
+      "SUB_REGION": "Liverpool",
+      "URL": "",
+      "COST": 10,
+      "COST_DESCRIPTION": "",
+      "DURATION": 6,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Undefined",
+      "ATTENDANCE_PATTERN": "Undefined"
+    },
+    {
+      "LARS_QAN": "Z0002117",
+      "COURSE_NAME": "A1 SPANISH BEGINNERS",
+      "ID": "L3KWB001",
+      "DELIVERY_MODE": "Work based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "",
+      "NATIONAL_DELIVERY": "No",
+      "SUB_REGION": "Liverpool",
+      "URL": "",
+      "COST": 10,
+      "COST_DESCRIPTION": "",
+      "DURATION": 6,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Undefined",
+      "ATTENDANCE_PATTERN": "Undefined"
+    },
+    {
+      "LARS_QAN": "Z0002117",
+      "COURSE_NAME": "A1 SPANISH BEGINNERS",
+      "ID": "L3KWB001",
+      "DELIVERY_MODE": "Work based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "",
+      "NATIONAL_DELIVERY": "No",
+      "SUB_REGION": "Liverpool",
+      "URL": "",
+      "COST": 10,
+      "COST_DESCRIPTION": "",
+      "DURATION": 6,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Undefined",
+      "ATTENDANCE_PATTERN": "Undefined"
+    },
+    {
+      "LARS_QAN": "Z0002117",
+      "COURSE_NAME": "A1 SPANISH BEGINNERS",
+      "ID": "L3KWB001",
+      "DELIVERY_MODE": "Work based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "",
+      "NATIONAL_DELIVERY": "No",
+      "SUB_REGION": "Liverpool",
+      "URL": "",
+      "COST": 10,
+      "COST_DESCRIPTION": "",
+      "DURATION": 6,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Undefined",
+      "ATTENDANCE_PATTERN": "Undefined"
+    },
+    {
+      "LARS_QAN": "Z0002117",
+      "COURSE_NAME": "C1 SPANISH - ADVANCED",
+      "ID": "L3MLG002",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "mossley hill",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "",
+      "DURATION": 6,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002117",
+      "COURSE_NAME": "C1 SPANISH - ADVANCED",
+      "ID": "L3MLG002",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "mossley hill",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "",
+      "DURATION": 6,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002117",
+      "COURSE_NAME": "C1 SPANISH - ADVANCED",
+      "ID": "L3MLG002",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "mossley hill",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "",
+      "DURATION": 6,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002092",
+      "COURSE_NAME": "Non regulated Community Learning provision, Transportation Operations and Maintenance",
+      "ID": "S2ALT012",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "http://liverpool.gov.uk/learninginliverpool",
+      "COST": 0,
+      "COST_DESCRIPTION": "NONE",
+      "DURATION": 8,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Evening"
+    },
+    {
+      "LARS_QAN": "50118201",
+      "COURSE_NAME": "MOVE ON MATHS",
+      "ID": "N2SSN204",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "norris green",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "",
+      "DURATION": 70,
+      "DURATION_UNIT": "Hours",
+      "STUDY_MODE": "Full time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "50118201",
+      "COURSE_NAME": "MOVE ON MATHS",
+      "ID": "N2SSN204",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "norris green",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "",
+      "DURATION": 70,
+      "DURATION_UNIT": "Hours",
+      "STUDY_MODE": "Full time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "50113173",
+      "COURSE_NAME": "ENGLISH FUNCTIONAL SKILLS E1 W/ LANGUAGE SUPPORT",
+      "ID": "N2GRA143",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "",
+      "DURATION": 70,
+      "DURATION_UNIT": "Hours",
+      "STUDY_MODE": "Full time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "JCP ESOL pre Introduction",
+      "ID": "01ELL107",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "wavertree",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "JCP ESOL pre Entry Introduction",
+      "ID": "01GRA170",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Granby Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "JCP ESOL pre Entry Introduction",
+      "ID": "01GRA320",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Granby Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "JCP ESOL pre Entry Introduction",
+      "ID": "01PAR122",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "PRE ENTRY ESOL (English Speaking Other Language) Introduction",
+      "ID": "O1GRA102",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "PRE ENTRY ESOL (English Speaking Other Language) Introduction",
+      "ID": "O1GRA102",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "PRE ENTRY ESOL (English Speaking Other Language) Introduction",
+      "ID": "O1GRA102",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "PRE ENTRY ESOL (English Speaking Other Language) Introduction",
+      "ID": "O1GRA102",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "JCP ESOL pre Entry Introduction",
+      "ID": "01PAR120",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "Pre Entry ESOL (english Speaking Other Language) Introduction",
+      "ID": "O1GRA101",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Granby Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "Pre Entry ESOL (english Speaking Other Language) Introduction",
+      "ID": "O1GRA101",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Granby Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "Pre Entry ESOL (english Speaking Other Language) Introduction",
+      "ID": "O1GRA101",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Granby Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "JCP ESOL Pre Entry Introduction",
+      "ID": "O1GRA111",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Granby Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "JCP ESOL Pre Entry Introduction",
+      "ID": "O1PAR122",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Daytime"
+    },
+    {
+      "LARS_QAN": "Z0002129",
+      "COURSE_NAME": "JCP ESOL Pre Entry Intro",
+      "ID": "O1PAR108",
+      "DELIVERY_MODE": "Classroom based",
+      "START_DATE": "",
+      "FLEXIBLE_START_DATE": "Yes",
+      "VENUE": "Park Road Adult Centre",
+      "NATIONAL_DELIVERY": "",
+      "SUB_REGION": "",
+      "URL": "",
+      "COST": 0,
+      "COST_DESCRIPTION": "FREE",
+      "DURATION": 36,
+      "DURATION_UNIT": "Weeks",
+      "STUDY_MODE": "Part time",
+      "ATTENDANCE_PATTERN": "Evening"
+    }
+   ]
+%}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Your course data</h1>
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body">Your data upload has errors, you must resolve these errors before all your course data can be published.</p>
+
+    <!-- <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          View list of courses
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">LARS/QAN</th>
+              <th scope="col" class="govuk-table__header">Course</th>
+              <th scope="col" class="govuk-table__header">Delivery</th>
+              <th scope="col" class="govuk-table__header">Start date</th>
+              <th scope="col" class="govuk-table__header">Venue</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            {% for item in items %}
+
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__cell govuk-body-s">{{ item.LARS_QAN }}</td>
+                <td class="govuk-table__cell govuk-body-s">{{item.COURSE_NAME}}</td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">{{item.DELIVERY_MODE}}</td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">
+                  {% if item.FLEXIBLE_START_DATE == "Yes" %}
+                    Flexible
+                  {% else %}
+                    {{item.START_DATE}}
+                  {% endif %}
+                </td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">{{item.VENUE}}</td>
+              </tr>
+
+            {% endfor %}
+          </tbody>
+        </table>
+
+      </div>
+    </details> -->
+
+      {{ govukWarningText({
+        text: "Your data upload of 40 courses has 6 errors.",
+        iconFallbackText: "Warning"
+      }) }}
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          View errors in your upload
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Row</th>
+              <th scope="col" class="govuk-table__header">LARS/QAN</th>
+              <th scope="col" class="govuk-table__header">Course</th>
+              <th scope="col" class="govuk-table__header">Error description</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+            {% set i = 0 %}
+            {% for item in items %}
+
+              {% set i = i + 1 %}
+              {% if item.STUDY_MODE == "Undefined" %}
+
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__cell govuk-body-s">{{ i }}</td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">{{ item.LARS_QAN }}</td>
+                <td class="govuk-table__cell govuk-body-s">{{item.COURSE_NAME}}</td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">
+                  Missing venue or sub region
+                </td>
+              </tr>
+              {% endif %}
+
+            {% endfor %}
+        </table>
+      </div>
+    </details>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-5">
+      What do you want to do?
+    </h2>
+
+    <form action="" method="post" class="form">
+      {{ govukRadios({
+        idPrefix: "course-validation",
+        name: "course-validation",
+        items: [
+          {
+            value: "resolve",
+            text: "Resolve the errors in Publish to the course directory"
+          },
+          {
+            value: "download",
+            text: "Download your file including errors"
+          },
+          {
+            value: "cancel",
+            text: "Cancel your upload"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        classes: "govuk-button--publish",
+        text: "Continue"
+      }) }}
+    </form>
+
+  </div>
+
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
+
+{% block pageScripts %}
+
+	<script>
+    $( "#areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--publish");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}

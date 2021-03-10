@@ -1,0 +1,615 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm4.html" %}
+
+{% block pageTitle %}
+  Data Management - Resolve errors in course details
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Resolve errors in course details</h1>
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            {% if (data['dm4courses'][data['row']-1].COURSE_NAME == "") %}
+              <li><a href="#course-details-coursename-error">Course name is missing</a></li>
+            {% endif %}
+            {% if (data['dm4courses'][data['row']-1].DELIVERY_MODE == "") %}
+              <li><a href="#course-details-type-error">Course type is missing</a></li>
+            {% endif %}
+            {% if (data['dm4courses'][data['row']-1].START_DATE == "") %}
+              <li><a href="#course-details-startdate-error">Start date is missing</a></li>
+            {% endif %}
+            {% if (data['dm4courses'][data['row']-1].VENUE == "") %}
+              <li><a href="#course-details-location-error">Course location is missing</a></li>
+            {% endif %}
+            {% if (data['dm4courses'][data['row']-1].COST == "") %}
+              <li><a href="#course-details-cost-error">Cost is missing</a></li>
+            {% endif %}
+            {% if (data['dm4courses'][data['row']-1].DURATION == "") or (data['dm4courses'][data['row']-1].DURATION_UNIT == "") %}
+              <li><a href="#course-details-duration-error">Duration is missing</a></li>
+            {% endif %}
+            {% if (data['dm4courses'][data['row']-1].STUDY_MODE == "") %}
+              <li><a href="#course-details-hours-error">Course hours is missing</a></li>
+            {% endif %}
+            {% if (data['dm4courses'][data['row']-1].ATTENDANCE_PATTERN == "") %}
+              <li><a href="#course-details-attendance-error">Attendance pattern is missing</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+
+      <form action="" method="post" class="form">
+
+        <!--  -->
+
+        {% if (data['dm4courses'][data['row']-1].COURSE_NAME == "") %}
+          {{ govukInput({
+            id: "course-details-coursename",
+            name: "course-details-coursename",
+            classes: "govuk-!-margin-bottom-3",
+            label: {
+              text: "Course name",
+              classes: "govuk-label--m"
+            },
+            errorMessage: {
+              text: "Enter a course name"
+            },
+            hint: {
+              html: 'The course name displayed on the National Career Service, <a href="javascript:preventDefault();">Find a course</a>.'
+            }
+          }) }}
+        {% else %}
+          {{ govukInput({
+            id: "course-details-coursename",
+            name: "course-details-coursename",
+            classes: "govuk-!-margin-bottom-3",
+            label: {
+              text: "Course name",
+              classes: "govuk-label--m"
+            },
+            hint: {
+              html: 'The course name displayed on the National Career Service, <a href="javascript:preventDefault();">Find a course</a>.'
+            },
+            attributes: {
+              disabled: "disabled"
+            },
+            value: data['dm4courses'][data['row']-1].COURSE_NAME
+          }) }}
+        {% endif %}
+
+        <!--  -->
+
+        {{ govukInput({
+          id: "course-details-reference",
+          name: "course-details-reference",
+          classes: "govuk-!-margin-bottom-3",
+          label: {
+            text: "Your reference",
+            classes: "govuk-label--m"
+          },
+          hint: {
+            text: "A reference that will help you identify this course in your internal systems. This will not be visible to learners."
+          },
+          attributes: {
+            disabled: "disabled"
+          },
+          value: data['dm4courses'][data['row']-1].ID
+        }) }}
+
+        <!--  -->
+
+        {% if (data['dm4courses'][data['row']-1].DELIVERY_MODE == "") %}
+          {{ govukRadios({
+            idPrefix: "course-details-type",
+            name: "course-details-type",
+            fieldset: {
+              legend: {
+                text: "Course type",
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            errorMessage: {
+              text: "Select a course type"
+            },
+            items: [
+              {
+                value: "Classroom based",
+                text: "Classroom based"
+              },
+              {
+                value: "Online",
+                text: "Online"
+              },
+              {
+                value: "Work based",
+                text: "Work based"
+              }
+            ]
+          }) }}
+        {% else %}
+          {{ govukRadios({
+            idPrefix: "course-details-type",
+            name: "course-details-type",
+            fieldset: {
+              legend: {
+                text: "Course type",
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            items: [
+              {
+                value: "Classroom based",
+                text: "Classroom based",
+                disabled: true,
+                checked: true
+              },
+              {
+                value: "Online",
+                text: "Online",
+                disabled: true
+              },
+              {
+                value: "Work based",
+                text: "Work based",
+                disabled: true
+              }
+            ]
+          }) }}
+        {% endif %}
+
+        <!--  -->
+
+        {% set dateHtml %}
+        {% if (data['dm4courses'][data['row']-1].START_DATE == "") %}
+
+          <div class="govuk-form-group govuk-form-group--error">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="course-details-startdate-date-hint">
+              <div id="course-details-startdate-date-hint" class="govuk-hint">
+                For example, 30 9 2021
+              </div>
+              <span id="course-details-startdate-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Enter a start date
+              </span>
+              <div class="govuk-date-input" id="course-details-startdate-date">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-details-startdate-date-day" name="course-details-startdate-date-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][0]}}"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-details-startdate-date-month" name="course-details-startdate-date-month" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][1]}}"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="course-details-startdate-date-year" name="course-details-startdate-date-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][2]}}"></div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        {% else %}
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="course-details-startdate-date-hint">
+              <div id="course-details-startdate-date-hint" class="govuk-hint">
+                For example, 30 9 2021
+              </div>
+              <div class="govuk-date-input" id="course-details-startdate-date">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-details-startdate-date-day" name="course-details-startdate-date-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][0]}}" disabled></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-details-startdate-date-month" name="course-details-startdate-date-month" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][1]}}" disabled></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="course-details-startdate-date-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="course-details-startdate-date-year" name="course-details-startdate-date-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['coursestartdate'][2]}}" disabled></div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        {% endif %}
+        {% endset -%}
+
+        {{ govukRadios({
+          idPrefix: "course-details-startdate",
+          name: "course-details-startdate",
+          fieldset: {
+            legend: {
+              text: "Start date",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "Defined start date",
+              text: "Defined start date",
+              conditional: {
+                html: dateHtml
+              },
+              disabled: true,
+              checked: true
+            },
+            {
+              value: "Flexible start date",
+              text: "Flexible start date",
+                disabled: true
+            }
+          ]
+        }) }}
+
+        <!--  -->
+
+        {% if (data['dm4courses'][data['row']-1].VENUE == "") %}
+          <div class="govuk-form-group govuk-form-group--error">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Course location
+                </h1>
+              </legend>
+              <span id="course-details-location-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Select the course locations that apply
+              </span>
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="course-details-location" name="course-details-location" type="checkbox" value="Presidency London College">
+                  <label class="govuk-label govuk-checkboxes__label" for="course-details-location">
+                    Presidency London College
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        {% else %}
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Course location
+                </h1>
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="course-details-location" name="course-details-location" type="checkbox" value="Presidency London College" checked="checked" disabled>
+                  <label class="govuk-label govuk-checkboxes__label" for="course-details-location">
+                    Presidency London College
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        {% endif %}
+        <!--p class="govuk-body govuk-!-margin-bottom-7">
+          <a href="javascript" class="govuk-link">Add another location</a>
+        </p-->
+
+        <!--  -->
+
+        <div class="govuk-form-group govuk-!-margin-bottom-7">
+          <label class="govuk-label govuk-label--m" for="course-details-webpage">
+            Course webpage
+          </label>
+          <span id="course-details-webpage-hint" class="govuk-hint">
+            The webpage for this course. For example, http://www.provider.com/coursename.
+          </span>
+          <input class="govuk-input" id="course-details-webpage" name="course-details-webpage" type="text" aria-describedby="course-details-webpage-hint" value="http://www.provider.com/coursename" disabled>
+        </div>
+
+        <!--  -->
+
+        {% if (data['dm4courses'][data['row']-1].COST == "") %}
+          {{ govukInput({
+            id: "course-details-cost",
+            name: "course-details-cost",
+            label: {
+              text: "Cost",
+              classes: "govuk-label--m"
+            },
+            errorMessage: {
+              text: "Enter a cost"
+            },
+            prefix: {
+              text: "£"
+            },
+            classes: "govuk-input--width-5",
+            hint: {
+              text: "Cost of the course to the learner."
+            },
+            value: data['dm4courses'][data['row']-1].COST
+          }) }}
+        {% else %}
+          {{ govukInput({
+            id: "course-details-cost",
+            name: "course-details-cost",
+            label: {
+              text: "Cost",
+              classes: "govuk-label--m"
+            },
+            prefix: {
+              text: "£"
+            },
+            classes: "govuk-input--width-5",
+            hint: {
+              text: "Cost of the course to the learner."
+            },
+            attributes: {
+              disabled: true
+            },
+            value: data['dm4courses'][data['row']-1].COST
+          }) }}
+        {% endif %}
+
+        <!--  -->
+        {{ govukCharacterCount({
+          name: "course-details-description",
+          id: "course-details-description",
+          maxlength: 255,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "Cost description"
+          },
+          hint: {
+            text: "A description of what the cost includes and additional costs to the learner. For example, assessment, exam fees or study materials."
+          },
+          attributes: {
+            disabled: true
+          },
+          value: data['dm4courses'][data['row']-1].COST_DESCRIPTION
+        }) }}
+
+        <!--  -->
+        {% if (data['dm4courses'][data['row']-1].DURATION == "") or (data['dm4courses'][data['row']-1].DURATION_UNIT == "") %}
+        
+          <div class="govuk-form-group govuk-form-group--error">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="course-details-duration-value">
+                Duration
+              </label>
+            </h1>
+            <span id="course-details-duration-error" class="govuk-error-message">
+              {% if data['dm4courses'][data['row']-1].DURATION == "" %}
+                <span class="govuk-visually-hidden">Error:</span> Enter a duration
+              {% elseif data['dm4courses'][data['row']-1].DURATION_UNIT == "" %}
+                <span class="govuk-visually-hidden">Error:</span> Select a duration
+              {% endif %}
+            </span>
+            <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-3" id="course-details-duration-value" name="course-details-duration-value" type="text" value="{{data['dm4courses'][data['row']-1].DURATION}}">
+            <select class="govuk-select" id="course-details-duration-unit" name="course-details-duration-unit">
+              <option value="" {% if data['dm4courses'][data['row']-1].DURATION_UNIT == "" %}selected="selected"{% endif %}>Select</option>
+              <option value="hours" {% if data['dm4courses'][data['row']-1].DURATION_UNIT == "hours" %}selected="selected"{% endif %}>Hours</option>
+              <option value="days" {% if data['dm4courses'][data['row']-1].DURATION_UNIT == "days" %}selected="selected"{% endif %}>Days</option>
+              <option value="weeks" {% if data['dm4courses'][data['row']-1].DURATION_UNIT == "weeks" %}selected="selected"{% endif %}>Weeks</option>
+              <option value="months" {% if data['dm4courses'][data['row']-1].DURATION_UNIT == "months" %}selected="selected"{% endif %}>Months</option>
+              <option value="years" {% if data['dm4courses'][data['row']-1].DURATION_UNIT == "years" %}selected="selected"{% endif %}>Years</option>
+            </select>
+          </div>
+
+        {% else %}
+        
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="course-details-duration-value">
+                Duration
+              </label>
+            </h1>
+            <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-3" id="course-details-duration-value" name="course-details-duration-value" type="text" value="{{data['dm4courses'][data['row']-1].DURATION}}" disabled>
+            <select class="govuk-select" id="course-details-duration-unit" name="course-details-duration-unit" disabled>
+              <option value="" {% if data['dm4courses'][data['row']-1].DURATION_UNIT == "" %}selected="selected"{% endif %}>Select</option>
+              <option value="Hours" {% if data['dm4courses'][data['row']-1].DURATION_UNIT == "Hours" %}selected="selected"{% endif %}>Hours</option>
+              <option value="Days" {% if data['dm4courses'][data['row']-1].DURATION_UNIT == "Days" %}selected="selected"{% endif %}>Days</option>
+              <option value="Weeks" {% if data['dm4courses'][data['row']-1].DURATION_UNIT == "Weeks" %}selected="selected"{% endif %}>Weeks</option>
+              <option value="Months" {% if data['dm4courses'][data['row']-1].DURATION_UNIT == "Months" %}selected="selected"{% endif %}>Months</option>
+              <option value="Years" {% if data['dm4courses'][data['row']-1].DURATION_UNIT == "Years" %}selected="selected"{% endif %}>Years</option>
+            </select>
+          </div>
+
+        {% endif %}
+
+        <!--  -->
+
+        {% if (data['dm4courses'][data['row']-1].STUDY_MODE == "") %}
+          {{ govukRadios({
+            idPrefix: "course-details-hours",
+            name: "course-details-hours",
+            fieldset: {
+              legend: {
+                text: "Course hours",
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            errorMessage: {
+              text: "Select course hours"
+            },
+            items: [
+              {
+                value: "Full time",
+                text: "Full time"
+              },
+              {
+                value: "Part time",
+                text: "Part time"
+              },
+              {
+                value: "Flexible",
+                text: "Flexible"
+              }
+            ]
+          }) }}
+        {% else %}
+          {{ govukRadios({
+            idPrefix: "course-details-hours",
+            name: "course-details-hours",
+            fieldset: {
+              legend: {
+                text: "Course hours",
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            items: [
+              {
+                value: "Full time",
+                text: "Full time",
+                disabled: true,
+                checked: true
+              },
+              {
+                value: "Part time",
+                text: "Part time",
+                disabled: true
+              },
+              {
+                value: "Flexible",
+                text: "Flexible",
+                disabled: true
+              }
+            ]
+          }) }}
+        {% endif %}
+
+        <!--  -->
+        {% if (data['dm4courses'][data['row']-1].ATTENDANCE_PATTERN == "") %}
+        
+          {{ govukRadios({
+            idPrefix: "course-details-attendance",
+            name: "course-details-attendance",
+            fieldset: {
+              legend: {
+                text: "Attendance pattern",
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            errorMessage: {
+              text: "Select an attendance pattern"
+            },
+            items: [
+              {
+                value: "Daytime",
+                text: "Daytime"
+              },
+              {
+                value: "Evening",
+                text: "Evening"
+              },
+              {
+                value: "Weekend",
+                text: "Weekend"
+              },
+              {
+                value: "Day/Block Release",
+                text: "Day/Block Release"
+              }
+            ]
+          }) }}
+
+        {% else %}
+
+          {{ govukRadios({
+            idPrefix: "course-details-attendance",
+            name: "course-details-attendance",
+            fieldset: {
+              legend: {
+                text: "Attendance pattern",
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            items: [
+              {
+                value: "Daytime",
+                text: "Daytime",
+                disabled: true,
+                checked: true
+              },
+              {
+                value: "Evening",
+                text: "Evening",
+                disabled: true
+              },
+              {
+                value: "Weekend",
+                text: "Weekend",
+                disabled: true
+              },
+              {
+                value: "Day/Block Release",
+                text: "Day/Block Release",
+                disabled: true
+              }
+            ]
+          }) }}
+
+        {% endif %}
+
+        <!--  -->
+        <!--h2 class="govuk-heading-m">
+          Publish your course changes
+        </h2>
+        <p class="govuk-body">
+          Your course details will be updated on Publish to the course directory and available to learners searching for learning and training opportunities on the National Careers Service.
+        <p-->
+
+        <input type="hidden" name="resolverow" id ="resolverow" value="{{ data['row'] }}">
+
+        {{ govukButton({
+          classes: "govuk-!-margin-top-5",
+          text: "Resolve errors"
+        }) }}
+
+        {{ govukButton({
+          classes: "govuk-button--secondary govuk-!-margin-left-3 govuk-!-margin-top-5",
+          href: "/" + version + "/data-upload/courses/resolve",
+          text: "Cancel"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

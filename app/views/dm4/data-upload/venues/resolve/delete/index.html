@@ -1,0 +1,156 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm4.html" %}
+
+{% block pageTitle %}
+  Data Management - Resolve errors in venue data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Delete unpublished venue</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Row</th>
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header">Address</th>
+          <th scope="col" class="govuk-table__header">Postcode</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+        {% set i = 0 %}
+        {% for venues in data['dm4venues'] %}
+          {% set i = i + 1 %}
+          
+          {% if 
+              (venues.NAME == "") or
+              (venues.ADDRESS == "") or
+              (venues.POSTCODE == "")
+          %}
+              <tr class="govuk-table__row"
+                {% if data['dm4venues-deleted'] %}
+                  {% if i in data['dm4venues-deleted'] %}
+                   style="display: none"
+                  {% endif %}
+                {% endif %}
+                {% if data['dm4venues-resolved'] %}
+                  {% if i in data['dm4venues-resolved'] %}
+                   style="display: none"
+                  {% endif %}
+                {% endif %}
+              >
+                <td scope="row" class="govuk-table__cell govuk-body-s">{{ i }}</td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">
+                  {% if venues.NAME %}
+                    {{ venues.NAME }}
+                  {% else %}
+                    <span style="color: #d4351c;">Missing</span>
+                  {% endif %}
+                </td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">
+                  {% if venues.ADDRESS1 %}
+                    {{ venues.ADDRESS1 }}{% if venues.ADDRESS2 %}, {% endif %}
+                    {{ venues.ADDRESS2 }}{% if venues.TOWNCITY %}, {% endif %}
+                    {{ venues.TOWNCITY }}{% if venues.COUNTY %}, {% endif %}
+                    {{ venues.COUNTY }}
+                  {% else %}
+                    <span style="color: #d4351c;">Missing</span>
+                  {% endif %}
+                </td>
+                <td scope="row" class="govuk-table__cell govuk-body-s">
+                  {% if venues.POSTCODE %}
+                    {{ venues.POSTCODE }}
+                  {% else %}
+                    <span style="color: #d4351c;">Missing</span>
+                  {% endif %}
+                </td>
+              </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Are you sure?
+          </h2>
+        </legend>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="areyousure" name="areyousure" type="checkbox" value="delete">
+            <label class="govuk-label govuk-checkboxes__label" for="areyousure">
+              Yes, I want to delete this unpublished venue
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <form action="" method="post">
+
+      <input type="hidden" name="deleterow" id ="deleterow" value="{{ data['row'] }}">
+
+      {{ govukButton({
+        text: "Delete",
+        disabled: true,
+        classes: "govuk-button--warning govuk-!-margin-right-5"
+      }) }}
+
+      {{ govukButton({
+        href: "/" + version + "/data-upload/venues/resolve",
+        text: "Cancel",
+        classes: "govuk-button--secondary"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
+
+{% block pageScripts %}
+
+	<script>
+    $( "#areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--warning");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}

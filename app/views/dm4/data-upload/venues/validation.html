@@ -1,0 +1,170 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm4.html" %}
+
+{% block pageTitle %}
+  Data Management - Publish venue data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Venue data errors</h1>
+
+    {% if data['dm4venues-deleted'] or data['dm4venues-resolved'] %}
+    {% else %}
+      <!-- only show if file has just been uploaded -->
+      <p class="govuk-body">Your venue data has been uploaded.</p>
+    {% endif %}
+    <p class="govuk-body">The unpublished venue data has {{ data['dm4venues-errorcount'] - ((data['dm4venues-deleted'] | length) + (data['dm4venues-resolved'] | length)) }} errors. 
+      You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your venues including the errors in a CSV file</a>.</p>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          View errors in your upload
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Name</th>
+              <th scope="col" class="govuk-table__header">Address</th>
+              <th scope="col" class="govuk-table__header">Postcode</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+            {% set i = 0 %}
+            {% for venues in data['dm4venues'] %}
+              {% set i = i + 1 %}
+              
+              {% if 
+                  (venues.NAME == "") or
+                  (venues.ADDRESS == "") or
+                  (venues.POSTCODE == "")
+              %}
+                  <tr class="govuk-table__row"
+                    {% if data['dm4venues-deleted'] %}
+                      {% if i in data['dm4venues-deleted'] %}
+                      style="display: none"
+                      {% endif %}
+                    {% endif %}
+                    {% if data['dm4venues-resolved'] %}
+                      {% if i in data['dm4venues-resolved'] %}
+                      style="display: none"
+                      {% endif %}
+                    {% endif %}
+                  >
+                    <td scope="row" class="govuk-table__cell govuk-body-s">
+                      {% if venues.NAME %}
+                        {{ venues.NAME }}
+                      {% else %}
+                        <span style="color: #d4351c;">Missing</span>
+                      {% endif %}
+                    </td>
+                    <td scope="row" class="govuk-table__cell govuk-body-s">
+                      {% if venues.ADDRESS1 %}
+                        {{ venues.ADDRESS1 }}{% if venues.ADDRESS2 %}, {% endif %}
+                        {{ venues.ADDRESS2 }}{% if venues.TOWNCITY %}, {% endif %}
+                        {{ venues.TOWNCITY }}{% if venues.COUNTY %}, {% endif %}
+                        {{ venues.COUNTY }}
+                      {% else %}
+                        <span style="color: #d4351c;">Missing</span>
+                      {% endif %}
+                    </td>
+                    <td scope="row" class="govuk-table__cell govuk-body-s">
+                      {% if venues.POSTCODE %}
+                        {{ venues.POSTCODE }}
+                      {% else %}
+                        <span style="color: #d4351c;">Missing</span>
+                      {% endif %}
+                    </td>
+                  </tr>
+              {% endif %}
+            {% endfor %}
+
+          </tbody>
+        </table>
+        
+      </div>
+    </details>
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-5">
+      What do you want to do?
+    </h2>
+
+    <form action="" method="post" class="form">
+      {{ govukRadios({
+        idPrefix: "venue-validation",
+        name: "venue-validation",
+        items: [
+          {
+            value: "resolve",
+            text: "Resolve the errors in Publish to the course directory"
+          },
+          {
+            value: "upload",
+            text: "Upload a new venue data file"
+          },
+          {
+            value: "delete",
+            text: "Delete unpublished venue data"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        classes: "govuk-button--publish",
+        text: "Continue"
+      }) }}
+    </form>
+
+  </div>
+
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
+
+{% block pageScripts %}
+
+	<script>
+    $( "#areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--publish");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}
