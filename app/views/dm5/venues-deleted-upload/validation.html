@@ -1,0 +1,192 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Management - Publish venue data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Live venues cannot be deleted</h1>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <p class="govuk-body">Your uploaded venue data is missing 2 venues that are in use.</p>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          View venues missing from your upload
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Ref</th>
+              <th scope="col" class="govuk-table__header">Name</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-two-thirds">Courses</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell govuk-body-s">WMH01</td>
+              <td scope="row" class="govuk-table__cell govuk-body-s">Whilton Mill Hall</td>
+              <td scope="row" class="govuk-table__cell govuk-body-s">
+                {{ govukDetails({
+                  classes: "govuk-!-margin-bottom-0",
+                  summaryText: "3 associated courses",
+                  html: '
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header">Ref</th>
+                          <th scope="col" class="govuk-table__header">Name</th>
+                          <th scope="col" class="govuk-table__header">Start date</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td scope="row" class="govuk-table__cell govuk-body-s">BTEC-BUS-F</td>
+                          <td scope="row" class="govuk-table__cell govuk-body-s">BTEC Diploma for Business Administrators</td>
+                          <td scope="row" class="govuk-table__cell govuk-body-s">Flexible</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td scope="row" class="govuk-table__cell govuk-body-s">DIP-EYP-F</td>
+                          <td scope="row" class="govuk-table__cell govuk-body-s">Diploma for the Early Years Practitioner</td>
+                          <td scope="row" class="govuk-table__cell govuk-body-s">Flexible</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td scope="row" class="govuk-table__cell govuk-body-s">ELEC-1221</td>
+                          <td scope="row" class="govuk-table__cell govuk-body-s">Electrotechnical Qualification</td>
+                          <td scope="row" class="govuk-table__cell govuk-body-s">24 Dec 2021</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  '
+                }) }}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell govuk-body-s">KNU01</td>
+              <td scope="row" class="govuk-table__cell govuk-body-s">Knuston Hall</td>
+              <td scope="row" class="govuk-table__cell govuk-body-s">
+                {{ govukDetails({
+                  classes: "govuk-!-margin-bottom-0",
+                  summaryText: "1 associated course",
+                  html: '
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header">Ref</th>
+                          <th scope="col" class="govuk-table__header">Name</th>
+                          <th scope="col" class="govuk-table__header">Start date</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td scope="row" class="govuk-table__cell govuk-body-s">BTEC-BUS21</td>
+                          <td scope="row" class="govuk-table__cell govuk-body-s">BTEC Diploma for Business Administrators</td>
+                          <td scope="row" class="govuk-table__cell govuk-body-s">30 Sep 2021</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  '
+                }) }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </details>
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-5">
+      What do you want to do?
+    </h2>
+
+    <form action="" method="post" class="form">
+      {{ govukRadios({
+        idPrefix: "venue-validation",
+        name: "venue-validation",
+        items: [
+        {
+          value: "append",
+          text: "Update existing and append new venues"
+        },
+          {
+            value: "upload",
+            text: "Upload a new venue data file"
+          },
+          {
+            value: "cancel",
+            text: "Cancel this upload"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        classes: "govuk-button--disabled",
+        text: "Continue"
+      }) }}
+    </form>
+
+  </div>
+
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
+
+{% block pageScripts %}
+
+	<script>
+    $( "#areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--publish");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}

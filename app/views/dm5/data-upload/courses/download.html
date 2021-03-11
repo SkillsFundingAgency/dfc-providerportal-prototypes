@@ -1,0 +1,57 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Management - Course data upload cancelled
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      classes: "govuk-!-margin-bottom-5",
+      titleText: "Data file with errors downloaded"
+    }) }}
+
+    <!--p class="govuk-body">The non-published courses that were uploaded have now been deleted.</p-->
+
+    <h2 class="govuk-heading-m">What next?</h2>
+    <ul class="govuk-list">
+      <li><a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit courses</a></li>
+      <li><a class="govuk-link" href="/{{version}}/data-upload">Back to data upload</a></li>
+      <li><a class="govuk-link" href="/{{version}}">Back to the home screen</a></li>
+    </ul>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <!--h2 class="govuk-heading-m">Useful information</h2-->
+  </div>
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

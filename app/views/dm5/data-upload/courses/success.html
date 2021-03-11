@@ -1,0 +1,58 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Management - Course data published
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      classes: "govuk-!-margin-bottom-5",
+      titleText: data['dm5courses-published'] + " courses have been published"
+    }) }}
+
+    <p class="govuk-body">Your courses are available to learners searching for learning and training opportunities on the National Careers Service.</p>
+    <p class="govuk-body">You can <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">view your published courses (opens in new window or tab)</a> to see how they are viewed by learners.</p>
+
+    <h2 class="govuk-heading-m">What next?</h2>
+    <ul class="govuk-list">
+      <li><a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit courses</a></li>
+      <li><a class="govuk-link" href="/{{version}}/data-upload">Data upload</a></li>
+      <li><a class="govuk-link" href="/{{version}}">Back to the home screen</a></li>
+    </ul>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <!--h2 class="govuk-heading-m">Useful information</h2-->
+  </div>
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

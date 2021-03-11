@@ -1,0 +1,183 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data  Management
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Data Upload</h1>
+  </div>
+</div>
+
+<p class="govuk-body-m">You can upload a CSV file to update your data in Publish to the course directory.</p>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-2 homescreen-row">
+
+  <div class="govuk-grid-column-one-third">
+
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-m">Courses</h2>
+        <p class="govuk-body-s">You have <strong>
+          {% if data['dm5courses-published'] %}
+            {{ data['dm5courses-published'] }}
+          {% else %}
+            10
+          {% endif %}
+        </strong> published courses</p>
+
+        {% if data['dm5courses-resolved'] %}
+        <p class="govuk-body-s">You have <strong>
+          {{ (data['dm5courses'] | length) - (data['dm5courses-deleted'] | length)}}
+        </strong> unpublished courses</p>
+        {% endif %}
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          {% if data['dm5courses-resolved'] %}
+            {% if (data['dm5courses-errorcount'] - ((data['dm5courses-deleted'] | length) + (data['dm5courses-resolved'] | length))) > 0 %}
+              <li>
+                <a class="govuk-link" href="/{{version}}/data-upload/courses/resolve">Your unpublished courses</a>
+              </li>
+            {% else %}
+              <li>
+                <a class="govuk-link" href="/{{version}}/data-upload/courses/checkandpublish">Your unpublished courses</a>
+              </li>
+            {% endif %}
+          {% endif %}
+          <li>
+            <a class="govuk-link" href="/{{version}}/data-upload/courses">Upload new course data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published course data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download course data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-m">Venues</h2>
+        <p class="govuk-body-s">You have <strong>
+          {% if data['dm5venues-published'] %}
+            {{ data['dm5venues-published'] }}
+          {% else %}
+            3
+          {% endif %}
+        </strong> published venues</p>
+
+        {% if data['dm5venues-resolved'] %}
+        <p class="govuk-body-s">You have <strong>
+          {{ (data['dm5venues'] | length) - (data['dm5venues-deleted'] | length)}}
+        </strong> unpublished venues</p>
+        {% endif %}
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          {% if data['dm5venues-resolved'] %}
+            {% if (data['dm5venues-errorcount'] - ((data['dm5venues-deleted'] | length) + (data['dm5venues-resolved'] | length))) > 0 %}
+              <li>
+                <a class="govuk-link" href="/{{version}}/data-upload/venues/resolve">Your unpublished venues</a>
+              </li>
+            {% else %}
+              <li>
+                <a class="govuk-link" href="/{{version}}/data-upload/venues/checkandpublish">Your unpublished venues</a>
+              </li>
+            {% endif %}
+          {% endif %}
+          <li>
+            <a class="govuk-link" href="/{{version}}/data-upload/venues">Upload new venue data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published venue data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download venue data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+    <!--div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-m">Apprenticeships</h2>
+        <p class="govuk-body-s">You have <strong>5</strong> apprenticeships</p>
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="/{{version}}/data-upload/apprenticeships">Upload your apprenticeship data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published apprenticeship data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download apprenticeship data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div-->
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    <!--div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-m">T Levels</h2>
+        <p class="govuk-body-s">You have <strong>0</strong> T Levels</p>
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Upload your T Level data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published T Level data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download T Level data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div-->
+
+  </div>
+
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

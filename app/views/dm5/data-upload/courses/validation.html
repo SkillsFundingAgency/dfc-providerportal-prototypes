@@ -1,0 +1,187 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Management - Publish course data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Course data errors</h1>
+
+    {% if data['dm5courses-deleted'] or data['dm5courses-resolved'] %}
+    {% else %}
+      <!-- only show if file has just been uploaded -->
+      <p class="govuk-body">Your course data has been uploaded.</p>
+    {% endif %}
+    <p class="govuk-body">The unpublished course data has {{ data['dm5courses-errorcount'] - ((data['dm5courses-deleted'] | length) + (data['dm5courses-resolved'] | length)) }} errors. 
+      You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your courses including the errors in a CSV file</a>.</p>
+
+  </div>
+
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          View errors in your upload
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Row</th>
+              <th scope="col" class="govuk-table__header">Ref</th>
+              <th scope="col" class="govuk-table__header">LARS/QAN</th>
+              <th scope="col" class="govuk-table__header">Course</th>
+              <th scope="col" class="govuk-table__header">Start date</th>
+              <th scope="col" class="govuk-table__header">Venue</th>
+              <th scope="col" class="govuk-table__header">Error(s)</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+            {% set i = 0 %}
+            {% for courses in data['dm5courses'] %}
+              {% set i = i + 1 %}
+              
+              {% if 
+                  (courses.COURSE_NAME == "") or
+                  (courses.DELIVERY_MODE == "") or
+                  (courses.START_DATE == "") or
+                  (courses.VENUE == "") or
+                  (courses.COST == "") or
+                  (courses.DURATION == "") or
+                  (courses.DURATION_UNIT == "") or
+                  (courses.STUDY_MODE == "") or
+                  (courses.ATTENDANCE_PATTERN == "")
+              %}
+                  <tr class="govuk-table__row"
+                    {% if data['dm5courses-deleted'] %}
+                      {% if i in data['dm5courses-deleted'] %}
+                      style="display: none"
+                      {% endif %}
+                    {% endif %}
+                    {% if data['dm5courses-resolved'] %}
+                      {% if i in data['dm5courses-resolved'] %}
+                      style="display: none"
+                      {% endif %}
+                    {% endif %}
+                  >
+                    <td scope="row" class="govuk-table__cell govuk-body-s">{{ i }}</td>
+                    <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.ID }}</td>
+                    <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.LARS_QAN }}</td>
+                    <td class="govuk-table__cell govuk-body-s">{{courses.COURSE_NAME}}</td>
+                    <td class="govuk-table__cell govuk-body-s">
+                    {% if not courses.START_DATE == "" %}
+                      {{courses.START_DATE}}
+                    {% endif %}
+                    </td>
+                    <td class="govuk-table__cell govuk-body-s">{{courses.VENUE}}</td>
+                    <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">
+                      {% if (courses.COURSE_NAME == "") %} Course name {% endif %}
+                      {% if (courses.DELIVERY_MODE == "") %} Course type {% endif %}
+                      {% if (courses.START_DATE == "") %} Start date {% endif %}
+                      {% if (courses.VENUE == "") %} Course location {% endif %}
+                      {% if (courses.COST == "") %} Cost {% endif %}
+                      {% if (courses.DURATION == "") or (courses.DURATION_UNIT == "") %} Duration {% endif %}
+                      {% if (courses.STUDY_MODE == "") %} Course hours {% endif %}
+                      {% if (courses.ATTENDANCE_PATTERN == "") %} Attendance pattern {% endif %}
+                    </td>
+                  </tr>
+              {% endif %}
+            {% endfor %}
+
+          </tbody>
+        </table>
+        
+      </div>
+    </details>
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-5">
+      What do you want to do?
+    </h2>
+
+    <form action="" method="post" class="form">
+      {{ govukRadios({
+        idPrefix: "course-validation",
+        name: "course-validation",
+        items: [
+          {
+            value: "resolve",
+            text: "Resolve the errors in Publish to the course directory"
+          },
+          {
+            value: "upload",
+            text: "Upload a new course data file"
+          },
+          {
+            value: "delete",
+            text: "Delete unpublished course data"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        classes: "govuk-button--publish",
+        text: "Continue"
+      }) }}
+    </form>
+
+  </div>
+
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
+
+{% block pageScripts %}
+
+	<script>
+    $( "#areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--publish");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}
