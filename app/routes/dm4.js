@@ -222,6 +222,7 @@ module.exports = function (router) {
 
     router.post('/'+v+'/data-upload/venues/checkandpublish', function (req, res) {
         req.session.data['dm4venues-published'] = parseInt(req.session.data['dm4venues'].length) - parseInt(req.session.data['dm4venues-deleted'].length);
+        delete req.session.data['dm4venues-errorcount'];
         delete req.session.data['dm4venues-deleted'];
         delete req.session.data['dm4venues-resolved'];
         res.redirect('/'+v+'/data-upload/venues/success');
