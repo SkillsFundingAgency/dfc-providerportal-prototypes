@@ -45,13 +45,25 @@ if (document.getElementById('dm3-loader--apprenticeships')) {
     setTimeout(function() {$('#loading-message').html("Processing data");}, 2500);
     setTimeout(function() {window.location.href = "/dm4/data-upload/courses/goto-validation";}, 6000);
   }
-  if (document.getElementById('dm4-loader--apprenticeships')) {
-    setTimeout(function() {$('#loading-message').html("Processing data");}, 2500);
-    setTimeout(function() {window.location.href = "/dm4/data-upload/apprenticeships/goto-validation";}, 6000);
-  }
   if (document.getElementById('dm4-loader--venues')) {
     setTimeout(function() {$('#loading-message').html("Processing data");}, 1500);
     setTimeout(function() {window.location.href = "/dm4/data-upload/venues/goto-validation";}, 3000);
+  }
+  
+
+// DM v5 loaders
+
+  if (document.getElementById('dm5-loader--courses')) {
+    setTimeout(function() {$('#loading-message').html("Processing data");}, 2500);
+    setTimeout(function() {window.location.href = "/dm5/data-upload/courses/goto-validation";}, 6000);
+  }
+  if (document.getElementById('dm5-loader--venues')) {
+    setTimeout(function() {$('#loading-message').html("Processing data");}, 1500);
+    setTimeout(function() {window.location.href = "/dm5/data-upload/venues/goto-validation";}, 3000);
+  }
+  if (document.getElementById('dm5-loader--venues-deleted')) {
+    setTimeout(function() {$('#loading-message').html("Processing data");}, 1500);
+    setTimeout(function() {window.location.href = "/dm5/venues-deleted-upload/goto-validation";}, 3000);
   }
   
 

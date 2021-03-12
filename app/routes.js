@@ -37,6 +37,7 @@ require('./routes/v2.js')(router);
 
 require('./routes/dm3.js')(router);
 require('./routes/dm4.js')(router);
+require('./routes/dm5.js')(router);
 
 
 module.exports = router

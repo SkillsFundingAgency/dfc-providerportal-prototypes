@@ -1,0 +1,101 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Management - Cancel course data upload
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Delete unpublished course data</h1>
+
+    <!--p class="govuk-body govuk-!-margin-bottom-7">The unpublished courses from your data upload will be deleted.</p-->
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Are you sure?
+          </h2>
+        </legend>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="areyousure" name="areyousure" type="checkbox" value="delete">
+            <label class="govuk-label govuk-checkboxes__label" for="areyousure">
+              Yes, I want to delete unpublished course data
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <form action="" method="post">
+
+      <input type="hidden" name="deleterow" id ="deleterow" value="{{ data['row'] }}">
+
+      {{ govukButton({
+        href: "/" + version + "/data-upload/courses/delete/success",
+        text: "Delete",
+        disabled: true,
+        classes: "govuk-button--warning govuk-!-margin-right-5"
+      }) }}
+
+      {{ govukButton({
+        href: "/" + version + "/data-upload/courses/validation",
+        text: "Cancel",
+        classes: "govuk-button--secondary"
+      }) }}
+
+    </form>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <!--h2 class="govuk-heading-m">Useful information</h2-->
+  </div>
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
+
+{% block pageScripts %}
+
+	<script>
+    $( "#areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--warning");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}
