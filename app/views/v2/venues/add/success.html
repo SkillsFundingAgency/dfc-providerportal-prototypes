@@ -1,8 +1,8 @@
-{% set navActive = 'locations' %}
+{% set navActive = 'venues' %}
 {% extends "layouts/layout-v2.html" %}
 
 {% block pageTitle %}
-  Locations
+  Add a venue
 {% endblock %}
 
 {% block header %}
@@ -27,7 +27,7 @@
 
       {{ govukPanel({
         classes: "govuk-!-margin-bottom-9",
-        titleText: "Venue added",
+        titleText: "Your venue has been added",
         text: data["venue-add-name"]
       }) }}
 

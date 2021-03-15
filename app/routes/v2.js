@@ -87,7 +87,7 @@ module.exports = function (router) {
     })
 
     router.post('/'+v+'/apprenticeships/add/delivery', function (req, res) {
-        if (req.session.data['apprenticeship-delivery'] == "At one of your locations"){
+        if (req.session.data['apprenticeship-delivery'] == "At one of your venues"){
             res.redirect('/'+v+'/apprenticeships/add/delivery-venue');
         } else if (req.session.data['apprenticeship-delivery'] == "At an employer's address"){
             res.redirect('/'+v+'/apprenticeships/add/delivery-employer-location');
@@ -108,7 +108,7 @@ module.exports = function (router) {
         }
     })
     
-    router.post('/'+v+'/apprenticeships/add/delivery-employer-regions', function (req, res) {
+    router.post('/'+v+'/apprenticeships/add/delivery-employer-region', function (req, res) {
         res.redirect('/'+v+'/apprenticeships/add/check-publish');
     })
     

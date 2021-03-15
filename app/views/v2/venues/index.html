@@ -1,8 +1,8 @@
-{% set navActive = 'locations' %}
+{% set navActive = 'venues' %}
 {% extends "layouts/layout-v2.html" %}
 
 {% block pageTitle %}
-  Locations
+  Venues
 {% endblock %}
 
 {% block header %}
@@ -28,17 +28,6 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-xl">Your venues</h1>
-
-    {{ govukButton({
-      href: "/" + version + "/venues/add",
-      text: "Add new venue"
-    }) }}
-
-  </div>
-</div>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
 
     <table class="govuk-table">
       <thead class="govuk-table__head">
@@ -71,10 +60,13 @@
           <td class="govuk-table__cell nowrap"><a href="/{{version}}/venues/view">View</a></td>
           <td class="govuk-table__cell nowrap"><a href="/{{version}}/venues/delete/error">Delete</a></td>
         </tr>
-
-
       </tbody>
     </table>
+
+    {{ govukButton({
+      href: "/" + version + "/venues/add",
+      text: "Add a venue"
+    }) }}
 
   </div>
 </div>
