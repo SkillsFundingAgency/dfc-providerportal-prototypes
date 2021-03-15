@@ -1,8 +1,8 @@
-{% set navActive = 'locations' %}
+{% set navActive = 'venues' %}
 {% extends "layouts/layout-v2.html" %}
 
 {% block pageTitle %}
-  Locations
+  Add a venue
 {% endblock %}
 
 {% block header %}
@@ -35,7 +35,7 @@
           id: "venue-add-line-1",
           name: "venue-add-line-1",
           label: {
-            html: 'Building and street <span class="govuk-visually-hidden">line 1 of 2</span>'
+            text: 'Address line 1'
           },
           value: "",
           autocomplete: "venue-add-line1"
@@ -45,7 +45,7 @@
           id: "venue-add-line-2",
           name: "venue-add-line-2",
           label: {
-            html: '<span class="govuk-visually-hidden">Building and street line 2 of 2</span>'
+            text: 'Address line 2'
           },
           value: "",
           autocomplete: "venue-add-line2"
