@@ -37,6 +37,9 @@
         </h2>
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
+            {% if (data['dm5courses'][data['row']-1].WHO_IS_THIS_COURSE_FOR == "") %}
+              <li><a href="#course-details-coursename-error">Who is this course for is missing</a></li>
+            {% endif %}
             {% if (data['dm5courses'][data['row']-1].COURSE_NAME == "") %}
               <li><a href="#course-details-coursename-error">Course name is missing</a></li>
             {% endif %}
@@ -66,6 +69,45 @@
       </div>
 
       <form action="" method="post" class="form">
+
+        <!--  -->
+
+        {% if (data['dm5courses'][data['row']-1].WHO_IS_THIS_COURSE_FOR == "") %}
+          {{ govukCharacterCount({
+            name: "course-desc-whothiscourseisfor",
+            id: "course-desc-whothiscourseisfor",
+            maxlength: 2000,
+            rows: 7,
+            label: {
+              classes: "govuk-label--m",
+              text: "Who this course is for"
+            },
+            hint: {
+              text: "Information that will help the learner decide whether this course is suitable for them, the learning experience and opportunities they can expect from the course."
+            },
+            errorMessage: {
+              text: "Enter details about who this course is for"
+            }
+          }) }}
+        {% else %}
+          {{ govukCharacterCount({
+            name: "course-desc-whothiscourseisfor",
+            id: "course-desc-whothiscourseisfor",
+            maxlength: 2000,
+            rows: 7,
+            label: {
+              classes: "govuk-label--m",
+              text: "Who this course is for"
+            },
+            hint: {
+              text: "Information that will help the learner decide whether this course is suitable for them, the learning experience and opportunities they can expect from the course."
+            },
+            attributes: {
+              disabled: "disabled"
+            },
+            value: data['dm5courses'][data['row']-1].WHO_IS_THIS_COURSE_FOR
+          }) }}
+        {% endif %}
 
         <!--  -->
 

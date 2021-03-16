@@ -15,12 +15,12 @@ module.exports = function (router) {
         router.post('/'+v+'/data-upload/courses/validation', function (req, res) {
             if (req.session.data['course-validation'] == "resolve"){
                 res.redirect('/'+v+'/data-upload/courses/resolve');
-            } else if (req.session.data['course-validation'] == "upload"){
-                res.redirect('/'+v+'/data-upload/courses');
-            } else if (req.session.data['course-validation'] == "delete"){
-                delete req.session.data[v+'courses-deleted'];
-                delete req.session.data[v+'courses-resolved'];
-                res.redirect('/'+v+'/data-upload/courses/delete');
+            } else if (req.session.data['course-validation'] == "download"){
+                res.redirect('/'+v+'/data-upload/courses/download');
+            } else if (req.session.data['course-validation'] == "cancel"){
+                //delete req.session.data[v+'courses-deleted'];
+                //delete req.session.data[v+'courses-resolved'];
+                res.redirect('/'+v+'/data-upload/courses/cancel');
             }
         })
 
