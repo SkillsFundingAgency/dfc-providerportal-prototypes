@@ -63,6 +63,7 @@
           {% set i = i + 1 %}
           
           {% if 
+              (courses.WHO_IS_THIS_COURSE_FOR == "") or
               (courses.COURSE_NAME == "") or
               (courses.DELIVERY_MODE == "") or
               (courses.START_DATE == "") or
@@ -95,14 +96,59 @@
                 {% endif %}
                 </td>
                 <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">
-                  {% if (courses.COURSE_NAME == "") %} Course name {% endif %}
-                  {% if (courses.DELIVERY_MODE == "") %} Course type {% endif %}
-                  {% if (courses.START_DATE == "") %} Start date {% endif %}
-                  {% if (courses.VENUE == "") %} Course location {% endif %}
-                  {% if (courses.COST == "") %} Cost {% endif %}
-                  {% if (courses.DURATION == "") or (courses.DURATION_UNIT == "") %} Duration {% endif %}
-                  {% if (courses.STUDY_MODE == "") %} Course hours {% endif %}
-                  {% if (courses.ATTENDANCE_PATTERN == "") %} Attendance pattern {% endif %}
+                  {% set allerrors = "" %}
+                  {% if (courses.WHO_IS_THIS_COURSE_FOR == "") %} 
+                    {% set allerrors = allerrors + "Who is this course for" %}
+                  {% endif %}
+                  {% if (courses.COURSE_NAME == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Course name" %}
+                  {% endif %}
+                  {% if (courses.DELIVERY_MODE == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Course type" %}
+                  {% endif %}
+                  {% if (courses.START_DATE == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Start date" %}
+                  {% endif %}
+                  {% if (courses.VENUE == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Venue" %}
+                  {% endif %}
+                  {% if (courses.COST == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Cost" %}
+                  {% endif %}
+                  {% if (courses.DURATION == "") or (courses.DURATION_UNIT == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Duration" %}
+                  {% endif %}
+                  {% if (courses.STUDY_MODE == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Course hours" %}
+                  {% endif %}
+                  {% if (courses.ATTENDANCE_PATTERN == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Attendance pattern" %}
+                  {% endif %}
+                  {{ allerrors }}
                 </td>
                 <td scope="row" class="govuk-table__cell govuk-body-s">
                   <a href="/{{version}}/data-upload/courses/resolve/showcourse?row={{ i }}" class="govuk-link">Resolve</a>

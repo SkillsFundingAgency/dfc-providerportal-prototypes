@@ -39,7 +39,7 @@
           <th scope="col" class="govuk-table__header">LARS/QAN</th>
           <th scope="col" class="govuk-table__header">Course</th>
           <th scope="col" class="govuk-table__header">Start date</th>
-          <th scope="col" class="govuk-table__header">Error</th>
+          <th scope="col" class="govuk-table__header">Error(s)</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
@@ -59,15 +59,59 @@
             {% endif %}
             </td>
             <td scope="row" class="govuk-table__cell govuk-body-s" style="color: 	#d4351c;">
-              {% if (courses.WHO_IS_THIS_COURSE_FOR == "") %} Course information  {% endif %}
-              {% if (courses.COURSE_NAME == "") %} Course name  {% endif %}
-              {% if (courses.DELIVERY_MODE == "") %} Delivery mode  {% endif %}
-              {% if (courses.START_DATE == "") %} Start date  {% endif %}
-              {% if (courses.VENUE == "") %} Venue  {% endif %}
-              {% if (courses.COST == "") %} Cost  {% endif %}
-              {% if (courses.DURATION == "") or (courses.DURATION_UNIT == "") %} Duration  {% endif %}
-              {% if (courses.STUDY_MODE == "") %} Study mode  {% endif %}
-              {% if (courses.ATTENDANCE_PATTERN == "") %} Attendance pattern  {% endif %}
+                  {% set allerrors = "" %}
+                  {% if (courses.WHO_IS_THIS_COURSE_FOR == "") %} 
+                    {% set allerrors = allerrors + "Who is this course for" %}
+                  {% endif %}
+                  {% if (courses.COURSE_NAME == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Course name" %}
+                  {% endif %}
+                  {% if (courses.DELIVERY_MODE == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Course type" %}
+                  {% endif %}
+                  {% if (courses.START_DATE == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Start date" %}
+                  {% endif %}
+                  {% if (courses.VENUE == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Venue" %}
+                  {% endif %}
+                  {% if (courses.COST == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Cost" %}
+                  {% endif %}
+                  {% if (courses.DURATION == "") or (courses.DURATION_UNIT == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Duration" %}
+                  {% endif %}
+                  {% if (courses.STUDY_MODE == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Course hours" %}
+                  {% endif %}
+                  {% if (courses.ATTENDANCE_PATTERN == "") %} 
+                    {% if allerrors != "" %}
+                      {% set allerrors = allerrors + ", " %}
+                    {% endif %}
+                    {% set allerrors = allerrors + "Attendance pattern" %}
+                  {% endif %}
+                  {{ allerrors }}
             </td>
           </tr>
           {% endif %}

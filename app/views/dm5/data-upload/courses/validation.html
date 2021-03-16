@@ -34,8 +34,11 @@
       <!-- only show if file has just been uploaded -->
       <p class="govuk-body">Your course data has been uploaded.</p>
     {% endif %}
-    <p class="govuk-body">The unpublished course data has {{ data['dm5courses-errorcount'] - ((data['dm5courses-deleted'] | length) + (data['dm5courses-resolved'] | length)) }} errors. 
-      You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your courses including the errors in a CSV file</a>.</p>
+    <p class="govuk-body">
+      Your uploaded course data has {{ data['dm5courses-errorcount'] - ((data['dm5courses-deleted'] | length) + (data['dm5courses-resolved'] | length)) }} errors in 25 courses. 
+    <p>
+    <!--p class="govuk-body">The unpublished course data has {{ data['dm5courses-errorcount'] - ((data['dm5courses-deleted'] | length) + (data['dm5courses-resolved'] | length)) }} errors. 
+      You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your courses including the errors in a CSV file</a>.</p-->
 
   </div>
 
@@ -138,15 +141,15 @@
         items: [
           {
             value: "resolve",
-            text: "Resolve the errors in Publish to the course directory"
+            text: "Resolve the errors on screen"
           },
           {
-            value: "upload",
-            text: "Upload a new course data file"
+            value: "download",
+            text: "Download CSV with errors"
           },
           {
-            value: "delete",
-            text: "Delete unpublished course data"
+            value: "cancel",
+            text: "Cancel upload"
           }
         ]
       }) }}
