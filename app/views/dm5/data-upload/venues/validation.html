@@ -34,8 +34,11 @@
       <!-- only show if file has just been uploaded -->
       <p class="govuk-body">Your venue data has been uploaded.</p>
     {% endif %}
-    <p class="govuk-body">The unpublished venue data has {{ data['dm5venues-errorcount'] - ((data['dm5venues-deleted'] | length) + (data['dm5venues-resolved'] | length)) }} errors. 
-      You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your venues including the errors in a CSV file</a>.</p>
+    <p class="govuk-body">
+      Your uploaded venues data has {{ data['dm5venues-errorcount'] - ((data['dm5venues-deleted'] | length) + (data['dm5venues-resolved'] | length)) }} error in 5 venues. 
+    <p>
+    <!--p class="govuk-body">The unpublished venue data has {{ data['dm5venues-errorcount'] - ((data['-deleted'] | length) + (data['dm5venues-resolved'] | length)) }} errors. 
+      You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your venues including the errors in a CSV file</a>.</p-->
 
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
@@ -121,15 +124,15 @@
         items: [
           {
             value: "resolve",
-            text: "Resolve the errors in Publish to the course directory"
+            text: "Resolve the errors on screen"
           },
           {
-            value: "upload",
-            text: "Upload a new venue data file"
+            value: "download",
+            text: "Download CSV with errors"
           },
           {
-            value: "delete",
-            text: "Delete unpublished venue data"
+            value: "cancel",
+            text: "Cancel upload"
           }
         ]
       }) }}

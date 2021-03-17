@@ -78,7 +78,7 @@ module.exports = function (router) {
         })
 
 
-    // Venues data upload
+// Venues data upload
         
     router.get('/'+v+'/data-upload/venues/goto-validation', function (req, res) {
         req.session.data[v+'venues-deleted'] = [];
@@ -93,12 +93,12 @@ module.exports = function (router) {
         res.redirect('/'+v+'/data-upload/venues/validation');
     })
 
-    // User choice on how to handle errors in upload
+// User choice on how to handle errors in upload
     router.post('/'+v+'/data-upload/venues/validation', function (req, res) {
         if (req.session.data['venue-validation'] == "resolve"){
             res.redirect('/'+v+'/data-upload/venues/resolve');
-        } else if (req.session.data['venue-validation'] == "upload"){
-            res.redirect('/'+v+'/data-upload/venues');
+        } else if (req.session.data['venue-validation'] == "download"){
+            res.redirect('/'+v+'/data-upload/venues/download');
         } else if (req.session.data['venue-validation'] == "delete"){
             delete req.session.data[v+'venues-deleted'];
             delete req.session.data[v+'venues-resolved'];
