@@ -1,0 +1,187 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Management - Publish apprenticeship data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Apprenticeship data errors</h1>
+
+    {% if data['dm5apprenticeships-deleted'] or data['dm5apprenticeships-resolved'] %}
+    {% else %}
+      <!-- only show if file has just been uploaded -->
+      <p class="govuk-body">Your apprenticeship data has been uploaded.</p>
+    {% endif %}
+    <p class="govuk-body">
+      Your uploaded apprenticeship data has {{ data['dm5apprenticeships-errorcount'] - ((data['dm5apprenticeships-deleted'] | length) + (data['dm5apprenticeships-resolved'] | length)) }} errors in 15 apprenticeships. 
+    <p>
+    <!--p class="govuk-body">The unpublished apprenticeship data has {{ data['dm5apprenticeships-errorcount'] - ((data['dm5apprenticeships-deleted'] | length) + (data['dm5apprenticeships-resolved'] | length)) }} errors. 
+      You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your apprenticeships including the errors in a CSV file</a>.</p-->
+
+  </div>
+
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          View errors in your upload
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Row</th>
+              <th scope="col" class="govuk-table__header">Code</th>
+              <th scope="col" class="govuk-table__header">Version</th>
+              <th scope="col" class="govuk-table__header">Name</th>
+              <th scope="col" class="govuk-table__header">Delivery method</th>
+              <th scope="col" class="govuk-table__header">Error(s)</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+            {% set i = 0 %}
+            {% for apprenticeships in data['dm5apprenticeships'] %}
+              {% set i = i + 1 %}
+              
+              {% if 
+                  (apprenticeships.STANDARD_CODE == "") or
+                  (apprenticeships.STANDARD_VERSION == "") or
+                  (apprenticeships.VENUE == "" and apprenticeships.SUB_REGION == "")
+              %}
+                  <tr class="govuk-table__row"
+                    {% if data['dm5apprenticeships-deleted'] %}
+                      {% if i in data['dm5apprenticeships-deleted'] %}
+                      style="display: none"
+                      {% endif %}
+                    {% endif %}
+                    {% if data['dm5apprenticeships-resolved'] %}
+                      {% if i in data['dm5apprenticeships-resolved'] %}
+                      style="display: none"
+                      {% endif %}
+                    {% endif %}
+                  >
+                    <td scope="row" class="govuk-table__cell govuk-body-s">{{ i }}</td>
+                    <td scope="row" class="govuk-table__cell govuk-body-s">{{ apprenticeships.STANDARD_CODE }}</td>
+                    <td scope="row" class="govuk-table__cell govuk-body-s">{{ apprenticeships.STANDARD_VERSION }}</td>
+                    <td scope="row" class="govuk-table__cell govuk-body-s">{{ apprenticeships.NAME }}</td>
+                    <td scope="row" class="govuk-table__cell govuk-body-s">{{ apprenticeships.DELIVERY_METHOD }}</td>
+                    <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">
+                      {% set allerrors = "" %}
+                      {% if (apprenticeships.STANDARD_CODE == "") %} 
+                        {% set allerrors = allerrors + "Standard code" %}
+                      {% endif %}
+                      {% if (apprenticeships.STANDARD_VERSION == "") %} 
+                        {% if allerrors != "" %}
+                          {% set allerrors = allerrors + ", " %}
+                        {% endif %}
+                        {% set allerrors = allerrors + "Standard version" %}
+                      {% endif %}
+                      {% if (apprenticeships.VENUE == "" and apprenticeships.SUB_REGION == "") %} 
+                        {% if allerrors != "" %}
+                          {% set allerrors = allerrors + ", " %}
+                        {% endif %}
+                        {% set allerrors = allerrors + "Venue" %}
+                      {% endif %}
+                      {{ allerrors }}
+                    </td>
+                  </tr>
+              {% endif %}
+            {% endfor %}
+
+          </tbody>
+        </table>
+        
+      </div>
+    </details>
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-5">
+      What do you want to do?
+    </h2>
+
+    <form action="" method="post" class="form">
+      {{ govukRadios({
+        idPrefix: "apprenticeship-validation",
+        name: "apprenticeship-validation",
+        items: [
+          {
+            value: "resolve",
+            text: "Resolve the errors on screen"
+          },
+          {
+            value: "download",
+            text: "Download CSV with errors"
+          },
+          {
+            value: "cancel",
+            text: "Cancel upload"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        classes: "govuk-button--publish",
+        text: "Continue"
+      }) }}
+    </form>
+
+  </div>
+
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
+
+{% block pageScripts %}
+
+	<script>
+    $( "#areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--publish");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}

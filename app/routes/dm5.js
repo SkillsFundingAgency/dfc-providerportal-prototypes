@@ -2,80 +2,152 @@ module.exports = function (router) {
 
     var v = "dm5"
 
-    // Courses data upload
+// Courses data upload
         
-        router.get('/'+v+'/data-upload/courses/goto-validation', function (req, res) {
-            req.session.data[v+'courses-deleted'] = [];
-            req.session.data[v+'courses-resolved'] = [];
-            req.session.data[v+'courses-errorcount'] = 6; // this needs to become dynamic
-            res.redirect('/'+v+'/data-upload/courses/validation');
-        })
+    router.get('/'+v+'/data-upload/courses/goto-validation', function (req, res) {
+        req.session.data[v+'courses-deleted'] = [];
+        req.session.data[v+'courses-resolved'] = [];
+        req.session.data[v+'courses-errorcount'] = 6; // this needs to become dynamic
+        res.redirect('/'+v+'/data-upload/courses/validation');
+    })
 
-        // User choice on how to handle errors in upload
-        router.post('/'+v+'/data-upload/courses/validation', function (req, res) {
-            if (req.session.data['course-validation'] == "resolve"){
-                res.redirect('/'+v+'/data-upload/courses/resolve');
-            } else if (req.session.data['course-validation'] == "download"){
-                res.redirect('/'+v+'/data-upload/courses/download');
-            } else if (req.session.data['course-validation'] == "cancel"){
-                //delete req.session.data[v+'courses-deleted'];
-                //delete req.session.data[v+'courses-resolved'];
-                res.redirect('/'+v+'/data-upload/courses/cancel');
-            }
-        })
+    // User choice on how to handle errors in upload
+    router.post('/'+v+'/data-upload/courses/validation', function (req, res) {
+        if (req.session.data['course-validation'] == "resolve"){
+            res.redirect('/'+v+'/data-upload/courses/resolve');
+        } else if (req.session.data['course-validation'] == "download"){
+            res.redirect('/'+v+'/data-upload/courses/download');
+        } else if (req.session.data['course-validation'] == "cancel"){
+            //delete req.session.data[v+'courses-deleted'];
+            //delete req.session.data[v+'courses-resolved'];
+            res.redirect('/'+v+'/data-upload/courses/cancel');
+        }
+    })
 
-        router.post('/'+v+'/data-upload/courses/resolve/delete', function (req, res) {
+    router.post('/'+v+'/data-upload/courses/resolve/delete', function (req, res) {
 
-            // convert the row to be deleted from a string to a number so it matches the row count on the resolve screen
-            req.session.data[v+'courses-deleted'].push( parseInt(req.session.data['deleterow']) );
+        // convert the row to be deleted from a string to a number so it matches the row count on the resolve screen
+        req.session.data[v+'courses-deleted'].push( parseInt(req.session.data['deleterow']) );
 
-            // remove variable that contains row to be deleted
-            delete req.session.data['deleterow'];
+        // remove variable that contains row to be deleted
+        delete req.session.data['deleterow'];
 
-            // Check to see if there are still errors and redirect accordingly
-            if (req.session.data[v+'courses-errorcount'] == (parseInt(req.session.data[v+'courses-deleted'].length) + parseInt(req.session.data[v+'courses-resolved'].length))){
-                res.redirect('/'+v+'/data-upload/courses/checkandpublish');
-            } else {
-                res.redirect('/'+v+'/data-upload/courses/resolve');
-            }
-        })
+        // Check to see if there are still errors and redirect accordingly
+        if (req.session.data[v+'courses-errorcount'] == (parseInt(req.session.data[v+'courses-deleted'].length) + parseInt(req.session.data[v+'courses-resolved'].length))){
+            res.redirect('/'+v+'/data-upload/courses/checkandpublish');
+        } else {
+            res.redirect('/'+v+'/data-upload/courses/resolve');
+        }
+    })
+
+    router.get('/'+v+'/data-upload/courses/resolve/showcourse', function (req, res) {
+        var coursestartdate = req.session.data[v+'courses'][req.session.data['row']-1].START_DATE;
+        req.session.data["coursestartdate"] = coursestartdate.split('/');
+        res.redirect('/'+v+'/data-upload/courses/resolve/course');
+    })
+
+    router.post('/'+v+'/data-upload/courses/resolve/course', function (req, res) {
+
+        // convert the row to be deleted from a string to a number so it matches the row count on the resolve screen
+        req.session.data[v+'courses-resolved'].push( parseInt(req.session.data['resolverow']) );
+
+        // remove variable that contains row to be deleted
+        delete req.session.data['resolverow'];
+
+        // Check to see if there are still errors and redirect accordingly        
+        if (req.session.data[v+'courses-errorcount'] == (parseInt(req.session.data[v+'courses-deleted'].length) + parseInt(req.session.data[v+'courses-resolved'].length))){
+            res.redirect('/'+v+'/data-upload/courses/checkandpublish');
+        } else {
+            res.redirect('/'+v+'/data-upload/courses/resolve');
+        }
+    })
+
+    router.post('/'+v+'/data-upload/courses/checkandpublish', function (req, res) {
+        req.session.data[v+'courses-published'] = parseInt(req.session.data[v+'courses'].length) - parseInt(req.session.data[v+'courses-deleted'].length);
+        delete req.session.data[v+'courses-deleted'];
+        delete req.session.data[v+'courses-resolved'];
+        res.redirect('/'+v+'/data-upload/courses/success');
+    })
+
+    router.post('/'+v+'/data-upload/courses/cancel', function (req, res) {
+        delete req.session.data[v+'courses-errorcount'];
+        delete req.session.data[v+'courses-deleted'];
+        delete req.session.data[v+'courses-resolved'];
+        res.redirect('/'+v+'/data-upload/courses/cancel/success');
+    })
 
 
-        router.get('/'+v+'/data-upload/courses/resolve/showcourse', function (req, res) {
-            var coursestartdate = req.session.data[v+'courses'][req.session.data['row']-1].START_DATE;
-            req.session.data["coursestartdate"] = coursestartdate.split('/');
-            res.redirect('/'+v+'/data-upload/courses/resolve/course');
-        })
+// Apprenticeships data upload
+        
+    router.get('/'+v+'/data-upload/apprenticeships/goto-validation', function (req, res) {
+        req.session.data[v+'apprenticeships-deleted'] = [];
+        req.session.data[v+'apprenticeships-resolved'] = [];
+        req.session.data[v+'apprenticeships-errorcount'] = 2; // this needs to become dynamic
+        res.redirect('/'+v+'/data-upload/apprenticeships/validation');
+    })
 
-        router.post('/'+v+'/data-upload/courses/resolve/course', function (req, res) {
+    // User choice on how to handle errors in upload
+    router.post('/'+v+'/data-upload/apprenticeships/validation', function (req, res) {
+        if (req.session.data['apprenticeship-validation'] == "resolve"){
+            res.redirect('/'+v+'/data-upload/apprenticeships/resolve');
+        } else if (req.session.data['apprenticeship-validation'] == "download"){
+            res.redirect('/'+v+'/data-upload/apprenticeships/download');
+        } else if (req.session.data['apprenticeship-validation'] == "cancel"){
+            //delete req.session.data[v+'apprenticeships-deleted'];
+            //delete req.session.data[v+'apprenticeships-resolved'];
+            res.redirect('/'+v+'/data-upload/apprenticeships/cancel');
+        }
+    })
 
-            // convert the row to be deleted from a string to a number so it matches the row count on the resolve screen
-            req.session.data[v+'courses-resolved'].push( parseInt(req.session.data['resolverow']) );
+    router.post('/'+v+'/data-upload/apprenticeships/resolve/delete', function (req, res) {
 
-            // remove variable that contains row to be deleted
-            delete req.session.data['resolverow'];
+        // convert the row to be deleted from a string to a number so it matches the row count on the resolve screen
+        req.session.data[v+'apprenticeships-deleted'].push( parseInt(req.session.data['deleterow']) );
 
-            // Check to see if there are still errors and redirect accordingly        
-            if (req.session.data[v+'courses-errorcount'] == (parseInt(req.session.data[v+'courses-deleted'].length) + parseInt(req.session.data[v+'courses-resolved'].length))){
-                res.redirect('/'+v+'/data-upload/courses/checkandpublish');
-            } else {
-                res.redirect('/'+v+'/data-upload/courses/resolve');
-            }
-        })
+        // remove variable that contains row to be deleted
+        delete req.session.data['deleterow'];
 
-        router.post('/'+v+'/data-upload/courses/checkandpublish', function (req, res) {
-            req.session.data[v+'courses-published'] = parseInt(req.session.data[v+'courses'].length) - parseInt(req.session.data[v+'courses-deleted'].length);
-            delete req.session.data[v+'courses-deleted'];
-            delete req.session.data[v+'courses-resolved'];
-            res.redirect('/'+v+'/data-upload/courses/success');
-        })
+        // Check to see if there are still errors and redirect accordingly
+        if (req.session.data[v+'apprenticeships-errorcount'] == (parseInt(req.session.data[v+'apprenticeships-deleted'].length) + parseInt(req.session.data[v+'apprenticeships-resolved'].length))){
+            res.redirect('/'+v+'/data-upload/apprenticeships/checkandpublish');
+        } else {
+            res.redirect('/'+v+'/data-upload/apprenticeships/resolve');
+        }
+    })
 
-        router.post('/'+v+'/data-upload/courses/cancel', function (req, res) {
-            delete req.session.data[v+'courses-errorcount'];
-            delete req.session.data[v+'courses-deleted'];
-            delete req.session.data[v+'courses-resolved'];
-            res.redirect('/'+v+'/data-upload/courses/cancel/success');
-        })
+    router.get('/'+v+'/data-upload/apprenticeships/resolve/showapprenticeship', function (req, res) {
+        res.redirect('/'+v+'/data-upload/apprenticeships/resolve/apprenticeship');
+    })
+
+    router.post('/'+v+'/data-upload/apprenticeships/resolve/apprenticeship', function (req, res) {
+
+        // convert the row to be deleted from a string to a number so it matches the row count on the resolve screen
+        req.session.data[v+'apprenticeships-resolved'].push( parseInt(req.session.data['resolverow']) );
+
+        // remove variable that contains row to be deleted
+        delete req.session.data['resolverow'];
+
+        // Check to see if there are still errors and redirect accordingly        
+        if (req.session.data[v+'apprenticeships-errorcount'] == (parseInt(req.session.data[v+'apprenticeships-deleted'].length) + parseInt(req.session.data[v+'apprenticeships-resolved'].length))){
+            res.redirect('/'+v+'/data-upload/apprenticeships/checkandpublish');
+        } else {
+            res.redirect('/'+v+'/data-upload/apprenticeships/resolve');
+        }
+    })
+
+    router.post('/'+v+'/data-upload/apprenticeships/checkandpublish', function (req, res) {
+        req.session.data[v+'apprenticeships-published'] = parseInt(req.session.data[v+'apprenticeships'].length) - parseInt(req.session.data[v+'apprenticeships-deleted'].length);
+        delete req.session.data[v+'apprenticeships-deleted'];
+        delete req.session.data[v+'apprenticeships-resolved'];
+        res.redirect('/'+v+'/data-upload/apprenticeships/success');
+    })
+
+    router.post('/'+v+'/data-upload/apprenticeships/cancel', function (req, res) {
+        delete req.session.data[v+'apprenticeships-errorcount'];
+        delete req.session.data[v+'apprenticeships-deleted'];
+        delete req.session.data[v+'apprenticeships-resolved'];
+        res.redirect('/'+v+'/data-upload/apprenticeships/cancel/success');
+    })
 
 
 // Venues data upload
