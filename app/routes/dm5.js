@@ -174,10 +174,10 @@ module.exports = function (router) {
             res.redirect('/'+v+'/data-upload/venues/resolve');
         } else if (req.session.data['venue-validation'] == "download"){
             res.redirect('/'+v+'/data-upload/venues/download');
-        } else if (req.session.data['venue-validation'] == "delete"){
+        } else if (req.session.data['venue-validation'] == "cancel"){
             delete req.session.data[v+'venues-deleted'];
             delete req.session.data[v+'venues-resolved'];
-            res.redirect('/'+v+'/data-upload/venues/delete');
+            res.redirect('/'+v+'/data-upload/venues/cancel');
         }
     })
 
