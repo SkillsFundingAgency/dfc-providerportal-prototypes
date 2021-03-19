@@ -80,6 +80,42 @@
     </div>
 
   </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-m">Apprenticeships</h2>
+        <p class="govuk-body-s">You have <strong>
+          {% if data['dm5apprenticeships-published'] %}
+            {{ data['dm5apprenticeships-published'] }}
+          {% else %}
+            5
+          {% endif %}
+        </strong> published apprenticeships</p>
+
+        {% if data['dm5apprenticeships-resolved'] %}
+        <p class="govuk-body-s">You have <strong>
+          {{ (data['dm5apprenticeships'] | length) - (data['dm5apprenticeships-deleted'] | length)}}
+        </strong> unpublished apprenticeships</p>
+        {% endif %}
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="/{{version}}/data-upload/apprenticeships">Upload new apprenticeship data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published apprenticeship data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download apprenticeship data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
   <div class="govuk-grid-column-one-third">
 
     <div class="cd-card-1 cd-card--provider">
@@ -148,29 +184,7 @@
     </div-->
 
   </div>
-  <div class="govuk-grid-column-one-third">
-
-    <!--div class="cd-card-1 cd-card--provider">
-      <div class="cd-card-content">
-        <h2 class="govuk-heading-m">T Levels</h2>
-        <p class="govuk-body-s">You have <strong>0</strong> T Levels</p>
-      </div>
-      <div class="cd-card-action">
-        <ul class="govuk-list govuk-list__small">
-          <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Upload your T Level data</a>
-          </li>
-          <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published T Level data (CSV)</a>
-          </li>
-          <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download T Level data template (CSV)</a>
-          </li>
-        </ul>
-      </div>
-    </div-->
-
-  </div>
+  <div class="govuk-
 
 </div>
 

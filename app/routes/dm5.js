@@ -88,9 +88,10 @@ module.exports = function (router) {
 
     // User choice on how to handle errors in upload
     router.post('/'+v+'/data-upload/apprenticeships/validation', function (req, res) {
-        if (req.session.data['apprenticeship-validation'] == "resolve"){
+        /*if (req.session.data['apprenticeship-validation'] == "resolve"){
             res.redirect('/'+v+'/data-upload/apprenticeships/resolve');
-        } else if (req.session.data['apprenticeship-validation'] == "download"){
+        } else */
+        if (req.session.data['apprenticeship-validation'] == "download"){
             res.redirect('/'+v+'/data-upload/apprenticeships/download');
         } else if (req.session.data['apprenticeship-validation'] == "cancel"){
             //delete req.session.data[v+'apprenticeships-deleted'];
@@ -99,6 +100,7 @@ module.exports = function (router) {
         }
     })
 
+    /*
     router.post('/'+v+'/data-upload/apprenticeships/resolve/delete', function (req, res) {
 
         // convert the row to be deleted from a string to a number so it matches the row count on the resolve screen
@@ -134,6 +136,7 @@ module.exports = function (router) {
             res.redirect('/'+v+'/data-upload/apprenticeships/resolve');
         }
     })
+    */
 
     router.post('/'+v+'/data-upload/apprenticeships/checkandpublish', function (req, res) {
         req.session.data[v+'apprenticeships-published'] = parseInt(req.session.data[v+'apprenticeships'].length) - parseInt(req.session.data[v+'apprenticeships-deleted'].length);
