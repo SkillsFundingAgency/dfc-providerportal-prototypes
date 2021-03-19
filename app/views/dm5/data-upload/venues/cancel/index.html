@@ -27,7 +27,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Delete unpublished venue data</h1>
+    <h1 class="govuk-heading-xl">Cancel unpublished venue data</h1>
+    <p class="govuk-body govuk-!-margin-bottom-7">The unpublished venues from your data upload will be deleted.</p>
+
 
     <!--p class="govuk-body govuk-!-margin-bottom-7">The unpublished courses from your data upload will be deleted.</p-->
 
@@ -54,7 +56,7 @@
       <input type="hidden" name="deleterow" id ="deleterow" value="{{ data['row'] }}">
 
       {{ govukButton({
-        href: "/" + version + "/data-upload/venues/delete/success",
+        href: "/" + version + "/data-upload/venues/cancel/success",
         text: "Delete",
         disabled: true,
         classes: "govuk-button--warning govuk-!-margin-right-5"
