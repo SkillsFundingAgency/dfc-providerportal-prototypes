@@ -242,4 +242,39 @@ module.exports = function (router) {
         res.redirect('/'+v+'/venues-deleted-upload/validation');
     })
 
+
+// TOO MANY ERRORS
+        
+    router.get('/'+v+'/data-upload-toomanyerrors/courses/goto-validation-toomanyerrors', function (req, res) {
+        res.redirect('/'+v+'/data-upload-toomanyerrors/courses/validation');
+    })
+    router.get('/'+v+'/data-upload-toomanyerrors/apprenticeships/goto-validation-toomanyerrors', function (req, res) {
+        res.redirect('/'+v+'/data-upload-toomanyerrors/apprenticeships/validation');
+    })
+    router.get('/'+v+'/data-upload-toomanyerrors/venues/goto-validation-toomanyerrors', function (req, res) {
+        res.redirect('/'+v+'/data-upload-toomanyerrors/venues/validation');
+    })
+
+    router.post('/'+v+'/data-upload-toomanyerrors/courses/validation', function (req, res) {
+        if (req.session.data['course-validation'] == "download"){
+            res.redirect('/'+v+'/data-upload-toomanyerrors/courses/download');
+        } else if (req.session.data['course-validation'] == "cancel"){
+            res.redirect('/'+v+'/data-upload-toomanyerrors/courses/cancel');
+        }
+    })
+    router.post('/'+v+'/data-upload-toomanyerrors/apprenticeships/validation', function (req, res) {
+        if (req.session.data['apprenticeship-validation'] == "download"){
+            res.redirect('/'+v+'/data-upload-toomanyerrors/apprenticeships/download');
+        } else if (req.session.data['apprenticeship-validation'] == "cancel"){
+            res.redirect('/'+v+'/data-upload-toomanyerrors/apprenticeships/cancel');
+        }
+    })
+    router.post('/'+v+'/data-upload-toomanyerrors/venues/validation', function (req, res) {
+        if (req.session.data['venue-validation'] == "download"){
+            res.redirect('/'+v+'/data-upload-toomanyerrors/venues/download');
+        } else if (req.session.data['venue-validation'] == "cancel"){
+            res.redirect('/'+v+'/data-upload-toomanyerrors/venues/cancel');
+        }
+    })
+
 }
