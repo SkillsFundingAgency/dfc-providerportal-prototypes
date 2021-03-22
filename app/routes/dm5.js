@@ -277,4 +277,17 @@ module.exports = function (router) {
         }
     })
 
+
+// NO ERRORS
+        
+    router.get('/'+v+'/data-upload-noerrors/courses/goto-validation-noerrors', function (req, res) {
+        res.redirect('/'+v+'/data-upload-noerrors/courses/checkandpublish');
+    })
+    router.get('/'+v+'/data-upload-noerrors/apprenticeships/goto-validation-noerrors', function (req, res) {
+        res.redirect('/'+v+'/data-upload-noerrors/apprenticeships/checkandpublish');
+    })
+    router.get('/'+v+'/data-upload-noerrors/venues/goto-validation-noerrors', function (req, res) {
+        res.redirect('/'+v+'/data-upload-noerrors/venues/checkandpublish');
+    })
+
 }

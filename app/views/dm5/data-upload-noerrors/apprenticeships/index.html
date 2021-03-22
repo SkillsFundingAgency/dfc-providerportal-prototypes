@@ -1,0 +1,98 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Management - Upload apprenticeship data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "/" + version + "/data-upload-noerrors/apprenticeships"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Upload your apprenticeship data</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body">
+      You can upload a CSV file to update your data in Publish to the course directory.
+    <p>
+
+    <p class="govuk-body">To ensure an upload is successful you must:<p>
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+      <li><a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">add new venues</a> to the service prior to an upload</li>
+      <li>include existing and new apprenticeships in the data file</li>
+      <li>follow the <a href="/{{version}}/data-upload-noerrors/apprenticeships/formatting" class="govuk-link">data file format requirements</a></li>
+    </ul>
+
+
+    {% if data['dm5apprenticeships-errorcount'] %}
+      {{ govukWarningText({
+        classes: "govuk-!-margin-bottom-7",
+        text: "Uploading a new apprenticeship data file will delete your unpublished apprenticeships",
+        iconFallbackText: "Warning"
+      }) }}
+    {% endif %}
+
+    {{ govukFileUpload({
+      id: "apprenticeship-data-upload",
+      name: "apprenticeship-data-upload"
+    }) }}
+
+    {{ govukButton({
+      href: "/" + version + "/data-upload-noerrors/apprenticeships/inprogress",
+      text: "Continue"
+    }) }}
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Data file downloads
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-list--bullet govuk-!-font-size-16">
+          <li>
+            <a href="javascript:peverntDefault();" class="govuk-link govuk-link--blocked">Download your published apprenticeship data (CSV)</a>
+          </li>
+          <li>
+            <a href="javascript:peverntDefault();" class="govuk-link govuk-link--blocked">Download an empty apprenticeship data template (CSV)</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
