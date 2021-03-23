@@ -39,7 +39,11 @@
     <p>
     <!--p class="govuk-body">The unpublished venue data has {{ data['dm5venues-errorcount'] - ((data['-deleted'] | length) + (data['dm5venues-resolved'] | length)) }} errors. 
       You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your venues including the errors in a CSV file</a>.</p-->
-
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
@@ -51,6 +55,7 @@
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Venue ID</th>
               <th scope="col" class="govuk-table__header">Name</th>
               <th scope="col" class="govuk-table__header">Address</th>
               <th scope="col" class="govuk-table__header">Postcode</th>
@@ -63,6 +68,7 @@
               {% set i = i + 1 %}
               
               {% if 
+                  (venues.ID == "") or
                   (venues.NAME == "") or
                   (venues.ADDRESS == "") or
                   (venues.POSTCODE == "")
@@ -80,10 +86,17 @@
                     {% endif %}
                   >
                     <td scope="row" class="govuk-table__cell govuk-body-s">
+                      {% if venues.ID %}
+                        {{ venues.ID }}
+                      {% else %}
+                        <span style="color: #d4351c;">Error</span>
+                      {% endif %}
+                    </td>
+                    <td scope="row" class="govuk-table__cell govuk-body-s">
                       {% if venues.NAME %}
                         {{ venues.NAME }}
                       {% else %}
-                        <span style="color: #d4351c;">Missing</span>
+                        <span style="color: #d4351c;">Error</span>
                       {% endif %}
                     </td>
                     <td scope="row" class="govuk-table__cell govuk-body-s">
@@ -93,14 +106,14 @@
                         {{ venues.TOWNCITY }}{% if venues.COUNTY %}, {% endif %}
                         {{ venues.COUNTY }}
                       {% else %}
-                        <span style="color: #d4351c;">Missing</span>
+                        <span style="color: #d4351c;">Error</span>
                       {% endif %}
                     </td>
                     <td scope="row" class="govuk-table__cell govuk-body-s">
                       {% if venues.POSTCODE %}
                         {{ venues.POSTCODE }}
                       {% else %}
-                        <span style="color: #d4351c;">Missing</span>
+                        <span style="color: #d4351c;">Error</span>
                       {% endif %}
                     </td>
                   </tr>
@@ -113,7 +126,12 @@
       </div>
     </details>
 
-    <h2 class="govuk-heading-l govuk-!-margin-top-5">
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l">
       What do you want to do?
     </h2>
 

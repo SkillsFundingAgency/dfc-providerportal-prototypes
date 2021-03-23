@@ -82,6 +82,19 @@ if (document.getElementById('dm3-loader--apprenticeships')) {
     setTimeout(function() {$('#loading-message').html("Processing data");}, 1500);
     setTimeout(function() {window.location.href = "/dm5/data-upload-toomanyerrors/venues/goto-validation-toomanyerrors";}, 3000);
   }
+
+  if (document.getElementById('dm5-loader--courses-noerrors')) {
+    setTimeout(function() {$('#loading-message').html("Processing data");}, 2500);
+    setTimeout(function() {window.location.href = "/dm5/data-upload-noerrors/courses/goto-validation-noerrors";}, 6000);
+  }
+  if (document.getElementById('dm5-loader--apprenticeships-noerrors')) {
+    setTimeout(function() {$('#loading-message').html("Processing data");}, 1500);
+    setTimeout(function() {window.location.href = "/dm5/data-upload-noerrors/apprenticeships/goto-validation-noerrors";}, 3000);
+  }
+  if (document.getElementById('dm5-loader--venues-noerrors')) {
+    setTimeout(function() {$('#loading-message').html("Processing data");}, 1500);
+    setTimeout(function() {window.location.href = "/dm5/data-upload-noerrors/venues/goto-validation-noerrors";}, 3000);
+  }
   
 
 })
