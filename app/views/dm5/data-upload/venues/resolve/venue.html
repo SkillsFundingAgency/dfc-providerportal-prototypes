@@ -54,6 +54,36 @@
 
         <!--  -->
 
+        {% if (data['dm5venues'][data['row']-1].ID == "") %}
+          {{ govukInput({
+            id: "dm5venue-resolve-id",
+            name: "dm5venue-resolve-id",
+            label: {
+              classes: "govuk-label--s",
+              text: "Venue ID"
+            },
+            errorMessage: {
+              text: "Enter a venue ID"
+            },
+            value: data['dm5venues'][data['row']-1].ID
+          }) }}
+        {% else %}
+          {{ govukInput({
+            id: "dm5venue-resolve-id",
+            name: "dm5venue-resolve-id",
+            label: {
+              classes: "govuk-label--s",
+              text: "Venue ID"
+            },
+            attributes: {
+              disabled: "disabled"
+            },
+            value: data['dm5venues'][data['row']-1].ID
+          }) }}
+        {% endif %}
+
+        <!--  -->
+
         {% if (data['dm5venues'][data['row']-1].NAME == "") %}
           {{ govukInput({
             id: "dm5venue-resolve-name",

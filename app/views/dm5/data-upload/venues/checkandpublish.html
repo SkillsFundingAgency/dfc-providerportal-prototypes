@@ -52,6 +52,7 @@
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Venue ID</th>
               <th scope="col" class="govuk-table__header">Name</th>
               <th scope="col" class="govuk-table__header">Address</th>
               <th scope="col" class="govuk-table__header">Email</th>
@@ -68,6 +69,9 @@
               {% if i in data['dm5venues-deleted'] %}
               {% else %}
                 <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell govuk-body-s">
+                    {{ venues.ID }}
+                  </td>
                   <td scope="row" class="govuk-table__cell govuk-body-s">
                     {% if venues.NAME %}
                       {{ venues.NAME }}
