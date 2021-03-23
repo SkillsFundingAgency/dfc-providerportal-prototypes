@@ -1,0 +1,249 @@
+{% set navActive = 'home' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Dashboard
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row govuk-!-margin-bottom-5">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">PRESIDENCY LONDON COLLEGE LIMITED</h1>
+    <p class="govuk-body">Your UK Provider Reference Number (UKPRN) is <span class="govuk-!-font-weight-bold">10035735</span></p>
+    <p><a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">Your provider details</a></p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m section-heading">Courses</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-2 homescreen-row">
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card cd-card-2 cd-card--provider">
+      <h2 class="govuk-heading-s">Published courses</h2>
+      <p class="cd-card-number-1">10</p>
+      <h2 class="govuk-heading-s govuk-!-margin-top-5">Unpublished courses</h2>
+      <p class="cd-card-number-1">25</p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Your published courses</h2>
+        <p class="govuk-body-s">View and manage the courses you offer to learners.</p>
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit courses<span class="govuk-visually-hidden"> further education courses</span></a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Add a course</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Course data upload</h2>
+        <p class="govuk-body-s">Upload your courses with a CSV file.</p>
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="javascript:preventDefault();">Your unpublished courses</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="javascript:preventDefault();">Upload new course data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published course data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download course data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m section-heading">Apprenticeships</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-2 homescreen-row">
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card cd-card-2 cd-card--provider">
+      <h2 class="govuk-heading-s">Published apprenticeships</h2>
+      <p class="cd-card-number-1">5</p>
+      <h2 class="govuk-heading-s">Unpublished apprenticeships</h2>
+      <p class="cd-card-number-1">15</p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Your published apprenticeships</h2>
+        <p class="govuk-body-s">View and manage the apprenticeships you offer to learners.</p>
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit apprenticeships</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Add an apprenticeship</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Apprenticeship data upload</h2>
+        <p class="govuk-body-s">Upload your apprenticeships with a CSV file.</p>
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="javascript:preventDefault();">Your unpublished apprenticeships</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="javascript:preventDefault();">Upload your apprenticeship data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published apprenticeship data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download apprenticeship data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!--  -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m section-heading">Venues</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-4 homescreen-row">
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card cd-card-2 cd-card--provider">
+      <h2 class="govuk-heading-s">Published venues</h2>
+      <p class="cd-card-number-1">3</p>
+      <h2 class="govuk-heading-s">Unpublished venues</h2>
+      <p class="cd-card-number-1">5</p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Your published venues</h2>
+        <p class="govuk-body-s">View and manage your learning and training venues.</p>
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit venues</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Add a venue</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Venue data upload</h2>
+        <p class="govuk-body-s">Upload your venues with a CSV file.</p>
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="javascript:preventDefault();">Your unpublished venues</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="javascript:preventDefault();">Upload new venue data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published venue data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download venue data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!--  -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="cd-contact-panel">
+      <h2 class="govuk-heading-m">Need help?</h2>
+      <p class="govuk-body">
+        If you’ve got a question about Publish to the course directory, <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">contact the support team</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
