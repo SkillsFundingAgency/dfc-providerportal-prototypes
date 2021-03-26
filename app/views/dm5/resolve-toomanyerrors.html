@@ -1,0 +1,422 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Upload - Resolve errors in course data
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: 80%;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              Courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              Apprenticeships
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              Locations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item  govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="javascript:preventDefault();">
+              Data Upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+    text: "Back to Data Upload",
+    href: "javascript:preventDefault();"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Resolve errors in your course data</h1>
+
+    <p class="govuk-body">Your uploaded course data has 97 errors in 325 courses.<p>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full"><table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Row</th>
+          <th scope="col" class="govuk-table__header">Ref</th>
+          <th scope="col" class="govuk-table__header">LARS/QAN</th>
+          <th scope="col" class="govuk-table__header">Course</th>
+          <th scope="col" class="govuk-table__header">Start date</th>
+          <th scope="col" class="govuk-table__header">Error(s)</th>
+          <th scope="col" colspan="2" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+      
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">1</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">BUSL111131</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60321076</td>
+          <td class="govuk-table__cell govuk-body-s">Step Up to Business - Level 1 Award</td>
+          <td class="govuk-table__cell govuk-body-s">02/03/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Who is this course for, Cost</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">8</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">BUSL111089</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60185740</td>
+          <td class="govuk-table__cell govuk-body-s">Business - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s"></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Start date</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">10</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">HARL111001</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">50068398</td>
+          <td class="govuk-table__cell govuk-body-s">Introduction to Hair &amp; Beauty - Level 1 Certificate</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Venue</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">18</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">PLUL111002</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60100874</td>
+          <td class="govuk-table__cell govuk-body-s">Plumbing - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Duration</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">19</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">VEHL111002</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60187542</td>
+          <td class="govuk-table__cell govuk-body-s">Automotive Engineering (Vehicle Maintenance) - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Course hours</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">20</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">SCIL111012</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60309374</td>
+          <td class="govuk-table__cell govuk-body-s">BTEC Level 1 introductory Diploma in Applied Science</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Attendance pattern</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+      
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">21</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">BUSL111131</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60321076</td>
+          <td class="govuk-table__cell govuk-body-s">Step Up to Business - Level 1 Award</td>
+          <td class="govuk-table__cell govuk-body-s">02/03/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Who is this course for, Cost</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">28</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">BUSL111089</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60185740</td>
+          <td class="govuk-table__cell govuk-body-s">Business - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s"></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Start date</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">30</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">HARL111001</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">50068398</td>
+          <td class="govuk-table__cell govuk-body-s">Introduction to Hair &amp; Beauty - Level 1 Certificate</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Venue</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">38</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">PLUL111002</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60100874</td>
+          <td class="govuk-table__cell govuk-body-s">Plumbing - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Duration</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">39</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">VEHL111002</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60187542</td>
+          <td class="govuk-table__cell govuk-body-s">Automotive Engineering (Vehicle Maintenance) - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Course hours</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">40</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">SCIL111012</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60309374</td>
+          <td class="govuk-table__cell govuk-body-s">BTEC Level 1 introductory Diploma in Applied Science</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Attendance pattern</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+      
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">41</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">BUSL111131</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60321076</td>
+          <td class="govuk-table__cell govuk-body-s">Step Up to Business - Level 1 Award</td>
+          <td class="govuk-table__cell govuk-body-s">02/03/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Who is this course for, Cost</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">48</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">BUSL111089</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60185740</td>
+          <td class="govuk-table__cell govuk-body-s">Business - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s"></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Start date</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">50</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">HARL111001</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">50068398</td>
+          <td class="govuk-table__cell govuk-body-s">Introduction to Hair &amp; Beauty - Level 1 Certificate</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Venue</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">58</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">PLUL111002</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60100874</td>
+          <td class="govuk-table__cell govuk-body-s">Plumbing - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Duration</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">59</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">VEHL111002</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60187542</td>
+          <td class="govuk-table__cell govuk-body-s">Automotive Engineering (Vehicle Maintenance) - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Course hours</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">60</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">SCIL111012</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60309374</td>
+          <td class="govuk-table__cell govuk-body-s">BTEC Level 1 introductory Diploma in Applied Science</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Attendance pattern</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+      
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">61</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">BUSL111131</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60321076</td>
+          <td class="govuk-table__cell govuk-body-s">Step Up to Business - Level 1 Award</td>
+          <td class="govuk-table__cell govuk-body-s">02/03/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Who is this course for, Cost</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">68</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">BUSL111089</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60185740</td>
+          <td class="govuk-table__cell govuk-body-s">Business - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s"></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Start date</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">70</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">HARL111001</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">50068398</td>
+          <td class="govuk-table__cell govuk-body-s">Introduction to Hair &amp; Beauty - Level 1 Certificate</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Venue</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">78</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">PLUL111002</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60100874</td>
+          <td class="govuk-table__cell govuk-body-s">Plumbing - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Duration</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">79</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">VEHL111002</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60187542</td>
+          <td class="govuk-table__cell govuk-body-s">Automotive Engineering (Vehicle Maintenance) - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Course hours</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">91</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">SCIL111012</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60309374</td>
+          <td class="govuk-table__cell govuk-body-s">BTEC Level 1 introductory Diploma in Applied Science</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Attendance pattern</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+      
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">101</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">BUSL111131</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60321076</td>
+          <td class="govuk-table__cell govuk-body-s">Step Up to Business - Level 1 Award</td>
+          <td class="govuk-table__cell govuk-body-s">02/03/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Who is this course for, Cost</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">108</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">BUSL111089</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60185740</td>
+          <td class="govuk-table__cell govuk-body-s">Business - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s"></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Start date</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">120</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">HARL111001</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">50068398</td>
+          <td class="govuk-table__cell govuk-body-s">Introduction to Hair &amp; Beauty - Level 1 Certificate</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Venue</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">138</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">PLUL111002</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60100874</td>
+          <td class="govuk-table__cell govuk-body-s">Plumbing - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Duration</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">149</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">VEHL111002</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60187542</td>
+          <td class="govuk-table__cell govuk-body-s">Automotive Engineering (Vehicle Maintenance) - Level 1 Diploma</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Course hours</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell govuk-body-s">211</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">SCIL111012</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s">60309374</td>
+          <td class="govuk-table__cell govuk-body-s">BTEC Level 1 introductory Diploma in Applied Science</td>
+          <td class="govuk-table__cell govuk-body-s">08/09/2021</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">Attendance pattern</td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Resolve</a></td>
+          <td scope="row" class="govuk-table__cell govuk-body-s"><a href="javascript:preventDefault();" class="govuk-link">Delete</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td scope="row" colspan="8" class="govuk-table__cell govuk-body-s govuk-!-padding-5" style="text-align: center">There are 67 more errors that need to be resolved</td>
+        </tr>
+
+      </tbody>
+    </table>
+<!--
+    {{ govukButton({
+      classes: "govuk-button govuk-button--secondary",
+        href: "/" + version + "/data-upload/",
+      text: "Cancel"
+    }) }}
+-->
+  </div>
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

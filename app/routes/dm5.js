@@ -18,8 +18,6 @@ module.exports = function (router) {
         } else if (req.session.data['course-validation'] == "download"){
             res.redirect('/'+v+'/data-upload/courses/download');
         } else if (req.session.data['course-validation'] == "cancel"){
-            //delete req.session.data[v+'courses-deleted'];
-            //delete req.session.data[v+'courses-resolved'];
             res.redirect('/'+v+'/data-upload/courses/cancel');
         }
     })
@@ -88,55 +86,12 @@ module.exports = function (router) {
 
     // User choice on how to handle errors in upload
     router.post('/'+v+'/data-upload/apprenticeships/validation', function (req, res) {
-        /*if (req.session.data['apprenticeship-validation'] == "resolve"){
-            res.redirect('/'+v+'/data-upload/apprenticeships/resolve');
-        } else */
         if (req.session.data['apprenticeship-validation'] == "download"){
             res.redirect('/'+v+'/data-upload/apprenticeships/download');
         } else if (req.session.data['apprenticeship-validation'] == "cancel"){
-            //delete req.session.data[v+'apprenticeships-deleted'];
-            //delete req.session.data[v+'apprenticeships-resolved'];
             res.redirect('/'+v+'/data-upload/apprenticeships/cancel');
         }
     })
-
-    /*
-    router.post('/'+v+'/data-upload/apprenticeships/resolve/delete', function (req, res) {
-
-        // convert the row to be deleted from a string to a number so it matches the row count on the resolve screen
-        req.session.data[v+'apprenticeships-deleted'].push( parseInt(req.session.data['deleterow']) );
-
-        // remove variable that contains row to be deleted
-        delete req.session.data['deleterow'];
-
-        // Check to see if there are still errors and redirect accordingly
-        if (req.session.data[v+'apprenticeships-errorcount'] == (parseInt(req.session.data[v+'apprenticeships-deleted'].length) + parseInt(req.session.data[v+'apprenticeships-resolved'].length))){
-            res.redirect('/'+v+'/data-upload/apprenticeships/checkandpublish');
-        } else {
-            res.redirect('/'+v+'/data-upload/apprenticeships/resolve');
-        }
-    })
-
-    router.get('/'+v+'/data-upload/apprenticeships/resolve/showapprenticeship', function (req, res) {
-        res.redirect('/'+v+'/data-upload/apprenticeships/resolve/apprenticeship');
-    })
-
-    router.post('/'+v+'/data-upload/apprenticeships/resolve/apprenticeship', function (req, res) {
-
-        // convert the row to be deleted from a string to a number so it matches the row count on the resolve screen
-        req.session.data[v+'apprenticeships-resolved'].push( parseInt(req.session.data['resolverow']) );
-
-        // remove variable that contains row to be deleted
-        delete req.session.data['resolverow'];
-
-        // Check to see if there are still errors and redirect accordingly        
-        if (req.session.data[v+'apprenticeships-errorcount'] == (parseInt(req.session.data[v+'apprenticeships-deleted'].length) + parseInt(req.session.data[v+'apprenticeships-resolved'].length))){
-            res.redirect('/'+v+'/data-upload/apprenticeships/checkandpublish');
-        } else {
-            res.redirect('/'+v+'/data-upload/apprenticeships/resolve');
-        }
-    })
-    */
 
     router.post('/'+v+'/data-upload/apprenticeships/checkandpublish', function (req, res) {
         req.session.data[v+'apprenticeships-published'] = parseInt(req.session.data[v+'apprenticeships'].length) - parseInt(req.session.data[v+'apprenticeships-deleted'].length);
@@ -157,13 +112,7 @@ module.exports = function (router) {
         
     router.get('/'+v+'/data-upload/venues/goto-validation', function (req, res) {
         req.session.data[v+'venues-deleted'] = [];
-        req.session.data[v+'venues-resolved'] = [];
-
-        //loop through data to get error count
-
-        //if 0 errors go to checkandpublish
-        //if errors, go to validation
-        
+        req.session.data[v+'venues-resolved'] = [];        
         req.session.data[v+'venues-errorcount'] = 1; // this needs to become dynamic
         res.redirect('/'+v+'/data-upload/venues/validation');
     })
@@ -289,5 +238,6 @@ module.exports = function (router) {
     router.get('/'+v+'/data-upload-noerrors/venues/goto-validation-noerrors', function (req, res) {
         res.redirect('/'+v+'/data-upload-noerrors/venues/checkandpublish');
     })
+
 
 }
