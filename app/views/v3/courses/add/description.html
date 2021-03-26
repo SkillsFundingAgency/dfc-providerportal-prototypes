@@ -1,0 +1,159 @@
+{% set navActive = 'courses' %}
+{% extends "layouts/layout-v3.html" %}
+
+{% block pageTitle %}
+  Courses - Add course description
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Course description
+      </h1>
+      <!--div class="govuk-inset-text">{{ data['tlevels'] }}</div-->
+      <!--p class="govuk-body-l">Add your description of {{ data['tlevels'] }}.</p-->
+
+      <p class="govuk-body">The course information you provide will be available on the National Careers Service, <a href="javascript:preventDefault();">Find a course</a>, available to learners searching for learning and training opportunities.</p>
+      <p class="govuk-body govuk-!-margin-bottom-5">This is your opportunity to tell learners about your course, the content and style of the course information you provide should be aimed at the learner.</p>
+
+      <!--  -->
+
+      <form action="" method="post" class="form">
+
+        {{ govukCharacterCount({
+          name: "course-desc-whothiscourseisfor",
+          id: "course-desc-whothiscourseisfor",
+          maxlength: 2000,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "Who this course is for"
+          },
+          hint: {
+            text: "Information that will help the learner decide whether this course is suitable for them, the learning experience and opportunities they can expect from the course."
+          },
+          value: data['course-desc-whothiscourseisfor']
+        }) }}
+        
+        {{ govukCharacterCount({
+          name: "course-desc-entryrequirements",
+          id: "course-desc-entryrequirements",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "Entry requirements"
+          },
+          hint: {
+            text: "Specific skills, licences, vocational or academic requirements. For example, DBS, driving licence, computer knowledge, literacy or numeracy requirements."
+          },
+          value: data['course-desc-entryrequirements']
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "course-desc-whatyoulllearn",
+          id: "course-desc-whatyoulllearn",
+          maxlength: 1500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "What you'll learn"
+          },
+          hint: {
+            text: "The main topics, units or modules of the course a learner can expect, include key features. For example, communication, team leadership and time management."
+          },
+          value: data['course-desc-whatyoulllearn']
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "course-desc-howyoulllearn",
+          id: "course-desc-howyoulllearn",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "How you'll learn"
+          },
+          hint: {
+            text: "The methods used to deliver the course. For example, classroom based exercises, a work environment or online study materials."
+          },
+          value: data['course-desc-howyoulllearn']
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "course-desc-whatyoullbring",
+          id: "course-desc-whatyoullbring",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "What you’ll need to bring"
+          },
+          hint: {
+            text: "What the learner will need to access or bring to the course. For example, personal protective clothing, tools, devices or internet access."
+          },
+          value: data['course-desc-whatyoullbring']
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "course-desc-howassessed",
+          id: "course-desc-howassessed",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "How you'll be assessed"
+          },
+          hint: {
+            text: "The ways a learner will be assessed. For example, workplace assessment, written assignments, exams, group or individual project work or portfolio of evidence."
+          },
+          value: data['course-desc-howassessed']
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "course-desc-whatyoucandonext",
+          id: "course-desc-whatyoucandonext",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "What you can do next"
+          },
+          hint: {
+            text: "The further opportunities a learner can expect after successfully completing the course. For example, a higher level course, apprenticeship or entry to employment."
+          },
+          value: data['course-desc-whatyoucandonext']
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

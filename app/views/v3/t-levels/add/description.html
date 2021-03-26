@@ -1,0 +1,141 @@
+{% set navActive = 'tlevels' %}
+{% extends "layouts/layout-v3.html" %}
+
+{% block pageTitle %}
+  T Levels
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">T Level description</h1>
+
+      <p class="govuk-body">The description of {% if (data['tlevels']) %}{{ data['tlevels'] }}{% else %}[T Level name]{% endif %} has been provided for you to edit.</p>
+      <p class="govuk-body govuk-!-margin-bottom-5">The T Level will be available on the National Careers Service, <a href="https://nationalcareers.service.gov.uk/find-a-course/search" class="govuk-link" target="_blank">Find a course (opens in a new window or tab)</a>, available to learners searching for learning and training opportunities.
+
+      <form action="" method="post" class="form">
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="tlevels-desc-whothiscourseisfor">
+              Who this T Level is for
+            </label>
+            <div id="tlevels-desc-whothiscourseisfor-hint" class="govuk-hint">
+              Information that will help the learner decide whether this T Level is suitable for them, the learning experience and opportunities they can expect.
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="tlevels-desc-whothiscourseisfor" name="tlevels-desc-whothiscourseisfor" rows="7" aria-describedby="tlevels-desc-whothiscourseisfor-info tlevels-desc-whothiscourseisfor-hint">{{ data['tlevels-desc-whothiscourseisfor'] }}</textarea>
+          </div>
+
+          <div id="tlevels-desc-whothiscourseisfor-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+            You can enter up to 500 characters
+          </div>
+        </div>
+
+        {{ govukCharacterCount({
+          name: "tlevels-desc-entryrequirements",
+          id: "tlevels-desc-entryrequirements",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "Entry requirements"
+          },
+          hint: {
+            text: "Specific skills, licences, vocational or academic requirements."
+          },
+          value: data['tlevels-desc-entryrequirements']
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "tlevels-desc-whatyoulllearn",
+          id: "tlevels-desc-whatyoulllearn",
+          maxlength: 1500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "What you'll learn"
+          },
+          hint: {
+            text: "The main topics, units or modules of the T Level a learner can expect."
+          },
+          value: data['tlevels-desc-whatyoulllearn']
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "tlevels-desc-howyoulllearn",
+          id: "tlevels-desc-howyoulllearn",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "How you'll learn"
+          },
+          hint: {
+            text: "The methods used to deliver the T Level."
+          },
+          value: data['tlevels-desc-howyoulllearn']
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "tlevels-desc-howassessed",
+          id: "tlevels-desc-howassessed",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "How you'll be assessed"
+          },
+          hint: {
+            text: "The ways a learner will be assessed."
+          },
+          value: data['tlevels-desc-howassessed']
+        }) }}
+
+        {{ govukCharacterCount({
+          name: "tlevels-desc-whatyoucandonext",
+          id: "tlevels-desc-whatyoucandonext",
+          maxlength: 500,
+          rows: 7,
+          label: {
+            classes: "govuk-label--m",
+            text: "What you can do next"
+          },
+          hint: {
+            text: "The further opportunities a learner can expect after successfully completing the T Level."
+          },
+          value: data['tlevels-desc-whatyoucandonext']
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

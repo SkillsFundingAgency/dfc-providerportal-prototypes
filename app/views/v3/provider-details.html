@@ -1,0 +1,133 @@
+{% extends "layouts/layout-v3.html" %}
+
+{% block pageTitle %}
+  Provider details
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+  <a href="/{{version}}" class="govuk-back-link">Back to home screen</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">PRESIDENCY LONDON COLLEGE LIMITED</h1>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-3">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course directory status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Active
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          UKPRN
+        </dt>
+        <dd class="govuk-summary-list__value">
+          10035735
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Trading name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Presidency London College
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Provider type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list">
+            <li>FE Courses</li>
+            <li>Apprenticeships</li>
+          </ul>
+        </dd>
+      </div>
+
+    </dl>
+
+    <!--  -->
+
+    <h2 class="govuk-heading-s">Provider information</h2>
+    <p class="govuk-body">Presidency London College is an independent training provider that delivers various apprenticeship training programmes. We are on the borders of London Borough of Westminster, Brent, and Kensington and Chelsea. As an organisation, our main focus is to provide education, training and learning opportunities to all our employers and apprentices who are seeking to better their career and recruitment needs. We have a number of levy and non-levy employers who are currently availing the services of our apprenticeship programmes across England. Please get in touch whether you are an employer or apprentice to discuss your apprenticeship needs with our Information Advice and Guidance (IAG) officer.</p>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <!-- -->
+
+    {{ govukDetails({
+      summaryText: "Help with your provider details",
+      html: '
+        <h3 class="govuk-heading-m">UKPRN</h3>
+        <p class="govuk-body">A unique number allocated to providers by the UKRLP verification team, after successful UKRLP registration.<p>
+        <h3 class="govuk-heading-m">Trading name</h3>
+        <p class="govuk-body">The name your organisation trades under if it is different to the organisation name.</p>
+        <p class="govuk-body">Trading names can be added when registering with UKRLP or after registration. Sign in to the UK Register of Learning Providers to add or edit your trading name.<p>
+      '
+    }) }}
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <h1 class="govuk-heading-m govuk-!-margin-bottom-2">Contact details</h1>
+
+    <div class="govuk-related-items">
+
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Address</h3>
+      <p class="govuk-body-s govuk-!-margin-bottom-3">
+        593 Harrow Road<br>
+        London<br>
+        W10 4RA
+      </p>
+
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Web</h3>
+      <p class="govuk-body-s govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();" target="_blank">http://www.presidencylondon.co.uk</a></p>
+
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Contact name</h3>
+      <p class="govuk-body-s govuk-!-margin-bottom-3">A Razaq Mohammed</p>
+
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Email</h3>
+      <p class="govuk-body-s govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">info@presidencylondon.co.uk</a></p>
+
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Telephone</h3>
+      <p class="govuk-body-s govuk-!-margin-bottom-3">0203 7846005</p>
+
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

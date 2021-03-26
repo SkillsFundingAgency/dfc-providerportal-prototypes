@@ -1,0 +1,269 @@
+{% set navActive = 'home' %}
+{% extends "layouts/layout-v3.html" %}
+
+{% block pageTitle %}
+  Provider home screen - All provider types
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row govuk-!-margin-bottom-5">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">PRESIDENCY LONDON COLLEGE LIMITED</h1>
+    <p class="govuk-body">Your UK Provider Reference Number (UKPRN) is <span class="govuk-!-font-weight-bold">10035735</span></p>
+    <p><a href="/{{version}}/provider-details" class="govuk-link">Your provider details</a></p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m section-heading">Courses</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-2 homescreen-row">
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card cd-card-2 cd-card--provider">
+      <h2 class="govuk-heading-s">Published courses</h2>
+      <p class="cd-card-number-1">224</p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Your courses</h2>
+        <p class="govuk-body-s">View and manage the courses you offer to learners.</p>
+      </div>
+      <div class="cd-card-action cd-card-action--helpdesk">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="/{{ version }}/courses/add">Add a course<span class="govuk-visually-hidden"> further education courses</span></a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/{{ version }}/courses/list">View and edit courses<span class="govuk-visually-hidden"> further education courses</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Course data upload</h2>
+        <p class="govuk-body-s">Upload your courses with a CSV file.</p>
+      </div>
+      <div class="cd-card-action cd-card-action--helpdesk">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="/{{ version }}/data-upload/courses">Upload new course data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Your published course information (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">A course information template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!--  -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m section-heading">Apprenticeships</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-2 homescreen-row">
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card cd-card-2 cd-card--provider">
+      <h2 class="govuk-heading-s">Published apprenticeships</h2>
+      <p class="cd-card-number-1">16</p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Your apprenticeships</h2>
+        <p class="govuk-body-s">View and manage the apprenticeship training courses you offer to employers.</p>
+      </div>
+      <div class="cd-card-action cd-card-action--helpdesk">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="/{{ version }}/apprenticeships/add">Add an apprenticeship<span class="govuk-visually-hidden"> further education courses</span></a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/{{ version }}/apprenticeships/list">View and edit apprenticeships<span class="govuk-visually-hidden"> further education courses</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Apprenticeship data upload</h2>
+        <p class="govuk-body-s">Upload your apprenticeships with a CSV file.</p>
+      </div>
+      <div class="cd-card-action cd-card-action--helpdesk">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="/{{ version }}/data-upload/apprenticeships">Upload new apprenticeship data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Your published apprenticeship training course information (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">An apprenticeships training course template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!--  -->
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m section-heading">T Levels</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-2 homescreen-row">
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card cd-card-2 cd-card--provider">
+      <h2 class="govuk-heading-s">Published T Levels</h2>
+      <p class="cd-card-number-1">4</p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Your T Levels</h2>
+        <p class="govuk-body-s">View and manage the T Levels you offer to learners.</p>
+      </div>
+      <div class="cd-card-action cd-card-action--helpdesk">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="/{{ version }}/t-levels/add">Add a T Level</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/{{ version }}/t-levels">View and edit T Levels</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!--  -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m section-heading">Venues</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-4 homescreen-row">
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card cd-card-2 cd-card--provider">
+      <h2 class="govuk-heading-s">Venues</h2>
+      <p class="cd-card-number-1">5</p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Your venues</h2>
+        <p class="govuk-body-s">View and manage your learning and training venues.</p>
+      </div>
+      <div class="cd-card-action cd-card-action--helpdesk">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="/{{ version }}/venues/add">Add a venue</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/{{ version }}/venues">View and edit venues</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-s">Venue data upload</h2>
+        <p class="govuk-body-s">Upload your venues with a CSV file.</p>
+      </div>
+      <div class="cd-card-action cd-card-action--helpdesk">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <a class="govuk-link" href="/{{ version }}/data-upload/venues">Upload new venue data</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Your published apprenticeship training course information (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">An apprenticeships training course template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!--  -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="cd-contact-panel">
+      <h2 class="govuk-heading-m">Need help?</h2>
+      <p class="govuk-body">
+        If you’ve got a question about Publish to the course directory, <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">contact the support team</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

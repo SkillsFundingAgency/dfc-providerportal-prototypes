@@ -1,0 +1,82 @@
+{% set navActive = 'tlevels' %}
+{% extends "layouts/layout-v3.html" %}
+
+{% block pageTitle %}
+  T Levels
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Your T Levels</h1>
+    <!--p class="govuk-body-l">These courses are published on the course directory.</p-->
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <!--div>
+      <h2 class="govuk-heading-m">Education and Childcare</h2>
+      <p class="govuk-body">LARS: 60358294 <a href="javascript:preventDefault();">Manage course details</a></p>
+    </div-->
+
+    <table class="govuk-table">
+      <!--caption class="govuk-table__caption">Month you apply</caption-->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">T Level</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Start date</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Venues</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell"><a class="govuk-link" href="view/des-001">Design, Surveying and Planning for Construction</a></td>
+          <td class="govuk-table__cell nowrap">21 Sep 2020</td>
+          <td class="govuk-table__cell nowrap">Multiple venues</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell"><a class="govuk-link" href="view/dig-002">Digital Production, Design and Development</a></td>
+          <td class="govuk-table__cell nowrap">21 Sep 2020</td>
+          <td class="govuk-table__cell">Avenue Campus</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell"><a class="govuk-link" href="view/edu-003">Education and Childcare</a></td>
+          <td class="govuk-table__cell nowrap">21 Sep 2020</td>
+          <td class="govuk-table__cell">Medway Campus</td>
+        </tr>
+      </tbody>
+    </table>
+
+    {{ govukButton({
+      href: "/" + version + "/t-levels/add",
+      text: "Add a T Level"
+    }) }}
+
+  </div>
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

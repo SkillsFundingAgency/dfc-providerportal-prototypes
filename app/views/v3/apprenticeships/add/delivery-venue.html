@@ -1,0 +1,109 @@
+{% set navActive = 'apprenticeships' %}
+{% extends "layouts/layout-v3.html" %}
+
+{% block pageTitle %}
+  Apprenticeships - Add apprenticeship delivery
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">Select delivery options</h1>
+
+      <form action="" method="post" class="form">
+
+        {{ govukSelect({
+          id: "apprenticeship-delivery-venue",
+          name: "apprenticeship-delivery-venue",
+          label: {
+            text: "Venue"
+          },
+          formGroup: {
+            classes: "govuk-!-margin-bottom-3"
+          },
+          hint: {
+            text: "Select a venue you can travel from to deliver training"
+          },
+          items: [
+            {
+              value: "",
+              text: "Please select",
+              selected: true
+            },
+            {
+              value: "Presidency College London",
+              text: "Presidency College London"
+            }
+          ]
+        }) }}
+        <p class="govuk-body govuk-!-margin-bottom-7">
+          <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">Add another venue</a>
+        <p>
+
+        {{ govukCheckboxes({
+          idPrefix: "apprenticeship-delivery-how",
+          name: "apprenticeship-delivery-how",
+          classes: "govuk-checkboxes--small",
+          fieldset: {
+            legend: {
+              text: "How is the training delivered at this venue?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          formGroup: {
+            classes: "govuk-!-margin-bottom-9"
+          },
+          hint: {
+            text: "Select all that apply"
+          },
+          items: [
+            {
+              value: "Day Release",
+              text: "Day Release"
+            },
+            {
+              value: "Block Release",
+              text: "Block Release"
+            }
+          ]
+        }) }}
+
+        <!--  -->
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+        {{ govukButton({
+          classes: "govuk-button--secondary govuk-!-margin-left-3",
+          text: "Add another"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

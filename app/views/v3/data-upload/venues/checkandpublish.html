@@ -1,0 +1,104 @@
+{% set navActive = 'dataupload' %}
+{% extends "layouts/layout-v3.html" %}
+
+{% block pageTitle %}
+  Data Upload - Publish venue data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Publish your venue data</h1>
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body">Your file of 98 venues has no errors and is ready to be published to the venue directory.</p>
+
+    {{ govukWarningText({
+      text: "Publishing these venues will replace all of your venues on Publish to the venue directory",
+      iconFallbackText: "warning"
+    }) }}
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Are you sure?
+          </h2>
+        </legend>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="areyousure" name="areyousure" type="checkbox" value="delete">
+            <label class="govuk-label govuk-checkboxes__label" for="areyousure">
+              Yes, I want to publish these venues
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="govuk-button-group">
+      {{ govukButton({
+        classes: "govuk-button--publish govuk-button--disabled",
+        href: "/" + version + "/data-upload/venues/success",
+        text: "Publish"
+      }) }}
+
+      {{ govukButton({
+        classes: "govuk-button--secondary govuk-!-margin-left-3",
+        href: "/" + version + "/data-upload",
+        text: "Cancel"
+      }) }}
+
+    </div>
+
+  </div>
+
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
+
+{% block pageScripts %}
+
+	<script>
+    $( "#areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--publish");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}

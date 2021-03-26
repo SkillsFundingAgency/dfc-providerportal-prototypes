@@ -1,0 +1,358 @@
+{% set navActive = 'courses' %}
+{% extends "layouts/layout-v3.html" %}
+
+{% block pageTitle %}
+  List of courses
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+  }) }}
+
+  <a href="list" class="govuk-back-link">Back to course list</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Edit your course information</h1>
+
+    <h2 class="govuk-heading-l">A Level in Computer Science 12</h2>
+
+    <p class="govuk-body">You can <a href="javascript:preventdefault();">view your published course (opens in new window or tab)</a> to see how it's viewed by learners.</p>
+
+    <!--  -->
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          LARS/QAN
+        </dt>
+        <dd class="govuk-summary-list__value">
+          60150312
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Qualification name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          A Level in Computer Science 12
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Qualification Level
+        </dt>
+        <dd class="govuk-summary-list__value">
+          3
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Awarding organisation
+        </dt>
+        <dd class="govuk-summary-list__value">
+          NONE
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Created
+        </dt>
+        <dd class="govuk-summary-list__value">
+          08 January 2021
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ govukTag({
+            text: "Published",
+            classes: "govuk-tag--green"
+          }) }}
+        </dd>
+      </div>
+
+    </dl>
+    <!--  -->
+
+    <h3 class="govuk-heading-m">Course details</h3>
+    <p class="govuk-body">Information for the learner about how the T Level will be delivered.</p>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course name
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          A Level in Computer Science 12
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/details#{{version}}-course-details-reference">Change<span class="govuk-visually-hidden"> course name</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Your reference
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/details#{{version}}-course-details-reference">Change<span class="govuk-visually-hidden"> your reference</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course type
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Classroom based
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/details#{{version}}-course-details-reference">Change<span class="govuk-visually-hidden"> course type</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Start date
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Flexible start date
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/details#{{version}}-course-details-startdate">Change<span class="govuk-visually-hidden"> start date</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Venue
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Presidency London College
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/details#{{version}}-course-details-location">Change<span class="govuk-visually-hidden"> course location</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course webpage
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          https://presidencylondoncollege.ac.uk/alevel-computer-science
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/details#{{version}}-course-details-webpage">Change<span class="govuk-visually-hidden"> course webpage</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Cost
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          £575
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/details#{{version}}-course-details-webpage">Change<span class="govuk-visually-hidden"> cost</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Cost description
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/details#{{version}}-course-details-webpage">Change<span class="govuk-visually-hidden"> cost description</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Duration
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          10 months
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/details#{{version}}-course-details-webpage">Change<span class="govuk-visually-hidden"> duration</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Course hours
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Full time
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/details#{{version}}-course-details-webpage">Change<span class="govuk-visually-hidden"> course hours</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Attendance pattern
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Daytime
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/details#{{version}}-course-details-webpage">Change<span class="govuk-visually-hidden"> attendance pattern</span></a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <!-- -->
+
+    <div class="govuk-!-margin-bottom-6">
+      {{ govukButton({
+        href: "copy/",
+        text: "Copy course details",
+        classes: "govuk-button--secondary govuk-!-margin-right-3"
+      }) }}
+      {{ govukButton({
+        href: "delete/",
+        text: "Delete course details",
+        classes: "govuk-button--warning"
+      }) }}
+    </div>
+
+    <!-- -->
+
+    <h3 class="govuk-heading-m">Course description</h3>
+    <p class="govuk-body">Changes made to your course description will update all of your courses for this qualification.</p>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Who is the course for
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+        	The aims of this qualification are: The WJEC Eduqas A level in Computer Science encourages learners to develop: An understanding of, and the ability to apply, the fundamental principle and concepts of computer science, including abstraction, decomposition, logic, algorithms and data representation The ability to analyse problems in computational terms through practical experience of solving such problems, including writing programs to do so The capacity for thinking creatively, innovatively, analytically, logically and critically The capacity to see relationships between different aspects of computer science Mathematical skills Boolean algebra Comparison of complexity of algorithms Number representations and bases The ability to articulate the individual (moral), social (ethical), legal and cultural opportunities and risks of digital technology.
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/description#{{version}}-courses-desc-whothiscourseisfor">Change<span class="govuk-visually-hidden"> who is the course for</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Entry requirements
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+          Usually you'll need five or more A*-C (9-4) grades at GCSE, including Maths and English. The equivalent to a B grade will be a 5 and the equivalent to a C grade will be 4 for entry requirement purposes. For Computing this MUST include a grade 6 in GSCE Mathamatics
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/description#{{version}}-courses-desc-entryrequirements">Change<span class="govuk-visually-hidden"> entry requirements</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What you'll learn
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/description#{{version}}-courses-desc-whatyoulllearn">Change<span class="govuk-visually-hidden"> what you'll learn</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How you'll learn
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/description#{{version}}-courses-desc-howyoulllearn">Change<span class="govuk-visually-hidden"> how you'll learn</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Waht you'll need to bring
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/description#{{version}}-courses-desc-howyoulllearn">Change<span class="govuk-visually-hidden"> what you'll need to bring</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How you'll be assessed
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/description#{{version}}-courses-desc-howassessed">Change<span class="govuk-visually-hidden"> how you'll be assessed</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What you can do next
+        </dt>
+        <dd class="govuk-summary-list__value" style="word-break: break-word;">
+
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-summary-list__checkedit">
+          <a class="govuk-link" href="/{{version}}/courses/edit/description#{{version}}-courses-desc-whatyoucandonext">Change<span class="govuk-visually-hidden"> what you can do next</span></a>
+        </dd>
+      </div>
+
+    </dl>
+
+  </div>
+</div>
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
