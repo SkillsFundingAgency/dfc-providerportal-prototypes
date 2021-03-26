@@ -1,5 +1,5 @@
-{% set navActive = 'datamanagement' %}
-{% extends "layouts/layout-dm5.html" %}
+{% set navActive = 'dataupload' %}
+{% extends "layouts/layout-v3.html" %}
 
 {% block pageTitle %}
   Data Upload - Course data published
@@ -29,7 +29,7 @@
 
     {{ govukPanel({
       classes: "govuk-!-margin-bottom-5",
-      titleText: "136 apprenticeships have been published"
+      titleText: "5 apprenticeships  have been published"
     }) }}
 
     <p class="govuk-body">Your apprenticeships are available to learners searching for learning and training opportunities on the National Careers Service.</p>
@@ -37,9 +37,9 @@
 
     <h2 class="govuk-heading-m">What next?</h2>
     <ul class="govuk-list">
-      <li><a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit courses</a></li>
-      <li><a class="govuk-link" href="/{{version}}/data-upload-noerrors/data-upload">Back to data upload</a></li>
-      <li><a class="govuk-link" href="/{{version}}/data-upload-noerrors">Back to the home screen</a></li>
+      <li><a class="govuk-link" href="/{{version}}/apprenticeships/list">View and edit apprenticeships</a></li>
+      <li><a class="govuk-link" href="/{{version}}/data-upload">Back to data upload</a></li>
+      <li><a class="govuk-link" href="/{{version}}">Back to the home screen</a></li>
     </ul>
 
   </div>

@@ -1,0 +1,52 @@
+{% set navActive = 'courses' %}
+{% extends "layouts/layout-v3.html" %}
+
+{% block pageTitle %}
+  Courses - course published
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Your course has been published
+        </h1>
+        <div class="govuk-panel__body">[course name]</div>
+      </div>
+
+      <p class="govuk-body">Your course is available to learners searching for learning and training opportunities on the National Careers Service.</p>
+      <p class="govuk-body">You can <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">view your published course (opens in new window or tab)</a> to see how it's viewed by learners.</p>
+
+      <h2 class="govuk-heading-m">What next?</h2>
+      <ul class="govuk-list">
+        <li><a class="govuk-link" href="/{{version}}/courses/add">Add a new course</a></li>
+        <li><a class="govuk-link" href="/{{version}}/courses/list">View, edit, copy or delete a course</a></li>
+        <li><a class="govuk-link" href="/{{version}}">Back to the home screen</a></li>
+      </ul>
+
+    </div>
+  </div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

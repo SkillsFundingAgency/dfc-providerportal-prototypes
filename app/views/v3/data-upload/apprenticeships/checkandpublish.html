@@ -1,8 +1,8 @@
-{% set navActive = 'datamanagement' %}
-{% extends "layouts/layout-dm5.html" %}
+{% set navActive = 'dataupload' %}
+{% extends "layouts/layout-v3.html" %}
 
 {% block pageTitle %}
-  Data Upload - Publish venue data
+  Data Upload - Publish apprenticeship data
 {% endblock %}
 
 {% block header %}
@@ -27,17 +27,17 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <h1 class="govuk-heading-xl">Publish your venue data</h1>
+    <h1 class="govuk-heading-xl">Publish your apprenticeship data</h1>
 
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <p class="govuk-body">Your file of 98 venues has no errors and is ready to be published to the course directory.</p>
+    <p class="govuk-body">Your file of 5 apprenticeships has no errors and is ready to be published to the course directory.</p>
 
     {{ govukWarningText({
-      text: "Publishing these venues will replace all of your venues on Publish to the course directory",
+      text: "Publishing these apprenticeships will replace all of your apprenticeships on Publish to the course directory",
       iconFallbackText: "warning"
     }) }}
 
@@ -52,7 +52,7 @@
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="areyousure" name="areyousure" type="checkbox" value="delete">
             <label class="govuk-label govuk-checkboxes__label" for="areyousure">
-              Yes, I want to publish these venues
+              Yes, I want to publish these apprenticeships
             </label>
           </div>
         </div>
@@ -62,13 +62,13 @@
     <div class="govuk-button-group">
       {{ govukButton({
         classes: "govuk-button--publish govuk-button--disabled",
-        href: "/" + version + "/data-upload-noerrors/venues/success",
+        href: "/" + version + "/data-upload/apprenticeships/success",
         text: "Publish"
       }) }}
 
       {{ govukButton({
         classes: "govuk-button--secondary govuk-!-margin-left-3",
-        href: "/" + version + "/data-upload-noerrors",
+        href: "/" + version + "/data-upload",
         text: "Cancel"
       }) }}
 
