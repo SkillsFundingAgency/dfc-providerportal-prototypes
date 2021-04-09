@@ -1,0 +1,128 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data  Management
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Data Upload</h1>
+  </div>
+</div>
+
+<p class="govuk-body-m">You can upload a CSV file to update your data in Publish to the course directory.</p>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-2 homescreen-row">
+
+  <div class="govuk-grid-column-one-third">
+
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-m">Courses</h2>
+        <p class="govuk-body-s">You have <strong>10</strong> published courses</p>
+        <!-- <p class="govuk-body-s">You have <strong>25</strong> unpublished courses</p> -->
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <!-- <a class="govuk-link" href="javascript:preventDefault();">Your unpublished courses</a> -->
+          </li>
+          <li>
+            <a class="govuk-link" href="javascript:preventDefault();">Upload in progress</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published course data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download course data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-m">Apprenticeships</h2>
+        <p class="govuk-body-s">You have <strong>5</strong> published apprenticeships</p>
+        <!-- <p class="govuk-body-s">You have <strong>15</strong> unpublished apprenticeships</p> -->
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <!-- <a class="govuk-link" href="javascript:preventDefault();">Your unpublished apprenticeships</a> -->
+          </li>
+          <li>
+            <a class="govuk-link" href="javascript:preventDefault();">Upload in progress</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published apprenticeship data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download apprenticeship data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    <div class="cd-card-1 cd-card--provider">
+      <div class="cd-card-content">
+        <h2 class="govuk-heading-m">Venues</h2>
+        <p class="govuk-body-s">You have <strong>3</strong> published venues</p>
+        <!-- <p class="govuk-body-s">You have <strong>5</strong> unpublished venues</p> -->
+      </div>
+      <div class="cd-card-action">
+        <ul class="govuk-list govuk-list__small">
+          <li>
+            <!-- <a class="govuk-link" href="javascript:preventDefault();">Your unpublished venues</a> -->
+          </li>
+          <li>
+            <a class="govuk-link" href="javascript:preventDefault();">Upload in progress</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published venue data (CSV)</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download venue data template (CSV)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
