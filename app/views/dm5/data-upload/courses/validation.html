@@ -32,12 +32,12 @@
     {% if data['dm5courses-deleted'] or data['dm5courses-resolved'] %}
     {% else %}
       <!-- only show if file has just been uploaded -->
-      <p class="govuk-body">Your course data has been uploaded.</p>
+      <!-- <p class="govuk-body">Your course data has been uploaded.</p> -->
     {% endif %}
     <p class="govuk-body">
-      Your uploaded course data has {{ data['dm5courses-errorcount'] - ((data['dm5courses-deleted'] | length) + (data['dm5courses-resolved'] | length)) }} errors in 25 courses. 
+      Your data upload has {{ data['dm5courses-errorcount'] - ((data['dm5courses-deleted'] | length) + (data['dm5courses-resolved'] | length)) }} errors in 25 courses.  You must resolve these errors before your data can be published.
     <p>
-    <!--p class="govuk-body">The unpublished course data has {{ data['dm5courses-errorcount'] - ((data['dm5courses-deleted'] | length) + (data['dm5courses-resolved'] | length)) }} errors. 
+    <!--p class="govuk-body">The unpublished course data has {{ data['dm5courses-errorcount'] - ((data['dm5courses-deleted'] | length) + (data['dm5courses-resolved'] | length)) }} errors.
       You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your courses including the errors in a CSV file</a>.</p-->
 
   </div>
@@ -71,8 +71,8 @@
             {% set i = 0 %}
             {% for courses in data['dm5courses'] %}
               {% set i = i + 1 %}
-              
-              {% if 
+
+              {% if
                   (courses.COURSE_NAME == "") or
                   (courses.DELIVERY_MODE == "") or
                   (courses.START_DATE == "") or
@@ -107,52 +107,52 @@
                     <td class="govuk-table__cell govuk-body-s">{{courses.VENUE}}</td>
                     <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">
                   {% set allerrors = "" %}
-                  {% if (courses.WHO_IS_THIS_COURSE_FOR == "") %} 
+                  {% if (courses.WHO_IS_THIS_COURSE_FOR == "") %}
                     {% set allerrors = allerrors + "Who is this course for" %}
                   {% endif %}
-                  {% if (courses.COURSE_NAME == "") %} 
+                  {% if (courses.COURSE_NAME == "") %}
                     {% if allerrors != "" %}
                       {% set allerrors = allerrors + ", " %}
                     {% endif %}
                     {% set allerrors = allerrors + "Course name" %}
                   {% endif %}
-                  {% if (courses.DELIVERY_MODE == "") %} 
+                  {% if (courses.DELIVERY_MODE == "") %}
                     {% if allerrors != "" %}
                       {% set allerrors = allerrors + ", " %}
                     {% endif %}
                     {% set allerrors = allerrors + "Course type" %}
                   {% endif %}
-                  {% if (courses.START_DATE == "") %} 
+                  {% if (courses.START_DATE == "") %}
                     {% if allerrors != "" %}
                       {% set allerrors = allerrors + ", " %}
                     {% endif %}
                     {% set allerrors = allerrors + "Start date" %}
                   {% endif %}
-                  {% if (courses.VENUE == "") %} 
+                  {% if (courses.VENUE == "") %}
                     {% if allerrors != "" %}
                       {% set allerrors = allerrors + ", " %}
                     {% endif %}
                     {% set allerrors = allerrors + "Venue" %}
                   {% endif %}
-                  {% if (courses.COST == "") %} 
+                  {% if (courses.COST == "") %}
                     {% if allerrors != "" %}
                       {% set allerrors = allerrors + ", " %}
                     {% endif %}
                     {% set allerrors = allerrors + "Cost" %}
                   {% endif %}
-                  {% if (courses.DURATION == "") or (courses.DURATION_UNIT == "") %} 
+                  {% if (courses.DURATION == "") or (courses.DURATION_UNIT == "") %}
                     {% if allerrors != "" %}
                       {% set allerrors = allerrors + ", " %}
                     {% endif %}
                     {% set allerrors = allerrors + "Duration" %}
                   {% endif %}
-                  {% if (courses.STUDY_MODE == "") %} 
+                  {% if (courses.STUDY_MODE == "") %}
                     {% if allerrors != "" %}
                       {% set allerrors = allerrors + ", " %}
                     {% endif %}
                     {% set allerrors = allerrors + "Course hours" %}
                   {% endif %}
-                  {% if (courses.ATTENDANCE_PATTERN == "") %} 
+                  {% if (courses.ATTENDANCE_PATTERN == "") %}
                     {% if allerrors != "" %}
                       {% set allerrors = allerrors + ", " %}
                     {% endif %}
@@ -166,7 +166,7 @@
 
           </tbody>
         </table>
-        
+
       </div>
     </details>
 
@@ -175,7 +175,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h2 class="govuk-heading-l govuk-!-margin-top-5">
+    <p class="govuk-body">You can <a href="xx">download all of your course data including the errors  (opens in a CSV file)</a> to edit and upload.</p>
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-5">
       What do you want to do?
     </h2>
 
@@ -189,8 +191,8 @@
             text: "Resolve the errors on screen"
           },
           {
-            value: "download",
-            text: "Download CSV with errors"
+            value: "upload",
+            text: "Upload a new data file"
           },
           {
             value: "cancel",
