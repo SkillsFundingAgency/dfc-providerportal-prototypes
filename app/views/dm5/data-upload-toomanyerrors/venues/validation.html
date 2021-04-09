@@ -30,10 +30,11 @@
     <h1 class="govuk-heading-xl">Venue data errors</h1>
 
     <p class="govuk-body">
-      Your uploaded venues data has 51 error in 98 venues. 
+      Your uploaded venue data has 51 error in 98 venues. You must resolve these errors before your data can be published.
     <p>
+    <p class="govuk-body">You can <a href="xx">download all of your venue data including the errors  (opens in a CSV file)</a> to edit and upload.</p>
 
-    <h2 class="govuk-heading-l govuk-!-margin-top-5">
+    <!-- <h2 class="govuk-heading-l govuk-!-margin-top-5">
       What do you want to do?
     </h2>
 
@@ -51,13 +52,23 @@
             text: "Cancel upload"
           }
         ]
-      }) }}
+      }) }} -->
+<!--
 
-      {{ govukButton({
-        classes: "govuk-button--publish",
-        text: "Continue"
-      }) }}
-    </form>
+    </form> -->
+
+    <!-- {{ govukButton ({
+      classes: "govuk-button--publish",
+      text: "Continue"
+    }) }} -->
+
+    <!-- <h2 class="govuk-heading-m">What next?</h2> -->
+    <ul class="govuk-list">
+      <!-- <li><a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit venues</a></li>
+      <li><a class="govuk-link" href="/{{version}}/data-upload">Back to data upload</a></li> -->
+      <li><a class="govuk-link" href="/{{version}}">Back to the home screen</a></li>
+
+</div>
 
   </div>
 
@@ -70,4 +81,3 @@
 {% endblock %}
 
 <!-- DO NOT enter page content after the above block -->
-

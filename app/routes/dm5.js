@@ -3,7 +3,7 @@ module.exports = function (router) {
     var v = "dm5"
 
 // Courses data upload
-        
+
     router.get('/'+v+'/data-upload/courses/goto-validation', function (req, res) {
         req.session.data[v+'courses-deleted'] = [];
         req.session.data[v+'courses-resolved'] = [];
@@ -52,7 +52,7 @@ module.exports = function (router) {
         // remove variable that contains row to be deleted
         delete req.session.data['resolverow'];
 
-        // Check to see if there are still errors and redirect accordingly        
+        // Check to see if there are still errors and redirect accordingly
         if (req.session.data[v+'courses-errorcount'] == (parseInt(req.session.data[v+'courses-deleted'].length) + parseInt(req.session.data[v+'courses-resolved'].length))){
             res.redirect('/'+v+'/data-upload/courses/checkandpublish');
         } else {
@@ -76,7 +76,7 @@ module.exports = function (router) {
 
 
 // Apprenticeships data upload
-        
+
     router.get('/'+v+'/data-upload/apprenticeships/goto-validation', function (req, res) {
         req.session.data[v+'apprenticeships-deleted'] = [];
         req.session.data[v+'apprenticeships-resolved'] = [];
@@ -109,10 +109,10 @@ module.exports = function (router) {
 
 
 // Venues data upload
-        
+
     router.get('/'+v+'/data-upload/venues/goto-validation', function (req, res) {
         req.session.data[v+'venues-deleted'] = [];
-        req.session.data[v+'venues-resolved'] = [];        
+        req.session.data[v+'venues-resolved'] = [];
         req.session.data[v+'venues-errorcount'] = 1; // this needs to become dynamic
         res.redirect('/'+v+'/data-upload/venues/validation');
     })
@@ -121,8 +121,8 @@ module.exports = function (router) {
     router.post('/'+v+'/data-upload/venues/validation', function (req, res) {
         if (req.session.data['venue-validation'] == "resolve"){
             res.redirect('/'+v+'/data-upload/venues/resolve');
-        } else if (req.session.data['venue-validation'] == "download"){
-            res.redirect('/'+v+'/data-upload/venues/download');
+        } else if (req.session.data['venue-validation'] == "upload"){
+            res.redirect('/'+v+'/data-upload/venues');
         } else if (req.session.data['venue-validation'] == "cancel"){
             delete req.session.data[v+'venues-deleted'];
             delete req.session.data[v+'venues-resolved'];
@@ -161,7 +161,7 @@ module.exports = function (router) {
         // remove variable that contains row to be deleted
         delete req.session.data['resolverow'];
 
-        // Check to see if there are still errors and redirect accordingly        
+        // Check to see if there are still errors and redirect accordingly
         if (req.session.data[v+'venues-errorcount'] == (parseInt(req.session.data[v+'venues-deleted'].length) + parseInt(req.session.data[v+'venues-resolved'].length))){
             res.redirect('/'+v+'/data-upload/venues/checkandpublish');
         } else {
@@ -186,14 +186,14 @@ module.exports = function (router) {
 
 
     // Data upload where venue deleted
-        
+
     router.get('/'+v+'/venues-deleted-upload/goto-validation', function (req, res) {
         res.redirect('/'+v+'/venues-deleted-upload/validation');
     })
 
 
 // TOO MANY ERRORS
-        
+
     router.get('/'+v+'/data-upload-toomanyerrors/courses/goto-validation-toomanyerrors', function (req, res) {
         res.redirect('/'+v+'/data-upload-toomanyerrors/courses/validation');
     })
@@ -228,7 +228,7 @@ module.exports = function (router) {
 
 
 // NO ERRORS
-        
+
     router.get('/'+v+'/data-upload-noerrors/courses/goto-validation-noerrors', function (req, res) {
         res.redirect('/'+v+'/data-upload-noerrors/courses/checkandpublish');
     })
