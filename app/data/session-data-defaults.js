@@ -69,9 +69,9 @@ module.exports = {
   "s18-prev-provider-type-tlevels": [
     "Design, Surveying and Planning for Construction",
     "Education and Childcare"
-  ], 
-  
-  tlevels, 
+  ],
+
+  tlevels,
 
   dm3courses: [
     {
@@ -1378,7 +1378,7 @@ module.exports = {
        "ATTENDANCE_PATTERN": "Daytime"
      }
   ],
-   
+
   dm4venues: [
     {
       "NAME": "Abington Community Centre",
@@ -2349,7 +2349,7 @@ module.exports = {
       "ATTENDANCE_PATTERN": "Daytime"
     }
   ],
-  
+
   dm5venues: [
    {
      "ID": "ABI001",
