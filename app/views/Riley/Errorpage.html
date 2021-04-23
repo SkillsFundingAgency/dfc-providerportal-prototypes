@@ -2,7 +2,7 @@
 {% extends "layouts/layout-dm5.html" %}
 
 {% block pageTitle %}
-  Data Upload - Cancel venue data upload
+  Data Upload - Cancel course data upload
 {% endblock %}
 
 {% block header %}
@@ -27,11 +27,8 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Delete unpublished venue data</h1>
-    <p class="govuk-body govuk-!-margin-bottom-7">The unpublished venues from your data upload will be deleted.</p>
-
-
-    <!--p class="govuk-body govuk-!-margin-bottom-7">The unpublished courses from your data upload will be deleted.</p-->
+    <h1 class="govuk-heading-xl">Cancel course data upload</h1>
+    <p class="govuk-body govuk-!-margin-bottom-7">The unpublished courses from your data upload will be deleted.</p>
 
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
@@ -44,7 +41,7 @@
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="areyousure" name="areyousure" type="checkbox" value="delete">
             <label class="govuk-label govuk-checkboxes__label" for="areyousure">
-              Yes, I want to delete unpublished venue data
+              Yes, I want to delete unpublished course data
             </label>
           </div>
         </div>
@@ -56,14 +53,14 @@
       <input type="hidden" name="deleterow" id ="deleterow" value="{{ data['row'] }}">
 
       {{ govukButton({
-        href: "/" + version + "/data-upload/venues/cancel/success",
+        href: "/" + version + "/data-upload/courses/cancel/success",
         text: "Delete",
         disabled: true,
         classes: "govuk-button--warning govuk-!-margin-right-5"
       }) }}
 
       {{ govukButton({
-        href: "/" + version + "/data-upload/venues/validation",
+        href: "/" + version + "/data-upload/courses/validation",
         text: "Cancel",
         classes: "govuk-button--secondary"
       }) }}
