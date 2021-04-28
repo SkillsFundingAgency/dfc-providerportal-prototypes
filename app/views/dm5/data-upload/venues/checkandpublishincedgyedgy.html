@@ -23,6 +23,19 @@
 {% block content %}
 
 <!-- start user panel -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-error-summary" style="border-color:#005ea5;">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      Non England address
+    </h2>
+    <div class="govuk-error-summary__body">
+      <p>You are adding a venue with an address that is outside of England.  Your venue will be published, courses linked to this address will not appear in any search results.</p>
+    </div>
+  </div>
+
+  </div>
+</div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -69,17 +82,6 @@
 
   </div>
 </div>
-
-<!-- <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    <p class="govuk-body">Your file of {{ (data['dm5venues'].length - data['dm5venues-deleted'].length) }} venues has no errors and is ready to publish to the course directory.</p>
-
-    <p class="govuk-body">There are 2 existing venues linked to courses, these have been added to the data upload.</p>
-
-  </div>
-</div> -->
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
