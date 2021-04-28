@@ -36,11 +36,13 @@
 
     <p class="govuk-body">Your file of {{ (data['dm5venues'].length - data['dm5venues-deleted'].length) }} venues has no errors and is ready to publish to the course directory.</p>
 
+    <p class="govuk-body">There are 2 existing venues linked to courses, these have been added to the data upload.</p>
+
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    
+
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
@@ -52,7 +54,7 @@
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Venue ID</th>
+              <th scope="col" class="govuk-table__header">Your venue reference</th>
               <th scope="col" class="govuk-table__header">Name</th>
               <th scope="col" class="govuk-table__header">Address</th>
               <th scope="col" class="govuk-table__header">Email</th>

@@ -73,7 +73,7 @@
             name: "dm5venue-resolve-id",
             label: {
               classes: "govuk-label--s",
-              text: "Venue ID"
+              text: "Your venue reference"
             },
             attributes: {
               disabled: "disabled"
@@ -111,7 +111,7 @@
             value: data['dm5venues'][data['row']-1].NAME
           }) }}
         {% endif %}
-      
+
         {{ govukInput({
           id: "dm5venue-resolve-line-1",
           name: "dm5venue-resolve-line-1",
@@ -124,7 +124,7 @@
             },
           value: data['dm5venues'][data['row']-1].ADDRESS1
         }) }}
-      
+
         {{ govukInput({
           id: "dm5venue-resolve-line-2",
           name: "dm5venue-resolve-line-2",
@@ -137,7 +137,7 @@
             },
           value: data['dm5venues'][data['row']-1].ADDRESS2
         }) }}
-      
+
         {{ govukInput({
           id: "dm5venue-resolve-town",
           name: "dm5venue-resolve-town",
@@ -151,7 +151,7 @@
           classes: "govuk-!-width-two-thirds",
           value: data['dm5venues'][data['row']-1].TOWNCITY
         }) }}
-      
+
         {{ govukInput({
           id: "dm5venue-resolve-county",
           name: "dm5venue-resolve-county",
@@ -165,7 +165,7 @@
           classes: "govuk-!-width-two-thirds",
           value: data['dm5venues'][data['row']-1].COUNTY
         }) }}
-      
+
         {{ govukInput({
           id: "dm5venue-resolve-postcode",
           name: "dm5venue-resolve-postcode",

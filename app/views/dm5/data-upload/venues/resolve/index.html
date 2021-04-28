@@ -35,7 +35,7 @@
     <h1 class="govuk-heading-xl">Resolve errors in your venue data</h1>
 
     <p class="govuk-body">
-        
+
     <p>
 
   </div>
@@ -48,7 +48,7 @@
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Row</th>
-          <th scope="col" class="govuk-table__header">Venue ID</th>
+          <th scope="col" class="govuk-table__header">Your venue reference</th>
           <th scope="col" class="govuk-table__header">Name</th>
           <th scope="col" class="govuk-table__header">Address</th>
           <th scope="col" class="govuk-table__header">Postcode</th>
@@ -60,8 +60,8 @@
         {% set i = 0 %}
         {% for venues in data['dm5venues'] %}
           {% set i = i + 1 %}
-          
-          {% if 
+
+          {% if
               (venues.ID == "") or
               (venues.NAME == "") or
               (venues.ADDRESS == "") or
