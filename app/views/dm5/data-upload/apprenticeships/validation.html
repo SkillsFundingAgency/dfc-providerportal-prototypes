@@ -35,9 +35,11 @@
       <p class="govuk-body">Your apprenticeship data has been uploaded.</p>
     {% endif %}
     <p class="govuk-body">
-      Your uploaded apprenticeship data has {{ data['dm5apprenticeships-errorcount'] - ((data['dm5apprenticeships-deleted'] | length) + (data['dm5apprenticeships-resolved'] | length)) }} errors in 15 apprenticeships. 
-    <p>
-    <!--p class="govuk-body">The unpublished apprenticeship data has {{ data['dm5apprenticeships-errorcount'] - ((data['dm5apprenticeships-deleted'] | length) + (data['dm5apprenticeships-resolved'] | length)) }} errors. 
+      Your data upload has {{ data['dm5apprenticeships-errorcount'] - ((data['dm5apprenticeships-deleted'] | length) + (data['dm5apprenticeships-resolved'] | length)) }} errors in 15 apprenticeships.  You must resolve these errors before your data can be published.<p>
+
+    <p class="govuk-body">You can <a href="xx">download all of your apprenticeship data including the errors  (opens in a CSV file)</a> to edit and upload.</p>
+
+    <!--p class="govuk-body">The unpublished apprenticeship data has {{ data['dm5apprenticeships-errorcount'] - ((data['dm5apprenticeships-deleted'] | length) + (data['dm5apprenticeships-resolved'] | length)) }} errors.
       You can <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">download all of your apprenticeships including the errors in a CSV file</a>.</p-->
 
   </div>
@@ -70,8 +72,8 @@
             {% set i = 0 %}
             {% for apprenticeships in data['dm5apprenticeships'] %}
               {% set i = i + 1 %}
-              
-              {% if 
+
+              {% if
                   (apprenticeships.STANDARD_CODE == "") or
                   (apprenticeships.STANDARD_VERSION == "") or
                   (apprenticeships.VENUE == "" and apprenticeships.SUB_REGION == "")
@@ -95,16 +97,16 @@
                     <td scope="row" class="govuk-table__cell govuk-body-s">{{ apprenticeships.DELIVERY_METHOD }}</td>
                     <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">
                       {% set allerrors = "" %}
-                      {% if (apprenticeships.STANDARD_CODE == "") %} 
+                      {% if (apprenticeships.STANDARD_CODE == "") %}
                         {% set allerrors = allerrors + "Standard code" %}
                       {% endif %}
-                      {% if (apprenticeships.STANDARD_VERSION == "") %} 
+                      {% if (apprenticeships.STANDARD_VERSION == "") %}
                         {% if allerrors != "" %}
                           {% set allerrors = allerrors + ", " %}
                         {% endif %}
                         {% set allerrors = allerrors + "Standard version" %}
                       {% endif %}
-                      {% if (apprenticeships.VENUE == "" and apprenticeships.SUB_REGION == "") %} 
+                      {% if (apprenticeships.VENUE == "" and apprenticeships.SUB_REGION == "") %}
                         {% if allerrors != "" %}
                           {% set allerrors = allerrors + ", " %}
                         {% endif %}
@@ -118,7 +120,7 @@
 
           </tbody>
         </table>
-        
+
       </div>
     </details>
 
@@ -127,7 +129,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h2 class="govuk-heading-l govuk-!-margin-top-5">
+    <h2 class="govuk-heading-m govuk-!-margin-top-5">
       What do you want to do?
     </h2>
 
@@ -138,11 +140,11 @@
         items: [
           {
             value: "download",
-            text: "Download CSV with errors"
+            text: "Upload a new data file"
           },
           {
             value: "cancel",
-            text: "Cancel upload"
+            text: "Delete upload"
           }
         ]
       }) }}

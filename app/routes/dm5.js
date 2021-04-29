@@ -87,7 +87,7 @@ module.exports = function (router) {
     // User choice on how to handle errors in upload
     router.post('/'+v+'/data-upload/apprenticeships/validation', function (req, res) {
         if (req.session.data['apprenticeship-validation'] == "download"){
-            res.redirect('/'+v+'/data-upload/apprenticeships/download');
+            res.redirect('/'+v+'/data-upload/apprenticeships/');
         } else if (req.session.data['apprenticeship-validation'] == "cancel"){
             res.redirect('/'+v+'/data-upload/apprenticeships/cancel');
         }
