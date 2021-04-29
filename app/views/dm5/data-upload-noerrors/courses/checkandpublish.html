@@ -34,7 +34,45 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <p class="govuk-body">Your file of 325 courses has no errors and is ready to be published to the course directory.</p>
+    <p class="govuk-body">Publishing your courses will add them to Publish to the course directory.
+
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key cd-width__50">
+            Your course data file
+          </dt>
+          <dd class="govuk-summary-list__value">
+            25 courses
+          </dd>
+        </div>
+        <!-- <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key cd-width__50">
+            Existing venues linked to live courses
+          </dt>
+          <dd class="govuk-summary-list__value">
+            2 venues
+          </dd>
+        </div> -->
+        <!-- <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key cd-width__50">
+            Ready to be published
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7 venues
+          </dd>
+        </div> -->
+      </dl>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            View list of courses
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          [Insert table] 
+        </div>
+      </details>
 
     {{ govukWarningText({
       text: "Publishing these courses will replace all of your courses on Publish to the course directory",
