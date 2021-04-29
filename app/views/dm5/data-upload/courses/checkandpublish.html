@@ -34,13 +34,42 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <p class="govuk-body">Your file of {{ (data['dm5courses'].length - data['dm5courses-deleted'].length) }} courses has no errors and is ready to publish to the course directory.</p>
+    <p class="govuk-body">Publishing your courses will add them to Publish to the course directory.
+
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key cd-width__50">
+            Your venue data file
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ (data['dm5courses'].length - data['dm5courses-deleted'].length) }} courses
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key cd-width__50">
+            Existing venues linked to live courses
+          </dt>
+          <dd class="govuk-summary-list__value">
+            2 venues
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key cd-width__50">
+            Ready to be published
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7 venues
+          </dd>
+        </div>
+      </dl>
+
+    <!-- <p class="govuk-body">Your file of {{ (data['dm5courses'].length - data['dm5courses-deleted'].length) }} courses has no errors and is ready to publish to the course directory.</p> -->
 
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    
+
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
@@ -102,7 +131,7 @@
   <div class="govuk-grid-column-two-thirds">
 
     {{ govukWarningText({
-      text: "Publishing these courses will replace all of your courses on Publish to the course directory",
+      text: "Publishing will replace all of your courses on Publish to the course directory",
       iconFallbackText: "warning"
     }) }}
 
