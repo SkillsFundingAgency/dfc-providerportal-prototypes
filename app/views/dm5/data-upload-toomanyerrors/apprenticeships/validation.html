@@ -30,9 +30,13 @@
     <h1 class="govuk-heading-xl">Apprenticeship data errors</h1>
 
     <p class="govuk-body">
-      Your uploaded course data has 73 errors in 136 apprenticeships. 
+      Your uploaded apprenticeship data has 73 errors in 136 apprenticeships. You must resolve these errors before your data can be published.
     <p>
 
+    <p class="govuk-body">
+        You can <a href="xx">download all of your apprenticeship data including the errors (opens in a CSV file)</a> to edit and upload.
+      <p>
+<!-- 
     <h2 class="govuk-heading-l govuk-!-margin-top-5">
       What do you want to do?
     </h2>
@@ -57,8 +61,13 @@
         classes: "govuk-button--publish",
         text: "Continue"
       }) }}
-    </form>
+ -->
 
+    </form>
+    <ul class="govuk-list">
+      <!-- <li><a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit venues</a></li>
+      <li><a class="govuk-link" href="/{{version}}/data-upload">Back to data upload</a></li> -->
+      <li><a class="govuk-link" href="/{{version}}">Back to the home screen</a></li>
   </div>
 
 </div>
@@ -70,4 +79,3 @@
 {% endblock %}
 
 <!-- DO NOT enter page content after the above block -->
-
