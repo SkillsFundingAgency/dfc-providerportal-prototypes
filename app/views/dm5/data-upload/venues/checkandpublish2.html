@@ -43,11 +43,11 @@
             <details class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
-                  View
+                  View list of venues
                 </span>
               </summary>
 
-              <div class="govuk-details__text">Insert table here.  Table width to be two-thirds and titles: Your venue reference, Venue name, Address (inc postcode).
+              <div class="govuk-details__text">
 
                 <table class="govuk-table">
                   <thead class="govuk-table__head">
@@ -100,32 +100,29 @@
                 </table>
 
               </div>
-
-              </details>
+            </details>
           </dt>
           <dd class="govuk-summary-list__value">
             {{ (data['dm5venues'].length - data['dm5venues-deleted'].length) }} venues
           </dd>
+
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key cd-width__50">
             Existing venues linked to live courses
-          <details class="govuk-details govuk-!-margin-bottom-0" data-module="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                View
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-              Insert table here.  Table width to be two-thirds and titles: Your venue reference, Venue name, Address (inc postcode).
-  </div>
-
-              <!-- <ul class="govuk-list">
-                {% for tlevel in data['s18-provider-type-tlevels'] %}
-                  <li>{{ tlevel }}</li>
-                {% endfor %}
-              </ul> -->
-          </details>
+            <details class="govuk-details govuk-!-margin-bottom-0" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Venues
+                </span>
+              </summary>
+              <div class="govuk-details__text govuk-!-padding-bottom-10 govuk-!-padding-top-1">
+                <!-- <ul class="govuk-list">
+                  {% for tlevel in data['s18-provider-type-tlevels'] %}
+                    <li>{{ tlevel }}</li>
+                  {% endfor %}
+                </ul> -->
+            </details>
           </dt
           <dd class="govuk-summary-list__value">
             2 venues
