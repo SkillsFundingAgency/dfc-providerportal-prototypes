@@ -1,0 +1,107 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Upload - Resolve errors in venue data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+    text: "Back to Data Upload",
+    href: "/" + version + "/data-upload/"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Resolve errors in your venue data</h1>
+
+    <p class="govuk-body">
+
+    <p>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+        <table class="govuk-table">
+          <!-- <caption class="govuk-table__caption govuk-table__caption--m">Month you apply</caption> -->
+          <thead class="govuk-table__head">
+            <!-- <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Your venue reference</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Venue name</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Address</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Error(s)</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">x</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">x</th>
+            </tr> -->
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Your venue reference</th>
+              <th scope="col" class="govuk-table__header">Venue name</th>
+              <th scope="col" class="govuk-table__header">Address</th>
+              <th scope="col" class="govuk-table__header">Error(s)</th>
+              <th scope="col" colspan="2" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__cell govuk-body-s">FLE001</th>
+              <td class="govuk-table__cell govuk-body-s"></td>
+              <td class="govuk-table__cell govuk-body-s">Fletton Way, Peterborough, PE6 7RP</td>
+              <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Venue name</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__cell govuk-body-s"></th>
+              <td class="govuk-table__cell govuk-body-s">Oundle Campus</td>
+              <td class="govuk-table__cell govuk-body-s">Fletton Way, Peterborough, PE6 7RP</td>
+              <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Your venue reference</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__cell govuk-body-s">FLE001</th>
+              <td class="govuk-table__cell govuk-body-s">Ourndle Campus</td>
+              <td class="govuk-table__cell govuk-body-s">Fletton Way, PE</td>
+              <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Address</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+<!--
+    {{ govukButton({
+      classes: "govuk-button govuk-button--secondary",
+        href: "/" + version + "/data-upload/",
+      text: "Cancel"
+    }) }}
+-->
+  </div>
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
