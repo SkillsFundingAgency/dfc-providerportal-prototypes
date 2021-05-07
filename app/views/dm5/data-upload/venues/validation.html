@@ -53,6 +53,49 @@
       <div class="govuk-details__text">
 
         <table class="govuk-table">
+          <!-- <caption class="govuk-table__caption govuk-table__caption--m">Month you apply</caption> -->
+          <thead class="govuk-table__head">
+            <!-- <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Your venue reference</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Venue name</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Address</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Error(s)</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">x</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">x</th>
+            </tr> -->
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Your venue reference</th>
+              <th scope="col" class="govuk-table__header">Venue name</th>
+              <th scope="col" class="govuk-table__header">Address</th>
+              <th scope="col" class="govuk-table__header">Error(s)</th>
+              <th scope="col" colspan="2" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__cell govuk-body-s">FLE001</th>
+              <td class="govuk-table__cell govuk-body-s"></td>
+              <td class="govuk-table__cell govuk-body-s">Fletton Way, Peterborough, PE6 7RP</td>
+              <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Venue name</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__cell govuk-body-s"></th>
+              <td class="govuk-table__cell govuk-body-s">Oundle Campus</td>
+              <td class="govuk-table__cell govuk-body-s">Fletton Way, Peterborough, PE6 7RP</td>
+              <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Your venue reference</td>
+
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__cell govuk-body-s">FLE001</th>
+              <td class="govuk-table__cell govuk-body-s">Ourndle Campus</td>
+              <td class="govuk-table__cell govuk-body-s">Fletton Way, PE</td>
+              <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Address</td>
+
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header">Your venue reference</th>
@@ -121,7 +164,7 @@
             {% endfor %}
 
           </tbody>
-        </table>
+        </table> -->
 
       </div>
     </details>
