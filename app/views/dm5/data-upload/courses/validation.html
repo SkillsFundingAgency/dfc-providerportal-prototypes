@@ -111,7 +111,7 @@
                     <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">
                   {% set allerrors = "" %}
                   {% if (courses.WHO_IS_THIS_COURSE_FOR == "") %}
-                    {% set allerrors = allerrors + "Who this course is for" %}
+                    {% set allerrors = allerrors + "Course description" %}
                   {% endif %}
                   {% if (courses.COURSE_NAME == "") %}
                     {% if allerrors != "" %}

@@ -448,7 +448,7 @@
 
         <!--  -->
         {% if (data['dm5courses'][data['row']-1].DURATION == "") or (data['dm5courses'][data['row']-1].DURATION_UNIT == "") %}
-        
+
           <div class="govuk-form-group govuk-form-group--error">
             <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="course-details-duration-value">
                 Duration
@@ -473,7 +473,7 @@
           </div>
 
         {% else %}
-        
+
           <div class="govuk-form-group">
             <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="course-details-duration-value">
                 Duration
@@ -555,7 +555,7 @@
 
         <!--  -->
         {% if (data['dm5courses'][data['row']-1].ATTENDANCE_PATTERN == "") %}
-        
+
           {{ govukRadios({
             idPrefix: "course-details-attendance",
             name: "course-details-attendance",
