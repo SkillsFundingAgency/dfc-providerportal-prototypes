@@ -1,0 +1,134 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Upload - Resolve errors in course data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Delete unpublished course</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Ref</th>
+          <th scope="col" class="govuk-table__header">LARS/QAN</th>
+          <th scope="col" class="govuk-table__header">Course name</th>
+          <th scope="col" class="govuk-table__header">Start date</th>
+          <th scope="col" class="govuk-table__header">Error(s)</th>
+        </tr>
+
+      </thead>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__cell govuk-body-s">FLE001</th>
+          <td class="govuk-table__cell govuk-body-s"></td>
+          <td class="govuk-table__cell govuk-body-s">Fletton Way, Peterborough, PE6 7RP</td>
+          <td class="govuk-table__cell govuk-body-s">3 Sept 2021</td>
+          <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">LARS</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__cell govuk-body-s"></th>
+          <td class="govuk-table__cell govuk-body-s">Oundle Campus</td>
+          <td class="govuk-table__cell govuk-body-s">Fletton Way, Peterborough, PE6 7RP</td>
+          <td class="govuk-table__cell govuk-body-s"></td>
+          <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Start date</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__cell govuk-body-s">FLE001</th>
+          <td class="govuk-table__cell govuk-body-s">Ourndle Campus</td>
+          <td class="govuk-table__cell govuk-body-s">Fletton Way, PE</td>
+          <td class="govuk-table__cell govuk-body-s"></td>
+          <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Address, Start date</td>
+        </tr>
+      </tbody>
+
+
+    </table>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Are you sure?
+          </h2>
+        </legend>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="areyousure" name="areyousure" type="checkbox" value="delete">
+            <label class="govuk-label govuk-checkboxes__label" for="areyousure">
+              Yes, I want to delete this unpublished course
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <form action="" method="post">
+
+      <input type="hidden" name="deleterow" id ="deleterow" value="{{ data['row'] }}">
+
+      {{ govukButton({
+        text: "Delete",
+        disabled: true,
+        classes: "govuk-button--warning govuk-!-margin-right-5"
+      }) }}
+
+      {{ govukButton({
+        href: "/" + version + "/data-upload/courses/resolve",
+        text: "Cancel",
+        classes: "govuk-button--secondary"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
+
+{% block pageScripts %}
+
+	<script>
+    $( "#areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--warning");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}
