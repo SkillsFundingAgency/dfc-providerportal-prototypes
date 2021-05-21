@@ -1,0 +1,121 @@
+{% set navActive = 'locations' %}
+{% extends "layouts/layout-sprint21.html" %}
+
+{% block pageTitle %}
+  Locations
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Add location
+      </h1>
+
+      <!--p class="govuk-body">This information will be displayed on Find a course as part of the course details.</p-->
+      <p class="govuk-body-l">This information will be visible when linked with the courses you provide.</p>
+
+      <form action="" method="post">
+
+        {{ govukInput({
+          id: "venue-add-name",
+          name: "venue-add-name",
+          classes: "govuk-!-width-two-thirds",
+          label: {
+            classes: "govuk-label--s",
+            text: "Location name"
+          },
+          value: data["venue-add-name"]
+        }) }}
+
+        <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Address</h2>
+        <p class="govuk-body">
+          {% if data['venue-add-line-1'] %}
+            {% if data['venue-add-line-1'] %}{{ data['venue-add-line-1'] }}{% endif %}
+            {% if data['venue-add-line-2'] %}<br>{{ data['venue-add-line-2'] }}{% endif %}
+            {% if data['venue-add-town'] %}<br>{{ data['venue-add-town'] }}{% endif %}
+            {% if data['venue-add-county'] %}<br>{{ data['venue-add-county'] }}{% endif %}
+            {% if data['venue-add-postcode'] %}<br>{{ data['venue-add-postcode'] }}{% endif %}
+          {% else %}
+            Buckingham Palace,<br>
+            LONDON<br>
+            SW1A 1AA
+          {% endif %}
+        </p>
+
+        {{ govukInput({
+          id: "venue-add-email",
+          name: "venue-add-email",
+          type: "email",
+          classes: "govuk-!-width-two-thirds",
+          label: {
+            classes: "govuk-label--s",
+            text: "Email address"
+          },
+          value: data["venue-add-email"]
+        }) }}
+
+        {{ govukInput({
+          id: "venue-add-telephone",
+          name: "venue-add-telephone",
+          classes: "govuk-!-width-one-third",
+          label: {
+            classes: "govuk-label--s",
+            text: "Telephone number"
+          },
+          value: data["venue-add-telephone"]
+        }) }}
+
+        {{ govukInput({
+          id: "venue-add-website",
+          name: "venue-add-website",
+          classes: "govuk-!-width-two-thirds",
+          label: {
+            classes: "govuk-label--s",
+            text: "Website"
+          },
+          value: data["venue-add-website"]
+        }) }}
+
+        {{ govukButton({
+          classes: "govuk-!-margin-right-3",
+          text: "Continue"
+        }) }}
+
+        {{ govukButton({
+          href: "/" + version + "/venues",
+          text: "Cancel",
+          classes: "govuk-button--secondary"
+        }) }}
+      
+      </form>
+      
+    </div>
+    <div class="govuk-grid-column-one-third">
+      
+    </div>
+  </div>
+  
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
