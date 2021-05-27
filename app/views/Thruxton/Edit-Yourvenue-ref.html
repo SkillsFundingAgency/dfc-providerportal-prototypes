@@ -1,0 +1,171 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Add location find address
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: 80%;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Apprenticeships
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              T Levels
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="#">
+              Venues
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Data upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- notification start -->
+
+
+<!-- notification end -->
+
+<!-- content start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Your venues</h1>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Your venue reference</th>
+          <th scope="col" class="govuk-table__header">Venue name</th>
+          <th scope="col" class="govuk-table__header">Address</th>
+          <th scope="col" class="govuk-table__header"></th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Ch22H1
+          </td>
+
+          <td class="govuk-table__cell">
+            Cheylesmore House
+          </td>
+            <td class="govuk-table__cell cd-table__wrap">
+              Cheylesmore House<br>
+              5 Quinton Road<br>
+              Coventry<br>
+              West Midlands<br>
+              CV1 2WT
+            </td>
+          <td class="govuk-table__cell"><a href="Edit-summary-venue-ref" class="govuk-link">View</a></td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">Delete</a></td>
+        </tr>
+      </tbody>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Ch22H1
+          </td>
+
+          <td class="govuk-table__cell">
+            Cheylesmore House
+          </td>
+            <td class="govuk-table__cell cd-table__wrap">
+              Cheylesmore House<br>
+              5 Quinton Road<br>
+              Coventry<br>
+              West Midlands<br>
+              CV1 2WT
+            </td>
+          <td class="govuk-table__cell"><a href="Edit-summary-venue-ref" class="govuk-link">View</a></td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">Delete</a></td>
+        </tr>
+      </tbody>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Ch22H1
+          </td>
+
+          <td class="govuk-table__cell">
+            Cheylesmore House
+          </td>
+            <td class="govuk-table__cell cd-table__wrap">
+              Cheylesmore House<br>
+              5 Quinton Road<br>
+              Coventry<br>
+              West Midlands<br>
+              CV1 2WT
+            </td>
+          <td class="govuk-table__cell"><a href="Edit-summary-venue-ref" class="govuk-link">View</a></td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">Delete</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+    <div class="govuk-button-group">
+      <a href="#"><button class="govuk-button" data-module="govuk-button">
+        Add a venue
+      </button></a>
+
+    </div>
+
+
+  </div>
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
