@@ -1,0 +1,209 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Add location find address
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: 80%;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Apprenticeships
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              T Levels
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="#">
+              Venues
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Data upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- notification start -->
+
+
+<!-- notification end -->
+
+<!-- content start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Resolve errors in your course data</h1>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" rowspan="2" class="govuk-table__header">Course name</th>
+      <th scope="col" class="govuk-table__header">Delivery type</th>
+      <th scope="col" class="govuk-table__header">Start date</th>
+      <th scope="col" class="govuk-table__header">Error(s)</th>
+      <th scope="col" colspan="2" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header-noborder">English Level 2 (Functional skills)</td>
+    </tr>
+    <tr>
+    <td class="govuk-body-s"> <strong>LARS</strong> 0012345X</td>
+  </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header-noborder"></th>
+      <td class="govuk-table__cell-noborder">Online</td>
+      <td class="govuk-table__cell-noborder">3 Sept 2019</td>
+      <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Start date</td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header"></td>
+      <td class="govuk-table__cell">Online</td>
+      <td class="govuk-table__cell">3 Sept 2019</td>
+      <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Start date</td> -->
+      <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+      <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header-noborder">English Level 2 (Functional skills)</td>
+    </tr>
+    <tr>
+    <td class="govuk-body-s"> <strong>LARS</strong> 0012345X</td>
+  </tr>
+  <tr>
+      <td class="govuk-table__cell-noborder"></td>
+      <td class="govuk-table__cell-noborder"></td>
+      <td class="govuk-table__cell-noborder"></td>
+      <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Course description</td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header-noborder"></td>
+      <td class="govuk-table__cell-noborder">Classroom</td>
+      <td class="govuk-table__cell-noborder">3 Sept 2019</td>
+      <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Start date</td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header-noborder"></td>
+      <td class="govuk-table__cell-noborder">Classroom</td>
+      <td class="govuk-table__cell-noborder">3 Sept 2021</td>
+      <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Venue</td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header"></td>
+      <td class="govuk-table__cell">Classroom</td>
+      <td class="govuk-table__cell">3 Sept 2021</td>
+      <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Your venue reference</td>
+      <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+      <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header-noborder">English Level 2 (Functional skills)</td>
+    </tr>
+    <tr>
+    <td class="govuk-body-s"> <strong>LARS</strong> 0012345X</td>
+    </tr>
+    <tr>
+      <td class="govuk-table__cell-noborder"></td>
+      <td class="govuk-table__cell-noborder"></td>
+      <td class="govuk-table__cell-noborder"></td>
+      <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Course description</td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header"></td>
+      <td class="govuk-table__cell">Workbased</td>
+      <td class="govuk-table__cell">3 Sept 2021</td>
+      <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Location</td>
+      <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+      <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header-noborder">Maths Level 2 </td>
+    </tr>
+    <tr>
+    <td class="govuk-body-s"> <strong>LARS</strong> 04563432</td>
+    </tr>
+    <tr>
+      <td class="govuk-table__cell-noborder"></td>
+      <td class="govuk-table__cell-noborder"></td>
+      <td class="govuk-table__cell-noborder"></td>
+      <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Course description</td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header"></td>
+      <td class="govuk-table__cell">Workbased</td>
+      <td class="govuk-table__cell">3 Sept 2021</td>
+      <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Location</td>
+      <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+      <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block
