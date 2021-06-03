@@ -1,0 +1,1128 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Upload - Resolve errors in course details
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#cost">Enter a cost or cost description</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h1 class="govuk-heading-xl">
+      Course details
+    </h1>
+    <p class="govuk-body-m">Add information on how the course will be delivered.</p>
+    <!--  -->
+
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-label--m" for="event-name">
+        Course name
+      </label>
+      <span id="event-name-hint" class="govuk-hint">
+        The course name displayed on the National Career Service, <a href="https://nationalcareers.service.gov.uk/find-a-course/search" target="_blank">Find a course</a>.
+      </span>
+      <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint" value="Free-Standing Mathematics Qualification: Additional Mathematics">
+    </div>
+
+    <!--  -->
+
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-label--m" for="event-name">
+        Your reference
+      </label>
+      <span id="event-name-hint" class="govuk-hint">
+        A reference that will help you identify this course in your internal systems. This will not be visible to learners.
+      </span>
+      <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+    </div>
+
+    <!--  -->
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading govuk-heading-m">
+            Course type
+          </h2>
+        </legend>
+        <span id="changed-name-hint" class="govuk-hint">
+          Select one option.
+        </span>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input checked="checked" class="govuk-radios__input show1 hide2" id="changed-name" name="changed-name" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="changed-name">
+              Classroom based
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input hide1 hide2" id="changed-name-2" name="changed-name" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+              Online
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input hide1 show2" id="changed-name-3" name="changed-name" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-3">
+              Work based
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <!--  -->
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading govuk-heading-m">
+            Start date
+          </h2>
+        </legend>
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+          <div class="govuk-radios__item">
+            <input checked="checked" class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+              Defined start date
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+            <div class="govuk-form-group">
+              <span id="passport-issued-hint" class="govuk-hint">
+                For example, 30 9 2019
+              </span>
+              <div class="govuk-date-input" id="passport-issued">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+              Flexible start date
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <!--  -->
+
+    <div class="govuk-form-group show-hide-section-2 notshown">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading govuk-heading-m" id="govuk-label-nationalRadioButtons">
+                Can you deliver this course anywhere in England?
+              </h2>
+              <span class="govuk-hint govuk-!-margin-top-3">Yes will show you are a national provider.</span>
+            </legend>
+            <div class="govuk-radios govuk-radios--inline" id="nationalRadioButtons" val-required-message="Choose if you can deliver this course anywhere in England">
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input hide6" id="nationalTrue" name="National" type="radio" value="True">
+                <label class="govuk-label govuk-radios__label" for="nationalTrue">Yes</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input show6" id="nationalFalse" name="National" type="radio" value="False">
+                <label class="govuk-label govuk-radios__label" for="nationalFalse">No</label>
+              </div>
+
+
+            </div>
+          </fieldset>
+
+          <div id="regions-section" style="margin-top: 30px;" class="show-hide-section-6 notshown">
+            <label class="govuk-label--m" id="govuk-label-SelectRegionCheckBoxes" for="select-region">
+              Where in England can you deliver this course?
+            </label>
+            <span id="select-region-hint" class="govuk-hint govuk-!-margin-top-3">
+              Select all regions and areas that apply.
+            </span>
+            <div class="govuk-checkboxes govuk-checkboxes--small" id="SelectRegionCheckBoxes" val-required-message="Select at least one region or sub-region">
+              <details class="govuk-details" role="group">
+                <summary class="govuk-details__summary" role="button" aria-controls="details-content-71cf3b1e-85ba-4e1b-a38f-2c951278ecec" aria-expanded="false">
+                  <span id="regionLabel+E12000004" class="govuk-details__summary-text">
+                    East Midlands
+                  </span>
+                </summary>
+                <div class="govuk-form-group" tabindex="-1" id="details-content-71cf3b1e-85ba-4e1b-a38f-2c951278ecec" aria-hidden="true">
+                  <span class="govuk-heading-s"><a tabindex="-1" class="govuk-link" id="SelectAll_E12000004" region-id="E12000004" href="#">Select all</a></span>
+                  <div tabindex="-1" class="flex-container govuk-grid-row region-checkboxes" id="details-content-E12000004" aria-hidden="true">
+
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000004-1" region-id="E12000004" name="SelectedRegions" type="checkbox" value="E06000015">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Derby</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000004-2" region-id="E12000004" name="SelectedRegions" type="checkbox" value="E10000007">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Derbyshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000004-3" region-id="E12000004" name="SelectedRegions" type="checkbox" value="E06000016">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Leicester</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000004-4" region-id="E12000004" name="SelectedRegions" type="checkbox" value="E10000018">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Leicestershire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000004-5" region-id="E12000004" name="SelectedRegions" type="checkbox" value="E10000019">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Lincolnshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000004-6" region-id="E12000004" name="SelectedRegions" type="checkbox" value="E10000021">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Northamptonshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000004-7" region-id="E12000004" name="SelectedRegions" type="checkbox" value="E06000018">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Nottingham</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000004-8" region-id="E12000004" name="SelectedRegions" type="checkbox" value="E10000024">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Nottinghamshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000004-9" region-id="E12000004" name="SelectedRegions" type="checkbox" value="E06000017">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Rutland</label>
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <details class="govuk-details" role="group">
+                <summary class="govuk-details__summary" role="button" aria-controls="details-content-17017ecc-bea2-4a9d-9589-2df91cc1687b" aria-expanded="false">
+                  <span id="regionLabel+E12000006" class="govuk-details__summary-text">
+                    East of England
+                  </span>
+                </summary>
+                <div class="govuk-form-group" tabindex="-1" id="details-content-17017ecc-bea2-4a9d-9589-2df91cc1687b" aria-hidden="true">
+                  <span class="govuk-heading-s"><a tabindex="-1" class="govuk-link" id="SelectAll_E12000006" region-id="E12000006" href="#">Select all</a></span>
+                  <div tabindex="-1" class="flex-container govuk-grid-row region-checkboxes" id="details-content-E12000006" aria-hidden="true">
+
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000006-1" region-id="E12000006" name="SelectedRegions" type="checkbox" value="E06000055">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Bedford</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000006-2" region-id="E12000006" name="SelectedRegions" type="checkbox" value="E10000003">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Cambridgeshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000006-3" region-id="E12000006" name="SelectedRegions" type="checkbox" value="E06000056">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Central Bedfordshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000006-4" region-id="E12000006" name="SelectedRegions" type="checkbox" value="E10000012">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Essex</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000006-5" region-id="E12000006" name="SelectedRegions" type="checkbox" value="E10000015">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Hertfordshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000006-6" region-id="E12000006" name="SelectedRegions" type="checkbox" value="E06000032">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Luton</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000006-7" region-id="E12000006" name="SelectedRegions" type="checkbox" value="E10000020">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Norfolk</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000006-8" region-id="E12000006" name="SelectedRegions" type="checkbox" value="E06000031">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Peterborough</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000006-9" region-id="E12000006" name="SelectedRegions" type="checkbox" value="E06000033">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Southend-on-Sea</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000006-10" region-id="E12000006" name="SelectedRegions" type="checkbox" value="E10000029">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Suffolk</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000006-11" region-id="E12000006" name="SelectedRegions" type="checkbox" value="E06000034">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Thurrock</label>
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <details class="govuk-details" role="group">
+                <summary class="govuk-details__summary" role="button" aria-controls="details-content-75d370b2-304d-441b-853f-e8a5ac0cc074" aria-expanded="false">
+                  <span id="regionLabel+E12000007" class="govuk-details__summary-text">
+                    London
+                  </span>
+                </summary>
+                <div class="govuk-form-group" tabindex="-1" id="details-content-75d370b2-304d-441b-853f-e8a5ac0cc074" aria-hidden="true">
+                  <span class="govuk-heading-s"><a tabindex="-1" class="govuk-link" id="SelectAll_E12000007" region-id="E12000007" href="#">Select all</a></span>
+                  <div tabindex="-1" class="flex-container govuk-grid-row region-checkboxes" id="details-content-E12000007" aria-hidden="true">
+
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-1" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000002">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Barking and Dagenham</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-2" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000003">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Barnet</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-3" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000004">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Bexley</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-4" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000005">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Brent</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-5" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000006">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Bromley</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-6" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000007">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Camden</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-7" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000001">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">City of London</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-8" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000008">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Croydon</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-9" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000009">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Ealing</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-10" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000010">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Enfield</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-11" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000011">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Greenwich</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-12" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000012">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Hackney</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-13" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000013">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Hammersmith and Fulham</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-14" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000014">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Haringey</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-15" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000015">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Harrow</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-16" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000016">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Havering</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-17" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000017">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Hillingdon</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-18" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000018">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Hounslow</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-19" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000019">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Islington</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-20" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000020">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Kensington and Chelsea</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-21" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000021">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Kingston upon Thames</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-22" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000022">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Lambeth</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-23" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000023">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Lewisham</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-24" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000024">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Merton</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-25" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000025">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Newham</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-26" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000026">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Redbridge</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-27" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000027">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Richmond upon Thames</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-28" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000028">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Southwark</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-29" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000029">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Sutton</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-30" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000030">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Tower Hamlets</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-31" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000031">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Waltham Forest</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-32" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000032">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Wandsworth</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000007-33" region-id="E12000007" name="SelectedRegions" type="checkbox" value="E09000033">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Westminster</label>
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <details class="govuk-details" role="group">
+                <summary class="govuk-details__summary" role="button" aria-controls="details-content-106c78b7-362e-4d5a-8c78-e719554b6254" aria-expanded="false">
+                  <span id="regionLabel+E12000001" class="govuk-details__summary-text">
+                    North East
+                  </span>
+                </summary>
+                <div class="govuk-form-group" tabindex="-1" id="details-content-106c78b7-362e-4d5a-8c78-e719554b6254" aria-hidden="true">
+                  <span class="govuk-heading-s"><a tabindex="-1" class="govuk-link" id="SelectAll_E12000001" region-id="E12000001" href="#">Select all</a></span>
+                  <div tabindex="-1" class="flex-container govuk-grid-row region-checkboxes" id="details-content-E12000001" aria-hidden="true">
+
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000001-1" region-id="E12000001" name="SelectedRegions" type="checkbox" value="E06000001">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">County Durham</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000001-2" region-id="E12000001" name="SelectedRegions" type="checkbox" value="E06000002">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Darlington</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000001-3" region-id="E12000001" name="SelectedRegions" type="checkbox" value="E06000003">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Gateshead</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000001-4" region-id="E12000001" name="SelectedRegions" type="checkbox" value="E06000004">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Hartlepool</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000001-5" region-id="E12000001" name="SelectedRegions" type="checkbox" value="E06000005">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Middlesbrough</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000001-6" region-id="E12000001" name="SelectedRegions" type="checkbox" value="E06000047">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Newcastle upon Tyne</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000001-7" region-id="E12000001" name="SelectedRegions" type="checkbox" value="E06000057">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">North Tyneside</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000001-8" region-id="E12000001" name="SelectedRegions" type="checkbox" value="E08000021">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Northumberland</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000001-9" region-id="E12000001" name="SelectedRegions" type="checkbox" value="E08000022">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Redcar and Cleveland</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000001-10" region-id="E12000001" name="SelectedRegions" type="checkbox" value="E08000023">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">South Tyneside</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000001-11" region-id="E12000001" name="SelectedRegions" type="checkbox" value="E08000024">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Stockton-on-Tees</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000001-12" region-id="E12000001" name="SelectedRegions" type="checkbox" value="E08000037">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Sunderland</label>
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <details class="govuk-details" role="group">
+                <summary class="govuk-details__summary" role="button" aria-controls="details-content-7d3ec69d-6ff9-4a94-bc57-c964db75b4ce" aria-expanded="false">
+                  <span id="regionLabel+E12000002" class="govuk-details__summary-text">
+                    North West
+                  </span>
+                </summary>
+                <div class="govuk-form-group" tabindex="-1" id="details-content-7d3ec69d-6ff9-4a94-bc57-c964db75b4ce" aria-hidden="true">
+                  <span class="govuk-heading-s"><a tabindex="-1" class="govuk-link" id="SelectAll_E12000002" region-id="E12000002" href="#">Select all</a></span>
+                  <div tabindex="-1" class="flex-container govuk-grid-row region-checkboxes" id="details-content-E12000002" aria-hidden="true">
+
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-1" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E06000008">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Blackburn with Darwen</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-2" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E06000009">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Blackpool</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-3" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000001">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Bolton</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-4" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000002">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Bury</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-5" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E06000049">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Cheshire East</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-6" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E06000050">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Cheshire West and Chester</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-7" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E10000006">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Cumbria</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-8" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E06000006">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Halton</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-9" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000011">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Knowsley</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-10" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E10000017">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Lancashire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-11" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000012">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Liverpool</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-12" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000003">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Manchester</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-13" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000004">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Oldham</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-14" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000005">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Rochdale</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-15" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000006">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Salford</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-16" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000014">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Sefton</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-17" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000013">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">St Helens</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-18" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000007">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Stockport</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-19" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000008">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Tameside</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-20" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000009">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Trafford</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-21" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E06000007">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Warrington</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-22" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000010">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Wigan</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000002-23" region-id="E12000002" name="SelectedRegions" type="checkbox" value="E08000015">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Wirral</label>
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <details class="govuk-details" role="group">
+                <summary class="govuk-details__summary" role="button" aria-controls="details-content-835f7d94-26d9-4756-8206-498d4531d544" aria-expanded="false">
+                  <span id="regionLabel+E12000008" class="govuk-details__summary-text">
+                    South East
+                  </span>
+                </summary>
+                <div class="govuk-form-group" tabindex="-1" id="details-content-835f7d94-26d9-4756-8206-498d4531d544" aria-hidden="true">
+                  <span class="govuk-heading-s"><a tabindex="-1" class="govuk-link" id="SelectAll_E12000008" region-id="E12000008" href="#">Select all</a></span>
+                  <div tabindex="-1" class="flex-container govuk-grid-row region-checkboxes" id="details-content-E12000008" aria-hidden="true">
+
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-1" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E06000036">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Bracknell Forest</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-2" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E06000043">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Brighton and Hove</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-3" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E10000002">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Buckinghamshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-4" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E10000011">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">East Sussex</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-5" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E10000014">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Hampshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-6" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E06000046">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Isle of Wight</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-7" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E10000016">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Kent</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-8" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E06000035">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Medway</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-9" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E06000042">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Milton Keynes</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-10" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E10000025">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Oxfordshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-11" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E06000044">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Portsmouth</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-12" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E06000038">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Reading</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-13" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E06000039">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Slough</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-14" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E06000045">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Southampton</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-15" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E10000030">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Surrey</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-16" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E06000037">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">West Berkshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-17" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E10000032">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">West Sussex</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-18" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E06000040">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Windsor and Maidenhead</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000008-19" region-id="E12000008" name="SelectedRegions" type="checkbox" value="E06000041">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Wokingham</label>
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <details class="govuk-details" role="group">
+                <summary class="govuk-details__summary" role="button" aria-controls="details-content-4321d6f1-294c-4796-ac0e-a5fc93fa1a27" aria-expanded="false">
+                  <span id="regionLabel+E12000009" class="govuk-details__summary-text">
+                    South West
+                  </span>
+                </summary>
+                <div class="govuk-form-group" tabindex="-1" id="details-content-4321d6f1-294c-4796-ac0e-a5fc93fa1a27" aria-hidden="true">
+                  <span class="govuk-heading-s"><a tabindex="-1" class="govuk-link" id="SelectAll_E12000009" region-id="E12000009" href="#">Select all</a></span>
+                  <div tabindex="-1" class="flex-container govuk-grid-row region-checkboxes" id="details-content-E12000009" aria-hidden="true">
+
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-1" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E06000022">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Bath and North East Somerset</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-2" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E06000028">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Bournemouth</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-3" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E06000023">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Bristol</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-4" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E06000052">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Cornwall</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-5" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E10000008">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Devon</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-6" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E10000009">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Dorset</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-7" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E10000013">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Gloucestershire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-8" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E06000053">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Isles of Scilly</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-9" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E06000024">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">North Somerset</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-10" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E06000026">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Plymouth</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-11" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E06000029">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Poole</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-12" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E10000027">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Somerset</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-13" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E06000025">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">South Gloucestershire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-14" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E06000030">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Swindon</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-15" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E06000027">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Torbay</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000009-16" region-id="E12000009" name="SelectedRegions" type="checkbox" value="E06000054">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Wiltshire</label>
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <details class="govuk-details" role="group">
+                <summary class="govuk-details__summary" role="button" aria-controls="details-content-6193695a-25b4-4889-bcbe-83615c0161b5" aria-expanded="false">
+                  <span id="regionLabel+E12000005" class="govuk-details__summary-text">
+                    West Midlands
+                  </span>
+                </summary>
+                <div class="govuk-form-group" tabindex="-1" id="details-content-6193695a-25b4-4889-bcbe-83615c0161b5" aria-hidden="true">
+                  <span class="govuk-heading-s"><a tabindex="-1" class="govuk-link" id="SelectAll_E12000005" region-id="E12000005" href="#">Select all</a></span>
+                  <div tabindex="-1" class="flex-container govuk-grid-row region-checkboxes" id="details-content-E12000005" aria-hidden="true">
+
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-1" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E08000025">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Birmingham</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-2" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E08000026">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Coventry</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-3" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E08000027">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Dudley</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-4" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E06000019">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Herefordshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-5" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E08000028">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Sandwell</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-6" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E06000051">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Shropshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-7" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E08000029">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Solihull</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-8" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E10000028">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Staffordshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-9" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E06000021">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Stoke-on-Trent</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-10" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E06000020">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Telford and Wrekin</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-11" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E08000030">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Walsall</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-12" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E10000031">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Warwickshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-13" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E08000031">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Wolverhampton</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000005-14" region-id="E12000005" name="SelectedRegions" type="checkbox" value="E10000034">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Worcestershire</label>
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <details class="govuk-details" role="group">
+                <summary class="govuk-details__summary" role="button" aria-controls="details-content-e7bf873d-49ee-4f89-87df-41f4c269e1a1" aria-expanded="false">
+                  <span id="regionLabel+E12000003" class="govuk-details__summary-text">
+                    Yorkshire and The Humber
+                  </span>
+                </summary>
+                <div class="govuk-form-group" tabindex="-1" id="details-content-e7bf873d-49ee-4f89-87df-41f4c269e1a1" aria-hidden="true">
+                  <span class="govuk-heading-s"><a tabindex="-1" class="govuk-link" id="SelectAll_E12000003" region-id="E12000003" href="#">Select all</a></span>
+                  <div tabindex="-1" class="flex-container govuk-grid-row region-checkboxes" id="details-content-E12000003" aria-hidden="true">
+
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-1" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E08000016">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Barnsley</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-2" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E08000032">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Bradford</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-3" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E08000033">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Calderdale</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-4" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E08000017">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Doncaster</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-5" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E06000011">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">East Riding of Yorkshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-6" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E06000010">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Kingston upon Hull</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-7" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E08000034">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Kirklees</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-8" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E08000035">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Leeds</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-9" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E06000012">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">North East Lincolnshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-10" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E06000013">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">North Lincolnshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-11" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E10000023">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">North Yorkshire</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-12" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E08000018">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Rotherham</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-13" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E08000019">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Sheffield</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-14" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E08000036">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">Wakefield</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input tabindex="-1" class="govuk-checkboxes__input" id="RegionName-E12000003-15" region-id="E12000003" name="SelectedRegions" type="checkbox" value="E06000014">
+                      <label class="govuk-label govuk-checkboxes__label" for="SelectedRegions">York</label>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+
+    <div class="govuk-form-group show-hide-section-1 shown">
+
+      <label class="govuk-label govuk-label--m">
+        Course location
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="">Select</option>
+        <option value="" selected>The Brooke House Sixth Form College</option>
+        <option value="">Hounsdown School</option>
+        <option value="">Junction Road Centre</option>
+      </select>
+      <p class="govuk-body govuk-!-margin-top-3"><a href="#" class="govuk-link">Add another location</a></p>
+    </div>
+
+    <!--  -->
+
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-label--m" for="event-name">
+        Course webpage
+      </label>
+      <span id="event-name-hint" class="govuk-hint">
+        The webpage for this course. For example, https://www.provider.com/coursename.
+      </span>
+      <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+    </div>
+
+    <!--  -->
+
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-label--m" for="event-name">
+        Cost
+      </label>
+      <div class="govuk-form-group govuk-form-group--error">
+        <label class="govuk-label" for="name">
+
+      <span id="event-name-hint" class="govuk-hint">
+        Cost of the course to the learner.
+      </span>
+      <span id="name-error" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span> Enter a cost or cost description
+      </span>
+      <div class="govuk-currency-input govuk-body">
+        <div class="govuk-currency-input__inner">
+          <span class="govuk-currency-input__inner__unit">£</span>
+          <input class="govuk-input govuk-input--width-10" aria-label="Enter amount in pounds" type="text" val-required-message="Enter cost or cost description" style="padding-left:25px" val-max-length="8"
+            val-max-length-message="Maximum allowed cost value is 999,999.99" id="Cost" name="Cost" value="">
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="255">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="with-hint">
+          Cost description
+        </label>
+
+        <div class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label" for="name">
+
+        <span id="with-hint-hint" class="govuk-hint">
+          A description of what the cost includes and additional costs to the learner. For example, assessment, exam fees or study materials.
+        </span>
+        <span id="name-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span> Enter a cost or cost description
+        </span>
+        <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+      </div>
+      <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 255 characters
+      </span>
+    </div>
+
+    <!--  -->
+<p></p>
+    <div class="govuk-form-group">
+      <label id="govuk-label-duration" class="govuk-label--m" for="DurationLength">
+        Duration
+      </label>
+
+      <div id="duration" class="duration-container" style="margin-top:15px" val-range-min="1" val-range-max="999" val-duration-message="Enter duration" val-decimal-message="Invalid duration entered">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <input pattern="^[0-9]*$" class="govuk-input govuk-input--width-2" style="display: inline;" type="number" maxlength="3" aria-labelledby="govuk-label-duration" id="DurationLength" name="DurationLength" value="">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <select class="govuk-select" id="durationDropDown" val-required-message="Duration unit is required" aria-labelledby="govuk-label-duration" data-val="true" data-val-required="The DurationUnit field is required." name="DurationUnit">
+              <option value="">Select</option>
+              <option>Hours</option>
+              <option>Days</option>
+              <option>Weeks</option>
+              <option selected="selected">Months</option>
+              <option>Years</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+<p></p>
+    <div class="govuk-form-group show-hide-section-1 shown">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading govuk-heading-m">
+            Course hours
+          </h2>
+        </legend>
+        <span id="changed-name-hint" class="govuk-hint">
+          Select one option.
+        </span>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input checked="checked" class="govuk-radios__input" id="full-time" name="studypattern" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="full-time">
+              Full time
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="part-time" name="studypattern" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="part-time">
+              Part time
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="flexible" name="studypattern" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="flexible">
+              Flexible
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <!--  -->
+<p></p>
+    <div class="govuk-form-group show-hide-section-1 shown">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading govuk-heading-m">
+            Attendance pattern
+          </h2>
+        </legend>
+        <span id="changed-name-hint" class="govuk-hint">
+          Select one option.
+        </span>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input checked="checked" class="govuk-radios__input" id="daytime" name="attendance" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="daytime">
+              Daytime
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="evening" name="attendance" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="evening">
+              Evening
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="weekend" name="attendance" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="weekend">
+              Weekend
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="dayblock" name="attendance" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="dayblock">
+              Day/Block Release
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <!--  -->
+    <p></p>
+
+    <a href="course-edit-screen-notification-details"><button class="govuk-button" data-module="govuk-button">Resolve errors</button></a>
+
+    <a href="course-edit-screen"><button class="govuk-button govuk-button--secondary govuk-!-margin-right-1" data-module="govuk-button">Cancel</button></a>
+
+  </div>
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->

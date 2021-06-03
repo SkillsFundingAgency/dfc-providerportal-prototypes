@@ -1,0 +1,192 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Upload - Resolve errors in course details
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#name">Enter who this course is for</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h1 class="govuk-heading-xl">
+      Course description
+    </h1>
+    <p class="govuk-body-m"> </p>
+    <!-- <p class="govuk-body govuk-!-margin-bottom-8"> There are some courses, where suggested information has been provided, you can amend the information if it’s not right for your course.</p>  -->
+    <p class="govuk-body">The course information you provide will be available on the National Careers Service, <a href="https://nationalcareers.service.gov.uk/find-a-course/search" target="_blank">Find a course</a>, available to learners searching for learning and training opportunities.
+
+      <p class="govuk-body govuk-!-margin-bottom-8">This is your opportunity to tell learners about your course, the content and style of the course information you provide should be aimed at the learner.</p>
+
+    <!--  -->
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="2000">
+      <div class="govuk-form-group">
+      <span>
+      <div class="govuk-form-group govuk-form-group--error">
+        <label class="govuk-label govuk-label--m" for="with-hint">
+          Who this course is for
+        </label>
+        <span id="with-hint-hint" class="govuk-hint">
+          Information that will help the learner decide whether this course is suitable for them, the learning experience and opportunities they can expect from the course.
+
+<p></p>
+  <span id="name-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter who this course is for <p></p>
+          <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="7" aria-describedby="with-hint-info with-hint-hint"></textarea>
+      </div>
+      <p></p>
+      <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 2000 characters
+      </span>
+    </div>
+  </div>
+
+    <!--  -->
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="with-hint">
+          Entry requirements
+        </label>
+        <span id="with-hint-hint" class="govuk-hint">
+          Specific skills, licences, vocational or academic requirements. For example, DBS, driving licence, computer knowledge, literacy or numeracy requirements.
+
+        </span>
+        <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="7" aria-describedby="with-hint-info with-hint-hint"></textarea>
+      </div>
+      <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 500 characters
+      </span>
+    </div>
+
+    <!--  -->
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1500">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="with-hint">
+          What you'll learn
+        </label>
+        <span id="with-hint-hint" class="govuk-hint">
+          The main topics, units or modules of the course a learner can expect, include key features. For example, communication, team leadership and time management.
+        </span>
+        <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="7" aria-describedby="with-hint-info with-hint-hint"></textarea>
+      </div>
+      <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 1500 characters
+      </span>
+    </div>
+
+    <!--  -->
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="with-hint">
+          How you'll learn
+        </label>
+        <span id="with-hint-hint" class="govuk-hint">
+          The methods used to deliver the course. For example, classroom based exercises, a work environment or online study materials.
+        </span>
+        <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="7" aria-describedby="with-hint-info with-hint-hint"></textarea>
+      </div>
+      <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 500 characters
+      </span>
+    </div>
+
+    <!--  -->
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="with-hint">
+          What you'll need to bring
+        </label>
+        <span id="with-hint-hint" class="govuk-hint">
+          What the learner will need to access or bring to the course. For example, personal protective clothing, tools, devices or internet access.
+        </span>
+        <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="7" aria-describedby="with-hint-info with-hint-hint"></textarea>
+      </div>
+      <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 500 characters
+      </span>
+    </div>
+
+    <!--  -->
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="with-hint">
+          How you'll be assessed
+        </label>
+        <span id="with-hint-hint" class="govuk-hint">
+          The ways a learner will be assessed.  For example, workplace assessment, written assignments, exams, group or individual project work or portfolio of evidence.
+        </span>
+        <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="7" aria-describedby="with-hint-info with-hint-hint"></textarea>
+      </div>
+      <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 500 characters
+      </span>
+    </div>
+
+    <!--  -->
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="with-hint">
+          What you can do next
+        </label>
+        <span id="with-hint-hint" class="govuk-hint">
+          The further opportunities a learner can expect after successfully completing the course. For example, a higher level course, apprenticeship or entry to employment.
+        </span>
+        <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="7" aria-describedby="with-hint-info with-hint-hint"></textarea>
+      </div>
+      <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 500 characters
+      </span>
+    </div>
+
+    <!--  -->
+
+    <a href="course-edit-screen-notification-description"><button class="govuk-button" data-module="govuk-button">Resolve errors</button></a>
+    <a href="course-edit-screen"><button class="govuk-button govuk-button--secondary govuk-!-margin-right-1" data-module="govuk-button">Cancel</button></a>
+
+
+  </div>
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
