@@ -1,0 +1,166 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Upload - Resolve errors in course data
+{% endblock %}
+
+{% block header %}
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              Venues
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Data upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Delete unpublished course</h1>
+  </div>
+</div>
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th scope="col" rowspan="2" class="govuk-table__header">Course name</th>
+<th scope="col" class="govuk-table__header">Delivery type</th>
+<th scope="col" class="govuk-table__header">Start date</th>
+<th scope="col" class="govuk-table__header">Error(s)</th>
+<th scope="col" colspan="2" class="govuk-table__header"></th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+
+<tr class="govuk-table__row">
+<td scope="row" class="govuk-table__header-noborder">English Level 2 (Functional skills)</td>
+</tr>
+<tr>
+<td class="govuk-body-s"> <strong>LARS</strong> 0012345X</td>
+</tr>
+
+<tr>
+<td class="govuk-table__cell"></td>
+<td class="govuk-table__cell"></td>
+<td class="govuk-table__cell"></td>
+<td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Course description</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    Deleting this course description will remove all online courses for this course.
+  </strong>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Are you sure?
+          </h2>
+        </legend>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="areyousure" name="areyousure" type="checkbox" value="delete">
+            <label class="govuk-label govuk-checkboxes__label" for="areyousure">
+              Yes, I want to delete this unpublished course
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <form action="" method="post">
+
+      <input type="hidden" name="deleterow" id ="deleterow" value="{{ data['row'] }}">
+
+      {{ govukButton({
+        text: "Delete",
+        disabled: true,
+        classes: "govuk-button--warning govuk-!-margin-right-5"
+      }) }}
+
+      {{ govukButton({
+        href: "/" + version + "/data-upload/courses/resolve",
+        text: "Cancel",
+        classes: "govuk-button--secondary"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
+
+{% block pageScripts %}
+
+	<script>
+    $( "#areyousure" ).on( "change", function() {
+      var $this = $(".govuk-button--warning");
+      if ($this.hasClass('govuk-button--disabled')) {
+        $this.removeAttr('disabled');
+        $this.removeClass('govuk-button--disabled');
+      } else {
+        $this.attr('disabled', 'disabled');
+        $this.addClass('govuk-button--disabled');
+      }
+    });
+  </script>
+
+{% endblock %}
