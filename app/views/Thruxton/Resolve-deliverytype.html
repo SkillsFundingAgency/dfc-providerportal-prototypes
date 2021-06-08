@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Delete a location
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              My courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="#">
+              Venues
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Data upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            How will the course be delivered?
+          </h1>
+        </legend>
+        <p></p>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live" name="how-will-the-course-be-delivered" type="radio" value="online">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+              Online
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-2" name="how-will-the-course-be-delivered" type="radio" value="classroom">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+              Classroom based
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-3" name="how-will-the-course-be-delivered" type="radio" value="work">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+              Work based
+            </label>
+          </div>
+        </div>
+
+      </fieldset>
+
+      <p></p>
+
+      <a href="course-edit-screen-notification-details"><button class="govuk-button" data-module="govuk-button">Resolve errors</button></a>
+
+      <a href="course-edit-screen"><button class="govuk-button govuk-button--secondary govuk-!-margin-right-1" data-module="govuk-button">Cancel</button></a>
+
+    </div>
+
+<!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
