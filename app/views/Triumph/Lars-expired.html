@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Data upload FE error expired LARS
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              Venues
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Data upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list govuk-!-margin-bottom-4">
+          <li>
+            Enter a current LARS code in the LARS_QAN column
+          </li>
+        </ul>
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            Row 59, expired code 94784932
+          </li>
+          <li>
+            Row 98, expired code 83736396
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Upload your course data</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body">
+      You can upload a CSV file to update your data in Publish to the course directory.
+    <p>
+
+    <p class="govuk-body">To ensure an upload is successful you must:<p>
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+      <li>add new venues <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">on screen</a> or by <a href="https://dfc-providerportal-prototypes.herokuapp.com/dm5/data-upload/venues" class="govuk-link govuk-link--blocked">venue upload</a> prior to a course upload</li>
+      <li>include existing and new courses in the data file</li>
+      <li>follow the <a href="/{{version}}/data-upload/courses/formatting" class="govuk-link"> file format requirements</a></li>
+    </ul>
+
+    <div class="govuk-form-group govuk-form-group--error">
+      <fieldset class="govuk-fieldset">
+
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Upload a file
+          </h1>
+        </legend>
+
+        <span id="file-upload-1-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span> Enter a current LARS code in the LARS_QAN column
+        </span>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </fieldset>
+    </div>
+
+    <div class="govuk-button-group">
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Data file downloads
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-list--bullet govuk-!-font-size-16">
+          <li>
+            <a href="javascript:peverntDefault();" class="govuk-link govuk-link--blocked">Download your published course data (CSV)</a>
+          </li>
+          <li>
+            <a href="javascript:peverntDefault();" class="govuk-link govuk-link--blocked">Download an empty course data template (CSV)</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
