@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Data upload FE error invalid LARS
+  Data upload FE error missing LARS
 {% endblock %}
 
 {% block header %}
@@ -60,7 +60,7 @@
 
 {% block content %}
 <!-- error sumamry -->
-<<div class="govuk-grid-row">
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
       <h2 class="govuk-error-summary__title" id="error-summary-title">
@@ -71,12 +71,35 @@
           <li>
             The file contains errors.
             <p></p>
-            You must enter a valid LARS code in the LARS_QAN column
+            You must enter a LARS code in the LARS_QAN column
           </li>
         </ul>
         <ul class="govuk-list govuk-error-summary__list">
           <li>
-            Row 59
+            Row 58
+          </li>
+          <li>
+            Row 61
+          </li>
+          <li>
+            Row 347
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-error-summary__body">
+        <p></p>
+        <ul class="govuk-list govuk-error-summary__list govuk-!-margin-bottom-4">
+          <li>
+            <p></p>
+            You must enter a current LARS code in the LARS_QAN column
+          </li>
+        </ul>
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            Row 59, expired code 94784932
+          </li>
+          <li>
+            Row 98, expired code 83736396
           </li>
         </ul>
       </div>
@@ -110,14 +133,14 @@
     <div class="govuk-form-group govuk-form-group--error">
       <fieldset class="govuk-fieldset">
 
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
           <h1 class="govuk-fieldset__heading">
-            Upload your file
+            Upload a file
           </h1>
         </legend>
 
         <span id="file-upload-1-error" class="govuk-error-message">
-          <span class="govuk-visually-hidden">Error:</span> The file contains errors and could not be uploaded
+          <span class="govuk-visually-hidden">Error:</span> The file contains errors and could not be uploaded.
         </span>
         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
       </fieldset>
