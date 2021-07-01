@@ -1008,31 +1008,48 @@
 </div>
     <!--  -->
 <p></p>
-    <div class="govuk-form-group">
-      <label id="govuk-label-duration" class="govuk-label--m" for="DurationLength">
-        Duration
-      </label>
-
-      <div id="duration" class="duration-container" style="margin-top:15px" val-range-min="1" val-range-max="999" val-duration-message="Enter duration" val-decimal-message="Invalid duration entered">
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <input pattern="^[0-9]*$" class="govuk-input govuk-input--width-2" style="display: inline;" type="number" maxlength="3" aria-labelledby="govuk-label-duration" id="DurationLength" name="DurationLength" value="">
-          </div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <select class="govuk-select" id="durationDropDown" val-required-message="Duration unit is required" aria-labelledby="govuk-label-duration" data-val="true" data-val-required="The DurationUnit field is required." name="DurationUnit">
-              <option value="">Select</option>
-              <option>Hours</option>
-              <option>Days</option>
-              <option>Weeks</option>
-              <option selected="selected">Months</option>
-              <option>Years</option>
-            </select>
-          </div>
-        </div>
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m" for="with-hint">
+    Duration
+  </label>
+    <label class="govuk-label" for="cost description">
+  <span id="with-hint-hint" class="govuk-hint">
+    The number of hours, days, weeks, months or years the course runs for.
+  </span>
+  <div id="duration" class="duration-container" style="margin-top:15px" val-range-min="1" val-range-max="999" val-duration-message="Enter duration" val-decimal-message="Invalid duration entered">
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <input pattern="^[0-9]*$" class="govuk-input govuk-input--width-2" style="display: inline;" type="number" maxlength="3" aria-labelledby="govuk-label-duration" id="DurationLength" name="DurationLength" value="">
       </div>
     </div>
+  </div>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m" for="with-hint">
+    Duration unit
+  </label>
+    <label class="govuk-label" for="cost description">
+  <div id="duration" class="duration-container" style="margin-top:15px" val-range-min="1" val-range-max="999" val-duration-message="Enter duration" val-decimal-message="Invalid duration entered">
+    <!-- <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <input pattern="^[0-9]*$" class="govuk-input govuk-input--width-2" style="display: inline;" type="number" maxlength="3" aria-labelledby="govuk-label-duration" id="DurationLength" name="DurationLength" value="">
+      </div>
+    </div> -->
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <select class="govuk-select" id="durationDropDown" val-required-message="Duration unit is required" aria-labelledby="govuk-label-duration" data-val="true" data-val-required="The DurationUnit field is required." name="DurationUnit">
+          <option value="">Select</option>
+          <option>Hours</option>
+          <option>Days</option>
+          <option>Weeks</option>
+          <option selected="selected">Months</option>
+          <option>Years</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!--  -->
 <p></p>
