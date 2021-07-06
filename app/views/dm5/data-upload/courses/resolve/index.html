@@ -45,131 +45,152 @@
   <div class="govuk-grid-column-full">
 
     <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <!-- <th scope="col" class="govuk-table__header">Row</th> -->
-          <th scope="col" class="govuk-table__header">Your reference</th>
-          <th scope="col" class="govuk-table__header">LARS/QAN</th>
-          <th scope="col" class="govuk-table__header">Course</th>
-          <th scope="col" class="govuk-table__header">Start date</th>
-          <th scope="col" class="govuk-table__header">Error(s)</th>
-          <th scope="col" colspan="2" class="govuk-table__header"></th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+  <th scope="col" rowspan="2" class="govuk-table__header">Course name</th>
+  <th scope="col" class="govuk-table__header">Delivery type</th>
+  <th scope="col" class="govuk-table__header">Start date</th>
+  <th scope="col" class="govuk-table__header">Error(s)</th>
+  <th scope="col" colspan="2" class="govuk-table__header"></th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+  <td scope="row" class="govuk-table__header-noborder">English Level 2 (Functional skills)</td>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;"></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link"></a></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link"><strong></strong></a></td>
+</tr>
+<tr>
+<td class="govuk-body-s"> <strong>LARS</strong> 0012345X</td>
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header-noborder"></th>
+  <td class="govuk-table__cell-noborder">Online</td>
+  <td class="govuk-table__cell-noborder">3 Sept 2019</td>
+  <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Start date</td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="data-upload/resolve-course-details-online" class="govuk-link">Resolve</a></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="data-upload/delete-course-run" class="govuk-link">Delete</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <td scope="row" class="govuk-table__header"></td>
+  <td class="govuk-table__cell">Online</td>
+  <td class="govuk-table__cell">3 Sept 2019</td>
+  <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Start date</td>
+  <td class="govuk-table__cell govuk-body-s"><a href="data-upload/resolve-course-details-online" class="govuk-link">Resolve</a></td>
+  <td class="govuk-table__cell govuk-body-s"><a href="data-upload/delete-course-run" class="govuk-link">Delete</a></td>
+</tr>
 
-        {% set i = 0 %}
-        {% for courses in data['dm5courses'] %}
-          {% set i = i + 1 %}
+<tr class="govuk-table__row">
+  <td scope="row" class="govuk-table__header-noborder">English Level 2 (Functional skills)</td>
+</tr>
+<tr>
+<td class="govuk-body-s"> <strong>LARS</strong> 0012345X</td>
+</tr>
+<tr>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Course description</td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="data-upload/resolve-course-descriptioncourse" class="govuk-link">Resolve</a></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="data-upload/delete-course-description" class="govuk-link">Delete</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <td scope="row" class="govuk-table__header-noborder"></td>
+  <td class="govuk-table__cell-noborder">Classroom</td>
+  <td class="govuk-table__cell-noborder">3 Sept 2019</td>
+  <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Start date</td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="data-upload/resolve-course-details-classroom" class="govuk-link">Resolve</a></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="data-upload/delete-course-run" class="govuk-link">Delete</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <td scope="row" class="govuk-table__header-noborder"></td>
+  <td class="govuk-table__cell-noborder">Classroom</td>
+  <td class="govuk-table__cell-noborder">3 Sept 2021</td>
+  <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Venue, Cost</td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="data-upload/resolve-course-details-classroom" class="govuk-link">Resolve</a></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <td scope="row" class="govuk-table__header"></td>
+  <td class="govuk-table__cell">Classroom</td>
+  <td class="govuk-table__cell">3 Sept 2021</td>
+  <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Your venue reference</td>
+  <td class="govuk-table__cell govuk-body-s"><a href="data-upload/resolve-course-details-classroom" class="govuk-link">Resolve</a></td>
+  <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <td scope="row" class="govuk-table__header-noborder">English Level 2 (Functional skills)</td>
+</tr>
+<tr>
+<td class="govuk-body-s"> <strong>LARS</strong> 0012345X</td>
+</tr>
+<tr>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Course description</td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <td scope="row" class="govuk-table__header"></td>
+  <td class="govuk-table__cell">Workbased</td>
+  <td class="govuk-table__cell">3 Sept 2021</td>
+  <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Location</td>
+  <td class="govuk-table__cell govuk-body-s"><a href="data-upload/resolve-course-details-workbased2" class="govuk-link">Resolve</a></td>
+  <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <td scope="row" class="govuk-table__header-noborder">Maths Level 2 </td>
+</tr>
+<tr>
+<td class="govuk-body-s"> <strong>LARS</strong> 04563432</td>
+</tr>
+<tr>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Course description</td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <td scope="row" class="govuk-table__header"></td>
+  <td class="govuk-table__cell">Workbased</td>
+  <td class="govuk-table__cell">3 Sept 2021</td>
+  <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Location, <br>Attendance pattern, Cost</td>
+  <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+  <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <td scope="row" class="govuk-table__header-noborder">Maths Level 2 </td>
+</tr>
+<tr>
+<td class="govuk-body-s"> <strong>LARS</strong></td>
+</tr>
+<tr>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder"></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Course description</td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+  <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <td scope="row" class="govuk-table__header"></td>
+  <td class="govuk-table__cell">Workbased</td>
+  <td class="govuk-table__cell">3 Sept 2021</td>
+  <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">LARS, Location</td>
+  <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Resolve</a></td>
+  <td class="govuk-table__cell govuk-body-s"><a href="#" class="govuk-link">Delete</a></td>
+</tr>
+</tbody>
+</table>
 
-          {% if
-              (courses.WHO_IS_THIS_COURSE_FOR == "") or
-              (courses.COURSE_NAME == "") or
-              (courses.DELIVERY_MODE == "") or
-              (courses.START_DATE == "") or
-              (courses.VENUE == "") or
-              (courses.COST == "") or
-              (courses.DURATION == "") or
-              (courses.DURATION_UNIT == "") or
-              (courses.STUDY_MODE == "") or
-              (courses.ATTENDANCE_PATTERN == "")
-          %}
-              <tr class="govuk-table__row"
-                {% if data['dm5courses-deleted'] %}
-                  {% if i in data['dm5courses-deleted'] %}
-                   style="display: none"
-                  {% endif %}
-                {% endif %}
-                {% if data['dm5courses-resolved'] %}
-                  {% if i in data['dm5courses-resolved'] %}
-                   style="display: none"
-                  {% endif %}
-                {% endif %}
-              >
-                <!-- <td scope="row" class="govuk-table__cell govuk-body-s">{{ i }}</td> -->
-                <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.ID }}</td>
-                <td scope="row" class="govuk-table__cell govuk-body-s">{{ courses.LARS_QAN }}</td>
-                <td class="govuk-table__cell govuk-body-s">{{courses.COURSE_NAME}}</td>
-                <td class="govuk-table__cell govuk-body-s">
-                {% if not courses.START_DATE == "" %}
-                  {{courses.START_DATE}}
-                {% endif %}
-                </td>
-                <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">
-                  {% set allerrors = "" %}
-                  {% if (courses.WHO_IS_THIS_COURSE_FOR == "") %}
-                    {% set allerrors = allerrors + "Course description" %}
-                  {% endif %}
-                  {% if (courses.COURSE_NAME == "") %}
-                    {% if allerrors != "" %}
-                      {% set allerrors = allerrors + ", " %}
-                    {% endif %}
-                    {% set allerrors = allerrors + "Course name" %}
-                  {% endif %}
-                  {% if (courses.DELIVERY_MODE == "") %}
-                    {% if allerrors != "" %}
-                      {% set allerrors = allerrors + ", " %}
-                    {% endif %}
-                    {% set allerrors = allerrors + "Course type" %}
-                  {% endif %}
-                  {% if (courses.START_DATE == "") %}
-                    {% if allerrors != "" %}
-                      {% set allerrors = allerrors + ", " %}
-                    {% endif %}
-                    {% set allerrors = allerrors + "Start date" %}
-                  {% endif %}
-                  {% if (courses.VENUE == "") %}
-                    {% if allerrors != "" %}
-                      {% set allerrors = allerrors + ", " %}
-                    {% endif %}
-                    {% set allerrors = allerrors + "Venue" %}
-                  {% endif %}
-                  {% if (courses.COST == "") %}
-                    {% if allerrors != "" %}
-                      {% set allerrors = allerrors + ", " %}
-                    {% endif %}
-                    {% set allerrors = allerrors + "Cost" %}
-                  {% endif %}
-                  {% if (courses.DURATION == "") or (courses.DURATION_UNIT == "") %}
-                    {% if allerrors != "" %}
-                      {% set allerrors = allerrors + ", " %}
-                    {% endif %}
-                    {% set allerrors = allerrors + "Duration" %}
-                  {% endif %}
-                  {% if (courses.STUDY_MODE == "") %}
-                    {% if allerrors != "" %}
-                      {% set allerrors = allerrors + ", " %}
-                    {% endif %}
-                    {% set allerrors = allerrors + "Course hours" %}
-                  {% endif %}
-                  {% if (courses.ATTENDANCE_PATTERN == "") %}
-                    {% if allerrors != "" %}
-                      {% set allerrors = allerrors + ", " %}
-                    {% endif %}
-                    {% set allerrors = allerrors + "Attendance pattern" %}
-                  {% endif %}
-                  {{ allerrors }}
-                </td>
-                <td scope="row" class="govuk-table__cell govuk-body-s">
-                  <a href="/{{version}}/data-upload/courses/resolve/showcourse?row={{ i }}" class="govuk-link">Resolve</a>
-                </td>
-                <td scope="row" class="govuk-table__cell govuk-body-s">
-                  <a href="/{{version}}/data-upload/courses/resolve/delete?row={{ i }}" class="govuk-link">Delete</a>
-                </td>
-              </tr>
-          {% endif %}
-        {% endfor %}
-
-      </tbody>
-    </table>
-<!--
-    {{ govukButton({
-      classes: "govuk-button govuk-button--secondary",
-        href: "/" + version + "/data-upload/",
-      text: "Cancel"
-    }) }}
--->
-  </div>
+</div>
 </div>
 
   <!-- End of content -->
