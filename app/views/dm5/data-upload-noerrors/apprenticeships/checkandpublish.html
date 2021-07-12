@@ -69,70 +69,84 @@
             View list of apprenticeships
           </span>
         </summary>
-                <table class="govuk-table">
-                  <thead class="govuk-table__head">
-                    <tr class="govuk-table__row">
-                      <th scope="col" class="govuk-table__header">Your reference</th>
-                      <th scope="col" class="govuk-table__header">Code</th>
-                      <th scope="col" class="govuk-table__header">Version</th>
-                      <th scope="col" class="govuk-table__header">Apprenticeship</th>
-                      <th scope="col" class="govuk-table__header">Delivery method</th>
-                      <!-- <th scope="col" class="govuk-table__header">Error(s)</th> -->
-                    </tr>
-                  </thead>
-                  <tbody class="govuk-table__body">
+        <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" rowspan="2" class="govuk-table__header">Apprenticeship</th>
+      <th scope="col" class="govuk-table__header">Delivery method</th>
+      <!-- <th scope="col" class="govuk-table__header">Error(s)</th> -->
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header-noborder">Forensic Collision Investigator (Integrated Degree)</td>
+      <td class="govuk-table__cell-noborder"></td>
+      <td class="govuk-table__cell-noborder"></td>
+      <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;"></td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link"></a></td>
+      <td class="govuk-table__cell-noborder govuk-body-s"><a href="#" class="govuk-link"><strong></strong></a></td>
+    </tr>
+    <tr>
+    <td class="govuk-body-s"> <strong>Standard Code</strong> 850 <strong>Version</strong> 1</td>
+  </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header-noborder"></th>
+      <td class="govuk-table__cell-noborder">Classroom</td>
+      <!-- <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Venue</td> -->
 
-                    {% set i = 0 %}
-                    {% for apprenticeships in data['dm5apprenticeships'] %}
-                      {% set i = i + 1 %}
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header"></td>
+      <td class="govuk-table__cell">Employer</td>
+      <!-- <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">National delivery</td> -->
+    </tr>
 
-                      {% if
-                          (apprenticeships.STANDARD_CODE == "") or
-                          (apprenticeships.STANDARD_VERSION == "") or
-                          (apprenticeships.VENUE == "" and apprenticeships.SUB_REGION == "")
-                      %}
-                          <tr class="govuk-table__row"
-                            {% if data['dm5apprenticeships-deleted'] %}
-                              {% if i in data['dm5apprenticeships-deleted'] %}
-                              style="display: none"
-                              {% endif %}
-                            {% endif %}
-                            {% if data['dm5apprenticeships-resolved'] %}
-                              {% if i in data['dm5apprenticeships-resolved'] %}
-                              style="display: none"
-                              {% endif %}
-                            {% endif %}
-                          >
-                            <td scope="row" class="govuk-table__cell govuk-body-s">{{ i }}</td>
-                            <td scope="row" class="govuk-table__cell govuk-body-s">{{ apprenticeships.STANDARD_CODE }}</td>
-                            <td scope="row" class="govuk-table__cell govuk-body-s">{{ apprenticeships.STANDARD_VERSION }}</td>
-                            <td scope="row" class="govuk-table__cell govuk-body-s">{{ apprenticeships.NAME }}</td>
-                            <td scope="row" class="govuk-table__cell govuk-body-s">{{ apprenticeships.DELIVERY_METHOD }}</td>
-                            <!-- <td scope="row" class="govuk-table__cell govuk-body-s" style="color: #d4351c;">
-                              {% set allerrors = "" %}
-                              {% if (apprenticeships.STANDARD_CODE == "") %}
-                                {% set allerrors = allerrors + "Standard code" %}
-                              {% endif %}
-                              {% if (apprenticeships.STANDARD_VERSION == "") %}
-                                {% if allerrors != "" %}
-                                  {% set allerrors = allerrors + ", " %}
-                                {% endif %}
-                                {% set allerrors = allerrors + "Standard version" %}
-                              {% endif %}
-                              {% if (apprenticeships.VENUE == "" and apprenticeships.SUB_REGION == "") %}
-                                {% if allerrors != "" %}
-                                  {% set allerrors = allerrors + ", " %}
-                                {% endif %}
-                                {% set allerrors = allerrors + "Venue" %}
-                              {% endif %}
-                              {{ allerrors }}
-                            </td> -->
-                          </tr>
-                      {% endif %}
-                    {% endfor %}
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header-noborder">Cyber Security Technologist (2021)</td>
+    </tr>
+    <tr>
+    <td class="govuk-body-s"> <strong>Standard Code</strong> 1021 <strong>Version</strong> 1</td>
+  </tr>
+  <tr>
+      <td class="govuk-table__cell-noborder"></td>
+      <td class="govuk-table__cell-noborder"></td>
+      <!-- <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Apprenticeship information</td> -->
 
-                  </tbody>
-                </table>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header-noborder"></td>
+      <td class="govuk-table__cell-noborder">Classroom</td>
+      <!-- <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Delivery mode</td> -->
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header"></td>
+      <td class="govuk-table__cell">Employer</td>
+      <!-- <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Sub region</td> -->
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header-noborder">DevOps engineer</td>
+    </tr>
+
+    <tr>
+    <td class="govuk-body-s"> <strong>Standard Code</strong> 825 <strong>Version</strong> 1</td>
+    </tr>
+
+    <tr>
+      <td class="govuk-table__cell-noborder"></td>
+      <td class="govuk-table__cell-noborder"></td>
+      <!-- <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;">Apprenticeship information</td> -->
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__header"></td>
+      <td class="govuk-table__cell">Both</td>
+      <!-- <td class="govuk-table__cell govuk-body-s"style="color: #d4351c;">Across England</td> -->
+    </tr>
+
+  </tbody>
+  </table>
       </details>
 
   </div>
