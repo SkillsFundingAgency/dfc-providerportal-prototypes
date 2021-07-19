@@ -40,6 +40,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
+    <p class="govuk-body">Your data upload file must be a CSV file type.  If you have more than one option when saving as a CSV, choose, <br> CSV UTF-8 (Comma delimited) (.csv).</p>
     <p class="govuk-body">The tables below show information about each field in the apprenticeship data upload file and how to complete it correctly.<p>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third">
@@ -75,6 +76,7 @@
     </div>
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
     <h2 class="govuk-heading-m govuk-!-margin-top-9 " id="STANDARD_CODE">STANDARD_CODE</h2>
+
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -89,7 +91,7 @@
           Notes
         </dt>
         <dd class="govuk-summary-list__value">
-          Standards are listed by LARS (Learning Aims Reference Service) codes. Codes can be found at Find a learning aim.
+          Standards are listed by <a href="https://findalearningaimbeta.fasst.org.uk/" class="govuk-link">LARS (opens in new tab)</a> (Learning Aims Reference Service).
         </dd>
       </div>
     </dl>
@@ -149,7 +151,7 @@
           Notes
         </dt>
         <dd class="govuk-summary-list__value">
-          Provide information for employers about how you will deliver this apprenticeship training course. The information should meet style and compliance guidelines.
+        <p class="govuk-body">Provide information for employers about how you will deliver this apprenticeship training course.</p> <p class="govuk-body">The information should meet style and compliance guidelines.</p>
         </dd>
       </div>
     </dl>
@@ -295,7 +297,6 @@
         <dd class="govuk-summary-list__value">
           Classroom<br>
           Employer<br>
-          Both
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -304,9 +305,11 @@
         </dt>
         <dd class="govuk-summary-list__value">
           Apprenticeship training can be delivered by the following methods:<br>
+          <p></p>
           Classroom - at your location on day or block release<br>
+
           Employer - at the employer's location<br>
-          Both - at your location and the employer's location
+
         </dd>
       </div>
     </dl>
@@ -314,13 +317,17 @@
     <!-- -->
 
     <h2 class="govuk-heading-m govuk-!-margin-top-9 " id="VENUE">VENUE</h2>
+
+    <p class="govuk-body">You can only enter a venue that is already added to Publish to the course directory.</p>
+    <p class="govuk-body">You must add new venues <a href="#">on screen</a> or by <a href="#">venue upload</a> prior to an apprenticeship upload</p>
+
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Mandatory
         </dt>
         <dd class="govuk-summary-list__value">
-          When <strong>DELIVERY_METHOD</strong> is <strong>Classroom</strong> or <strong>Both</strong>.
+          When <strong>DELIVERY_METHOD</strong> is <strong>Classroom</strong>.
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -344,7 +351,7 @@
           Notes
         </dt>
         <dd class="govuk-summary-list__value">
-          You can only enter a venue that is already added to Publish to the course directory. If you have a new venue you must add this to your locations before you can complete an apprenticeship data upload. For apprenticeship training courses with more than one venue, each apprenticeship must be entered on a separate row.
+          For apprenticeship training courses with more than one venue, each apprenticeship must be entered on a separate row.
         </dd>
       </div>
     </dl>
@@ -385,7 +392,7 @@
           Mandatory
         </dt>
         <dd class="govuk-summary-list__value">
-          When <strong>DELIVERY_METHOD</strong> is <strong>Both</strong> and <strong>not delivered across the whole of England</strong>.
+          When <strong>DELIVERY_METHOD</strong> is <strong>Classroom</strong>.
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -393,7 +400,7 @@
           Notes
         </dt>
         <dd class="govuk-summary-list__value">
-          How far you are willing to travel from the venue to deliver this apprenticeship training course. The radius must be between 1 and 874.
+          How far you are willing to travel from the venue to deliver this apprenticeship training course. <br><br>The radius must be between 1 and 874.
         </dd>
       </div>
     </dl>
@@ -407,7 +414,7 @@
           Mandatory
         </dt>
         <dd class="govuk-summary-list__value">
-          When <strong>DELIVERY_METHOD</strong> is <strong>Classroom</strong> or <strong>Both</strong>.
+          When <strong>DELIVERY_METHOD</strong> is <strong>Classroom</strong> or <strong>Employer</strong>.
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -433,7 +440,7 @@
 
     <!-- -->
 
-    <h2 class="govuk-heading-m govuk-!-margin-top-9 " id="ACROSS_ENGLAND">ACROSS_ENGLAND</h2>
+    <!-- <h2 class="govuk-heading-m govuk-!-margin-top-9 " id="ACROSS_ENGLAND">ACROSS_ENGLAND</h2>
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -459,7 +466,7 @@
           You can deliver the apprenticeship training course anywhere in England and you will be shown as a national provider for this course. For an apprenticeship training course not delivered across England you must enter a RADIUS.
         </dd>
       </div>
-    </dl>
+    </dl> -->
 
     <!-- -->
 
