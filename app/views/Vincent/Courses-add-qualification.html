@@ -1,12 +1,58 @@
-{% set navActive = 'home' %}
-{% extends "layouts/layout-dm5.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
-  Dashboard
+Courses-Qualifications
 {% endblock %}
 
 {% block header %}
-  {% include "includes/" + version + "/header.html" %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              Apprenticeships
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Venues
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              T Levels
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Data upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,22 +61,33 @@
   tag: {
     text: "beta"
   },
-  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
 }) }}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+<!-- {{ govukBackLink({
+  text: "Back to home screen",
+  href: "#"
+}) }} -->
+
 
 {% endblock %}
 
+
 {% block content %}
 
-<!-- start user panel -->
 
+<!-- content start -->
 <div class="govuk-grid-row govuk-!-margin-bottom-5">
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-l">PRESIDENCY LONDON COLLEGE LIMITED</h1>
     <p class="govuk-body">Your UK Provider Reference Number (UKPRN) is <span class="govuk-!-font-weight-bold">10035735</span></p>
-    <p><a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">Your provider details</a></p>
+    <p><a href="javascript:preventDefault();" class="govuk-link">Your provider details</a></p>
   </div>
 </div>
+
+<!--  -->
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -43,36 +100,23 @@
   <div class="govuk-grid-column-one-third">
     <div class="cd-card cd-card-2 cd-card--provider">
       <h2 class="govuk-heading-s">Published courses</h2>
-      <p class="cd-card-number-1">
-        {% if data['dm5courses-published'] %}
-          {{ data['dm5courses-published'] }}
-        {% else %}
-          10
-        {% endif %}
-
-        {% if data['dm5courses-resolved'] %}
-        <h2 class="govuk-heading-s govuk-!-margin-top-5">Unpublished courses</h2>
-        <p class="cd-card-number-1">
-          {{ (data['dm5courses'] | length) - (data['dm5courses-deleted'] | length)}}
-        </p>
-        {% endif %}
-      </p>
+      <p class="cd-card-number-1">224</p>
     </div>
   </div>
 
   <div class="govuk-grid-column-one-third">
     <div class="cd-card-1 cd-card--provider">
       <div class="cd-card-content">
-        <h2 class="govuk-heading-s">Your published courses</h2>
+        <h2 class="govuk-heading-s">Your courses</h2>
         <p class="govuk-body-s">View and manage the courses you offer to learners.</p>
       </div>
       <div class="cd-card-action">
         <ul class="govuk-list govuk-list__small">
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Add a course</a>
+            <a class="govuk-link" href="javascript:preventDefault();">Add a course<span class="govuk-visually-hidden"> further education courses</span></a>
           </li>
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit courses<span class="govuk-visually-hidden"> further education courses</span></a>
+            <a class="govuk-link" href="javascript:preventDefault();">View and edit courses<span class="govuk-visually-hidden"> further education courses</span></a>
           </li>
         </ul>
       </div>
@@ -80,42 +124,31 @@
   </div>
 
   <div class="govuk-grid-column-one-third">
-
     <div class="cd-card-1 cd-card--provider">
       <div class="cd-card-content">
         <h2 class="govuk-heading-s">Course data upload</h2>
-        <p class="govuk-body-s">Upload your courses with a CSV file.</p>
+        <p class="govuk-body-s">Upload your courses as a CSV file.</p>
       </div>
       <div class="cd-card-action">
         <ul class="govuk-list govuk-list__small">
-          {% if data['dm5courses-resolved'] %}
-            {% if (data['dm5courses-errorcount'] - ((data['dm5courses-deleted'] | length) + (data['dm5courses-resolved'] | length))) > 0 %}
-              <li>
-                <a class="govuk-link" href="/{{version}}/data-upload/courses/resolve">Your unpublished courses</a>
-              </li>
-            {% else %}
-              <li>
-                <a class="govuk-link" href="/{{version}}/data-upload/courses/checkandpublish">Your unpublished courses</a>
-              </li>
-            {% endif %}
-          {% endif %}
           <li>
-            <a class="govuk-link" href="/{{version}}/data-upload/courses">Upload new course data</a>
+            <a class="govuk-link" href="javascript:preventDefault();">Upload new course data<span class="govuk-visually-hidden"> further education courses</span></a>
           </li>
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download course data template (CSV)</a>
+            <a class="govuk-link" href="javascript:preventDefault();">Download course data template (CSV)</a>
           </li>
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published course data (CSV)</a>
+            <a class="govuk-link" href="javascript:preventDefault();">Download your published course data (CSV)</a>
           </li>
+
         </ul>
       </div>
     </div>
-
   </div>
 
 </div>
 
+<!--  -->
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -128,7 +161,7 @@
   <div class="govuk-grid-column-one-third">
     <div class="cd-card cd-card-2 cd-card--provider">
       <h2 class="govuk-heading-s">Published apprenticeships</h2>
-      <p class="cd-card-number-1">5</p>
+      <p class="cd-card-number-1">16</p>
     </div>
   </div>
 
@@ -141,10 +174,10 @@
       <div class="cd-card-action">
         <ul class="govuk-list govuk-list__small">
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Add an apprenticeship</a>
+            <a class="govuk-link" href="javascript:preventDefault();">Add an apprenticeship<span class="govuk-visually-hidden"> add apprenticeship training courses</span></a>
           </li>
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit apprenticeships</a>
+            <a class="govuk-link" href="javascript:preventDefault();">View and edit apprenticeships<span class="govuk-visually-hidden"> view and edit apprenticeship training courses</span></a>
           </li>
         </ul>
       </div>
@@ -152,7 +185,6 @@
   </div>
 
   <div class="govuk-grid-column-one-third">
-
     <div class="cd-card-1 cd-card--provider">
       <div class="cd-card-content">
         <h2 class="govuk-heading-s">Apprenticeship data upload</h2>
@@ -161,27 +193,26 @@
       <div class="cd-card-action">
         <ul class="govuk-list govuk-list__small">
           <li>
-            <a class="govuk-link" href="/{{version}}/data-upload/apprenticeships">Upload new apprenticeship data</a>
+            <a class="govuk-link" href="javascript:preventDefault();">Upload your apprenticeship data<span class="govuk-visually-hidden"> upload apprenticeship data</span></a>
           </li>
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published apprenticeship data (CSV)</a>
+            <a class="govuk-link" href="javascript:preventDefault();">Download your published apprenticeship data (CSV)</a>
           </li>
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download apprenticeship data template (CSV)</a>
+            <a class="govuk-link" href="javascript:preventDefault();">Download apprenticeship data template (CSV)</a>
           </li>
+
         </ul>
       </div>
     </div>
-
   </div>
 
 </div>
 
-
 <!--  -->
 
 
-<!--div class="govuk-grid-row">
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h2 class="govuk-heading-m section-heading">T Levels</h2>
   </div>
@@ -192,7 +223,8 @@
   <div class="govuk-grid-column-one-third">
     <div class="cd-card cd-card-2 cd-card--provider">
       <h2 class="govuk-heading-s">Published T Levels</h2>
-      <p class="cd-card-number-1">4</p>
+      <p class="cd-card-number-1">10</p>
+      <!-- <p class="cd-card-number-1">{{ data['sprint13-tlevels-count'] }}</p> -->
     </div>
   </div>
 
@@ -205,17 +237,19 @@
       <div class="cd-card-action">
         <ul class="govuk-list govuk-list__small">
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Add a T Level</a>
+            <a class="govuk-link" href="#">Add a T Level</a>
           </li>
+          {% if data['sprint13-tlevels-count'] > 0 %}
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit T Levels</a>
+            <a class="govuk-link" href="#">View and edit T Levels</a>
           </li>
+          {% endif %}
         </ul>
       </div>
     </div>
   </div>
 
-</div-->
+</div>
 
 <!--  -->
 
@@ -230,29 +264,23 @@
   <div class="govuk-grid-column-one-third">
     <div class="cd-card cd-card-2 cd-card--provider">
       <h2 class="govuk-heading-s">Published venues</h2>
-      <p class="cd-card-number-1">
-        {% if data['dm5venues-published'] %}
-          {{ data['dm5venues-published'] }}
-        {% else %}
-          3
-        {% endif %}
-      </p>
+      <p class="cd-card-number-1">5</p>
     </div>
   </div>
 
   <div class="govuk-grid-column-one-third">
     <div class="cd-card-1 cd-card--provider">
       <div class="cd-card-content">
-        <h2 class="govuk-heading-s">Your published venues</h2>
-        <p class="govuk-body-s">View and manage your learning and training venues.</p>
+        <h2 class="govuk-heading-s">Your venues</h2>
+        <p class="govuk-body-s">View and manage the venues for your learning and training.</p>
       </div>
       <div class="cd-card-action">
         <ul class="govuk-list govuk-list__small">
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Add a venue</a>
+            <a class="govuk-link" href="javascript:preventDefault();">Add a venue<span class="govuk-visually-hidden"> add a venue</span></a>
           </li>
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">View and edit venues</a>
+            <a class="govuk-link" href="javascript:preventDefault();">View and edit venues<span class="govuk-visually-hidden"> view and edit venues</span></a>
           </li>
         </ul>
       </div>
@@ -260,7 +288,6 @@
   </div>
 
   <div class="govuk-grid-column-one-third">
-
     <div class="cd-card-1 cd-card--provider">
       <div class="cd-card-content">
         <h2 class="govuk-heading-s">Venue data upload</h2>
@@ -268,46 +295,38 @@
       </div>
       <div class="cd-card-action">
         <ul class="govuk-list govuk-list__small">
-          {% if data['dm5venues-resolved'] %}
-            {% if (data['dm5venues-errorcount'] - ((data['dm5venues-deleted'] | length) + (data['dm5venues-resolved'] | length))) > 0 %}
-              <li>
-                <a class="govuk-link" href="/{{version}}/data-upload/venues/resolve">Your unpublished venues</a>
-              </li>
-            {% else %}
-              <li>
-                <a class="govuk-link" href="/{{version}}/data-upload/venues/checkandpublish">Your unpublished venues</a>
-              </li>
-            {% endif %}
-          {% endif %}
           <li>
-            <a class="govuk-link" href="/{{version}}/data-upload/venues">Upload new venue data</a>
+            <a class="govuk-link" href="javascript:preventDefault();">Upload new venue data<span class="govuk-visually-hidden"> upload apprenticeship data</span></a>
           </li>
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download your published venue data (CSV)</a>
+            <a class="govuk-link" href="javascript:preventDefault();">Download your published venue data (CSV)</a>
           </li>
           <li>
-            <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">Download venue data template (CSV)</a>
+            <a class="govuk-link" href="javascript:preventDefault();">Download venue data template (CSV)</a>
           </li>
+
         </ul>
       </div>
     </div>
   </div>
 
+
 </div>
 
 <!--  -->
+
+<!-- contact panel -->
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <div class="cd-contact-panel">
       <h2 class="govuk-heading-m">Need help?</h2>
       <p class="govuk-body">
-        If you’ve got a question about Publish to the course directory, <a class="govuk-link govuk-link--blocked" href="javascript:preventDefault();">contact the support team</a>.
+        If you’ve got a question about Publish to the course directory, <a class="govuk-link" href="contact">contact the support team</a>.
       </p>
     </div>
   </div>
 </div>
-
 
   <!-- End of content -->
 {% endblock %}
