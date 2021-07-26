@@ -14,6 +14,20 @@ $(document).ready(function () {
     $('input:checkbox').not(this).prop('checked', this.checked);
   });
 
+  $('#continue-delivery-type').on('click', function (e) {
+    e.preventDefault()
+    const radioValue = $('input[name=delivery-type]:checked').val()
+
+    if (radioValue === 'Classroom') {
+      window.location.href = '/Vincent/course-details-classroom'
+    } else if (radioValue === 'Online') {
+      window.location.href =
+        '/Vincent/course-details-online'
+    } else if (radioValue === 'Work-based') {
+      window.location.href = '/Vincent/course-details-Workbased'
+    }
+  })
+
 
 // DM v2 loaders
 
@@ -26,7 +40,7 @@ $(document).ready(function () {
     setTimeout(function() {window.location.href = "/dm2/data-upload/apprenticeships/checkandpublish";}, 6000);
   }
 
-  
+
 // DM v3 loaders
 
 if (document.getElementById('dm3-loader--courses')) {
@@ -37,7 +51,7 @@ if (document.getElementById('dm3-loader--apprenticeships')) {
   setTimeout(function() {$('#loading-message').html("Processing data");}, 2500);
   setTimeout(function() {window.location.href = "/dm3/data-upload/apprenticeships/goto-validation";}, 6000);
 }
-  
+
 
 // DM v4 loaders
 
@@ -49,7 +63,7 @@ if (document.getElementById('dm3-loader--apprenticeships')) {
     setTimeout(function() {$('#loading-message').html("Processing data");}, 1500);
     setTimeout(function() {window.location.href = "/dm4/data-upload/venues/goto-validation";}, 3000);
   }
-  
+
 
 // DM v5 loaders
 
@@ -108,6 +122,6 @@ if (document.getElementById('dm3-loader--apprenticeships')) {
     setTimeout(function() {$('#loading-message').html("Processing data");}, 1500);
     setTimeout(function() {window.location.href = "/v3/data-upload/venues/goto-validation";}, 3000);
   }
-  
+
 
 })
