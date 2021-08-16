@@ -1,0 +1,286 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Courses-Qualifications-Search
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="/Vincent/Homescreen-add-qualification">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Venues
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Data upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+<!-- {{ govukBackLink({
+  text: "Back to home screen",
+  href: "#"
+}) }} -->
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- content start -->
+
+<div class="govuk-grid-row">
+  <!--  -->
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Courses</h1>
+    <h2 class="govuk-heading-l">Which qualification are you awarding with this course?</h2>
+
+    <form action="" method="post" class="form">
+
+      <div class="cd-card cd-card-2 cd-card--provider">
+
+        <div class="govuk-form-group govuk-!-margin-bottom-0">
+          <label class="govuk-label" for="course-add-lars">
+            Search by Learning Aims Reference (LARS), title or keyword
+          </label>
+          <div id="event-name-hint" class="govuk-hint">
+            Enter a minimum of 3 characters
+          </div>
+          <input class="govuk-input govuk-!-width-one-half" id="course-add-lars" name="course-add-lars" type="text" value="des"><button class="govuk-button pttcd-button-search" data-module="govuk-button">Search</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<!-- <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p class="center-content">Found <strong>12843</strong> results for <strong>des</strong></p>
+  </div>
+</div> -->
+
+<div class="govuk-grid-row">
+
+  <!-- Filters -->
+  <div class="govuk-grid-column-one-quarter">
+
+    <button class="govuk-button" data-module="govuk-button">
+  Apply filters
+</button>
+
+                    <div class="govuk-form-group govuk-!-font-size-14">
+                        <div class="accordion govuk-heading-s" role="button" tabindex="0">Qualification level</div>
+                        <div class="panel">
+                            <fieldset class="govuk-fieldset" id="FilterCheckBoxes_0">
+                                <legend class="govuk-visually-hidden">
+                                    Select Qualification level Level
+                                </legend>
+                                <div class="govuk-checkboxes govuk-checkboxes--small" id="Filter_0">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-4" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="E">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-4">
+                                                Entry level
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-3" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="1">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-3">
+                                                Level 1
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-2" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="2">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-2">
+                                                Level 2
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-1" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="3">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-1">
+                                                Level 3
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-6" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="4">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-6">
+                                                Level 4
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-0" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="5">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-0">
+                                                Level 5
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-5" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="6">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-5">
+                                                Level 6
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-7" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="7">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-7">
+                                                Level 7
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="NotionalNVQLevelv2Filter-8" name="NotionalNVQLevelv2Filter" type="checkbox" aria-labelledby="Filter_0" value="X">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_NotionalNVQLevelv2Filter-8">
+                                                Unknown or not applicable
+                                            </label>
+                                        </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="govuk-form-group govuk-!-font-size-14">
+                        <div class="accordion govuk-heading-s" role="button" tabindex="0">Awarding organisation</div>
+                        <div class="panel">
+                            <fieldset class="govuk-fieldset" id="FilterCheckBoxes_1">
+                                <legend class="govuk-visually-hidden">
+                                    Select Awarding organisation Level
+                                </legend>
+                                <div class="govuk-checkboxes govuk-checkboxes--small" id="Filter_1">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-5" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="EDEXCEL">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-5">
+                                                EDEXCEL
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-8" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="HULLU">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-8">
+                                                HULLU
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-7" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="LANU">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-7">
+                                                LANU
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-3" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="LMU">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-3">
+                                                LMU
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-0" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="MULTI">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-0">
+                                                MULTI
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-9" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="NCG">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-9">
+                                                NCG
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-1" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="NONE">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-1">
+                                                NONE
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-6" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="OU">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-6">
+                                                OU
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-4" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="UCLAN">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-4">
+                                                UCLAN
+                                            </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="AwardOrgCodeFilter-2" name="AwardOrgCodeFilter" type="checkbox" aria-labelledby="Filter_1" value="UOPLY">
+                                            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" id="FilterLabel_AwardOrgCodeFilter-2">
+                                                UOPLY
+                                            </label>
+                                        </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+
+<h2 class="govuk-!-margin-top-9"></h2>
+<h2 class="govuk-heading-m">0 results</h2>
+
+
+<p class="govuk-body">No qualifications were found.</p>
+
+  </div>
+  <!--  -->
+
+</div>
+
+
+<!-- contact panel -->
+
+<!-- <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="cd-contact-panel">
+      <h2 class="govuk-heading-m">Need help?</h2>
+      <p class="govuk-body">
+        If you’ve got a question about Publish to the course directory, <a class="govuk-link" href="contact">contact the support team</a>.
+      </p>
+    </div>
+  </div>
+</div> -->
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
