@@ -1,0 +1,133 @@
+{% set navActive = 'datamanagement' %}
+{% extends "layouts/layout-dm5.html" %}
+
+{% block pageTitle %}
+  Data Upload - Upload apprenticeship data
+{% endblock %}
+
+{% block header %}
+  {% include "includes/" + version + "/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href=javascript:preventDefault();" class="govuk-link govuk-link--blocked">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "/" + version + "/data-upload/apprenticeships"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- start user panel -->
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list govuk-!-margin-bottom-4">
+          <li>
+            The file contains errors
+            <p></p>
+            You must enter a valid Standard in the STANDARD_CODE and STANDARD_VERSION column
+          </li>
+        </ul>
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            Row 58
+          </li>
+          <li>
+            Row 61
+          </li>
+          <li>
+            Row 347
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Upload your apprenticeship data</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body">
+      You can upload a CSV file to update your data in Publish to the course directory.
+    <p>
+
+    <p class="govuk-body">To ensure an upload is successful you must:<p>
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+      <li>add new venues <a href="javascript:preventDefault();" class="govuk-link govuk-link--blocked">on screen</a> or by <a href="https://dfc-providerportal-prototypes.herokuapp.com/dm5/data-upload/venues" class="govuk-link govuk-link--blocked">venue upload</a> prior to an <br>apprenticeship upload</li>
+      <li>include existing and new apprenticeships in the data file</li>
+      <li>follow the <a href="/{{version}}/data-upload/apprenticeships/formatting" class="govuk-link"> file format requirements</a></li>
+    </ul>
+
+    <div class="govuk-form-group govuk-form-group--error">
+      <fieldset class="govuk-fieldset">
+
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Upload a file
+          </h1>
+        </legend>
+
+        <span id="file-upload-1-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span> The file contains errors and could not be uploaded
+        </span>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </fieldset>
+    </div>
+
+
+    <div class="govuk-button-group">
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Data file downloads
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-list--bullet govuk-!-font-size-16">
+          <li>
+            <a href="javascript:peverntDefault();" class="govuk-link govuk-link--blocked">Download your published apprenticeship data (CSV)</a>
+          </li>
+          <li>
+            <a href="javascript:peverntDefault();" class="govuk-link govuk-link--blocked">Download an empty apprenticeship data template (CSV)</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+
+<!--  -->
+
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
