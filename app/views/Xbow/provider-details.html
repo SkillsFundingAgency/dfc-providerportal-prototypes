@@ -1,0 +1,200 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Provider details both
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              Apprenticeships
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="search-providers.html">
+              Venues
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Data upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back to home screen",
+  href: "#"
+}) }}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- content start -->
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">TOTTON COLLEGE (PART OF NACRO)</h1>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__header">Course directory status</td>
+          <td class="govuk-table__cell">Active</td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__header">UKPRN</td>
+          <td class="govuk-table__cell">10006958 </td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__header">Trading name</td>
+          <td class="govuk-table__cell">Basingstoke LTD</td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__header">Display name</td>
+          <td class="govuk-table__cell">TOTTON COLLEGE (PART OF NACRO)</td>
+          <td class="govuk-table__cell"><a class="govuk-link" style="padding-right: 1em" href="#">Change</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__header">Provider type</td>
+          <td class="govuk-table__cell">Both</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" style="padding-right: 1em" href="#">Change</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__header" style="border-bottom:0;">Provider information</td>
+          <td class="govuk-table__cell" style="border-bottom:0;"></td>
+          <td class="govuk-table__cell" style="border-bottom:0;">
+            <a class="govuk-link" style="padding-right: 1em" href="provider-information-both">Change</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td colspan="6" class="govuk-table__cell">
+            Laborum quis occaecat sunt nisi ullamco qui occaecat voluptate esse elit veniam. Lorem ad reprehenderit pariatur aliqua voluptate amet cillum enim ad duis laborum labore aute qui sint. Ut sit non veniam excepteur ipsum fugiat ex irure non
+            consequat aute amet ex velit consectetur. Consequat elit ipsum incididunt ullamco fugiat eu occaecat laborum pariatur sunt ex. Sit labore nulla minim incididunt cupidatat dolor ex. Sit ullamco in deserunt dolor esse non quis elit. </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with your provider details
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+        <h3 class="govuk-heading-s">UKPRN</h3>
+        <p class="govuk-body">A unique number allocated to providers by the UKRLP verification team, after successful UKRLP registration.</p>
+        <h3 class="govuk-heading-s">Trading name</h3>
+        <p class="govuk-body">The name your organisation trades under if it is different to the organisation name.<p>
+        Trading names can be added when registering with UKRLP or after registration. Sign in to the <a href="https://www.ukrlp.co.uk/ukrlp/ukrlp.login" target="_blank">UK Register of Learning Providers</a> to add or edit your trading name.</p>
+        <h3 class="govuk-heading-s">Display name</h3>
+        <p class="govuk-body">The name displayed to learners who can view and search for learning opportunities on the National Careers Service, Find a course.</p>
+        <h3 class="govuk-heading-s">Provider information</h3>
+        <p class="govuk-body">The information displayed on <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/">Find apprenticeship training for your apprentice</a>.</p>  <p>To edit this information contact the Course Directory Support Team on 0844 811 5073 or email <a href="support@coursedirectory.org.uk"></a>support@coursedirectory.org.uk.</p>
+        <h3 class="govuk-heading-s">Contact details</h3>
+        <p class="govuk-body">The Course provider displayed to learners who can view and search for learning opportunities on the National Careers Service, Find a course.</p>
+        <p>To edit this information sign in to the <a href="https://www.ukrlp.co.uk/ukrlp/ukrlp.login" target="_blank">UK Register of Learning Providers</a> to add or edit your Primary contact details.</p>
+        </div>
+    </details>
+
+  </div>
+
+  <h2 class="govuk-heading-m" style="margin-bottom:0px">Contact details</h2>
+  <div class="govuk-grid-column-one-third govuk-related-items ">
+
+    <h3 class="govuk-heading-m m20" style="margin:0px">Address</h3>
+    <p style="margin:0px">
+
+    </p>
+    <p style="margin:0px">
+
+    </p>
+    <p style="margin:0px">
+      Water Lane
+    </p>
+    <p style="margin:0px">
+      Totton
+    </p>
+    <p style="margin:0px">
+      Southampton
+    </p>
+    <p style="margin-top:0px">
+      SO40 3ZX
+    </p>
+
+    <h3 class="govuk-heading-m m20" style="margin-bottom:0px">Web</h3>
+    <p style="margin-top:0px">
+      www.totton.ac.uk
+    </p>
+    <h3 class="govuk-heading-m m20" style="margin-bottom:0px">Contact name</h3>
+    <p style="margin-top:0px">
+      Jane Smith
+    </p>
+    <h3 class="govuk-heading-m m20" style="margin-bottom:0px">Email</h3>
+    <p style="margin-top:0px">
+      mroom@totton.ac.uk
+    </p>
+    <h3 class="govuk-heading-m m20" style="margin-bottom:0px">Telephone</h3>
+    <p style="margin-top:0px">
+      023 8087 4874
+    </p>
+  </div>
+
+
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
