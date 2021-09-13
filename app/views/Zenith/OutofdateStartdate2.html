@@ -1,0 +1,233 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Out of date courses
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="/Vincent/Homescreen-add-qualification">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Venues
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Data upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back to home screen",
+  href: "#"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Enter page content inside this block -->
+
+<div class="govuk-grid-row">
+  <!--  -->
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Start dates</h1>
+    <p class="govuk-body-l">Your courses have start dates in the past, select a course to add a new start date.</p>
+    <p class="govuk-body">Your courses will be visible to learners searching for opportunities on National Careers Service, Find a Course.</p>
+    <br>
+    <div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        </div>
+      </div>
+    </div>
+    <table class="govuk-table">
+    <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header">Select a course</th>
+    </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+    <td scope="row" colspan="4" class="govuk-table__header-noborder"><span class="govuk-body"><strong>Access to Higher Education Diploma: English, Creative Writing and Media Studies</strong></td>
+    <td class="govuk-table__cell-noborder"></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+    <td class="govuk-table__cell">CVFWM102P</td>
+    <td scope="row" colspan="2" class="govuk-table__cell">Witney Campus</td>
+    <td class="govuk-table__cell">Classroom</td>
+    <td class="govuk-table__cell"></td>
+    <td class="govuk-table__cell">3/11/2019</td>
+    <td class="govuk-table__cell"></td>
+    <td class="govuk-table__cell"><div class="govuk-form-group">
+      <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+      </div></td>
+    </tr>
+    </tbody>
+
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+    <td scope="row" colspan="4" class="govuk-table__header-noborder"><span class="govuk-body"><strong>Nursing and Healthcare Professionals.  Access to HE</strong></td>
+    <td class="govuk-table__cell-noborder"></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+    <td class="govuk-table__cell">VFAM101P</td>
+    <td scope="row" colspan="2" class="govuk-table__cell">Abingdon Campus</td>
+    <td class="govuk-table__cell">Classroom</td>
+    <td class="govuk-table__cell"></td>
+    <td class="govuk-table__cell">10/09/2020</td>
+    <td class="govuk-table__cell"></td>
+    <td class="govuk-table__cell"><div class="govuk-form-group">
+      <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+      </div></td>
+    </tr>
+    </tbody>
+
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+    <td scope="row" colspan="4" class="govuk-table__header-noborder"><span class="govuk-body"><strong>Award in Counselling skills</strong></td>
+    <td class="govuk-table__cell-noborder"></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+    <td class="govuk-table__cell">CPWQ200P</td>
+    <td scope="row" colspan="2" class="govuk-table__cell"></td>
+    <td class="govuk-table__cell">Online</td>
+    <td class="govuk-table__cell"></td>
+    <td class="govuk-table__cell">01/04/2021</td>
+    <td class="govuk-table__cell"></td>
+    <td class="govuk-table__cell"><div class="govuk-form-group">
+      <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+      </div></td>
+    </tr>
+    </tbody>
+
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+    <td scope="row" colspan="4" class="govuk-table__header-noborder"><span class="govuk-body"><strong>British Sign Language online Beginners A</strong></td>
+    <td class="govuk-table__cell-noborder"></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+    <td class="govuk-table__cell">LPXT209P</td>
+    <td scope="row" colspan="2" class="govuk-table__cell"></td>
+    <td class="govuk-table__cell">Online</td>
+    <td class="govuk-table__cell"></td>
+    <td class="govuk-table__cell">29/09/2021</td>
+    <td class="govuk-table__cell"></td>
+    <td class="govuk-table__cell"><div class="govuk-form-group">
+      <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+      </div></td>
+    </tr>
+    </tbody>
+
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+    <td scope="row" colspan="4" class="govuk-table__header-noborder"><span class="govuk-body"><strong>BEng (Hons) in Electronic Eng - Birmingham City University - Embedded Electronic Systems Design and Development Engineer</strong></td>
+    <td class="govuk-table__cell-noborder"></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+    <td class="govuk-table__cell">CVFWM102P</td>
+    <td scope="row" colspan="2" class="govuk-table__cell">East Midlands, East of England</td>
+    <td class="govuk-table__cell">Workbased</td>
+    <td class="govuk-table__cell"></td>
+    <td class="govuk-table__cell">01/09/2021</td>
+    <td class="govuk-table__cell"></td>
+    <td class="govuk-table__cell"><div class="govuk-form-group">
+      <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+      </div></td>
+    </tr>
+    </tbody>
+
+    </table>
+
+    <div class="govuk-button-group">
+      <a href="Newdate"><button class="govuk-button" data-module="govuk-button">Continue</button></a>
+
+    
+    </div>
+
+    <!--  -->
+  </div>
+
+</div>
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
