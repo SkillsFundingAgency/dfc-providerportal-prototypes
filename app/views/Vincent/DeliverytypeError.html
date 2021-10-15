@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Deliverytype
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content" style="width: auto;">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Publish to the course directory
+      </a>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Home
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="helpdesk-dashboard.html">
+              Courses
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Venues
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="https://manage.signin.education.gov.uk/services">
+              Data upload
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__signin">
+      <a class="header__link govuk-header__link" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+<!-- {{ govukBackLink({
+  text: "Back to home screen",
+  href: "#"
+}) }} -->
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- content start -->
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#deliverytype">Select how the course will be delivered</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="govuk-form-group--error">
+  <fieldset class="govuk-fieldset" aria-describedby="deliverytype-hint deliverytype-error">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        How will the course be delivered?
+      </h1>
+    </legend>
+    <p></p>
+    <span id="nationality-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Select how the course will be delivered
+    </span>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="delivery-type" name="delivery-type" type="radio" value="Classroom">
+        <label class="govuk-label govuk-radios__label" for="Classroom">
+          Classroom
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="delivery-type" name="delivery-type" type="radio" value="Online">
+        <label class="govuk-label govuk-radios__label" for="Online">
+          Online
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="delivery-type" name="delivery-type" type="radio" value="Work-based">
+        <label class="govuk-label govuk-radios__label" for="Work-based">
+          Work based
+        </label>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+    <p></p>
+
+
+    <div class="govuk-button-group">
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+<a class="govuk-link" href="#">Cancel</a>
+</div>
+
+
+
+
+
+
+
+
+<!-- contact panel -->
+
+<!-- <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="cd-contact-panel">
+      <h2 class="govuk-heading-m">Need help?</h2>
+      <p class="govuk-body">
+        If you’ve got a question about Publish to the course directory, <a class="govuk-link" href="contact">contact the support team</a>.
+      </p>
+    </div>
+  </div>
+</div> -->
+
+  <!-- End of content -->
+{% endblock %}
+
+<!-- DO NOT enter page content after the above block -->
