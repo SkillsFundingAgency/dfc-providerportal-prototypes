@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Out of date courses
+Courses - Old start dates
 {% endblock %}
 
 {% block header %}
@@ -68,7 +68,7 @@ Out of date courses
 
 {{ govukBackLink({
   text: "Back to home screen",
-  href: "#"
+  href: "Oldstartdates"
 }) }}
 
 {% endblock %}
@@ -80,69 +80,79 @@ Out of date courses
 <div class="govuk-grid-row">
   <!--  -->
   <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-xl">Start dates</h1>
-    <p class="govuk-body-m">Your courses with start dates 2 months in the past will not be visible to learners searching for opportunities on National Careers Service, Find a course.</p>
-    <p class="govuk-body-m">Select courses to edit the start date.</p>
-    <br>
-    <div>
+    <h1 class="govuk-heading-xl">Courses</h1>
+    <p class="govuk-body-l">Courses with a start date 2 months in the past will not be visible to learners searching for opportunities on National Careers Service, Find a course.</p>
+    <p class="govuk-body-m">Select a course to edit the start date.  Selecting multiple courses will edit the start date for those courses.</p>
 
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-        </div>
-      </div>
-    </div>
+    <p class="govuk-body-m">If you have courses with multiple new start dates, you can <a href="#">update all courses by data upload</a>.
 
     <table class="govuk-table">
     <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-    <th scope="col" rowspan="2" class="govuk-table__header">Course name</th>
-    <th scope="col" rowspan="2" class="govuk-table__header">Your reference</th>
+    <th scope="col" class="govuk-table__header">Select </th>
+    <th scope="col" class="govuk-table__header">Course name</th>
+    <th scope="col" class="govuk-table__header">Your reference</th>
     <th scope="col" class="govuk-table__header">Delivery type</th>
     <th scope="col" class="govuk-table__header">Start date</th>
-    <th scope="col" class="govuk-table__header">Select</th>
     </tr>
     </thead>
 
     <tbody class="govuk-table__body">
 
-    <tr class="govuk-table__row">
-    <td scope="row" class="govuk-table__header-noborder"><span class="govuk-body-s"><strong>LARS title</strong> Science Level 2 (Functional skills) <p><span class="govuk-body-s"><strong>LARS</strong> 00222222</p></td>
-    </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><div class="govuk-form-group">
+            <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+            </div>
+          </td>
+      <td scope="row" class="govuk-table__header">Select all courses</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell govuk-body"></td>
 
-    <tr class="govuk-table__row">
+
+      </tr>
+      <tr class="govuk-table__row">
+    <td class="govuk-table__cell-noborder"><div class="govuk-form-group">
+        <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+          <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+        </div>
+      </td>
     <td scope="row" class="govuk-table__header-noborder">Science Level 2</td>
     <td class="govuk-table__cell-noborder">CVFWM102P</td>
     <td class="govuk-table__cell-noborder">Online</td>
     <td class="govuk-table__cell-noborder govuk-body">3/11/2019</td>
-    <td class="govuk-table__cell-noborder"><div class="govuk-form-group">
-      <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
-      </div></td>
+
+
     </tr>
 
     <tr class="govuk-table__row">
-    <td scope="row" class="govuk-table__cell">Science Level 2</td>
-    <td class="govuk-table__cell">CVFWM102P</td>
-    <td class="govuk-table__cell">Online</td>
-    <td class="govuk-table__cell govuk-body">3/11/2019</td>
-    <td class="govuk-table__cell"><div class="govuk-form-group">
-      <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
-      </div></td>
+      <td class="govuk-table__cell-noborder"><div class="govuk-form-group">
+          <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+          </div>
+        </td>
+    <td scope="row" class="govuk-table__cell-noborder">Science Level 2</td>
+    <td class="govuk-table__cell-noborder">CVFWM102P</td>
+    <td class="govuk-table__cell-noborder">Online</td>
+    <td class="govuk-table__cell-noborder govuk-body">3/11/2019</td>
     </tr>
 
-
-    <tr class="govuk-table__row">
-    <td scope="row" class="govuk-table__header-noborder"><span class="govuk-body-s"><strong>LARS title</strong> English Level 2 (Functional skills) <p><span class="govuk-body-s"><strong>LARS</strong> 0012345X</td>
-    </tr>
     <tr>
     <td class="govuk-table__cell-noborder"></td>
     <td class="govuk-table__cell-noborder"></td>
@@ -152,63 +162,58 @@ Out of date courses
     <td class="govuk-table__cell-noborder govuk-body-s"><a href="data-upload/delete-course-description" class="govuk-link"></a></td>
     </tr>
     <tr class="govuk-table__row">
+      <td class="govuk-table__cell-noborder"><div class="govuk-form-group">
+          <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+          </div>
+        </td>
     <td scope="row" class="govuk-table__cell-noborder">English Level 2 (Functional skills)</td>
     <td class="govuk-table__cell-noborder">ENGCBF2Y</td>
     <td class="govuk-table__cell-noborder govuk-body">Classroom</td>
     <td class="govuk-table__cell-noborder govuk-body">3/11/2019</td>
-    <td class="govuk-table__cell-noborder"><div class="govuk-form-group">
-      <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
-      </div></td>
     </tr>
     <tr class="govuk-table__row">
-    <td scope="row" class="govuk-table__cell">English Level 2 (Functional skills)</td>
-    <td class="govuk-table__cell">ENGCBF3Y</td>
-    <td class="govuk-table__cell govuk-body">Classroom</td>
-    <td class="govuk-table__cell govuk-body">3/11/2019</td>
-    <td class="govuk-table__cell"><div class="govuk-form-group">
-      <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
-      </div></td>
+      <td class="govuk-table__cell-noborder"><div class="govuk-form-group">
+          <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+          </div>
+        </td>
+    <td scope="row" class="govuk-table__cell-noborder">English Level 2 (Functional skills)</td>
+    <td class="govuk-table__cell-noborder">ENGCBF3Y</td>
+    <td class="govuk-table__cell-noborder govuk-body">Classroom</td>
+    <td class="govuk-table__cell-noborder govuk-body">3/11/2019</td>
+
     </tr>
 
     <tr class="govuk-table__row">
-    <td scope="row" class="govuk-table__header-noborder"><span class="govuk-body-s"><strong>LARS title</strong> English Level 2 (Functional skills) <p><span class="govuk-body-s"><strong>LARS</strong> 0012345X</td>
-    </tr>
-    <tr>
-    <td class="govuk-table__cell-noborder"></td>
-    <td class="govuk-table__cell-noborder"></td>
-    <td class="govuk-table__cell-noborder"></td>
-    <td class="govuk-table__cell-noborder govuk-body-s"style="color: #d4351c;"></td>
-    <td class="govuk-table__cell-noborder govuk-body-s"><a href="data-upload/resolve-course-descriptioncourse" class="govuk-link"></a></td>
-    <td class="govuk-table__cell-noborder govuk-body-s"><a href="data-upload/delete-course-description" class="govuk-link"></a></td>
-    </tr>
-    <tr class="govuk-table__row">
+      <td class="govuk-table__cell-noborder"><div class="govuk-form-group">
+          <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+          </div>
+        </td>
     <td scope="row" class="govuk-table__cell-noborder">English Level 2 (Functional skills)</td>
     <td class="govuk-table__cell-noborder">ENGWMF2Y</td>
     <td class="govuk-table__cell-noborder govuk-body">Work based</td>
     <td class="govuk-table__cell-noborder govuk-body">3/11/2019</td>
-    <td class="govuk-table__cell-noborder"><div class="govuk-form-group">
-      <fieldset class="govuk-fieldset"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc"><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
-      </div></td>
     </tr>
 
     </tbody>
     </table>
-
 
 
     <div class="govuk-button-group">
