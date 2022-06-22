@@ -8,6 +8,11 @@ lib/extensions/_extensions.scss
 .start.pid
 .port.tmp
 public
-node_modules/*
+node_modules/
 .tmuxp.*
-package-lock.json
+.idea
+/cypress/videos
+/cypress/screenshots
+/cypress/downloads
+/cypress/support
+/cypress/temp
