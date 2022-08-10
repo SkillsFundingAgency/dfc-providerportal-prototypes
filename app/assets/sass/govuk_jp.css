@@ -1,1479 +1,1491 @@
-﻿    body {
-    max-width: 100%;
-    overflow:hidden;
-    }
+﻿body {
+max-width: 100%;
+overflow:hidden;
+}
 
 
-    html {
-    scroll-behavior: smooth;
-    }
+html {
+scroll-behavior: smooth;
+}
 
-    .govuk-grid-column-full {
-    width: 100%;
-    float: none !important; 
-    }
-    .govuk-header__content{
-    width:100% !important;
-    }
-    .govuk-primary-wrapper {
-    width: 1260px !important
-    }
+.govuk-grid-column-full {
+width: 100%;
+float: none !important; 
+}
+.govuk-header__content{
+width:100% !important;
+}
+.govuk-primary-wrapper {
+width: 1260px !important
+}
 
-    .govuk-container
-    {
-    position:relative;
-    text-align:center;
-    color:white;
-    }
+.govuk-container
+{
+position:relative;
+text-align:center;
+color:white;
+}
 
-    .govuk-header__container {
-    border-bottom: 10px solid #E3048A !important;
-    }
+.govuk-header__container {
+border-bottom: 10px solid #E3048A !important;
+}
 
-    .menu-item {
-    list-style-type: none !important;
-    margin-left: -25px;
-    }
+.menu-item {
+list-style-type: none !important;
+margin-left: -25px;
+}
 
-    #imgSeparator{
-    width:100%;
-    padding:3px;
-    }
+#imgSeparator{
+width:100%;
+padding:3px;
+}
 
-    #frm_Social {
-    width:100%;
-    height: 315px;
-    }
+#frm_Social {
+width:100%;
+height: 315px;
+}
 
-    .top-left {
-    position: absolute;
-    left: 150px;
-    margin-top: -250px;
-    padding: 5px;
-    margin-left: 320px;
-    text-align: center;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    /* width: 50%;*/
-    text-align: left;
-    }
+.top-left {
+position: absolute;
+left: 150px;
+margin-top: -250px;
+padding: 5px;
+margin-left: 320px;
+text-align: center;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+/* width: 50%;*/
+text-align: left;
+}
 
-    .top-left-secondary {
-    position: absolute;
-    left: 150px;
-    margin-top: -180px;
-    padding: 5px;
-    margin-left: 320px;
-    text-align:left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    /*width: 35%;*/
-    float:left;
+.top-left-secondary {
+position: absolute;
+left: 150px;
+margin-top: -180px;
+padding: 5px;
+margin-left: 320px;
+text-align:left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+/*width: 35%;*/
+float:left;
 
-    }
+}
 
-    #dvRelatedJobs {
-    margin-top: -79px;
-    background: #fff;
-    position: absolute;
-    left: 356px;
-    padding: 5px;
-    margin-left: -15px;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 40%;
-    float: left;
-    height: 40px;
-    border-left: 4px solid #E3048A;
-    }
-
-
-    #bannerImgMobile {
-    display: none;
-    }
-
-    .js-hidden{
-    display:none;
-    }
-
-    .govuk-label-heading {
-    color: #E3048A;
-    font-size: 25px;
-    font-weight: 800;
-    }
-    .govuk-label_heading_gds {
-        color: #000;
-        font-size: 25px;
-        font-weight: 800;
-    }
-    .govuk-label-heading-gds {
-    color: #1d70b8;
-    font-size: 25px;
-    font-weight: 800;
-    }
+#dvRelatedJobs {
+margin-top: -79px;
+background: #fff;
+position: absolute;
+left: 356px;
+padding: 5px;
+margin-left: -15px;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 40%;
+float: left;
+height: 40px;
+border-left: 4px solid #E3048A;
+}
 
 
-    .govuk-content-heading {
-    font-weight: 800;
-    font-size: 2.5rem !important;
-    }
+#bannerImgMobile {
+display: none;
+}
 
-    .govuk-panel {
-    background-color: #9fc5e842;
-    border-radius: 20px;
-    padding: 20px;
-    text-align:left;
-    }
-    .govuk-label-pink {
-    color: #E3048A !important;
-    }
+.js-hidden{
+display:none;
+}
 
-    .govuk-label-black{
-    color: black !important;
-    }
+.govuk-label-heading {
+color: #E3048A;
+font-size: 25px;
+font-weight: 800;
+}
+.govuk-label_heading_gds {
+color: #000;
+font-size: 25px;
+font-weight: 800;
+}
+.govuk-label-heading-gds {
+color: #1d70b8;
+font-size: 25px;
+font-weight: 800;
+}
 
-    .govuk-wrapper-pink {
-    background: #ff1493 !important;
-    margin-top: 70px;
-    padding: 10px;
-    padding: 15px;
-    border-radius: 25px;
-    }
 
-    #_ContactUs {
-    /*margin-left: 30px;*/
-    }
-    #dvContactUs {
-    background-color: #fff;
-    width: 350px;
-    }
+.govuk-content-heading {
+font-weight: 800;
+font-size: 2.5rem !important;
+}
 
-    #_ContactDesc {
-    float: left;
-    color: #fff;   
-    }
+.govuk-panel {
+background-color: #9fc5e842;
+border-radius: 20px;
+padding: 20px;
+text-align:left;
+}
+.govuk-label-pink {
+color: #E3048A !important;
+}
 
-    #persona-desktop{
-    display:block;
-    }
+.govuk-label-black{
+color: black !important;
+}
 
-    #persona-mobile {
-    display: none;
-    }
-    .govuk-persona {
-    float: left;
-    height: 300px;
-    }
+.govuk-label-grey {
+    color: #767676 !important;
+}
 
-    .govuk-textbox {
-    border-radius: 15px;
-    }
-    .govuk-search-button {
-    background: url('/public/images/search-button.png') no-repeat 2px;
-    width: 50px;
-    border-radius: 15px;
-    background-color: black;
-    margin-left: -35px;
-    }
-    .govuk-button-color-pink {
-    background: #ff1493 !important;
+.govuk-wrapper-pink {
+background: #ff1493 !important;
+margin-top: 70px;
+padding: 10px;
+padding: 15px;
+border-radius: 25px;
+}
+
+#_ContactUs {
+/*margin-left: 30px;*/
+}
+#dvContactUs {
+background-color: #fff;
+width: 350px;
+}
+
+#_ContactDesc {
+float: left;
+color: #fff;   
+}
+
+#persona-desktop{
+display:block;
+}
+
+#persona-mobile {
+display: none;
+}
+.govuk-persona {
+float: left;
+height: 300px;
+}
+
+.govuk-textbox {
+border-radius: 15px;
+}
+.govuk-search-button {
+background: url('/public/images/search-button.png') no-repeat 2px;
+width: 50px;
+border-radius: 15px;
+background-color: black;
+margin-left: -35px;
+}
+.govuk-button-color-pink {
+background: #ff1493 !important;
+padding: 10px !important;
+border-radius: 18px !important;
+color: #ffffff;
+font-weight: 800 !important;
+}
+
+.govuk-button-black {
+    background: #000 !important;
     padding: 10px !important;
     border-radius: 18px !important;
     color: #ffffff;
     font-weight: 800 !important;
-    }
-
-    .govuk-button-color-black {
-    background-color:none !important;
-    border-radius: 58px !important;
-    height:70px;
-    width:250px;
-    background: url('/public/images/Black-button.png') no-repeat repeat left;
-    }
-
-    .govuk-coloumn-background {
-    background: #ff1493 !important;
-    }
-    .search-banner {
-    margin-top: -80px;
-    margin-left: -20px;
-    }
-
-    #panel-filter{
-    display:block;
-    }
-
-    #mobile-filter-panel {
-    display: none;
-    }
-    #filter-panel-mobile {
-    display: none;
-    }
-
-    .govuk-filter-select {
-    width: 180px;
-    padding: 5px;
-    margin: 5px;
-    }
-
-
-    #main-panel{
-    display:none;
-    }
-
-
-    .job-sal-info {
-    margin-left: 0px;
-    }
-    .footer-content {
-    /*font-family: GDS Transport;
-    font-size: 20px;*/
-    /*margin-left: -40px;*/
-    font-weight: 800;
-    color: #3670B3;
-    font-size: 1.2rem !important;
-    }
-
-    .jobprofile-img {
-    margin-top: 10px;
-    height: 150px;
-    }
-
-    /*//mobile phone*/
-    @media screen and (max-width:480px) {
-    #ifrm-youtube
-    {
-    width:300px;
-    }
-
-    .govuk-panel{
-    width:100%;
-    }
-
-    .img-resp{
-    width:100%;
-    }
-    .govuk-label-black {
-    color: black !important;
-    font-size: 12px !important;
-    }
-
-    .top-left {
-    position: absolute;
-    left: 26px;
-    margin-top: -250px;
-    padding: 5px;
-    margin-left: 250px;
-    text-align: center;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 40%;
-    text-align: left;
-    }
-
-    .top-left-secondary {
-    position: absolute;
-    left: 26px;
-    margin-top: -180px;
-    padding: 5px;
-    margin-left: 250px;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 35%;
-    float: left;
-    }
-
-    }
-
-    .main-wrapper {
-    display: inline-block;
-    place-content: center;
-    width: 100%;
-    height: 100%;
-    }
-
-    .slideshow {
-    position: relative;
-    }
-
-    .slide {
-    position: relative;
-    display: none;
-    }
-
-    .slide-number {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    z-index: 1;
-    font-size: 1.6rem;
-    color: white;
-    }
-
-    .slide-image {
-    position: relative;
-    display: flex;
-    /*width: 100%;*/
-    /*max-width: 1000px;*/
-    width: 880px;
-    }
-
-    .slide-image img {
-    width: 100%;
-    }
-
-    .slide-image figcaption {
-    position: absolute;
-    right: 0;
-    bottom: 8px;
-    left: 0;
-    margin: 0 auto;
-    text-align: center;
-    color: white;
-    }
-
-    .slide.is-active {
-    display: block;
-    margin-left:25px;
-    width:800px;
-    }
-
-    .controls {
-    position: absolute;
-    top: calc(50% - 50px);
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    }
-
-    .controls button {
-    padding: 16px;
-    border: none;
-    font-size: 1.8rem;
-    color: white;
-    background-color: #9fc5e842;
-    cursor: pointer;
-    transition: 0.3s ease;
-    }
-
-    .controls button:hover {
-    background-color: #E3048A;
-    }
-
-    .dots-container {
-    height: 20px;
-    margin-top: 16px;
-    text-align: center;
-    }
-
-    .dot {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    padding: 4px;
-    margin: 0 4px;
-    background-color: #bbb;
-    border-radius: 50%;
-    transition: 0.6s ease;
-    cursor: pointer;
-    }
-
-    .dot.is-active,
-    .dot:hover {
-    background-color: #717171;
-    }
-
-    #ImgStory-1{
-    display:block;
-    }
-    #ImgStory-2 {
-    display:block;
-    }
-    #ImgStory-3 {
-    display: block;
-    }
-
-    #ImgStory-4 {
-    display: block;
-    }
-
-    #story1 {
-    display: none;
-    }
-    #story2 {
-    display: none;
-    }
-
-    #story3 {
-    display: none;
-    }
-
-    .fade {
-    animation-name: fade;
-    animation-duration: 0.4s;
-    }
-
-    @keyframes fade {
-    from {
-    opacity: 0.4;
-    }
-
-    to {
-    opacity: 1;
-    }
-    }
-
-    /* ----------- Non-Retina Screens ----------- */
-    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-
-    .top-left {
-    position: absolute;
-    left: 150px !important;
-    padding: 5px;
-    margin-left: 50px;
-    text-align: center;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 27%;
-    text-align: left;
-    height: 30px;
-    }
-
-    .top-left-secondary {
-    position: absolute;
-    left: 155px !important;
-    margin-top: -209px !important;
-    padding: 5px;
-    margin-left: 50px;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 27% !important;
-    float: left;
-    height: 30px;
-    }
-
-    #dvRelatedJobs {
-    margin-top: -59px;
-    background: #fff;
-    position: absolute;
-    left: 200px !important;
-    padding: 5px;
-    margin-left: 5px !important;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 23% !important;
-    float: left;
-    height: 30px;
-    border-left: 4px solid #E3048A;
-    }
-    }
-
-    /* For 1024 Resolution */
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
-    {
-    .top-left {
-    position: absolute;
-    left: 150px !important;
-    padding: 5px;
-    margin-left: 50px;
-    text-align: center;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 27%;
-    text-align: left;
-    height: 30px;
-    }
-
-    .top-left-secondary {
-    position: absolute;
-    left: 155px !important;
-    margin-top: -209px !important;
-    padding: 5px;
-    margin-left: 50px;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 27% !important;
-    float: left;
-    height: 30px;
-    }
-
-    #dvRelatedJobs {
-    margin-top: -59px;
-    background: #fff;
-    position: absolute;
-    left: 200px !important;
-    padding: 5px;
-    margin-left: 5px !important;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 23% !important;
-    float: left;
-    height: 30px;
-    border-left: 4px solid #E3048A;
-    }
-    }
-
-    /* ----------- Retina Screens ----------- */
-    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-    .top-left {
-    position: absolute;
-    left: 150px !important;
-    padding: 5px;
-    margin-left: 50px;
-    text-align: center;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 27%;
-    text-align: left;
-    height: 30px;
-    }
-
-    .top-left-secondary {
-    position: absolute;
-    left: 155px !important;
-    margin-top: -209px !important;
-    padding: 5px;
-    margin-left: 50px;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 27% !important;
-    float: left;
-    height: 30px;
-    }
-
-    #dvRelatedJobs {
-    margin-top: -59px;
-    background: #fff;
-    position: absolute;
-    left: 200px !important;
-    padding: 5px;
-    margin-left: 5px !important;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 23% !important;
-    float: left;
-    height: 30px;
-    border-left: 4px solid #E3048A;
-    }
-
-    }
-
-    /* Extra large devices (large laptops and desktops, 1200px and up) */
-    @media only screen and (min-width: 1200px)  
-    {
-
-    .top-left {
-    position: absolute;
-    left: 160px !important;
-    padding: 5px;
-    margin-left: 50px;
-    text-align: center;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 27%;
-    text-align: left;
-    height: 30px;
-    margin-top: -250px !important;
-    }
-
-    .top-left-secondary {
-    position: absolute;
-    left: 165px !important;
-    margin-top: -209px !important;
-    padding: 5px;
-    margin-left: 50px;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 27% !important;
-    float: left;
-    height: 30px;
-    }
-
-    #dvRelatedJobs {
-    margin-top: -59px;
-    background: #fff;
-    position: absolute;
-    left: 205px !important;
-    padding: 5px;
-    margin-left: 5px !important;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 23% !important;
-    float: left;
-    height: 30px;
-    border-left: 4px solid #E3048A;
-    }
-    .govuk-label-pink {
-    color: #E3048A !important;
-    background:#fff;
-    margin-top:-25px;
-    }
-
-    }
-
-    /* Medium devices (landscape tablets, 768px and up) */
-    @media only screen and (min-width: 768px) {
-    .top-left {
-    position: absolute;
-    left: -35px;
-    padding: 5px;
-    margin-left: 50px;
-    text-align: center;
-    color: #fff;
-    background: none !important;
-    /* background-color: #fff; */
-    /* margin-bottom: 60px; */
-    width: 40%;
-    text-align: left;
-    margin-top: -200px;
-    }
-
-    .top-left-secondary {
-    position: absolute;
-    left: -30px;
-    margin-top: -134px;
-    padding: 5px;
-    margin-left: 50px;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 45%;
-    float: left;
-    height: 35px;
-    }
-    }
-
-
-    /* Small devices (portrait tablets and large phones, 600px and up) */
-    @media only screen and (min-width: 600px) 
-    {
-
-    .menu-item {
-    list-style-type: none !important;
-    margin-left: 0px;
-    }
-
-    #bannerImg {
-    display: block;
-    }
-
-    #bannerImgMobile {
-    display: none;
-    }
-
-    .search-banner {
-    margin-top: -80px;
-    margin-left: 0px;
-    }
-
-    .slides {
-    width: 100%;
-    }
-
-    .slide.is-active {
-    display: block;
-    width: 100%;
-    }
-
-    .slide-image {
-    position: relative;
-    display: flex;
-    /*width: 100%;*/
-    /*max-width: 1000px;*/
-    width: 100% !important;
-    }
-
-    .col {
-    width: 100%;
-    /* float: right; */
-    text-align: right;
-    padding-right: 10px;
-    }
-
-    .govuk-select {
-    display: none;
-    }
-
-    .checkbox-form-group {
-    display: block;
-    margin-bottom: 15px;
-    }
-
-    .checkbox-form-group input {
-    padding: 0;
-    height: initial;
-    width: initial;
-    margin-bottom: 0;
-    display: none;
-    cursor: pointer;
-    }
-
-    .checkbox-form-group label {
-    position: relative;
-    cursor: pointer;
-    }
-
-    .checkbox-form-group label:before {
-    content: '';
-    -webkit-appearance: none;
-    background-color: transparent;
-    border: 2px solid #0079bf;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
-    padding: 10px;
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    cursor: pointer;
-    margin-right: 5px;
-    }
-
-    .checkbox-form-group input:checked + label:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 2px;
-    left: 9px;
-    width: 6px;
-    height: 14px;
-    border: solid #0079bf;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-    }
-
-
-    .govuk-label-black {
-    color: black !important;
-    font-size: 15px !important;
-    font-weight: 800;
-    }
-
-    .govuk-label-pink {
-    color: #E3048A !important;
-    background: #fff;
-    width: 350px;
-    }
-
-        .top-margin {
-            margin-top: 50px;
-        }
-
-    .top-left {
-    position: absolute;
-    left: -35px;
-    padding: 5px;
-    margin-left: 50px;
-    text-align: center;
-    color: #fff;
-    background:none !important;
-    /*background-color: #fff;*/
-    /* margin-bottom: 60px; */
-    width: 40%;
-    text-align: left;
-    }
-
-    /*.top-left-secondary {
-    position: absolute;
-    left: -30px;
-    margin-top: -185px;
-    padding: 5px;
-    margin-left: 50px;
-    text-align: left;
-    color: white;
-    background-color: #fff;*/
-    /* margin-bottom: 60px; */
-    /*width: 35%;
-    float: left;
-    }*/
-
-    .top-left-secondary {
-    position: absolute;
-    left: -30px;
-    margin-top: -135px;
-    padding: 5px;
-    margin-left: 50px;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 49%;
-    float: left;
-    height: 35px;
-    }
-
-    #dvRelatedJobs {
-    margin-top: -59px;
-    background: #fff;
-    position: absolute;
-    left: 30px;
-    padding: 5px;
-    margin-left: -15px;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 30%;
-    float: left;
-    height: 40px;
-    border-left: 4px solid #E3048A;
-    }
-
-    #ImgStory-1 {
-    display: block;
-    margin-left: -40px;
-    }
-
-    #ImgStory-2 {
-    display: block;
-    margin-left: -40px;
-    }
-
-    #ImgStory-3 {
-    display: block;
-    margin-left: -40px;
-    }
-    #ImgStory-4 {
-    display: block;
-    margin-left: -40px;
-    }
-
-    .controls {
-    display: none;
-    }
-
-    #story1 {
-    display: none;
-    width: 100%;
-    margin-left: -35px;
-    float: left;
-    }
-
-    #story2 {
-    display: none;
-    width: 100%;
-    margin-left: -35px;
-    float: left;
-    }
-
-    #story3 {
-    display: none;
-    width: 100%;
-    margin-left: -35px;
-    float: left;
-    }
-
-    #story4
-    {
-    display: none;
-    width: 100%;
-    margin-left: -35px;
-    float: left;
-    }
-
-    .btn-contactus {
-    width: 75%;
-    margin-left: 30px;
-    margin-top: -20px;
-    }
-
-    #_ContactUs {
-    margin-left: 30px;
-    }
-
-    #dvContactUs {
-    background-color: #fff;
-    width: 350px;
-    margin-left: 30px;
-    }
-    #_ContactDesc {
-    float: left;
-    color: #fff ;
-    margin-left: 30px;
-    }
-
-    .govuk-persona {
-    /* float: left; */
-    height: 300px;
-    margin-top: -219px;
-    }
-
-    #persona-desktop {
-    display: block;
+}
+
+.govuk-button-color-black {
+background-color:none !important;
+border-radius: 58px !important;
+height:70px;
+width:250px;
+background: url('/public/images/Black-button.png') no-repeat repeat left;
+}
+
+.govuk-coloumn-background {
+background: #ff1493 !important;
+}
+.search-banner {
+margin-top: -80px;
+margin-left: -20px;
+}
+
+#panel-filter{
+display:block;
+}
+
+#mobile-filter-panel {
+display: none;
+}
+#filter-panel-mobile {
+display: none;
+}
+
+.govuk-filter-select {
+width: 180px;
+padding: 5px;
+margin: 5px;
+}
+
+
+#main-panel{
+display:none;
+}
+
+
+.job-sal-info {
+margin-left: 0px;
+}
+.footer-content {
+/*font-family: GDS Transport;
+font-size: 20px;*/
+/*margin-left: -40px;*/
+font-weight: 800;
+color: #3670B3;
+font-size: 1.2rem !important;
+}
+
+.jobprofile-img {
+margin-top: 10px;
+height: 150px;
+}
+
+/*//mobile phone*/
+@media screen and (max-width:480px) {
+#ifrm-youtube
+{
+width:300px;
+}
+
+.govuk-panel{
+width:100%;
+}
+
+.img-resp{
+width:100%;
+}
+.govuk-label-black {
+color: black !important;
+font-size: 12px !important;
+}
+
+.top-left {
+position: absolute;
+left: 26px;
+margin-top: -250px;
+padding: 5px;
+margin-left: 250px;
+text-align: center;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 40%;
+text-align: left;
+}
+
+.top-left-secondary {
+position: absolute;
+left: 26px;
+margin-top: -180px;
+padding: 5px;
+margin-left: 250px;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 35%;
+float: left;
+}
+
+}
+
+.main-wrapper {
+display: inline-block;
+place-content: center;
+width: 100%;
+height: 100%;
+}
+
+.slideshow {
+position: relative;
+}
+
+.slide {
+position: relative;
+display: none;
+}
+
+.slide-number {
+position: absolute;
+top: 12px;
+left: 12px;
+z-index: 1;
+font-size: 1.6rem;
+color: white;
+}
+
+.slide-image {
+position: relative;
+display: flex;
+/*width: 100%;*/
+/*max-width: 1000px;*/
+width: 880px;
+}
+
+.slide-image img {
+width: 100%;
+}
+
+.slide-image figcaption {
+position: absolute;
+right: 0;
+bottom: 8px;
+left: 0;
+margin: 0 auto;
+text-align: center;
+color: white;
+}
+
+.slide.is-active {
+display: block;
+margin-left:25px;
+width:800px;
+}
+
+.controls {
+position: absolute;
+top: calc(50% - 50px);
+display: flex;
+justify-content: space-between;
+position: absolute;
+width: 100%;
+}
+
+.controls button {
+padding: 16px;
+border: none;
+font-size: 1.8rem;
+color: white;
+background-color: #9fc5e842;
+cursor: pointer;
+transition: 0.3s ease;
+}
+
+.controls button:hover {
+background-color: #E3048A;
+}
+
+.dots-container {
+height: 20px;
+margin-top: 16px;
+text-align: center;
+}
+
+.dot {
+display: inline-block;
+width: 15px;
+height: 15px;
+padding: 4px;
+margin: 0 4px;
+background-color: #bbb;
+border-radius: 50%;
+transition: 0.6s ease;
+cursor: pointer;
+}
+
+.dot.is-active,
+.dot:hover {
+background-color: #717171;
+}
+
+#ImgStory-1{
+display:block;
+}
+#ImgStory-2 {
+display:block;
+}
+#ImgStory-3 {
+display: block;
+}
+
+#ImgStory-4 {
+display: block;
+}
+
+#story1 {
+display: none;
+}
+#story2 {
+display: none;
+}
+
+#story3 {
+display: none;
+}
+
+.fade {
+animation-name: fade;
+animation-duration: 0.4s;
+}
+
+@keyframes fade {
+from {
+opacity: 0.4;
+}
+
+to {
+opacity: 1;
+}
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+
+.top-left {
+position: absolute;
+left: 150px !important;
+padding: 5px;
+margin-left: 50px;
+text-align: center;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 27%;
+text-align: left;
+height: 30px;
+}
+
+.top-left-secondary {
+position: absolute;
+left: 155px !important;
+margin-top: -209px !important;
+padding: 5px;
+margin-left: 50px;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 27% !important;
+float: left;
+height: 30px;
+}
+
+#dvRelatedJobs {
+margin-top: -59px;
+background: #fff;
+position: absolute;
+left: 200px !important;
+padding: 5px;
+margin-left: 5px !important;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 23% !important;
+float: left;
+height: 30px;
+border-left: 4px solid #E3048A;
+}
+}
+
+/* For 1024 Resolution */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+{
+.top-left {
+position: absolute;
+left: 150px !important;
+padding: 5px;
+margin-left: 50px;
+text-align: center;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 27%;
+text-align: left;
+height: 30px;
+}
+
+.top-left-secondary {
+position: absolute;
+left: 155px !important;
+margin-top: -209px !important;
+padding: 5px;
+margin-left: 50px;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 27% !important;
+float: left;
+height: 30px;
+}
+
+#dvRelatedJobs {
+margin-top: -59px;
+background: #fff;
+position: absolute;
+left: 200px !important;
+padding: 5px;
+margin-left: 5px !important;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 23% !important;
+float: left;
+height: 30px;
+border-left: 4px solid #E3048A;
+}
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+.top-left {
+position: absolute;
+left: 150px !important;
+padding: 5px;
+margin-left: 50px;
+text-align: center;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 27%;
+text-align: left;
+height: 30px;
+}
+
+.top-left-secondary {
+position: absolute;
+left: 155px !important;
+margin-top: -209px !important;
+padding: 5px;
+margin-left: 50px;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 27% !important;
+float: left;
+height: 30px;
+}
+
+#dvRelatedJobs {
+margin-top: -59px;
+background: #fff;
+position: absolute;
+left: 200px !important;
+padding: 5px;
+margin-left: 5px !important;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 23% !important;
+float: left;
+height: 30px;
+border-left: 4px solid #E3048A;
+}
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px)  
+{
+
+.top-left {
+position: absolute;
+left: 160px !important;
+padding: 5px;
+margin-left: 50px;
+text-align: center;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 27%;
+text-align: left;
+height: 30px;
+margin-top: -250px !important;
+}
+
+.top-left-secondary {
+position: absolute;
+left: 165px !important;
+margin-top: -209px !important;
+padding: 5px;
+margin-left: 50px;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 27% !important;
+float: left;
+height: 30px;
+}
+
+#dvRelatedJobs {
+margin-top: -59px;
+background: #fff;
+position: absolute;
+left: 205px !important;
+padding: 5px;
+margin-left: 5px !important;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 23% !important;
+float: left;
+height: 30px;
+border-left: 4px solid #E3048A;
+}
+.govuk-label-pink {
+color: #E3048A !important;
+background:#fff;
+margin-top:-25px;
+}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+.top-left {
+position: absolute;
+left: -35px;
+padding: 5px;
+margin-left: 50px;
+text-align: center;
+color: #fff;
+background: none !important;
+/* background-color: #fff; */
+/* margin-bottom: 60px; */
+width: 40%;
+text-align: left;
+margin-top: -200px;
+}
+
+.top-left-secondary {
+position: absolute;
+left: -30px;
+margin-top: -134px;
+padding: 5px;
+margin-left: 50px;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 45%;
+float: left;
+height: 35px;
+}
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) 
+{
+
+.menu-item {
+list-style-type: none !important;
+margin-left: 0px;
+}
+
+#bannerImg {
+display: block;
+}
+
+#bannerImgMobile {
+display: none;
+}
+
+.search-banner {
+margin-top: -80px;
+margin-left: 0px;
+}
+
+.slides {
+width: 100%;
+}
+
+.slide.is-active {
+display: block;
+width: 100%;
+}
+
+.slide-image {
+position: relative;
+display: flex;
+/*width: 100%;*/
+/*max-width: 1000px;*/
+width: 100% !important;
+}
+
+.col {
+width: 100%;
+/* float: right; */
+text-align: right;
+padding-right: 10px;
+}
+
+.govuk-select {
+display: none;
+}
+
+.checkbox-form-group {
+display: block;
+margin-bottom: 15px;
+}
+
+.checkbox-form-group input {
+padding: 0;
+height: initial;
+width: initial;
+margin-bottom: 0;
+display: none;
+cursor: pointer;
+}
+
+.checkbox-form-group label {
+position: relative;
+cursor: pointer;
+}
+
+.checkbox-form-group label:before {
+content: '';
+-webkit-appearance: none;
+background-color: transparent;
+border: 2px solid #0079bf;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+padding: 10px;
+display: inline-block;
+position: relative;
+vertical-align: middle;
+cursor: pointer;
+margin-right: 5px;
+}
+
+.checkbox-form-group input:checked + label:after {
+content: '';
+display: block;
+position: absolute;
+top: 2px;
+left: 9px;
+width: 6px;
+height: 14px;
+border: solid #0079bf;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+
+
+.govuk-label-black {
+color: black !important;
+font-size: 15px !important;
+font-weight: 800;
+}
+
+.govuk-label-pink {
+color: #E3048A !important;
+background: #fff;
+width: 350px;
+}
+
+.top-margin {
+margin-top: 50px;
+}
+
+.top-left {
+position: absolute;
+left: -35px;
+padding: 5px;
+margin-left: 50px;
+text-align: center;
+color: #fff;
+background:none !important;
+/*background-color: #fff;*/
+/* margin-bottom: 60px; */
+width: 40%;
+text-align: left;
+}
+
+/*.top-left-secondary {
+position: absolute;
+left: -30px;
+margin-top: -185px;
+padding: 5px;
+margin-left: 50px;
+text-align: left;
+color: white;
+background-color: #fff;*/
+/* margin-bottom: 60px; */
+/*width: 35%;
+float: left;
+}*/
+
+.top-left-secondary {
+position: absolute;
+left: -30px;
+margin-top: -135px;
+padding: 5px;
+margin-left: 50px;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 49%;
+float: left;
+height: 35px;
+}
+
+#dvRelatedJobs {
+margin-top: -59px;
+background: #fff;
+position: absolute;
+left: 30px;
+padding: 5px;
+margin-left: -15px;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 30%;
+float: left;
+height: 40px;
+border-left: 4px solid #E3048A;
+}
+
+#ImgStory-1 {
+display: block;
+margin-left: -40px;
+}
+
+#ImgStory-2 {
+display: block;
+margin-left: -40px;
+}
+
+#ImgStory-3 {
+display: block;
+margin-left: -40px;
+}
+#ImgStory-4 {
+display: block;
+margin-left: -40px;
+}
+
+.controls {
+display: none;
+}
+
+#story1 {
+display: none;
+width: 100%;
+margin-left: -35px;
+float: left;
+}
+
+#story2 {
+display: none;
+width: 100%;
+margin-left: -35px;
+float: left;
+}
+
+#story3 {
+display: none;
+width: 100%;
+margin-left: -35px;
+float: left;
+}
+
+#story4
+{
+display: none;
+width: 100%;
+margin-left: -35px;
+float: left;
+}
+
+.btn-contactus {
+width: 75%;
+margin-left: 30px;
+margin-top: -20px;
+}
+
+#_ContactUs {
+margin-left: 30px;
+}
+
+#dvContactUs {
+background-color: #fff;
+width: 350px;
+margin-left: 30px;
+}
+#_ContactDesc {
+float: left;
+color: #fff ;
+margin-left: 30px;
+}
+
+.govuk-persona {
+/* float: left; */
+height: 300px;
+margin-top: -219px;
+}
+
+#persona-desktop {
+display: block;
         
-    margin-top: -5px;
-    }
+margin-top: -5px;
+}
     
 
-    #persona-mobile {
-    display: none;
-    margin-left: -168px;
-    margin-top: -3px;
-    margin-right: -2px;
-    }
+#persona-mobile {
+display: none;
+margin-left: -168px;
+margin-top: -3px;
+margin-right: -2px;
+}
 
-    .govuk-col {
-    margin-left: 150px;
-    float: right;
-    }
+.govuk-col {
+margin-left: 150px;
+float: right;
+}
 
-    #main-panel {
-    background-color: #f3f2f1;
-    padding: 10px;
-    width: 100%;
-    }
+#main-panel {
+background-color: #f3f2f1;
+padding: 10px;
+width: 100%;
+}
 
-    #dvFilterpanel {
-    /* width: 100%;*/
-    border: 15px solid #eeee;
-    margin: 10px;
-    }
+#dvFilterpanel {
+/* width: 100%;*/
+border: 15px solid #eeee;
+margin: 10px;
+}
 
-    .panel-mobile {
-    background-color: #fff;
-    width: 100%;
-    margin-top: 0px;
-    }
+.panel-mobile {
+background-color: #fff;
+width: 100%;
+margin-top: 0px;
+}
 
-    .panel-mobile-options {
-    cursor: pointer;
-    border-bottom: 2px solid #eeee;
-    width: 100%;
-    }
+.panel-mobile-options {
+cursor: pointer;
+border-bottom: 2px solid #eeee;
+width: 100%;
+}
 
-    .options-desc {
-    margin-top: -5px;
-    color: #b1b4b6;
-    }
+.options-desc {
+margin-top: -5px;
+color: #b1b4b6;
+}
 
-    .panel-header {
-    padding: 0px;
-    background-color: #fff;
-    margin-bottom: 10px;
-    width: 100%;
-    }
+.panel-header {
+padding: 0px;
+background-color: #fff;
+margin-bottom: 10px;
+width: 100%;
+}
 
-    #filterHeader {
-    background-color: white;
-    width: 100%;
-    height: 50px;
-    display: inline-block;
-    }
+#filterHeader {
+background-color: white;
+width: 100%;
+height: 50px;
+display: inline-block;
+}
 
-    #desktop-filter-panel {
-    display: none;
-    }
+#desktop-filter-panel {
+display: none;
+}
 
-    #mobile-filter-panel {
-    display: block;
-    padding: 20px;
-    /* background-color: #dee0e2;*/
-    }
+#mobile-filter-panel {
+display: block;
+padding: 20px;
+/* background-color: #dee0e2;*/
+}
 
-    #filter-panel-mobile {
-    display: block;
-    margin: 10px;
-    }
+#filter-panel-mobile {
+display: block;
+margin: 10px;
+}
 
-    #lbFind {
-    margin: 10px;
-    }
+#lbFind {
+margin: 10px;
+}
 
-    .btn-back {
-    float: right;
-    margin-left: 100px;
-    }
+.btn-back {
+float: right;
+margin-left: 100px;
+}
 
-    input[type=checkbox] + label {
-    display: block;
-    margin: 0.2em;
-    cursor: pointer;
-    padding: 0.2em;
-    }
+input[type=checkbox] + label {
+display: block;
+margin: 0.2em;
+cursor: pointer;
+padding: 0.2em;
+}
 
-    input[type=checkbox] {
-    display: none;
-    }
+input[type=checkbox] {
+display: none;
+}
 
-    input[type=checkbox] + label:before {
-    content: "\2714";
-    border: 0.1em solid #000;
-    border-radius: 0.2em;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    padding-left: 0.2em;
-    padding-bottom: 0.3em;
-    margin-right: 0.2em;
-    vertical-align: bottom;
-    color: transparent;
-    transition: .2s;
-    }
+input[type=checkbox] + label:before {
+content: "\2714";
+border: 0.1em solid #000;
+border-radius: 0.2em;
+display: inline-block;
+width: 1em;
+height: 1em;
+padding-left: 0.2em;
+padding-bottom: 0.3em;
+margin-right: 0.2em;
+vertical-align: bottom;
+color: transparent;
+transition: .2s;
+}
 
-    input[type=checkbox] + label:active:before {
-    transform: scale(0);
-    }
+input[type=checkbox] + label:active:before {
+transform: scale(0);
+}
 
-    input[type=checkbox]:checked + label:before {
-    background-color: #ff1493;
-    border-color: #ff1493;
-    color: #fff;
-    }
+input[type=checkbox]:checked + label:before {
+background-color: #ff1493;
+border-color: #ff1493;
+color: #fff;
+}
 
-    input[type=checkbox]:disabled + label:before {
-    transform: scale(1);
-    border-color: #aaa;
-    }
+input[type=checkbox]:disabled + label:before {
+transform: scale(1);
+border-color: #aaa;
+}
 
-    input[type=checkbox]:checked:disabled + label:before {
-    transform: scale(1);
-    background-color: #bfb;
-    border-color: #bfb;
-    }
-    }
-    /* Extra small devices (phones, 600px and down) */
-    @media screen and (max-width:600px) 
-    {
+input[type=checkbox]:checked:disabled + label:before {
+transform: scale(1);
+background-color: #bfb;
+border-color: #bfb;
+}
+}
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width:600px) 
+{
 
-    .menu-item {
-    list-style-type: none !important;
-    margin-left: 0px;
-    }
+.menu-item {
+list-style-type: none !important;
+margin-left: 0px;
+}
 
-    #bannerImg {
-    display: none;
-    }
+#bannerImg {
+display: none;
+}
 
-    #bannerImgMobile {
-    display: block;
-    }
+#bannerImgMobile {
+display: block;
+}
 
-    #_realStories {
+#_realStories {
        
-    margin-top: 90px;
-    margin-left: 30px;
-    }
+margin-top: 90px;
+margin-left: 30px;
+}
 
-    #ifrm-youtube {
-    width: 300px;
-    }
+#ifrm-youtube {
+width: 300px;
+}
 
-    #frm_Social {
-    width: 100%;
-    height: 315px;
-    }
+#frm_Social {
+width: 100%;
+height: 315px;
+}
 
-    #dvRelatedJobs {
-    margin-top: -59px;
-    background: #fff;
-    position: absolute;
-    left: 26px;
-    margin-top: -55px;
-    padding: 5px;
-    margin-left: -15px;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 90%;
-    float: left;
-    height: 40px;
-    border-left: 4px solid red;
-    }
+#dvRelatedJobs {
+margin-top: -59px;
+background: #fff;
+position: absolute;
+left: 26px;
+margin-top: -55px;
+padding: 5px;
+margin-left: -15px;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 90%;
+float: left;
+height: 40px;
+border-left: 4px solid red;
+}
 
-    #dvContactUs {
-    background-color: #fff;
-    width: 250px;
+#dvContactUs {
+background-color: #fff;
+width: 250px;
             
-    margin-left: 15px;
-    }
+margin-left: 15px;
+}
 
-    #_ContactDesc {
-    float: left;
-    color: #fff;
-    width: 300px;
-    margin-left: 15px;
-    }
-    .search-banner {
-    margin-top: -80px;
-    margin-left: 0px;
-    }
+#_ContactDesc {
+float: left;
+color: #fff;
+width: 300px;
+margin-left: 15px;
+}
+.search-banner {
+margin-top: -80px;
+margin-left: 0px;
+}
 
-    .col {
-    width: 100%;
-    /* float: right; */
-    text-align: right;
-    padding-right: 10px;
-    }
+.col {
+width: 100%;
+/* float: right; */
+text-align: right;
+padding-right: 10px;
+}
 
-    .govuk-select {
-    display: none;
-    }
+.govuk-select {
+display: none;
+}
 
-    .govuk-checkbox {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 2px;
-    left: 9px;
-    width: 6px;
-    height: 14px;
-    border: solid #0079bf;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-    }
+.govuk-checkbox {
+content: '';
+display: block;
+position: absolute;
+top: 2px;
+left: 9px;
+width: 6px;
+height: 14px;
+border: solid #0079bf;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
 
-    .govuk-panel {
-    width: 100%;
-    }
+.govuk-panel {
+width: 100%;
+}
 
-    .img-resp {
-    width: 100%;
-    }
+.img-resp {
+width: 100%;
+}
 
-    .btn-contactus {
-    width: 65%;
-    margin-left: 15px;
-    }
+.btn-contactus {
+width: 65%;
+margin-left: 15px;
+}
 
-    .govuk-label-black {
-    color: black !important;
-    font-size: 15px !important;
-    font-weight: 800;
-    }
+.govuk-label-black {
+color: black !important;
+font-size: 15px !important;
+font-weight: 800;
+}
 
-    .top-left {
-    position: absolute;
-    margin-top: -200px;
-    left: 26px;
-    padding: 5px;
-    margin-left: -10px;
-    text-align: center;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 66%;
-    text-align: left;
-    }
+.top-left {
+position: absolute;
+margin-top: -200px;
+left: 26px;
+padding: 5px;
+margin-left: -10px;
+text-align: center;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 66%;
+text-align: left;
+}
 
-    .top-left-secondary {
-    position: absolute;
-    left: 26px;
-    margin-top: -140px;
-    padding: 5px;
-    margin-left: -10px;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 77%;
-    float: left;
-    }
+.top-left-secondary {
+position: absolute;
+left: 26px;
+margin-top: -140px;
+padding: 5px;
+margin-left: -10px;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 77%;
+float: left;
+}
 
-    #dvRelatedJobs {
-    margin-top: -59px;
-    background: #fff;
-    position: absolute;
-    left: 26px;
-    padding: 5px;
-    margin-left: -15px;
-    text-align: left;
-    color: white;
-    background-color: #fff;
-    /* margin-bottom: 60px; */
-    width: 90%;
-    float: left;
-    height: 40px;
-    border-left: 4px solid #E3048A;
-    }
+#dvRelatedJobs {
+margin-top: -59px;
+background: #fff;
+position: absolute;
+left: 26px;
+padding: 5px;
+margin-left: -15px;
+text-align: left;
+color: white;
+background-color: #fff;
+/* margin-bottom: 60px; */
+width: 90%;
+float: left;
+height: 40px;
+border-left: 4px solid #E3048A;
+}
 
-    .slide-image {
-    position: relative;
-    display: flex;
-    width: 100%;
-    }
+.slide-image {
+position: relative;
+display: flex;
+width: 100%;
+}
 
-    .slide.is-active {
-    display: block;
-    width: 100%;
-    }
+.slide.is-active {
+display: block;
+width: 100%;
+}
 
-    #ImgStory-1 {
-    display: none;
-    }
+#ImgStory-1 {
+display: none;
+}
 
-    #ImgStory-2 {
-    display: none;
-    }
+#ImgStory-2 {
+display: none;
+}
 
-    #ImgStory-3 {
-    display: none;
-    }
+#ImgStory-3 {
+display: none;
+}
 
-        #story1 {
-            display: inline-block;
-            width: 100%;
-            margin-left: -35px;
-            float: left;
-        }
+#story1 {
+display: inline-block;
+width: 100%;
+margin-left: -35px;
+float: left;
+}
 
-        #story2 {
-            display: inline-block;
-            width: 100%;
-            margin-left: -35px;
-            float: left;
-        }
+#story2 {
+display: inline-block;
+width: 100%;
+margin-left: -35px;
+float: left;
+}
 
-        #story3 {
-            display: inline-block;
-            width: 100%;
-            margin-left: -35px;
-            float: left;
-        }
+#story3 {
+display: inline-block;
+width: 100%;
+margin-left: -35px;
+float: left;
+}
 
-        #story4 {
-            display: inline-block;
-            width: 100%;
-            margin-left: -35px;
-            float: left;
-        }
+#story4 {
+display: inline-block;
+width: 100%;
+margin-left: -35px;
+float: left;
+}
 
-        ._dots{
-            margin-top:20px !important;
-        }
+._dots{
+margin-top:20px !important;
+}
 
-        .govuk-persona {
-            /* float: left; */
-            height: 300px;
-            margin-top: -219px;
-        }
+.govuk-persona {
+/* float: left; */
+height: 300px;
+margin-top: -219px;
+}
 
-    #persona-desktop {
-    display: none;
-    }
+#persona-desktop {
+display: none;
+}
 
-    #persona-mobile {
-    display: block;
-    margin-left: -168px;
-    margin-top: -3px;
-    margin-right: -2px;
-    }
+#persona-mobile {
+display: block;
+margin-left: -168px;
+margin-top: -3px;
+margin-right: -2px;
+}
 
 
 .controls {
-    display: inline-block;
-    position: absolute;
-    top: calc(50% - 50px);
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    margin-top: 420px;
+display: inline-block;
+position: absolute;
+top: calc(50% - 50px);
+display: flex;
+justify-content: space-between;
+position: absolute;
+width: 100%;
+margin-top: 380px;
 }
 
-    .controls button {
-    display: inline-block;
-    padding: 16px;
-    border: none;
-    font-size: 1.8rem;
-    color: #fff;
-    background-color: #E3048A;
-    cursor: pointer;
-    transition: 0.3s ease;
-    margin-left: -25px;
-    margin-right: 290px;
-    opacity: .3;
-    }
+.controls button {
+display: inline-block;
+padding: 16px;
+border: none;
+font-size: 1.8rem;
+color: #fff;
+background-color: #E3048A;
+cursor: pointer;
+transition: 0.3s ease;
+margin-left: -25px;
+margin-right: 290px;
+opacity: .3;
+}
 
-    .controls button:hover {
-    background-color: #E3048A;
-    color: white;
-    }
+.controls button:hover {
+background-color: #E3048A;
+color: white;
+}
 
-        .dots-container {
-            height: 20px;
-            margin-top: 16px;
-            text-align: center;
-            margin-left:-40px;
-        }
-    #main-panel {
-    background-color: #f3f2f1;
-    padding: 10px;
-    width: 100%;
-    }
+.dots-container {
+height: 20px;
+margin-top: 16px;
+text-align: center;
+margin-left:-40px;
+}
+#main-panel {
+background-color: #f3f2f1;
+padding: 10px;
+width: 100%;
+}
 
-    #dvFilterpanel {
-    /* width: 100%;*/
-    border: 15px solid #eeee;
-    margin: 10px;
-    }
+#dvFilterpanel {
+/* width: 100%;*/
+border: 15px solid #eeee;
+margin: 10px;
+}
 
-    .panel-mobile {
-    background-color: #fff;
-    width: 100%;
-    margin-top: 0px;
-    }
+.panel-mobile {
+background-color: #fff;
+width: 100%;
+margin-top: 0px;
+}
 
-    .panel-mobile-options {
-    cursor: pointer;
-    border-bottom: 2px solid #eeee;
-    width: 100%;
-    }
+.panel-mobile-options {
+cursor: pointer;
+border-bottom: 2px solid #eeee;
+width: 100%;
+}
 
-    .options-desc {
-    margin-top: -5px;
-    color: #b1b4b6;
-    }
+.options-desc {
+margin-top: -5px;
+color: #b1b4b6;
+}
 
-    .story-wrapper {
-        display: inline-block;
-        place-content: center;
-        width: 100%;
-        height: 100%;
-        margin-top: -120px !important;
-    }
+.story-wrapper {
+display: inline-block;
+place-content: center;
+width: 100%;
+height: 100%;
+margin-top: -120px !important;
+}
 
-    .panel-header {
-    padding: 0px;
-    background-color: #fff;
-    margin-bottom: 10px;
-    width: 100%;
-    }
+.panel-header {
+padding: 0px;
+background-color: #fff;
+margin-bottom: 10px;
+width: 100%;
+}
 
-    #filterHeader {
-    background-color: white;
-    width: 100%;
-    height: 50px;
-    display: inline-block;
-    }
+#filterHeader {
+background-color: white;
+width: 100%;
+height: 50px;
+display: inline-block;
+}
 
-    #desktop-filter-panel {
-    display: none;
-    }
+#desktop-filter-panel {
+display: none;
+}
 
-    #mobile-filter-panel {
-    display: block;
-    padding: 20px;
-    /*background-color: #EEEEEE;*/
-    }
+#mobile-filter-panel {
+display: block;
+padding: 20px;
+/*background-color: #EEEEEE;*/
+}
 
-    #filter-panel-mobile {
-    display: block;
-    margin: 10px;
-    }
+#filter-panel-mobile {
+display: block;
+margin: 10px;
+}
 
-    #lbFind {
-    margin: 10px;
-    }
+#lbFind {
+margin: 10px;
+}
 
-    #dvViewResults {
-    height: 80px;
-    background-color: #eeee;
-    }
+#dvViewResults {
+height: 80px;
+background-color: #eeee;
+}
 
-    .btn-back {
-    float: right;
-    margin-left: 100px;
-    }
+.btn-back {
+float: right;
+margin-left: 100px;
+}
 
-    .btn-results {
-    background-color: #ff1493;
-    width: 100%;
-    padding: 20px;
-    border-radius: 35px;
-    border: none;
-    color: #fff;
-    font-weight: 700;
-    margin-top: 10px;
-    }
+.btn-results {
+background-color: #ff1493;
+width: 100%;
+padding: 20px;
+border-radius: 35px;
+border: none;
+color: #fff;
+font-weight: 700;
+margin-top: 10px;
+}
 
-    .btn-filter {
-    margin-left: 80px;
-    width: 120px;
-    background-color: #fff;
-    border: none;
-    font-size: 15px;
-    }
+.btn-filter {
+margin-left: 80px;
+width: 120px;
+background-color: #fff;
+border: none;
+font-size: 15px;
+}
 
-    .btn-sort {
-    margin-left: 50px;
-    background-color: #fff;
-    border: none;
-    font-size: 15px;
-    }
+.btn-sort {
+margin-left: 50px;
+background-color: #fff;
+border: none;
+font-size: 15px;
+}
 
 
-    input[type=checkbox] + label {
-    display: block;
-    margin: 0.2em;
-    cursor: pointer;
-    padding: 0.2em;
-    }
+input[type=checkbox] + label {
+display: block;
+margin: 0.2em;
+cursor: pointer;
+padding: 0.2em;
+}
 
-    input[type=checkbox] {
-    display: none;
-    }
+input[type=checkbox] {
+display: none;
+}
 
-    input[type=checkbox] + label:before {
-    content: "\2714";
-    border: 0.1em solid #000;
-    border-radius: 0.2em;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    padding-left: 0.2em;
-    padding-bottom: 0.3em;
-    margin-right: 0.2em;
-    vertical-align: bottom;
-    color: transparent;
-    transition: .2s;
-    }
+input[type=checkbox] + label:before {
+content: "\2714";
+border: 0.1em solid #000;
+border-radius: 0.2em;
+display: inline-block;
+width: 1em;
+height: 1em;
+padding-left: 0.2em;
+padding-bottom: 0.3em;
+margin-right: 0.2em;
+vertical-align: bottom;
+color: transparent;
+transition: .2s;
+}
 
-    input[type=checkbox] + label:active:before {
-    transform: scale(0);
-    }
+input[type=checkbox] + label:active:before {
+transform: scale(0);
+}
 
-    input[type=checkbox]:checked + label:before {
-    background-color: #E3048A;
-    border-color: #E3048A;
-    color: #fff;
-    }
+input[type=checkbox]:checked + label:before {
+background-color: #E3048A;
+border-color: #E3048A;
+color: #fff;
+}
 
-    input[type=checkbox]:disabled + label:before {
-    transform: scale(1);
-    border-color: #aaa;
-    }
+input[type=checkbox]:disabled + label:before {
+transform: scale(1);
+border-color: #aaa;
+}
 
-    input[type=checkbox]:checked:disabled + label:before {
-    transform: scale(1);
-    background-color: #bfb;
-    border-color: #bfb;
-    }
-    }
+input[type=checkbox]:checked:disabled + label:before {
+transform: scale(1);
+background-color: #bfb;
+border-color: #bfb;
+}
+}

@@ -1,0 +1,837 @@
+﻿{% extends "JobFilterLayout.html" %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div>
+            <div id="search-banner" class="govuk-form-group search-banner">
+                <div class="govuk-wrapper-pink">
+                    <h1 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--m" for="event-name" style="color:#fff !important">
+                            Search all jobs by keyworrd
+                        </label>
+                    </h1>
+                    <div class="govuk-input__wrapper">
+                        <input class="govuk-input govuk-textbox" id="event-name" name="event-name" type="text" />
+                        <input type="button" class="govuk-search-button" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="lbFind" class="govuk-grid-row">
+            <h1 class="govuk-heading-m">Find your perfect job</h1>
+        </div>
+        <div class="govuk-grid-row">
+            <div id="filter-panel-mobile">
+                <img id="imgSeparator" src="/public/images/Break_ Medium.png" />
+                <table>
+                    <tr>
+                        <td>
+                            <!--<img id="imgSeparator" src="/public/images/Sort.png" />-->
+                            <input type="button" id="btnSort" value="Sort" class="btn-sort" />
+                        </td>
+                        <td>
+                            <input type="button" id="btnFilter" value="Filters" class="btn-filter" />
+                            <!--<img id="imgSeparator" src="/public/images/Filter.png" />-->
+                        </td>
+                    </tr>
+                </table>
+                <img id="imgSeparator" src="/public/images/Break_ Medium.png" />
+            </div>
+
+            <div id="desktop-filter-panel">
+                <table>
+                    <tr>
+                        <td>
+                            <select class="govuk-filter-select">
+                                <option id="">Test</option>
+                                <option id="">Test</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="govuk-filter-select">
+                                <option id="">Test</option>
+                                <option id="">Test</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="govuk-filter-select">
+                                <option id="">Test</option>
+                                <option id="">Test</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="govuk-filter-select">
+                                <option id="">Test</option>
+                                <option id="">Test</option>
+                            </select>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <select class="govuk-filter-select">
+                                <option id="">Test</option>
+                                <option id="">Test</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="govuk-filter-select">
+                                <option id="">Test</option>
+                                <option id="">Test</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="govuk-filter-select">
+                                <option id="">Test</option>
+                                <option id="">Test</option>
+                            </select>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td><label>Sort by :</label></td>
+                        <td>
+                            <select class="govuk-filter-select">
+                                <option id="">Prdicted job growth</option>
+                                <option id="">Test</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                </table>
+                <table style="margin-top:20px;">
+                    <tr>
+                        <td><label class="govuk-body govuk-!-font-weight-bold">10 job profiles found</label></td>
+
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="govuk-grid-row">
+
+                <div id="mobile-filter-panel" style="display:none;">
+                    <div id="filterHeader">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="#" class="govuk-label--m govuk-link--no-underline">X Close</a>
+                                </td>
+                                <td>
+                                    <label class="govuk-label--m" style="margin-left:80px;">Filter</label>
+                                </td>
+                                <td>
+                                <td><button id="btnBack" type="button" class="btn-back">Back</button></td>
+                                
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div id="dvFilterpanel" style="display:none;">
+                        <div id="panelFileterMenu" class="panel-mobile" style="display:none;">
+                            <div id="Entry_Route" class="panel-mobile-options">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h3 class="govuk-body govuk-!-font-weight-bold">Entry routes</h3>
+                                            <p class="govuk-body options-desc">Example:Apprenticeships </p>
+                                        </td>
+                                        <td class="govuk-body col"><h3>All</h3></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <div id="dv_Values" class="panel-mobile-options">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h3 class="govuk-body govuk-!-font-weight-bold">Values</h3>
+                                            <p class="govuk-body options-desc">Example:Environmental and green energy </p>
+                                        </td>
+                                        <td class=" govuk-body col"><h3>All</h3></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <div id="Job_Categories" class="panel-mobile-options">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h3 class="govuk-body govuk-!-font-weight-bold">Job Categories</h3>
+                                            <p class="govuk-body options-desc">Example:Animal care </p>
+                                        </td>
+                                        <td class="govuk-body col"><h3>All</h3></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <div id="dv_Skill" class="panel-mobile-options">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h3 class="govuk-body govuk-!-font-weight-bold">Skills</h3>
+                                            <p class="govuk-body options-desc">Example:Design</p>
+                                        </td>
+                                        <td class="govuk-body col"><h3>All</h3></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <div id="dv_Salary" class="panel-mobile-options">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h3 class="govuk-body govuk-!-font-weight-bold">Starting salary</h3>
+                                            <p class="govuk-body options-desc">Example:Under £27000</p>
+                                        </td>
+                                        <td class="govuk-body col"><h3>All</h3></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <div id="Working_Env" class="panel-mobile-options">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h3 class="govuk-body govuk-!-font-weight-bold">Working environment</h3>
+                                            <p class="govuk-body options-desc">Example:Under Outdoors</p>
+                                        </td>
+                                        <td class="govuk-body col"><h3>All</h3></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <div id="Working_Hours" class="panel-mobile-options">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h3 class="govuk-body govuk-!-font-weight-bold">Working Hours</h3>
+                                            <p class="govuk-body options-desc">Example:Shift patterns</p>
+                                        </td>
+                                        <td class="govuk-body col"><h3>All</h3></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <div id="Working_Pattern" class="panel-mobile-options">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h3 class="govuk-body govuk-!-font-weight-bold">Working pattern</h3>
+                                            <p class="govuk-body options-desc">Example:Hybrid working</p>
+                                        </td>
+                                        <td class="govuk-body col"><h3>All</h3></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <div id="dvViewResults" class="panel-mobile-options">
+                                <button id="btnViewResults" type="button" class="btn-results">View results</button>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div id="_EntryRoute" class="panel-mobile" style="display:none;">
+                            <div class="panel-header">
+                                <table>
+                                    <tr>
+                                             
+                                        <td> <h2 class="govuk-body govuk-!-font-weight-bold">Entry routes</h2></td>
+                                    </tr>
+                                </table>
+
+                            </div><br />
+                                  <div>
+                                      <h4 class="govuk-body govuk-!-font-weight-bold">Select all the options that apply :</h4>
+                                      <form>
+                                        <input type="checkbox" id="check1" name="check-1" value="A university course" />
+                                        <label for="check1"> A university course</label>
+                                         
+                                        <input type="checkbox" id="check2" name="check-2" value="A college course" />
+                                        <label for="check2"> A college course</label>
+                                        
+                                        <input type="checkbox"  id="check3" name="check-3" value="An apprenticeship" />
+                                        <label for="check3"> An apprenticeship</label>
+                                         
+                                        <input type="checkbox" id="check4" name="check-4" value="Volunteering" />
+                                        <label for="check4"> Volunteering</label>
+                                         
+                                        <input type="checkbox" id="check5" name="check-5"  value="Working towards a role" />
+                                        <label for="check5"> Working towards a role</label>
+                                          
+                                        <input type="checkbox" id="check6" name="check-6" value="Applying directly" />
+                                        <label for="check6"> Applying directly</label>
+                                         
+                                        <input type="checkbox" id="check7" name="check-7" value="Other routes" />
+                                        <label for="check7"> Other routes</label>
+                                          
+                                      </form>
+
+                                          <div id="dvApplyFilters" class="panel-mobile-options">
+                                              <button id="btnApply" type="button" class="btn-results">Apply filters</button>
+                                          </div>
+                                  </div>
+                        </div>
+                        <div id="_Values" style="display:none;">
+                            <div>
+                                <table>
+                                    <tr>
+                                       
+                                        <td><h2 class="govuk-body govuk-!-font-weight-bold">Values</h2></td>
+                                    </tr>
+                                </table>
+                                
+                            </div>
+                            <h4 class="govuk-body govuk-!-font-weight-bold">Select all theoptions that apply :</h4>
+                            
+                                <input type="checkbox" id="c-1" name="check-1"  value="Being creativee" />
+                                <label for="c-1"> Being creativee</label>
+                           
+                                <input type="checkbox"  id="c-2" name="check-1" value="Being known for what you do" />
+                                <label for="c-2"> Being known for what you do</label>
+                           
+                                <input type="checkbox" id="c-3" name="check-1"  value="Charitable work" />
+                                <label for="c-3"> Charitable work</label>
+                           
+                                <input type="checkbox" id="c-4"  value="Educating people" />
+                                <label for="c-4"> Educating people</label>
+                            
+                                <input type="checkbox" id="c-5" value="Environment and green energy" />
+                                <label for="c-5"> Environment and green energy</label>
+                           
+                                <input type="checkbox" id="c-6" value="Helping animals" />
+                                <label for="c-6"> Helping animals</label>
+                           
+                                <input type="checkbox" id="c-7"  value="Helping people" />
+                                <label for="c-7"> Helping people</label>
+                           
+                                <input type="checkbox" id="c-8" value="Influencing others" />
+                                <label for="c-8"> Influencing others</label>
+                           
+                                <input type="checkbox" id="c-9" value="Social justice" />
+                                <label for="c-9"> Social justice</label>
+                           
+                            <div id="dvApplyFilters" class="panel-mobile-options">
+                                <button id="btnApply" type="button" class="btn-results">Apply filters</button>
+                            </div>
+
+                        </div>
+                        <div id="_JobCategory" style="display:none;">
+                            <div>
+                                
+                                <table>
+                                    <tr>
+                                        
+                                        <td><h2 class="govuk-body govuk-!-font-weight-bold">Job category</h2></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h4 class="govuk-body govuk-!-font-weight-bold">Select all th eoptions that apply :</h4>
+
+                                <input type="checkbox" id="v-1" value="A university course" />
+                                <label for="v-1">Administration </label>
+                           
+                                <input type="checkbox" id="v-2" value="A university course" />
+                                <label for="v-2"> Animal care </label>
+                           
+                                <input type="checkbox" id="v-3" value="A university course" />
+                                <label for="v-3"> Beauty and wellbeing </label>
+                           
+                           
+                                <input type="checkbox" id="v-4" value="A university course" />
+                                <label for="v-4"> Business and finance</label>
+                          
+                                <input type="checkbox" id="v-5" value="A university course" />
+                                <label for="v-5"> Computing, technology, digital  </label>
+                           
+                                <input type="checkbox" id="v-6" value="A university course" />
+                                <label for="v-6"> Construction and trades </label>
+                           
+                                <input type="checkbox" id="v-7" value="A university course" />
+                                <label for="v-7"> Creative and media </label>
+                           
+                                <input type="checkbox" id="v-8" value="A university course" />
+                                <label for="v-8"> Delivery and storage  </label>
+                           
+                                <input type="checkbox" id="v-9" value="A university course" />
+                                <label for="v-9"> Emergency and uniform services  </label>
+                           
+                                <input type="checkbox" id="v-10" value="A university course" />
+                                <label for="v-10"> Engineering and maintenance  </label>
+                           
+                                <input type="checkbox" id="v-11" value="A university course" />
+                                <label for="v-11"> Enivronmental and land  </label>
+                           
+                                <input type="checkbox" id="v-12" value="A university course" />
+                                <label for="v-12"> Government services   </label>
+                          
+                                <input type="checkbox" id="v-13" value="A university course" />
+                                <label for="v-13"> Healthcare   </label>
+                            
+                                <input type="checkbox" id="v-14" value="A university course" />
+                                <label for="v-14"> Home services   </label>
+                           
+                                <input type="checkbox" id="v-15" value="A university course" />
+                                <label for="v-15"> Hospitality and food   </label>
+                           
+                                <input type="checkbox" id="v-16" value="A university course" />
+                                <label for="v-16"> Law and legal   </label>
+                           
+                                <input type="checkbox" id="v-17" value="A university course" />
+                                <label for="v-17"> Managerial   </label>
+                           
+                                <input type="checkbox" id="v-18" value="A university course" />
+                                <label for="v-18"> Retail and sales   </label>
+                          
+                                <input type="checkbox" id="v-19" value="A university course" />
+                                <label for="v-19"> Science and research   </label>
+            
+                                <input type="checkbox" id="v-20" value="Social care" />
+                                <label for="v-20"> Social care   </label>
+                          
+                                <input type="checkbox" id="v-21" value="Sports and leisure" />
+                                <label for="v-21">  Sports and leisure   </label>
+               
+                                <input type="checkbox" id="v-22" value="Teaching and education" />
+                                <label for="v-22">  Teaching and education   </label>
+
+                                <input type="checkbox" id="v-23" value="Transport" />
+                                <label for="v-23">  Transport  </label>
+
+                                
+                                <input type="checkbox" id="v-24" value="Travel and tourism" />
+                                <label for="v-24">  Travel and tourism  </label>
+
+                            <div id="dvApplyFilters" class="panel-mobile-options">
+                                <button id="btnApply" type="button" class="btn-results">Apply filters</button>
+                            </div>
+                        </div>
+                        <div id="_Skills" style="display:none;">
+                            <div>
+                                <table>
+                                    <tr>
+                                        
+                                        <td> <h2 class="govuk-body govuk-!-font-weight-bold">Skills</h2></td>
+                                    </tr>
+                                </table>
+                                
+                            </div>
+                            <h4 class="govuk-body govuk-!-font-weight-bold">Select all th eoptions that apply :</h4>
+                           
+                                <input type="checkbox" id="s-1" value="Able to work well under pressure" />
+                                <label for="s-1"> Able to work well under pressure</label>
+                          
+                                <input type="checkbox" id="s-2" value="Attention to detail" />
+                                <label for="s-2"> Attention to detail</label>
+                           
+                                <input type="checkbox" id="s-3" value="Basic IT skills" />
+                                <label for="vehicle1"> Basic IT skills</label>
+                           
+                                <input type="checkbox" id="s-4" value="Creativity" />
+                                <label for="vehicle1"> Creativity</label>
+                           
+                                <input type="checkbox" id="s-5" value="Decision making" />
+                                <label for="vehicle1"> Decision making</label>
+                           
+                                <input type="checkbox" id="s-6" value="Maths knowledge" />
+                                <label for="s-6"> Maths knowledge</label>
+                           
+                                <input type="checkbox" id="s-7" value="Organisation" />
+                                <label for="s-7"> Organisation</label>
+                           
+                                <input type="checkbox" id="s-8" value="Problem solving" />
+                                <label for="s-8"> Problem solving</label>
+                            
+                                <input type="checkbox" id="s-9" value="Using your initiative" />
+                                <label for="s-9"> Using your initiative</label>
+                           
+                                <input type="checkbox" id="s-10" value="Verbal communication" />
+                                <label for="s-10"> Verbal communication</label>
+                            
+                           
+                                <input type="checkbox" value="A university course" />
+                           
+                            <label for="vehicle1"> Working as part of a team</label>
+                           
+                                <input type="checkbox" value="A university course" />
+                                <label for="vehicle1"> Written communication</label>
+                            
+                            <div id="dvApplyFilters" class="panel-mobile-options">
+                                <button id="btnApply" type="button" class="btn-results">Apply filters</button>
+                            </div>
+                        </div>
+                        <div id="_Salary" style="display:none;">
+                            <div>
+                                <h2 class="govuk-body govuk-!-font-weight-bold">Starting Salary</h2>
+                                <table>
+                                    <tr>
+                                        <td>  <h2 class="govuk-body govuk-!-font-weight-bold">Starting Salary</h2></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h4 class="govuk-body govuk-!-font-weight-bold">Select all th eoptions that apply :</h4>
+                           
+                                <input type="checkbox" value="A university course" />
+                                <label for="vehicle1"> Under £18,000 per year</label>
+                            
+                           
+                                <input type="checkbox" value="A university course" />
+                                <label for="vehicle1"> £18,000 to £25,000 per year</label>
+                            
+                           
+                                <input type="checkbox" value="A university course" />
+                                <label for="vehicle1"> £25,000 to £30,000 per year</label>
+                          
+                                <input type="checkbox" value="A university course" />
+                                <label for="vehicle1"> £30,000 to £37,000 per year</label>
+                           
+                           
+                                <input type="checkbox" value="A university course" />
+                                <label for="vehicle1"> More than £37,000  per year</label>
+
+                            
+                            <div id="dvApplyFilters" class="panel-mobile-options">
+                                <button id="btnApply" type="button" class="btn-results">Apply filters</button>
+                            </div>
+                          </div>
+                          <div id="_WorkingEnvironment" style="display:none;">
+                              <div>
+                                 
+                                  <table>
+                                      <tr>
+                                          <td> <h2 class="govuk-body govuk-!-font-weight-bold">Working Environment</h2></td>
+                                      </tr>
+                                  </table>
+                              </div>
+                                <h4 class="govuk-body govuk-!-font-weight-bold">Select all th eoptions that apply :</h4>
+                               
+                                    <input type="checkbox" value="A university course" />
+                                    <label for="vehicle1"> Office based</label>
+                                
+                                    <input type="checkbox" value="A university course" />
+                                    <label for="vehicle1"> Practical/hands on</label>
+                               
+                               
+                                    <input type="checkbox" value="A university course" />
+                                    <label for="vehicle1"> Indoors</label>
+                                
+                               
+                                    <input type="checkbox" value="A university course" />
+                                    <label for="vehicle1"> Outdoors</label>
+                                
+                               
+                                    <input type="checkbox" value="A university course" />
+                                    <label for="vehicle1"> Emotionally demanding</label>
+                               
+                               
+                                    <input type="checkbox" value="A university course" />
+                                    <label for="vehicle1"> Physically demanding</label>
+                                
+                               
+                                    <input type="checkbox" value="A university course" />
+                                    <label for="vehicle1"> Travel often</label>
+                                
+                               
+                                    <input type="checkbox" value="A university course" />
+                                    <label for="vehicle1">  Remote working</label>
+
+                                
+                                <div id="dvApplyFilters" class="panel-mobile-options">
+                                    <button id="btnApply" type="button" class="btn-results">Apply filters</button>
+                                </div>
+                            </div>
+                            <div id="_WorkingHours" style="display:none;">
+                                <div>
+                                    <h2 class="govuk-body govuk-!-font-weight-bold">Working hours</h2>
+                                    <table>
+                                        <tr>
+                                            <td> <h2 class="govuk-body govuk-!-font-weight-bold">Working hours</h2></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <h4 class="govuk-body govuk-!-font-weight-bold">Select all the options that apply :</h4>
+                               
+                                    <input type="checkbox" value="A university course" />
+                                    <label for="vehicle1"> Under 40 hours per week</label>
+                               
+                                    <input type="checkbox" value="A university course" />
+                                    <label for="vehicle1"> 40 hours a week or more</label>
+
+                               
+                                <div id="dvApplyFilters" class="panel-mobile-options">
+                                    <button id="btnApply" type="button" class="btn-results">Apply filters</button>
+                                </div>
+                            </div>
+                            <div id="_WorkingPatterns" style="display:none;">
+                                <div>
+                                    
+                                    <table>
+                                        <tr> 
+                                            <td> <h2 class="govuk-body govuk-!-font-weight-bold">Working patterns</h2>/td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <h3>Select all the options that apply :</h3>
+
+                               
+                                    <input type="checkbox" value="A university course" />
+                                    <label for="vehicle1"> Remote working</label>
+                               
+                                    <input type="checkbox" value="A university course" />
+                                    <label for="vehicle1"> On site working</label>
+                              
+                                    <input type="checkbox" value="A university course" />
+                                    <label for="vehicle1"> Hybrid working</label>
+                               
+                                <div id="dvApplyFilters" class="panel-mobile-options">
+                                    <button id="btnApply" type="button" class="btn-results">Apply filters</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            <div id="dvIcons" style="margin:10px;display:none;">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="/public/images/Frame-14.png" />
+                        </td>
+                        <td>
+                            <img src="/public/images/Frame-16.png" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="/public/images/Frame-15.png" />
+                        </td>
+                        <td>
+                            <img src="/public/images/Frame-17.png" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="govuk-grid-row">
+            <div id="job-desc-desktop" style="margin-left:25px;">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full" style="border-bottom:1px solid #808080;margin-top:20px;">
+
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-third">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <a href="#"><img src="/public/images/jobprofile-logo.png" /></a>
+                                                <h3 class="govuk-heading-s">Graphic designer</h3>
+                                                <ul class="govuk-list job-sal-info">
+                                                    <li> £18,000 to £36,000 per year</li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <img id="img-right" class="jobprofile-img" src="/public/images/graphic-logo.png" />
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <a href="#"><img src="/public/images/jobprofile-logo.png" /></a>
+                                                <h3 class="govuk-heading-s">Financial advier</h3>
+                                                <ul class="govuk-list job-sal-info">
+                                                    <li> £23,500 to £45,000 per year</li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <img id="img-right" class="jobprofile-img" src="/public/images/finance-logo.png" />
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <a href="#"><img src="/public/images/jobprofile-logo.png" /></a>
+                                                <h3 class="govuk-heading-s">Restaurant manager</h3>
+                                                <ul class="govuk-list job-sal-info">
+                                                    <li> £18,000 to £28,000 per year</li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <img id="img-right" class="jobprofile-img" src="/public/images/restmgr-logo.png" />
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="govuk-grid-column-full" style="border-bottom:1px solid #808080">
+                        <p>govuk-grid-column-two-thirds</p>
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-third">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <a href="#"><img src="/public/images/jobprofile-logo.png" /></a>
+                                                <h3 class="govuk-heading-s">Computer game developer</h3>
+                                                <ul class="govuk-list job-sal-info">
+                                                    <li> £25,000 to £70,000 per year</li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <img id="img-right" class="jobprofile-img" src="/public/images/game-logo.png" />
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <a href="#"><img src="/public/images/jobprofile-logo.png" /></a>
+                                                <h3 class="govuk-heading-s">Web designer</h3>
+                                                <ul class="govuk-list job-sal-info">
+                                                    <li> £18,000 to £36,000 per year</li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <img id="img-right" class="jobprofile-img" src="/public/images/web-logo.png" />
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <a href="#"><img src="/public/images/jobprofile-logo.png" /></a>
+                                                <h3 class="govuk-heading-s">Roadie</h3>
+                                                <ul class="govuk-list job-sal-info">
+                                                    <li> £18,000 to £37,000 per year</li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <img id="img-right" class="jobprofile-img" src="/public/images/roadie-logo.png" />
+                                        </td>
+
+                                    </tr>
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="govuk-grid-column-full">
+           
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-third">
+                                <table>
+                                <tr>
+                                    <td>
+                                        <a  class="govuk-label govuk-label--s govuk-link"  href="#">Show more results</a>
+                                    </td>
+                                </tr>
+                                </table>
+                                <br/>
+                                <h1 class="govuk-heading-l">Explore by job group</h1>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="govuk-grid-column-full">
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-third">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <ul class="govuk-label govuk-label--m govuk-list footer-content">
+                                                <li>Administration</li>
+                                                <li>Animal care</li>
+                                                <li> Beauty and wellbeing</li>
+                                                <li>Business and finance</li>
+                                                <li>Computing, technology and digital</li>
+                                                <li>Construction and trades</li>
+                                                <li>Creative and media</li>
+                                                <li>Delivery and storage</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="govuk-grid-column-one-third">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <ul class="govuk-label govuk-label--m govuk-list footer-content">
+                                                <li>Emergency and uniform services</li>
+                                                <li>Engineering and maintenance</li>
+                                                <li> Environmental and land</li>
+                                                <li>Government services</li>
+                                                <li>Healthcare</li>
+                                                <li>Hospitality and food</li>
+                                                <li>Law and legal</li>
+                                            </ul>
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="govuk-grid-column-one-third">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+
+                                            <ul class="govuk-label govuk-label--m govuk-list footer-content">
+                                                <li> Managerial</li>
+                                                <li> Manufacturing</li>
+                                                <li> Retail and sales</li>
+                                                <li> Science and research</li>
+                                                <li> Social care</li>
+                                                <li> Sports and leisure</li>
+                                                <li> Teaching and education</li>
+                                                <li> Transport</li>
+                                                <li> Travel and tourism</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                        </div>
+                  </div>
+
+            </div>
+        </div>
+
+ {% endblock %}
