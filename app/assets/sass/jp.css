@@ -1,53 +1,68 @@
 ﻿body {
-max-width: 100%;
-overflow: hidden;
+    max-width: 100% !important;
+    overflow: hidden !important;
 }
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
-p {
-font-size: 19px;
-line-height: 1.3157894737;
-margin-bottom: 20px;
+
+p 
+{
+    font-size: 19px;
+    line-height: 1.3157894737;
+    margin-bottom: 20px;
 }
-.govuk-body, .govuk-body-m {
-color: #0b0c0c;
-font-family: "GDS Transport", arial, sans-serif;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-font-weight: 400;
-font-size: 16px;
-font-size: 1rem;
-line-height: 1.25;
-margin-top: 0;
-margin-bottom: 15px;
+
+.govuk-body, .govuk-body-m 
+{
+    color: #0b0c0c;
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 .ui-menu-item, p {
-font-size: 1.1875rem;
-line-height: 1.3157894737;
-margin-bottom: 20px;
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+    margin-bottom: 20px;
 }
 
 .ui-autocomplete {
-background-color: #fff;
-color: #0b0c0c;
-border: 1px solid #bfc1c3;
-list-style: none;
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-position: absolute;
-width: calc(100% - 40px);
-top: 100%;
-z-index: 500;
+    background-color: #fff;
+    color: #0b0c0c;
+    border: 1px solid #bfc1c3;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: absolute;
+    width: calc(100% - 40px);
+    top: 100%;
+    z-index: 500;
 }
 
 .js_wrapper {
-margin-top: -40px;
+    margin-top: -40px;
 }
 
-.top-right {
+.fixed-content {
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+
+.top-right 
+{
     position: absolute;
     float: right;
     margin-top: -320px;
@@ -59,48 +74,69 @@ margin-top: -40px;
     padding: 5px;
     text-align: center;
     color: #fff;
-    background: #fff !important;
-    width: 25%;
+    /* background: #fff !important;*/
+    /*width: 25%;*/
+    width: 15%;
     text-align: left;
     margin-top: -250px;
 }
 
 .wrapper-top-left-primary {
-position: absolute;
-padding: 5px;
-text-align: center;
-color: #fff;
-background: #fff !important;
-width: 44%;
-text-align: left;
-margin-top: -195px;
+    position: absolute;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+    /* background: #fff !important;*/
+    /*width: 44%;*/
+    width: 34%;
+    text-align: left;
+    margin-top: -235px;
 }
 
 .wrapper-top-left-secondary {
-position: absolute;
-margin-top: -83px;
-padding: 5px;
-text-align: left;
-color: white;
-background-color: #fff;
-width: 27%;
-float: left;
+    position: absolute;
+    margin-top: -183px;
+    padding: 5px;
+    text-align: left;
+    color: white;
+    /*background-color: #fff;*/
+    /*width: 27%;*/
+    width: 28%;
+    float: left;
+}
+
+.header_banner {
+    background-color: #fff;
+    padding:5px;
+}
+
+.govuk_label_wrap{
+    padding-left:8px;
 }
 
 #_PinkWrapper {
     background-color: #E3048A !important;
     height: 100px;
-    width: 345px;
+    width: 210px;
 }
 
 #dvSalary {
     margin-top: 45px;
-
+    margin-left: -155px;
 }
 
 ._Hours {
     width: 400px;
     margin-left: 20px;
+}
+
+
+#_DeskBanner {
+    display: block;
+}
+
+#_MobBanner {
+    display: none;
 }
 
 .img-wrap{
@@ -109,37 +145,264 @@ float: left;
 
 .wrapper-row {
     box-shadow: 3px 3px 3px 3px #ddd;
+    background-color: #E3048A !important;
 }
 
-.govuk-button-wrapper {
+._salary-text {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.job-profile_wrapper {
+    background: url(/public/images/rec-image.png) 0 10px no-repeat;
+}
+
+.jobprofile-img-wrapper {
+    margin-top: 9px !important;
+    height: 152px !important;
+    margin-right: -2px !important;
+}
+
+.jp-logo {
+    margin-top: 12px;
+   
+}
+.job-title {
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+.job-sal-info-panel {
+    margin-top: 10px;
+}
+
+.job-search-text {
+    border-radius: 45px;
+}
+
+.job-search-banner {
+    margin-top: -80px;
+    margin-left: -30px;
+}
+
+.ec-top-left {
+   
+    position: absolute;
+    left: 150px;
+    margin-top: -250px;
+    padding: 5px;
+    margin-left: 320px;
+    text-align: center;
+    color: white;
+    background-color: #fff;
+    /* margin-bottom: 60px; */
+    /* width: 50%;*/
+    text-align: left;
+
+}
+
+.ec-header {
+    padding: 10px;
+    width: 60%;
+    color: black !important;
+}
+
+._pinkdot {
+    background-color: #E3048A !important;
+}
+
+.btnHomeWrapper{
+    width:300px;
+    margin-top:10px;
+}
+
+.btnAboutUsWrapper {
+    width: 350px;
+    margin-top: 10px;
+}
+
+#_GetTheJump{
+margin-bottom:30px;
+}
+
+.getthejump {
+    background-color: #fff;
     margin-top: 20px;
-    box-shadow: none !important;
-    height:60px;
-    border-radius:35px !important;
+    width: 95%;
+    padding: 10px;
+}
+
+.app-step-nav__header {
+    border-top: none !important;
+}
+
+.app-step-nav__steps {
+    margin-left:60px !important;
+}
+
+.steps_wrapper {
+    width: 105%;
+}
+
+.step_3{
+    border-left : none !important;
+}
+
+.step_3:after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 0;
+    height: 100%;
+    border-left: none !important;
+    background: #ffffff;
+    left: 0;
+    margin-left: 12px;
+    top: 15px;
+}
+
+.step_3:last-child:before {
+    content: "";
+    position: absolute;
+    z-index: 6;
+    bottom: 0;
+    left: 0;
+    margin-left: 6.5px;
+    width: 13px;
+    height: 0;
+    border-bottom: none !important;
+}
+
+.story_title{
+    margin-left:60px;
+}
+
+.realstory-background {
+    background-color: rgba(159, 197, 232, 0.2588235294);
+    border-radius: 35px;
+    margin-left: -35px
+}
+
+.realstory-table_cell_0 {
+    width: 70%;
+    
+}
+
+.realstory-table_cell_1 {
+    width: 30%;
    
 }
 
-.govuk-grid-row-blue {
-    background-color: rgba(159, 197, 232, 0.2588235294);
+.govuk-table__cell {
+   
+    border-bottom: none !important;
+   
+}
+
+.RealImgStory {
+width: 250px;
+height: 450px;
+    
+}
+
+.rs-controls {
+    position: absolute;
+    top: calc(50% - 50px);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
     width: 100%;
-    height: 300px;
-    margin-bottom: 15px;
+}
+
+.rs-controls button {
+    padding: 16px;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    background-color: #9fc5e842;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.rs-controls button:hover {
+    background-color: #E3048A;
+}
+
+.controls {
+    /* display: none; */
+    margin-top: 360px;
+   /* margin-left: 25px;*/
+}
+
+.controls {
+    position: absolute;
+    top: calc(50% - 50px);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    background-color: #f3f2f1;
+}
+
+.rs-dots-container {
+    height: 20px;
+    margin-top: 56px;
+    text-align: center;
+    opacity:.8;
+}
+
+.govuk-button-wrapper {
+margin-top: 20px;
+box-shadow: none !important;
+height: 60px;
+border-radius: 35px !important;
+}
+
+.govuk-grid-row-blue {
+background-color: rgba(159, 197, 232, 0.2588235294);
+width: 100%;
+height: 320px;
+margin-bottom: 55px;
+}
+
+.lb_speaktoadviser {
+    float: left;
+    color: #fff;
+    width:80%;
+    padding:3px;
+}
+
+.searchcource_text {
+    font-size: 18px;
+    margin-bottom: 35px;
 }
 
 .btn-ncs-home {
-    width: 65%;
-    margin-left: 30px;
-    margin-top: -20px;
+width: 65%;
+margin-left: 30px;
+margin-top: -20px;
 }
 
 .btn-contactus-home {
-    width: 65%;
-    /* margin-left: 30px; */
-    /* margin-top: -20px; */
+width: 65%;
+/* margin-left: 30px; */
+/* margin-top: -20px; */
+}
+
+.home-wrapper-top-left {
+position: absolute;
+padding: 5px;
+text-align: center;
+color: #fff;
+background: #fff !important;
+width: 30%;
+text-align: left;
+margin-top: -290px;
+margin-left: 215px;
 }
 
 .sr-hidden {
-    display: none;
+display: none;
 }
 
 .ways-to-become {
@@ -164,7 +427,26 @@ width: 100%;
 height: 100%;
 }
 
+#mobile_RealImgStory {
+display: none;
+}
 
+#desk_RealImgStory {
+display: block;
+}
+
+#_deskProfile_0 {
+    display: block;
+}
+
+#_deskProfile_1 {
+    display: block;
+}
+
+#_ipadJobProfile {
+    display: none;
+    margin: 10px;
+}
 
 .gs-controls {
 position: absolute;
@@ -204,9 +486,12 @@ display: block;
 margin-left: -45px;
 width: 100%;
 }
-#sal_mob{
+
+#sal_mob
+{
 display:none;
 }
+
 .job-profile-hero {
 margin-bottom: 0;
 }
@@ -406,7 +691,7 @@ text-decoration: none;
 font-size: 1.1875rem;
 line-height: 1.3157894737;
 }
-    
+
 .list-big li a {
 display: block;
 padding: 5px 0;
@@ -418,16 +703,20 @@ text-decoration: none;
 {
 border-top: 8px solid #207E77 !important;
 }
-.job-profile-sidebar {
+
+.job-profile-sidebar 
+{
 border-top: 6px solid #207e77;
 }
 
-.job-profile-search {
+.job-profile-search 
+{
 background: #207e77;
 color: #fff;
 padding: 10px;
 margin-bottom: 30px;
 }
+
 .job-profile-search h4 {
 padding: 5px 0 10px !important;
 margin: 0 !important;
@@ -692,7 +981,6 @@ figure {
 
 body, figure {
 margin: 0;
-    
 font-family: Istok Web, sans-serif;
 font-weight: 100;
 }
@@ -737,10 +1025,10 @@ font-size: 2rem;
 padding: .6rem;
 }
 /************************************/
-#story-wrapper {
+#story-wrapper 
+{
 overflow: hidden;
 position: relative;
-    
 margin: 0 auto;
 }
 
@@ -771,311 +1059,1090 @@ width: 40%;
 
 
 
-
-/* Portrait */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-
-    .wrapper-top-left {
-        position: absolute;
-        padding: 5px;
-        text-align: center;
-        color: #fff;
-        background: #fff !important;
-        width: 60%;
-        text-align: left;
-        margin-top: -190px;
-    }
-
-    .wrapper-top-left-primary {
-        position: absolute;
-        padding: 5px;
-        text-align: center;
-        color: #fff;
-        background: #fff !important;
-        width: 55%;
-        text-align: left;
-        margin-top: -120px;
-    }
-
-    .wrapper-top-left-secondary {
-        position: absolute;
-        margin-top: -83px;
-        padding: 5px;
-        text-align: left;
-        color: white;
-        background-color: #fff;
-        width: 50%;
-        float: left;
-        margin-top: -60px;
-    }
-
-    #_PinkWrapper {
-        background-color: #E3048A !important;
-        height: 100px;
-        width: 200px;
-    }
-
-    ._Hours {
-        width: 400px;
-        margin-left:  110px;
-    }
-
-}
-
-/* Landscape */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-
-    .wrapper-top-left {
-        position: absolute;
-        padding: 5px;
-        text-align: center;
-        color: #fff;
-        background: #fff !important;
-        width: 38%;
-        text-align: left;
-        margin-top: -190px;
-    }
-
-    .wrapper-top-left-primary {
-        position: absolute;
-        padding: 5px;
-        text-align: center;
-        color: #fff;
-        background: #fff !important;
-        width: 35%;
-        text-align: left;
-        margin-top: -120px;
-    }
-
-    .wrapper-top-left-secondary {
-        position: absolute;
-        margin-top: -83px;
-        padding: 5px;
-        text-align: left;
-        color: white;
-        background-color: #fff;
-        width: 40%;
-        float: left;
-        margin-top: -60px;
-    }
-
-    #_PinkWrapper {
-        background-color: #E3048A !important;
-        height: 100px;
-        width: 250px;
-    }
-
-    ._Hours {
-        width: 400px;
-        margin-left: 50px;
-    }
-
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media screen and (max-width:600px) {
-
-.govuk-grid-column-one-half {
-box-sizing: border-box;
-width: 100%;
-padding: 0 0px;
-}
-#jp-story1 {
-display: inline-block;
-width: 100%;
-margin-left: -25px;
-float: left;
-}
-
-#jp-story2 {
-display: inline-block;
-width: 100%;
-margin-left: -25px;
-float: left;
-}
-
-#jp-story3 {
-display: inline-block;
-width: 100%;
-margin-left: -25px;
-float: left;
-}
-#jp-story4 {
-display: inline-block;
-width: 100%;
-margin-left: -25px;
-float: left;
-}
-
-#ImgStory-4{
-display:none;
-}
-.top-margin {
-margin-top: 50px;
-}
-
-.gds-controls {
-display: inline-block;
+@media screen and (min-width:1440px) {
+/* this code will be in effect from 1440px width and up */
+.top-right {
 position: absolute;
-top: calc(50% - 50px);
-display: flex;
-justify-content: space-between;
-position: absolute;
-width: 100%;
-margin-top: 340px;
+float: right;
+margin-top: -329px;
+margin-left: 990px;
 }
 
-.gds-controls button {
-display: inline-block;
-padding: 16px;
-border: none;
-font-size: 1.8rem;
-color: #207e77;
-background-color: #A5CBC8;
-cursor: pointer;
-transition: 0.3s ease;
-margin-left: -3px;
-margin-right: 190px;
-opacity:.3;
-}
-
-.gds-controls button:hover {
-background-color: #207e77;
-color:white;
-}
-
-.dots-container {
-height: 20px;
-margin-top: 16px;
-text-align: center;
-margin-top: -20px;
-}
-
-#desk-slideshow{
-
-display:none;
-}
-
-#mobile-slideshow {
-display: block;;
-}
-
-.js_wrapper {
-margin-top: 40px;
-}
-
-#sal_desk {
-display: none;
-margin-left: -45px;
-width: 100%;
-}
-
-#sal_mob {
-display: block;
-width: 100%;
-}
-
-.job-profile-search .search-input {
-position: relative;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-z-index: 10;
-width: 90%;
-padding: 6px;
-font-family: "GDS Transport", Arial, sans-serif;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-font-weight: 400;
-font-size: 1rem;
-line-height: 1.25;
-margin: 0;
-border: 0;
-outline-offset: 0;
-height: 40px;
-background-color: #fff;
-}
-
-.job-profile-search-submit {
-width: 40px;
-height: 40px;
-overflow: hidden;
-position: absolute;
-margin-top: -40px;
-margin-left: 255px;
-}
-
-
-.main-wrapper {
-display: inline-block;
-place-content: center;
-width: 100%;
-height: 100%;
-margin-top: -50px;
-}
-
-.govuk-label-heading-gds {
-color: #1d70b8;
-        
-font-size: 25px;
-font-weight: 800;
-        
-}
-
-.top-right{
-display:none;
-}
-
-.wrapper-top-left {
-    position: absolute;
-    padding: 5px;
-    text-align: center;
-    color: #fff;
-    background: #fff !important;
-    width: 60%;
-    text-align: left;
-    margin-top: -250px;
-}
-
-.wrapper-top-left-primary {
+.home-wrapper-top-left {
 position: absolute;
 padding: 5px;
 text-align: center;
 color: #fff;
 background: #fff !important;
-width: 65%;
+width: 30%;
 text-align: left;
-margin-top: -195px;
+margin-top: -290px;
+margin-left: 235px;
 }
 
-.wrapper-top-left-secondary {
-position: absolute;
-margin-top: -83px;
-padding: 5px;
-text-align: left;
-color: white;
-background-color: #fff;
-width: 80%;
-float: left;
-}
+    .ec-top-left {
+        position: absolute;
+        left: -90px;
+        margin-top: -250px;
+        padding: 5px;
+        margin-left: 320px;
+        text-align: center;
+        color: white;
+        background: none;
+        text-align: left;
+    }
 
-.salary-text{
-margin-left:20px;
-}
+    .ec-header {
+        padding: 10px;
+        width: 100%;
+        color: black !important;
+    }
 
-#_PinkWrapper{
-display:none;
+#_PinkWrapper {
+background-color: #E3048A !important;
+height: 100px;
+width: 210px;
 }
 
 #dvSalary {
-    margin-top: 45px;
-    padding-top: 15px;
-    padding-bottom: 5px;
+margin-top: 45px;
+margin-left: -85px;
 }
 
-.wrapper-row {
-    box-shadow: 3px 3px 3px 3px #ddd;
-    border-left: 30px solid #E3048A;
-    margin-top: -46px;
+    .wrapper-top-left {
+        position: absolute;
+        padding: 5px;
+        text-align: center;
+        color: #fff;
+        /* background: #fff !important;*/
+        /*width: 25%;*/
+        width: 15%;
+        text-align: left;
+        margin-top: -250px;
+    }
+
+    .wrapper-top-left-primary {
+        position: absolute;
+        padding: 5px;
+        text-align: center;
+        color: #fff;
+        /* background: #fff !important;*/
+        /*width: 44%;*/
+        width: 34%;
+        text-align: left;
+        margin-top: -235px;
+    }
+
+    .wrapper-top-left-secondary {
+        position: absolute;
+        margin-top: -183px;
+        padding: 5px;
+        text-align: left;
+        color: white;
+        /*background-color: #fff;*/
+        /*width: 27%;*/
+        width: 28%;
+        float: left;
+    }
 }
+
+
+
+@media screen and (min-width:1600px) {
+/* this code will be in effect from 1600px width and up */
+.top-right {
+position: absolute;
+float: right;
+margin-top: -373px;
+margin-left: 990px;
 }
+
+.home-wrapper-top-left {
+position: absolute;
+padding: 5px;
+text-align: center;
+color: #fff;
+background: #fff !important;
+width: 30%;
+text-align: left;
+margin-top: -290px;
+margin-left: 325px;
+}
+
+    .ec-top-left {
+        position: absolute;
+        left: -10px;
+        margin-top: -250px;
+        padding: 5px;
+        margin-left: 320px;
+        text-align: center;
+        color: white;
+        background: none;
+        text-align: left;
+    }
+
+    .ec-header {
+        padding: 10px;
+        width: 100%;
+        color: black !important;
+    }
+
+}
+
+@media screen and (min-width:1624px) {
+/* this code will be in effect from 1680px width and up */
+.top-right {
+position: absolute;
+float: right;
+margin-top: -373px;
+margin-left: 990px;
+}
+
+    .ec-top-left {
+        position: absolute;
+        left: -10px;
+        margin-top: -250px;
+        padding: 5px;
+        margin-left: 320px;
+        text-align: center;
+        color: white;
+        background: none;
+        text-align: left;
+    }
+
+    .ec-header {
+        padding: 10px;
+        width: 100%;
+        color: black !important;
+    }
+
+.home-wrapper-top-left {
+position: absolute;
+padding: 5px;
+text-align: center;
+color: #fff;
+background: #fff !important;
+width: 30%;
+text-align: left;
+margin-top: -290px;
+margin-left: 325px;
+}
+
+    .wrapper-top-left {
+        position: absolute;
+        padding: 5px;
+        text-align: center;
+        color: #fff;
+        /* background: #fff !important;*/
+        /*width: 25%;*/
+        width: 15%;
+        text-align: left;
+        margin-top: -280px;
+    }
+
+    .wrapper-top-left-primary {
+        position: absolute;
+        padding: 5px;
+        text-align: center;
+        color: #fff;
+        /* background: #fff !important;*/
+        /*width: 44%;*/
+        width: 29%;
+        text-align: left;
+        margin-top: -264px;
+    }
+
+    .wrapper-top-left-secondary {
+        position: absolute;
+        margin-top: -93px;
+        padding: 5px;
+        text-align: left;
+        color: white;
+        /*background-color: #fff;*/
+        /*width: 27%;*/
+        width: 24%;
+        float: left;
+    }
+
+    .govuk-label-pink {
+        color: #E3048A !important;
+        background: #fff;
+        width:93%;
+    }
+    
+}
+
+@media only screen and (min-device-width: 912px) and (max-device-width: 1368px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .top-right {
+        position: absolute;
+        float: right;
+        margin-top: -202px !important;
+        margin-left: 590px !important;
+    }
+
+    .ec-top-left {
+        position: absolute;
+        left: 150px;
+        margin-top: -250px;
+        padding: 5px;
+        margin-left: 320px;
+        text-align: center;
+        color: white;
+        background-color: #fff;
+        /* margin-bottom: 60px; */
+        /* width: 50%;*/
+        text-align: left;
+    }
+    .ec-header {
+        padding: 10px;
+        width: 100%;
+        color: black !important;
+    }
+    .btn-ncs-home {
+        width: 75%;
+    }
+}
+
+@media only screen and (min-device-width: 912px) and (max-device-width: 1368px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) { 
+    .top-right {
+        position: absolute;
+        float: right;
+        margin-top: -202px !important;
+        margin-left: 590px !important;
+    }
+
+    .ec-top-left {
+        position: absolute;
+        left: -110px;
+        margin-top: -250px;
+        padding: 5px;
+        margin-left: 320px;
+        text-align: center;
+        color: white;
+        background: none;
+        text-align: left;
+    }
+
+    .ec-header {
+        padding: 10px;
+        width: 100%;
+        color: black !important;
+    }
+
+    .btn-ncs-home {
+        width: 75%;
+    }
+}
+
+@media only screen and (min-device-width: 800px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .ec-top-left {
+        position: absolute;
+        left: -110px;
+        margin-top: -250px;
+        padding: 5px;
+        margin-left: 320px;
+        text-align: center;
+        color: white;
+        background: none;
+        text-align: left;
+    }
+
+    .ec-header {
+        padding: 10px;
+        width: 100%;
+        color: black !important;
+    }
+}
+
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .ec-top-left {
+        position: absolute;
+        left: -110px;
+        margin-top: -250px;
+        padding: 5px;
+        margin-left: 320px;
+        text-align: center;
+        color: white;
+        background: none;
+        text-align: left;
+    }
+
+    .ec-header {
+        padding: 10px;
+        width: 100%;
+        color: black !important;
+    }
+}
+
+
+@media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .ec-top-left {
+        position: absolute;
+        left: -170px;
+        margin-top: -250px;
+        padding: 5px;
+        margin-left: 320px;
+        text-align: center;
+        color: white;
+        background: none;
+        text-align: left;
+    }
+
+    .ec-header {
+        padding: 10px;
+        width: 100%;
+        color: black !important;
+    }
+}
+
+@media only screen and (min-device-width: 950px) and (max-device-width: 1280px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .ec-top-left {
+        position: absolute;
+        left: -170px;
+        margin-top: -250px;
+        padding: 5px;
+        margin-left: 320px;
+        text-align: center;
+        color: white;
+        background: none;
+        text-align: left;
+    }
+
+    .ec-header {
+        padding: 10px;
+        width: 100%;
+        color: black !important;
+    }
+
+}
+
+    /* Portrait */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+        .top-right {
+            position: absolute;
+            float: right;
+            margin-top: -167px;
+            margin-left: 490px;
+        }
+
+        .ec-top-left {
+            position: absolute;
+            left: -290px;
+            margin-top: -150px;
+            padding: 5px;
+            margin-left: 320px;
+            text-align: center;
+            color: white;
+            background: none !important;
+            /* margin-bottom: 60px; */
+            /* width: 50%; */
+            text-align: left;
+        }
+
+        .wrapper-top-left {
+            position: absolute;
+            padding: 5px;
+            text-align: center;
+            color: #fff;
+            /*background: #fff !important;*/
+            width: 30%;
+            text-align: left;
+            margin-top: -189px;
+            height: 50px;
+        }
+
+        .wrapper-top-left-primary {
+            position: absolute;
+            padding: 5px;
+            text-align: center;
+            color: #fff;
+           /* background: #fff !important;*/
+            width: 60%;
+            text-align: left;
+            margin-top: -135px;
+        }
+
+        .wrapper-top-left-secondary {
+            position: absolute;
+            margin-top: -83px;
+            padding: 5px;
+            text-align: left;
+            color: white;
+           /* background-color: #fff;*/
+            width: 34%;
+            float: left;
+            margin-top: -60px;
+        }
+        .searchcource_text {
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+        .govuk-label-pink {
+            color: #E3048A !important;
+            width: 100%;
+        }
+
+        .govuk-label-grey {
+            color: #767676 !important;
+            /*height: 10px;*/
+            margin-top: -20px;
+            width: 55%;
+        }
+
+        #_PinkWrapper {
+            background-color: #E3048A !important;
+            height: 100px;
+            width: 210px;
+        }
+        .getthejump {
+            background-color: #fff;
+            margin-top: 20px;
+            width: 85%;
+            padding: 10px;
+        }
+
+        #dvSalary {
+            margin-top: 45px;
+            margin-left: -185px;
+        }
+
+        ._Hours {
+            width: 400px;
+            margin-left: 110px;
+        }
+
+        #_DeskBanner {
+            display: none;
+        }
+
+        #_MobBanner {
+            display: block;
+        }
+
+        .home-wrapper-top-left {
+            position: absolute;
+            padding: 5px;
+            text-align: center;
+            color: #fff;
+            background: #fff !important;
+            width: 60%;
+            text-align: left;
+            margin-top: -180px;
+            margin-left: 10px;
+            width: 40%;
+        }
+
+        .btn-ncs-home {
+            width: 75%;
+        }
+
+        #_deskProfile_0{
+            display:none;
+        }
+        #_deskProfile_1{
+            display:none;
+        }
+        #_ipadJobProfile{
+            display:block;
+            margin:10px;
+
+        }
+    }
+
+    /* Landscape */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+        .top-right {
+            position: absolute;
+            float: right;
+            margin-top: -228px;
+            margin-left: 690px;
+        }
+
+        .ec-top-left {
+            position: absolute;
+            left: -290px;
+            margin-top: -250px;
+            padding: 5px;
+            margin-left: 320px;
+            text-align: center;
+            color: white;
+            background: none;
+            /* margin-bottom: 60px; */
+            /* width: 50%; */
+            text-align: left;
+        }
+
+        .wrapper-top-left {
+            position: absolute;
+            padding: 5px;
+            text-align: center;
+            color: #fff;
+            /*background: #fff !important;*/
+            width: 27%;
+            text-align: left;
+            margin-top: -189px;
+            height: 50px;
+        }
+
+        .wrapper-top-left-primary {
+            position: absolute;
+            padding: 5px;
+            text-align: center;
+            color: #fff;
+            /*background: #fff !important;*/
+            width: 31%;
+            text-align: left;
+            margin-top: -130px;
+        }
+
+        .wrapper-top-left-secondary {
+            position: absolute;
+            margin-top: -83px;
+            padding: 5px;
+            text-align: left;
+            color: white;
+           /* background-color: #fff;*/
+            width: 31%;
+            float: left;
+            margin-top: -60px;
+        }
+
+        .govuk-label-pink {
+            color: #E3048A !important;
+            width: 100%;
+        }
+
+        .govuk-label-grey {
+            color: #767676 !important;
+            /*height: 10px;*/
+            margin-top: -20px;
+        }
+
+        #_PinkWrapper {
+            background-color: #E3048A !important;
+            height: 100px;
+            width: 210px;
+        }
+
+        #dvSalary {
+            margin-top: 45px;
+            margin-left: -235px;
+        }
+
+        ._Hours {
+            width: 400px;
+            margin-left: 50px;
+        }
+
+        #_DeskBanner {
+            display: none;
+        }
+
+        #_MobBanner {
+            display: block;
+        }
+
+        .home-wrapper-top-left {
+            position: absolute;
+            padding: 5px;
+            text-align: center;
+            color: #fff;
+            background: #fff !important;
+            width: 60%;
+            text-align: left;
+            margin-top: -230px;
+            margin-left: 10px;
+            width: 40%;
+        }
+
+        .btn-ncs-home {
+            width: 75%;
+        }
+
+        #_deskProfile_0 {
+            display: block;
+        }
+
+        #_deskProfile_1 {
+            display: block;
+        }
+
+        #_ipadJobProfile {
+            display: none;
+            margin: 10px;
+        }
+    }
+
+    /* Extra small devices (phones, 600px and down) */
+    @media screen and (max-width:600px) {
+
+        .ec-top-left {
+            position: absolute;
+            left: 150px;
+            margin-top: -250px;
+            padding: 5px;
+            margin-left: -100px;
+            text-align: center;
+            color: white;
+            background: none !important;
+            /* margin-bottom: 60px; */
+            /* width: 50%;*/
+            text-align: left;
+        }
+
+
+        .ec-header {
+            padding: 10px;
+            /* width: 60%; */
+            color: #E3048A !important;
+            background-color: white;
+        }
+
+        .footer-wrapper 
+        {
+            margin-top: -10px;
+        }
+
+        .btnHomeWrapper {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .realstory-background {
+            background-color: rgba(159, 197, 232, 0.2588235294);
+            border-radius: 30px;
+            margin-left: 2px;
+        }
+        
+        .job-profile_wrapper {
+            background: url(/public/images/rec-image.png) 0 10px no-repeat;
+            margin:10px;
+        }
+
+        #job-desc-desktop
+        {
+            margin-left:45px !important;
+            margin-right:45px !important;
+        }
+        .govuk-grid-column-one-half {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0 0px;
+        }
+
+        #jp-story1 {
+            display: inline-block;
+            width: 100%;
+            margin-left: -25px;
+            float: left;
+        }
+
+        #jp-story2 {
+            display: inline-block;
+            width: 100%;
+            margin-left: -25px;
+            float: left;
+        }
+
+        #jp-story3 {
+            display: inline-block;
+            width: 100%;
+            margin-left: -25px;
+            float: left;
+        }
+
+        #jp-story4 {
+            display: inline-block;
+            width: 100%;
+            margin-left: -25px;
+            float: left;
+        }
+
+        #ImgStory-4 {
+            display: none;
+        }
+
+        .top-margin {
+            margin-top: 50px;
+        }
+
+        .gds-controls {
+            display: inline-block;
+            position: absolute;
+            top: calc(50% - 50px);
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            margin-top: 340px;
+        }
+
+            .gds-controls button {
+                display: inline-block;
+                padding: 16px;
+                border: none;
+                font-size: 1.8rem;
+                color: #207e77;
+                background-color: #A5CBC8;
+                cursor: pointer;
+                transition: 0.3s ease;
+                margin-left: -3px;
+                margin-right: 190px;
+                opacity: .3;
+            }
+
+                .gds-controls button:hover {
+                    background-color: #207e77;
+                    color: white;
+                }
+
+        .dots-container {
+            height: 20px;
+            margin-top: 16px;
+            text-align: center;
+            margin-top: -20px;
+        }
+
+        .real-dots-container {
+            height: 20px;
+            margin-top: 16px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        #desk-slideshow {
+            display: none;
+        }
+
+        #mobile-slideshow {
+            display: block;
+            ;
+        }
+
+        .js_wrapper {
+            margin-top: 40px;
+        }
+
+        #sal_desk {
+            display: none;
+            margin-left: -45px;
+            width: 100%;
+        }
+
+        #sal_mob {
+            display: block;
+            width: 100%;
+        }
+
+        .job-profile-search .search-input {
+            position: relative;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            z-index: 10;
+            width: 90%;
+            padding: 6px;
+            font-family: "GDS Transport", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.25;
+            margin: 0;
+            border: 0;
+            outline-offset: 0;
+            height: 40px;
+            background-color: #fff;
+        }
+
+        .job-profile-search-submit {
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            position: absolute;
+            margin-top: -40px;
+            margin-left: 255px;
+        }
+
+        .job-search-banner {
+            margin-top: -80px;
+            margin-left: 0px; 
+        }
+
+        .main-wrapper {
+            display: inline-block;
+            place-content: center;
+            width: 100%;
+            height: 100%;
+            margin-top: -50px;
+        }
+
+        .govuk-label-heading-gds {
+            color: #1d70b8;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+
+        .top-right {
+            display: none;
+        }
+
+        #_DeskBanner {
+            display: block;
+        }
+
+        #_MobBanner {
+        }
+
+        .home-wrapper-top-left {
+            position: absolute;
+            padding: 5px;
+            text-align: center;
+            color: #fff;
+            /*background: #fff !important;*/
+            width: 60%;
+            text-align: left;
+            margin-top: -290px;
+            margin-left: 10px;
+        }
+
+        .wrapper-top-left {
+            position: absolute;
+            padding: 5px;
+            text-align: center;
+            color: #fff;
+            /*background: #fff !important;*/
+            width: 63%;
+            text-align: left;
+            margin-top: -250px;
+        }
+
+        .wrapper-top-left-primary {
+            position: absolute;
+            padding: 5px;
+            text-align: center;
+            color: #fff;
+            /* background: #fff !important;*/
+            width: 63%;
+            text-align: left;
+            margin-top:  -219px;
+        }
+
+        .wrapper-top-left-secondary {
+            position: absolute;
+            margin-top: -83px;
+            padding: 5px;
+            text-align: left;
+            color: white;
+           /* background-color: #fff;*/
+            width: 63%;
+            float: left;
+        }
+
+        #_PinkWrapper {
+            display: none;
+        }
+
+        .salary-text {
+            margin-left: 20px;
+        }
+
+        ._salary-text {
+            color: #fff !important;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .realstory-table_cell_0 {
+            width: 90%;
+        }
+
+        .realstory-table_cell_1 {
+            width: 10%;
+        }
+
+
+        .wrapper-realstory-active {
+            width: 90% !important
+        }
+
+        .wrapper-realstory-fade {
+            width: 90% !important
+        }
+
+        .wrapper-realstory {
+            margin-left: -30px !important;
+        }
+
+        .raelstory-controls {
+            position: absolute;
+            /* top: calc(50% - 50px); */
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            margin-left: -18px;
+        }
+
+        #mobile_RealImgStory {
+            display: block;
+        }
+
+        #desk_RealImgStory {
+            display: none;
+        }
+
+        .slide.is-active {
+            margin-left: -35px !important;
+        }
+
+        .RealImgStory {
+            width: 150px;
+            height: 100px;
+            margin-top: -150px;
+        }
+
+        #dvSalary {
+            margin-top: 45px;
+            margin-left: -9px;
+            background-color: #E3048A;
+            padding: 5px;
+        }
+
+        .wrapper-row {
+            box-shadow: 3px 3px 3px 3px #ddd;
+            /* border-left: 30px solid #E3048A;*/
+            background-color: #fff !important;
+            margin-top: -46px;
+        }
+
+        .btn-ncs-home {
+            width: 65%;
+            margin-top: -20px;
+        }
+
+       
+
+        .controls {
+            position: absolute;
+            top: calc(50% - 50px);
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            background-color: #fff;
+            margin-top: 480px !important;
+            margin-left: -45px;
+        }
+
+        .rs-dots-container {
+            height: 20px;
+            margin-top: 55px;
+            text-align: center;
+            opacity: 0.8;
+            margin-left: -190px !important;
+        }
+
+        .app-step-nav__step{
+            width:100%;
+        }
+
+    }
+
+@media only screen and (min-device-width: 820px) and (max-device-width: 1180px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+    #desk_RealImgStory{
+        display:none;
+    }
+
+    #mobile_RealImgStory{
+        display:block;
+    }
+
+    .controls {
+        /* display: none; */
+        margin-top: 480px;
+    }
+
+    .rs-dots-container {
+        height: 20px;
+        margin-top: 38px;
+        text-align: center;
+        opacity: 0.8;
+    }
+
+    .steps_wrapper{
+        width:150%;
+    }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 740px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .realstory-background {
+        background-color: rgba(159, 197, 232, 0.2588235294);
+        border-radius: 30px;
+        margin-left: -10px;
+        margin-right: 55px;
+    }
+    .controls {
+        /* display: none; */
+        margin-top: 480px !important;
+        margin-left: -65px;
+    }
+
+    
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .realstory-background {
+        background-color: rgba(159, 197, 232, 0.2588235294);
+        border-radius: 30px;
+        margin-left: -10px;
+        margin-right: 40px;
+    }
+
+    /*.controls {*/
+        /* display: none; */
+        /*margin-top: 510px !important;
+        margin-left: -65px;
+    }*/
+
+    .rs-dots-container {
+        height: 20px;
+        margin-top: 55px;
+        text-align: center;
+        opacity: 0.8;
+        margin-left: -210px !important;
+    }
+
+}
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+
+}
+
+@media only screen and (min-device-width: 393px) and (max-device-width: 851px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .realstory-background {
+        background-color: rgba(159, 197, 232, 0.2588235294);
+        border-radius: 30px;
+        margin-left: -10px;
+        margin-right: 20px;
+    }
+}
+
+
+@media only screen and (min-device-width: 393px) and (max-device-width: 851px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+
+
+}
+
+

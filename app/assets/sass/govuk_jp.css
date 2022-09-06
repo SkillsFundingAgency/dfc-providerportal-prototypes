@@ -1,6 +1,6 @@
 ﻿body {
-max-width: 100%;
-overflow:hidden;
+max-width: 100% !important;
+overflow:hidden !important;
 }
 
 
@@ -31,13 +31,18 @@ border-bottom: 10px solid #E3048A !important;
 }
 
 .menu-item {
+/*position:fixed;*/
 list-style-type: none !important;
 margin-left: -25px;
+top:0px;
+
 }
 
-#imgSeparator{
-width:100%;
-padding:3px;
+
+
+#imgSeparator {
+    width: 100%;
+    padding: 3px;
 }
 
 #frm_Social {
@@ -140,6 +145,14 @@ color: black !important;
     color: #767676 !important;
 }
 
+.govuk-wrapper_ec {
+    margin-top: 70px;
+    padding: 10px;
+    padding: 15px;
+    border-radius: 25px;
+  
+}
+
 .govuk-wrapper-pink {
 background: #ff1493 !important;
 margin-top: 70px;
@@ -177,26 +190,46 @@ height: 300px;
 border-radius: 15px;
 }
 .govuk-search-button {
-background: url('/public/images/search-button.png') no-repeat 2px;
-width: 50px;
-border-radius: 15px;
-background-color: black;
-margin-left: -35px;
+    background: url(/public/images/search-button.png) no-repeat 2px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: black;
+    margin-left: -40px;
+
 }
 .govuk-button-color-pink {
 background: #ff1493 !important;
 padding: 10px !important;
 border-radius: 18px !important;
 color: #ffffff;
-font-weight: 800 !important;
+font-weight: bold !important;
 }
 
+    .govuk-button-color-pink:hover {
+        background: #b1b4b6 !important;
+        padding: 10px !important;
+        border-radius: 18px !important;
+        color: #000;
+        font-weight: bold !important;
+        border-radius: 35px !important;
+        border:2px solid  #ff1493 !important;
+    }
 .govuk-button-black {
     background: #000 !important;
     padding: 10px !important;
     border-radius: 18px !important;
     color: #ffffff;
     font-weight: 800 !important;
+}
+
+.govuk-button-black:hover {
+    background: #aaa !important;
+    padding: 10px !important;
+    border-radius: 18px !important;
+    color: #ffffff;
+    font-weight: 800 !important;
+    border-radius: 35px !important;
+    border:2px solid  #000 !important;
 }
 
 .govuk-button-color-black {
@@ -207,9 +240,7 @@ width:250px;
 background: url('/public/images/Black-button.png') no-repeat repeat left;
 }
 
-.govuk-coloumn-background {
-background: #ff1493 !important;
-}
+
 .search-banner {
 margin-top: -80px;
 margin-left: -20px;
@@ -1091,6 +1122,12 @@ display: block;
        
 margin-top: 90px;
 margin-left: 30px;
+}
+
+#new_realStories {
+    margin-top: 140px;
+    margin-left: 70px;
+    width: 395px !important;
 }
 
 #ifrm-youtube {

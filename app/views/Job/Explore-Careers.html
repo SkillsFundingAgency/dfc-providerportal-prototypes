@@ -1,11 +1,394 @@
-﻿<!DOCTYPE html>
+﻿{% extends "ExploreCareerLayout.html" %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div>
+            <div id="search-banner" class="govuk-form-group search-banner job-search-banner">
+                <div class="govuk-wrapper_ec">
+                    <h1 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--m" for="event-name" style="color:#000 !important">
+                            Find your perfect career
+                        </label>
+                    </h1>
+                    <div class="govuk-input__wrapper">
+                        <input class="govuk-input govuk-textbox job-search-text" id="event-name" alt="Search all careers" placeholder="Search all careers"" name="event-name" type="text" />
+                        <input type="button" class="govuk-search-button" />
+                    </div>
+                </div>
+            </div>
+        </div>
+       
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+    </div>
 
-</body>
-</html>
+    <div class="govuk-grid-row">
+        <div id="job-desc-desktop" style="margin-left:25px;">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full" style="margin-top:30px;">
+
+                    <div id="_deskProfile_0"  class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-third job-profile_wrapper">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <a href="#"><img src="/public/images/jobprofile-logo.png" class="jp-logo" /></a>
+                                        </div>
+                                        <div>
+                                            <a class="govuk-link job-title" href="#">Graphic designer</a>
+                                          
+                                            <ul class="govuk-list job-sal-info job-sal-info-panel">
+                                                <li> £18,000 to £36,000 per year</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img id="img-right" class="jobprofile-img-wrapper jobprofile-img" src="/public/images/designer-logo.png" />
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="govuk-grid-column-one-third job-profile_wrapper">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <a href="#"><img src="/public/images/jobprofile-logo.png" class="jp-logo" /></a>
+                                        </div>
+                                        <div>
+                                            <a class="govuk-link job-title" href="#">Financial adviser</a>
+
+                                            <ul class="govuk-list job-sal-info job-sal-info-panel">
+                                                <li> £23,500 to £45,000 per year</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img id="img-right" class="jobprofile-img-wrapper jobprofile-img" src="/public/images/finance-logo.png" />
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="govuk-grid-column-one-third job-profile_wrapper">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <a href="#"><img src="/public/images/jobprofile-logo.png" class="jp-logo" /></a>
+                                        </div>
+                                        <div>
+                                            <a class="govuk-link job-title" href="/Job/Restaurant-Manager-Social">Restaurant manager</a>
+
+                                            <ul class="govuk-list job-sal-info job-sal-info-panel">
+                                                <li> £18,000 to £28,000 per year</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img id="img-right" class="jobprofile-img-wrapper jobprofile-img" src="/public/images/restmgr-logo.png" />
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="govuk-grid-column-full" style="margin-top:30px;">
+
+                    <div id="_deskProfile_1" class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-third job-profile_wrapper">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <a href="#"><img src="/public/images/jobprofile-logo.png" class="jp-logo" /></a>
+                                        </div>
+                                        <div>
+                                            <a class="govuk-link job-title" href="#">Computer game developer</a>
+
+                                            <ul class="govuk-list job-sal-info job-sal-info-panel">
+                                                <li> £25,000 to £70,000 per year</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img id="img-right" class="jobprofile-img-wrapper jobprofile-img" src="/public/images/game-logo.png" />
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="govuk-grid-column-one-third job-profile_wrapper">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <a href="#"><img src="/public/images/jobprofile-logo.png" class="jp-logo" /></a>
+                                        </div>
+                                        <div>
+                                            <a class="govuk-link job-title" href="#">Web designer</a>
+
+                                            <ul class="govuk-list job-sal-info job-sal-info-panel">
+                                                <li> £18,000 to £36,000 per year</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img id="img-right" class="jobprofile-img-wrapper jobprofile-img" src="/public/images/web-logo.png" />
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="govuk-grid-column-one-third job-profile_wrapper">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <a href="#"><img src="/public/images/jobprofile-logo.png" class="jp-logo" /></a>
+                                        </div>
+                                        <div>
+                                            <a class="govuk-link job-title" href="#">Roadie</a>
+
+                                            <ul class="govuk-list job-sal-info job-sal-info-panel">
+                                                <li> £18,000 to £37,000 per year</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img id="img-right" class="jobprofile-img-wrapper jobprofile-img" src="/public/images/roadie-logo.png" />
+                                    </td>
+
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="_ipadJobProfile" class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-half job-profile_wrapper">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <a href="#"><img src="/public/images/jobprofile-logo.png" class="jp-logo" /></a>
+
+                                            <a class="govuk-link job-title" href="#">Graphic designer</a>
+
+                                            <ul class="govuk-list job-sal-info job-sal-info-panel">
+                                                <li> £18,000 to £36,000 per year</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img id="img-right" class="jobprofile-img-wrapper jobprofile-img" src="/public/images/graphic-logo.png" />
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="govuk-grid-column-one-half job-profile_wrapper">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <a href="#"><img src="/public/images/jobprofile-logo.png" class="jp-logo" /></a>
+
+                                            <a class="govuk-link job-title" href="#">Financial advier</a>
+
+                                            <ul class="govuk-list job-sal-info job-sal-info-panel">
+                                                <li> £23,500 to £45,000 per year</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img id="img-right" class="jobprofile-img-wrapper jobprofile-img" src="/public/images/finance-logo.png" />
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="govuk-grid-column-one-half job-profile_wrapper">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <a href="#"><img src="/public/images/jobprofile-logo.png" class="jp-logo" /></a>
+
+                                            <a class="govuk-link job-title" href="#">Restaurant manager</a>
+
+                                            <ul class="govuk-list job-sal-info job-sal-info-panel">
+                                                <li> £18,000 to £28,000 per year</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img id="img-right" class="jobprofile-img-wrapper jobprofile-img" src="/public/images/restmgr-logo.png" />
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="govuk-grid-column-one-half job-profile_wrapper">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <a href="#"><img src="/public/images/jobprofile-logo.png" class="jp-logo" /></a>
+
+                                            <a class="govuk-link job-title" href="#">Computer game developer</a>
+
+                                            <ul class="govuk-list job-sal-info job-sal-info-panel">
+                                                <li> £25,000 to £70,000 per year</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img id="img-right" class="jobprofile-img-wrapper jobprofile-img" src="/public/images/game-logo.png" />
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="govuk-grid-column-one-half job-profile_wrapper">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <a href="#"><img src="/public/images/jobprofile-logo.png" class="jp-logo" /></a>
+
+                                            <a class="govuk-link job-title" href="#">Web designer</a>
+
+                                            <ul class="govuk-list job-sal-info job-sal-info-panel">
+                                                <li> £18,000 to £36,000 per year</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img id="img-right" class="jobprofile-img-wrapper jobprofile-img" src="/public/images/web-logo.png" />
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="govuk-grid-column-one-half job-profile_wrapper">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <a href="#"><img src="/public/images/jobprofile-logo.png" class="jp-logo" /></a>
+
+                                            <a class="govuk-link job-title" href="#">Roadie</a>
+
+                                            <ul class="govuk-list job-sal-info job-sal-info-panel">
+                                                <li> £18,000 to £37,000 per year</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img id="img-right" class="jobprofile-img-wrapper jobprofile-img" src="/public/images/roadie-logo.png" />
+                                    </td>
+
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="govuk-grid-column-full">
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-third" style="margin-top:25px;margin-bottom:30px;width:100%" >
+                        <table>
+                            <tr>
+                                <td>
+                                    <a class="govuk-label  govuk-link" href="#">Show more results</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        <h1 class="govuk-heading-l">Explore by job category</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-third">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <ul class="govuk-label govuk-label--m govuk-list footer-content">
+                                            <li>Administration</li>
+                                            <li>Animal care</li>
+                                            <li> Beauty and wellbeing</li>
+                                            <li>Business and finance</li>
+                                            <li>Computing, technology and digital</li>
+                                            <li>Construction and trades</li>
+                                            <li>Creative and media</li>
+                                            <li>Delivery and storage</li>
+                                        </ul>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="govuk-grid-column-one-third">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <ul class="govuk-label govuk-label--m govuk-list footer-content footer-wrapper">
+                                            <li>Emergency and uniform services</li>
+                                            <li>Engineering and maintenance</li>
+                                            <li> Environmental and land</li>
+                                            <li>Government services</li>
+                                            <li>Healthcare</li>
+                                            <li>Home services</li>
+                                            <li>Hospitality and food</li>
+                                            <li>Law and legal</li>
+                                        </ul>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="govuk-grid-column-one-third">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div>
+
+                                        <ul class="govuk-label govuk-label--m govuk-list footer-content footer-wrapper">
+                                            <li> Managerial</li>
+                                            <li> Manufacturing</li>
+                                            <li> Retail and sales</li>
+                                            <li> Science and research</li>
+                                            <li> Social care</li>
+                                            <li> Sports and leisure</li>
+                                            <li> Teaching and education</li>
+                                            <li> Transport</li>
+                                            <li> Travel and tourism</li>
+                                        </ul>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+ {% endblock %}

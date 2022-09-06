@@ -1,0 +1,305 @@
+﻿{#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
+{%- set assetPath = '/govuk/assets' -%}
+
+{% extends "govuk/template.njk" %}
+
+{% from "govuk/components/accordion/macro.njk"           import govukAccordion %}
+{% from "govuk/components/back-link/macro.njk"           import govukBackLink %}
+{% from "govuk/components/breadcrumbs/macro.njk"         import govukBreadcrumbs %}
+
+{% from "govuk/components/button/macro.njk"              import govukButton %}
+{% from "govuk/components/character-count/macro.njk"     import govukCharacterCount %}
+{% from "govuk/components/checkboxes/macro.njk"          import govukCheckboxes %}
+{% from "govuk/components/cookie-banner/macro.njk"       import govukCookieBanner %}
+{% from "govuk/components/date-input/macro.njk"          import govukDateInput %}
+{% from "govuk/components/details/macro.njk"             import govukDetails %}
+{% from "govuk/components/error-message/macro.njk"       import govukErrorMessage %}
+{% from "govuk/components/error-summary/macro.njk"       import govukErrorSummary %}
+{% from "govuk/components/fieldset/macro.njk"            import govukFieldset %}
+{% from "govuk/components/file-upload/macro.njk"         import govukFileUpload %}
+{% from "govuk/components/input/macro.njk"               import govukInput %}
+{% from "govuk/components/inset-text/macro.njk"          import govukInsetText %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/panel/macro.njk"               import govukPanel %}
+{% from "govuk/components/phase-banner/macro.njk"        import govukPhaseBanner %}
+{% from "govuk/components/radios/macro.njk"              import govukRadios %}
+{% from "govuk/components/select/macro.njk"              import govukSelect %}
+{% from "govuk/components/skip-link/macro.njk"           import govukSkipLink %}
+{% from "govuk/components/summary-list/macro.njk"        import govukSummaryList %}
+{% from "govuk/components/table/macro.njk"               import govukTable %}
+{% from "govuk/components/tabs/macro.njk"                import govukTabs %}
+{% from "govuk/components/tag/macro.njk"                 import govukTag %}
+{% from "govuk/components/textarea/macro.njk"            import govukTextarea %}
+{% from "govuk/components/warning-text/macro.njk"        import govukWarningText %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+        <div class="govuk-header__content">
+            <a href="#" class="govuk-header__link govuk-header__link--service-name">
+                National Career Service
+            </a>
+            <nav aria-label="Menu" class="govuk-header__navigation ">
+                <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu">Menu</button>
+
+                <ul id="navigation" class="govuk-header__navigation-list">
+                    <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+                        <a class="govuk-header__link" href="#1">
+                            Explore careers
+                        </a>
+                    </li>
+                    <li class="govuk-header__navigation-item">
+                        <a class="govuk-header__link" href="#2">
+                            Skills assessment
+                        </a>
+                    </li>
+                    <li class="govuk-header__navigation-item">
+                        <a class="govuk-header__link" href="#3">
+                            Find a course
+                        </a>
+                    </li>
+                    <li class="govuk-header__navigation-item">
+                        <a class="govuk-header__link" href="#4">
+                            Contact us
+                        </a>
+                    </li>
+                    <li class="govuk-header__navigation-item">
+                        <a class="govuk-header__link" href="#4">
+                            Action plans
+                        </a>
+                    </li>
+                    <li class="govuk-header__navigation-item">
+                        <a class="govuk-header__link" href="#4">
+                            Careers advice
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<div class="govuk-width-container">
+    <div class="govuk-phase-banner">
+        <p class="govuk-phase-banner__content">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+                alpha
+            </strong>
+            <span class="govuk-phase-banner__text">
+                This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+            </span>
+        </p>
+    </div>
+
+
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="#">Home</a>
+            </li> 
+        </ol>
+    </div>
+</div>
+
+<div style="width:100%">
+    <img id="bannerImg" class="image2" src="/public/images/Homepage-Top-Banner.png" style="width:100%" alt="" />
+    <img id="bannerImgMobile" class="image2" src="/public/images/ncs-mobile.png" style="width:100%" alt="" />
+    <div class="home-wrapper-top-left">
+        <div id="_DeskBanner">
+            <h1 style="background-color:#fff">
+                <label class="govuk-label govuk-label--xl" for="event-name">
+                    Welcome to the  <span style="color: #ff1493 !important">
+                        National Careers Service
+                    </span>
+
+                </label>
+               
+            </h1>
+        </div>
+        <div id="_MobBanner">
+            <h1 style="background-color:#fff">
+                <label class="govuk-label govuk-label--l" for="event-name">
+                    Welcome to the  <span style="color: #ff1493 !important;">
+                        National Careers Service
+                    </span>website
+
+                </label>
+
+            </h1>
+        </div>
+
+    </div>
+
+    
+
+    </div>
+
+    {% endblock %}
+
+
+    {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
+
+    {% if useAutoStoreData %}
+    {% block footer %}
+
+    <div class="govuk-grid-row-blue">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div id="_GetTheJump" class="govuk-grid-column-full">
+                    <div style="margin-top:10px;height:20px;">
+
+                    </div>
+                    <h2 class="govuk-heading-m getthejump">
+                        Get the Jump: explore your education and training choices
+                    </h2>
+                    <p class="govuk-body govuk-label" style="color:#000 ;font-size:18px;">
+                        Whether you know where you’re headed in the future or not, knowing the work and study choices available to you is a great place to start.
+                    </p>
+                    <button class="govuk-button govuk-button-black govuk-button-wrapper btnAboutUsWrapper" data-module="govuk-button">
+                        <!--<img alt="Explore education choices" class="btn-ncs-home" src="/public/images/btn-explore-edu-choices-transparent.png" />-->
+                        Explore education choices
+                    </button>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div id="_AboutUs" class="govuk-grid-column-full " style="margin-top:20px;margin-bottom:20px;">
+                <h2 class="govuk-heading-m">
+                    About us
+                </h2>
+                <p class="govuk-body" style="font-size:18px;">
+                    We can help you with your career, learning and training choices.
+                </p>
+                <p class="govuk-body" style="font-size:18px;">
+                    Our service is available to people who live in England.
+                </p>
+                <p class="govuk-body" style="font-size:18px;">
+                    <button class="govuk-button govuk-button-color-pink govuk-button-wrapper btnAboutUsWrapper" data-module="govuk-button">
+                        About the National Careers Service
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #E3048A; width: 100%; height: 300px;margin-bottom:15px; ">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="govuk-grid-row">
+                                    <div style="background-color:#fff;width:350px;">
+                                        <h1 class="govuk-label--l  govuk_label_wrap">Speak to an adviser</h1>
+                                    </div>
+                                    <p class="govuk-body lb_speaktoadviser">
+                                        Want to get local, personalised advice? Wherever you are with your decisions, you can call us or use our webchat.
+                                    </p>
+                                    <!--<button class="govuk-button govuk-button-color-black"  data-module="govuk-button"/>-->
+                                    <img alt="contact us" class="btn-contactus-home" src="/public/images/blackbutton.png" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="govuk-grid-row">
+                                    <img alt="persona-desktop" id="persona-desktop" src="/public/images/womanpersona.png" class="govuk-persona" />
+                                    <img alt="persona-mobile" id="persona-mobile" src="/public/images/womanfooter.png" class="govuk-persona" />
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    {{
+ govukFooter({
+      meta: {
+        items: [
+          {
+            href: "https://govuk-prototype-kit.herokuapp.com/",
+            text: "GOV.UK Prototype Kit " + releaseVersion
+          },
+          {
+            href: "/prototype-admin/clear-data",
+            text: "Clear data"
+          }
+        ],
+        visuallyHiddenTitle: "Footer links"
+      }
+    })
+    }}
+    {% endblock %}
+    {% endif %}
+
+    {% block bodyEnd %}
+    {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block pageScripts %}
+
+    <script>
+            $(document).ready(function () {
+                const prevBtn = document.querySelector(".prev");
+                const nextBtn = document.querySelector(".next");
+                const dots = Array.from(document.querySelectorAll(".dot"));
+
+                let slideIndex = 1;
+
+                function plusSlides(e) {
+                    let num;
+
+                    if (e.target === prevBtn) num = -1;
+                    if (e.target === nextBtn) num = 1;
+
+                    showSlides((slideIndex += num));
+                }
+
+                function currentSlide(e) {
+                    if (e.target === dots[0]) showSlides((slideIndex = 1));
+                    if (e.target === dots[1]) showSlides((slideIndex = 2));
+                    if (e.target === dots[2]) showSlides((slideIndex = 3));
+                }
+
+                function showSlides(n) {
+                    const slides = Array.from(document.querySelectorAll(".slide"));
+
+                    if (n > slides.length) slideIndex = 1;
+                    if (n < 1) slideIndex = slides.length;
+
+                    slides.forEach((slide) => slide.classList.remove("is-active"));
+                    dots.forEach((dot) => dot.classList.remove("is-active"));
+
+                    slides[slideIndex - 1].classList.add("is-active");
+                    dots[slideIndex - 1].classList.add("is-active");
+                }
+
+                prevBtn.addEventListener("click", plusSlides);
+                nextBtn.addEventListener("click", plusSlides);
+                dots.forEach((dot) => dot.addEventListener("click", currentSlide));
+
+                var isMobile = window.matchMedia && window.matchMedia('(max-device-width:600px)').matches || screen.width <= 600;
+
+            });
+    </script>
+    {% endblock %}
+    {% endblock %}
+    <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+    {% endblock %}
